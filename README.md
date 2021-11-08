@@ -19,10 +19,10 @@ TODO.
 
 The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
 
-You can also follow us on Twitter: [@F1DBnet](https://twitter.com/f1dbnet).
+Keep in touch with us by following us on Twitter -- [@F1DBnet](https://twitter.com/f1dbnet).
 
 
-## Data Issues
+## Reporting Data Issues
 
 We use [GitHub Issues](https://github.com/f1db/f1db/issues) to track data issues or related problems.
 
