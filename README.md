@@ -1,12 +1,31 @@
 # F1DB
 
+## What is F1DB?
+
+TODO.
+
+## Support
+
+### Data Issues
+
+We use [GitHub Issues](https://github.com/f1db/f1db/issues) to track data issues or related problems.
+If you found a data issue which is not reported yet, please [create a new issue](https://github.com/f1db/f1db/issues/new).
+
+### Discussion Forum
+
+The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
+
+## Versioning
+
+TODO.
+
 ## License
 
-[![Creative Commons License][cc-by-4.0-icon-normal]][cc-by-4.0]
+[![Creative Commons License][CC BY Icon Normal]][CC BY]
 
-F1DB is licensed under a [Creative Commons Attribution 4.0 International License][cc-by-4.0].
+F1DB is licensed under a [Creative Commons Attribution 4.0 International License][CC BY].
 
-[cc-by-4.0]: http://creativecommons.org/licenses/by/4.0/  
-[cc-by-4.0-legalcode]: https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
-[cc-by-4.0-icon-compact]: https://i.creativecommons.org/l/by/4.0/80x15.png
-[cc-by-4.0-icon-normal]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[CC BY]: http://creativecommons.org/licenses/by/4.0/  
+[CC BY Icon Compact]: https://i.creativecommons.org/l/by/4.0/80x15.png
+[CC BY Icon Normal]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[CC BY Plaintext]: https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
