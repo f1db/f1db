@@ -14,7 +14,7 @@ TODO.
 
 Releases are versioned using a customized [CalVer] versioning scheme:
 
-    0Y.0R.MICRO(.MODIFIER)
+    YY.RR.MICRO(.MODIFIER)
 
 which uses the following conventions:
 
