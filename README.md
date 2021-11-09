@@ -14,24 +14,24 @@ TODO.
 
 Releases are versioned using a customized [CalVer] versioning scheme:
 
-    YY.RR.MICRO(.MODIFIER)
+    YYYY.RR.MICRO(.MODIFIER)
 
 which uses the following conventions:
 
-- **YY** – Short year of the season – `21`, `22`, ..
+- **YYYY** – Full year of the season – `2021`, `2022`, ..
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc` etc.
 
 Examples:
 
-- **21.1.0** – Final release after the 1<sup>st</sup> race round of the 2021 season.
-- **21.2.0** – Final release after the 2<sup>nd</sup> race round of the 2021 season.
-- **21.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2021 season.
-- **21.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2021 season.
-- **22.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2022 season.
-- **22.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2022 season.
-- **22.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2022 season.
+- **2021.1.0** – Final release after the 1<sup>st</sup> race round of the 2021 season.
+- **2021.2.0** – Final release after the 2<sup>nd</sup> race round of the 2021 season.
+- **2021.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2021 season.
+- **2021.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2021 season.
+- **2022.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2022 season.
+- **2022.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2022 season.
+- **2022.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2022 season.
 
 As you can see we use a special **RR** `0` for pre-season releases.
 
