@@ -21,7 +21,7 @@ which uses the following conventions:
 - **YYYY** – Full year of the season – `2021`, `2022`, ..
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
-- **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc` etc.
+- **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
 
 Examples:
 
