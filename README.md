@@ -22,7 +22,6 @@ Whether you are building a custom website, mobile application or just using F1DB
   - fastest laps
   - pit stops
   - driver of the day results
-  - standings
 
 We ship a new release containing all new data and updated statistics as soon as possible after every race.
 
