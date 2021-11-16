@@ -23,9 +23,13 @@ Whether you are building a custom website, mobile application or just using F1DB
   - pit stops
   - driver of the day results
 
-Releases are offered as single JSON file containing all the data and statistics, and as a SQLite database file.
 
-New releases containing all new data and updated statistics are released as soon as possible after every race.
+## Releases
+
+The main F1DB release artifact is the F1DB JSON file containing all the data and statistics. 
+As alternative there is also a F1DB SQLite database file that can be used in tools like [SQLiteStudio] to query the data without parsing the JSON file.
+
+New releases will be availble as soon as possible after every race. See also [Versioning](#versioning).
 
 
 ## F1DB JSON Schema
@@ -94,3 +98,4 @@ F1DB is licensed under a [Creative Commons Attribution 4.0 International License
 [CC BY Icon Compact]: https://i.creativecommons.org/l/by/4.0/80x15.png
 [CC BY Icon Normal]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [CC BY Plaintext]: https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
+[SQLiteStudio]: https://sqlitestudio.pl/
