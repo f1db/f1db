@@ -2,7 +2,29 @@
 
 ## What is F1DB?
 
-TODO.
+F1DB – Formula 1 Database – is the most comprehensive free open source database with all-time Formula 1 Grand Prix racing data and statistics.
+
+Whether you are building a custom website, mobile application or just using F1DB to query data, here is what we provide:
+
+- All drivers
+- All constructors
+- All engine manufacturers
+- All tyre manufacturers
+- All circuits and location data
+- All seasons from 1950 to present
+- All standings
+- All races; including:
+  - free practice and warming-up results
+  - qualifying and pre-qualifying results
+  - sprint race results
+  - starting grid positions
+  - race results
+  - fastest laps
+  - pit stops
+  - driver of the day results
+  - standings
+
+We ship a new release containing all new data and updated statistics as soon as possible after every race.
 
 
 ## F1DB JSON Schema
