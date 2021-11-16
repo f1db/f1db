@@ -23,10 +23,17 @@ Whether you are building a custom website, mobile application or just using F1DB
   - pit stops
   - driver of the day results
 
-We ship a new release containing all new data and updated statistics as soon as possible after every race.
+Releases are offered as single JSON file containing all the data and statistics, and as a SQLite database file.
+
+New releases containing all new data and updated statistics are released as soon as possible after every race.
 
 
 ## F1DB JSON Schema
+
+TODO.
+
+
+## F1DB SQLite Database
 
 TODO.
 
