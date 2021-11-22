@@ -52,13 +52,14 @@ which uses the following conventions:
 
 Examples:
 
-- **2021.1.0** – Final release after the 1<sup>st</sup> race round of the 2021 season.
-- **2021.2.0** – Final release after the 2<sup>nd</sup> race round of the 2021 season.
-- **2021.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2021 season.
-- **2021.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2021 season.
 - **2022.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2022 season.
+- **2022.0.0.beta** – Pre-season beta release before the 1<sup>st</sup> race round of the 2022 season.
 - **2022.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2022 season.
 - **2022.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2022 season.
+- **2022.1.0** – Final release after the 1<sup>st</sup> race round of the 2021 season.
+- **2022.2.0** – Final release after the 2<sup>nd</sup> race round of the 2021 season.
+- **2022.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2021 season.
+- **2022.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2021 season.
 
 As you can see we use a special **RR** `0` for pre-season releases.
 
