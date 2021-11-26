@@ -1,3 +1,5 @@
+<img src="./logo.svg">
+
 # F1DB
 
 ## What is F1DB?
