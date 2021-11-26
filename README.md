@@ -1,7 +1,5 @@
 <img src="./logo.png">
 
-# F1DB
-
 ## What is F1DB?
 
 F1DB is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
