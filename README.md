@@ -1,4 +1,4 @@
-<img src="./logo.svg">
+<img src="./logo.png">
 
 # F1DB
 
