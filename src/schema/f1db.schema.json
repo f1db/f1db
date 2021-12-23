@@ -219,11 +219,6 @@
           "minimum": 0,
           "description": "The total of pole positions."
         },
-        "totalFrontRows": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of front rows."
-        },
         "totalFastestLaps": {
           "type": "integer",
           "minimum": 0,
@@ -262,7 +257,6 @@
         "totalPoints",
         "totalRetirements",
         "totalPolePositions",
-        "totalFrontRows",
         "totalFastestLaps",
         "totalDriverOfTheDay"
       ]
@@ -371,16 +365,6 @@
           "minimum": 0,
           "description": "The total of pole positions."
         },
-        "totalFrontRows": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of front rows."
-        },
-        "totalFrontRowLockouts": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of front row lockouts."
-        },
         "totalFastestLaps": {
           "type": "integer",
           "minimum": 0,
@@ -408,8 +392,6 @@
         "totalDriverPoints",
         "totalRetirements",
         "totalPolePositions",
-        "totalFrontRows",
-        "totalFrontRowLockouts",
         "totalFastestLaps"
       ]
     },
@@ -519,11 +501,6 @@
           "minimum": 0,
           "description": "The total of pole positions."
         },
-        "totalFrontRows": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of front rows."
-        },
         "totalFastestLaps": {
           "type": "integer",
           "minimum": 0,
@@ -547,7 +524,6 @@
         "totalPoints",
         "totalDriverPoints",
         "totalPolePositions",
-        "totalFrontRows",
         "totalFastestLaps"
       ]
     },
@@ -612,11 +588,6 @@
           "minimum": 0,
           "description": "The total of pole positions."
         },
-        "totalFrontRows": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of front rows."
-        },
         "totalFastestLaps": {
           "type": "integer",
           "minimum": 0,
@@ -636,7 +607,6 @@
         "totalPodiums",
         "totalPodiumRaces",
         "totalPolePositions",
-        "totalFrontRows",
         "totalFastestLaps"
       ]
     },
