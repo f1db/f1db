@@ -1628,11 +1628,6 @@
         "intervalMillis": {
           "type": ["integer", "null"],
           "description": "The interval in milliseconds."
-        },
-        "averageSpeed": {
-          "type": ["number", "null"],
-          "minimum": 0,
-          "description": "The average speed."
         }
       },
       "required": [
@@ -1649,8 +1644,7 @@
         "gap",
         "gapMillis",
         "interval",
-        "intervalMillis",
-        "averageSpeed"
+        "intervalMillis"
       ]
     },
     "PitStop": {
