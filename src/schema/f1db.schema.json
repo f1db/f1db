@@ -209,11 +209,6 @@
           "multipleOf": 0.01,
           "description": "The total of points."
         },
-        "totalRetirements": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of retirements."
-        },
         "totalPolePositions": {
           "type": "integer",
           "minimum": 0,
@@ -255,7 +250,6 @@
         "totalRaceLaps",
         "totalPodiums",
         "totalPoints",
-        "totalRetirements",
         "totalPolePositions",
         "totalFastestLaps",
         "totalDriverOfTheDay"
@@ -355,11 +349,6 @@
           "multipleOf": 0.01,
           "description": "The total of driver points."
         },
-        "totalRetirements": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "The total of retirements."
-        },
         "totalPolePositions": {
           "type": "integer",
           "minimum": 0,
@@ -390,7 +379,6 @@
         "totalPodiumRaces",
         "totalPoints",
         "totalDriverPoints",
-        "totalRetirements",
         "totalPolePositions",
         "totalFastestLaps"
       ]
