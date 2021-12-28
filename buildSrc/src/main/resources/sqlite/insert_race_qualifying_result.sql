@@ -1,0 +1,50 @@
+INSERT INTO race_data
+( race_id
+, type
+, position_display_order
+, position_number
+, position_text
+, driver_number
+, driver_id
+, constructor_id
+, engine_manufacturer_id
+, tyre_manufacturer_id
+, qualifying_time
+, qualifying_time_millis
+, qualifying_q1
+, qualifying_q1_millis
+, qualifying_q2
+, qualifying_q2_millis
+, qualifying_q3
+, qualifying_q3_millis
+, qualifying_gap
+, qualifying_gap_millis
+, qualifying_interval
+, qualifying_interval_millis
+, qualifying_laps
+)
+VALUES
+( ?1.id
+, ?2.type
+, ?2.positionDisplayOrder
+, ?3.positionNumber
+, ?3.positionText
+, ?3.driverNumber
+, ?3.driverId
+, ?3.constructorId
+, ?3.engineManufacturerId
+, ?3.tyreManufacturerId
+, ?3.time
+, ?3.timeMillis
+, ?3.q1
+, ?3.q1Millis
+, ?3.q2
+, ?3.q2Millis
+, ?3.q3
+, ?3.q3Millis
+, ?3.gap
+, ?3.gapMillis
+, ?3.interval
+, ?3.intervalMillis
+, ?3.laps
+);

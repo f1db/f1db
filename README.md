@@ -79,7 +79,9 @@ If you found a data issue which is not reported yet, please [create a new issue]
 
 ## Building from Source
 
-TODO.
+To build the distribution zips simply run:
+
+    ./gradlew clean dist assemble
 
 
 ## License

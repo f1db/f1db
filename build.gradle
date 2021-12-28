@@ -1,0 +1,87 @@
+plugins {
+    id "java"
+    id "distribution"
+    id "org.jreleaser" version "0.10.0"
+}
+
+apply plugin: "net.f1db"
+
+group = "net.f1db"
+
+repositories {
+    mavenCentral()
+}
+
+distributions {
+    json {
+        distributionBaseName = "f1db-json"
+        contents {
+            from "${buildDir}/data/f1db.json"
+        }
+    }
+    smile {
+        distributionBaseName = "f1db-smile"
+        contents {
+            from "${buildDir}/data/f1db.sml"
+        }
+    }
+	sqlite {
+		distributionBaseName = "f1db-sqlite"
+		contents {
+			from "${buildDir}/data/f1db.db"
+		}
+	}
+}
+
+f1db {
+    currentSeason = 2022
+    wdcDecided = property("wdcDecided").toBoolean()
+    wccDecided = property("wccDecided").toBoolean()
+    indentOutput = true
+}
+
+//jreleaser {
+//	project {
+//    	name = "f1db"
+//        description = "Open Source Formula 1 Database"
+//        website = "https://f1db.net"
+//    }
+//    files {
+//        artifact {
+//            path = "${buildDir}/distributions/f1db-json-${project.version}.zip"
+//        }
+//        artifact {
+//            path = "${buildDir}/distributions/f1db-smile-${project.version}.zip"
+//        }
+//        artifact {
+//            path = "${buildDir}/distributions/f1db-sqlite-${project.version}.zip"
+//        }
+//    }
+//    release {
+//        github {
+//            owner = "f1db"
+//            name = "f1db"
+//            username = "marceloverdijk"
+//            token = '__DO_NOT_SET_HERE__'
+//			commitAuthor {
+//				name = "F1DB"
+//				email = "info@f1db.net"
+//			}
+//        }
+//    }
+//    annouce {
+//        enabled = false
+//        twitter {
+//            active = "ALWAYS"
+//            consumerKey = "__DO_NOT_SET_HERE__"
+//            consumerToken = "__DO_NOT_SET_HERE__"
+//            accessToken = "__DO_NOT_SET_HERE__"
+//            accessTokenSecret = "__DO_NOT_SET_HERE__"
+//            status = "{{projectNameCapitalized}} {{projectVersion}} has been released!"
+//        }
+//    }
+//}
+
+tasks.withType(Tar) {
+	enabled = false
+}

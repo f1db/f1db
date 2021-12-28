@@ -1,0 +1,15 @@
+package net.f1db.gradle.plugin
+
+import java.time.LocalDate
+
+/**
+ * The F1DB plugin extension.
+ *
+ * @author Marcel Overdijk
+ */
+class F1DBPluginExtension {
+    int currentSeason = LocalDate.now().year
+    boolean wdcDecided = false
+    boolean wccDecided = false
+    boolean indentOutput = false
+}
