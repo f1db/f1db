@@ -1,6 +1,6 @@
 {
   "$id": "https://schema.f1db.net",
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB JSON Schema",
   "type": "object",
@@ -209,6 +209,12 @@
           "multipleOf": 0.01,
           "description": "The total of points."
         },
+        "totalChampionshipPoints": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.01,
+          "description": "The total of championship points."
+        },
         "totalPolePositions": {
           "type": "integer",
           "minimum": 0,
@@ -250,6 +256,7 @@
         "totalRaceLaps",
         "totalPodiums",
         "totalPoints",
+        "totalChampionshipPoints",
         "totalPolePositions",
         "totalFastestLaps",
         "totalDriverOfTheDay"
@@ -337,17 +344,11 @@
           "minimum": 0,
           "description": "The total podium races."
         },
-        "totalPoints": {
+        "totalChampionshipPoints": {
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total of points."
-        },
-        "totalDriverPoints": {
-          "type": "number",
-          "minimum": 0,
-          "multipleOf": 0.01,
-          "description": "The total of driver points."
+          "description": "The total of championship points."
         },
         "totalPolePositions": {
           "type": "integer",
@@ -365,7 +366,7 @@
         "name",
         "fullName",
         "countryId",
-		"previousNextConstructors",
+        "previousNextConstructors",
         "bestChampionshipPosition",
         "bestStartingGridPosition",
         "bestRaceResult",
@@ -377,8 +378,7 @@
         "totalRaceLaps",
         "totalPodiums",
         "totalPodiumRaces",
-        "totalPoints",
-        "totalDriverPoints",
+        "totalChampionshipPoints",
         "totalPolePositions",
         "totalFastestLaps"
       ]
@@ -472,17 +472,11 @@
           "minimum": 0,
           "description": "The total podium races."
         },
-        "totalPoints": {
+        "totalChampionshipPoints": {
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total of points."
-        },
-        "totalDriverPoints": {
-          "type": "number",
-          "minimum": 0,
-          "multipleOf": 0.01,
-          "description": "The total of driver points."
+          "description": "The total of championship points."
         },
         "totalPolePositions": {
           "type": "integer",
@@ -509,8 +503,7 @@
         "totalRaceLaps",
         "totalPodiums",
         "totalPodiumRaces",
-        "totalPoints",
-        "totalDriverPoints",
+        "totalChampionshipPoints",
         "totalPolePositions",
         "totalFastestLaps"
       ]
