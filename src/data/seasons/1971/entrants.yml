@@ -128,8 +128,6 @@
   engineManufacturerId: ford
   tyreManufacturerId: goodyear
   drivers:
-    - driverId: dave-charlton
-      rounds: 1
     - driverId: graham-hill
       rounds: 1-11
     - driverId: tim-schenken
@@ -163,6 +161,13 @@
       rounds: 1-11
     - driverId: mario-andretti
       rounds: 1-4,7,10-11
+- entrantId: scuderia-scribante
+  countryId: south-africa
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: dave-charlton
+  rounds: 1
 - entrantId: shell-arnold-team
   countryId: france
   constructorId: march
