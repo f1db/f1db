@@ -1,0 +1,158 @@
+- entrantId: barclay-arrows-bmw
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: bmw
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: marc-surer
+      rounds: 1-5
+    - driverId: thierry-boutsen
+      rounds: 1-16
+    - driverId: christian-danner
+      rounds: 7-16
+- entrantId: benetton-formula-ltd
+  countryId: united-kingdom
+  constructorId: benetton
+  engineManufacturerId: bmw
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: gerhard-berger
+      rounds: 1-16
+    - driverId: teo-fabi
+      rounds: 1-16
+- entrantId: canon-williams-honda-team
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: nelson-piquet
+      rounds: 1-16
+    - driverId: nigel-mansell
+      rounds: 1-16
+- entrantId: data-general-team-tyrrell
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: martin-brundle
+      rounds: 1-16
+    - driverId: philippe-streiff
+      rounds: 1-16
+- entrantId: equipe-ligier
+  countryId: france
+  constructorId: ligier
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: jacques-laffite
+      rounds: 1-9
+    - driverId: rene-arnoux
+      rounds: 1-16
+    - driverId: philippe-alliot
+      rounds: 10-16
+- entrantId: john-player-special-team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ayrton-senna
+      rounds: 1-16
+    - driverId: johnny-dumfries
+      rounds: 1-16
+- entrantId: jolly-club-spa
+  countryId: france
+  constructorId: ags
+  engineManufacturerId: motori-moderni
+  tyreManufacturerId: pirelli
+  driverId: ivan-capelli
+  rounds: 13-14
+- entrantId: marlboro-mclaren-international
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: tag
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alain-prost
+      rounds: 1-16
+    - driverId: keke-rosberg
+      rounds: 1-16
+- entrantId: minardi-team-spa
+  countryId: italy
+  constructorId: minardi
+  engineManufacturerId: motori-moderni
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alessandro-nannini
+      rounds: 1-16
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+- entrantId: motor-racing-developments
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: bmw
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: elio-de-angelis
+      rounds: 1-4
+    - driverId: riccardo-patrese
+      rounds: 1-16
+    - driverId: derek-warwick
+      rounds: 6-16
+- entrantId: osella-squadra-corse
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: christian-danner
+      rounds: 1-6
+    - driverId: piercarlo-ghinzani
+      rounds: 1-16
+    - driverId: allen-berg
+      rounds: 7-12,14-16
+    - driverId: alex-caffi
+      rounds: 13
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: michele-alboreto
+      rounds: 1-16
+    - driverId: stefan-johansson
+      rounds: 1-16
+- entrantId: team-haas-usa-ltd
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: lola
+      engineManufacturerId: hart
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: alan-jones
+          rounds: 1-2
+        - driverId: patrick-tambay
+          rounds: 1-3
+    - constructorId: lola
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: alan-jones
+          rounds: 3-16
+        - driverId: patrick-tambay
+          rounds: 4-6,8-16
+        - driverId: eddie-cheever
+          rounds: 7
+- entrantId: west-zakspeed-racing
+  countryId: germany
+  constructorId: zakspeed
+  engineManufacturerId: zakspeed
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jonathan-palmer
+      rounds: 1-16
+    - driverId: huub-rothengatter
+      rounds: 3-16

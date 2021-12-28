@@ -1,0 +1,308 @@
+- position: 1
+  driverNumber: 5
+  driverId: felipe-massa
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:31:36.230"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 10
+  gridPosition: 1
+- position: 2
+  driverNumber: 2
+  driverId: lewis-hamilton
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:31:43.020"
+  timePenalty:
+  gap: "+6.790"
+  interval: "+6.790"
+  reasonRetired:
+  points: 8
+  gridPosition: 4
+- position: 3
+  driverNumber: 1
+  driverId: fernando-alonso
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:31:53.686"
+  timePenalty:
+  gap: "+17.456"
+  interval: "+10.666"
+  reasonRetired:
+  points: 6
+  gridPosition: 2
+- position: 4
+  driverNumber: 10
+  driverId: robert-kubica
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:32:07.845"
+  timePenalty:
+  gap: "+31.615"
+  interval: "+14.159"
+  reasonRetired:
+  points: 5
+  gridPosition: 5
+- position: 5
+  driverNumber: 14
+  driverId: david-coulthard
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:32:34.561"
+  timePenalty:
+  gap: "+58.331"
+  interval: "+26.716"
+  reasonRetired:
+  points: 4
+  gridPosition: 9
+- position: 6
+  driverNumber: 16
+  driverId: nico-rosberg
+  constructorId: williams
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:32:35.768"
+  timePenalty:
+  gap: "+59.538"
+  interval: "+1.207"
+  reasonRetired:
+  points: 3
+  gridPosition: 11
+- position: 7
+  driverNumber: 4
+  driverId: heikki-kovalainen
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time: "1:32:38.358"
+  timePenalty:
+  gap: "+1:02.128"
+  interval: "+2.590"
+  reasonRetired:
+  points: 2
+  gridPosition: 8
+- position: 8
+  driverNumber: 22
+  driverId: takuma-sato
+  constructorId: super-aguri
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  laps: 64
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 1
+  gridPosition: 13
+- position: 9
+  driverNumber: 3
+  driverId: giancarlo-fisichella
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  laps: 64
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 10
+- position: 10
+  driverNumber: 8
+  driverId: rubens-barrichello
+  constructorId: honda
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  laps: 64
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 12
+- position: 11
+  driverNumber: 23
+  driverId: anthony-davidson
+  constructorId: super-aguri
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  laps: 64
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 15
+- position: 12
+  driverNumber: 7
+  driverId: jenson-button
+  constructorId: honda
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  laps: 64
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 14
+- position: 13
+  driverNumber: 20
+  driverId: adrian-sutil
+  constructorId: spyker
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 63
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 20
+- position: 14
+  driverNumber: 21
+  driverId: christijan-albers
+  constructorId: spyker
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 63
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 21
+- position: DNF
+  driverNumber: 9
+  driverId: nick-heidfeld
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: bridgestone
+  laps: 46
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 7
+- position: DNF
+  driverNumber: 11
+  driverId: ralf-schumacher
+  constructorId: toyota
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  laps: 44
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Mechanical
+  points:
+  gridPosition: 17
+- position: DNF
+  driverNumber: 18
+  driverId: vitantonio-liuzzi
+  constructorId: toro-rosso
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 19
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Hydraulics
+  points:
+  gridPosition: 16
+- position: DNF
+  driverNumber: 19
+  driverId: scott-speed
+  constructorId: toro-rosso
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 9
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Tyre
+  points:
+  gridPosition: 22
+- position: DNF
+  driverNumber: 6
+  driverId: kimi-raikkonen
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  laps: 9
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Electrical
+  points:
+  gridPosition: 3
+- position: DNF
+  driverNumber: 12
+  driverId: jarno-trulli
+  constructorId: toyota
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fuel pressure
+  points:
+  gridPosition: 6
+- position: DNF
+  driverNumber: 15
+  driverId: mark-webber
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  laps: 7
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Hydraulics
+  points:
+  gridPosition: 19
+- position: DNF
+  driverNumber: 17
+  driverId: alexander-wurz
+  constructorId: williams
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  laps: 1
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 18

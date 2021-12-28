@@ -1,0 +1,239 @@
+- position: 1
+  driverNumber: 10
+  driverId: alberto-ascari
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 97
+  time: "3:01:04.600"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 9
+  gridPosition: 1
+- position: 2
+  driverNumber: 14
+  driverId: luigi-villoresi
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 96
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 6
+  gridPosition: 3
+- position: 3
+  driverNumber: 4
+  driverId: jose-froilan-gonzalez
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 96
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 4
+  gridPosition: 5
+- position: 4
+  driverNumber: 16
+  driverId: mike-hawthorn
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 96
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 3
+  gridPosition: 6
+- position: 5
+  driverNumber: 8
+  driverId: oscar-alfredo-galvez
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 96
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 2
+  gridPosition: 9
+- position: 6
+  driverNumber: 30
+  driverId: jean-behra
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 94
+  time:
+  timePenalty:
+  gap: "+3 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 11
+- position: 7
+  driverNumber: 28
+  driverId: maurice-trintignant
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 91
+  time:
+  timePenalty:
+  gap: "+6 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 7
+- position: 7
+  driverNumber: 28
+  driverId: harry-schell
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  sharedCar: true
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: 8
+  driverNumber: 22
+  driverId: john-barber
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  laps: 90
+  time:
+  timePenalty:
+  gap: "+7 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 16
+- position: 9
+  driverNumber: 20
+  driverId: alan-brown
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  laps: 87
+  time:
+  timePenalty:
+  gap: "+10 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 12
+- position: DNF
+  driverNumber: 26
+  driverId: robert-manzon
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 67
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Wheel
+  points:
+  gridPosition: 8
+- position: DNF
+  driverNumber: 2
+  driverId: juan-manuel-fangio
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 36
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 2
+- position: DNF
+  driverNumber: 6
+  driverId: felice-bonetto
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 31
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 15
+- position: DNF
+  driverNumber: 12
+  driverId: nino-farina
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 30
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident
+  points:
+  gridPosition: 4
+- position: DNF
+  driverNumber: 32
+  driverId: carlos-menditeguy
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 24
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 10
+- position: DNF
+  driverNumber: 34
+  driverId: pablo-birger
+  constructorId: simca-gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 21
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Differential
+  points:
+  gridPosition: 14
+- position: DNF
+  driverNumber: 24
+  driverId: adolfo-schwelm-cruz
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  laps: 20
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Wheel
+  points:
+  gridPosition: 13

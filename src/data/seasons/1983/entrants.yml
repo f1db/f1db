@@ -1,0 +1,200 @@
+- entrantId: arrows-racing-team
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: chico-serra
+      rounds: 1,3-5
+    - driverId: marc-surer
+      rounds: 1-15
+    - driverId: alan-jones
+      rounds: 2
+    - driverId: thierry-boutsen
+      rounds: 6-15
+- entrantId: benetton-tyrrell-team
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: danny-sullivan
+      rounds: 1-15
+    - driverId: michele-alboreto
+      rounds: 1-15
+- entrantId: candy-toleman-motorsport
+  countryId: united-kingdom
+  constructorId: toleman
+  engineManufacturerId: hart
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: bruno-giacomelli
+      rounds: 1-15
+    - driverId: derek-warwick
+      rounds: 1-15
+- entrantId: equipe-ligier-gitanes
+  countryId: france
+  constructorId: ligier
+  engineManufacturerId: ford
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: jean-pierre-jarier
+      rounds: 1-15
+    - driverId: raul-boesel
+      rounds: 1-15
+- entrantId: equipe-renault-elf
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: alain-prost
+      rounds: 1-15
+    - driverId: eddie-cheever
+      rounds: 1-15
+- entrantId: fila-sport
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: nelson-piquet
+      rounds: 1-15
+    - driverId: riccardo-patrese
+      rounds: 1-15
+- entrantId: john-player-team-lotus
+  countryId: united-kingdom
+  constructors:
+    - constructorId: lotus
+      engineManufacturerId: ford
+      tyreManufacturerId: pirelli
+      drivers:
+        - driverId: elio-de-angelis
+          rounds: 1
+        - driverId: nigel-mansell
+          rounds: 1-8
+    - constructorId: lotus
+      engineManufacturerId: renault
+      tyreManufacturerId: pirelli
+      drivers:
+        - driverId: elio-de-angelis
+          rounds: 2-15
+        - driverId: nigel-mansell
+          rounds: 9-15
+- entrantId: marlboro-mclaren-international
+  countryId: united-kingdom
+  constructors:
+    - constructorId: mclaren
+      engineManufacturerId: ford
+      tyreManufacturerId: michelin
+      drivers:
+        - driverId: john-watson
+          rounds: 1-12
+        - driverId: niki-lauda
+          rounds: 1-11
+    - constructorId: mclaren
+      engineManufacturerId: tag
+      tyreManufacturerId: michelin
+      drivers:
+        - driverId: john-watson
+          rounds: 13-15
+        - driverId: niki-lauda
+          rounds: 12-15
+- entrantId: marlboro-team-alfa-romeo
+  countryId: italy
+  constructorId: alfa-romeo
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: andrea-de-cesaris
+      rounds: 1-15
+    - driverId: mauro-baldi
+      rounds: 1-15
+- entrantId: osella-squadra-corse
+  countryId: italy
+  constructors:
+    - constructorId: osella
+      engineManufacturerId: ford
+      tyreManufacturerId: michelin
+      drivers:
+        - driverId: corrado-fabi
+          rounds: 1-8
+        - driverId: piercarlo-ghinzani
+          rounds: 1-3
+    - constructorId: osella
+      engineManufacturerId: alfa-romeo
+      tyreManufacturerId: michelin
+      drivers:
+        - driverId: piercarlo-ghinzani
+          rounds: 4-15
+        - driverId: corrado-fabi
+          rounds: 9-15
+- entrantId: ram-racing-team-march
+  countryId: united-kingdom
+  constructorId: ram
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: eliseo-salazar
+      rounds: 1-6
+    - driverId: jean-louis-schlesser
+      rounds: 3
+    - driverId: jacques-villeneuve-sr
+      rounds: 8
+    - driverId: kenny-acheson
+      rounds: 9-15
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: patrick-tambay
+      rounds: 1-15
+    - driverId: rene-arnoux
+      rounds: 1-15
+- entrantId: spirit-racing
+  countryId: united-kingdom
+  constructorId: spirit
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  driverId: stefan-johansson
+  rounds: 9-14
+- entrantId: tag-williams-team
+  countryId: united-kingdom
+  constructors:
+    - constructorId: williams
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: jacques-laffite
+          rounds: 1-14
+        - driverId: keke-rosberg
+          rounds: 1-14
+        - driverId: jonathan-palmer
+          rounds: 14
+    - constructorId: williams
+      engineManufacturerId: honda
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: jacques-laffite
+          rounds: 15
+        - driverId: keke-rosberg
+          rounds: 15
+- entrantId: team-ats
+  countryId: germany
+  constructorId: ats-wheels
+  engineManufacturerId: bmw
+  tyreManufacturerId: goodyear
+  driverId: manfred-winkelhock
+  rounds: 1-15
+- entrantId: theodore-racing-team
+  countryId: hong-kong
+  constructorId: theodore
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: johnny-cecotto
+      rounds: 1-13
+    - driverId: roberto-guerrero
+      rounds: 1-14

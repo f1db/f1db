@@ -1,0 +1,448 @@
+- position: 1
+  driverNumber: 5
+  driverId: nigel-mansell
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  laps: 60
+  time: "1:28:40.927"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 10
+  gridPosition: 1
+- position: 2
+  driverNumber: 6
+  driverId: riccardo-patrese
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  laps: 60
+  time: "1:28:50.378"
+  timePenalty:
+  gap: "+9.451"
+  interval: "+9.451"
+  reasonRetired:
+  points: 6
+  gridPosition: 2
+- position: 3
+  driverNumber: 1
+  driverId: ayrton-senna
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  laps: 60
+  time: "1:29:29.911"
+  timePenalty:
+  gap: "+48.984"
+  interval: "+39.533"
+  reasonRetired:
+  points: 4
+  gridPosition: 3
+- position: 4
+  driverNumber: 20
+  driverId: martin-brundle
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 60
+  time: "1:29:33.934"
+  timePenalty:
+  gap: "+53.007"
+  interval: "+4.023"
+  reasonRetired:
+  points: 3
+  gridPosition: 6
+- position: 5
+  driverNumber: 9
+  driverId: michele-alboreto
+  constructorId: footwork
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  laps: 59
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 2
+  gridPosition: 9
+- position: 6
+  driverNumber: 22
+  driverId: pierluigi-martini
+  constructorId: dallara
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 59
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 1
+  gridPosition: 15
+- position: 7
+  driverNumber: 33
+  driverId: mauricio-gugelmin
+  constructorId: jordan
+  engineManufacturerId: yamaha
+  tyreManufacturerId: goodyear
+  laps: 58
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 18
+- position: 8
+  driverNumber: 3
+  driverId: olivier-grouillard
+  constructorId: tyrrell
+  engineManufacturerId: ilmor
+  tyreManufacturerId: goodyear
+  laps: 58
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 20
+- position: 9
+  driverNumber: 26
+  driverId: erik-comas
+  constructorId: ligier
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  laps: 58
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 13
+- position: 10
+  driverNumber: 10
+  driverId: aguri-suzuki
+  constructorId: footwork
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  laps: 58
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 11
+- position: 11
+  driverNumber: 21
+  driverId: jj-lehto
+  constructorId: dallara
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 57
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 16
+- position: 12
+  driverNumber: 16
+  driverId: karl-wendlinger
+  constructorId: march
+  engineManufacturerId: ilmor
+  tyreManufacturerId: goodyear
+  laps: 57
+  time:
+  timePenalty:
+  gap: "+3 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 12
+- position: 13
+  driverNumber: 17
+  driverId: paul-belmondo
+  constructorId: march
+  engineManufacturerId: ilmor
+  tyreManufacturerId: goodyear
+  laps: 57
+  time:
+  timePenalty:
+  gap: "+3 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 24
+- position: 14
+  driverNumber: 4
+  driverId: andrea-de-cesaris
+  constructorId: tyrrell
+  engineManufacturerId: ilmor
+  tyreManufacturerId: goodyear
+  laps: 55
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fuel system
+  points:
+  gridPosition: 14
+- position: DNF
+  driverNumber: 30
+  driverId: ukyo-katayama
+  constructorId: venturi
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  laps: 40
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Spun off
+  points:
+  gridPosition: 17
+- position: DNF
+  driverNumber: 27
+  driverId: jean-alesi
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 39
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 7
+- position: DNF
+  driverNumber: 2
+  driverId: gerhard-berger
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  laps: 39
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 4
+- position: DNF
+  driverNumber: 29
+  driverId: bertrand-gachot
+  constructorId: venturi
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  laps: 32
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Spun off
+  points:
+  gridPosition: 19
+- position: DNF
+  driverNumber: 25
+  driverId: thierry-boutsen
+  constructorId: ligier
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  laps: 29
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 10
+- position: DNF
+  driverNumber: 32
+  driverId: stefano-modena
+  constructorId: jordan
+  engineManufacturerId: yamaha
+  tyreManufacturerId: goodyear
+  laps: 25
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 23
+- position: DNF
+  driverNumber: 24
+  driverId: gianni-morbidelli
+  constructorId: minardi
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  laps: 24
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 21
+- position: DNF
+  driverNumber: 15
+  driverId: gabriele-tarquini
+  constructorId: fondmetal
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 24
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 22
+- position: DNF
+  driverNumber: 19
+  driverId: michael-schumacher
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 20
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Suspension
+  points:
+  gridPosition: 5
+- position: DNF
+  driverNumber: 28
+  driverId: ivan-capelli
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 11
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Spun off
+  points:
+  gridPosition: 8
+- position: DNF
+  driverNumber: 23
+  driverId: christian-fittipaldi
+  constructorId: minardi
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 25
+- position: DNF
+  driverNumber: 12
+  driverId: johnny-herbert
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 26
+- position: DNQ
+  driverNumber: 11
+  driverId: mika-hakkinen
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNQ
+  driverNumber: 14
+  driverId: andrea-chiesa
+  constructorId: fondmetal
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNQ
+  driverNumber: 8
+  driverId: damon-hill
+  constructorId: brabham
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNQ
+  driverNumber: 7
+  driverId: eric-van-de-poele
+  constructorId: brabham
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNPQ
+  driverNumber: 34
+  driverId: roberto-moreno
+  constructorId: andrea-moda
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNPQ
+  driverNumber: 35
+  driverId: perry-mccarthy
+  constructorId: andrea-moda
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:

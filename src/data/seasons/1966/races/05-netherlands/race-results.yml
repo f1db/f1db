@@ -1,0 +1,252 @@
+- position: 1
+  driverNumber: 16
+  driverId: jack-brabham
+  constructorId: brabham
+  engineManufacturerId: repco
+  tyreManufacturerId: goodyear
+  laps: 90
+  time: "2:20:32.500"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 9
+  gridPosition: 1
+- position: 2
+  driverNumber: 12
+  driverId: graham-hill
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 89
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points: 6
+  gridPosition: 7
+- position: 3
+  driverNumber: 6
+  driverId: jim-clark
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  laps: 88
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points: 4
+  gridPosition: 3
+- position: 4
+  driverNumber: 14
+  driverId: jackie-stewart
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 88
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points: 3
+  gridPosition: 8
+- position: 5
+  driverNumber: 32
+  driverId: mike-spence
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  laps: 87
+  time:
+  timePenalty:
+  gap: "+3 laps"
+  interval:
+  reasonRetired:
+  points: 2
+  gridPosition: 12
+- position: 6
+  driverNumber: 2
+  driverId: lorenzo-bandini
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: firestone
+  laps: 87
+  time:
+  timePenalty:
+  gap: "+3 laps"
+  interval:
+  reasonRetired:
+  points: 1
+  gridPosition: 9
+- position: 7
+  driverNumber: 30
+  driverId: jo-bonnier
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: firestone
+  laps: 84
+  time:
+  timePenalty:
+  gap: "+6 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 13
+- position: 8
+  driverNumber: 38
+  driverId: john-taylor
+  constructorId: brabham
+  engineManufacturerId: brm
+  tyreManufacturerId: goodyear
+  laps: 84
+  time:
+  timePenalty:
+  gap: "+6 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 17
+- position: 9
+  driverNumber: 36
+  driverId: guy-ligier
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  laps: 84
+  time:
+  timePenalty:
+  gap: "+6 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 16
+- position: DNF
+  driverNumber: 28
+  driverId: jo-siffert
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  laps: 79
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 11
+- position: DNF
+  driverNumber: 34
+  driverId: bob-anderson
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  laps: 73
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Suspension
+  points:
+  gridPosition: 14
+- position: DNF
+  driverNumber: 24
+  driverId: john-surtees
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  laps: 44
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Electrical
+  points:
+  gridPosition: 10
+- position: DNF
+  driverNumber: 18
+  driverId: denny-hulme
+  constructorId: brabham
+  engineManufacturerId: repco
+  tyreManufacturerId: goodyear
+  laps: 37
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Ignition
+  points:
+  gridPosition: 2
+- position: DNF
+  driverNumber: 8
+  driverId: peter-arundell
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  laps: 28
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Ignition
+  points:
+  gridPosition: 15
+- position: DNF
+  driverNumber: 10
+  driverId: dan-gurney
+  constructorId: eagle
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  laps: 26
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil leak
+  points:
+  gridPosition: 4
+- position: DNF
+  driverNumber: 4
+  driverId: mike-parkes
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: firestone
+  laps: 10
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident
+  points:
+  gridPosition: 5
+- position: DNF
+  driverNumber: 26
+  driverId: jochen-rindt
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  laps: 2
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident
+  points:
+  gridPosition: 6
+- position: DNS
+  driverNumber: 20
+  driverId: bruce-mclaren
+  constructorId: mclaren
+  engineManufacturerId: serenissima
+  tyreManufacturerId: firestone
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition:

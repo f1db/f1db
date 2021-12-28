@@ -1,0 +1,125 @@
+- entrantId: att-williams
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: alexander-wurz
+      rounds: 1-16
+    - driverId: nico-rosberg
+      rounds: 1-17
+    - driverId: kazuki-nakajima
+      rounds: 17
+      testDriver: true
+- entrantId: bmw-sauber-f1-team
+  countryId: germany
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: nick-heidfeld
+      rounds: 1-17
+    - driverId: robert-kubica
+      rounds: 1-6,8-17
+    - driverId: sebastian-vettel
+      rounds: 7
+      testDriver: true
+- entrantId: etihad-aldar-spyker-f1-team
+  countryId: netherlands
+  constructorId: spyker
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: adrian-sutil
+      rounds: 1-17
+    - driverId: christijan-albers
+      rounds: 1-9
+    - driverId: markus-winkelhock
+      rounds: 10
+    - driverId: sakon-yamamoto
+      rounds: 11-17
+- entrantId: honda-racing-f1-team
+  countryId: japan
+  constructorId: honda
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: jenson-button
+      rounds: 1-17
+    - driverId: rubens-barrichello
+      rounds: 1-17
+    - driverId: christian-klien
+      rounds:
+      testDriver: true
+- entrantId: ing-renault-f1-team
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: giancarlo-fisichella
+      rounds: 1-17
+    - driverId: heikki-kovalainen
+      rounds: 1-17
+- entrantId: panasonic-toyota-racing
+  countryId: japan
+  constructorId: toyota
+  engineManufacturerId: toyota
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: jarno-trulli
+      rounds: 1-17
+    - driverId: ralf-schumacher
+      rounds: 1-17
+- entrantId: red-bull-racing
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: david-coulthard
+      rounds: 1-17
+    - driverId: mark-webber
+      rounds: 1-17
+- entrantId: scuderia-ferrari-marlboro
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: felipe-massa
+      rounds: 1-17
+    - driverId: kimi-raikkonen
+      rounds: 1-17
+- entrantId: scuderia-toro-rosso
+  countryId: italy
+  constructorId: toro-rosso
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: scott-speed
+      rounds: 1-10
+    - driverId: vitantonio-liuzzi
+      rounds: 1-17
+    - driverId: sebastian-vettel
+      rounds: 11-17
+- entrantId: super-aguri-f1-team
+  countryId: japan
+  constructorId: super-aguri
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: anthony-davidson
+      rounds: 1-17
+    - driverId: takuma-sato
+      rounds: 1-17
+- entrantId: vodafone-mclaren-mercedes
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: fernando-alonso
+      rounds: 1-17
+    - driverId: lewis-hamilton
+      rounds: 1-17

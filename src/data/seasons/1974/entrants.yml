@@ -1,0 +1,349 @@
+- entrantId: aaw-racing-team
+  countryId: finland
+  constructorId: surtees
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: leo-kinnunen
+  rounds: 5,7,9-10,12-13
+- entrantId: allied-polymer-group
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: lella-lombardi
+  rounds: 10
+- entrantId: bang-olufsen-team-surtees
+  countryId: united-kingdom
+  constructorId: surtees
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: carlos-pace
+      rounds: 1-7
+    - driverId: jochen-mass
+      rounds: 1-11
+    - driverId: jose-dolhem
+      rounds: 9
+    - driverId: derek-bell
+      rounds: 10-11
+- entrantId: blignaut-embassy-racing
+  countryId: south-africa
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: eddie-keizan
+  rounds: 3
+- entrantId: chris-amon-racing
+  countryId: united-kingdom
+  constructorId: amon
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: chris-amon
+      rounds: 4,6,11,13
+    - driverId: larry-perkins
+      rounds: 11
+- entrantId: dempster-international-racing-team
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: mike-wilds
+  rounds: 10
+- entrantId: elf-team-tyrrell
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jody-scheckter
+      rounds: 1-15
+    - driverId: patrick-depailler
+      rounds: 1-15
+- entrantId: embassy-racing-with-graham-hill
+  countryId: united-kingdom
+  constructorId: lola
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: graham-hill
+      rounds: 1-15
+    - driverId: guy-edwards
+      rounds: 1-2,4-11
+    - driverId: peter-gethin
+      rounds: 10
+    - driverId: rolf-stommelen
+      rounds: 12-15
+- entrantId: frank-williams-racing-cars
+  countryId: united-kingdom
+  constructorId: iso-marlboro
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: arturo-merzario
+      rounds: 1-15
+    - driverId: tom-belso
+      rounds: 3-4,7,10
+    - driverId: gijs-van-lennep
+      rounds: 5,8
+    - driverId: richard-robarts
+      rounds: 7
+    - driverId: jean-pierre-jabouille
+      rounds: 9
+    - driverId: jacques-laffite
+      rounds: 11-15
+- entrantId: hesketh-racing
+  countryId: united-kingdom
+  constructors:
+    - constructorId: march
+      engineManufacturerId: ford
+      tyreManufacturerId: firestone
+      driverId: james-hunt
+      rounds: 1-2
+    - constructorId: hesketh
+      engineManufacturerId: ford
+      tyreManufacturers:
+        - tyreManufacturerId: goodyear
+        - tyreManufacturerId: firestone
+      drivers:
+        - driverId: james-hunt
+          rounds: 3-15
+        - driverId: ian-scheckter
+          rounds: 12
+- entrantId: john-goldie-racing-with-hexagon
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: john-watson
+      rounds: 1-15
+    - driverId: carlos-pace
+      rounds: 9
+- entrantId: john-player-team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jacky-ickx
+      rounds: 1-15
+    - driverId: ronnie-peterson
+      rounds: 1-15
+    - driverId: tim-schenken
+      rounds: 15
+- entrantId: maki-engineering
+  countryId: japan
+  constructorId: maki
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: howden-ganley
+  rounds: 10-11
+- entrantId: march-engineering
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: hans-joachim-stuck
+      rounds: 1-6,8-15
+    - driverId: howden-ganley
+      rounds: 1-2
+    - driverId: vittorio-brambilla
+      rounds: 3-15
+    - driverId: reine-wisell
+      rounds: 7
+- entrantId: marlboro-team-texaco
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: denny-hulme
+      rounds: 1-15
+    - driverId: emerson-fittipaldi
+      rounds: 1-15
+- entrantId: memphis-international-team-surtees
+  countryId: united-kingdom
+  constructorId: surtees
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: dieter-quester
+  rounds: 12
+- entrantId: motor-racing-developments
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: carlos-reutemann
+      rounds: 1-15
+    - driverId: richard-robarts
+      rounds: 1-3
+    - driverId: rikky-von-opel
+      rounds: 4-9
+    - driverId: teddy-pilette
+      rounds: 5
+    - driverId: carlos-pace
+      rounds: 10-15
+- entrantId: penske-cars
+  countryId: united-states-of-america
+  constructorId: penske
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: mark-donohue
+  rounds: 14-15
+- entrantId: pinch-plant-ltd
+  countryId: united-kingdom
+  constructorId: lyncar
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: john-nicholson
+  rounds: 10
+- entrantId: scribante-lucky-strike-racing
+  countryId: south-africa
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: dave-charlton
+  rounds: 3
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: clay-regazzoni
+      rounds: 1-15
+    - driverId: niki-lauda
+      rounds: 1-15
+- entrantId: scuderia-finotto
+  countryId: italy
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: gerard-larrousse
+      rounds: 5,9
+    - driverId: helmuth-koinigg
+      rounds: 12
+    - driverId: carlo-facetti
+      rounds: 13
+- entrantId: team-canada-f1-racing
+  countryId: canada
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: eppie-wietzes
+  rounds: 14
+- entrantId: team-ensign
+  countryId: united-kingdom
+  constructorId: ensign
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: rikky-von-opel
+      rounds: 1
+    - driverId: vern-schuppan
+      rounds: 5-11
+    - driverId: mike-wilds
+      rounds: 12-15
+- entrantId: team-gunston
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ian-scheckter
+      rounds: 3
+    - driverId: paddy-driver
+      rounds: 3
+- entrantId: team-motul-brm
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: francois-migault
+      rounds: 1-6,8-11,13
+    - driverId: henri-pescarolo
+      rounds: 1-11,13
+    - driverId: jean-pierre-beltoise
+      rounds: 1-15
+    - driverId: chris-amon
+      rounds: 14-15
+- entrantId: team-surtees
+  countryId: united-kingdom
+  constructorId: surtees
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: jose-dolhem
+      rounds: 13,15
+    - driverId: derek-bell
+      rounds: 12-14
+    - driverId: jean-pierre-jabouille
+      rounds: 12
+    - driverId: helmuth-koinigg
+      rounds: 14-15
+- entrantId: the-chequered-flag
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: ian-ashley
+  rounds: 14-15
+- entrantId: token-racing
+  countryId: united-kingdom
+  constructorId: token
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: tom-pryce
+      rounds: 5
+    - driverId: david-purley
+      rounds: 10
+    - driverId: ian-ashley
+      rounds: 11-12
+- entrantId: trojan-tauranac-racing
+  countryId: united-kingdom
+  constructorId: trojan
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: tim-schenken
+  rounds: 4-6,8,10-13
+- entrantId: uop-shadow-racing
+  countryId: united-states-of-america
+  constructorId: shadow
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jean-pierre-jarier
+      rounds: 1-2,4-15
+    - driverId: peter-revson
+      rounds: 1-2
+    - driverId: brian-redman
+      rounds: 4-6
+    - driverId: bertil-roos
+      rounds: 7
+    - driverId: tom-pryce
+      rounds: 8-15
+- entrantId: vels-parnelli-jones-racing
+  countryId: united-states-of-america
+  constructorId: parnelli
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: mario-andretti
+  rounds: 14-15
+- entrantId: yardley-team-mclaren
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: mike-hailwood
+      rounds: 1-11
+    - driverId: david-hobbs
+      rounds: 12-13
+    - driverId: jochen-mass
+      rounds: 14-15

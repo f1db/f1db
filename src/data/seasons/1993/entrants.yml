@@ -1,0 +1,158 @@
+- entrantId: camel-benetton-ford
+  countryId: united-kingdom
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: michael-schumacher
+      rounds: 1-16
+    - driverId: riccardo-patrese
+      rounds: 1-16
+- entrantId: canon-williams
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alain-prost
+      rounds: 1-16
+    - driverId: damon-hill
+      rounds: 1-16
+- entrantId: footwork-mugen-honda
+  countryId: united-kingdom
+  constructorId: footwork
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: aguri-suzuki
+      rounds: 1-16
+    - driverId: derek-warwick
+      rounds: 1-16
+- entrantId: larrousse-f1
+  countryId: france
+  constructorId: larrousse
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: erik-comas
+      rounds: 1-16
+    - driverId: philippe-alliot
+      rounds: 1-14
+    - driverId: toshio-suzuki
+      rounds: 15-16
+- entrantId: ligier-gitanes-blondes
+  countryId: france
+  constructorId: ligier
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: mark-blundell
+      rounds: 1-16
+    - driverId: martin-brundle
+      rounds: 1-16
+- entrantId: lola-bms-scuderia-italia
+  countryId: italy
+  constructorId: lola
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: luca-badoer
+      rounds: 1-14
+    - driverId: michele-alboreto
+      rounds: 1-14
+- entrantId: march-f1
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: ilmor
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jan-lammers
+      rounds:
+    - driverId: jean-marc-gounon
+      rounds:
+- entrantId: marlboro-mclaren
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ayrton-senna
+      rounds: 1-16
+    - driverId: michael-andretti
+      rounds: 1-13
+    - driverId: mika-hakkinen
+      rounds: 14-16
+- entrantId: minardi-team
+  countryId: italy
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: christian-fittipaldi
+      rounds: 1-14
+    - driverId: fabrizio-barbazza
+      rounds: 1-8
+    - driverId: pierluigi-martini
+      rounds: 9-16
+    - driverId: jean-marc-gounon
+      rounds: 15-16
+- entrantId: sasol-jordan
+  countryId: ireland
+  constructorId: jordan
+  engineManufacturerId: hart
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ivan-capelli
+      rounds: 1-2
+    - driverId: rubens-barrichello
+      rounds: 1-16
+    - driverId: thierry-boutsen
+      rounds: 3-12
+    - driverId: marco-apicella
+      rounds: 13
+    - driverId: emanuele-naspetti
+      rounds: 14
+    - driverId: eddie-irvine
+      rounds: 15-16
+- entrantId: sauber
+  countryId: switzerland
+  constructorId: sauber
+  engineManufacturerId: sauber
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jj-lehto
+      rounds: 1-16
+    - driverId: karl-wendlinger
+      rounds: 1-16
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: gerhard-berger
+      rounds: 1-16
+    - driverId: jean-alesi
+      rounds: 1-16
+- entrantId: team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alex-zanardi
+      rounds: 1-12
+    - driverId: johnny-herbert
+      rounds: 1-16
+    - driverId: pedro-lamy
+      rounds: 13-16
+- entrantId: tyrrell-racing-organisation
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: yamaha
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+    - driverId: ukyo-katayama
+      rounds: 1-16

@@ -1,0 +1,308 @@
+- position: 1
+  driverNumber: 1
+  driverId: jim-clark
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 15
+  time: "2:07:52.400"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 9
+  gridPosition: 1
+- position: 2
+  driverNumber: 9
+  driverId: graham-hill
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 15
+  time: "2:08:08.300"
+  timePenalty:
+  gap: "+15.900"
+  interval: "+15.900"
+  reasonRetired:
+  points: 6
+  gridPosition: 3
+- position: 3
+  driverNumber: 5
+  driverId: dan-gurney
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  laps: 15
+  time: "2:08:13.800"
+  timePenalty:
+  gap: "+21.400"
+  interval: "+5.500"
+  reasonRetired:
+  points: 4
+  gridPosition: 5
+- position: 4
+  driverNumber: 12
+  driverId: jochen-rindt
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 15
+  time: "2:11:22.000"
+  timePenalty:
+  gap: "+3:29.600"
+  interval: "+3:08.200"
+  reasonRetired:
+  points: 3
+  gridPosition: 8
+- position: 5
+  driverNumber: 4
+  driverId: jack-brabham
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  laps: 15
+  time: "2:12:33.600"
+  timePenalty:
+  gap: "+4:41.200"
+  interval: "+1:11.600"
+  reasonRetired:
+  points: 2
+  gridPosition: 14
+- position: 6
+  driverNumber: 8
+  driverId: lorenzo-bandini
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: dunlop
+  laps: 15
+  time: "2:13:01.000"
+  timePenalty:
+  gap: "+5:08.600"
+  interval: "+27.400"
+  reasonRetired:
+  points: 1
+  gridPosition: 7
+- position: 7
+  driverNumber: 16
+  driverId: jo-bonnier
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 15
+  time: "2:13:50.900"
+  timePenalty:
+  gap: "+5:58.500"
+  interval: "+49.900"
+  reasonRetired:
+  points:
+  gridPosition: 9
+- position: 8
+  driverNumber: 24
+  driverId: masten-gregory
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 14
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 18
+- position: DNF
+  driverNumber: 7
+  driverId: john-surtees
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: dunlop
+  laps: 11
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 4
+- position: DNF
+  driverNumber: 17
+  driverId: jo-siffert
+  constructorId: brabham
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 9
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 11
+- position: DNF
+  driverNumber: 3
+  driverId: gerhard-mitter
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Water leak
+  points:
+  gridPosition: 12
+- position: DNF
+  driverNumber: 2
+  driverId: mike-spence
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 6
+- position: DNF
+  driverNumber: 20
+  driverId: richard-attwood
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 7
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Water leak
+  points:
+  gridPosition: 16
+- position: DNF
+  driverNumber: 11
+  driverId: bruce-mclaren
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 7
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 10
+- position: DNF
+  driverNumber: 6
+  driverId: denny-hulme
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  laps: 5
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fuel leak
+  points:
+  gridPosition: 13
+- position: DNF
+  driverNumber: 22
+  driverId: paul-hawkins
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 4
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil leak
+  points:
+  gridPosition: 19
+- position: DNF
+  driverNumber: 19
+  driverId: chris-amon
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 3
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Electrical
+  points:
+  gridPosition: 15
+- position: DNF
+  driverNumber: 10
+  driverId: jackie-stewart
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 2
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Suspension
+  points:
+  gridPosition: 2
+- position: DNF
+  driverNumber: 21
+  driverId: frank-gardner
+  constructorId: brabham
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps: 0
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Gearbox
+  points:
+  gridPosition: 17
+- position: DNS
+  driverNumber: 18
+  driverId: bob-anderson
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident in practice
+  points:
+  gridPosition:
+- position: DNQ
+  driverNumber: 25
+  driverId: roberto-bussinello
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition:
+- position: DNQ
+  driverNumber: 23
+  driverId: ian-raby
+  constructorId: brabham
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident in practice
+  points:
+  gridPosition:

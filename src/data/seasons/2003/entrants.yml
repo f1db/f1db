@@ -1,0 +1,129 @@
+- entrantId: benson-hedges-jordan-ford
+  countryId: ireland
+  constructorId: jordan
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: giancarlo-fisichella
+      rounds: 1-16
+    - driverId: ralph-firman
+      rounds: 1-13,15-16
+    - driverId: zsolt-baumgartner
+      rounds: 13-14
+      testDriver: true
+    - driverId: bjorn-wirdheim
+      rounds:
+      testDriver: true
+    - driverId: satoshi-motoyama
+      rounds:
+      testDriver: true
+- entrantId: bmw-williamsf1-team
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: juan-pablo-montoya
+      rounds: 1-16
+    - driverId: ralf-schumacher
+      rounds: 1-16
+    - driverId: marc-gene
+      rounds: 14
+- entrantId: jaguar-racing-f1-team
+  countryId: united-kingdom
+  constructorId: jaguar
+  engineManufacturerId: cosworth
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: antonio-pizzonia
+      rounds: 1-11
+    - driverId: mark-webber
+      rounds: 1-16
+    - driverId: justin-wilson
+      rounds: 12-16
+- entrantId: lucky-strike-bar-honda
+  countryId: united-kingdom
+  constructorId: bar
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: jacques-villeneuve
+      rounds: 1-15
+    - driverId: jenson-button
+      rounds: 1-16
+    - driverId: takuma-sato
+      rounds: 16
+- entrantId: mild-seven-renault-f1-team
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: fernando-alonso
+      rounds: 1-16
+    - driverId: jarno-trulli
+      rounds: 1-16
+    - driverId: allan-mcnish
+      rounds:
+      testDriver: true
+    - driverId: franck-montagny
+      rounds:
+      testDriver: true
+- entrantId: panasonic-toyota-racing
+  countryId: japan
+  constructorId: toyota
+  engineManufacturerId: toyota
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: cristiano-da-matta
+      rounds: 1-16
+    - driverId: olivier-panis
+      rounds: 1-16
+- entrantId: sauber-petronas
+  countryId: switzerland
+  constructorId: sauber
+  engineManufacturerId: petronas
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: heinz-harald-frentzen
+      rounds: 1-16
+    - driverId: nick-heidfeld
+      rounds: 1-16
+- entrantId: scuderia-ferrari-marlboro
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: michael-schumacher
+      rounds: 1-16
+    - driverId: rubens-barrichello
+      rounds: 1-16
+- entrantId: trust-minardi-cosworth
+  countryId: italy
+  constructorId: minardi
+  engineManufacturerId: cosworth
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: jos-verstappen
+      rounds: 1-16
+    - driverId: justin-wilson
+      rounds: 1-11
+    - driverId: nicolas-kiesa
+      rounds: 12-16
+    - driverId: gianmaria-bruni
+      rounds:
+      testDriver: true
+    - driverId: matteo-bobbi
+      rounds:
+      testDriver: true
+- entrantId: west-mclaren-mercedes
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: david-coulthard
+      rounds: 1-16
+    - driverId: kimi-raikkonen
+      rounds: 1-16

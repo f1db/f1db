@@ -1,0 +1,270 @@
+- entrantId: bob-gerard-racing
+  countryId: united-kingdom
+  constructors:
+    - constructorId: cooper
+      engineManufacturerId: climax
+      tyreManufacturerId: dunlop
+      driverId: john-rhodes
+      rounds: 5
+    - constructorId: cooper
+      engineManufacturerId: ford
+      tyreManufacturerId: dunlop
+      driverId: alan-rollinson
+      rounds: 5
+- entrantId: brabham-racing-organisation
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: dan-gurney
+      rounds: 1,3-10
+    - driverId: jack-brabham
+      rounds: 1-3,5,7,9-10
+    - driverId: denny-hulme
+      rounds: 2,4-8
+    - driverId: giancarlo-baghetti
+      rounds: 8
+- entrantId: brian-gubby
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: brian-gubby
+  rounds: 5
+- entrantId: clive-puzey-motors
+  countryId: zimbabwe
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: clive-puzey
+  rounds: 1
+- entrantId: cooper-car-company
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: bruce-mclaren
+      rounds: 1-10
+    - driverId: jochen-rindt
+      rounds: 1-10
+- entrantId: david-prophet
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: david-prophet
+  rounds: 1
+- entrantId: dw-racing-enterprises
+  countryId: united-kingdom
+  constructors:
+    - constructorId: brabham
+      engineManufacturerId: climax
+      tyreManufacturerId: dunlop
+      driverId: bob-anderson
+      rounds: 1-7
+    - constructorId: lotus
+      engineManufacturerId: climax
+      tyreManufacturerId: dunlop
+      driverId: paul-hawkins
+      rounds: 2,7
+- entrantId: ecurie-tomahawk
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: dave-charlton
+  rounds: 1
+- entrantId: honda-rd-company
+  countryId: japan
+  constructorId: honda
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: richie-ginther
+      rounds: 2-6,8-10
+    - driverId: ronnie-bucknum
+      rounds: 2-4,8-10
+- entrantId: ian-raby-racing
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: chris-amon
+      rounds: 5
+    - driverId: ian-raby
+      rounds: 5,7
+- entrantId: jackie-pretorius
+  countryId: south-africa
+  constructorId: lds
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: dunlop
+  driverId: jackie-pretorius
+  rounds: 1
+- entrantId: john-love
+  countryId: zimbabwe
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: john-love
+  rounds: 1
+- entrantId: john-willment-automobiles
+  countryId: united-kingdom
+  constructors:
+    - constructorId: brabham
+      engineManufacturerId: brm
+      tyreManufacturerId: dunlop
+      driverId: frank-gardner
+      rounds: 1-3,5-8
+    - constructorId: brabham
+      engineManufacturerId: ford
+      tyreManufacturerId: dunlop
+      driverId: paul-hawkins
+      rounds: 1
+- entrantId: lawson-organisation
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: ernie-pieterse
+  rounds: 1
+- entrantId: north-american-racing-team
+  countryId: united-states-of-america
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: bob-bondurant
+      rounds: 9
+    - driverId: pedro-rodriguez
+      rounds: 9-10
+- entrantId: otelle-nucci
+  countryId: south-africa
+  constructors:
+    - constructorId: alfa-romeo
+      engineManufacturerId: alfa-romeo
+      tyreManufacturerId: dunlop
+      driverId: peter-de-klerk
+      rounds: 1
+    - constructorId: lds
+      engineManufacturerId: climax
+      tyreManufacturerId: dunlop
+      driverId: doug-serrurier
+      rounds: 1
+- entrantId: owen-racing-organisation
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: graham-hill
+      rounds: 1-10
+    - driverId: jackie-stewart
+      rounds: 1-10
+- entrantId: reg-parnell-racing
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: tony-maggs
+      rounds: 1
+    - driverId: mike-hailwood
+      rounds: 2
+    - driverId: richard-attwood
+      rounds: 2-3,5-10
+    - driverId: innes-ireland
+      rounds: 3-6,8-10
+    - driverId: chris-amon
+      rounds: 4,7
+    - driverId: bob-bondurant
+      rounds: 10
+- entrantId: rrc-walker-racing-team
+  countryId: united-kingdom
+  constructors:
+    - constructorId: brabham
+      engineManufacturerId: brm
+      tyreManufacturerId: dunlop
+      driverId: jo-siffert
+      rounds: 1-10
+    - constructorId: brabham
+      engineManufacturerId: climax
+      tyreManufacturerId: dunlop
+      driverId: jo-bonnier
+      rounds: 1-10
+- entrantId: sam-tingle
+  countryId: zimbabwe
+  constructorId: lds
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: dunlop
+  driverId: sam-tingle
+  rounds: 1
+- entrantId: scuderia-centro-sud
+  countryId: italy
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: lucien-bianchi
+      rounds: 3
+    - driverId: masten-gregory
+      rounds: 3,5,7-8
+    - driverId: willy-mairesse
+      rounds: 3
+    - driverId: roberto-bussinello
+      rounds: 7-8
+    - driverId: giorgio-bassi
+      rounds: 8
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: john-surtees
+      rounds: 1-8
+    - driverId: lorenzo-bandini
+      rounds: 1-10
+    - driverId: nino-vaccarella
+      rounds: 8
+    - driverId: ludovico-scarfiotti
+      rounds: 10
+- entrantId: scuderia-scribante
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: neville-lederle
+  rounds: 1
+- entrantId: team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: jim-clark
+      rounds: 1,3-10
+    - driverId: mike-spence
+      rounds: 1,3-10
+    - driverId: gerhard-mitter
+      rounds: 7
+    - driverId: giacomo-russo
+      rounds: 8
+    - driverId: moises-solana
+      rounds: 9-10
+- entrantId: ted-lanfear
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: brausch-niemann
+  rounds: 1
+- entrantId: trevor-blokdyk
+  countryId: south-africa
+  constructorId: cooper
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: trevor-blokdyk
+  rounds: 1

@@ -1,0 +1,300 @@
+- position: 1
+  driverNumber: 12
+  driverId: jack-brabham
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:58.000"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 2
+  driverId: roy-salvadori
+  constructorId: aston-martin
+  engineManufacturerId: aston-martin
+  tyreManufacturerId: avon
+  time: "1:58.000"
+  gap: "+0.000"
+  interval: "+0.000"
+  laps:
+- position: 3
+  driverNumber: 8
+  driverId: harry-schell
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "1:59.200"
+  gap: "+1.200"
+  interval: "+1.200"
+  laps:
+- position: 4
+  driverNumber: 18
+  driverId: maurice-trintignant
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:59.200"
+  gap: "+1.200"
+  interval: "+0.000"
+  laps:
+- position: 5
+  driverNumber: 14
+  driverId: masten-gregory
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:59.400"
+  gap: "+1.400"
+  interval: "+0.200"
+  laps:
+- position: 6
+  driverNumber: 4
+  driverId: carroll-shelby
+  constructorId: aston-martin
+  engineManufacturerId: aston-martin
+  tyreManufacturerId: avon
+  time: "1:59.600"
+  gap: "+1.600"
+  interval: "+0.200"
+  laps:
+- position: 7
+  driverNumber: 6
+  driverId: stirling-moss
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "1:59.600"
+  gap: "+1.600"
+  interval: "+0.000"
+  laps:
+- position: 8
+  driverNumber: 16
+  driverId: bruce-mclaren
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:59.600"
+  gap: "+1.600"
+  interval: "+0.000"
+  laps:
+- position: 9
+  driverNumber: 28
+  driverId: graham-hill
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:00.000"
+  gap: "+2.000"
+  interval: "+0.400"
+  laps:
+- position: 10
+  driverNumber: 10
+  driverId: jo-bonnier
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "2:00.000"
+  gap: "+2.000"
+  interval: "+0.000"
+  laps:
+- position: 11
+  driverNumber: 42
+  driverId: ron-flockhart
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "2:00.200"
+  gap: "+2.200"
+  interval: "+0.200"
+  laps:
+- position: 12
+  driverNumber: 30
+  driverId: alan-stacey
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:02.800"
+  gap: "+4.800"
+  interval: "+2.600"
+  laps:
+- position: 13
+  driverNumber: 22
+  driverId: ian-burgess
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  time: "2:03.000"
+  gap: "+5.000"
+  interval: "+0.200"
+  laps:
+- position: 14
+  driverNumber: 36
+  driverId: brian-naylor
+  constructorId: jbw
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  time: "2:03.000"
+  gap: "+5.000"
+  interval: "+0.000"
+  laps:
+- position: 15
+  driverNumber: 38
+  driverId: jack-fairman
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:04.200"
+  gap: "+6.200"
+  interval: "+1.200"
+  laps:
+- position: 16
+  driverNumber: 48
+  driverId: chris-bristow
+  constructorId: cooper
+  engineManufacturerId: borgward
+  tyreManufacturerId: dunlop
+  time: "2:04.400"
+  gap: "+6.400"
+  interval: "+0.200"
+  laps:
+- position: 17
+  driverNumber: 20
+  driverId: tony-brooks
+  constructorId: vanwall
+  engineManufacturerId: vanwall
+  tyreManufacturerId: dunlop
+  time: "2:04.600"
+  gap: "+6.600"
+  interval: "+0.200"
+  laps:
+- position: 18
+  driverNumber: 46
+  driverId: ivor-bueb
+  constructorId: cooper
+  engineManufacturerId: borgward
+  tyreManufacturerId: dunlop
+  time: "2:04.800"
+  gap: "+6.800"
+  interval: "+0.200"
+  laps:
+- position: 19
+  driverNumber: 24
+  driverId: hans-herrmann
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  time: "2:05.600"
+  gap: "+7.600"
+  interval: "+0.800"
+  laps:
+- position: 20
+  driverNumber: 40
+  driverId: fritz-dorey
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: dunlop
+  time: "2:05.600"
+  gap: "+7.600"
+  interval: "+0.000"
+  laps:
+- position: 21
+  driverNumber: 58
+  driverId: henry-taylor
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:05.600"
+  gap: "+7.600"
+  interval: "+0.000"
+  laps:
+- position: 22
+  driverNumber: 64
+  driverId: david-piper
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:06.000"
+  gap: "+8.000"
+  interval: "+0.400"
+  laps:
+- position: 23
+  driverNumber: 52
+  driverId: peter-ashdown
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:06.200"
+  gap: "+8.200"
+  interval: "+0.200"
+  laps:
+- position: 24
+  driverNumber: 50
+  driverId: mike-taylor
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:07.000"
+  gap: "+9.000"
+  interval: "+0.800"
+  laps:
+- position: 25
+  driverNumber: 56
+  driverId: bill-moss
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:07.200"
+  gap: "+9.200"
+  interval: "+0.200"
+  laps:
+- position: 26
+  driverNumber: 60
+  driverId: mike-parkes
+  constructorId: fry
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:07.600"
+  gap: "+9.600"
+  interval: "+0.400"
+  laps:
+- position: 27
+  driverNumber: 44
+  driverId: trevor-taylor
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:08.200"
+  gap: "+10.200"
+  interval: "+0.600"
+  laps:
+- position: 28
+  driverNumber: 54
+  driverId: keith-greene
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "2:09.800"
+  gap: "+11.800"
+  interval: "+1.600"
+  laps:
+- position: 29
+  driverNumber: 66
+  driverId: tim-parnell
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time:
+  gap:
+  interval:
+  laps:
+- position: 30
+  driverNumber: 62
+  driverId: dennis-taylor
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time:
+  gap:
+  interval:
+  laps:

@@ -1,0 +1,304 @@
+- entrantId: anglo-american-racers
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: eagle
+      engineManufacturerId: climax
+      tyreManufacturerId: goodyear
+      driverId: dan-gurney
+      rounds: 1
+    - constructorId: eagle
+      engineManufacturerId: weslake
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: dan-gurney
+          rounds: 2-11
+        - driverId: richie-ginther
+          rounds: 2
+        - driverId: bruce-mclaren
+          rounds: 5-7
+        - driverId: ludovico-scarfiotti
+          rounds: 9
+- entrantId: bayerische-motoren-werke-ag
+  countryId: germany
+  constructorId: lola
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: hubert-hahne
+  rounds: 7
+- entrantId: bernard-white-racing
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  driverId: david-hobbs
+  rounds: 6,8
+- entrantId: brabham-racing-organisation
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: repco
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: denny-hulme
+      rounds: 1-11
+    - driverId: jack-brabham
+      rounds: 1-11
+- entrantId: bruce-mclaren-motor-racing
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: brm
+  tyreManufacturerId: goodyear
+  driverId: bruce-mclaren
+  rounds: 2-3,8-11
+- entrantId: castrol-oils-ltd
+  countryId: canada
+  constructorId: eagle
+  engineManufacturerId: climax
+  tyreManufacturerId: goodyear
+  driverId: al-pease
+  rounds: 8
+- entrantId: charles-vogele-racing
+  countryId: switzerland
+  constructorId: cooper
+  engineManufacturerId: ats
+  tyreManufacturerId: dunlop
+  driverId: silvio-moser
+  rounds: 6
+- entrantId: cooper-car-company
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: jochen-rindt
+      rounds: 1-10
+    - driverId: pedro-rodriguez
+      rounds: 1-7,11
+    - driverId: alan-rees
+      rounds: 6
+    - driverId: richard-attwood
+      rounds: 8
+    - driverId: jacky-ickx
+      rounds: 9-10
+- entrantId: dw-racing-enterprises
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: bob-anderson
+  rounds: 1-6
+- entrantId: ecurie-ford-france
+  countryId: france
+  constructorId: matra
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: jo-schlesser
+  rounds: 7
+- entrantId: gerhard-mitter
+  countryId: germany
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: gerhard-mitter
+  rounds: 7
+- entrantId: guy-ligier
+  countryId: france
+  constructors:
+    - constructorId: cooper
+      engineManufacturerId: maserati
+      tyreManufacturerId: dunlop
+      driverId: guy-ligier
+      rounds: 4-5
+    - constructorId: brabham
+      engineManufacturerId: repco
+      tyreManufacturerId: firestone
+      driverId: guy-ligier
+      rounds: 6-7,9-11
+- entrantId: honda-racing
+  countryId: japan
+  constructorId: honda
+  engineManufacturerId: honda
+  tyreManufacturerId: firestone
+  driverId: john-surtees
+  rounds: 1-4,6-7,9-11
+- entrantId: joakim-bonnier-racing-team
+  countryId: switzerland
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: firestone
+  driverId: jo-bonnier
+  rounds: 1,4,6-11
+- entrantId: john-love
+  countryId: zimbabwe
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: john-love
+  rounds: 1
+- entrantId: lola-cars
+  countryId: united-kingdom
+  constructors:
+    - constructorId: lola
+      engineManufacturerId: bmw
+      tyreManufacturerId: firestone
+      driverId: david-hobbs
+      rounds: 7
+    - constructorId: lola
+      engineManufacturerId: ford
+      tyreManufacturerId: firestone
+      driverId: brian-redman
+      rounds: 7
+- entrantId: luki-botha
+  countryId: south-africa
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: luki-botha
+  rounds: 1
+- entrantId: matra-sports
+  countryId: france
+  constructorId: matra
+  engineManufacturerId: ford
+  tyreManufacturers:
+    - tyreManufacturerId: dunlop
+    - tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jean-pierre-beltoise
+      rounds: 2,10-11
+    - driverId: johnny-servoz-gavin
+      rounds: 2
+- entrantId: mike-fisher
+  countryId: united-states-of-america
+  constructorId: lotus
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  driverId: mike-fisher
+  rounds: 8,11
+- entrantId: owen-racing-organisation
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jackie-stewart
+      rounds: 1-11
+    - driverId: mike-spence
+      rounds: 1-11
+- entrantId: reg-parnell-racing
+  countryId: united-kingdom
+  constructors:
+    - constructorId: lotus
+      engineManufacturerId: brm
+      tyreManufacturerId: firestone
+      drivers:
+        - driverId: piers-courage
+          rounds: 1
+        - driverId: chris-irwin
+          rounds: 3
+    - constructorId: brm
+      engineManufacturerId: brm
+      tyreManufacturerId: firestone
+      drivers:
+        - driverId: piers-courage
+          rounds: 2,6
+        - driverId: chris-irwin
+          rounds: 4-11
+- entrantId: rob-walker-jack-durlacher-racing-team
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: maserati
+  tyreManufacturerId: firestone
+  driverId: jo-siffert
+  rounds: 1-11
+- entrantId: ron-harris-racing-team
+  countryId: united-kingdom
+  constructorId: protos
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: brian-hart
+      rounds: 7
+    - driverId: kurt-ahrens-jr
+      rounds: 7
+- entrantId: roy-winkelmann-racing
+  countryId: united-states-of-america
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: alan-rees
+  rounds: 7
+- entrantId: sam-tingle
+  countryId: zimbabwe
+  constructorId: lds
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: sam-tingle
+  rounds: 1
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: chris-amon
+      rounds: 2-11
+    - driverId: lorenzo-bandini
+      rounds: 2
+    - driverId: ludovico-scarfiotti
+      rounds: 3-4
+    - driverId: mike-parkes
+      rounds: 3-4
+    - driverId: jonathan-williams
+      rounds: 11
+- entrantId: scuderia-scribante
+  countryId: south-africa
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: dave-charlton
+  rounds: 1
+- entrantId: team-lotus
+  countryId: united-kingdom
+  constructors:
+    - constructorId: lotus
+      engineManufacturerId: brm
+      tyreManufacturerId: firestone
+      drivers:
+        - driverId: graham-hill
+          rounds: 1-2
+        - driverId: jim-clark
+          rounds: 1
+    - constructorId: lotus
+      engineManufacturerId: climax
+      tyreManufacturerId: firestone
+      driverId: jim-clark
+      rounds: 2
+    - constructorId: lotus
+      engineManufacturerId: ford
+      tyreManufacturerId: firestone
+      drivers:
+        - driverId: graham-hill
+          rounds: 3-11
+        - driverId: jim-clark
+          rounds: 3-11
+        - driverId: jackie-oliver
+          rounds: 7
+        - driverId: eppie-wietzes
+          rounds: 8
+        - driverId: giancarlo-baghetti
+          rounds: 9
+        - driverId: moises-solana
+          rounds: 10-11
+- entrantId: tom-jones
+  countryId: united-states-of-america
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: tom-jones
+  rounds: 8
+- entrantId: tyrrell-racing-organisation
+  countryId: united-kingdom
+  constructorId: matra
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: jacky-ickx
+  rounds: 7

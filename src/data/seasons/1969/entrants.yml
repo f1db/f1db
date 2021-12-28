@@ -1,0 +1,240 @@
+- entrantId: ahrens-racing-team
+  countryId: germany
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: kurt-ahrens-jr
+  rounds: 7
+- entrantId: antique-automobiles
+  countryId: united-kingdom
+  constructors:
+    - constructorId: cooper
+      engineManufacturerId: maserati
+      tyreManufacturerId: goodyear
+      driverId: vic-elford
+      rounds: 3
+    - constructorId: mclaren
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      driverId: vic-elford
+      rounds: 4-7
+- entrantId: bayerische-motoren-werke-ag
+  countryId: germany
+  constructorId: bmw
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: dieter-quester
+      rounds: 7
+    - driverId: gerhard-mitter
+      rounds: 7
+    - driverId: hubert-hahne
+      rounds: 7
+- entrantId: bruce-mclaren-motor-racing
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: bruce-mclaren
+      rounds: 1-11
+    - driverId: denny-hulme
+      rounds: 1-11
+    - driverId: derek-bell
+      rounds: 6
+- entrantId: ecurie-bonnier
+  countryId: switzerland
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: jo-bonnier
+  rounds: 6-7
+- entrantId: felday-engineering-ltd
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: peter-westbury
+  rounds: 7
+- entrantId: frank-williams-racing-cars
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: piers-courage
+      rounds: 2-11
+    - driverId: richard-attwood
+      rounds: 7
+- entrantId: gold-leaf-team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: graham-hill
+      rounds: 1-10
+    - driverId: mario-andretti
+      rounds: 1,7,10
+    - driverId: jochen-rindt
+      rounds: 1-2,4-11
+    - driverId: richard-attwood
+      rounds: 3
+    - driverId: john-miles
+      rounds: 5-6,8-9,11
+- entrantId: jack-holme
+  countryId: south-africa
+  constructorId: brabham
+  engineManufacturerId: repco
+  tyreManufacturerId: dunlop
+  driverId: peter-de-klerk
+  rounds: 1
+- entrantId: john-maryon
+  countryId: canada
+  constructorId: eagle
+  engineManufacturerId: climax
+  tyreManufacturerId: firestone
+  driverId: al-pease
+  rounds: 9
+- entrantId: matra-international
+  countryId: united-kingdom
+  constructorId: matra
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: jackie-stewart
+      rounds: 1-11
+    - driverId: jean-pierre-beltoise
+      rounds: 1-11
+    - driverId: johnny-servoz-gavin
+      rounds: 7,9-11
+- entrantId: matra-sports
+  countryId: france
+  constructorId: matra
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: henri-pescarolo
+  rounds: 7
+- entrantId: motor-racing-developments-ltd
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jack-brabham
+      rounds: 1-4,8-11
+    - driverId: jacky-ickx
+      rounds: 1-11
+- entrantId: north-american-racing-team
+  countryId: united-states-of-america
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: pedro-rodriguez
+      rounds: 9-11
+- entrantId: owen-racing-organisation
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: jackie-oliver
+      rounds: 1-4,6-11
+    - driverId: john-surtees
+      rounds: 1-4,6-11
+    - driverId: bill-brack
+      rounds: 9
+    - driverId: george-eaton
+      rounds: 10-11
+- entrantId: paul-seitz
+  countryId: canada
+  constructorId: brabham
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  driverId: john-cordts
+  rounds: 9
+- entrantId: pete-lovely-volkswagen-inc
+  countryId: united-states-of-america
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: pete-lovely
+  rounds: 9-11
+- entrantId: reg-parnell-racing
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: goodyear
+  driverId: pedro-rodriguez
+  rounds: 1-3
+- entrantId: rob-walker-jack-durlacher-racing-team
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: jo-siffert
+  rounds: 1-11
+- entrantId: roy-winkelmann-racing
+  countryId: united-states-of-america
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: hans-herrmann
+      rounds: 7
+    - driverId: rolf-stommelen
+      rounds: 7
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: chris-amon
+      rounds: 1-6
+    - driverId: pedro-rodriguez
+      rounds: 6,8
+    - driverId: ernesto-brambilla
+      rounds: 8
+- entrantId: silvio-moser
+  countryId: switzerland
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: silvio-moser
+  rounds: 3-5,8-11
+- entrantId: squadra-tartaruga
+  countryId: switzerland
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: xavier-perrot
+  rounds: 7
+- entrantId: team-gunston
+  countryId: zimbabwe
+  constructors:
+    - constructorId: brabham
+      engineManufacturerId: repco
+      tyreManufacturerId: firestone
+      driverId: sam-tingle
+      rounds: 1
+    - constructorId: lotus
+      engineManufacturerId: ford
+      tyreManufacturerId: dunlop
+      driverId: john-love
+      rounds: 1
+- entrantId: team-lawson
+  countryId: south-africa
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: basil-van-rooyen
+  rounds: 1
+- entrantId: tecno-racing-team
+  countryId: italy
+  constructorId: tecno
+  engineManufacturerId: ford
+  tyreManufacturerId: dunlop
+  driverId: francois-cevert
+  rounds: 7

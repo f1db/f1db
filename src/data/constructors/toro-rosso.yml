@@ -1,0 +1,14 @@
+id: toro-rosso
+name: Toro Rosso
+fullName: Scuderia Toro Rosso
+countryId: italy
+previousNextConstructors:
+  - constructorId: minardi
+    yearFrom: 1985
+    yearTo: 2005
+  - constructorId: toro-rosso
+    yearFrom: 2006
+    yearTo: 2019
+  - constructorId: alphatauri
+    yearFrom: 2020
+    yearTo:

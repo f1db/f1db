@@ -1,0 +1,308 @@
+- position: 1
+  driverNumber: 8
+  driverId: mika-hakkinen
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  laps: 67
+  time: "1:32:14.789"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 10
+  gridPosition: 3
+- position: 2
+  driverNumber: 3
+  driverId: michael-schumacher
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 67
+  time: "1:32:17.001"
+  timePenalty:
+  gap: "+2.212"
+  interval: "+2.212"
+  reasonRetired:
+  points: 6
+  gridPosition: 1
+- position: 3
+  driverNumber: 7
+  driverId: david-coulthard
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  laps: 67
+  time: "1:32:48.953"
+  timePenalty:
+  gap: "+34.164"
+  interval: "+31.952"
+  reasonRetired:
+  points: 4
+  gridPosition: 5
+- position: 4
+  driverNumber: 4
+  driverId: eddie-irvine
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  laps: 67
+  time: "1:33:12.972"
+  timePenalty:
+  gap: "+58.183"
+  interval: "+24.019"
+  reasonRetired:
+  points: 3
+  gridPosition: 2
+- position: 5
+  driverNumber: 2
+  driverId: heinz-harald-frentzen
+  constructorId: williams
+  engineManufacturerId: mecachrome
+  tyreManufacturerId: goodyear
+  laps: 67
+  time: "1:33:15.037"
+  timePenalty:
+  gap: "+1:00.248"
+  interval: "+2.065"
+  reasonRetired:
+  points: 2
+  gridPosition: 7
+- position: 6
+  driverNumber: 5
+  driverId: giancarlo-fisichella
+  constructorId: benetton
+  engineManufacturerId: playlife
+  tyreManufacturerId: bridgestone
+  laps: 67
+  time: "1:33:16.149"
+  timePenalty:
+  gap: "+1:01.360"
+  interval: "+1.112"
+  reasonRetired:
+  points: 1
+  gridPosition: 4
+- position: 7
+  driverNumber: 6
+  driverId: alexander-wurz
+  constructorId: benetton
+  engineManufacturerId: playlife
+  tyreManufacturerId: bridgestone
+  laps: 67
+  time: "1:33:19.579"
+  timePenalty:
+  gap: "+1:04.790"
+  interval: "+3.430"
+  reasonRetired:
+  points:
+  gridPosition: 8
+- position: 8
+  driverNumber: 1
+  driverId: jacques-villeneuve
+  constructorId: williams
+  engineManufacturerId: mecachrome
+  tyreManufacturerId: goodyear
+  laps: 66
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 9
+- position: 9
+  driverNumber: 9
+  driverId: damon-hill
+  constructorId: jordan
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  laps: 66
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 10
+- position: 10
+  driverNumber: 14
+  driverId: jean-alesi
+  constructorId: sauber
+  engineManufacturerId: petronas
+  tyreManufacturerId: goodyear
+  laps: 66
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 11
+- position: 11
+  driverNumber: 18
+  driverId: rubens-barrichello
+  constructorId: stewart
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 12
+- position: 12
+  driverNumber: 11
+  driverId: olivier-panis
+  constructorId: prost
+  engineManufacturerId: peugeot
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 15
+- position: 13
+  driverNumber: 19
+  driverId: jos-verstappen
+  constructorId: stewart
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 18
+- position: 14
+  driverNumber: 17
+  driverId: mika-salo
+  constructorId: arrows
+  engineManufacturerId: arrows
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 16
+- position: 15
+  driverNumber: 22
+  driverId: shinji-nakano
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 20
+- position: 16
+  driverNumber: 21
+  driverId: toranosuke-takagi
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 65
+  time:
+  timePenalty:
+  gap: "+2 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 19
+- position: DNF
+  driverNumber: 23
+  driverId: esteban-tuero
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  laps: 56
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 21
+- position: DNF
+  driverNumber: 10
+  driverId: ralf-schumacher
+  constructorId: jordan
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  laps: 53
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Brakes
+  points:
+  gridPosition: 6
+- position: DNF
+  driverNumber: 15
+  driverId: johnny-herbert
+  constructorId: sauber
+  engineManufacturerId: petronas
+  tyreManufacturerId: goodyear
+  laps: 37
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 13
+- position: DNF
+  driverNumber: 20
+  driverId: ricardo-rosset
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 36
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 22
+- position: DNF
+  driverNumber: 12
+  driverId: jarno-trulli
+  constructorId: prost
+  engineManufacturerId: peugeot
+  tyreManufacturerId: bridgestone
+  laps: 6
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 14
+- position: DNF
+  driverNumber: 16
+  driverId: pedro-diniz
+  constructorId: arrows
+  engineManufacturerId: arrows
+  tyreManufacturerId: bridgestone
+  laps: 6
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Hydraulics
+  points:
+  gridPosition: 17

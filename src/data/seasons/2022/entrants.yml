@@ -1,0 +1,100 @@
+- entrantId: alfa-romeo-racing-orlen
+  countryId: switzerland
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: guanyu-zhou
+      rounds:
+    - driverId: valtteri-bottas
+      rounds:
+- entrantId: alpine-f1-team
+  countryId: france
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds:
+    - driverId: fernando-alonso
+      rounds:
+- entrantId: aston-martin-cognizant-f1-team
+  countryId: united-kingdom
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lance-stroll
+      rounds:
+    - driverId: sebastian-vettel
+      rounds:
+- entrantId: mclaren-f1-team
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniel-ricciardo
+      rounds:
+    - driverId: lando-norris
+      rounds:
+- entrantId: mercedes-amg-petronas-f1-team
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: george-russell
+      rounds:
+    - driverId: lewis-hamilton
+      rounds:
+- entrantId: red-bull-racing-honda
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: max-verstappen
+      rounds:
+    - driverId: sergio-perez
+      rounds:
+- entrantId: scuderia-alphatauri-honda
+  countryId: italy
+  constructorId: alphatauri
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: pierre-gasly
+      rounds:
+    - driverId: yuki-tsunoda
+      rounds:
+- entrantId: scuderia-ferrari-mission-winnow
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: carlos-sainz-jr
+      rounds:
+    - driverId: charles-leclerc
+      rounds:
+- entrantId: uralkali-haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: mick-schumacher
+      rounds:
+    - driverId: nikita-mazepin
+      rounds:
+- entrantId: williams-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alexander-albon
+      rounds:
+    - driverId: nicholas-latifi
+      rounds:

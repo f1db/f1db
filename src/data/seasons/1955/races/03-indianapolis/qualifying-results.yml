@@ -1,0 +1,330 @@
+- position: 1
+  driverNumber: 23
+  driverId: jerry-hoyt
+  constructorId: stevens
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.060"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 10
+  driverId: tony-bettenhausen
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.170"
+  gap: "+0.110"
+  interval: "+0.110"
+  laps:
+- position: 3
+  driverNumber: 3
+  driverId: jack-mcgrath
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:12.490"
+  gap: "-4.570"
+  interval: "-4.680"
+  laps:
+- position: 4
+  driverNumber: 14
+  driverId: fred-agabashian
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:13.640"
+  gap: "-3.420"
+  interval: "+1.150"
+  laps:
+- position: 5
+  driverNumber: 4
+  driverId: bill-vukovich
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:15.190"
+  gap: "-1.870"
+  interval: "+1.550"
+  laps:
+- position: 6
+  driverNumber: 8
+  driverId: sam-hanks
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.800"
+  gap: "-0.260"
+  interval: "+1.610"
+  laps:
+- position: 7
+  driverNumber: 77
+  driverId: walt-faulkner
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.580"
+  gap: "+0.520"
+  interval: "+0.780"
+  laps:
+- position: 8
+  driverNumber: 19
+  driverId: andy-linden
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:18.810"
+  gap: "+1.750"
+  interval: "+1.230"
+  laps:
+- position: 9
+  driverNumber: 22
+  driverId: cal-niday
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.590"
+  gap: "-0.470"
+  interval: "-2.220"
+  laps:
+- position: 10
+  driverNumber: 15
+  driverId: jimmy-davies
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.640"
+  gap: "-0.420"
+  interval: "+0.050"
+  laps:
+- position: 11
+  driverNumber: 1
+  driverId: jimmy-bryan
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.580"
+  gap: "-0.480"
+  interval: "-0.060"
+  laps:
+- position: 12
+  driverNumber: 89
+  driverId: pat-flaherty
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.870"
+  gap: "-0.190"
+  interval: "+0.290"
+  laps:
+- position: 13
+  driverNumber: 37
+  driverId: eddie-russo
+  constructorId: pawl
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:16.930"
+  gap: "-0.130"
+  interval: "+0.060"
+  laps:
+- position: 14
+  driverNumber: 6
+  driverId: bob-sweikert
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.150"
+  gap: "+0.090"
+  interval: "+0.220"
+  laps:
+- position: 15
+  driverNumber: 5
+  driverId: jimmy-reece
+  constructorId: pankratz
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.160"
+  gap: "+0.100"
+  interval: "+0.010"
+  laps:
+- position: 16
+  driverNumber: 71
+  driverId: al-herman
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.490"
+  gap: "+0.430"
+  interval: "+0.330"
+  laps:
+- position: 17
+  driverNumber: 48
+  driverId: jimmy-daywalt
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:18.220"
+  gap: "+1.160"
+  interval: "+0.730"
+  laps:
+- position: 18
+  driverNumber: 98
+  driverId: duane-carter
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:18.380"
+  gap: "+1.320"
+  interval: "+0.160"
+  laps:
+- position: 19
+  driverNumber: 29
+  driverId: pat-oconnor
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:18.380"
+  gap: "+1.320"
+  interval: "+0.000"
+  laps:
+- position: 20
+  driverNumber: 33
+  driverId: jim-rathmann
+  constructorId: epperly
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:19.540"
+  gap: "+2.480"
+  interval: "+1.160"
+  laps:
+- position: 21
+  driverNumber: 12
+  driverId: don-freeland
+  constructorId: phillips
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.390"
+  gap: "+0.330"
+  interval: "-2.150"
+  laps:
+- position: 22
+  driverNumber: 42
+  driverId: al-keller
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:17.970"
+  gap: "+0.910"
+  interval: "+0.580"
+  laps:
+- position: 23
+  driverNumber: 49
+  driverId: ray-crawford
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:18.610"
+  gap: "+1.550"
+  interval: "+0.640"
+  laps:
+- position: 24
+  driverNumber: 99
+  driverId: art-cross
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:19.460"
+  gap: "+2.400"
+  interval: "+0.850"
+  laps:
+- position: 25
+  driverNumber: 41
+  driverId: chuck-weyant
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:20.750"
+  gap: "+3.690"
+  interval: "+1.290"
+  laps:
+- position: 26
+  driverNumber: 39
+  driverId: johnny-boyd
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:22.810"
+  gap: "+5.750"
+  interval: "+2.060"
+  laps:
+- position: 27
+  driverNumber: 16
+  driverId: johnnie-parsons
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:23.140"
+  gap: "+6.080"
+  interval: "+0.330"
+  laps:
+- position: 28
+  driverNumber: 31
+  driverId: keith-andrews
+  constructorId: schroeder
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:24.610"
+  gap: "+7.550"
+  interval: "+1.470"
+  laps:
+- position: 29
+  driverNumber: 68
+  driverId: ed-elisian
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:26.010"
+  gap: "+8.950"
+  interval: "+1.400"
+  laps:
+- position: 30
+  driverNumber: 27
+  driverId: rodger-ward
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:26.570"
+  gap: "+9.510"
+  interval: "+0.560"
+  laps:
+- position: 31
+  driverNumber: 81
+  driverId: shorty-templeman
+  constructorId: trevis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:26.640"
+  gap: "+9.580"
+  interval: "+0.070"
+  laps:
+- position: 32
+  driverNumber: 83
+  driverId: eddie-johnson
+  constructorId: trevis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:27.760"
+  gap: "+10.700"
+  interval: "+1.120"
+  laps:
+- position: 33
+  driverNumber: 44
+  driverId: johnny-thomson
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  time: "4:28.430"
+  gap: "+11.370"
+  interval: "+0.670"
+  laps:

@@ -1,0 +1,14 @@
+id: jaguar
+name: Jaguar
+fullName: Jaguar Racing F1 Team
+countryId: united-kingdom
+previousNextConstructors:
+  - constructorId: stewart
+    yearFrom: 1997
+    yearTo: 1999
+  - constructorId: jaguar
+    yearFrom: 2000
+    yearTo: 2004
+  - constructorId: red-bull
+    yearFrom: 2005
+    yearTo:

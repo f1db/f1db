@@ -1,0 +1,20 @@
+id: brawn
+name: Brawn
+fullName: Brawn GP Formula One Team
+countryId: united-kingdom
+previousNextConstructors:
+  - constructorId: tyrrell
+    yearFrom: 1970
+    yearTo: 1998
+  - constructorId: bar
+    yearFrom: 1999
+    yearTo: 2005
+  - constructorId: honda
+    yearFrom: 2006
+    yearTo: 2008
+  - constructorId: brawn
+    yearFrom: 2009
+    yearTo: 2009
+  - constructorId: mercedes
+    yearFrom: 2010
+    yearTo:

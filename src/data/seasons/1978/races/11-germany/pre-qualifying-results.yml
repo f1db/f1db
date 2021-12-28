@@ -1,0 +1,50 @@
+- position: 1
+  driverNumber: 32
+  driverId: keke-rosberg
+  constructorId: wolf
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "2:10.130"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 37
+  driverId: arturo-merzario
+  constructorId: merzario
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "2:10.820"
+  gap: "+0.690"
+  interval: "+0.690"
+  laps:
+- position: 3
+  driverNumber: 25
+  driverId: hector-rebaque
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "2:11.800"
+  gap: "+1.670"
+  interval: "+0.980"
+  laps:
+- position: 4
+  driverNumber: 31
+  driverId: rene-arnoux
+  constructorId: martini
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "2:12.250"
+  gap: "+2.120"
+  interval: "+0.450"
+  laps:
+- position: 5
+  driverNumber: 30
+  driverId: brett-lunger
+  constructorId: mclaren
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "2:12.450"
+  gap: "+2.320"
+  interval: "+0.200"
+  laps:

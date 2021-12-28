@@ -1,0 +1,233 @@
+- entrantId: arrows-grand-prix-international
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: derek-warwick
+      rounds: 1-6,8-16
+    - driverId: eddie-cheever
+      rounds: 1-16
+    - driverId: martin-donnelly
+      rounds: 7
+- entrantId: automobiles-gonfaronnaises-sportives
+  countryId: france
+  constructorId: ags
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: joachim-winkelhock
+      rounds: 1-7
+    - driverId: gabriele-tarquini
+      rounds: 2-16
+    - driverId: yannick-dalmas
+      rounds: 8-16
+- entrantId: benetton-formula-ltd
+  countryId: united-kingdom
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alessandro-nannini
+      rounds: 1-16
+    - driverId: johnny-herbert
+      rounds: 1-6
+    - driverId: emanuele-pirro
+      rounds: 7-16
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alex-caffi
+      rounds: 1-16
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+- entrantId: camel-team-lotus
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: nelson-piquet
+      rounds: 1-16
+    - driverId: satoru-nakajima
+      rounds: 1-16
+- entrantId: canon-williams-team
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: riccardo-patrese
+      rounds: 1-16
+    - driverId: thierry-boutsen
+      rounds: 1-16
+- entrantId: coloni-spa
+  countryId: italy
+  constructorId: coloni
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: pierre-henri-raphanel
+      rounds: 1-10
+    - driverId: roberto-moreno
+      rounds: 1-16
+    - driverId: enrico-bertaggia
+      rounds: 11-16
+- entrantId: equipe-larrousse
+  countryId: france
+  constructorId: lola
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: philippe-alliot
+      rounds: 1-16
+    - driverId: yannick-dalmas
+      rounds: 1-6
+    - driverId: eric-bernard
+      rounds: 7-8
+    - driverId: michele-alboreto
+      rounds: 9-16
+- entrantId: eurobrun-racing
+  countryId: italy
+  constructorId: eurobrun
+  engineManufacturerId: judd
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: gregor-foitek
+      rounds: 1-11
+    - driverId: oscar-larrauri
+      rounds: 12-16
+- entrantId: first-racing
+  countryId: italy
+  constructorId: first
+  engineManufacturerId: judd
+  tyreManufacturerId: pirelli
+  driverId: gabriele-tarquini
+  rounds:
+- entrantId: honda-marlboro-mclaren
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alain-prost
+      rounds: 1-16
+    - driverId: ayrton-senna
+      rounds: 1-16
+- entrantId: leyton-house-march-racing-team
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ivan-capelli
+      rounds: 1-16
+    - driverId: mauricio-gugelmin
+      rounds: 1-16
+- entrantId: ligier-loto
+  countryId: france
+  constructorId: ligier
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: olivier-grouillard
+      rounds: 1-16
+    - driverId: rene-arnoux
+      rounds: 1-16
+- entrantId: minardi-team-spa
+  countryId: italy
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: luis-perez-sala
+      rounds: 1-16
+    - driverId: pierluigi-martini
+      rounds: 1-14,16
+    - driverId: paolo-barilla
+      rounds: 15
+- entrantId: moneytron-onyx-formula-one
+  countryId: united-kingdom
+  constructorId: onyx
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: bertrand-gachot
+      rounds: 1-12
+    - driverId: stefan-johansson
+      rounds: 1-16
+    - driverId: jj-lehto
+      rounds: 13-16
+- entrantId: motor-racing-developments
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: judd
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: martin-brundle
+      rounds: 1-16
+    - driverId: stefano-modena
+      rounds: 1-16
+- entrantId: osella-squadra-corse
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: nicola-larini
+      rounds: 1-16
+    - driverId: piercarlo-ghinzani
+      rounds: 1-16
+- entrantId: rial-racing
+  countryId: germany
+  constructorId: rial
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: christian-danner
+      rounds: 1-13
+    - driverId: volker-weidler
+      rounds: 1-10
+    - driverId: pierre-henri-raphanel
+      rounds: 11-16
+    - driverId: gregor-foitek
+      rounds: 14
+    - driverId: bertrand-gachot
+      rounds: 15-16
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: gerhard-berger
+      rounds: 1-2,4-16
+    - driverId: nigel-mansell
+      rounds: 1-13,15-16
+- entrantId: tyrrell-racing-organisation
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jonathan-palmer
+      rounds: 1-16
+    - driverId: michele-alboreto
+      rounds: 1-6
+    - driverId: jean-alesi
+      rounds: 7-10,12,14-16
+    - driverId: johnny-herbert
+      rounds: 11,13
+- entrantId: west-zakspeed-racing
+  countryId: germany
+  constructorId: zakspeed
+  engineManufacturerId: yamaha
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: aguri-suzuki
+      rounds: 1-16
+    - driverId: bernd-schneider
+      rounds: 1-16

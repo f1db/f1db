@@ -1,0 +1,20 @@
+- position: 1
+  driverNumber: 5
+  driverId: alberto-ascari
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  lap:
+  time: "1:50.000"
+  gap:
+  interval:
+- position: 1
+  driverNumber: 24
+  driverId: jose-froilan-gonzalez
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  lap:
+  time: "1:50.000"
+  gap: "+0.000"
+  interval: "+0.000"

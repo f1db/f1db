@@ -1,0 +1,240 @@
+- position: 1
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:44.184"
+  q2: "1:42.927"
+  q3: "1:42.553"
+  gap:
+  interval:
+  laps: 18
+- position: 2
+  driverNumber: 5
+  driverId: sebastian-vettel
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:44.275"
+  q2: "1:43.987"
+  q3: "1:42.795"
+  gap: "+0.242"
+  interval: "+0.242"
+  laps: 13
+- position: 3
+  driverNumber: 77
+  driverId: valtteri-bottas
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:44.773"
+  q2: "1:43.249"
+  q3: "1:43.094"
+  gap: "+0.541"
+  interval: "+0.299"
+  laps: 19
+- position: 4
+  driverNumber: 7
+  driverId: kimi-raikkonen
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:44.729"
+  q2: "1:43.700"
+  q3: "1:43.270"
+  gap: "+0.717"
+  interval: "+0.176"
+  laps: 11
+- position: 5
+  driverNumber: 33
+  driverId: max-verstappen
+  constructorId: red-bull
+  engineManufacturerId: tag-heuer
+  tyreManufacturerId: pirelli
+  q1: "1:44.535"
+  q2: "1:43.940"
+  q3: "1:43.380"
+  gap: "+0.827"
+  interval: "+0.110"
+  laps: 12
+- position: 6
+  driverNumber: 3
+  driverId: daniel-ricciardo
+  constructorId: red-bull
+  engineManufacturerId: tag-heuer
+  tyreManufacturerId: pirelli
+  q1: "1:45.114"
+  q2: "1:44.224"
+  q3: "1:43.863"
+  gap: "+1.310"
+  interval: "+0.483"
+  laps: 12
+- position: 7
+  driverNumber: 27
+  driverId: nico-hulkenberg
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  q1: "1:45.280"
+  q2: "1:44.988"
+  q3: "1:44.982"
+  gap: "+2.429"
+  interval: "+1.119"
+  laps: 15
+- position: 8
+  driverNumber: 11
+  driverId: sergio-perez
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:45.591"
+  q2: "1:44.894"
+  q3: "1:45.244"
+  gap: "+2.691"
+  interval: "+0.262"
+  laps: 14
+- position: 9
+  driverNumber: 31
+  driverId: esteban-ocon
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:45.277"
+  q2: "1:45.006"
+  q3: "1:45.369"
+  gap: "+2.816"
+  interval: "+0.125"
+  laps: 14
+- position: 10
+  driverNumber: 30
+  driverId: jolyon-palmer
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  q1: "1:45.447"
+  q2: "1:44.685"
+  q3:
+  gap:
+  interval:
+  laps: 10
+- position: 11
+  driverNumber: 14
+  driverId: fernando-alonso
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  q1: "1:45.668"
+  q2: "1:45.090"
+  q3:
+  gap:
+  interval:
+  laps: 11
+- position: 12
+  driverNumber: 8
+  driverId: romain-grosjean
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:45.728"
+  q2: "1:45.133"
+  q3:
+  gap:
+  interval:
+  laps: 12
+- position: 13
+  driverNumber: 20
+  driverId: kevin-magnussen
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:45.535"
+  q2: "1:45.400"
+  q3:
+  gap:
+  interval:
+  laps: 12
+- position: 14
+  driverNumber: 55
+  driverId: carlos-sainz-jr
+  constructorId: toro-rosso
+  engineManufacturerId: toro-rosso
+  tyreManufacturerId: pirelli
+  q1: "1:45.374"
+  q2: "1:45.439"
+  q3:
+  gap:
+  interval:
+  laps: 12
+- position: 15
+  driverNumber: 2
+  driverId: stoffel-vandoorne
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  q1: "1:45.441"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 11
+- position: 16
+  driverNumber: 19
+  driverId: felipe-massa
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:45.823"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 7
+- position: 17
+  driverNumber: 26
+  driverId: daniil-kvyat
+  constructorId: toro-rosso
+  engineManufacturerId: toro-rosso
+  tyreManufacturerId: pirelli
+  q1: "1:46.028"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 6
+- position: 18
+  driverNumber: 18
+  driverId: lance-stroll
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  q1: "1:46.915"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 5
+- position: 19
+  driverNumber: 9
+  driverId: marcus-ericsson
+  constructorId: sauber
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:47.214"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 6
+- position: 20
+  driverNumber: 94
+  driverId: pascal-wehrlein
+  constructorId: sauber
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  q1: "1:47.679"
+  q2:
+  q3:
+  gap:
+  interval:
+  laps: 6

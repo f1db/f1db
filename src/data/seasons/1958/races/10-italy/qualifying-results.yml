@@ -1,0 +1,210 @@
+- position: 1
+  driverNumber: 26
+  driverId: stirling-moss
+  constructorId: vanwall
+  engineManufacturerId: vanwall
+  tyreManufacturerId: dunlop
+  time: "1:40.500"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 28
+  driverId: tony-brooks
+  constructorId: vanwall
+  engineManufacturerId: vanwall
+  tyreManufacturerId: dunlop
+  time: "1:41.400"
+  gap: "+0.900"
+  interval: "+0.900"
+  laps:
+- position: 3
+  driverNumber: 14
+  driverId: mike-hawthorn
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  time: "1:41.800"
+  gap: "+1.300"
+  interval: "+0.400"
+  laps:
+- position: 4
+  driverNumber: 30
+  driverId: stuart-lewis-evans
+  constructorId: vanwall
+  engineManufacturerId: vanwall
+  tyreManufacturerId: dunlop
+  time: "1:42.400"
+  gap: "+1.900"
+  interval: "+0.600"
+  laps:
+- position: 5
+  driverNumber: 20
+  driverId: olivier-gendebien
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  time: "1:42.500"
+  gap: "+2.000"
+  interval: "+0.100"
+  laps:
+- position: 6
+  driverNumber: 16
+  driverId: wolfgang-von-trips
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  time: "1:42.600"
+  gap: "+2.100"
+  interval: "+0.100"
+  laps:
+- position: 7
+  driverNumber: 18
+  driverId: phil-hill
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  time: "1:42.700"
+  gap: "+2.200"
+  interval: "+0.100"
+  laps:
+- position: 8
+  driverNumber: 8
+  driverId: jean-behra
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "1:43.200"
+  gap: "+2.700"
+  interval: "+0.500"
+  laps:
+- position: 9
+  driverNumber: 10
+  driverId: harry-schell
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "1:43.200"
+  gap: "+2.700"
+  interval: "+0.000"
+  laps:
+- position: 10
+  driverNumber: 12
+  driverId: jo-bonnier
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: dunlop
+  time: "1:44.700"
+  gap: "+4.200"
+  interval: "+1.500"
+  laps:
+- position: 11
+  driverNumber: 32
+  driverId: masten-gregory
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:44.900"
+  gap: "+4.400"
+  interval: "+0.200"
+  laps:
+- position: 12
+  driverNumber: 38
+  driverId: graham-hill
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:46.000"
+  gap: "+5.500"
+  interval: "+1.100"
+  laps:
+- position: 13
+  driverNumber: 2
+  driverId: maurice-trintignant
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:46.400"
+  gap: "+5.900"
+  interval: "+0.400"
+  laps:
+- position: 14
+  driverNumber: 6
+  driverId: roy-salvadori
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:47.000"
+  gap: "+6.500"
+  interval: "+0.600"
+  laps:
+- position: 15
+  driverNumber: 4
+  driverId: jack-brabham
+  constructorId: cooper
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:47.300"
+  gap: "+6.800"
+  interval: "+0.300"
+  laps:
+- position: 16
+  driverNumber: 36
+  driverId: cliff-allison
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  time: "1:47.800"
+  gap: "+7.300"
+  interval: "+0.500"
+  laps:
+- position: 17
+  driverNumber: 34
+  driverId: carroll-shelby
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:48.000"
+  gap: "+7.500"
+  interval: "+0.200"
+  laps:
+- position: 18
+  driverNumber: 24
+  driverId: hans-herrmann
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:49.800"
+  gap: "+9.300"
+  interval: "+1.800"
+  laps:
+- position: 19
+  driverNumber: 40
+  driverId: gerino-gerini
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:50.100"
+  gap: "+9.600"
+  interval: "+0.300"
+  laps:
+- position: 20
+  driverNumber: 22
+  driverId: giulio-cabianca
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:54.600"
+  gap: "+14.100"
+  interval: "+4.500"
+  laps:
+- position: 21
+  driverNumber: 42
+  driverId: maria-teresa-de-filippis
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  time: "1:55.900"
+  gap: "+15.400"
+  interval: "+1.300"
+  laps:

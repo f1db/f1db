@@ -1,0 +1,175 @@
+- entrantId: automobiles-gonfaronnaises-sportives
+  countryId: france
+  constructorId: ags
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: philippe-streiff
+  rounds: 1-16
+- entrantId: benetton-formula-ltd
+  countryId: united-kingdom
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alessandro-nannini
+      rounds: 1-16
+    - driverId: thierry-boutsen
+      rounds: 1-16
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: alex-caffi
+  rounds: 1-16
+- entrantId: camel-team-lotus-honda
+  countryId: united-kingdom
+  constructorId: lotus
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: nelson-piquet
+      rounds: 1-16
+    - driverId: satoru-nakajima
+      rounds: 1-16
+- entrantId: canon-williams-team
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: nigel-mansell
+      rounds: 1-10,13-16
+    - driverId: riccardo-patrese
+      rounds: 1-16
+    - driverId: martin-brundle
+      rounds: 11
+    - driverId: jean-louis-schlesser
+      rounds: 12
+- entrantId: coloni-spa
+  countryId: italy
+  constructorId: coloni
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: gabriele-tarquini
+  rounds: 1-16
+- entrantId: eurobrun-racing
+  countryId: italy
+  constructorId: eurobrun
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: oscar-larrauri
+      rounds: 1-16
+    - driverId: stefano-modena
+      rounds: 1-16
+- entrantId: honda-marlboro-mclaren
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alain-prost
+      rounds: 1-16
+    - driverId: ayrton-senna
+      rounds: 1-16
+- entrantId: larrousse-calmels
+  countryId: france
+  constructorId: lola
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: philippe-alliot
+      rounds: 1-16
+    - driverId: yannick-dalmas
+      rounds: 1-14
+    - driverId: aguri-suzuki
+      rounds: 15
+    - driverId: pierre-henri-raphanel
+      rounds: 16
+- entrantId: leyton-house-march-racing-team
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: ivan-capelli
+      rounds: 1-16
+    - driverId: mauricio-gugelmin
+      rounds: 1-16
+- entrantId: ligier-loto
+  countryId: france
+  constructorId: ligier
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: rene-arnoux
+      rounds: 1-16
+    - driverId: stefan-johansson
+      rounds: 1-16
+- entrantId: lois-minardi-team-spa
+  countryId: italy
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: adrian-campos
+      rounds: 1-5
+    - driverId: luis-perez-sala
+      rounds: 1-16
+    - driverId: pierluigi-martini
+      rounds: 6-16
+- entrantId: osella-squadra-corse
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: osella
+  tyreManufacturerId: goodyear
+  driverId: nicola-larini
+  rounds: 1-16
+- entrantId: rial-racing
+  countryId: germany
+  constructorId: rial
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: andrea-de-cesaris
+  rounds: 1-16
+- entrantId: scuderia-ferrari-spa-sefac
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: gerhard-berger
+      rounds: 1-16
+    - driverId: michele-alboreto
+      rounds: 1-16
+- entrantId: tyrrell-racing-organisation
+  countryId: united-kingdom
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: jonathan-palmer
+      rounds: 1-16
+    - driverId: julian-bailey
+      rounds: 1-16
+- entrantId: usfg-arrows-megatron
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: megatron
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: derek-warwick
+      rounds: 1-16
+    - driverId: eddie-cheever
+      rounds: 1-16
+- entrantId: west-zakspeed-racing
+  countryId: germany
+  constructorId: zakspeed
+  engineManufacturerId: zakspeed
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: bernd-schneider
+      rounds: 1-16
+    - driverId: piercarlo-ghinzani
+      rounds: 1-16

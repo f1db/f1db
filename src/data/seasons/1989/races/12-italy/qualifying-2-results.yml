@@ -1,0 +1,290 @@
+- position: 1
+  driverNumber: 1
+  driverId: ayrton-senna
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  time: "1:23.720"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 27
+  driverId: nigel-mansell
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  time: "1:24.979"
+  gap: "+1.259"
+  interval: "+1.259"
+  laps:
+- position: 3
+  driverNumber: 28
+  driverId: gerhard-berger
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  time: "1:24.998"
+  gap: "+1.278"
+  interval: "+0.019"
+  laps:
+- position: 4
+  driverNumber: 2
+  driverId: alain-prost
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: goodyear
+  time: "1:25.510"
+  gap: "+1.790"
+  interval: "+0.512"
+  laps:
+- position: 5
+  driverNumber: 6
+  driverId: riccardo-patrese
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  time: "1:25.545"
+  gap: "+1.825"
+  interval: "+0.035"
+  laps:
+- position: 6
+  driverNumber: 5
+  driverId: thierry-boutsen
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  time: "1:26.392"
+  gap: "+2.672"
+  interval: "+0.847"
+  laps:
+- position: 7
+  driverNumber: 30
+  driverId: philippe-alliot
+  constructorId: lola
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  time: "1:26.985"
+  gap: "+3.265"
+  interval: "+0.593"
+  laps:
+- position: 8
+  driverNumber: 19
+  driverId: alessandro-nannini
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:27.052"
+  gap: "+3.332"
+  interval: "+0.067"
+  laps:
+- position: 9
+  driverNumber: 20
+  driverId: emanuele-pirro
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:27.397"
+  gap: "+3.677"
+  interval: "+0.345"
+  laps:
+- position: 10
+  driverNumber: 4
+  driverId: jean-alesi
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:27.399"
+  gap: "+3.679"
+  interval: "+0.002"
+  laps:
+- position: 11
+  driverNumber: 11
+  driverId: nelson-piquet
+  constructorId: lotus
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  time: "1:27.508"
+  gap: "+3.788"
+  interval: "+0.109"
+  laps:
+- position: 12
+  driverNumber: 7
+  driverId: martin-brundle
+  constructorId: brabham
+  engineManufacturerId: judd
+  tyreManufacturerId: pirelli
+  time: "1:27.637"
+  gap: "+3.917"
+  interval: "+0.129"
+  laps:
+- position: 13
+  driverNumber: 29
+  driverId: michele-alboreto
+  constructorId: lola
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  time: "1:27.803"
+  gap: "+4.083"
+  interval: "+0.166"
+  laps:
+- position: 14
+  driverNumber: 3
+  driverId: jonathan-palmer
+  constructorId: tyrrell
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:27.822"
+  gap: "+4.102"
+  interval: "+0.019"
+  laps:
+- position: 15
+  driverNumber: 23
+  driverId: pierluigi-martini
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  time: "1:27.923"
+  gap: "+4.203"
+  interval: "+0.101"
+  laps:
+- position: 16
+  driverNumber: 22
+  driverId: andrea-de-cesaris
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  time: "1:28.180"
+  gap: "+4.460"
+  interval: "+0.257"
+  laps:
+- position: 17
+  driverNumber: 16
+  driverId: ivan-capelli
+  constructorId: march
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  time: "1:28.430"
+  gap: "+4.710"
+  interval: "+0.250"
+  laps:
+- position: 18
+  driverNumber: 12
+  driverId: satoru-nakajima
+  constructorId: lotus
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  time: "1:28.441"
+  gap: "+4.721"
+  interval: "+0.011"
+  laps:
+- position: 19
+  driverNumber: 21
+  driverId: alex-caffi
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  time: "1:28.708"
+  gap: "+4.988"
+  interval: "+0.267"
+  laps:
+- position: 20
+  driverNumber: 17
+  driverId: nicola-larini
+  constructorId: osella
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  time: "1:28.773"
+  gap: "+5.053"
+  interval: "+0.065"
+  laps:
+- position: 21
+  driverNumber: 25
+  driverId: rene-arnoux
+  constructorId: ligier
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:28.843"
+  gap: "+5.123"
+  interval: "+0.070"
+  laps:
+- position: 22
+  driverNumber: 15
+  driverId: mauricio-gugelmin
+  constructorId: march
+  engineManufacturerId: judd
+  tyreManufacturerId: goodyear
+  time: "1:28.923"
+  gap: "+5.203"
+  interval: "+0.080"
+  laps:
+- position: 23
+  driverNumber: 9
+  driverId: derek-warwick
+  constructorId: arrows
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:29.031"
+  gap: "+5.311"
+  interval: "+0.108"
+  laps:
+- position: 24
+  driverNumber: 37
+  driverId: bertrand-gachot
+  constructorId: onyx
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:29.058"
+  gap: "+5.338"
+  interval: "+0.027"
+  laps:
+- position: 25
+  driverNumber: 24
+  driverId: luis-perez-sala
+  constructorId: minardi
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  time: "1:29.293"
+  gap: "+5.573"
+  interval: "+0.235"
+  laps:
+- position: 26
+  driverNumber: 26
+  driverId: olivier-grouillard
+  constructorId: ligier
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:29.537"
+  gap: "+5.817"
+  interval: "+0.244"
+  laps:
+- position: 27
+  driverNumber: 10
+  driverId: eddie-cheever
+  constructorId: arrows
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:29.554"
+  gap: "+5.834"
+  interval: "+0.017"
+  laps:
+- position: 28
+  driverNumber: 38
+  driverId: christian-danner
+  constructorId: rial
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:31.830"
+  gap: "+8.110"
+  interval: "+2.276"
+  laps:
+- position: 29
+  driverNumber: 39
+  driverId: pierre-henri-raphanel
+  constructorId: rial
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:36.295"
+  gap: "+12.575"
+  interval: "+4.465"
+  laps:

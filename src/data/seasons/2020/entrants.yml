@@ -1,0 +1,118 @@
+- entrantId: alfa-romeo-racing-orlen
+  countryId: switzerland
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: antonio-giovinazzi
+      rounds: 1-17
+    - driverId: kimi-raikkonen
+      rounds: 1-17
+    - driverId: robert-kubica
+      rounds:
+      testDriver: true
+- entrantId: aston-martin-red-bull-racing
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alexander-albon
+      rounds: 1-17
+    - driverId: max-verstappen
+      rounds: 1-17
+- entrantId: bwt-racing-point-f1-team
+  countryId: united-kingdom
+  constructorId: racing-point
+  engineManufacturerId: bwt-mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lance-stroll
+      rounds: 1-17
+    - driverId: sergio-perez
+      rounds: 1-3,6-17
+    - driverId: nico-hulkenberg
+      rounds: 4-5,11
+- entrantId: haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kevin-magnussen
+      rounds: 1-17
+    - driverId: romain-grosjean
+      rounds: 1-15
+    - driverId: pietro-fittipaldi
+      rounds: 16-17
+    - driverId: mick-schumacher
+      rounds:
+      testDriver: true
+- entrantId: mclaren-f1-team
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: carlos-sainz-jr
+      rounds: 1-17
+    - driverId: lando-norris
+      rounds: 1-17
+- entrantId: mercedes-amg-petronas-f1-team
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lewis-hamilton
+      rounds: 1-15,17
+    - driverId: valtteri-bottas
+      rounds: 1-17
+    - driverId: george-russell
+      rounds: 16
+- entrantId: renault-dp-world-f1-team
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniel-ricciardo
+      rounds: 1-17
+    - driverId: esteban-ocon
+      rounds: 1-17
+- entrantId: scuderia-alphatauri-honda
+  countryId: italy
+  constructorId: alphatauri
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniil-kvyat
+      rounds: 1-17
+    - driverId: pierre-gasly
+      rounds: 1-17
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: charles-leclerc
+      rounds: 1-17
+    - driverId: sebastian-vettel
+      rounds: 1-17
+- entrantId: williams-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: george-russell
+      rounds: 1-15,17
+    - driverId: nicholas-latifi
+      rounds: 1-17
+    - driverId: jack-aitken
+      rounds: 16
+      testDriver: true
+    - driverId: roy-nissany
+      rounds:
+      testDriver: true

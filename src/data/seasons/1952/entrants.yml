@@ -1,0 +1,654 @@
+- entrantId: adolf-brudes
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: adolf-brudes
+  rounds: 6
+- entrantId: afm
+  countryId: germany
+  constructorId: afm
+  engineManufacturerId: kuchen
+  tyreManufacturerId: englebert
+  driverId: hans-stuck
+  rounds: 1
+- entrantId: ahm-bryde
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: mike-hawthorn
+      rounds: 4
+    - driverId: reg-parnell
+      rounds: 5
+- entrantId: alfred-dattner
+  countryId: switzerland
+  constructorId: simca-gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  driverId: max-de-terra
+  rounds: 1
+- entrantId: andy-granatelli
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: bromme
+      engineManufacturerId: offenhauser
+      tyreManufacturerId: firestone
+      driverId: spider-webb
+      rounds: 2
+    - constructorId: kurtis
+      engineManufacturerId: offenhauser
+      tyreManufacturerId: firestone
+      driverId: jim-rathmann
+      rounds: 2
+- entrantId: arthur-legat
+  countryId: belgium
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: englebert
+  driverId: arthur-legat
+  rounds: 3
+- entrantId: belanger-motors
+  countryId: united-states-of-america
+  constructorId: lesovsky
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: duane-carter
+  rounds: 2
+- entrantId: bernhard-nacke
+  countryId: germany
+  constructorId: nacke
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: karl-gunther-bechem
+  rounds: 6
+- entrantId: bessie-lee-paoli
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: chuck-stevenson
+  rounds: 2
+- entrantId: blue-crown-spark-plug
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: deidt
+      engineManufacturerId: offenhauser
+      tyreManufacturerId: firestone
+      driverId: tony-bettenhausen
+      rounds: 2
+    - constructorId: lesovsky
+      engineManufacturerId: offenhauser
+      tyreManufacturerId: firestone
+      driverId: henry-banks
+      rounds: 2
+- entrantId: bob-estes
+  countryId: united-states-of-america
+  constructorId: watson
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: jim-rigsby
+  rounds: 2
+- entrantId: central-excavating
+  countryId: united-states-of-america
+  constructorId: trevis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: eddie-johnson
+  rounds: 2
+- entrantId: coast-grain
+  countryId: united-states-of-america
+  constructorId: lesovsky
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: manny-ayulo
+  rounds: 2
+- entrantId: connaught-engineering
+  countryId: united-kingdom
+  constructorId: connaught
+  engineManufacturerId: lea-francis
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: eric-thompson
+      rounds: 5
+    - driverId: dennis-poore
+      rounds: 5,8
+    - driverId: ken-downing
+      rounds: 5
+    - driverId: kenneth-mcalpine
+      rounds: 5,8
+    - driverId: stirling-moss
+      rounds: 8
+- entrantId: cummins-diesel
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: cummins
+  tyreManufacturerId: firestone
+  driverId: fred-agabashian
+  rounds: 2
+- entrantId: ecurie-belge
+  countryId: belgium
+  constructorId: simca-gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  drivers:
+    - driverId: johnny-claes
+      rounds: 4-5
+    - driverId: paul-frere
+      rounds: 7
+- entrantId: ecurie-ecosse
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  driverId: david-murray
+  rounds: 5
+- entrantId: ecurie-espadon
+  countryId: switzerland
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: peter-hirt
+      rounds: 1,4-5
+    - driverId: rudi-fischer
+      rounds: 1,4-6,8
+    - driverId: rudolf-schoeller
+      rounds: 6
+    - driverId: hans-stuck
+      rounds: 8
+- entrantId: ecurie-francorchamps
+  countryId: belgium
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  drivers:
+    - driverId: charles-de-tornaco
+      rounds: 3,7-8
+    - driverId: roger-laurent
+      rounds: 6
+- entrantId: ecurie-richmond
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: alan-brown
+      rounds: 1,3,5,8
+    - driverId: eric-brandon
+      rounds: 1,3,5,8
+- entrantId: ecurie-rosier
+  countryId: france
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturers:
+    - tyreManufacturerId: pirelli
+    - tyreManufacturerId: dunlop
+  drivers:
+    - driverId: louis-rosier
+      rounds: 1,3-4,8
+    - driverId: maurice-trintignant
+      rounds: 1
+- entrantId: ed-walsh
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: joe-james
+      rounds: 2
+    - driverId: sam-hanks
+      rounds: 2
+- entrantId: elie-bayol
+  countryId: france
+  constructorId: osca
+  engineManufacturerId: osca
+  tyreManufacturerId: pirelli
+  driverId: elie-bayol
+  rounds: 8
+- entrantId: english-racing-automobiles-ltd
+  countryId: united-kingdom
+  constructorId: era
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  driverId: stirling-moss
+  rounds: 3,5,7
+- entrantId: enrico-plate
+  countryId: switzerland
+  constructorId: maserati
+  engineManufacturerId: plate
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: emmanuel-de-graffenried
+      rounds: 1,4-5,8
+    - driverId: harry-schell
+      rounds: 1,4-5
+    - driverId: alberto-crespo
+      rounds: 8
+- entrantId: equipe-gordini
+  countryId: france
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  drivers:
+    - driverId: birabongse-bhanudej
+      rounds: 1,3-5
+    - driverId: jean-behra
+      rounds: 1,3-4,6-8
+    - driverId: robert-manzon
+      rounds: 1,3-8
+    - driverId: johnny-claes
+      rounds: 3
+    - driverId: maurice-trintignant
+      rounds: 4-8
+- entrantId: ernst-klodwig
+  countryId: germany
+  constructorId: heck
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: ernst-klodwig
+  rounds: 6
+- entrantId: escuderia-bandeirantes
+  countryId: brazil
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: philippe-etancelin
+      rounds: 4
+    - driverId: eitel-cantoni
+      rounds: 5-6,8
+    - driverId: gino-bianco
+      rounds: 5-8
+    - driverId: chico-landi
+      rounds: 7-8
+    - driverId: jan-flinterman
+      rounds: 7
+- entrantId: federal-auto-associates
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: george-connor
+      rounds: 2
+    - driverId: rodger-ward
+      rounds: 2
+- entrantId: fritz-riess
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: fritz-riess
+  rounds: 6
+- entrantId: g-caprara
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: dunlop
+  driverId: roy-salvadori
+  rounds: 5
+- entrantId: george-leitenberger
+  countryId: united-states-of-america
+  constructorId: sherman
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: george-fonder
+  rounds: 2
+- entrantId: ha-chapman
+  countryId: united-states-of-america
+  constructorId: stevens
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: bill-schindler
+  rounds: 2
+- entrantId: hans-klenk
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: hans-klenk
+  rounds: 6
+- entrantId: hart-fullerton
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: andy-linden
+  rounds: 2
+- entrantId: helmut-niedermayr
+  countryId: germany
+  constructorId: afm
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: helmut-niedermayr
+  rounds: 6
+- entrantId: howard-keck
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: bill-vukovich
+  rounds: 2
+- entrantId: hw-motors
+  countryId: united-kingdom
+  constructorId: hwm
+  engineManufacturerId: alta
+  tyreManufacturerId: dunlop
+  drivers:
+    - driverId: george-abecassis
+      rounds: 1
+    - driverId: lance-macklin
+      rounds: 1,3-5,7-8
+    - driverId: peter-collins
+      rounds: 1,3-6,8
+    - driverId: stirling-moss
+      rounds: 1
+    - driverId: paul-frere
+      rounds: 3,6
+    - driverId: roger-laurent
+      rounds: 3
+    - driverId: yves-giraud-cabantous
+      rounds: 4
+    - driverId: duncan-hamilton
+      rounds: 5,7
+    - driverId: johnny-claes
+      rounds: 6
+    - driverId: dries-van-der-lof
+      rounds: 7
+- entrantId: jack-hinkle
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: jack-mcgrath
+  rounds: 2
+- entrantId: jc-agajanian
+  countryId: united-states-of-america
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: troy-ruttman
+  rounds: 2
+- entrantId: jim-robbins
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: johnnie-parsons
+  rounds: 2
+- entrantId: josef-peters
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: josef-peters
+  rounds: 6
+- entrantId: ken-downing
+  countryId: united-kingdom
+  constructorId: connaught
+  engineManufacturerId: lea-francis
+  tyreManufacturerId: dunlop
+  driverId: ken-downing
+  rounds: 7
+- entrantId: lee-elkins
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: bob-sweikert
+  rounds: 2
+- entrantId: leslie-d-hawthorn
+  countryId: united-kingdom
+  constructorId: cooper
+  engineManufacturerId: bristol
+  tyreManufacturerId: dunlop
+  driverId: mike-hawthorn
+  rounds: 3,5,7-8
+- entrantId: lewis-welch
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: novi
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: chet-miller
+      rounds: 2
+    - driverId: duke-nalon
+      rounds: 2
+- entrantId: ludson-morris
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: bob-scott
+  rounds: 2
+- entrantId: ludwig-fischer
+  countryId: germany
+  constructorId: afm
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: ludwig-fischer
+  rounds: 6
+- entrantId: ma-walker
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: jimmy-reece
+  rounds: 2
+- entrantId: marcel-balsa
+  countryId: france
+  constructorId: balsa
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: marcel-balsa
+  rounds: 6
+- entrantId: mel-wiggers
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: gene-hartley
+  rounds: 2
+- entrantId: motor-presse-verlag
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: paul-pietsch
+  rounds: 6
+- entrantId: officine-alfieri-maserati
+  countryId: italy
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: felice-bonetto
+      rounds: 6,8
+    - driverId: franco-rol
+      rounds: 8
+    - driverId: jose-froilan-gonzalez
+      rounds: 8
+- entrantId: peter-schmidt
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: jimmy-bryan
+  rounds: 2
+- entrantId: peter-whitehead
+  countryId: united-kingdom
+  constructors:
+    - constructorId: alta
+      engineManufacturerId: alta
+      tyreManufacturerId: dunlop
+      drivers:
+        - driverId: graham-whitehead
+          rounds: 5
+        - driverId: peter-whitehead
+          rounds: 4
+    - constructorId: ferrari
+      engineManufacturerId: ferrari
+      tyreManufacturerId: dunlop
+      driverId: peter-whitehead
+      rounds: 5,8
+- entrantId: piero-dusio
+  countryId: italy
+  constructorId: cisitalia
+  engineManufacturerId: bpm
+  tyreManufacturerId: pirelli
+  driverId: piero-dusio
+  rounds: 8
+- entrantId: ray-t-brady
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: art-cross
+  rounds: 2
+- entrantId: robert-obrien
+  countryId: united-states-of-america
+  constructorId: simca-gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  driverId: robert-obrien
+  rounds: 3
+- entrantId: robin-montgomerie-charrington
+  countryId: united-kingdom
+  constructorId: aston-butterworth
+  engineManufacturerId: butterworth
+  tyreManufacturerId: dunlop
+  driverId: robin-montgomerie-charrington
+  rounds: 3
+- entrantId: roger-wolcott
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: johnny-mcdowell
+  rounds: 2
+- entrantId: rudolf-krause
+  countryId: germany
+  constructorId: greifzu
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: rudolf-krause
+  rounds: 6
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturers:
+    - tyreManufacturerId: firestone
+    - tyreManufacturerId: pirelli
+  drivers:
+    - driverId: andre-simon
+      rounds: 1,8
+    - driverId: nino-farina
+      rounds: 1,3-8
+    - driverId: piero-taruffi
+      rounds: 1,3-6,8
+    - driverId: alberto-ascari
+      rounds: 2-8
+    - driverId: luigi-villoresi
+      rounds: 7-8
+- entrantId: scuderia-franera
+  countryId: united-kingdom
+  constructors:
+    - constructorId: frazer-nash
+      engineManufacturerId: bristol
+      tyreManufacturerId: dunlop
+      driverId: ken-wharton
+      rounds: 1,3,7
+    - constructorId: cooper
+      engineManufacturerId: bristol
+      tyreManufacturerId: dunlop
+      driverId: ken-wharton
+      rounds: 8
+- entrantId: scuderia-marzotto
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: franco-comotti
+      rounds: 4
+    - driverId: piero-carini
+      rounds: 4,6
+- entrantId: theo-helfrich
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: theo-helfrich
+  rounds: 6
+- entrantId: tom-sarafoff
+  countryId: united-states-of-america
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: cliff-griffith
+  rounds: 2
+- entrantId: toni-ulmen
+  countryId: germany
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  driverId: toni-ulmen
+  rounds: 1,6
+- entrantId: tony-crook
+  countryId: united-kingdom
+  constructorId: frazer-nash
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: tony-crook
+  rounds: 5
+- entrantId: tony-gaze
+  countryId: australia
+  constructorId: hwm
+  engineManufacturerId: alta
+  tyreManufacturerId: dunlop
+  driverId: tony-gaze
+  rounds: 3,5-6,8
+- entrantId: vicomtesse-de-walckiers
+  countryId: belgium
+  constructorId: simca-gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  driverId: johnny-claes
+  rounds: 8
+- entrantId: willi-heeks
+  countryId: germany
+  constructorId: afm
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  driverId: willi-heeks
+  rounds: 6
+- entrantId: willi-krakau
+  countryId: germany
+  constructors:
+    - constructorId: afm
+      engineManufacturerId: bmw
+      tyreManufacturerId: dunlop
+      driverId: willi-krakau
+      rounds: 6
+    - constructorId: krakau
+      engineManufacturerId: bmw
+      tyreManufacturerId: dunlop
+      driverId: harry-merkel
+      rounds: 6
+- entrantId: william-ansted
+  countryId: united-states-of-america
+  constructorId: stevens
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  driverId: bobby-ball
+  rounds: 2
+- entrantId: ws-aston
+  countryId: united-kingdom
+  constructorId: aston-butterworth
+  engineManufacturerId: butterworth
+  tyreManufacturerId: dunlop
+  driverId: bill-aston
+  rounds: 5-6,8

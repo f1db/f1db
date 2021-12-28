@@ -1,0 +1,152 @@
+- entrantId: caterham-f1-team
+  countryId: malaysia
+  constructorId: caterham
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kamui-kobayashi
+      rounds: 1-11,13-16,19
+    - driverId: marcus-ericsson
+      rounds: 1-16
+    - driverId: andre-lotterer
+      rounds: 12
+    - driverId: will-stevens
+      rounds: 19
+    - driverId: alexander-rossi
+      rounds:
+      testDriver: true
+    - driverId: roberto-merhi
+      rounds:
+      testDriver: true
+    - driverId: robin-frijns
+      rounds:
+      testDriver: true
+- entrantId: infiniti-red-bull-racing
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniel-ricciardo
+      rounds: 1-19
+    - driverId: sebastian-vettel
+      rounds: 1-19
+- entrantId: lotus-f1-team
+  countryId: united-kingdom
+  constructorId: lotus-f1
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: pastor-maldonado
+      rounds: 1-19
+    - driverId: romain-grosjean
+      rounds: 1-19
+    - driverId: charles-pic
+      rounds:
+      testDriver: true
+    - driverId: esteban-ocon
+      rounds:
+      testDriver: true
+- entrantId: marussia-f1-team
+  countryId: russia
+  constructorId: marussia
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: jules-bianchi
+      rounds: 1-15
+    - driverId: max-chilton
+      rounds: 1-16
+    - driverId: alexander-rossi
+      rounds: 12,16
+- entrantId: mclaren-mercedes
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: jenson-button
+      rounds: 1-19
+    - driverId: kevin-magnussen
+      rounds: 1-19
+- entrantId: mercedes-amg-petronas-f1-team
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lewis-hamilton
+      rounds: 1-19
+    - driverId: nico-rosberg
+      rounds: 1-19
+- entrantId: sahara-force-india-f1-team
+  countryId: india
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: nico-hulkenberg
+      rounds: 1-19
+    - driverId: sergio-perez
+      rounds: 1-19
+    - driverId: daniel-juncadella
+      rounds:
+      testDriver: true
+- entrantId: sauber-f1-team
+  countryId: switzerland
+  constructorId: sauber
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: adrian-sutil
+      rounds: 1-19
+    - driverId: esteban-gutierrez
+      rounds: 1-19
+    - driverId: adderly-fong
+      rounds:
+      testDriver: true
+    - driverId: giedo-van-der-garde
+      rounds:
+      testDriver: true
+    - driverId: sergey-sirotkin
+      rounds:
+      testDriver: true
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: fernando-alonso
+      rounds: 1-19
+    - driverId: kimi-raikkonen
+      rounds: 1-19
+- entrantId: scuderia-toro-rosso
+  countryId: italy
+  constructorId: toro-rosso
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniil-kvyat
+      rounds: 1-19
+    - driverId: jean-eric-vergne
+      rounds: 1-19
+    - driverId: max-verstappen
+      rounds:
+      testDriver: true
+- entrantId: williams-martini-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: felipe-massa
+      rounds: 1-19
+    - driverId: valtteri-bottas
+      rounds: 1-19
+    - driverId: felipe-nasr
+      rounds:
+      testDriver: true
+    - driverId: susie-wolff
+      rounds:
+      testDriver: true

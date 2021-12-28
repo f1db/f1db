@@ -1,0 +1,11 @@
+id: caterham
+name: Caterham
+fullName: Caterham F1 Team
+countryId: malaysia
+previousNextConstructors:
+  - constructorId: lotus-racing
+    yearFrom: 2010
+    yearTo: 2011
+  - constructorId: caterham
+    yearFrom: 2012
+    yearTo: 2014

@@ -1,0 +1,50 @@
+- position: 1
+  driverNumber: 22
+  driverId: andrea-de-cesaris
+  constructorId: rial
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:14.123"
+  gap:
+  interval:
+  laps:
+- position: 2
+  driverNumber: 36
+  driverId: alex-caffi
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:15.657"
+  gap: "+1.534"
+  interval: "+1.534"
+  laps:
+- position: 3
+  driverNumber: 33
+  driverId: stefano-modena
+  constructorId: eurobrun
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:15.802"
+  gap: "+1.679"
+  interval: "+0.145"
+  laps:
+- position: 4
+  driverNumber: 32
+  driverId: oscar-larrauri
+  constructorId: eurobrun
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:15.836"
+  gap: "+1.713"
+  interval: "+0.034"
+  laps:
+- position: 5
+  driverNumber: 31
+  driverId: gabriele-tarquini
+  constructorId: coloni
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  time: "1:17.028"
+  gap: "+2.905"
+  interval: "+1.192"
+  laps:

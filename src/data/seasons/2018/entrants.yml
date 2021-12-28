@@ -1,0 +1,131 @@
+- entrantId: alfa-romeo-sauber-f1-team
+  countryId: switzerland
+  constructorId: sauber
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: charles-leclerc
+      rounds: 1-21
+    - driverId: marcus-ericsson
+      rounds: 1-21
+    - driverId: antonio-giovinazzi
+      rounds:
+      testDriver: true
+- entrantId: aston-martin-red-bull-racing
+  countryId:  austria
+  constructorId: red-bull
+  engineManufacturerId: tag-heuer
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniel-ricciardo
+      rounds: 1-21
+    - driverId: max-verstappen
+      rounds: 1-21
+- entrantId: haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kevin-magnussen
+      rounds: 1-21
+    - driverId: romain-grosjean
+      rounds: 1-21
+- entrantId: mclaren-f1-team
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: fernando-alonso
+      rounds: 1-21
+    - driverId: stoffel-vandoorne
+      rounds: 1-21
+    - driverId: lando-norris
+      rounds:
+      testDriver: true
+- entrantId: mercedes-amg-petronas-motorsport
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lewis-hamilton
+      rounds: 1-21
+    - driverId: valtteri-bottas
+      rounds: 1-21
+- entrantId: racing-point-force-india-f1-team
+  countryId: united-kingdom
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds: 13-21
+    - driverId: sergio-perez
+      rounds: 13-21
+    - driverId: nicholas-latifi
+      rounds:
+      testDriver: true
+- entrantId: red-bull-toro-rosso-honda
+  countryId: italy
+  constructorId: toro-rosso
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: brendon-hartley
+      rounds: 1-21
+    - driverId: pierre-gasly
+      rounds: 1-21
+    - driverId: sean-gelael
+      rounds:
+      testDriver: true
+- entrantId: renault-sport-formula-one-team
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: carlos-sainz-jr
+      rounds: 1-21
+    - driverId: nico-hulkenberg
+      rounds: 1-21
+    - driverId: artem-markelov
+      rounds:
+      testDriver: true
+- entrantId: sahara-force-india-f1-team
+  countryId: india
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds: 1-12
+    - driverId: sergio-perez
+      rounds: 1-12
+    - driverId: nicholas-latifi
+      rounds:
+      testDriver: true
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kimi-raikkonen
+      rounds: 1-21
+    - driverId: sebastian-vettel
+      rounds: 1-21
+- entrantId: williams-martini-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lance-stroll
+      rounds: 1-21
+    - driverId: sergey-sirotkin
+      rounds: 1-21
+    - driverId: robert-kubica
+      rounds:
+      testDriver: true

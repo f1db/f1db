@@ -1,0 +1,17 @@
+id: bmw-sauber
+name: BMW Sauber
+fullName: BMW Sauber F1 Team
+countryId: germany
+previousNextConstructors:
+  - constructorId: sauber
+    yearFrom: 1993
+    yearTo: 2005
+  - constructorId: bmw-sauber
+    yearFrom: 2006
+    yearTo: 2010
+  - constructorId: sauber
+    yearFrom: 2011
+    yearTo: 2018
+  - constructorId: alfa-romeo
+    yearFrom: 2019
+    yearTo:

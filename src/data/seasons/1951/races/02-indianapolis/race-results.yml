@@ -1,0 +1,477 @@
+- position: 1
+  driverNumber: 99
+  driverId: lee-wallard
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "3:57:38.050"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 9
+  gridPosition: 2
+- position: 2
+  driverNumber: 83
+  driverId: mike-nazaruk
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "3:59:25.293"
+  timePenalty:
+  gap: "+1:47.243"
+  interval: "+1:47.243"
+  reasonRetired:
+  points: 6
+  gridPosition: 7
+- position: 3
+  driverNumber: 9
+  driverId: jack-mcgrath
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "4:00:29.440"
+  timePenalty:
+  gap: "+2:51.390"
+  interval: "+1:04.147"
+  reasonRetired:
+  points: 2
+  gridPosition: 3
+- position: 3
+  driverNumber: 9
+  driverId: manny-ayulo
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  sharedCar: true
+  laps:
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 2
+  gridPosition:
+- position: 4
+  driverNumber: 57
+  driverId: andy-linden
+  constructorId: sherman
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "4:02:18.170"
+  timePenalty:
+  gap: "+4:40.120"
+  interval: "+1:48.730"
+  reasonRetired:
+  points: 3
+  gridPosition: 31
+- position: 5
+  driverNumber: 52
+  driverId: bobby-ball
+  constructorId: schroeder
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "4:02:30.280"
+  timePenalty:
+  gap: "+4:52.230"
+  interval: "+12.110"
+  reasonRetired:
+  points: 2
+  gridPosition: 29
+- position: 6
+  driverNumber: 1
+  driverId: henry-banks
+  constructorId: moore
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 200
+  time: "4:03:18.070"
+  timePenalty:
+  gap: "+5:40.020"
+  interval: "+47.790"
+  reasonRetired:
+  points:
+  gridPosition: 17
+- position: 7
+  driverNumber: 68
+  driverId: carl-forberg
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 193
+  time:
+  timePenalty:
+  gap: "+7 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 24
+- position: 8
+  driverNumber: 27
+  driverId: duane-carter
+  constructorId: deidt
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 180
+  time:
+  timePenalty:
+  gap: "+20 laps"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 4
+- position: 9
+  driverNumber: 5
+  driverId: tony-bettenhausen
+  constructorId: deidt
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 178
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Spun off
+  points:
+  gridPosition: 9
+- position: 10
+  driverNumber: 18
+  driverId: duke-nalon
+  constructorId: kurtis
+  engineManufacturerId: novi
+  tyreManufacturerId: firestone
+  laps: 151
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Retirement
+  points:
+  gridPosition: 1
+- position: 11
+  driverNumber: 69
+  driverId: gene-force
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 142
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 22
+- position: 12
+  driverNumber: 25
+  driverId: sam-hanks
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 135
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 12
+- position: 13
+  driverNumber: 10
+  driverId: bill-schindler
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 129
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 16
+- position: 14
+  driverNumber: 16
+  driverId: mauri-rose
+  constructorId: deidt
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 126
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident
+  points:
+  gridPosition: 5
+- position: 15
+  driverNumber: 2
+  driverId: walt-faulkner
+  constructorId: kuzma
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 123
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 14
+- position: 16
+  driverNumber: 76
+  driverId: jimmy-davies
+  constructorId: pawl
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 110
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Axle
+  points:
+  gridPosition: 27
+- position: 17
+  driverNumber: 59
+  driverId: fred-agabashian
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 109
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Clutch
+  points:
+  gridPosition: 11
+- position: 18
+  driverNumber: 73
+  driverId: carl-scarborough
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 100
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fire
+  points:
+  gridPosition: 15
+- position: 19
+  driverNumber: 71
+  driverId: bill-mackey
+  constructorId: hall
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 97
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Clutch
+  points:
+  gridPosition: 33
+- position: 20
+  driverNumber: 8
+  driverId: chuck-stevenson
+  constructorId: marchese
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 93
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fire
+  points:
+  gridPosition: 19
+- position: 21
+  driverNumber: 3
+  driverId: johnnie-parsons
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 87
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Magneto
+  points:
+  gridPosition: 8
+- position: 22
+  driverNumber: 4
+  driverId: cecil-green
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 80
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 10
+- position: 23
+  driverNumber: 98
+  driverId: troy-ruttman
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 78
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 6
+- position: 24
+  driverNumber: 6
+  driverId: duke-dinsmore
+  constructorId: schroeder
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 73
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Overheating
+  points:
+  gridPosition: 32
+- position: 25
+  driverNumber: 32
+  driverId: chet-miller
+  constructorId: kurtis
+  engineManufacturerId: novi
+  tyreManufacturerId: firestone
+  laps: 56
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Ignition
+  points:
+  gridPosition: 28
+- position: 26
+  driverNumber: 44
+  driverId: walt-brown
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 55
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Magneto
+  points:
+  gridPosition: 13
+- position: 27
+  driverNumber: 48
+  driverId: rodger-ward
+  constructorId: bromme
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 34
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil pipe
+  points:
+  gridPosition: 25
+- position: 28
+  driverNumber: 23
+  driverId: cliff-griffith
+  constructorId: kurtis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 30
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Axle
+  points:
+  gridPosition: 18
+- position: 29
+  driverNumber: 81
+  driverId: bill-vukovich
+  constructorId: trevis
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 29
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil leak
+  points:
+  gridPosition: 20
+- position: 30
+  driverNumber: 22
+  driverId: george-connor
+  constructorId: lesovsky
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 29
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 21
+- position: 31
+  driverNumber: 19
+  driverId: mack-hellings
+  constructorId: deidt
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 18
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 23
+- position: 32
+  driverNumber: 12
+  driverId: johnny-mcdowell
+  constructorId: maserati
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 15
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fuel leak
+  points:
+  gridPosition: 26
+- position: 33
+  driverNumber: 26
+  driverId: joe-james
+  constructorId: watson
+  engineManufacturerId: offenhauser
+  tyreManufacturerId: firestone
+  laps: 8
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Transmission
+  points:
+  gridPosition: 30
