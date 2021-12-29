@@ -86,7 +86,7 @@ To build the distribution zips simply run:
 
 ## Releasing
 
-GitHub Actions is used to build and upload new releases by creating a new git tag.
+[GitHub Actions](https://github.com/f1db/f1db/actions) is used to build and upload new releases by creating a new git tag.
 
 Follow these steps:
 
