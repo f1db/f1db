@@ -51,13 +51,13 @@ jreleaser {
     }
     files {
         artifact {
-            path = "${buildDir}/distributions/f1db-json-${project.version}.zip"
+            path = "${buildDir}/distributions/f1db-json-{{projectVersion}}.zip"
         }
         artifact {
-            path = "${buildDir}/distributions/f1db-smile-${project.version}.zip"
+            path = "${buildDir}/distributions/f1db-smile-{{projectVersion}}.zip"
         }
         artifact {
-            path = "${buildDir}/distributions/f1db-sqlite-${project.version}.zip"
+            path = "${buildDir}/distributions/f1db-sqlite-{{projectVersion}}.zip"
         }
     }
     release {
