@@ -25,63 +25,59 @@ distributions {
             from "${buildDir}/data/f1db.sml"
         }
     }
-	sqlite {
-		distributionBaseName = "f1db-sqlite"
-		contents {
-			from "${buildDir}/data/f1db.db"
-		}
-	}
+    sqlite {
+        distributionBaseName = "f1db-sqlite"
+        contents {
+            from "${buildDir}/data/f1db.db"
+        }
+    }
 }
 
 f1db {
     currentSeason = 2022
     wdcDecided = property("wdcDecided").toBoolean()
     wccDecided = property("wccDecided").toBoolean()
-    indentOutput = true
+    indentOutput = false
 }
 
-//jreleaser {
-//	project {
-//    	name = "f1db"
-//        description = "Open Source Formula 1 Database"
-//        website = "https://f1db.net"
-//    }
-//    files {
-//        artifact {
-//            path = "${buildDir}/distributions/f1db-json-${project.version}.zip"
-//        }
-//        artifact {
-//            path = "${buildDir}/distributions/f1db-smile-${project.version}.zip"
-//        }
-//        artifact {
-//            path = "${buildDir}/distributions/f1db-sqlite-${project.version}.zip"
-//        }
-//    }
-//    release {
-//        github {
-//            owner = "f1db"
-//            name = "f1db"
-//            username = "marceloverdijk"
-//            token = '__DO_NOT_SET_HERE__'
-//			commitAuthor {
-//				name = "F1DB"
-//				email = "info@f1db.net"
-//			}
-//        }
-//    }
-//    annouce {
-//        enabled = false
-//        twitter {
-//            active = "ALWAYS"
-//            consumerKey = "__DO_NOT_SET_HERE__"
-//            consumerToken = "__DO_NOT_SET_HERE__"
-//            accessToken = "__DO_NOT_SET_HERE__"
-//            accessTokenSecret = "__DO_NOT_SET_HERE__"
-//            status = "{{projectNameCapitalized}} {{projectVersion}} has been released!"
-//        }
-//    }
-//}
+jreleaser {
+    project {
+        name = "f1db"
+        description = "Open Source Formula 1 Database"
+        website = "https://www.f1db.net"
+        license = "CC-BY-4.0"
+        licenseUrl = "https://spdx.org/licenses/CC-BY-4.0.html"
+        copyright = "F1DB"
+    }
+    files {
+        artifact {
+            path = "${buildDir}/distributions/f1db-json-${project.version}.zip"
+        }
+        artifact {
+            path = "${buildDir}/distributions/f1db-smile-${project.version}.zip"
+        }
+        artifact {
+            path = "${buildDir}/distributions/f1db-sqlite-${project.version}.zip"
+        }
+    }
+    release {
+        github {
+            enabled = false
+            owner = "f1db"
+            name = "f1db"
+            username = "marceloverdijk"
+            commitAuthor {
+                name = "F1DB"
+                email = "info@f1db.net"
+            }
+            changelog {
+                enabled = false
+            }
+            skipTag = true
+        }
+    }
+}
 
 tasks.withType(Tar) {
-	enabled = false
+    enabled = false
 }
