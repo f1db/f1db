@@ -22,19 +22,32 @@ Whether you are building a custom website, mobile application or just using F1DB
   - fastest laps
   - pit stops
   - driver of the day results
+  
+New releases will be available as soon as possible after every race. See also [Versioning](#versioning).
 
+Release artifacts are available in the following formats:
 
-New releases will be availble as soon as possible after every race. See also [Versioning](#versioning).
+- JSON
+- Smile (binary variant of the JSON format)
+- SQLite
 
 
 ## F1DB JSON Schema
 
-TODO.
+Both the JSON and Smile artifacts validate against the F1DB Json Schema.
+This [`src/schema/f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db.schema.json)
+schema file contains all F1DB object definitions and serves as the main documentation.  
 
 
 ## F1DB SQLite Database
 
-TODO.
+The SQLite database artifact contains all data in a relational database format
+and is very convenient for people with SQL knowledge that just want to query
+the data instead of processing the JSON format. 
+The database file could also serve students who want to learn SQL.
+
+We suggest to use [SQLiteStudio] for querying the F1DB database file.
+Of course any SQLite compliant SQL client can be used as well.  
 
 
 ## Versioning
