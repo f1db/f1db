@@ -35,7 +35,8 @@ Release artifacts are available in the following formats:
 ## F1DB JSON Schema
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
-This [`src/schema/f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db.schema.json)
+
+This [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db.schema.json)
 schema file contains all F1DB object definitions and serves as the main documentation.  
 
 
@@ -46,7 +47,7 @@ and is very convenient for people with SQL knowledge that just want to query
 the data instead of processing the JSON format. 
 The database file could also serve students who want to learn SQL.
 
-We suggest to use [SQLiteStudio] for querying the F1DB database file.
+We suggest to use [SQLiteStudio] for querying the database file.
 Of course any SQLite compliant SQL client can be used as well.  
 
 
