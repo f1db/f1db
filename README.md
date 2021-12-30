@@ -39,7 +39,7 @@ TODO.
 
 ## Versioning
 
-Releases are versioned using a customized [CalVer] versioning scheme:
+Releases are versioned using a "customized" [CalVer] versioning scheme:
 
     YYYY.RR.MICRO(.MODIFIER)
 
@@ -49,6 +49,8 @@ which uses the following conventions:
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
+
+Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` indicates the round number (`RR`).
 
 Examples:
 

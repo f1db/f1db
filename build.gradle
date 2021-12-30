@@ -43,6 +43,9 @@ f1db {
 jreleaser {
     project {
         name = "f1db"
+        // TODO: https://github.com/jreleaser/jreleaser/issues/642 - CalVer cannot parse MINOR/MICRO with value 0
+        // TODO: https://github.com/jreleaser/jreleaser/issues/643 - CalVer cannot parse optional MODIFIER
+        // TODO: versionPattern = "CALVER:YYYY.MINOR.MICRO[.MODIFIER]"
         description = "Open Source Formula 1 Database"
         website = "https://www.f1db.net"
         license = "CC-BY-4.0"
