@@ -65,7 +65,7 @@ jreleaser {
     }
     release {
         github {
-            enabled = false
+            enabled = true
             owner = "f1db"
             name = "f1db"
             username = "marceloverdijk"
