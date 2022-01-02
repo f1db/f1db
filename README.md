@@ -107,10 +107,10 @@ To build the distribution zips simply run:
 Follow these steps:
 
 1. Update the version number in `gradle.properties`
-2. `git commit -am "Release v<version>"`
-3. `git tag -a v<version> -m "Release v<version>"`
-4. `git push`
-5. `git push origin v<version>`
+2. `git commit -am "Preparing release v<version>"`
+3. `git push`
+4. `git tag -a v<version>`
+3. `git push origin v<version>`
 
 and the release action is automatically triggered by pushing the new tag.
 
