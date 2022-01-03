@@ -287,7 +287,7 @@
           "items": {
             "$ref": "#/definitions/PreviousNextConstructor"
           },
-          "description": "The constructor pedigree."
+          "description": "The previous/next constructors."
         },
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
