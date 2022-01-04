@@ -51,7 +51,6 @@ jsonSchema2Pojo {
     includeGeneratedAnnotation = false
     inclusionLevel = org.jsonschema2pojo.InclusionLevel.ALWAYS
     initializeCollections = false
-    useTitleAsClassname = true
     serializable = true
     useBigDecimals = true
     useTitleAsClassname = true
