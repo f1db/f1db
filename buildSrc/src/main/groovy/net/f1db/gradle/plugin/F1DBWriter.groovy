@@ -456,7 +456,7 @@ class F1DBWriter {
                     sql = readResource("/sqlite/insert_driver_standing.sql")
                     sqlite.withBatch(batchSize, sql) { ps ->
                         season.driverStandings.eachWithIndex { driverStanding, index ->
-                            ps.addBatch(season, [round: null, positionDisplayOrder: index + 1], driverStanding)
+                            ps.addBatch(season, [round: 0, positionDisplayOrder: index + 1], driverStanding)
                         }
                     }
                 }
@@ -467,7 +467,7 @@ class F1DBWriter {
                     sql = readResource("/sqlite/insert_constructor_standing.sql")
                     sqlite.withBatch(batchSize, sql) { ps ->
                         season.constructorStandings.eachWithIndex { constructorStanding, index ->
-                            ps.addBatch(season, [round: null, positionDisplayOrder: index + 1], constructorStanding)
+                            ps.addBatch(season, [round: 0, positionDisplayOrder: index + 1], constructorStanding)
                         }
                     }
                 }

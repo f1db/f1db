@@ -91,7 +91,7 @@ CREATE TABLE constructor_previous_next_constructor
 , previous_next_constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
 , year_from INTEGER NOT NULL
 , year_to INTEGER
-, PRIMARY KEY (constructor_id, previous_next_constructor_id, year_from, year_to)
+, PRIMARY KEY (constructor_id, previous_next_constructor_id, year_from)
 );
 
 CREATE INDEX constructor_previous_next_constructor_constructor_id_index ON constructor_previous_next_constructor(constructor_id);
@@ -342,7 +342,7 @@ CREATE INDEX race_data_tyre_manufacturer_id_index ON race_data(tyre_manufacturer
 
 CREATE TABLE driver_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
-, round INTEGER
+, round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
 , position_number INTEGER
 , position_text VARCHAR(255) NOT NULL
@@ -360,7 +360,7 @@ CREATE INDEX driver_standing_driver_id_index ON driver_standing(driver_id);
 
 CREATE TABLE constructor_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
-, round INTEGER
+, round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
 , position_number INTEGER
 , position_text VARCHAR(255) NOT NULL
@@ -786,4 +786,52 @@ FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
 WHERE    race_data.type    = 'DRIVER_OF_THE_DAY_RESULT'
+;
+
+CREATE VIEW race_driver_standing AS
+SELECT   year
+,        round
+,        position_display_order
+,        position_number
+,        position_text
+,        driver_id
+,        points
+FROM     driver_standing
+WHERE    round != 0
+;
+
+CREATE VIEW race_constructor_standing AS
+SELECT   year
+,        round
+,        position_display_order
+,        position_number
+,        position_text
+,        constructor_id
+,        engine_manufacturer_id
+,        points
+FROM     constructor_standing
+WHERE    round != 0
+;
+
+CREATE VIEW season_driver_standing AS
+SELECT   year
+,        position_display_order
+,        position_number
+,        position_text
+,        driver_id
+,        points
+FROM     driver_standing
+WHERE    round = 0
+;
+
+CREATE VIEW season_constructor_standing AS
+SELECT   year
+,        position_display_order
+,        position_number
+,        position_text
+,        constructor_id
+,        engine_manufacturer_id
+,        points
+FROM     constructor_standing
+WHERE    round = 0
 ;
