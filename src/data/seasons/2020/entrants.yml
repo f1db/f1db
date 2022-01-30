@@ -48,22 +48,6 @@
     - driverId: mick-schumacher
       rounds:
       testDriver: true
-- entrantId: hot-wheels-williams-racing
-  countryId: united-kingdom
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: george-russell
-      rounds: 1-15,17
-    - driverId: nicholas-latifi
-      rounds: 1-17
-    - driverId: jack-aitken
-      rounds: 16
-      testDriver: true
-    - driverId: roy-nissany
-      rounds:
-      testDriver: true
 - entrantId: mclaren-f1-team
   countryId: united-kingdom
   constructorId: mclaren
@@ -116,3 +100,19 @@
       rounds: 1-17
     - driverId: sebastian-vettel
       rounds: 1-17
+- entrantId: williams-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: george-russell
+      rounds: 1-15,17
+    - driverId: nicholas-latifi
+      rounds: 1-17
+    - driverId: jack-aitken
+      rounds: 16
+      testDriver: true
+    - driverId: roy-nissany
+      rounds:
+      testDriver: true
