@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.f1db.net/schema/f1db.schema.v1.1.0.json",
+  "$id": "https://www.f1db.net/schema/f1db.schema.v1.0.0.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
   "description": "F1DB JSON Schema",
@@ -62,13 +62,6 @@
       },
       "description": "The seasons."
     },
-    "races": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Race"
-      },
-      "description": "The races."
-    },
     "continents": {
       "type": "array",
       "items": {
@@ -93,7 +86,6 @@
     "circuits",
     "grandsPrix",
     "seasons",
-    "races",
     "continents",
     "countries"
   ],
@@ -720,6 +712,13 @@
           },
           "description": "The entrants."
         },
+        "races": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/Race"
+          },
+          "description": "The races."
+        },
         "driverStandings": {
           "type": ["array", "null"],
           "items": {
@@ -738,6 +737,7 @@
       "required": [
         "year",
         "entrants",
+        "races",
         "driverStandings",
         "constructorStandings"
       ]
