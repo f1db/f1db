@@ -52,6 +52,9 @@ jreleaser {
     }
     files {
         artifact {
+            path = "${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}.json"
+        }
+        artifact {
             path = "${buildDir}/distributions/f1db-json-{{projectVersion}}.zip"
         }
         artifact {
