@@ -28,7 +28,7 @@ class F1DBWriter {
     boolean indentOutput
 
     F1DBWriter(File projectDir, F1DBPluginExtension extension) {
-        this.jsonSchemaFile = new File(projectDir, "src/schema/f1db.schema.json")
+        this.jsonSchemaFile = new File(projectDir, "src/schema/f1db.schema.latest.json")
         this.outputDir = new File(projectDir, "build/data")
         this.indentOutput = extension.indentOutput
     }
@@ -276,180 +276,6 @@ class F1DBWriter {
                     }
                 }
 
-                // Insert races.
-
-                sql = readResource("/sqlite/insert_race.sql")
-                sqlite.withBatch(batchSize, sql) { ps ->
-                    season.races.each { race ->
-                        ps.addBatch(race)
-                    }
-                }
-
-                season.races.each { race ->
-
-                    sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-                    if (race.preQualifyingResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.preQualifyingResults.eachWithIndex { qualifyingResult, index ->
-                                ps.addBatch(race, [type: "PRE_QUALIFYING_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_practice_result.sql")
-                    if (race.freePractice1Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.freePractice1Results.eachWithIndex { practiceResult, index ->
-                                ps.addBatch(race, [type: "FREE_PRACTICE_1_RESULT", positionDisplayOrder: index + 1], practiceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_practice_result.sql")
-                    if (race.freePractice2Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.freePractice2Results.eachWithIndex { practiceResult, index ->
-                                ps.addBatch(race, [type: "FREE_PRACTICE_2_RESULT", positionDisplayOrder: index + 1], practiceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_practice_result.sql")
-                    if (race.freePractice3Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.freePractice3Results.eachWithIndex { practiceResult, index ->
-                                ps.addBatch(race, [type: "FREE_PRACTICE_3_RESULT", positionDisplayOrder: index + 1], practiceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_practice_result.sql")
-                    if (race.freePractice4Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.freePractice4Results.eachWithIndex { practiceResult, index ->
-                                ps.addBatch(race, [type: "FREE_PRACTICE_4_RESULT", positionDisplayOrder: index + 1], practiceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-                    if (race.qualifying1Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.qualifying1Results.eachWithIndex { qualifyingResult, index ->
-                                ps.addBatch(race, [type: "QUALIFYING_1_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-                    if (race.qualifying2Results) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.qualifying2Results.eachWithIndex { qualifyingResult, index ->
-                                ps.addBatch(race, [type: "QUALIFYING_2_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-                    if (race.qualifyingResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.qualifyingResults.eachWithIndex { qualifyingResult, index ->
-                                ps.addBatch(race, [type: "QUALIFYING_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_practice_result.sql")
-                    if (race.warmingUpResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.warmingUpResults.eachWithIndex { practiceResult, index ->
-                                ps.addBatch(race, [type: "WARMING_UP_RESULT", positionDisplayOrder: index + 1], practiceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
-                    if (race.sprintQualifyingStartingGridPositions) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.sprintQualifyingStartingGridPositions.eachWithIndex { startingGridPosition, index ->
-                                ps.addBatch(race, [type: "SPRINT_QUALIFYING_STARTING_GRID_POSITION", positionDisplayOrder: index + 1], startingGridPosition)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_race_result.sql")
-                    if (race.sprintQualifyingResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.sprintQualifyingResults.eachWithIndex { raceResult, index ->
-                                ps.addBatch(race, [type: "SPRINT_QUALIFYING_RESULT", positionDisplayOrder: index + 1], raceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
-                    if (race.startingGridPositions) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.startingGridPositions.eachWithIndex { startingGridPosition, index ->
-                                ps.addBatch(race, [type: "STARTING_GRID_POSITION", positionDisplayOrder: index + 1], startingGridPosition)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_race_result.sql")
-                    if (race.raceResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.raceResults.eachWithIndex { raceResult, index ->
-                                ps.addBatch(race, [type: "RACE_RESULT", positionDisplayOrder: index + 1], raceResult)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_fastest_lap.sql")
-                    if (race.fastestLaps) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.fastestLaps.eachWithIndex { fastestLap, index ->
-                                ps.addBatch(race, [type: "FASTEST_LAP", positionDisplayOrder: index + 1], fastestLap)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_pit_stop.sql")
-                    if (race.pitStops) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.pitStops.eachWithIndex { pitStop, index ->
-                                ps.addBatch(race, [type: "PIT_STOP", positionDisplayOrder: index + 1], pitStop)
-                            }
-                        }
-                    }
-
-                    sql = readResource("/sqlite/insert_race_driver_of_the_day_result.sql")
-                    if (race.driverOfTheDayResults) {
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.driverOfTheDayResults.eachWithIndex { driverOfTheDayResult, index ->
-                                ps.addBatch(race, [type: "DRIVER_OF_THE_DAY_RESULT", positionDisplayOrder: index + 1], driverOfTheDayResult)
-                            }
-                        }
-                    }
-
-                    if (race.driverStandings) {
-                        sql = readResource("/sqlite/insert_driver_standing.sql")
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.driverStandings.eachWithIndex { driverStanding, index ->
-                                ps.addBatch(race, [round: race.round, positionDisplayOrder: index + 1], driverStanding)
-                            }
-                        }
-                    }
-
-                    if (race.constructorStandings) {
-                        sql = readResource("/sqlite/insert_constructor_standing.sql")
-                        sqlite.withBatch(batchSize, sql) { ps ->
-                            race.constructorStandings.eachWithIndex { constructorStanding, index ->
-                                ps.addBatch(race, [round: race.round, positionDisplayOrder: index + 1], constructorStanding)
-                            }
-                        }
-                    }
-                }
-
                 // Insert driver standings.
 
                 if (season.driverStandings) {
@@ -468,6 +294,180 @@ class F1DBWriter {
                     sqlite.withBatch(batchSize, sql) { ps ->
                         season.constructorStandings.eachWithIndex { constructorStanding, index ->
                             ps.addBatch(season, [round: 0, positionDisplayOrder: index + 1], constructorStanding)
+                        }
+                    }
+                }
+            }
+
+            // Insert races.
+
+            sql = readResource("/sqlite/insert_race.sql")
+            sqlite.withBatch(batchSize, sql) { ps ->
+                f1db.races.each { race ->
+                    ps.addBatch(race)
+                }
+            }
+
+            f1db.races.each { race ->
+
+                sql = readResource("/sqlite/insert_race_qualifying_result.sql")
+                if (race.preQualifyingResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.preQualifyingResults.eachWithIndex { qualifyingResult, index ->
+                            ps.addBatch(race, [type: "PRE_QUALIFYING_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_practice_result.sql")
+                if (race.freePractice1Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.freePractice1Results.eachWithIndex { practiceResult, index ->
+                            ps.addBatch(race, [type: "FREE_PRACTICE_1_RESULT", positionDisplayOrder: index + 1], practiceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_practice_result.sql")
+                if (race.freePractice2Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.freePractice2Results.eachWithIndex { practiceResult, index ->
+                            ps.addBatch(race, [type: "FREE_PRACTICE_2_RESULT", positionDisplayOrder: index + 1], practiceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_practice_result.sql")
+                if (race.freePractice3Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.freePractice3Results.eachWithIndex { practiceResult, index ->
+                            ps.addBatch(race, [type: "FREE_PRACTICE_3_RESULT", positionDisplayOrder: index + 1], practiceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_practice_result.sql")
+                if (race.freePractice4Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.freePractice4Results.eachWithIndex { practiceResult, index ->
+                            ps.addBatch(race, [type: "FREE_PRACTICE_4_RESULT", positionDisplayOrder: index + 1], practiceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_qualifying_result.sql")
+                if (race.qualifying1Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.qualifying1Results.eachWithIndex { qualifyingResult, index ->
+                            ps.addBatch(race, [type: "QUALIFYING_1_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_qualifying_result.sql")
+                if (race.qualifying2Results) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.qualifying2Results.eachWithIndex { qualifyingResult, index ->
+                            ps.addBatch(race, [type: "QUALIFYING_2_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_qualifying_result.sql")
+                if (race.qualifyingResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.qualifyingResults.eachWithIndex { qualifyingResult, index ->
+                            ps.addBatch(race, [type: "QUALIFYING_RESULT", positionDisplayOrder: index + 1], qualifyingResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_practice_result.sql")
+                if (race.warmingUpResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.warmingUpResults.eachWithIndex { practiceResult, index ->
+                            ps.addBatch(race, [type: "WARMING_UP_RESULT", positionDisplayOrder: index + 1], practiceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
+                if (race.sprintQualifyingStartingGridPositions) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.sprintQualifyingStartingGridPositions.eachWithIndex { startingGridPosition, index ->
+                            ps.addBatch(race, [type: "SPRINT_QUALIFYING_STARTING_GRID_POSITION", positionDisplayOrder: index + 1], startingGridPosition)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_race_result.sql")
+                if (race.sprintQualifyingResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.sprintQualifyingResults.eachWithIndex { raceResult, index ->
+                            ps.addBatch(race, [type: "SPRINT_QUALIFYING_RESULT", positionDisplayOrder: index + 1], raceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
+                if (race.startingGridPositions) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.startingGridPositions.eachWithIndex { startingGridPosition, index ->
+                            ps.addBatch(race, [type: "STARTING_GRID_POSITION", positionDisplayOrder: index + 1], startingGridPosition)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_race_result.sql")
+                if (race.raceResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.raceResults.eachWithIndex { raceResult, index ->
+                            ps.addBatch(race, [type: "RACE_RESULT", positionDisplayOrder: index + 1], raceResult)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_fastest_lap.sql")
+                if (race.fastestLaps) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.fastestLaps.eachWithIndex { fastestLap, index ->
+                            ps.addBatch(race, [type: "FASTEST_LAP", positionDisplayOrder: index + 1], fastestLap)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_pit_stop.sql")
+                if (race.pitStops) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.pitStops.eachWithIndex { pitStop, index ->
+                            ps.addBatch(race, [type: "PIT_STOP", positionDisplayOrder: index + 1], pitStop)
+                        }
+                    }
+                }
+
+                sql = readResource("/sqlite/insert_race_driver_of_the_day_result.sql")
+                if (race.driverOfTheDayResults) {
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.driverOfTheDayResults.eachWithIndex { driverOfTheDayResult, index ->
+                            ps.addBatch(race, [type: "DRIVER_OF_THE_DAY_RESULT", positionDisplayOrder: index + 1], driverOfTheDayResult)
+                        }
+                    }
+                }
+
+                if (race.driverStandings) {
+                    sql = readResource("/sqlite/insert_driver_standing.sql")
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.driverStandings.eachWithIndex { driverStanding, index ->
+                            ps.addBatch(race, [round: race.round, positionDisplayOrder: index + 1], driverStanding)
+                        }
+                    }
+                }
+
+                if (race.constructorStandings) {
+                    sql = readResource("/sqlite/insert_constructor_standing.sql")
+                    sqlite.withBatch(batchSize, sql) { ps ->
+                        race.constructorStandings.eachWithIndex { constructorStanding, index ->
+                            ps.addBatch(race, [round: race.round, positionDisplayOrder: index + 1], constructorStanding)
                         }
                     }
                 }

@@ -86,6 +86,7 @@ class F1DBReader {
         f1db.circuits = readValues(sourceDir, "circuits", Circuit)
         f1db.grandsPrix = readValues(sourceDir, "grands-prix", GrandPrix)
         f1db.seasons = []
+        f1db.races = []
 
         // Read seasons.
 
@@ -96,13 +97,12 @@ class F1DBReader {
             def season = new Season()
             season.year = seasonDir.name.toInteger()
             season.entrants = readValues(seasonDir, "entrants.yml", SeasonEntrant)
-            season.races = []
 
             // Read races
 
             listFiles(seasonDir, "races").each { raceDir ->
 
-                // Read race + race data + standings.
+                // Read race + race data + race standings.
 
                 def race = readValue(raceDir, "race.yml", Race)
                 race.year = season.year
@@ -125,10 +125,10 @@ class F1DBReader {
                 race.driverStandings = readValues(raceDir, "driver-standings.yml", DriverStanding)
                 race.constructorStandings = readValues(raceDir, "constructor-standings.yml", ConstructorStanding)
 
-                season.races << race
+                f1db.races << race
             }
 
-            // Read standings.
+            // Read season standings.
 
             season.driverStandings = readValues(seasonDir, "driver-standings.yml", DriverStanding)
             season.constructorStandings = readValues(seasonDir, "constructor-standings.yml", ConstructorStanding)
@@ -192,155 +192,6 @@ class F1DBReader {
 
         f1db.seasons.each { season ->
 
-            season.races.each { race ->
-
-                // Enrich sprint qualifying results.
-
-                race.sprintQualifyingResults.each { sprintQualifyingResult ->
-                    sprintQualifyingResult.positionsGained = calculatePositionsGained(sprintQualifyingResult, race.sprintQualifyingStartingGridPositions)
-                }
-
-                // Enrich race results.
-
-                race.raceResults.each { raceResult ->
-                    raceResult.positionsGained = calculatePositionsGained(raceResult, race.startingGridPositions)
-                    raceResult.fastestLap = race.fastestLaps?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
-                    raceResult.pitStops = race.pitStops?.count { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
-                    raceResult.driverOfTheDay = race.driverOfTheDayResults?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
-                }
-
-                // Total points.
-
-                ((race.raceResults ?: []) + (race.sprintQualifyingResults ?: [])).each { raceResult ->
-                    if (raceResult.points) {
-                        def driver = f1db.drivers.find { it.id == raceResult.driverId }
-                        driver.totalPoints += raceResult.points
-                    }
-                }
-
-                def raceEntries = []
-                def raceStarts = []
-                def raceWins = []
-                def podiums = []
-
-                race.startingGridPositions.each { startingGridPosition ->
-
-                    def driver = f1db.drivers.find { it.id == startingGridPosition.driverId }
-                    def constructor = f1db.constructors.find { it.id == startingGridPosition.constructorId }
-                    def engineManufacturer = f1db.engineManufacturers.find { it.id == startingGridPosition.engineManufacturerId }
-                    def tyreManufacturer = f1db.tyreManufacturers.find { it.id == startingGridPosition.tyreManufacturerId }
-
-                    // Best starting grid position.
-
-                    if (startingGridPosition.positionNumber) {
-                        driver.bestStartingGridPosition = Math.min(driver.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
-                        constructor.bestStartingGridPosition = Math.min(constructor.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
-                        engineManufacturer.bestStartingGridPosition = Math.min(engineManufacturer.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
-                        tyreManufacturer.bestStartingGridPosition = Math.min(tyreManufacturer.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
-                    }
-
-                    // Total pole positions.
-
-                    if (startingGridPosition.positionNumber == 1) {
-                        driver.totalPolePositions++
-                        constructor.totalPolePositions++
-                        engineManufacturer.totalPolePositions++
-                        tyreManufacturer.totalPolePositions++
-                    }
-                }
-
-                race.raceResults.each { raceResult ->
-
-                    def driver = f1db.drivers.find { it.id == raceResult.driverId }
-                    def constructor = f1db.constructors.find { it.id == raceResult.constructorId }
-                    def engineManufacturer = f1db.engineManufacturers.find { it.id == raceResult.engineManufacturerId }
-                    def tyreManufacturer = f1db.tyreManufacturers.find { it.id == raceResult.tyreManufacturerId }
-
-                    // Best race result.
-
-                    if (raceResult.positionNumber) {
-                        driver.bestRaceResult = Math.min(driver.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
-                        constructor.bestRaceResult = Math.min(constructor.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
-                        engineManufacturer.bestRaceResult = Math.min(engineManufacturer.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
-                        tyreManufacturer.bestRaceResult = Math.min(tyreManufacturer.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
-                    }
-
-                    // Total race entries.
-
-                    driver.totalRaceEntries += incrementIfAbsent(raceEntries, driver)
-                    constructor.totalRaceEntries += incrementIfAbsent(raceEntries, constructor)
-                    engineManufacturer.totalRaceEntries += incrementIfAbsent(raceEntries, engineManufacturer)
-                    tyreManufacturer.totalRaceEntries += incrementIfAbsent(raceEntries, tyreManufacturer)
-
-                    // Total race starts.
-
-                    if (raceResult.positionText !in ["DNP", "DNPQ", "DNQ", "DNS", "EX"]) {
-                        driver.totalRaceStarts += incrementIfAbsent(raceStarts, driver)
-                        constructor.totalRaceStarts += incrementIfAbsent(raceStarts, constructor)
-                        engineManufacturer.totalRaceStarts += incrementIfAbsent(raceStarts, engineManufacturer)
-                        tyreManufacturer.totalRaceStarts += incrementIfAbsent(raceStarts, tyreManufacturer)
-                    }
-
-                    // Total race wins.
-
-                    if (raceResult.positionNumber == 1) {
-                        driver.totalRaceWins += incrementIfAbsent(raceWins, driver)
-                        constructor.totalRaceWins += incrementIfAbsent(raceWins, constructor)
-                        engineManufacturer.totalRaceWins += incrementIfAbsent(raceWins, engineManufacturer)
-                        tyreManufacturer.totalRaceWins += incrementIfAbsent(raceWins, tyreManufacturer)
-
-                        // Total 1 and 2 finishes.
-
-                        if (!raceResult.sharedCar) {
-                            def position2 = race.raceResults.find { it.positionNumber == 2 }
-                            if (position2 && position2.constructorId == constructor.id) {
-                                constructor.total1And2Finishes++
-                            }
-                        }
-                    }
-
-                    // Total race laps.
-
-                    if (raceResult.laps) {
-                        driver.totalRaceLaps += raceResult.laps
-                        if (!raceResult.sharedCar) {
-                            constructor.totalRaceLaps += raceResult.laps
-                            engineManufacturer.totalRaceLaps += raceResult.laps
-                            tyreManufacturer.totalRaceLaps += raceResult.laps
-                        }
-                    }
-
-                    // Total podiums + podium races.
-
-                    if (raceResult.positionNumber in [1, 2, 3]) {
-                        driver.totalPodiums += incrementIfAbsent(podiums, driver)
-                        if (!raceResult.sharedCar) {
-                            constructor.totalPodiums++
-                            constructor.totalPodiumRaces += incrementIfAbsent(podiums, constructor)
-                            engineManufacturer.totalPodiums++
-                            engineManufacturer.totalPodiumRaces += incrementIfAbsent(podiums, engineManufacturer)
-                            tyreManufacturer.totalPodiums++
-                            tyreManufacturer.totalPodiumRaces += incrementIfAbsent(podiums, tyreManufacturer)
-                        }
-                    }
-
-                    // Total fastest laps.
-
-                    if (raceResult.fastestLap) {
-                        driver.totalFastestLaps++
-                        constructor.totalFastestLaps++
-                        engineManufacturer.totalFastestLaps++
-                        tyreManufacturer.totalFastestLaps++
-                    }
-
-                    // Total driver of the day.
-
-                    if (raceResult.driverOfTheDay) {
-                        driver.totalDriverOfTheDay++
-                    }
-                }
-            }
-
             season.driverStandings?.each { driverStanding ->
 
                 def positionNumber = driverStanding.positionNumber
@@ -387,6 +238,155 @@ class F1DBReader {
 
                 constructor.totalChampionshipPoints += constructorStanding.points
                 engineManufacturer.totalChampionshipPoints += constructorStanding.points
+            }
+        }
+
+        f1db.races.each { race ->
+
+            // Enrich sprint qualifying results.
+
+            race.sprintQualifyingResults.each { sprintQualifyingResult ->
+                sprintQualifyingResult.positionsGained = calculatePositionsGained(sprintQualifyingResult, race.sprintQualifyingStartingGridPositions)
+            }
+
+            // Enrich race results.
+
+            race.raceResults.each { raceResult ->
+                raceResult.positionsGained = calculatePositionsGained(raceResult, race.startingGridPositions)
+                raceResult.fastestLap = race.fastestLaps?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+                raceResult.pitStops = race.pitStops?.count { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+                raceResult.driverOfTheDay = race.driverOfTheDayResults?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+            }
+
+            // Total points.
+
+            ((race.raceResults ?: []) + (race.sprintQualifyingResults ?: [])).each { raceResult ->
+                if (raceResult.points) {
+                    def driver = f1db.drivers.find { it.id == raceResult.driverId }
+                    driver.totalPoints += raceResult.points
+                }
+            }
+
+            def raceEntries = []
+            def raceStarts = []
+            def raceWins = []
+            def podiums = []
+
+            race.startingGridPositions.each { startingGridPosition ->
+
+                def driver = f1db.drivers.find { it.id == startingGridPosition.driverId }
+                def constructor = f1db.constructors.find { it.id == startingGridPosition.constructorId }
+                def engineManufacturer = f1db.engineManufacturers.find { it.id == startingGridPosition.engineManufacturerId }
+                def tyreManufacturer = f1db.tyreManufacturers.find { it.id == startingGridPosition.tyreManufacturerId }
+
+                // Best starting grid position.
+
+                if (startingGridPosition.positionNumber) {
+                    driver.bestStartingGridPosition = Math.min(driver.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
+                    constructor.bestStartingGridPosition = Math.min(constructor.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
+                    engineManufacturer.bestStartingGridPosition = Math.min(engineManufacturer.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
+                    tyreManufacturer.bestStartingGridPosition = Math.min(tyreManufacturer.bestStartingGridPosition ?: startingGridPosition.positionNumber, startingGridPosition.positionNumber)
+                }
+
+                // Total pole positions.
+
+                if (startingGridPosition.positionNumber == 1) {
+                    driver.totalPolePositions++
+                    constructor.totalPolePositions++
+                    engineManufacturer.totalPolePositions++
+                    tyreManufacturer.totalPolePositions++
+                }
+            }
+
+            race.raceResults.each { raceResult ->
+
+                def driver = f1db.drivers.find { it.id == raceResult.driverId }
+                def constructor = f1db.constructors.find { it.id == raceResult.constructorId }
+                def engineManufacturer = f1db.engineManufacturers.find { it.id == raceResult.engineManufacturerId }
+                def tyreManufacturer = f1db.tyreManufacturers.find { it.id == raceResult.tyreManufacturerId }
+
+                // Best race result.
+
+                if (raceResult.positionNumber) {
+                    driver.bestRaceResult = Math.min(driver.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
+                    constructor.bestRaceResult = Math.min(constructor.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
+                    engineManufacturer.bestRaceResult = Math.min(engineManufacturer.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
+                    tyreManufacturer.bestRaceResult = Math.min(tyreManufacturer.bestRaceResult ?: raceResult.positionNumber, raceResult.positionNumber)
+                }
+
+                // Total race entries.
+
+                driver.totalRaceEntries += incrementIfAbsent(raceEntries, driver)
+                constructor.totalRaceEntries += incrementIfAbsent(raceEntries, constructor)
+                engineManufacturer.totalRaceEntries += incrementIfAbsent(raceEntries, engineManufacturer)
+                tyreManufacturer.totalRaceEntries += incrementIfAbsent(raceEntries, tyreManufacturer)
+
+                // Total race starts.
+
+                if (raceResult.positionText !in ["DNP", "DNPQ", "DNQ", "DNS", "EX"]) {
+                    driver.totalRaceStarts += incrementIfAbsent(raceStarts, driver)
+                    constructor.totalRaceStarts += incrementIfAbsent(raceStarts, constructor)
+                    engineManufacturer.totalRaceStarts += incrementIfAbsent(raceStarts, engineManufacturer)
+                    tyreManufacturer.totalRaceStarts += incrementIfAbsent(raceStarts, tyreManufacturer)
+                }
+
+                // Total race wins.
+
+                if (raceResult.positionNumber == 1) {
+                    driver.totalRaceWins += incrementIfAbsent(raceWins, driver)
+                    constructor.totalRaceWins += incrementIfAbsent(raceWins, constructor)
+                    engineManufacturer.totalRaceWins += incrementIfAbsent(raceWins, engineManufacturer)
+                    tyreManufacturer.totalRaceWins += incrementIfAbsent(raceWins, tyreManufacturer)
+
+                    // Total 1 and 2 finishes.
+
+                    if (!raceResult.sharedCar) {
+                        def position2 = race.raceResults.find { it.positionNumber == 2 }
+                        if (position2 && position2.constructorId == constructor.id) {
+                            constructor.total1And2Finishes++
+                        }
+                    }
+                }
+
+                // Total race laps.
+
+                if (raceResult.laps) {
+                    driver.totalRaceLaps += raceResult.laps
+                    if (!raceResult.sharedCar) {
+                        constructor.totalRaceLaps += raceResult.laps
+                        engineManufacturer.totalRaceLaps += raceResult.laps
+                        tyreManufacturer.totalRaceLaps += raceResult.laps
+                    }
+                }
+
+                // Total podiums + podium races.
+
+                if (raceResult.positionNumber in [1, 2, 3]) {
+                    driver.totalPodiums += incrementIfAbsent(podiums, driver)
+                    if (!raceResult.sharedCar) {
+                        constructor.totalPodiums++
+                        constructor.totalPodiumRaces += incrementIfAbsent(podiums, constructor)
+                        engineManufacturer.totalPodiums++
+                        engineManufacturer.totalPodiumRaces += incrementIfAbsent(podiums, engineManufacturer)
+                        tyreManufacturer.totalPodiums++
+                        tyreManufacturer.totalPodiumRaces += incrementIfAbsent(podiums, tyreManufacturer)
+                    }
+                }
+
+                // Total fastest laps.
+
+                if (raceResult.fastestLap) {
+                    driver.totalFastestLaps++
+                    constructor.totalFastestLaps++
+                    engineManufacturer.totalFastestLaps++
+                    tyreManufacturer.totalFastestLaps++
+                }
+
+                // Total driver of the day.
+
+                if (raceResult.driverOfTheDay) {
+                    driver.totalDriverOfTheDay++
+                }
             }
         }
 

@@ -42,7 +42,7 @@ dependencies {
 }
 
 jsonSchema2Pojo {
-    source = files("${projectDir}/../src/schema/f1db.schema.json")
+    source = files("${projectDir}/../src/schema/f1db.schema.latest.json")
     removeOldOutput = true
     targetPackage = "net.f1db"
     targetVersion = "11"
