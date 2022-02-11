@@ -28,7 +28,7 @@ class F1DBWriter {
     boolean indentOutput
 
     F1DBWriter(File projectDir, F1DBPluginExtension extension) {
-        this.jsonSchemaFile = new File(projectDir, "src/schema/f1db.schema.latest.json")
+        this.jsonSchemaFile = extension.jsonSchemaFile
         this.outputDir = new File(projectDir, "build/data")
         this.indentOutput = extension.indentOutput
     }
