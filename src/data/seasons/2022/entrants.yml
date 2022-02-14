@@ -8,16 +8,6 @@
       rounds:
     - driverId: valtteri-bottas
       rounds:
-- entrantId: alpine-f1-team
-  countryId: france
-  constructorId: alpine
-  engineManufacturerId: renault
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: esteban-ocon
-      rounds:
-    - driverId: fernando-alonso
-      rounds:
 - entrantId: aston-martin-aramco-cognizant-f1-team
   countryId: united-kingdom
   constructorId: aston-martin
@@ -27,6 +17,16 @@
     - driverId: lance-stroll
       rounds:
     - driverId: sebastian-vettel
+      rounds:
+- entrantId: bwt-alpine-f1-team
+  countryId: france
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds:
+    - driverId: fernando-alonso
       rounds:
 - entrantId: mclaren-f1-team
   countryId: united-kingdom
