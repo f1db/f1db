@@ -35,7 +35,7 @@ dependencies {
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1"
     implementation "org.leadpony.joy:joy-classic:2.1.0"
     implementation "org.leadpony.justify:justify:3.1.0"
-    implementation "org.slf4j:slf4j-simple:1.7.32"
+    implementation "org.slf4j:slf4j-simple:1.7.36"
     implementation "org.xerial:sqlite-jdbc:3.36.0.3"
     driver "org.xerial:sqlite-jdbc:3.36.0.3"
 
