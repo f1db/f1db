@@ -36,7 +36,7 @@ Release artifacts are available in the following formats:
 
 ## F1DB JSON Schema
 
-The [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.1.0.json)
+The [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.2.0.json)
 schema file contains all F1DB object definitions and serves as the main documentation.  
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
@@ -45,8 +45,9 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                             |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `>=` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.1.0.json) |
-| `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.0.0.json) |
+| `>=` `v2022.0.0.beta3`  | [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.2.0.json) |
+| `= ` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.1.0.json) |
+| `= ` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.0.0.json) |
 
 
 ## F1DB SQLite Database

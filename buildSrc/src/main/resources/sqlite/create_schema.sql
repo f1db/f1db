@@ -168,11 +168,13 @@ CREATE TABLE grand_prix
 , name VARCHAR(255) NOT NULL
 , full_name VARCHAR(255) NOT NULL
 , short_name VARCHAR(255) NOT NULL
+, country_id VARCHAR(255) REFERENCES country(id)
 );
 
 CREATE INDEX grand_prix_name_index ON grand_prix(name);
 CREATE INDEX grand_prix_full_name_index ON grand_prix(full_name);
 CREATE INDEX grand_prix_short_name_index ON grand_prix(short_name);
+CREATE INDEX grand_prix_country_id_index ON grand_prix(country_id);
 
 CREATE TABLE season
 ( year INTEGER NOT NULL PRIMARY KEY
