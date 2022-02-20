@@ -663,6 +663,11 @@
           "minimum": -180,
           "maximum": 180,
           "description": "The longitude of the location."
+        },
+        "totalRacesHeld": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total of race held."
         }
       },
       "required": [
@@ -674,7 +679,8 @@
         "placeName",
         "countryId",
         "latitude",
-        "longitude"
+        "longitude",
+        "totalRacesHeld"
       ]
     },
     "GrandPrix": {
@@ -700,6 +706,11 @@
         "countryId": {
           "type": ["string", "null"],
           "description": "The country."
+        },
+        "totalRacesHeld": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total of race held."
         }
       },
       "required": [
@@ -707,7 +718,8 @@
         "name",
         "fullName",
         "shortName",
-        "countryId"
+        "countryId",
+        "totalRacesHeld"
       ]
     },
     "Season": {

@@ -45,6 +45,7 @@ import net.f1db.gradle.plugin.databind.SeasonEntrantDriverMixIn
 import net.f1db.gradle.plugin.databind.StartingGridPositionMixIn
 
 import java.time.Duration
+import java.time.LocalDate
 
 /**
  * The F1DB data reader.
@@ -56,7 +57,6 @@ class F1DBReader {
     int currentSeason
     boolean wdcDecided
     boolean wccDecided
-    int wccFirstYear = 1958
     File sourceDir
     ObjectMapper mapper
 
@@ -190,6 +190,14 @@ class F1DBReader {
             tyreManufacturer.totalFastestLaps = 0
         }
 
+        f1db.circuits.each { circuit ->
+            circuit.totalRacesHeld = 0
+        }
+
+        f1db.grandsPrix.each { grandPrix ->
+            grandPrix.totalRacesHeld = 0
+        }
+
         f1db.seasons.each { season ->
 
             season.driverStandings?.each { driverStanding ->
@@ -265,6 +273,17 @@ class F1DBReader {
                     def driver = f1db.drivers.find { it.id == raceResult.driverId }
                     driver.totalPoints += raceResult.points
                 }
+            }
+
+            // Total races held
+
+            if (race.date.isBefore(LocalDate.now().plusDays(1))) {
+
+                def grandPrix = f1db.grandsPrix.find { it.id == race.grandPrixId }
+                def circuit = f1db.circuits.find { it.id == race.circuitId }
+
+                grandPrix.totalRacesHeld++
+                circuit.totalRacesHeld++
             }
 
             def raceEntries = []

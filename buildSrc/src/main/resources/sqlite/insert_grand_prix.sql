@@ -4,6 +4,7 @@ INSERT INTO grand_prix
 , full_name
 , short_name
 , country_id
+, total_races_held
 )
 VALUES
 ( ?.id
@@ -11,4 +12,5 @@ VALUES
 , ?.fullName
 , ?.shortName
 , ?.countryId
+, ?.totalRacesHeld
 );

@@ -155,6 +155,7 @@ CREATE TABLE circuit
 , country_id VARCHAR(255) NOT NULL REFERENCES country(id)
 , latitude NUMERIC(10,6)
 , longitude NUMERIC(10,6)
+, total_races_held INTEGER NOT NULL
 );
 
 CREATE INDEX circuit_name_index ON circuit(name);
@@ -169,6 +170,7 @@ CREATE TABLE grand_prix
 , full_name VARCHAR(255) NOT NULL
 , short_name VARCHAR(255) NOT NULL
 , country_id VARCHAR(255) REFERENCES country(id)
+, total_races_held INTEGER NOT NULL
 );
 
 CREATE INDEX grand_prix_name_index ON grand_prix(name);

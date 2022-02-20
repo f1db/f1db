@@ -8,6 +8,7 @@ INSERT INTO circuit
 , country_id
 , latitude
 , longitude
+, total_races_held
 )
 VALUES
 ( ?.id
@@ -19,4 +20,5 @@ VALUES
 , ?.countryId
 , ?.latitude
 , ?.longitude
+, ?.totalRacesHeld
 );
