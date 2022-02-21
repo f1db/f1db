@@ -12,3 +12,8 @@ placeOfBirth: Berthierville
 countryOfBirthCountryId: canada
 nationalityCountryId: canada
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: gilles-villeneuve
+    type: SIBLING
+  - driverId: jacques-villeneuve
+    type: SIBLINGS_CHILD

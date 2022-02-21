@@ -12,3 +12,10 @@ placeOfBirth: São Paulo
 countryOfBirthCountryId: brazil
 nationalityCountryId: brazil
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: wilson-fittipaldi
+    type: PARENT
+  - driverId: emerson-fittipaldi
+    type: PARENTS_SIBLING
+  - driverId: pietro-fittipaldi
+    type: PARENTS_SIBLINGS_CHILD

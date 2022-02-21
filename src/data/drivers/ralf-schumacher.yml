@@ -12,3 +12,8 @@ placeOfBirth: Hürth
 countryOfBirthCountryId: germany
 nationalityCountryId: germany
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: michael-schumacher
+    type: SIBLING
+  - driverId: mick-schumacher
+    type: SIBLINGS_CHILD

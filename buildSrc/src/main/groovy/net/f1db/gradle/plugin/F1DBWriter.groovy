@@ -166,6 +166,15 @@ class F1DBWriter {
                 }
             }
 
+            sql = readResource("/sqlite/insert_driver_family_relationship.sql")
+            sqlite.withBatch(batchSize, sql) { ps ->
+                f1db.drivers.each { driver ->
+                    driver.familyRelationships.each { familyRelationships ->
+                        ps.addBatch(driver, familyRelationships)
+                    }
+                }
+            }
+
             // Insert constructors.
 
             sql = readResource("/sqlite/insert_constructor.sql")

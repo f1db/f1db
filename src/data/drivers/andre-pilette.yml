@@ -12,3 +12,6 @@ placeOfBirth: Paris
 countryOfBirthCountryId: france
 nationalityCountryId: belgium
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: teddy-pilette
+    type: CHILD

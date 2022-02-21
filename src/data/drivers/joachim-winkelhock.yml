@@ -12,3 +12,8 @@ placeOfBirth: Waiblingen
 countryOfBirthCountryId: germany
 nationalityCountryId: germany
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: manfred-winkelhock
+    type: SIBLING
+  - driverId: markus-winkelhock
+    type: SIBLINGS_CHILD

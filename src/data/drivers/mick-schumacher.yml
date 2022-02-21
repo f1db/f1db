@@ -12,3 +12,8 @@ placeOfBirth: Vufflens-le-Château
 countryOfBirthCountryId: switzerland
 nationalityCountryId: germany
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: michael-schumacher
+    type: PARENT
+  - driverId: ralf-schumacher
+    type: PARENTS_SIBLING

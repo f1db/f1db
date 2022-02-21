@@ -12,3 +12,8 @@ placeOfBirth: Wimbledon
 countryOfBirthCountryId: united-kingdom
 nationalityCountryId: australia
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: jack-brabham
+    type: PARENT
+  - driverId: mike-thackwell
+    type: SIBLING_IN_LAW

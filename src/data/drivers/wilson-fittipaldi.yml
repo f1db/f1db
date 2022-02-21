@@ -12,3 +12,12 @@ placeOfBirth: São Paulo
 countryOfBirthCountryId: brazil
 nationalityCountryId: brazil
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: christian-fittipaldi
+    type: CHILD
+  - driverId: emerson-fittipaldi
+    type: SIBLING
+  - driverId: pietro-fittipaldi
+    type: SIBLINGS_GRANDCHILD
+  - driverId: max-papis
+    type: SIBLINGS_CHILD_IN_LAW

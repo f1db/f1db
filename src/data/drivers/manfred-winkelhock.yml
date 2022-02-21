@@ -12,3 +12,8 @@ placeOfBirth: Waiblingen
 countryOfBirthCountryId: germany
 nationalityCountryId: germany
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: markus-winkelhock
+    type: CHILD
+  - driverId: joachim-winkelhock
+    type: SIBLING

@@ -12,3 +12,8 @@ placeOfBirth: Saint-Jean-sur-Richelieu
 countryOfBirthCountryId: canada
 nationalityCountryId: canada
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: jacques-villeneuve
+    type: CHILD
+  - driverId: jacques-villeneuve-sr
+    type: SIBLING

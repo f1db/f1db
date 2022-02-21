@@ -12,3 +12,8 @@ placeOfBirth: Stuttgart
 countryOfBirthCountryId: germany
 nationalityCountryId: germany
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: manfred-winkelhock
+    type: PARENT
+  - driverId: joachim-winkelhock
+    type: PARENTS_SIBLING

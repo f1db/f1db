@@ -61,6 +61,16 @@ CREATE INDEX driver_country_of_birth_country_id_index ON driver(country_of_birth
 CREATE INDEX driver_nationality_country_id_index ON driver(nationality_country_id);
 CREATE INDEX driver_second_nationality_country_id_index ON driver(second_nationality_country_id);
 
+CREATE TABLE driver_family_relationship
+( driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
+, other_driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
+, type VARCHAR(255) NOT NULL
+, PRIMARY KEY (driver_id, other_driver_id, type)
+);
+
+CREATE INDEX driver_family_relationship_driver_id_index ON driver_family_relationship(driver_id);
+CREATE INDEX driver_family_relationship_other_driver_id_index ON driver_family_relationship(other_driver_id);
+
 CREATE TABLE constructor
 ( id VARCHAR(255) NOT NULL PRIMARY KEY
 , name VARCHAR(255) NOT NULL

@@ -12,3 +12,8 @@ placeOfBirth: Hurstville
 countryOfBirthCountryId: australia
 nationalityCountryId: australia
 secondNationalityCountryId:
+familyRelationships:
+  - driverId: gary-brabham
+    type: CHILD
+  - driverId: david-brabham
+    type: CHILD

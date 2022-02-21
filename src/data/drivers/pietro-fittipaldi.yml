@@ -12,3 +12,12 @@ placeOfBirth: Miami
 countryOfBirthCountryId: united-states-of-america
 nationalityCountryId: brazil
 secondNationalityCountryId: united-states-of-america
+familyRelationships:
+  - driverId: emerson-fittipaldi
+    type: GRANDPARENT
+  - driverId: christian-fittipaldi
+    type: PARENTS_SIBLINGS_CHILD
+  - driverId: max-papis
+    type: PARENTS_SIBLING
+  - driverId: wilson-fittipaldi
+    type: GRANDPARENTS_SIBLING
