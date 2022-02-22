@@ -51,7 +51,7 @@
 - entrantId: oracle-red-bull-racing
   countryId: austria
   constructorId: red-bull
-  engineManufacturerId: honda
+  engineManufacturerId: red-bull
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
@@ -61,7 +61,7 @@
 - entrantId: scuderia-alphatauri
   countryId: italy
   constructorId: alphatauri
-  engineManufacturerId: honda
+  engineManufacturerId: red-bull
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
