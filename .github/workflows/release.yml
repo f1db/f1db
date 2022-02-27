@@ -23,4 +23,4 @@ jobs:
       - name: Release with Gradle
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew clean dist assemble jreleaserFullRelease
+        run: ./gradlew clean dist assemble jreleaserFullRelease --stacktrace
