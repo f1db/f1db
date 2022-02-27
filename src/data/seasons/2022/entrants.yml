@@ -28,6 +28,16 @@
       rounds:
     - driverId: fernando-alonso
       rounds:
+- entrantId: haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: mick-schumacher
+      rounds:
+    - driverId: nikita-mazepin
+      rounds:
 - entrantId: mclaren-f1-team
   countryId: united-kingdom
   constructorId: mclaren
@@ -77,16 +87,6 @@
     - driverId: carlos-sainz-jr
       rounds:
     - driverId: charles-leclerc
-      rounds:
-- entrantId: uralkali-haas-f1-team
-  countryId: united-states-of-america
-  constructorId: haas
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: mick-schumacher
-      rounds:
-    - driverId: nikita-mazepin
       rounds:
 - entrantId: williams-racing
   countryId: united-kingdom
