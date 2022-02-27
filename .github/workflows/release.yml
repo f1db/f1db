@@ -24,11 +24,3 @@ jobs:
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew clean dist assemble jreleaserFullRelease --stacktrace
-      - name: JReleaser output
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: jreleaser-release
-          path: |
-            build/jreleaser/trace.log
-            build/jreleaser/output.properties
