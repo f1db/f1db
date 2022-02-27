@@ -75,9 +75,6 @@ jreleaser {
                 name = "F1DB"
                 email = "info@f1db.net"
             }
-            changelog {
-                enabled = false
-            }
             skipTag = true
         }
     }
