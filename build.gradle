@@ -44,7 +44,7 @@ f1db {
 jreleaser {
     project {
         name = "f1db"
-        // versionPattern = "CALVER:YYYY.MINOR.MICRO[.MODIFIER]"
+        versionPattern = "CALVER:YYYY.MINOR.MICRO[.MODIFIER]"
         description = "Open Source Formula 1 Database"
         website = "https://www.f1db.net"
         license = "CC-BY-4.0"
