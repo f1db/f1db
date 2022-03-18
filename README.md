@@ -45,6 +45,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                             |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2022.0.0`        | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.3.0.json) |
 | `>=` `v2022.0.0.beta4`  | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.3.0.json) |
 | `>=` `v2022.0.0.beta3`  | [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.2.0.json) |
 | `>=` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.1.0.json) |
