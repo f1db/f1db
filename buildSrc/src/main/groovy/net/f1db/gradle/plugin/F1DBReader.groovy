@@ -55,6 +55,7 @@ import java.time.LocalDate
 class F1DBReader {
 
     int currentSeason
+    boolean currentSeasonFinished
     boolean wdcDecided
     boolean wccDecided
     File sourceDir
@@ -207,7 +208,7 @@ class F1DBReader {
 
                 // Best championship position.
 
-                if (positionNumber && (season.year < currentSeason || season.races?.last()?.raceResults)) {
+                if (positionNumber && (season.year < currentSeason || currentSeasonFinished)) {
                     driver.bestChampionshipPosition = Math.min(driver.bestChampionshipPosition ?: positionNumber, positionNumber)
                 }
 
@@ -230,7 +231,7 @@ class F1DBReader {
 
                 // Best championship position.
 
-                if (positionNumber && (season.year < currentSeason || season.races?.last()?.raceResults)) {
+                if (positionNumber && (season.year < currentSeason || currentSeasonFinished)) {
                     constructor.bestChampionshipPosition = Math.min(constructor.bestChampionshipPosition ?: positionNumber, positionNumber)
                     engineManufacturer.bestChampionshipPosition = Math.min(engineManufacturer.bestChampionshipPosition ?: positionNumber, positionNumber)
                 }
