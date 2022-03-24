@@ -197,7 +197,6 @@ CREATE TABLE season_entrant
 , entrant_id VARCHAR(255) NOT NULL REFERENCES entrant(id)
 , country_id VARCHAR(255) NOT NULL REFERENCES country(id)
 , PRIMARY KEY (year, entrant_id)
-, UNIQUE (year, entrant_id, country_id)
 );
 
 CREATE INDEX season_entrant_year_index ON season_entrant(year);
