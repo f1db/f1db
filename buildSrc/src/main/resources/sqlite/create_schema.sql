@@ -163,8 +163,8 @@ CREATE TABLE circuit
 , type VARCHAR(255) NOT NULL
 , place_name VARCHAR(255) NOT NULL
 , country_id VARCHAR(255) NOT NULL REFERENCES country(id)
-, latitude NUMERIC(10,6)
-, longitude NUMERIC(10,6)
+, latitude DECIMAL(10,6)
+, longitude DECIMAL(10,6)
 , total_races_held INTEGER NOT NULL
 );
 
@@ -260,11 +260,11 @@ CREATE TABLE race
 , qualifying_format VARCHAR(255) NOT NULL
 , circuit_id VARCHAR(255) NOT NULL REFERENCES circuit(id)
 , circuit_type VARCHAR(255) NOT NULL
-, course_length NUMERIC(6,3)
+, course_length DECIMAL(6,3)
 , laps INTEGER
-, distance NUMERIC(6,3)
+, distance DECIMAL(6,3)
 , scheduled_laps INTEGER
-, scheduled_distance NUMERIC(6,3)
+, scheduled_distance DECIMAL(6,3)
 , UNIQUE (year, round)
 );
 
