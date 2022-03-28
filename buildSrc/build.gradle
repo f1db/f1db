@@ -29,10 +29,10 @@ configurations {
 }
 
 dependencies {
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.1"
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.1"
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.2"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.2"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2"
     implementation "org.leadpony.joy:joy-classic:2.1.0"
     implementation "org.leadpony.justify:justify:3.1.0"
     implementation "org.slf4j:slf4j-simple:1.7.36"
