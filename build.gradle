@@ -1,7 +1,7 @@
 plugins {
     id "java"
     id "distribution"
-    id "org.jreleaser" version "1.0.0-RC1"
+    id "org.jreleaser" version "1.0.0-M3"
 }
 
 apply plugin: "net.f1db"
