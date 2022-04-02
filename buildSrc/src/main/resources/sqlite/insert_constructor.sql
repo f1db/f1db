@@ -16,7 +16,7 @@ INSERT INTO constructor
 , total_podium_races
 , total_championship_points
 , total_pole_positions
-, total_fastest_lap
+, total_fastest_laps
 )
 VALUES
 ( ?.id

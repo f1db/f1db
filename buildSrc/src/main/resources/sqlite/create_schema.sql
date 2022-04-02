@@ -89,7 +89,7 @@ CREATE TABLE constructor
 , total_podium_races INTEGER NOT NULL
 , total_championship_points NUMERIC NOT NULL
 , total_pole_positions INTEGER NOT NULL
-, total_fastest_lap INTEGER NOT NULL
+, total_fastest_laps INTEGER NOT NULL
 );
 
 CREATE INDEX constructor_name_index ON constructor(name);
@@ -123,7 +123,7 @@ CREATE TABLE engine_manufacturer
 , total_podium_races INTEGER NOT NULL
 , total_championship_points NUMERIC NOT NULL
 , total_pole_positions INTEGER NOT NULL
-, total_fastest_lap INTEGER NOT NULL
+, total_fastest_laps INTEGER NOT NULL
 );
 
 CREATE INDEX engine_manufacturer_name_index ON engine_manufacturer(name);
@@ -142,7 +142,7 @@ CREATE TABLE tyre_manufacturer
 , total_podiums INTEGER NOT NULL
 , total_podium_races INTEGER NOT NULL
 , total_pole_positions INTEGER NOT NULL
-, total_fastest_lap INTEGER NOT NULL
+, total_fastest_laps INTEGER NOT NULL
 );
 
 CREATE INDEX tyre_manufacturer_name_index ON tyre_manufacturer(name);

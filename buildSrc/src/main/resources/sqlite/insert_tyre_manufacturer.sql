@@ -11,7 +11,7 @@ INSERT INTO tyre_manufacturer
 , total_podiums
 , total_podium_races
 , total_pole_positions
-, total_fastest_lap
+, total_fastest_laps
 )
 VALUES
 ( ?.id
