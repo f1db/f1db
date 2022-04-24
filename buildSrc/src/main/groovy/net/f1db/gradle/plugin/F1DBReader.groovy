@@ -292,6 +292,24 @@ class F1DBReader {
             def raceWins = []
             def podiums = []
 
+            race.sprintQualifyingStartingGridPositions.each { sprintQualifyingStartingGridPosition ->
+
+                if (sprintQualifyingStartingGridPosition.positionNumber == 1 && race.year >= 2022) {
+
+                    def driver = f1db.drivers.find { it.id == sprintQualifyingStartingGridPosition.driverId }
+                    def constructor = f1db.constructors.find { it.id == sprintQualifyingStartingGridPosition.constructorId }
+                    def engineManufacturer = f1db.engineManufacturers.find { it.id == sprintQualifyingStartingGridPosition.engineManufacturerId }
+                    def tyreManufacturer = f1db.tyreManufacturers.find { it.id == sprintQualifyingStartingGridPosition.tyreManufacturerId }
+
+                    // Total pole positions.
+
+                    driver.totalPolePositions++
+                    constructor.totalPolePositions++
+                    engineManufacturer.totalPolePositions++
+                    tyreManufacturer.totalPolePositions++
+                }
+            }
+
             race.startingGridPositions.each { startingGridPosition ->
 
                 def driver = f1db.drivers.find { it.id == startingGridPosition.driverId }
@@ -310,7 +328,7 @@ class F1DBReader {
 
                 // Total pole positions.
 
-                if (startingGridPosition.positionNumber == 1) {
+                if (startingGridPosition.positionNumber == 1 && (race.year < 2022 || race.qualifyingFormat != Race.QualifyingFormat.SPRINT_RACE)) {
                     driver.totalPolePositions++
                     constructor.totalPolePositions++
                     engineManufacturer.totalPolePositions++
