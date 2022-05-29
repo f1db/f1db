@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Power unit
+  reasonRetired: Power loss
   points:
   gridPosition: 15
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Power unit
+  reasonRetired: Turbo
   points:
   gridPosition: 1
