@@ -88,6 +88,13 @@
   tyreManufacturerId: dunlop
   driverId: masahiro-hasemi
   rounds: 16
+- entrantId: lavazza-march
+  countryId: united-kingdom
+  constructorId: march
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: lella-lombardi
+  rounds: 1
 - entrantId: lexington-racing
   countryId: south-africa
   constructorId: tyrrell
@@ -131,8 +138,6 @@
   drivers:
     - driverId: hans-joachim-stuck
       rounds: 1-16
-    - driverId: lella-lombardi
-      rounds: 1
     - driverId: ronnie-peterson
       rounds: 2-16
 - entrantId: marlboro-team-mclaren
