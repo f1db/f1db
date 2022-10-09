@@ -35,7 +35,7 @@ distributions {
 
 f1db {
     jsonSchemaFile = file("${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}.json")
-    currentSeason = 2022
+    currentSeason = property("currentSeason").toInteger()
     currentSeasonFinished = property("currentSeasonFinished").toBoolean()
     wdcDecided = property("wdcDecided").toBoolean()
     wccDecided = property("wccDecided").toBoolean()
