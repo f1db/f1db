@@ -1,36 +1,36 @@
 CREATE TABLE continent
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, code VARCHAR(2) NOT NULL UNIQUE
-, name VARCHAR(255) NOT NULL UNIQUE
-, demonym VARCHAR(255)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, code VARCHAR(2) NOT NULL COLLATE NOCASE UNIQUE
+, name VARCHAR(255) NOT NULL COLLATE NOCASE UNIQUE
+, demonym VARCHAR(255) COLLATE NOCASE
 );
 
 CREATE TABLE country
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, alpha2_code VARCHAR(2) NOT NULL UNIQUE
-, alpha3_code VARCHAR(3) NOT NULL UNIQUE
-, name VARCHAR(255) NOT NULL UNIQUE
-, demonym VARCHAR(255)
-, continent_id VARCHAR(255) NOT NULL REFERENCES continent(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, alpha2_code VARCHAR(2) NOT NULL COLLATE NOCASE UNIQUE
+, alpha3_code VARCHAR(3) NOT NULL COLLATE NOCASE UNIQUE
+, name VARCHAR(255) NOT NULL COLLATE NOCASE UNIQUE
+, demonym VARCHAR(255) COLLATE NOCASE
+, continent_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES continent(id)
 );
 
-CREATE INDEX country_continent_id_index ON country(continent_id);
+CREATE INDEX country_continent_id_index ON country(continent_id COLLATE NOCASE);
 
 CREATE TABLE driver
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, first_name VARCHAR(255) NOT NULL
-, last_name VARCHAR(255) NOT NULL
-, full_name VARCHAR(255) NOT NULL
-, abbreviation VARCHAR(3) NOT NULL
-, permanent_number VARCHAR(2)
-, gender VARCHAR(255) NOT NULL
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, first_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, last_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, full_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, abbreviation VARCHAR(3) NOT NULL COLLATE NOCASE
+, permanent_number VARCHAR(2) COLLATE NOCASE
+, gender VARCHAR(255) NOT NULL COLLATE NOCASE
 , date_of_birth DATE NOT NULL
 , date_of_death DATE
-, place_of_birth VARCHAR(255) NOT NULL
-, country_of_birth_country_id VARCHAR(255) NOT NULL REFERENCES country(id)
-, nationality_country_id VARCHAR(255) NOT NULL REFERENCES country(id)
-, second_nationality_country_id VARCHAR(255) REFERENCES country(id)
+, place_of_birth VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_of_birth_country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
+, nationality_country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
+, second_nationality_country_id VARCHAR(255) COLLATE NOCASE REFERENCES country(id)
 , best_championship_position INTEGER
 , best_race_result INTEGER
 , best_starting_grid_position INTEGER
@@ -47,35 +47,35 @@ CREATE TABLE driver
 , total_driver_of_the_day INTEGER NOT NULL
 );
 
-CREATE INDEX driver_name_index ON driver(name);
-CREATE INDEX driver_first_name_index ON driver(first_name);
-CREATE INDEX driver_last_name_index ON driver(last_name);
-CREATE INDEX driver_full_name_index ON driver(full_name);
-CREATE INDEX driver_abbreviation_index ON driver(abbreviation);
-CREATE INDEX driver_permanent_number_index ON driver(permanent_number);
-CREATE INDEX driver_gender_index ON driver(gender);
+CREATE INDEX driver_name_index ON driver(name COLLATE NOCASE);
+CREATE INDEX driver_first_name_index ON driver(first_name COLLATE NOCASE);
+CREATE INDEX driver_last_name_index ON driver(last_name COLLATE NOCASE);
+CREATE INDEX driver_full_name_index ON driver(full_name COLLATE NOCASE);
+CREATE INDEX driver_abbreviation_index ON driver(abbreviation COLLATE NOCASE);
+CREATE INDEX driver_permanent_number_index ON driver(permanent_number COLLATE NOCASE);
+CREATE INDEX driver_gender_index ON driver(gender COLLATE NOCASE);
 CREATE INDEX driver_date_of_birth_index ON driver(date_of_birth);
 CREATE INDEX driver_date_of_death_index ON driver(date_of_death);
-CREATE INDEX driver_place_of_birth_index ON driver(place_of_birth);
-CREATE INDEX driver_country_of_birth_country_id_index ON driver(country_of_birth_country_id);
-CREATE INDEX driver_nationality_country_id_index ON driver(nationality_country_id);
-CREATE INDEX driver_second_nationality_country_id_index ON driver(second_nationality_country_id);
+CREATE INDEX driver_place_of_birth_index ON driver(place_of_birth COLLATE NOCASE);
+CREATE INDEX driver_country_of_birth_country_id_index ON driver(country_of_birth_country_id COLLATE NOCASE);
+CREATE INDEX driver_nationality_country_id_index ON driver(nationality_country_id COLLATE NOCASE);
+CREATE INDEX driver_second_nationality_country_id_index ON driver(second_nationality_country_id COLLATE NOCASE);
 
 CREATE TABLE driver_family_relationship
-( driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
-, other_driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
-, type VARCHAR(255) NOT NULL
+( driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
+, other_driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
+, type VARCHAR(255) NOT NULL COLLATE NOCASE
 , PRIMARY KEY (driver_id, other_driver_id, type)
 );
 
-CREATE INDEX driver_family_relationship_driver_id_index ON driver_family_relationship(driver_id);
-CREATE INDEX driver_family_relationship_other_driver_id_index ON driver_family_relationship(other_driver_id);
+CREATE INDEX driver_family_relationship_driver_id_index ON driver_family_relationship(driver_id COLLATE NOCASE);
+CREATE INDEX driver_family_relationship_other_driver_id_index ON driver_family_relationship(other_driver_id COLLATE NOCASE);
 
 CREATE TABLE constructor
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, full_name VARCHAR(255) NOT NULL
-, country_id VARCHAR(255) NOT NULL REFERENCES country(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, full_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
 , best_championship_position INTEGER
 , best_race_result INTEGER
 , best_starting_grid_position INTEGER
@@ -92,25 +92,25 @@ CREATE TABLE constructor
 , total_fastest_laps INTEGER NOT NULL
 );
 
-CREATE INDEX constructor_name_index ON constructor(name);
-CREATE INDEX constructor_full_name_index ON constructor(full_name);
-CREATE INDEX constructor_country_id_index ON constructor(country_id);
+CREATE INDEX constructor_name_index ON constructor(name COLLATE NOCASE);
+CREATE INDEX constructor_full_name_index ON constructor(full_name COLLATE NOCASE);
+CREATE INDEX constructor_country_id_index ON constructor(country_id COLLATE NOCASE);
 
 CREATE TABLE constructor_previous_next_constructor
-( constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, previous_next_constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
+( constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, previous_next_constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
 , year_from INTEGER NOT NULL
 , year_to INTEGER
 , PRIMARY KEY (constructor_id, previous_next_constructor_id, year_from)
 );
 
-CREATE INDEX constructor_previous_next_constructor_constructor_id_index ON constructor_previous_next_constructor(constructor_id);
-CREATE INDEX constructor_previous_next_constructor_previous_next_constructor_id_index ON constructor_previous_next_constructor(previous_next_constructor_id);
+CREATE INDEX constructor_previous_next_constructor_constructor_id_index ON constructor_previous_next_constructor(constructor_id COLLATE NOCASE);
+CREATE INDEX constructor_previous_next_constructor_previous_next_constructor_id_index ON constructor_previous_next_constructor(previous_next_constructor_id COLLATE NOCASE);
 
 CREATE TABLE engine_manufacturer
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, country_id VARCHAR(255) NOT NULL REFERENCES country(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
 , best_championship_position INTEGER
 , best_race_result INTEGER
 , best_starting_grid_position INTEGER
@@ -126,13 +126,13 @@ CREATE TABLE engine_manufacturer
 , total_fastest_laps INTEGER NOT NULL
 );
 
-CREATE INDEX engine_manufacturer_name_index ON engine_manufacturer(name);
-CREATE INDEX engine_manufacturer_country_id_index ON engine_manufacturer(country_id);
+CREATE INDEX engine_manufacturer_name_index ON engine_manufacturer(name COLLATE NOCASE);
+CREATE INDEX engine_manufacturer_country_id_index ON engine_manufacturer(country_id COLLATE NOCASE);
 
 CREATE TABLE tyre_manufacturer
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, country_id VARCHAR(255) NOT NULL REFERENCES country(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
 , best_race_result INTEGER
 , best_starting_grid_position INTEGER
 , total_race_entries INTEGER NOT NULL
@@ -145,48 +145,48 @@ CREATE TABLE tyre_manufacturer
 , total_fastest_laps INTEGER NOT NULL
 );
 
-CREATE INDEX tyre_manufacturer_name_index ON tyre_manufacturer(name);
-CREATE INDEX tyre_manufacturer_country_id_index ON tyre_manufacturer(country_id);
+CREATE INDEX tyre_manufacturer_name_index ON tyre_manufacturer(name COLLATE NOCASE);
+CREATE INDEX tyre_manufacturer_country_id_index ON tyre_manufacturer(country_id COLLATE NOCASE);
 
 CREATE TABLE entrant
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
 );
 
-CREATE INDEX entrant_name_index ON entrant(name);
+CREATE INDEX entrant_name_index ON entrant(name COLLATE NOCASE);
 
 CREATE TABLE circuit
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, full_name VARCHAR(255) NOT NULL
-, previous_names VARCHAR(255)
-, type VARCHAR(255) NOT NULL
-, place_name VARCHAR(255) NOT NULL
-, country_id VARCHAR(255) NOT NULL REFERENCES country(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, full_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, previous_names VARCHAR(255) COLLATE NOCASE
+, type VARCHAR(255) NOT NULL COLLATE NOCASE
+, place_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
 , latitude DECIMAL(10,6)
 , longitude DECIMAL(10,6)
 , total_races_held INTEGER NOT NULL
 );
 
-CREATE INDEX circuit_name_index ON circuit(name);
-CREATE INDEX circuit_full_name_index ON circuit(full_name);
-CREATE INDEX circuit_type_index ON circuit(type);
-CREATE INDEX circuit_place_name_index ON circuit(place_name);
-CREATE INDEX circuit_country_id_index ON circuit(country_id);
+CREATE INDEX circuit_name_index ON circuit(name COLLATE NOCASE);
+CREATE INDEX circuit_full_name_index ON circuit(full_name COLLATE NOCASE);
+CREATE INDEX circuit_type_index ON circuit(type COLLATE NOCASE);
+CREATE INDEX circuit_place_name_index ON circuit(place_name COLLATE NOCASE);
+CREATE INDEX circuit_country_id_index ON circuit(country_id COLLATE NOCASE);
 
 CREATE TABLE grand_prix
-( id VARCHAR(255) NOT NULL PRIMARY KEY
-, name VARCHAR(255) NOT NULL
-, full_name VARCHAR(255) NOT NULL
-, short_name VARCHAR(255) NOT NULL
-, country_id VARCHAR(255) REFERENCES country(id)
+( id VARCHAR(255) NOT NULL COLLATE NOCASE PRIMARY KEY
+, name VARCHAR(255) NOT NULL COLLATE NOCASE
+, full_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, short_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, country_id VARCHAR(255) COLLATE NOCASE REFERENCES country(id)
 , total_races_held INTEGER NOT NULL
 );
 
-CREATE INDEX grand_prix_name_index ON grand_prix(name);
-CREATE INDEX grand_prix_full_name_index ON grand_prix(full_name);
-CREATE INDEX grand_prix_short_name_index ON grand_prix(short_name);
-CREATE INDEX grand_prix_country_id_index ON grand_prix(country_id);
+CREATE INDEX grand_prix_name_index ON grand_prix(name COLLATE NOCASE);
+CREATE INDEX grand_prix_full_name_index ON grand_prix(full_name COLLATE NOCASE);
+CREATE INDEX grand_prix_short_name_index ON grand_prix(short_name COLLATE NOCASE);
+CREATE INDEX grand_prix_country_id_index ON grand_prix(country_id COLLATE NOCASE);
 
 CREATE TABLE season
 ( year INTEGER NOT NULL PRIMARY KEY
@@ -194,71 +194,71 @@ CREATE TABLE season
 
 CREATE TABLE season_entrant
 ( year INTEGER NOT NULL REFERENCES season(year)
-, entrant_id VARCHAR(255) NOT NULL REFERENCES entrant(id)
-, country_id VARCHAR(255) NOT NULL REFERENCES country(id)
+, entrant_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES entrant(id)
+, country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country(id)
 , PRIMARY KEY (year, entrant_id)
 );
 
 CREATE INDEX season_entrant_year_index ON season_entrant(year);
-CREATE INDEX season_entrant_entrant_id_index ON season_entrant(entrant_id);
-CREATE INDEX season_entrant_country_id_index ON season_entrant(country_id);
+CREATE INDEX season_entrant_entrant_id_index ON season_entrant(entrant_id COLLATE NOCASE);
+CREATE INDEX season_entrant_country_id_index ON season_entrant(country_id COLLATE NOCASE);
 
 CREATE TABLE season_entrant_constructor
 ( year INTEGER NOT NULL REFERENCES season(year)
-, entrant_id VARCHAR(255) NOT NULL REFERENCES entrant(id)
-, constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, engine_manufacturer_id VARCHAR(255) NOT NULL REFERENCES engine_manufacturer(id)
+, entrant_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES entrant(id)
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
 , PRIMARY KEY (year, entrant_id, constructor_id, engine_manufacturer_id)
 );
 
 CREATE INDEX season_entrant_constructor_year_index ON season_entrant_constructor(year);
-CREATE INDEX season_entrant_constructor_entrant_id_index ON season_entrant_constructor(entrant_id);
-CREATE INDEX season_entrant_constructor_constructor_id_index ON season_entrant_constructor(constructor_id);
-CREATE INDEX season_entrant_constructor_engine_manufacturer_id_index ON season_entrant_constructor(engine_manufacturer_id);
+CREATE INDEX season_entrant_constructor_entrant_id_index ON season_entrant_constructor(entrant_id COLLATE NOCASE);
+CREATE INDEX season_entrant_constructor_constructor_id_index ON season_entrant_constructor(constructor_id COLLATE NOCASE);
+CREATE INDEX season_entrant_constructor_engine_manufacturer_id_index ON season_entrant_constructor(engine_manufacturer_id COLLATE NOCASE);
 
 CREATE TABLE season_entrant_tyre_manufacturer
 ( year INTEGER NOT NULL REFERENCES season(year)
-, entrant_id VARCHAR(255) NOT NULL REFERENCES entrant(id)
-, constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, engine_manufacturer_id VARCHAR(255) NOT NULL REFERENCES engine_manufacturer(id)
-, tyre_manufacturer_id VARCHAR(255) NOT NULL REFERENCES tyre_manufacturer(id)
+, entrant_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES entrant(id)
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
+, tyre_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES tyre_manufacturer(id)
 , PRIMARY KEY (year, entrant_id, constructor_id, engine_manufacturer_id, tyre_manufacturer_id)
 );
 
 CREATE INDEX season_entrant_tyre_manufacturer_year_index ON season_entrant_tyre_manufacturer(year);
-CREATE INDEX season_entrant_tyre_manufacturer_entrant_id_index ON season_entrant_tyre_manufacturer(entrant_id);
-CREATE INDEX season_entrant_tyre_manufacturer_constructor_id_index ON season_entrant_tyre_manufacturer(constructor_id);
-CREATE INDEX season_entrant_tyre_manufacturer_engine_manufacturer_id_index ON season_entrant_tyre_manufacturer(engine_manufacturer_id);
-CREATE INDEX season_entrant_tyre_manufacturer_tyre_manufacturer_id_index ON season_entrant_tyre_manufacturer(tyre_manufacturer_id);
+CREATE INDEX season_entrant_tyre_manufacturer_entrant_id_index ON season_entrant_tyre_manufacturer(entrant_id COLLATE NOCASE);
+CREATE INDEX season_entrant_tyre_manufacturer_constructor_id_index ON season_entrant_tyre_manufacturer(constructor_id COLLATE NOCASE);
+CREATE INDEX season_entrant_tyre_manufacturer_engine_manufacturer_id_index ON season_entrant_tyre_manufacturer(engine_manufacturer_id COLLATE NOCASE);
+CREATE INDEX season_entrant_tyre_manufacturer_tyre_manufacturer_id_index ON season_entrant_tyre_manufacturer(tyre_manufacturer_id COLLATE NOCASE);
 
 CREATE TABLE season_entrant_driver
 ( year INTEGER NOT NULL REFERENCES season(year)
-, entrant_id VARCHAR(255) NOT NULL REFERENCES entrant(id)
-, constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, engine_manufacturer_id VARCHAR(255) NOT NULL REFERENCES engine_manufacturer(id)
-, driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
-, rounds VARCHAR(255)
-, rounds_text VARCHAR(255)
+, entrant_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES entrant(id)
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
+, driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
+, rounds VARCHAR(255) COLLATE NOCASE
+, rounds_text VARCHAR(255) COLLATE NOCASE
 , test_driver BOOLEAN NOT NULL
 , PRIMARY KEY (year, entrant_id, constructor_id, engine_manufacturer_id, driver_id)
 );
 
 CREATE INDEX season_entrant_driver_year_index ON season_entrant_driver(year);
-CREATE INDEX season_entrant_driver_entrant_id_index ON season_entrant_driver(entrant_id);
-CREATE INDEX season_entrant_driver_constructor_id_index ON season_entrant_driver(constructor_id);
-CREATE INDEX season_entrant_driver_engine_manufacturer_id_index ON season_entrant_driver(engine_manufacturer_id);
-CREATE INDEX season_entrant_driver_driver_id_index ON season_entrant_driver(driver_id);
+CREATE INDEX season_entrant_driver_entrant_id_index ON season_entrant_driver(entrant_id COLLATE NOCASE);
+CREATE INDEX season_entrant_driver_constructor_id_index ON season_entrant_driver(constructor_id COLLATE NOCASE);
+CREATE INDEX season_entrant_driver_engine_manufacturer_id_index ON season_entrant_driver(engine_manufacturer_id COLLATE NOCASE);
+CREATE INDEX season_entrant_driver_driver_id_index ON season_entrant_driver(driver_id COLLATE NOCASE);
 
 CREATE TABLE race
 ( id INTEGER NOT NULL PRIMARY KEY
 , year INTEGER NOT NULL REFERENCES season(year)
 , round INTEGER NOT NULL
 , date DATE NOT NULL
-, grand_prix_id VARCHAR(255) NOT NULL REFERENCES grand_prix(id)
-, official_name VARCHAR(255) NOT NULL
-, qualifying_format VARCHAR(255) NOT NULL
-, circuit_id VARCHAR(255) NOT NULL REFERENCES circuit(id)
-, circuit_type VARCHAR(255) NOT NULL
+, grand_prix_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES grand_prix(id)
+, official_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, qualifying_format VARCHAR(255) NOT NULL COLLATE NOCASE
+, circuit_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES circuit(id)
+, circuit_type VARCHAR(255) NOT NULL COLLATE NOCASE
 , course_length DECIMAL(6,3)
 , laps INTEGER
 , distance DECIMAL(6,3)
@@ -270,96 +270,96 @@ CREATE TABLE race
 CREATE INDEX race_year_index ON race(year);
 CREATE INDEX race_round_index ON race(round);
 CREATE INDEX race_date_index ON race (date);
-CREATE INDEX race_grand_prix_id_index ON race(grand_prix_id);
-CREATE INDEX race_official_name_index ON race(official_name);
-CREATE INDEX race_circuit_id_index ON race(circuit_id);
+CREATE INDEX race_grand_prix_id_index ON race(grand_prix_id COLLATE NOCASE);
+CREATE INDEX race_official_name_index ON race(official_name COLLATE NOCASE);
+CREATE INDEX race_circuit_id_index ON race(circuit_id COLLATE NOCASE);
 
 CREATE TABLE race_data
 ( race_id INTEGER NOT NULL REFERENCES race(id)
-, type VARCHAR(255) NOT NULL
+, type VARCHAR(255) NOT NULL COLLATE NOCASE
 , position_display_order INTEGER NOT NULL
 , position_number INTEGER
-, position_text VARCHAR(255)
-, driver_number VARCHAR(255) NOT NULL
-, driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
-, constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, engine_manufacturer_id VARCHAR(255) NOT NULL REFERENCES engine_manufacturer(id)
-, tyre_manufacturer_id VARCHAR(255) NOT NULL REFERENCES tyre_manufacturer(id)
-, practice_time VARCHAR(255)
+, position_text VARCHAR(255) COLLATE NOCASE
+, driver_number VARCHAR(255) NOT NULL COLLATE NOCASE
+, driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
+, tyre_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES tyre_manufacturer(id)
+, practice_time VARCHAR(255) COLLATE NOCASE
 , practice_time_millis INTEGER
-, practice_gap VARCHAR(255)
+, practice_gap VARCHAR(255) COLLATE NOCASE
 , practice_gap_millis INTEGER
-, practice_interval VARCHAR(255)
+, practice_interval VARCHAR(255) COLLATE NOCASE
 , practice_interval_millis INTEGER
 , practice_laps INTEGER
-, qualifying_time VARCHAR(255)
+, qualifying_time VARCHAR(255) COLLATE NOCASE
 , qualifying_time_millis INTEGER
-, qualifying_q1 VARCHAR(255)
+, qualifying_q1 VARCHAR(255) COLLATE NOCASE
 , qualifying_q1_millis INTEGER
-, qualifying_q2 VARCHAR(255)
+, qualifying_q2 VARCHAR(255) COLLATE NOCASE
 , qualifying_q2_millis INTEGER
-, qualifying_q3 VARCHAR(255)
+, qualifying_q3 VARCHAR(255) COLLATE NOCASE
 , qualifying_q3_millis INTEGER
-, qualifying_gap VARCHAR(255)
+, qualifying_gap VARCHAR(255) COLLATE NOCASE
 , qualifying_gap_millis INTEGER
-, qualifying_interval VARCHAR(255)
+, qualifying_interval VARCHAR(255) COLLATE NOCASE
 , qualifying_interval_millis INTEGER
 , qualifying_laps INTEGER
-, starting_grid_position_grid_penalty VARCHAR(255)
+, starting_grid_position_grid_penalty VARCHAR(255) COLLATE NOCASE
 , starting_grid_position_grid_penalty_positions INTEGER
-, starting_grid_position_time VARCHAR(255)
+, starting_grid_position_time VARCHAR(255) COLLATE NOCASE
 , starting_grid_position_time_millis INTEGER
 , race_shared_car BOOLEAN
 , race_laps INTEGER
-, race_time VARCHAR(255)
+, race_time VARCHAR(255) COLLATE NOCASE
 , race_time_millis INTEGER
-, race_time_penalty VARCHAR(255)
+, race_time_penalty VARCHAR(255) COLLATE NOCASE
 , race_time_penalty_millis INTEGER
-, race_gap VARCHAR(255)
+, race_gap VARCHAR(255) COLLATE NOCASE
 , race_gap_millis INTEGER
 , race_gap_laps INTEGER
-, race_interval VARCHAR(255)
+, race_interval VARCHAR(255) COLLATE NOCASE
 , race_interval_millis INTEGER
-, race_reason_retired VARCHAR(255)
+, race_reason_retired VARCHAR(255) COLLATE NOCASE
 , race_points NUMERIC
 , race_grid_position_number INTEGER
-, race_grid_position_text VARCHAR(255)
+, race_grid_position_text VARCHAR(255) COLLATE NOCASE
 , race_positions_gained INTEGER
 , race_pit_stops INTEGER
 , race_fastest_lap BOOLEAN
 , race_driver_of_the_day BOOLEAN
 , fastest_lap_lap INTEGER
-, fastest_lap_time VARCHAR(255)
+, fastest_lap_time VARCHAR(255) COLLATE NOCASE
 , fastest_lap_time_millis INTEGER
-, fastest_lap_gap VARCHAR(255)
+, fastest_lap_gap VARCHAR(255) COLLATE NOCASE
 , fastest_lap_gap_millis INTEGER
-, fastest_lap_interval VARCHAR(255)
+, fastest_lap_interval VARCHAR(255) COLLATE NOCASE
 , fastest_lap_interval_millis INTEGER
 , pit_stop_stop INTEGER
 , pit_stop_lap INTEGER
-, pit_stop_time VARCHAR(255)
+, pit_stop_time VARCHAR(255) COLLATE NOCASE
 , pit_stop_time_millis INTEGER
 , driver_of_the_day_percentage NUMERIC
 , PRIMARY KEY (race_id, type, position_display_order)
 );
 
 CREATE INDEX race_data_race_id_index ON race_data(race_id);
-CREATE INDEX race_data_type_index ON race_data(type);
+CREATE INDEX race_data_type_index ON race_data(type COLLATE NOCASE);
 CREATE INDEX race_data_position_number_index ON race_data(position_number);
-CREATE INDEX race_data_position_text_index ON race_data(position_text);
-CREATE INDEX race_data_driver_number_index ON race_data(driver_number);
-CREATE INDEX race_data_driver_id_index ON race_data(driver_id);
-CREATE INDEX race_data_constructor_id_index ON race_data(constructor_id);
-CREATE INDEX race_data_engine_manufacturer_id_index ON race_data(engine_manufacturer_id);
-CREATE INDEX race_data_tyre_manufacturer_id_index ON race_data(tyre_manufacturer_id);
+CREATE INDEX race_data_position_text_index ON race_data(position_text COLLATE NOCASE);
+CREATE INDEX race_data_driver_number_index ON race_data(driver_number COLLATE NOCASE);
+CREATE INDEX race_data_driver_id_index ON race_data(driver_id COLLATE NOCASE);
+CREATE INDEX race_data_constructor_id_index ON race_data(constructor_id COLLATE NOCASE);
+CREATE INDEX race_data_engine_manufacturer_id_index ON race_data(engine_manufacturer_id COLLATE NOCASE);
+CREATE INDEX race_data_tyre_manufacturer_id_index ON race_data(tyre_manufacturer_id COLLATE NOCASE);
 
 CREATE TABLE driver_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
 , round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
 , position_number INTEGER
-, position_text VARCHAR(255) NOT NULL
-, driver_id VARCHAR(255) NOT NULL REFERENCES driver(id)
+, position_text VARCHAR(255) NOT NULL COLLATE NOCASE
+, driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
 , points NUMERIC NOT NULL
 , PRIMARY KEY (year, round, position_display_order)
 );
@@ -368,17 +368,17 @@ CREATE INDEX driver_standing_year_index ON driver_standing(year);
 CREATE INDEX driver_standing_round_index ON driver_standing(round);
 CREATE INDEX driver_standing_position_display_order_index ON driver_standing(position_display_order);
 CREATE INDEX driver_standing_position_number_index ON driver_standing(position_number);
-CREATE INDEX driver_standing_position_text_index ON driver_standing(position_text);
-CREATE INDEX driver_standing_driver_id_index ON driver_standing(driver_id);
+CREATE INDEX driver_standing_position_text_index ON driver_standing(position_text COLLATE NOCASE);
+CREATE INDEX driver_standing_driver_id_index ON driver_standing(driver_id COLLATE NOCASE);
 
 CREATE TABLE constructor_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
 , round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
 , position_number INTEGER
-, position_text VARCHAR(255) NOT NULL
-, constructor_id VARCHAR(255) NOT NULL REFERENCES constructor(id)
-, engine_manufacturer_id VARCHAR(255) NOT NULL REFERENCES engine_manufacturer(id)
+, position_text VARCHAR(255) NOT NULL COLLATE NOCASE
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
 , points NUMERIC NOT NULL
 , PRIMARY KEY (year, round, position_display_order)
 );
@@ -387,9 +387,9 @@ CREATE INDEX constructor_standing_year_index ON constructor_standing(year);
 CREATE INDEX constructor_standing_round_index ON constructor_standing(round);
 CREATE INDEX constructor_standing_position_display_order_index ON constructor_standing(position_display_order);
 CREATE INDEX constructor_standing_position_number_index ON constructor_standing(position_number);
-CREATE INDEX constructor_standing_position_text_index ON constructor_standing(position_text);
-CREATE INDEX constructor_standing_constructor_id_index ON constructor_standing(constructor_id);
-CREATE INDEX constructor_standing_engine_manufacturer_id_index ON constructor_standing(engine_manufacturer_id);
+CREATE INDEX constructor_standing_position_text_index ON constructor_standing(position_text COLLATE NOCASE);
+CREATE INDEX constructor_standing_constructor_id_index ON constructor_standing(constructor_id COLLATE NOCASE);
+CREATE INDEX constructor_standing_engine_manufacturer_id_index ON constructor_standing(engine_manufacturer_id COLLATE NOCASE);
 
 CREATE VIEW pre_qualifying_result AS
 SELECT   race.id AS race_id
