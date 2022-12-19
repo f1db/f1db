@@ -51,7 +51,7 @@ the JSON Schema version is bumped to version `v2.0.0` which has some backward in
 Above changes are also reflected in the SQLite database as separate tables are introduced.
 
 Because of the new JSON splitted format (which is also available for the Smile format) a dedicated
-`f1db-json-schema-vX.X.X-splitted.json` JSON schema is introduced for the splitted release artifacts.
+`f1db-json-schema-vX.X.X-splitted.json` schema is introduced for the splitted release artifacts.
 
 
 ## F1DB JSON Schema
