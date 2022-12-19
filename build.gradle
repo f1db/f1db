@@ -16,7 +16,8 @@ distributions {
     "csv" {
         distributionBaseName = "f1db-csv"
         contents {
-            from "${buildDir}/data/csv/*.csv"
+            from "${buildDir}/data/csv"
+            include "*.csv"
         }
     }
     "json" {
