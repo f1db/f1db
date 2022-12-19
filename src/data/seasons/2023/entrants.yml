@@ -1,0 +1,100 @@
+- entrantId: alfa-romeo-f1-team-orlen
+  countryId: switzerland
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: guanyu-zhou
+      rounds:
+    - driverId: valtteri-bottas
+      rounds:
+- entrantId: aston-martin-aramco-cognizant-f1-team
+  countryId: united-kingdom
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: fernando-alonso
+      rounds:
+    - driverId: lance-stroll
+      rounds:
+- entrantId: bwt-alpine-f1-team
+  countryId: france
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds:
+    - driverId: pierre-gasly
+      rounds:
+- entrantId: mclaren-f1-team
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lando-norris
+      rounds:
+    - driverId: oscar-piastri
+      rounds:
+- entrantId: mercedes-amg-petronas-f1-team
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: george-russell
+      rounds:
+    - driverId: lewis-hamilton
+      rounds:
+- entrantId: moneygram-haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kevin-magnussen
+      rounds:
+    - driverId: nico-hulkenberg
+      rounds:
+- entrantId: oracle-red-bull-racing
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: red-bull-powertrains
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: max-verstappen
+      rounds:
+    - driverId: sergio-perez
+      rounds:
+- entrantId: scuderia-alphatauri
+  countryId: italy
+  constructorId: alphatauri
+  engineManufacturerId: red-bull-powertrains
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: yuki-tsunoda
+      rounds:
+    - driverId: nyck-de-vries
+      rounds:
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: carlos-sainz-jr
+      rounds:
+    - driverId: charles-leclerc
+      rounds:
+- entrantId: williams-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alexander-albon
+      rounds:
+    - driverId: logan-sargeant
+      rounds:

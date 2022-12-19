@@ -40,6 +40,18 @@
       rounds: 1-12
     - driverId: vitantonio-liuzzi
       rounds: 13-17
+- entrantId: ing-renault-f1-team
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  drivers:
+    - driverId: fernando-alonso
+      rounds: 1-17
+    - driverId: nelson-piquet-jr
+      rounds: 1-10
+    - driverId: romain-grosjean
+      rounds: 11-17
 - entrantId: panasonic-toyota-racing
   countryId: japan
   constructorId: toyota
@@ -63,18 +75,6 @@
       rounds: 1-17
     - driverId: sebastian-vettel
       rounds: 1-17
-- entrantId: renault-f1-team
-  countryId: france
-  constructorId: renault
-  engineManufacturerId: renault
-  tyreManufacturerId: bridgestone
-  drivers:
-    - driverId: fernando-alonso
-      rounds: 1-17
-    - driverId: nelson-piquet-jr
-      rounds: 1-10
-    - driverId: romain-grosjean
-      rounds: 11-17
 - entrantId: scuderia-ferrari-marlboro
   countryId: italy
   constructorId: ferrari

@@ -5,12 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize
 
 /**
- * The driver standing mix-in.
+ * The race driver standing mix-in.
  *
  * @author Marcel Overdijk
  */
-@JsonDeserialize(converter = DriverStandingConverter)
-abstract class DriverStandingMixIn {
+@JsonDeserialize(converter = RaceDriverStandingConverter)
+abstract class RaceDriverStandingMixIn {
 
     @JsonIgnore
     Integer positionNumber

@@ -249,6 +249,40 @@ CREATE INDEX season_entrant_driver_constructor_id_index ON season_entrant_driver
 CREATE INDEX season_entrant_driver_engine_manufacturer_id_index ON season_entrant_driver(engine_manufacturer_id COLLATE NOCASE);
 CREATE INDEX season_entrant_driver_driver_id_index ON season_entrant_driver(driver_id COLLATE NOCASE);
 
+CREATE TABLE season_driver_standing
+( year INTEGER NOT NULL REFERENCES season(year)
+, position_display_order INTEGER NOT NULL
+, position_number INTEGER
+, position_text VARCHAR(255) NOT NULL COLLATE NOCASE
+, driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
+, points NUMERIC NOT NULL
+, PRIMARY KEY (year, position_display_order)
+);
+
+CREATE INDEX season_driver_standing_year_index ON season_driver_standing(year);
+CREATE INDEX season_driver_standing_position_display_order_index ON season_driver_standing(position_display_order);
+CREATE INDEX season_driver_standing_position_number_index ON season_driver_standing(position_number);
+CREATE INDEX season_driver_standing_position_text_index ON season_driver_standing(position_text COLLATE NOCASE);
+CREATE INDEX season_driver_standing_driver_id_index ON season_driver_standing(driver_id COLLATE NOCASE);
+
+CREATE TABLE season_constructor_standing
+( year INTEGER NOT NULL REFERENCES season(year)
+, position_display_order INTEGER NOT NULL
+, position_number INTEGER
+, position_text VARCHAR(255) NOT NULL COLLATE NOCASE
+, constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
+, engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
+, points NUMERIC NOT NULL
+, PRIMARY KEY (year, position_display_order)
+);
+
+CREATE INDEX season_constructor_standing_year_index ON season_constructor_standing(year);
+CREATE INDEX season_constructor_standing_position_display_order_index ON season_constructor_standing(position_display_order);
+CREATE INDEX season_constructor_standing_position_number_index ON season_constructor_standing(position_number);
+CREATE INDEX season_constructor_standing_position_text_index ON season_constructor_standing(position_text COLLATE NOCASE);
+CREATE INDEX season_constructor_standing_constructor_id_index ON season_constructor_standing(constructor_id COLLATE NOCASE);
+CREATE INDEX season_constructor_standing_engine_manufacturer_id_index ON season_constructor_standing(engine_manufacturer_id COLLATE NOCASE);
+
 CREATE TABLE race
 ( id INTEGER NOT NULL PRIMARY KEY
 , year INTEGER NOT NULL REFERENCES season(year)
@@ -353,7 +387,7 @@ CREATE INDEX race_data_constructor_id_index ON race_data(constructor_id COLLATE 
 CREATE INDEX race_data_engine_manufacturer_id_index ON race_data(engine_manufacturer_id COLLATE NOCASE);
 CREATE INDEX race_data_tyre_manufacturer_id_index ON race_data(tyre_manufacturer_id COLLATE NOCASE);
 
-CREATE TABLE driver_standing
+CREATE TABLE race_driver_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
 , round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
@@ -361,17 +395,18 @@ CREATE TABLE driver_standing
 , position_text VARCHAR(255) NOT NULL COLLATE NOCASE
 , driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver(id)
 , points NUMERIC NOT NULL
+, positions_gained INTEGER
 , PRIMARY KEY (year, round, position_display_order)
 );
 
-CREATE INDEX driver_standing_year_index ON driver_standing(year);
-CREATE INDEX driver_standing_round_index ON driver_standing(round);
-CREATE INDEX driver_standing_position_display_order_index ON driver_standing(position_display_order);
-CREATE INDEX driver_standing_position_number_index ON driver_standing(position_number);
-CREATE INDEX driver_standing_position_text_index ON driver_standing(position_text COLLATE NOCASE);
-CREATE INDEX driver_standing_driver_id_index ON driver_standing(driver_id COLLATE NOCASE);
+CREATE INDEX race_driver_standing_year_index ON race_driver_standing(year);
+CREATE INDEX race_driver_standing_round_index ON race_driver_standing(round);
+CREATE INDEX race_driver_standing_position_display_order_index ON race_driver_standing(position_display_order);
+CREATE INDEX race_driver_standing_position_number_index ON race_driver_standing(position_number);
+CREATE INDEX race_driver_standing_position_text_index ON race_driver_standing(position_text COLLATE NOCASE);
+CREATE INDEX race_driver_standing_driver_id_index ON race_driver_standing(driver_id COLLATE NOCASE);
 
-CREATE TABLE constructor_standing
+CREATE TABLE race_constructor_standing
 ( year INTEGER NOT NULL REFERENCES season(year)
 , round INTEGER NOT NULL
 , position_display_order INTEGER NOT NULL
@@ -380,16 +415,17 @@ CREATE TABLE constructor_standing
 , constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor(id)
 , engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer(id)
 , points NUMERIC NOT NULL
+, positions_gained INTEGER
 , PRIMARY KEY (year, round, position_display_order)
 );
 
-CREATE INDEX constructor_standing_year_index ON constructor_standing(year);
-CREATE INDEX constructor_standing_round_index ON constructor_standing(round);
-CREATE INDEX constructor_standing_position_display_order_index ON constructor_standing(position_display_order);
-CREATE INDEX constructor_standing_position_number_index ON constructor_standing(position_number);
-CREATE INDEX constructor_standing_position_text_index ON constructor_standing(position_text COLLATE NOCASE);
-CREATE INDEX constructor_standing_constructor_id_index ON constructor_standing(constructor_id COLLATE NOCASE);
-CREATE INDEX constructor_standing_engine_manufacturer_id_index ON constructor_standing(engine_manufacturer_id COLLATE NOCASE);
+CREATE INDEX race_constructor_standing_year_index ON race_constructor_standing(year);
+CREATE INDEX race_constructor_standing_round_index ON race_constructor_standing(round);
+CREATE INDEX race_constructor_standing_position_display_order_index ON race_constructor_standing(position_display_order);
+CREATE INDEX race_constructor_standing_position_number_index ON race_constructor_standing(position_number);
+CREATE INDEX race_constructor_standing_position_text_index ON race_constructor_standing(position_text COLLATE NOCASE);
+CREATE INDEX race_constructor_standing_constructor_id_index ON race_constructor_standing(constructor_id COLLATE NOCASE);
+CREATE INDEX race_constructor_standing_engine_manufacturer_id_index ON race_constructor_standing(engine_manufacturer_id COLLATE NOCASE);
 
 CREATE VIEW pre_qualifying_result AS
 SELECT   race.id AS race_id
@@ -799,52 +835,4 @@ FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
 WHERE    race_data.type    = 'DRIVER_OF_THE_DAY_RESULT'
-;
-
-CREATE VIEW race_driver_standing AS
-SELECT   year
-,        round
-,        position_display_order
-,        position_number
-,        position_text
-,        driver_id
-,        points
-FROM     driver_standing
-WHERE    round != 0
-;
-
-CREATE VIEW race_constructor_standing AS
-SELECT   year
-,        round
-,        position_display_order
-,        position_number
-,        position_text
-,        constructor_id
-,        engine_manufacturer_id
-,        points
-FROM     constructor_standing
-WHERE    round != 0
-;
-
-CREATE VIEW season_driver_standing AS
-SELECT   year
-,        position_display_order
-,        position_number
-,        position_text
-,        driver_id
-,        points
-FROM     driver_standing
-WHERE    round = 0
-;
-
-CREATE VIEW season_constructor_standing AS
-SELECT   year
-,        position_display_order
-,        position_number
-,        position_text
-,        constructor_id
-,        engine_manufacturer_id
-,        points
-FROM     constructor_standing
-WHERE    round = 0
 ;

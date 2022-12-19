@@ -1,19 +1,19 @@
 package net.f1db.gradle.plugin.databind
 
 import com.fasterxml.jackson.databind.util.StdConverter
-import net.f1db.DriverStanding
+import net.f1db.SeasonDriverStanding
 
 import static net.f1db.gradle.plugin.F1DBReader.toIntegerOrNull
 
 /**
- * The driver standing converter.
+ * The season driver standing converter.
  *
  * @author Marcel Overdijk
  */
-class DriverStandingConverter extends StdConverter<DriverStanding, DriverStanding> {
+class SeasonDriverStandingConverter extends StdConverter<SeasonDriverStanding, SeasonDriverStanding> {
 
     @Override
-    DriverStanding convert(DriverStanding driverStanding) {
+    SeasonDriverStanding convert(SeasonDriverStanding driverStanding) {
         driverStanding.positionNumber = toIntegerOrNull driverStanding.positionText
         return driverStanding
     }

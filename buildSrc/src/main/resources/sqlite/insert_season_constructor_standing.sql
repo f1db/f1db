@@ -1,6 +1,5 @@
-INSERT INTO constructor_standing
+INSERT INTO season_constructor_standing
 ( year
-, round
 , position_display_order
 , position_number
 , position_text
@@ -10,7 +9,6 @@ INSERT INTO constructor_standing
 )
 VALUES
 ( ?1.year
-, ?2.round
 , ?2.positionDisplayOrder
 , ?3.positionNumber
 , ?3.positionText
