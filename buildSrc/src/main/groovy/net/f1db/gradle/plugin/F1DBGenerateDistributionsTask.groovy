@@ -15,6 +15,6 @@ class F1DBGenerateDistributionsTask extends DefaultTask {
         def projectDir = project.projectDir
         def extension = project.extensions.f1db
         def f1db = new F1DBReader(projectDir, extension).read()
-        new F1DBWriter(projectDir, extension).write(f1db)
+        new F1DBWriter(projectDir, extension, f1db).write()
     }
 }

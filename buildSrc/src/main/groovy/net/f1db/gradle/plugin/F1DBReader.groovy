@@ -9,12 +9,10 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import net.f1db.Circuit
 import net.f1db.Constructor
-import net.f1db.ConstructorStanding
 import net.f1db.Continent
 import net.f1db.Country
 import net.f1db.Driver
 import net.f1db.DriverOfTheDayResult
-import net.f1db.DriverStanding
 import net.f1db.EngineManufacturer
 import net.f1db.Entrant
 import net.f1db.F1db
@@ -24,21 +22,27 @@ import net.f1db.PitStop
 import net.f1db.PracticeResult
 import net.f1db.QualifyingResult
 import net.f1db.Race
+import net.f1db.RaceConstructorStanding
+import net.f1db.RaceDriverStanding
 import net.f1db.RaceResult
 import net.f1db.Season
+import net.f1db.SeasonConstructorStanding
+import net.f1db.SeasonDriverStanding
 import net.f1db.SeasonEntrant
 import net.f1db.SeasonEntrantConstructor
 import net.f1db.SeasonEntrantDriver
 import net.f1db.StartingGridPosition
 import net.f1db.TyreManufacturer
-import net.f1db.gradle.plugin.databind.ConstructorStandingMixIn
 import net.f1db.gradle.plugin.databind.DriverOfTheDayResultMixIn
-import net.f1db.gradle.plugin.databind.DriverStandingMixIn
 import net.f1db.gradle.plugin.databind.FastestLapMixIn
 import net.f1db.gradle.plugin.databind.PitStopMixIn
 import net.f1db.gradle.plugin.databind.PracticeResultMixIn
 import net.f1db.gradle.plugin.databind.QualifyingResultMixIn
+import net.f1db.gradle.plugin.databind.RaceConstructorStandingMixIn
+import net.f1db.gradle.plugin.databind.RaceDriverStandingMixIn
 import net.f1db.gradle.plugin.databind.RaceResultMixIn
+import net.f1db.gradle.plugin.databind.SeasonConstructorStandingMixIn
+import net.f1db.gradle.plugin.databind.SeasonDriverStandingMixIn
 import net.f1db.gradle.plugin.databind.SeasonEntrantConstructorDeserializer
 import net.f1db.gradle.plugin.databind.SeasonEntrantDeserializer
 import net.f1db.gradle.plugin.databind.SeasonEntrantDriverMixIn
@@ -123,16 +127,16 @@ class F1DBReader {
                 race.fastestLaps = readValues(raceDir, "fastest-laps.yml", FastestLap)
                 race.pitStops = readValues(raceDir, "pit-stops.yml", PitStop)
                 race.driverOfTheDayResults = readValues(raceDir, "driver-of-the-day-results.yml", DriverOfTheDayResult)
-                race.driverStandings = readValues(raceDir, "driver-standings.yml", DriverStanding)
-                race.constructorStandings = readValues(raceDir, "constructor-standings.yml", ConstructorStanding)
+                race.driverStandings = readValues(raceDir, "driver-standings.yml", RaceDriverStanding)
+                race.constructorStandings = readValues(raceDir, "constructor-standings.yml", RaceConstructorStanding)
 
                 f1db.races << race
             }
 
             // Read season standings.
 
-            season.driverStandings = readValues(seasonDir, "driver-standings.yml", DriverStanding)
-            season.constructorStandings = readValues(seasonDir, "constructor-standings.yml", ConstructorStanding)
+            season.driverStandings = readValues(seasonDir, "driver-standings.yml", SeasonDriverStanding)
+            season.constructorStandings = readValues(seasonDir, "constructor-standings.yml", SeasonConstructorStanding)
 
             f1db.seasons << season
         }
@@ -426,6 +430,37 @@ class F1DBReader {
                     driver.totalDriverOfTheDay++
                 }
             }
+
+            if (race.round > 1) {
+
+                def previousRace = f1db.races.find { it.year == race.year && it.round == race.round - 1 }
+
+                // Driver standing positions gained.
+
+                race?.driverStandings.each { driverStanding ->
+                    if (driverStanding.positionNumber != null) {
+                        def previousRaceDriverStanding = previousRace.driverStandings.find { it.driverId == driverStanding.driverId }
+                        if (previousRaceDriverStanding?.positionNumber != null) {
+                            driverStanding.positionsGained = previousRaceDriverStanding.positionNumber - driverStanding.positionNumber
+                        } else {
+                            driverStanding.positionsGained = (previousRace.driverStandings.size + 1) - driverStanding.positionNumber
+                        }
+                    }
+                }
+
+                // Constructor standing positions gained.
+
+                race?.constructorStandings.each { constructorStanding ->
+                    if (constructorStanding.positionNumber != null) {
+                        def previousRaceConstructorStanding = previousRace.constructorStandings.find { it.constructorId == constructorStanding.constructorId && it.engineManufacturerId == constructorStanding.engineManufacturerId }
+                        if (previousRaceConstructorStanding?.positionNumber != null) {
+                            constructorStanding.positionsGained = previousRaceConstructorStanding.positionNumber - constructorStanding.positionNumber
+                        } else {
+                            constructorStanding.positionsGained = (previousRace.constructorStandings.size + 1) - constructorStanding.positionNumber
+                        }
+                    }
+                }
+            }
         }
 
         return f1db
@@ -494,6 +529,8 @@ class F1DBReader {
         module.addDeserializer(SeasonEntrant, new SeasonEntrantDeserializer())
         module.addDeserializer(SeasonEntrantConstructor, new SeasonEntrantConstructorDeserializer())
         module.setMixInAnnotation(SeasonEntrantDriver, SeasonEntrantDriverMixIn)
+        module.setMixInAnnotation(SeasonDriverStanding, SeasonDriverStandingMixIn)
+        module.setMixInAnnotation(SeasonConstructorStanding, SeasonConstructorStandingMixIn)
         module.setMixInAnnotation(PracticeResult, PracticeResultMixIn)
         module.setMixInAnnotation(QualifyingResult, QualifyingResultMixIn)
         module.setMixInAnnotation(StartingGridPosition, StartingGridPositionMixIn)
@@ -501,8 +538,8 @@ class F1DBReader {
         module.setMixInAnnotation(FastestLap, FastestLapMixIn)
         module.setMixInAnnotation(PitStop, PitStopMixIn)
         module.setMixInAnnotation(DriverOfTheDayResult, DriverOfTheDayResultMixIn)
-        module.setMixInAnnotation(DriverStanding, DriverStandingMixIn)
-        module.setMixInAnnotation(ConstructorStanding, ConstructorStandingMixIn)
+        module.setMixInAnnotation(RaceDriverStanding, RaceDriverStandingMixIn)
+        module.setMixInAnnotation(RaceConstructorStanding, RaceConstructorStandingMixIn)
         def mapper = new YAMLMapper()
         mapper.propertyNamingStrategy = PropertyNamingStrategies.LOWER_CAMEL_CASE
         mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)

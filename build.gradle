@@ -13,28 +13,48 @@ repositories {
 }
 
 distributions {
-    json {
+    "csv" {
+        distributionBaseName = "f1db-csv"
+        contents {
+            from "${buildDir}/data/csv/*.csv"
+        }
+    }
+    "json" {
         distributionBaseName = "f1db-json"
         contents {
-            from "${buildDir}/data/f1db.json"
+            from "${buildDir}/data/json/f1db.json"
         }
     }
-    smile {
+    "json-splitted" {
+        distributionBaseName = "f1db-json-splitted"
+        contents {
+            from "${buildDir}/data/json-splitted"
+            include "*.json"
+        }
+    }
+    "smile" {
         distributionBaseName = "f1db-smile"
         contents {
-            from "${buildDir}/data/f1db.sml"
+            from "${buildDir}/data/smile/f1db.sml"
         }
     }
-    sqlite {
+    "smile-splitted" {
+        distributionBaseName = "f1db-smile-splitted"
+        contents {
+            from "${buildDir}/data/smile-splitted"
+            include "*.sml"
+        }
+    }
+    "sqlite" {
         distributionBaseName = "f1db-sqlite"
         contents {
-            from "${buildDir}/data/f1db.db"
+            from "${buildDir}/data/sqlite/f1db.db"
         }
     }
 }
 
 f1db {
-    jsonSchemaFile = file("${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}.json")
+    jsonSchemaVersion = property("jsonSchemaVersion")
     currentSeason = property("currentSeason").toInteger()
     currentSeasonFinished = property("currentSeasonFinished").toBoolean()
     wdcDecided = property("wdcDecided").toBoolean()
@@ -57,10 +77,19 @@ jreleaser {
             path = "${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}.json"
         }
         artifact {
+            path = "${projectDir}/src/schema/f1db-splitted-json-schema-v${property("jsonSchemaVersion")}.json"
+        }
+        artifact {
             path = "${buildDir}/distributions/f1db-json-{{projectVersion}}.zip"
         }
         artifact {
+            path = "${buildDir}/distributions/f1db-json-splitted-{{projectVersion}}.zip"
+        }
+        artifact {
             path = "${buildDir}/distributions/f1db-smile-{{projectVersion}}.zip"
+        }
+        artifact {
+            path = "${buildDir}/distributions/f1db-smile-splitted-{{projectVersion}}.zip"
         }
         artifact {
             path = "${buildDir}/distributions/f1db-sqlite-{{projectVersion}}.zip"

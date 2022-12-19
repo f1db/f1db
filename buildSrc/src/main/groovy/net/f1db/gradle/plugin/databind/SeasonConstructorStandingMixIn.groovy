@@ -5,13 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize
 
 /**
- * The constructor standing mix-in.
+ * The season constructor standing mix-in.
  *
  * @author Marcel Overdijk
  */
-
-@JsonDeserialize(converter = ConstructorStandingConverter)
-abstract class ConstructorStandingMixIn {
+@JsonDeserialize(converter = SeasonConstructorStandingConverter)
+abstract class SeasonConstructorStandingMixIn {
 
     @JsonIgnore
     Integer positionNumber

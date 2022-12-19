@@ -1,19 +1,19 @@
 package net.f1db.gradle.plugin.databind
 
 import com.fasterxml.jackson.databind.util.StdConverter
-import net.f1db.ConstructorStanding
+import net.f1db.SeasonConstructorStanding
 
 import static net.f1db.gradle.plugin.F1DBReader.toIntegerOrNull
 
 /**
- * The constructor standing converter.
+ * The season constructor standing converter.
  *
  * @author Marcel Overdijk
  */
-class ConstructorStandingConverter extends StdConverter<ConstructorStanding, ConstructorStanding> {
+class SeasonConstructorStandingConverter extends StdConverter<SeasonConstructorStanding, SeasonConstructorStanding> {
 
     @Override
-    ConstructorStanding convert(ConstructorStanding constructorStanding) {
+    SeasonConstructorStanding convert(SeasonConstructorStanding constructorStanding) {
         constructorStanding.positionNumber = toIntegerOrNull constructorStanding.positionText
         return constructorStanding
     }

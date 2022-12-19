@@ -29,20 +29,21 @@ configurations {
 }
 
 dependencies {
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.4"
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.13.4"
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.4"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.14.1"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.14.1"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.14.1"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.1"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.1"
     implementation "org.leadpony.joy:joy-classic:2.1.0"
     implementation "org.leadpony.justify:justify:3.1.0"
     implementation "org.slf4j:slf4j-simple:1.7.36"
-    implementation "org.xerial:sqlite-jdbc:3.39.3.0"
-    driver "org.xerial:sqlite-jdbc:3.39.3.0"
+    implementation "org.xerial:sqlite-jdbc:3.40.0.0"
+    driver "org.xerial:sqlite-jdbc:3.40.0.0"
 
 }
 
 jsonSchema2Pojo {
-    source = files("${projectDir}/../src/schema/f1db-json-schema-v1.4.0.json")
+    source = files("${projectDir}/../src/schema/f1db-json-schema-v2.0.0.json")
     removeOldOutput = true
     targetPackage = "net.f1db"
     targetVersion = "11"

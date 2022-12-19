@@ -8,7 +8,7 @@ import java.time.LocalDate
  * @author Marcel Overdijk
  */
 class F1DBPluginExtension {
-    File jsonSchemaFile
+    String jsonSchemaVersion
     int currentSeason = LocalDate.now().year
     boolean currentSeasonFinished = false
     boolean wdcDecided = false
