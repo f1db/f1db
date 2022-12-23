@@ -59,8 +59,7 @@ schema files are available for the splitted files.
 The main [`f1db.json-schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/f1db.json-schema.json)
 schema file contains all F1DB object definitions and serves as the main documentation.  
 
-For the splitted distributions the [splitted](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/splitted)
-schema file must be used.
+For the splitted distributions the splitted schema files must be used.
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
@@ -68,7 +67,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                                                                                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `>=` `v2023.0.0.alpha1` | [`f1db.json-schema.json v2.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/f1db.json-schema.json), [`f1db-*.json-schema.json v2.0.0 splitted`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/splitted) |
+| `>=` `v2023.0.0.alpha1` | [`f1db.json-schema.json v2.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v2.0.0/f1db.json-schema.json), [`f1db-*.json-schema.json v2.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v2.0.0/splitted) |
 | `>=` `v2022.1.1`        | [`f1db-json-schema-v1.4.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.4.0.json)                                                                                                                           |
 | `>=` `v2022.0.0`        | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.3.0.json)                                                                                                                           |
 | `>=` `v2022.0.0.beta4`  | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/f1db-json-schema-v1.3.0.json)                                                                                                                           |
