@@ -24,26 +24,38 @@ distributions {
         distributionBaseName = "f1db-json"
         contents {
             from "${buildDir}/data/json/f1db.json"
+            from "${projectDir}/src/schema/v${property("jsonSchemaVersion")}/f1db.json-schema.json"
         }
     }
     "json-splitted" {
         distributionBaseName = "f1db-json-splitted"
         contents {
-            from "${buildDir}/data/json-splitted"
-            include "*.json"
+            from("${buildDir}/data/json") {
+                include "*.json"
+                exclude "f1db.json"
+            }
+            from("${projectDir}/src/schema/v${property("jsonSchemaVersion")}/splitted") {
+                include "*.json"
+            }
         }
     }
     "smile" {
         distributionBaseName = "f1db-smile"
         contents {
             from "${buildDir}/data/smile/f1db.sml"
+            from "${projectDir}/src/schema/v${property("jsonSchemaVersion")}/f1db.json-schema.json"
         }
     }
     "smile-splitted" {
         distributionBaseName = "f1db-smile-splitted"
         contents {
-            from "${buildDir}/data/smile-splitted"
-            include "*.sml"
+            from("${buildDir}/data/smile") {
+                include "*.sml"
+                exclude "f1db.sml"
+            }
+            from("${projectDir}/src/schema/v${property("jsonSchemaVersion")}/splitted") {
+                include "*.json"
+            }
         }
     }
     "sqlite" {
@@ -74,12 +86,6 @@ jreleaser {
         copyright = "F1DB"
     }
     files {
-        artifact {
-            path = "${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}.json"
-        }
-        artifact {
-            path = "${projectDir}/src/schema/f1db-json-schema-v${property("jsonSchemaVersion")}-splitted.json"
-        }
         artifact {
             path = "${buildDir}/distributions/f1db-csv-{{projectVersion}}.zip"
         }

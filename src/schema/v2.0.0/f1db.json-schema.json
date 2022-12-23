@@ -1,8 +1,8 @@
 {
-  "$id": "https://www.f1db.net/schema/f1db-json-schema-v2.0.0-splitted.json",
+  "$id": "https://www.f1db.net/schema/v2.0.0/f1db-json-schema.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "F1DB",
-  "description": "F1DB JSON Schema Splitted",
+  "description": "F1DB JSON Schema",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -13,26 +13,12 @@
       },
       "description": "The drivers."
     },
-    "driversFamilyRelationships": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/DriverFamilyRelationship"
-      },
-      "description": "The drivers family relationships."
-    },
     "constructors": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/Constructor"
       },
       "description": "The constructors."
-    },
-    "constructorsPreviousNextConstructors": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PreviousNextConstructor"
-      },
-      "description": "The constructors previous/next constructors."
     },
     "engineManufacturers": {
       "type": "array",
@@ -76,180 +62,12 @@
       },
       "description": "The seasons."
     },
-    "seasonsEntrants": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonEntrant"
-      },
-      "description": "The seasons entrants."
-    },
-    "seasonsEntrantsConstructors": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonEntrantConstructor"
-      },
-      "description": "The seasons entrants constructors."
-    },
-    "seasonsEntrantsTyreManufacturers": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonEntrantTyreManufacturer"
-      },
-      "description": "The seasons entrants tyre manufacturers."
-    },
-    "seasonsEntrantsDrivers": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonEntrantDriver"
-      },
-      "description": "The seasons entrants drivers."
-    },
-    "seasonsDriverStandings": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonDriverStanding"
-      },
-      "description": "The seasons driver standings."
-    },
-    "seasonsConstructorStandings": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SeasonConstructorStanding"
-      },
-      "description": "The seasons constructor standings."
-    },
     "races": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/Race"
       },
       "description": "The races."
-    },
-    "racesPreQualifyingResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/QualifyingResult"
-      },
-      "description": "The races pre-qualifying results."
-    },
-    "racesFreePractice1Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PracticeResult"
-      },
-      "description": "The races free practice 1 results."
-    },
-    "racesFreePractice2Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PracticeResult"
-      },
-      "description": "The races free practice 2 results."
-    },
-    "racesFreePractice3Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PracticeResult"
-      },
-      "description": "The races free practice 3 results."
-    },
-    "racesFreePractice4Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PracticeResult"
-      },
-      "description": "The races free practice 4 results."
-    },
-    "racesQualifying1Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/QualifyingResult"
-      },
-      "description": "The races qualifying 1 results."
-    },
-    "racesQualifying2Results": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/QualifyingResult"
-      },
-      "description": "The races qualifying 2 results."
-    },
-    "racesQualifyingResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/QualifyingResult"
-      },
-      "description": "The races qualifying results."
-    },
-    "racesSprintQualifyingStartingGridPositions": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/StartingGridPosition"
-      },
-      "description": "The races sprint qualifying starting grid positions."
-    },
-    "racesSprintQualifyingResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RaceResult"
-      },
-      "description": "The races sprint qualifying results."
-    },
-    "racesWarmingUpResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PracticeResult"
-      },
-      "description": "The races warming-up results."
-    },
-    "racesStartingGridPositions": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/StartingGridPosition"
-      },
-      "description": "The races starting grid positions."
-    },
-    "racesRaceResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RaceResult"
-      },
-      "description": "The races race results."
-    },
-    "racesFastestLaps": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/FastestLap"
-      },
-      "description": "The races fastest laps."
-    },
-    "racesPitStops": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/PitStop"
-      },
-      "description": "The races pit stops."
-    },
-    "racesDriverOfTheDayResults": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/DriverOfTheDayResult"
-      },
-      "description": "The races driver of the day results."
-    },
-    "racesDriverStandings": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RaceDriverStanding"
-      },
-      "description": "The races driver standings."
-    },
-    "racesConstructorStandings": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RaceConstructorStanding"
-      },
-      "description": "The races constructor standings."
     },
     "continents": {
       "type": "array",
@@ -267,6 +85,17 @@
     }
   },
   "required": [
+    "drivers",
+    "constructors",
+    "engineManufacturers",
+    "tyreManufacturers",
+    "entrants",
+    "circuits",
+    "grandsPrix",
+    "seasons",
+    "races",
+    "continents",
+    "countries"
   ],
   "definitions": {
     "Driver": {
@@ -336,6 +165,13 @@
         "secondNationalityCountryId": {
           "type": ["string", "null"],
           "description": "The second nationality."
+        },
+        "familyRelationships": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/DriverFamilyRelationship"
+          },
+          "description": "The family relationships."
         },
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
@@ -425,6 +261,7 @@
         "countryOfBirthCountryId",
         "nationalityCountryId",
         "secondNationalityCountryId",
+        "familyRelationships",
         "bestChampionshipPosition",
         "bestStartingGridPosition",
         "bestRaceResult",
@@ -445,10 +282,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "parentDriverId": {
-          "type": "string",
-          "description": "The driver."
-        },
         "driverId": {
           "type": "string",
           "description": "The driver."
@@ -459,7 +292,6 @@
         }
       },
       "required": [
-        "parentDriverId",
         "driverId",
         "type"
       ]
@@ -483,6 +315,13 @@
         "countryId": {
           "type": "string",
           "description": "The country."
+        },
+        "previousNextConstructors": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PreviousNextConstructor"
+          },
+          "description": "The previous/next constructors."
         },
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
@@ -561,6 +400,7 @@
         "name",
         "fullName",
         "countryId",
+        "previousNextConstructors",
         "bestChampionshipPosition",
         "bestStartingGridPosition",
         "bestRaceResult",
@@ -581,10 +421,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "parentConstructorId": {
-          "type": "string",
-          "description": "The constructor."
-        },
         "constructorId": {
           "type": "string",
           "description": "The constructor."
@@ -599,7 +435,6 @@
         }
       },
       "required": [
-        "parentConstructorId",
         "constructorId",
         "yearFrom",
         "yearTo"
@@ -920,20 +755,40 @@
         "year": {
           "type": "integer",
           "description": "The year."
+        },
+        "entrants": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/SeasonEntrant"
+          },
+          "description": "The entrants."
+        },
+        "driverStandings": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/SeasonDriverStanding"
+          },
+          "description": "The driver standings."
+        },
+        "constructorStandings": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/SeasonConstructorStanding"
+          },
+          "description": "The constructor standings."
         }
       },
       "required": [
-        "year"
+        "year",
+        "entrants",
+        "driverStandings",
+        "constructorStandings"
       ]
     },
     "SeasonEntrant": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
         "entrantId": {
           "type": "string",
           "description": "The entrant."
@@ -941,26 +796,25 @@
         "countryId": {
           "type": "string",
           "description": "The country."
+        },
+        "constructors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SeasonEntrantConstructor"
+          },
+          "description": "The constructors."
         }
       },
       "required": [
-        "year",
         "entrantId",
-        "countryId"
+        "countryId",
+        "constructors"
       ]
     },
     "SeasonEntrantConstructor": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "entrantId": {
-          "type": "string",
-          "description": "The entrant."
-        },
         "constructorId": {
           "type": "string",
           "description": "The constructor."
@@ -968,45 +822,39 @@
         "engineManufacturerId": {
           "type": "string",
           "description": "The engine manufacturer."
+        },
+        "tyreManufacturers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SeasonEntrantTyreManufacturer"
+          },
+          "description": "The tyre manufacturers."
+        },
+        "drivers": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/SeasonEntrantDriver"
+          },
+          "description": "The drivers."
         }
       },
       "required": [
-        "year",
-        "entrantId",
         "constructorId",
-        "engineManufacturerId"
+        "engineManufacturerId",
+        "tyreManufacturers",
+        "drivers"
       ]
     },
     "SeasonEntrantTyreManufacturer": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "entrantId": {
-          "type": "string",
-          "description": "The entrant."
-        },
-        "constructorId": {
-          "type": "string",
-          "description": "The constructor."
-        },
-        "engineManufacturerId": {
-          "type": "string",
-          "description": "The engine manufacturer."
-        },
         "tyreManufacturerId": {
           "type": "string",
           "description": "The tyre manufacturer."
         }
       },
       "required": [
-        "year",
-        "entrantId",
-        "constructorId",
-        "engineManufacturerId",
         "tyreManufacturerId"
       ]
     },
@@ -1014,22 +862,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "entrantId": {
-          "type": "string",
-          "description": "The entrant."
-        },
-        "constructorId": {
-          "type": "string",
-          "description": "The constructor."
-        },
-        "engineManufacturerId": {
-          "type": "string",
-          "description": "The engine manufacturer."
-        },
         "driverId": {
           "type": "string",
           "description": "The driver."
@@ -1054,10 +886,6 @@
         }
       },
       "required": [
-        "year",
-        "entrantId",
-        "constructorId",
-        "engineManufacturerId",
         "driverId",
         "rounds",
         "roundsText",
@@ -1068,15 +896,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1099,8 +918,6 @@
         }
       },
       "required": [
-        "year",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverId",
@@ -1111,15 +928,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1146,8 +954,6 @@
         }
       },
       "required": [
-        "year",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "constructorId",
@@ -1221,6 +1027,132 @@
           "type": ["number", "null"],
           "minimum": 0,
           "description": "The scheduled distance."
+        },
+        "preQualifyingResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/QualifyingResult"
+          },
+          "description": "The pre-qualifying results."
+        },
+        "freePractice1Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PracticeResult"
+          },
+          "description": "The free practice 1 results."
+        },
+        "freePractice2Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PracticeResult"
+          },
+          "description": "The free practice 2 results."
+        },
+        "freePractice3Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PracticeResult"
+          },
+          "description": "The free practice 3 results."
+        },
+        "freePractice4Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PracticeResult"
+          },
+          "description": "The free practice 4 results."
+        },
+        "qualifying1Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/QualifyingResult"
+          },
+          "description": "The qualifying 1 results."
+        },
+        "qualifying2Results": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/QualifyingResult"
+          },
+          "description": "The qualifying 2 results."
+        },
+        "qualifyingResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/QualifyingResult"
+          },
+          "description": "The qualifying results."
+        },
+        "sprintQualifyingStartingGridPositions": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/StartingGridPosition"
+          },
+          "description": "The sprint qualifying starting grid positions."
+        },
+        "sprintQualifyingResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/RaceResult"
+          },
+          "description": "The sprint qualifying results."
+        },
+        "warmingUpResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PracticeResult"
+          },
+          "description": "The warming-up results."
+        },
+        "startingGridPositions": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/StartingGridPosition"
+          },
+          "description": "The starting grid positions."
+        },
+        "raceResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/RaceResult"
+          },
+          "description": "The race results."
+        },
+        "fastestLaps": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/FastestLap"
+          },
+          "description": "The fastest laps."
+        },
+        "pitStops": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/PitStop"
+          },
+          "description": "The pit stops."
+        },
+        "driverOfTheDayResults": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/DriverOfTheDayResult"
+          },
+          "description": "The driver of the day results."
+        },
+        "driverStandings": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/RaceDriverStanding"
+          },
+          "description": "The driver standings."
+        },
+        "constructorStandings": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/RaceConstructorStanding"
+          },
+          "description": "The constructor standings."
         }
       },
       "required": [
@@ -1237,31 +1169,31 @@
         "laps",
         "distance",
         "scheduledLaps",
-        "scheduledDistance"
+        "scheduledDistance",
+        "preQualifyingResults",
+        "freePractice1Results",
+        "freePractice2Results",
+        "freePractice3Results",
+        "freePractice4Results",
+        "qualifying1Results",
+        "qualifying2Results",
+        "qualifyingResults",
+        "sprintQualifyingStartingGridPositions",
+        "sprintQualifyingResults",
+        "warmingUpResults",
+        "startingGridPositions",
+        "raceResults",
+        "fastestLaps",
+        "pitStops",
+        "driverOfTheDayResults",
+        "driverStandings",
+        "constructorStandings"
       ]
     },
     "PracticeResult": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1324,10 +1256,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1348,24 +1276,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1452,10 +1362,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1482,24 +1388,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1551,10 +1439,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1572,24 +1456,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1709,10 +1575,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1745,24 +1607,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1825,10 +1669,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1849,24 +1689,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1918,10 +1740,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -1939,24 +1757,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1995,10 +1795,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2013,24 +1809,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2057,10 +1835,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverId",
@@ -2072,24 +1846,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "raceId": {
-          "type": "integer",
-          "description": "The race."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year."
-        },
-        "round": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The round."
-        },
-        "positionDisplayOrder": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "The position display order."
-        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2120,10 +1876,6 @@
         }
       },
       "required": [
-        "raceId",
-        "year",
-        "round",
-        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "constructorId",

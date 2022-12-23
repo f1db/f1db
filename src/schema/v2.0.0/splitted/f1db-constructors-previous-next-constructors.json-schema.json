@@ -1,0 +1,41 @@
+{
+  "$id": "https://www.f1db.net/schema/v2.0.0/splitted/f1db-constructors-previous-next-constructors-json-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Constructors Previous Next Constructors JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/PreviousNextConstructor"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "PreviousNextConstructor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parentConstructorId": {
+          "type": "string",
+          "description": "The constructor."
+        },
+        "constructorId": {
+          "type": "string",
+          "description": "The constructor."
+        },
+        "yearFrom": {
+          "type": "integer",
+          "description": "The year from."
+        },
+        "yearTo": {
+          "type": ["integer", "null"],
+          "description": "The year to."
+        }
+      },
+      "required": [
+        "parentConstructorId",
+        "constructorId",
+        "yearFrom",
+        "yearTo"
+      ]
+    }
+  }
+}
