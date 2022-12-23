@@ -1,7 +1,7 @@
 plugins {
     id "java"
     id "distribution"
-    id "org.jreleaser" version "1.1.0"
+    id "org.jreleaser" version "1.3.1"
 }
 
 apply plugin: "net.f1db"
@@ -108,7 +108,7 @@ jreleaser {
     release {
         github {
             enabled = true
-            owner = "f1db"
+            repoOwner = "f1db"
             name = "f1db"
             username = "marceloverdijk"
             commitAuthor {
