@@ -53,6 +53,8 @@ Above changes are also reflected in the SQLite database as separate tables are i
 Because of the new JSON splitted format (which is also available for the Smile format) dedicated
 schema files are available for the splitted files.
 
+Also note that the schema files itself are now part of the release artifacts.
+
 
 ## F1DB JSON Schema
 
