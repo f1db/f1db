@@ -1,4 +1,7 @@
-<img src="./logo.png">
+<p align="center">
+    <img src="./logo-dark.png#gh-dark-mode-only" alt="OnlyF1" width="300" />
+    <img src="./logo-light.png#gh-light-mode-only" alt="OnlyF1" width="300" />
+</p>
 
 ## What is F1DB?
 
@@ -24,7 +27,7 @@ Whether you are building a custom website, mobile application or just using F1DB
   - pit stops
   - driver of the day results
   - standings
-  
+
 New releases will be available as soon as possible after every race. See also [Versioning](#versioning).
 
 Release artifacts are available in the following formats:
@@ -36,11 +39,11 @@ Release artifacts are available in the following formats:
 - SQLite
 
 
-## Notable Changes in `v2023.x` 
+## Notable Changes in `v2023.x`
 
 From version `v2023.x` the CSV and JSON splitted formats are added to the available release artifacts.
 
-Due to this and adding [positions gained to the race standings](https://github.com/f1db/f1db/issues/3) 
+Due to this and adding [positions gained to the race standings](https://github.com/f1db/f1db/issues/3)
 the JSON Schema version is bumped to version `v2.0.0` which has some backward incompatible changes:
 
 - `DriverStanding` has now separate `SeasonDriverStanding`/`RaceDriverStanding` object definitions.
@@ -82,7 +85,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 The SQLite database artifact contains all data in a relational database format
 and is very convenient for people with SQL knowledge that just want to query
-the data instead of processing the JSON format. 
+the data instead of processing the JSON format.
 The database file could also serve students who want to learn SQL.
 
 We suggest to use [SQLiteStudio] for querying the database file.
