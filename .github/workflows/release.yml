@@ -23,5 +23,5 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
       - name: Release with Gradle
         env:
-          JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JRELEASER_GITHUB_TOKEN: ${{ secrets.JRELEASER_GITHUB_TOKEN }}
         run: ./gradlew clean dist assemble jreleaserFullRelease --no-daemon
