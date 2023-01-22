@@ -146,12 +146,11 @@ class OnlyF1DBWriter(
     }
 
     private fun writeSplittedFile(format: Format, outputFileName: String, schemaFileName: String, values: List<Any>) {
-        val outputFileName = "$outputFileName.${format.extension}"
         val schemaFile = File(schemaDir, schemaFileName)
         when (format) {
-            Format.CSV -> writeCsvFile(File(csvOutputDir, outputFileName), values)
-            Format.JSON -> writeJsonFile(File(jsonOutputDir, outputFileName), schemaFile, values)
-            Format.SMILE -> writeSmileFile(File(smileOutputDir, outputFileName), schemaFile, values)
+            Format.CSV -> writeCsvFile(File(csvOutputDir, "$outputFileName.${format.extension}"), values)
+            Format.JSON -> writeJsonFile(File(jsonOutputDir, "$outputFileName.${format.extension}"), schemaFile, values)
+            Format.SMILE -> writeSmileFile(File(smileOutputDir, "$outputFileName.${format.extension}"), schemaFile, values)
             else -> throw IllegalArgumentException()
         }
     }
@@ -496,6 +495,7 @@ class OnlyF1DBWriter(
     }
 
     private fun <T : Any> toMap(obj: T): Map<String, Any?> {
+        @Suppress("UNCHECKED_CAST")
         return (obj::class as KClass<T>).memberProperties.associate { prop ->
             prop.isAccessible = true
             prop.name to prop.get(obj)?.let { value ->
