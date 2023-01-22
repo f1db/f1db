@@ -4,7 +4,7 @@ INSERT INTO driver_family_relationship
 , type
 )
 VALUES
-( ?1.id
-, ?2.driverId
-, ?2.type
+( :parentDriverId
+, :driverId
+, :type
 );

@@ -15,18 +15,18 @@ INSERT INTO race
 , scheduled_distance
 )
 VALUES
-( ?.id
-, ?.year
-, ?.round
-, ?.date
-, ?.grandPrixId
-, ?.officialName
-, ?.qualifyingFormat
-, ?.circuitId
-, ?.circuitType
-, ?.courseLength
-, ?.laps
-, ?.distance
-, ?.scheduledLaps
-, ?.scheduledDistance
+( :id
+, :year
+, :round
+, :date
+, :grandPrixId
+, :officialName
+, :qualifyingFormat
+, :circuitId
+, :circuitType
+, :courseLength
+, :laps
+, :distance
+, :scheduledLaps
+, :scheduledDistance
 );

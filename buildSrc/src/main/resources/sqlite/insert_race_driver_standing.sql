@@ -1,6 +1,5 @@
 INSERT INTO race_driver_standing
-( year
-, round
+( race_id
 , position_display_order
 , position_number
 , position_text
@@ -9,12 +8,11 @@ INSERT INTO race_driver_standing
 , positions_gained
 )
 VALUES
-( ?1.year
-, ?2.round
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.driverId
-, ?3.points
-, ?3.positionsGained
+( :raceId
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :driverId
+, :points
+, :positionsGained
 );

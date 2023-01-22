@@ -7,10 +7,10 @@ INSERT INTO grand_prix
 , total_races_held
 )
 VALUES
-( ?.id
-, ?.name
-, ?.fullName
-, ?.shortName
-, ?.countryId
-, ?.totalRacesHeld
+( :id
+, :name
+, :fullName
+, :shortName
+, :countryId
+, :totalRacesHeld
 );

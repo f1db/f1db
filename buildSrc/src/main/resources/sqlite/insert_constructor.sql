@@ -19,22 +19,22 @@ INSERT INTO constructor
 , total_fastest_laps
 )
 VALUES
-( ?.id
-, ?.name
-, ?.fullName
-, ?.countryId
-, ?.bestChampionshipPosition
-, ?.bestRaceResult
-, ?.bestStartingGridPosition
-, ?.totalChampionshipWins
-, ?.totalRaceEntries
-, ?.totalRaceStarts
-, ?.totalRaceWins
-, ?.total1And2Finishes
-, ?.totalRaceLaps
-, ?.totalPodiums
-, ?.totalPodiumRaces
-, ?.totalChampionshipPoints
-, ?.totalPolePositions
-, ?.totalFastestLaps
+( :id
+, :name
+, :fullName
+, :countryId
+, :bestChampionshipPosition
+, :bestRaceResult
+, :bestStartingGridPosition
+, :totalChampionshipWins
+, :totalRaceEntries
+, :totalRaceStarts
+, :totalRaceWins
+, :total1And2Finishes
+, :totalRaceLaps
+, :totalPodiums
+, :totalPodiumRaces
+, :totalChampionshipPoints
+, :totalPolePositions
+, :totalFastestLaps
 );

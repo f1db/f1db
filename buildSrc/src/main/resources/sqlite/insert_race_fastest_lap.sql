@@ -18,21 +18,21 @@ INSERT INTO race_data
 , fastest_lap_interval_millis
 )
 VALUES
-( ?1.id
-, ?2.type
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.driverNumber
-, ?3.driverId
-, ?3.constructorId
-, ?3.engineManufacturerId
-, ?3.tyreManufacturerId
-, ?3.lap
-, ?3.time
-, ?3.timeMillis
-, ?3.gap
-, ?3.gapMillis
-, ?3.interval
-, ?3.intervalMillis
+( :raceId
+, :type
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :driverNumber
+, :driverId
+, :constructorId
+, :engineManufacturerId
+, :tyreManufacturerId
+, :lap
+, :time
+, :timeMillis
+, :gap
+, :gapMillis
+, :interval
+, :intervalMillis
 );

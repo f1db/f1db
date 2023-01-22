@@ -14,17 +14,17 @@ INSERT INTO tyre_manufacturer
 , total_fastest_laps
 )
 VALUES
-( ?.id
-, ?.name
-, ?.countryId
-, ?.bestRaceResult
-, ?.bestStartingGridPosition
-, ?.totalRaceEntries
-, ?.totalRaceStarts
-, ?.totalRaceWins
-, ?.totalRaceLaps
-, ?.totalPodiums
-, ?.totalPodiumRaces
-, ?.totalPolePositions
-, ?.totalFastestLaps
+( :id
+, :name
+, :countryId
+, :bestRaceResult
+, :bestStartingGridPosition
+, :totalRaceEntries
+, :totalRaceStarts
+, :totalRaceWins
+, :totalRaceLaps
+, :totalPodiums
+, :totalPodiumRaces
+, :totalPolePositions
+, :totalFastestLaps
 );

@@ -8,11 +8,11 @@ INSERT INTO season_constructor_standing
 , points
 )
 VALUES
-( ?1.year
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.constructorId
-, ?3.engineManufacturerId
-, ?3.points
+( :year
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :constructorId
+, :engineManufacturerId
+, :points
 );

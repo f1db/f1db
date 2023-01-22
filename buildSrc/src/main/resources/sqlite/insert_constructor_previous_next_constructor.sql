@@ -5,8 +5,8 @@ INSERT INTO constructor_previous_next_constructor
 , year_to
 )
 VALUES
-( ?1.id
-, ?2.constructorId
-, ?2.yearFrom
-, ?2.yearTo
+( :parentConstructorId
+, :constructorId
+, :yearFrom
+, :yearTo
 );

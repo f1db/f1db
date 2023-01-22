@@ -7,10 +7,10 @@ INSERT INTO season_driver_standing
 , points
 )
 VALUES
-( ?1.year
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.driverId
-, ?3.points
+( :year
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :driverId
+, :points
 );

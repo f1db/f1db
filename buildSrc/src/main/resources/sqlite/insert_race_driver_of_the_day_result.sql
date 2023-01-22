@@ -12,15 +12,15 @@ INSERT INTO race_data
 , driver_of_the_day_percentage
 )
 VALUES
-( ?1.id
-, ?2.type
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.driverNumber
-, ?3.driverId
-, ?3.constructorId
-, ?3.engineManufacturerId
-, ?3.tyreManufacturerId
-, ?3.percentage
+( :raceId
+, :type
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :driverNumber
+, :driverId
+, :constructorId
+, :engineManufacturerId
+, :tyreManufacturerId
+, :percentage
 );

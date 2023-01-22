@@ -7,10 +7,10 @@ INSERT INTO country
 , continent_id
 )
 VALUES
-( ?.id
-, ?.alpha2Code
-, ?.alpha3Code
-, ?.name
-, ?.demonym
-, ?.continentId
+( :id
+, :alpha2Code
+, :alpha3Code
+, :name
+, :demonym
+, :continentId
 );

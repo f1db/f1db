@@ -5,8 +5,8 @@ INSERT INTO season_entrant_constructor
 , engine_manufacturer_id
 )
 VALUES
-( ?1.year
-, ?2.entrantId
-, ?3.constructorId
-, ?3.engineManufacturerId
+( :year
+, :entrantId
+, :constructorId
+, :engineManufacturerId
 );

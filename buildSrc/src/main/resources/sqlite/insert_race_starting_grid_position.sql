@@ -15,18 +15,18 @@ INSERT INTO race_data
 , starting_grid_position_time_millis
 )
 VALUES
-( ?1.id
-, ?2.type
-, ?2.positionDisplayOrder
-, ?3.positionNumber
-, ?3.positionText
-, ?3.driverNumber
-, ?3.driverId
-, ?3.constructorId
-, ?3.engineManufacturerId
-, ?3.tyreManufacturerId
-, ?3.gridPenalty
-, ?3.gridPenaltyPositions
-, ?3.time
-, ?3.timeMillis
+( :raceId
+, :type
+, :positionDisplayOrder
+, :positionNumber
+, :positionText
+, :driverNumber
+, :driverId
+, :constructorId
+, :engineManufacturerId
+, :tyreManufacturerId
+, :gridPenalty
+, :gridPenaltyPositions
+, :time
+, :timeMillis
 );

@@ -9,12 +9,12 @@ INSERT INTO season_entrant_driver
 , test_driver
 )
 VALUES
-( ?1.year
-, ?2.entrantId
-, ?3.constructorId
-, ?3.engineManufacturerId
-, ?4.driverId
-, ?5.rounds
-, ?4.roundsText
-, ?4.testDriver
+( :year
+, :entrantId
+, :constructorId
+, :engineManufacturerId
+, :driverId
+, :rounds
+, :roundsText
+, :testDriver
 );

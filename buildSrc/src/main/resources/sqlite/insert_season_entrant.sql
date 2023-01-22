@@ -4,7 +4,7 @@ INSERT INTO season_entrant
 , country_id
 )
 VALUES
-( ?1.year
-, ?2.entrantId
-, ?2.countryId
+( :year
+, :entrantId
+, :countryId
 );

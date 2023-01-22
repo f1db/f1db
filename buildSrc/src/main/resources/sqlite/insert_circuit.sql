@@ -11,14 +11,14 @@ INSERT INTO circuit
 , total_races_held
 )
 VALUES
-( ?.id
-, ?.name
-, ?.fullName
-, ?2.previousNames
-, ?.type
-, ?.placeName
-, ?.countryId
-, ?.latitude
-, ?.longitude
-, ?.totalRacesHeld
+( :id
+, :name
+, :fullName
+, :previousNames
+, :type
+, :placeName
+, :countryId
+, :latitude
+, :longitude
+, :totalRacesHeld
 );

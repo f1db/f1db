@@ -5,8 +5,8 @@ INSERT INTO continent
 , demonym
 )
 VALUES
-( ?.id
-, ?.code
-, ?.name
-, ?.demonym
+( :id
+, :code
+, :name
+, :demonym
 );

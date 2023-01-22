@@ -3,6 +3,6 @@ INSERT INTO entrant
 , name
 )
 VALUES
-( ?.id
-, ?.name
+( :id
+, :name
 );
