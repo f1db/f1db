@@ -41,6 +41,8 @@ Release artifacts are available in the following formats:
 
 ## Notable Changes in `v2023.x`
 
+The project has been rebranded from F1DB to [OnlyF1]-DB.
+
 From version `v2023.x` the CSV and JSON splitted formats are added to the available release artifacts.
 
 Due to this and adding [positions gained to the race standings](https://github.com/onlyf1com/onlyf1-db/issues/3)
