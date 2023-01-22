@@ -112,11 +112,11 @@ jreleaser {
     release {
         github {
             enabled.set(true)
-            repoOwner.set("onlyf1")
+            repoOwner.set("onlyf1com")
             name.set("onlyf1-db")
             username.set("marceloverdijk")
             commitAuthor {
-                name.set("OnlyF1")
+                name.set("OnlyF1-DB")
                 email.set("info@onlyf1.com")
             }
             skipTag.set(true)
