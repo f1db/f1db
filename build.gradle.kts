@@ -83,7 +83,6 @@ distributions {
 
 jreleaser {
     project {
-        name.set("${project.name}")
         versionPattern.set("CALVER:YYYY.MINOR.MICRO[.MODIFIER]")
         description.set("OnlyF1 Open Source Formula 1 Database")
         license.set("CC-BY-4.0")
@@ -91,30 +90,26 @@ jreleaser {
     }
     files {
         artifact {
-            setPath("$buildDir/distributions/${project.name}-csv-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-csv-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-json-single-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-json-single-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-json-splitted-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-json-splitted-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-smile-single-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-smile-single-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-smile-splitted-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-smile-splitted-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-sqlite-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/{{projectName}}-sqlite-{{projectVersion}}.zip")
         }
     }
     release {
         github {
-            enabled.set(true)
-            repoOwner.set("onlyf1com")
-            name.set("onlyf1-db")
-            username.set("marceloverdijk")
             commitAuthor {
                 name.set("OnlyF1-DB")
                 email.set("info@onlyf1.com")
