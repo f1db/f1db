@@ -42,6 +42,7 @@ Release artifacts are available in the following formats:
 ## Notable Changes in `v2023.x`
 
 The project has been rebranded from F1DB to [OnlyF1]-DB.
+Old release artifacts and data version history can still be found in this repository.
 
 From version `v2023.x` the CSV and JSON splitted formats are added to the available release artifacts.
 
