@@ -6,6 +6,7 @@ plugins {
 
 group = "com.onlyf1"
 
+val projectName = project.name
 val currentSeasonYear: String by project
 val currentSeasonFinished: String by project
 val currentSeasonDriversChampionshipDecided: String by project
@@ -29,25 +30,25 @@ repositories {
 
 distributions {
     create("csv") {
-        distributionBaseName.set("${project.name}-csv")
+        distributionBaseName.set("${projectName}-csv")
         contents {
             from("$buildDir/data/csv")
             include("*.csv")
         }
     }
     create("json-single") {
-        distributionBaseName.set("${project.name}-json-single")
+        distributionBaseName.set("${projectName}-json-single")
         contents {
-            from("$buildDir/data/json/${project.name}.json")
-            from("$projectDir/src/schema/current/single/${project.name}.schema.json")
+            from("$buildDir/data/json/${projectName}.json")
+            from("$projectDir/src/schema/current/single/${projectName}.schema.json")
         }
     }
     create("json-splitted") {
-        distributionBaseName.set("${project.name}-json-splitted")
+        distributionBaseName.set("${projectName}-json-splitted")
         contents {
             from("$buildDir/data/json") {
                 include("*.json")
-                exclude("${project.name}-single.json")
+                exclude("${projectName}-single.json")
             }
             from("$projectDir/src/schema/current/splitted") {
                 include("*.schema.json")
@@ -55,18 +56,18 @@ distributions {
         }
     }
     create("smile-single") {
-        distributionBaseName.set("${project.name}-smile-single")
+        distributionBaseName.set("${projectName}-smile-single")
         contents {
-            from("$buildDir/data/smile/${project.name}.sml")
-            from("$projectDir/src/schema/current/single/${project.name}.schema.json")
+            from("$buildDir/data/smile/${projectName}.sml")
+            from("$projectDir/src/schema/current/single/${projectName}.schema.json")
         }
     }
     create("smile-splitted") {
-        distributionBaseName.set("${project.name}-smile-splitted")
+        distributionBaseName.set("${projectName}-smile-splitted")
         contents {
             from("$buildDir/data/smile") {
                 include("*.sml")
-                exclude("${project.name}-single.sml")
+                exclude("${projectName}-single.sml")
             }
             from("$projectDir/src/schema/current/splitted") {
                 include("*.schema.json")
@@ -74,16 +75,16 @@ distributions {
         }
     }
     create("sqlite") {
-        distributionBaseName.set("${project.name}-sqlite")
+        distributionBaseName.set("${projectName}-sqlite")
         contents {
-            from("$buildDir/data/sqlite/${project.name}.db")
+            from("$buildDir/data/sqlite/${projectName}.db")
         }
     }
 }
 
 jreleaser {
     project {
-        name.set("${project.name}")
+        name.set(projectName)
         versionPattern.set("CALVER:YYYY.MINOR.MICRO[.MODIFIER]")
         description.set("OnlyF1 Open Source Formula 1 Database")
         license.set("CC-BY-4.0")
@@ -91,22 +92,22 @@ jreleaser {
     }
     files {
         artifact {
-            setPath("$buildDir/distributions/${project.name}-csv-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-csv-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-json-single-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-json-single-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-json-splitted-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-json-splitted-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-smile-single-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-smile-single-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-smile-splitted-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-smile-splitted-{{projectVersion}}.zip")
         }
         artifact {
-            setPath("$buildDir/distributions/${project.name}-sqlite-{{projectVersion}}.zip")
+            setPath("$buildDir/distributions/${projectName}-sqlite-{{projectVersion}}.zip")
         }
     }
     release {
