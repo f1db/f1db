@@ -14,7 +14,7 @@ VALUES
 , :constructorId
 , :engineManufacturerId
 , :driverId
-, :rounds
+, :roundsAsString
 , :roundsText
 , :testDriver
 );

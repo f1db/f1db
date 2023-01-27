@@ -11,25 +11,21 @@ import com.fasterxml.jackson.dataformat.smile.SmileFactory
 import com.fasterxml.jackson.dataformat.smile.databind.SmileMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import com.onlyf1.db.plugin.extensions.batchUpdate
-import com.onlyf1.db.plugin.extensions.execute
 import com.onlyf1.db.plugin.extensions.splitted
+import com.onlyf1.db.plugin.writer.sql.OnlyF1DBDao
 import com.onlyf1.db.schema.single.OnlyF1DB
+import org.jdbi.v3.core.Jdbi
+import org.jdbi.v3.core.kotlin.KotlinPlugin
+import org.jdbi.v3.sqlobject.kotlin.KotlinSqlObjectPlugin
+import org.jdbi.v3.sqlobject.kotlin.onDemand
 import org.leadpony.joy.classic.ClassicJsonProvider
 import org.leadpony.justify.api.JsonValidationService
 import org.leadpony.justify.api.ProblemHandler
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
-import org.sqlite.SQLiteDataSource
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileReader
 import java.io.InputStreamReader
-import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
-import kotlin.reflect.KClass
-import kotlin.reflect.full.memberProperties
-import kotlin.reflect.jvm.isAccessible
 
 /**
  * The OnlyF1-DB writer.
@@ -250,261 +246,60 @@ class OnlyF1DBWriter(
 
         println("Writing ${outputFile.name}....")
 
-        val dataSource = SQLiteDataSource()
-        dataSource.url = "jdbc:sqlite:${outputFile.absolutePath}"
-        val jdbcTemplate = NamedParameterJdbcTemplate(dataSource)
-        var sql: String
-        var batchValues: List<Map<String, Any?>>
+        Class.forName("org.sqlite.JDBC")
+
+        val jdbi = Jdbi.create("jdbc:sqlite:${outputFile.absolutePath}")
+        jdbi.installPlugin(KotlinPlugin())
+        jdbi.installPlugin(KotlinSqlObjectPlugin())
+
+        val dao = jdbi.onDemand<OnlyF1DBDao>()
 
         // Create schema.
 
-        sql = readResource("/sqlite/create_schema.sql")
-        sql.split(";").filter { it.isNotBlank() }.forEach {
-            jdbcTemplate.execute(it)
-        }
+        dao.createSchema()
 
         // Insert data.
 
-        sql = readResource("/sqlite/insert_continent.sql")
-        batchValues = db.splitted.continents.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_country.sql")
-        batchValues = db.splitted.countries.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_driver.sql")
-        batchValues = db.splitted.drivers.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_driver_family_relationship.sql")
-        batchValues = db.splitted.driverFamilyRelationships.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_constructor.sql")
-        batchValues = db.splitted.constructors.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_constructor_previous_next_constructor.sql")
-        batchValues = db.splitted.constructorPreviousNextConstructors.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_engine_manufacturer.sql")
-        batchValues = db.splitted.engineManufacturers.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_tyre_manufacturer.sql")
-        batchValues = db.splitted.tyreManufacturers.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_entrant.sql")
-        batchValues = db.splitted.entrants.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_circuit.sql")
-        batchValues = db.splitted.circuits.map {
-            val value = toMap(it).toMutableMap()
-            value["previousNames"] = it.previousNames?.joinToString(";")
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_grand_prix.sql")
-        batchValues = db.splitted.grandsPrix.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season.sql")
-        batchValues = db.splitted.seasons.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_entrant.sql")
-        batchValues = db.splitted.seasonEntrants.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_entrant_constructor.sql")
-        batchValues = db.splitted.seasonEntrantConstructors.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_entrant_tyre_manufacturer.sql")
-        batchValues = db.splitted.seasonEntrantTyreManufacturers.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_entrant_driver.sql")
-        batchValues = db.splitted.seasonEntrantDrivers.map {
-            val value = toMap(it).toMutableMap()
-            value["rounds"] = it.rounds?.joinToString(";")
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_driver_standing.sql")
-        batchValues = db.splitted.seasonDriverStandings.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_season_constructor_standing.sql")
-        batchValues = db.splitted.seasonConstructorStandings.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race.sql")
-        batchValues = db.splitted.races.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-        batchValues = db.splitted.racePreQualifyingResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "PRE_QUALIFYING_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_practice_result.sql")
-        batchValues = db.splitted.raceFreePractice1Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "FREE_PRACTICE_1_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_practice_result.sql")
-        batchValues = db.splitted.raceFreePractice2Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "FREE_PRACTICE_2_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_practice_result.sql")
-        batchValues = db.splitted.raceFreePractice3Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "FREE_PRACTICE_3_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_practice_result.sql")
-        batchValues = db.splitted.raceFreePractice4Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "FREE_PRACTICE_4_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-        batchValues = db.splitted.raceQualifying1Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "QUALIFYING_1_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-        batchValues = db.splitted.raceQualifying2Results.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "QUALIFYING_2_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_qualifying_result.sql")
-        batchValues = db.splitted.raceQualifyingResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "QUALIFYING_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_practice_result.sql")
-        batchValues = db.splitted.raceWarmingUpResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "WARMING_UP_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
-        batchValues = db.splitted.raceSprintQualifyingStartingGridPositions.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "SPRINT_QUALIFYING_STARTING_GRID_POSITION"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_race_result.sql")
-        batchValues = db.splitted.raceSprintQualifyingResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "SPRINT_QUALIFYING_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_starting_grid_position.sql")
-        batchValues = db.splitted.raceStartingGridPositions.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "STARTING_GRID_POSITION"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_race_result.sql")
-        batchValues = db.splitted.raceRaceResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "RACE_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_fastest_lap.sql")
-        batchValues = db.splitted.raceFastestLaps.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "FASTEST_LAP"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_pit_stop.sql")
-        batchValues = db.splitted.racePitStops.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "PIT_STOP"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_driver_of_the_day_result.sql")
-        batchValues = db.splitted.raceDriverOfTheDayResults.map {
-            val value = toMap(it).toMutableMap()
-            value["type"] = "DRIVER_OF_THE_DAY_RESULT"
-            value
-        }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_driver_standing.sql")
-        batchValues = db.splitted.raceDriverStandings.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
-
-        sql = readResource("/sqlite/insert_race_constructor_standing.sql")
-        batchValues = db.splitted.raceConstructorStandings.map { toMap(it) }
-        jdbcTemplate.batchUpdate(sql, batchValues)
+        dao.insertContinents(db.splitted.continents)
+        dao.insertCountries(db.splitted.countries)
+        dao.insertDrivers(db.splitted.drivers)
+        dao.insertDriverFamilyRelationships(db.splitted.driverFamilyRelationships)
+        dao.insertConstructors(db.splitted.constructors)
+        dao.insertConstructorPreviousNextConstructors(db.splitted.constructorPreviousNextConstructors)
+        dao.insertEngineManufacturers(db.splitted.engineManufacturers)
+        dao.insertTyreManufacturers(db.splitted.tyreManufacturers)
+        dao.insertEntrants(db.splitted.entrants)
+        dao.insertCircuits(db.splitted.circuits, db.splitted.circuits.map { it.previousNames?.joinToString(";") })
+        dao.insertGrandsPrix(db.splitted.grandsPrix)
+        dao.insertSeasons(db.splitted.seasons)
+        dao.insertSeasonEntrants(db.splitted.seasonEntrants)
+        dao.insertSeasonEntrantConstructors(db.splitted.seasonEntrantConstructors)
+        dao.insertSeasonEntrantTyreManufacturers(db.splitted.seasonEntrantTyreManufacturers)
+        dao.insertSeasonEntrantDrivers(db.splitted.seasonEntrantDrivers, db.splitted.seasonEntrantDrivers.map { it.rounds?.joinToString(";") })
+        dao.insertSeasonDriverStandings(db.splitted.seasonDriverStandings)
+        dao.insertSeasonConstructorStandings(db.splitted.seasonConstructorStandings)
+        dao.insertRaces(db.splitted.races)
+        dao.insertRaceQualifyingResult(db.splitted.racePreQualifyingResults, "PRE_QUALIFYING_RESULT")
+        dao.insertRacePracticeResult(db.splitted.raceFreePractice1Results, "FREE_PRACTICE_1_RESULT")
+        dao.insertRacePracticeResult(db.splitted.raceFreePractice2Results, "FREE_PRACTICE_2_RESULT")
+        dao.insertRacePracticeResult(db.splitted.raceFreePractice3Results, "FREE_PRACTICE_3_RESULT")
+        dao.insertRacePracticeResult(db.splitted.raceFreePractice4Results, "FREE_PRACTICE_4_RESULT")
+        dao.insertRaceQualifyingResult(db.splitted.raceQualifying1Results, "QUALIFYING_1_RESULT")
+        dao.insertRaceQualifyingResult(db.splitted.raceQualifying2Results, "QUALIFYING_2_RESULT")
+        dao.insertRaceQualifyingResult(db.splitted.raceQualifyingResults, "QUALIFYING_RESULT")
+        dao.insertRacePracticeResult(db.splitted.raceWarmingUpResults, "WARMING_UP_RESULT")
+        dao.insertRaceStartingGridPosition(db.splitted.raceSprintQualifyingStartingGridPositions, "SPRINT_QUALIFYING_STARTING_GRID_POSITION")
+        dao.insertRaceRaceResult(db.splitted.raceSprintQualifyingResults, "SPRINT_QUALIFYING_RESULT")
+        dao.insertRaceStartingGridPosition(db.splitted.raceStartingGridPositions, "STARTING_GRID_POSITION")
+        dao.insertRaceRaceResult(db.splitted.raceRaceResults, "RACE_RESULT")
+        dao.insertRaceFastestLap(db.splitted.raceFastestLaps, "FASTEST_LAP")
+        dao.insertRacePitStop(db.splitted.racePitStops, "PIT_STOP")
+        dao.insertRaceDriverOfTheDayResult(db.splitted.raceDriverOfTheDayResults, "DRIVER_OF_THE_DAY_RESULT")
+        dao.insertRaceDriverStandings(db.splitted.raceDriverStandings)
+        dao.insertRaceConstructorStandings(db.splitted.raceConstructorStandings)
 
         // Rebuild the database; repacking it into a minimal amount of disk space.
 
-        jdbcTemplate.execute("VACUUM;")
-    }
-
-    private fun readResource(resource: String, charset: Charset = StandardCharsets.UTF_8): String {
-        return javaClass.getResource(resource).readText(charset)
-    }
-
-    private fun <T : Any> toMap(obj: T): Map<String, Any?> {
-        @Suppress("UNCHECKED_CAST")
-        return (obj::class as KClass<T>).memberProperties.associate { prop ->
-            prop.isAccessible = true
-            prop.name to prop.get(obj)?.let { value ->
-                if (value::class.isData) {
-                    toMap(value)
-                } else {
-                    value
-                }
-            }
-        }
+        dao.vacuum()
     }
 }

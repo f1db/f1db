@@ -19,7 +19,7 @@ INSERT INTO race_data
 )
 VALUES
 ( :raceId
-, :type
+, :raceDataType
 , :positionDisplayOrder
 , :positionNumber
 , :positionText

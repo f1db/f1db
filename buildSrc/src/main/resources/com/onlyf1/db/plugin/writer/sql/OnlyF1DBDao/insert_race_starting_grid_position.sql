@@ -9,17 +9,14 @@ INSERT INTO race_data
 , constructor_id
 , engine_manufacturer_id
 , tyre_manufacturer_id
-, practice_time
-, practice_time_millis
-, practice_gap
-, practice_gap_millis
-, practice_interval
-, practice_interval_millis
-, practice_laps
+, starting_grid_position_grid_penalty
+, starting_grid_position_grid_penalty_positions
+, starting_grid_position_time
+, starting_grid_position_time_millis
 )
 VALUES
 ( :raceId
-, :type
+, :raceDataType
 , :positionDisplayOrder
 , :positionNumber
 , :positionText
@@ -28,11 +25,8 @@ VALUES
 , :constructorId
 , :engineManufacturerId
 , :tyreManufacturerId
+, :gridPenalty
+, :gridPenaltyPositions
 , :time
 , :timeMillis
-, :gap
-, :gapMillis
-, :interval
-, :intervalMillis
-, :laps
 );

@@ -15,6 +15,7 @@ gradlePlugin {
 }
 
 val jacksonVersion by extra("2.14.1")
+val jdbiVersion by extra("3.36.0")
 val joyVersion by extra("2.1.0")
 val justifyVersion by extra("3.1.0")
 val mapstructVersion by extra("1.5.3.Final")
@@ -33,11 +34,13 @@ dependencies {
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jacksonVersion")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
+    implementation("org.jdbi:jdbi3-core:$jdbiVersion")
+    implementation("org.jdbi:jdbi3-kotlin:$jdbiVersion")
+    implementation("org.jdbi:jdbi3-kotlin-sqlobject:$jdbiVersion")
     implementation("org.leadpony.joy:joy-classic:$joyVersion")
     implementation("org.leadpony.justify:justify:$justifyVersion")
     implementation("org.mapstruct:mapstruct:$mapstructVersion")
     implementation("org.slf4j:slf4j-simple:$slf4jVersion")
-    implementation("org.springframework:spring-jdbc:$springVersion")
     implementation("org.xerial:sqlite-jdbc:$sqliteJdbcVersion")
     kapt("org.mapstruct:mapstruct-processor:$mapstructVersion")
 }

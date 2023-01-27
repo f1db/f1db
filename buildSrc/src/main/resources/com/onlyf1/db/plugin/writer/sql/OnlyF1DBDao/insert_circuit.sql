@@ -14,7 +14,7 @@ VALUES
 ( :id
 , :name
 , :fullName
-, :previousNames
+, :previousNamesAsString
 , :type
 , :placeName
 , :countryId

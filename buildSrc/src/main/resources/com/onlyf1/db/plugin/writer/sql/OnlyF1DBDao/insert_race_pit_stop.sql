@@ -9,11 +9,14 @@ INSERT INTO race_data
 , constructor_id
 , engine_manufacturer_id
 , tyre_manufacturer_id
-, driver_of_the_day_percentage
+, pit_stop_stop
+, pit_stop_lap
+, pit_stop_time
+, pit_stop_time_millis
 )
 VALUES
 ( :raceId
-, :type
+, :raceDataType
 , :positionDisplayOrder
 , :positionNumber
 , :positionText
@@ -22,5 +25,8 @@ VALUES
 , :constructorId
 , :engineManufacturerId
 , :tyreManufacturerId
-, :percentage
+, :stop
+, :lap
+, :time
+, :timeMillis
 );
