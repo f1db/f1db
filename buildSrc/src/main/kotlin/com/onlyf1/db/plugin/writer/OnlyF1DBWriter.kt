@@ -26,6 +26,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileReader
 import java.io.InputStreamReader
+import java.util.Properties
 
 /**
  * The OnlyF1-DB writer.
@@ -248,7 +249,10 @@ class OnlyF1DBWriter(
 
         Class.forName("org.sqlite.JDBC")
 
-        val jdbi = Jdbi.create("jdbc:sqlite:${outputFile.absolutePath}")
+        val jdbi = Jdbi.create("jdbc:sqlite:${outputFile.absolutePath}", Properties().apply {
+            setProperty("date_class", "text")
+            setProperty("date_string_format", "yyyy-MM-dd")
+        })
         jdbi.installPlugin(KotlinPlugin())
         jdbi.installPlugin(KotlinSqlObjectPlugin())
 
