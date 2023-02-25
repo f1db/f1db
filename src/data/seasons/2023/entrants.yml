@@ -74,9 +74,9 @@
   engineManufacturerId: red-bull-powertrains
   tyreManufacturerId: pirelli
   drivers:
-    - driverId: yuki-tsunoda
-      rounds:
     - driverId: nyck-de-vries
+      rounds:
+    - driverId: yuki-tsunoda
       rounds:
 - entrantId: scuderia-ferrari
   countryId: italy
