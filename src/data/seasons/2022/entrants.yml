@@ -93,7 +93,7 @@
 - entrantId: oracle-red-bull-racing
   countryId: austria
   constructorId: red-bull
-  engineManufacturerId: red-bull-powertrains
+  engineManufacturerId: rbpt
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
@@ -109,7 +109,7 @@
 - entrantId: scuderia-alphatauri
   countryId: italy
   constructorId: alphatauri
-  engineManufacturerId: red-bull-powertrains
+  engineManufacturerId: rbpt
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
