@@ -20,7 +20,7 @@ val joyVersion by extra("2.1.0")
 val justifyVersion by extra("3.1.0")
 val mapstructVersion by extra("1.5.3.Final")
 val slf4jVersion by extra("1.7.36")
-val sqliteJdbcVersion by extra("3.40.1.0")
+val sqliteJdbcVersion by extra("3.41.0.0")
 
 repositories {
     mavenCentral()
