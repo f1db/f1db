@@ -144,6 +144,8 @@ To build the distribution zips simply run:
 
     ./gradlew clean dist assemble
 
+Requires Java 17.
+
 
 ## Releasing
 
