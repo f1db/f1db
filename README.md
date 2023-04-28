@@ -39,6 +39,24 @@ Release artifacts are available in the following formats:
 - SQLite
 
 
+## Notable Changes in `v2023.4.0`
+
+Due to the new Sprint Shootout race format introduced for the 2023 season (starting from the Azerbaijan Grand Prix)
+the JSON Schema is bumped to version `v3.0.0` which has some backward incompatible changes:
+
+- `Race.sprintQualifyingStartingGridPositions` renamed to `Race.sprintRaceQualifyingResults`.
+- `Race.sprintQualifyingResults` renamed to `Race.sprintRaceRaceResults`.
+
+Besides the backward incompatible changes, the following is added:
+
+- `Race.sprintRaceQualifyingResults` which contains the Sprint race qualifying results.
+- `Race.sprintRaceQualifyingFormat` which contains the Sprint race qualifying format (currently only `SPRINT_SHOOTOUT`).
+
+Above changes are also reflected in the SQLite database which includes changing some view names.
+
+Also the Sprint race related source files for previous years have been renamed.
+
+
 ## Notable Changes in `v2023.x`
 
 The project has been rebranded from F1DB to [OnlyF1]-DB.
@@ -74,15 +92,16 @@ Both the JSON and Smile artifacts validate against the OnlyF1-DB Json Schema.
 
 #### Schema version compatibility / history
 
-| Version                  | Schema Version                                                                                                                                                                                                                                                        |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `>=` `v2023.0.0.beta1`   | [`onlyf1-db.schema.json v2.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v2.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v2.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v2.0.0/splitted) |
-| `>=` `v2022.1.1`         | [`f1db-json-schema-v1.4.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.4.0.json)                                                                                                                             |
-| `>=` `v2022.0.0`         | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                             |
-| `>=` `v2022.0.0.beta4`   | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                             |
-| `>=` `v2022.0.0.beta3`   | [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.2.0.json)                                                                                                                             |
-| `>=` `v2022.0.0.beta2`   | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.1.0.json)                                                                                                                             |
-| `>=` `v2022.0.0.alpha1`  | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                             |
+| Version                 | Schema Version                                                                                                                                                                                                                                                        |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2023.4.0`        | [`onlyf1-db.schema.json v3.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.0.0/splitted) |
+| `>=` `v2023.0.0.beta1`  | [`onlyf1-db.schema.json v2.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v2.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v2.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v2.0.0/splitted) |
+| `>=` `v2022.1.1`        | [`f1db-json-schema-v1.4.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.4.0.json)                                                                                                                             |
+| `>=` `v2022.0.0`        | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                             |
+| `>=` `v2022.0.0.beta4`  | [`f1db-json-schema-v1.3.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.3.0.json)                                                                                                                             |
+| `>=` `v2022.0.0.beta3`  | [`f1db-json-schema-v1.2.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.2.0.json)                                                                                                                             |
+| `>=` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.1.0.json)                                                                                                                             |
+| `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                             |
 
 
 ## OnlyF1-DB SQLite Database

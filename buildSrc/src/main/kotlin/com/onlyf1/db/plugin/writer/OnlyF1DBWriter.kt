@@ -127,8 +127,9 @@ class OnlyF1DBWriter(
         writeSplittedFile(format, "$projectName-races-qualifying-1-results", "splitted/$projectName-races-qualifying-results.schema.json", db.splitted.raceQualifying1Results)
         writeSplittedFile(format, "$projectName-races-qualifying-2-results", "splitted/$projectName-races-qualifying-results.schema.json", db.splitted.raceQualifying2Results)
         writeSplittedFile(format, "$projectName-races-qualifying-results", "splitted/$projectName-races-qualifying-results.schema.json", db.splitted.raceQualifyingResults)
-        writeSplittedFile(format, "$projectName-races-sprint-qualifying-starting-grid-positions", "splitted/$projectName-races-starting-grid-positions.schema.json", db.splitted.raceSprintQualifyingStartingGridPositions)
-        writeSplittedFile(format, "$projectName-races-sprint-qualifying-results", "splitted/$projectName-races-race-results.schema.json", db.splitted.raceSprintQualifyingResults)
+        writeSplittedFile(format, "$projectName-races-sprint-race-qualifying-results", "splitted/$projectName-races-qualifying-results.schema.json", db.splitted.raceSprintRaceQualifyingResults)
+        writeSplittedFile(format, "$projectName-races-sprint-race-starting-grid-positions", "splitted/$projectName-races-starting-grid-positions.schema.json", db.splitted.raceSprintRaceStartingGridPositions)
+        writeSplittedFile(format, "$projectName-races-sprint-race-race-results", "splitted/$projectName-races-race-results.schema.json", db.splitted.raceSprintRaceRaceResults)
         writeSplittedFile(format, "$projectName-races-warming-up-results", "splitted/$projectName-races-practice-results.schema.json", db.splitted.raceWarmingUpResults)
         writeSplittedFile(format, "$projectName-races-starting-grid-positions", "splitted/$projectName-races-starting-grid-positions.schema.json", db.splitted.raceStartingGridPositions)
         writeSplittedFile(format, "$projectName-races-race-results", "splitted/$projectName-races-race-results.schema.json", db.splitted.raceRaceResults)
@@ -153,6 +154,10 @@ class OnlyF1DBWriter(
     }
 
     private fun writeCsvFile(outputFile: File, values: List<Any>) {
+
+        if (values.isEmpty()) {
+            return
+        }
 
         println("Writing ${outputFile.name}....")
 
@@ -291,9 +296,10 @@ class OnlyF1DBWriter(
         dao.insertRaceQualifyingResult(db.splitted.raceQualifying1Results, "QUALIFYING_1_RESULT")
         dao.insertRaceQualifyingResult(db.splitted.raceQualifying2Results, "QUALIFYING_2_RESULT")
         dao.insertRaceQualifyingResult(db.splitted.raceQualifyingResults, "QUALIFYING_RESULT")
+        dao.insertRaceQualifyingResult(db.splitted.raceSprintRaceQualifyingResults, "SPRINT_RACE_QUALIFYING_RESULT")
+        dao.insertRaceStartingGridPosition(db.splitted.raceSprintRaceStartingGridPositions, "SPRINT_RACE_STARTING_GRID_POSITION")
+        dao.insertRaceRaceResult(db.splitted.raceSprintRaceRaceResults, "SPRINT_RACE_RACE_RESULT")
         dao.insertRacePracticeResult(db.splitted.raceWarmingUpResults, "WARMING_UP_RESULT")
-        dao.insertRaceStartingGridPosition(db.splitted.raceSprintQualifyingStartingGridPositions, "SPRINT_QUALIFYING_STARTING_GRID_POSITION")
-        dao.insertRaceRaceResult(db.splitted.raceSprintQualifyingResults, "SPRINT_QUALIFYING_RESULT")
         dao.insertRaceStartingGridPosition(db.splitted.raceStartingGridPositions, "STARTING_GRID_POSITION")
         dao.insertRaceRaceResult(db.splitted.raceRaceResults, "RACE_RESULT")
         dao.insertRaceFastestLap(db.splitted.raceFastestLaps, "FASTEST_LAP")

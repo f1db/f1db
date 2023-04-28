@@ -6,6 +6,7 @@ INSERT INTO race
 , grand_prix_id
 , official_name
 , qualifying_format
+, sprint_race_qualifying_format
 , circuit_id
 , circuit_type
 , course_length
@@ -22,6 +23,7 @@ VALUES
 , :grandPrixId
 , :officialName
 , :qualifyingFormat
+, :sprintRaceQualifyingFormat
 , :circuitId
 , :circuitType
 , :courseLength

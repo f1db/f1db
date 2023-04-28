@@ -251,21 +251,30 @@ class Splitted(private val db: OnlyF1DB) {
                 }
             }
 
-    val raceSprintQualifyingStartingGridPositions: List<StartingGridPosition>
+    val raceSprintRaceQualifyingResults: List<QualifyingResult>
         get() = db.races
-            .filter { it.sprintQualifyingStartingGridPositions != null }
+            .filter { it.sprintRaceQualifyingResults != null }
             .flatMap { race ->
-                race.sprintQualifyingStartingGridPositions.mapIndexed { index, sprintQualifyingStartingGridPosition ->
-                    StartingGridPositionMapper.INSTANCE.toSplittedStartingGridPosition(sprintQualifyingStartingGridPosition, race, index + 1)
+                race.sprintRaceQualifyingResults.mapIndexed { index, sprintRaceQualifyingResult ->
+                    QualifyingResultMapper.INSTANCE.toSplittedQualifyingResult(sprintRaceQualifyingResult, race, index + 1)
                 }
             }
 
-    val raceSprintQualifyingResults: List<RaceResult>
+    val raceSprintRaceStartingGridPositions: List<StartingGridPosition>
         get() = db.races
-            .filter { it.sprintQualifyingResults != null }
+            .filter { it.sprintRaceStartingGridPositions != null }
             .flatMap { race ->
-                race.sprintQualifyingResults.mapIndexed { index, sprintQualifyingResult ->
-                    RaceResultMapper.INSTANCE.toSplittedRaceResult(sprintQualifyingResult, race, index + 1)
+                race.sprintRaceStartingGridPositions.mapIndexed { index, sprintRaceStartingGridPosition ->
+                    StartingGridPositionMapper.INSTANCE.toSplittedStartingGridPosition(sprintRaceStartingGridPosition, race, index + 1)
+                }
+            }
+
+    val raceSprintRaceRaceResults: List<RaceResult>
+        get() = db.races
+            .filter { it.sprintRaceRaceResults != null }
+            .flatMap { race ->
+                race.sprintRaceRaceResults.mapIndexed { index, sprintRaceRaceResult ->
+                    RaceResultMapper.INSTANCE.toSplittedRaceResult(sprintRaceRaceResult, race, index + 1)
                 }
             }
 

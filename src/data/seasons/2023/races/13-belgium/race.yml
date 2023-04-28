@@ -3,7 +3,8 @@ round: 13
 date: 2023-07-30
 grandPrixId: belgium
 officialName: Formula 1 Belgian Grand Prix 2023
-qualifyingFormat: SPRINT_RACE
+qualifyingFormat: KNOCKOUT
+sprintRaceQualifyingFormat: SPRINT_SHOOTOUT
 circuitId: spa-francorchamps
 circuitType: RACE
 courseLength: 7.004

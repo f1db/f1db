@@ -79,7 +79,7 @@ class OnlyF1DBReader(
 
         // Read seasons.
 
-        File(sourceDir, "seasons").listFiles().sortedArray().forEach { seasonDir ->
+        File(sourceDir, "seasons").listFiles()?.sortedArray()?.forEach { seasonDir ->
 
             val year = seasonDir.name.toInt()
 
@@ -95,7 +95,7 @@ class OnlyF1DBReader(
 
             // Read races
 
-            File(seasonDir, "races").listFiles().sortedArray().forEach { raceDir ->
+            File(seasonDir, "races").listFiles()?.sortedArray()?.forEach { raceDir ->
 
                 // Read race.
 
@@ -109,8 +109,9 @@ class OnlyF1DBReader(
                 race.qualifying1Results = readValues(raceDir, "qualifying-1-results.yml")
                 race.qualifying2Results = readValues(raceDir, "qualifying-2-results.yml")
                 race.qualifyingResults = readValues(raceDir, "qualifying-results.yml")
-                race.sprintQualifyingStartingGridPositions = readValues(raceDir, "sprint-qualifying-starting-grid-positions.yml")
-                race.sprintQualifyingResults = readValues(raceDir, "sprint-qualifying-results.yml")
+                race.sprintRaceQualifyingResults = readValues(raceDir, "sprint-race-qualifying-results.yml")
+                race.sprintRaceStartingGridPositions = readValues(raceDir, "sprint-race-starting-grid-positions.yml")
+                race.sprintRaceRaceResults = readValues(raceDir, "sprint-race-race-results.yml")
                 race.warmingUpResults = readValues(raceDir, "warming-up-results.yml")
                 race.startingGridPositions = readValues(raceDir, "starting-grid-positions.yml")
                 race.raceResults = readValues(raceDir, "race-results.yml")
@@ -241,8 +242,8 @@ class OnlyF1DBReader(
 
             // Enrich sprint qualifying results.
 
-            race.sprintQualifyingResults?.forEach { sprintQualifyingResult ->
-                sprintQualifyingResult.positionsGained = calculatePositionsGained(sprintQualifyingResult, race.sprintQualifyingStartingGridPositions)
+            race.sprintRaceRaceResults?.forEach { sprintRaceRaceResult ->
+                sprintRaceRaceResult.positionsGained = calculatePositionsGained(sprintRaceRaceResult, race.sprintRaceStartingGridPositions)
             }
 
             // Enrich race results.
@@ -259,7 +260,7 @@ class OnlyF1DBReader(
 
             // Total points.
 
-            ((race.raceResults ?: emptyList()) + (race.sprintQualifyingResults ?: emptyList())).forEach { raceResult ->
+            ((race.raceResults ?: emptyList()) + (race.sprintRaceRaceResults ?: emptyList())).forEach { raceResult ->
                 if (raceResult.points != null) {
                     val driver = db.drivers.first { it.id == raceResult.driverId }
                     driver.totalPoints += raceResult.points
@@ -282,14 +283,14 @@ class OnlyF1DBReader(
             val raceWins = mutableListOf<Any>()
             val podiums = mutableListOf<Any>()
 
-            race.sprintQualifyingStartingGridPositions?.forEach { sprintQualifyingStartingGridPosition ->
+            race.sprintRaceStartingGridPositions?.forEach { sprintRaceStartingGridPosition ->
 
-                if (sprintQualifyingStartingGridPosition.positionNumber == 1 && race.year >= 2022) {
+                if (sprintRaceStartingGridPosition.positionNumber == 1 && race.year == 2022) {
 
-                    val driver = db.drivers.first { it.id == sprintQualifyingStartingGridPosition.driverId }
-                    val constructor = db.constructors.first { it.id == sprintQualifyingStartingGridPosition.constructorId }
-                    val engineManufacturer = db.engineManufacturers.first { it.id == sprintQualifyingStartingGridPosition.engineManufacturerId }
-                    val tyreManufacturer = db.tyreManufacturers.first { it.id == sprintQualifyingStartingGridPosition.tyreManufacturerId }
+                    val driver = db.drivers.first { it.id == sprintRaceStartingGridPosition.driverId }
+                    val constructor = db.constructors.first { it.id == sprintRaceStartingGridPosition.constructorId }
+                    val engineManufacturer = db.engineManufacturers.first { it.id == sprintRaceStartingGridPosition.engineManufacturerId }
+                    val tyreManufacturer = db.tyreManufacturers.first { it.id == sprintRaceStartingGridPosition.tyreManufacturerId }
 
                     // Total pole positions.
 
@@ -322,7 +323,7 @@ class OnlyF1DBReader(
 
                 // Total pole positions.
 
-                if (startingGridPosition.positionNumber == 1 && (race.year < 2022 || race.qualifyingFormat != Race.QualifyingFormat.SPRINT_RACE)) {
+                if (startingGridPosition.positionNumber == 1 && (race.year < 2022 || race.year > 2022 || race.qualifyingFormat != Race.QualifyingFormat.SPRINT_RACE)) {
                     driver.totalPolePositions++
                     constructor.totalPolePositions++
                     engineManufacturer.totalPolePositions++

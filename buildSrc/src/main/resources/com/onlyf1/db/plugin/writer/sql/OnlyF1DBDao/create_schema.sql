@@ -291,6 +291,7 @@ CREATE TABLE race
 , grand_prix_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES grand_prix(id)
 , official_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , qualifying_format VARCHAR(255) NOT NULL COLLATE NOCASE
+, sprint_race_qualifying_format VARCHAR(255) COLLATE NOCASE
 , circuit_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES circuit(id)
 , circuit_type VARCHAR(255) NOT NULL COLLATE NOCASE
 , course_length DECIMAL(6,3)
@@ -628,7 +629,7 @@ ON       race_data.race_id = race.id
 WHERE    race_data.type    = 'QUALIFYING_RESULT'
 ;
 
-CREATE VIEW warming_up_result AS
+CREATE VIEW sprint_race_qualifying_result AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -640,20 +641,26 @@ SELECT   race.id AS race_id
 ,        race_data.constructor_id
 ,        race_data.engine_manufacturer_id
 ,        race_data.tyre_manufacturer_id
-,        race_data.practice_time AS time
-,        race_data.practice_time_millis AS time_millis
-,        race_data.practice_gap AS gap
-,        race_data.practice_gap_millis AS gap_millis
-,        race_data.practice_interval AS interval
-,        race_data.practice_interval_millis AS interval_millis
-,        race_data.practice_laps AS laps
+,        race_data.qualifying_time AS time
+,        race_data.qualifying_time_millis AS time_millis
+,        race_data.qualifying_q1 AS q1
+,        race_data.qualifying_q1_millis AS q1_millis
+,        race_data.qualifying_q2 AS q2
+,        race_data.qualifying_q2_millis AS q2_millis
+,        race_data.qualifying_q3 AS q3
+,        race_data.qualifying_q3_millis AS q3_millis
+,        race_data.qualifying_gap AS gap
+,        race_data.qualifying_gap_millis AS gap_millis
+,        race_data.qualifying_interval AS interval
+,        race_data.qualifying_interval_millis AS interval_millis
+,        race_data.qualifying_laps AS laps
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'WARMING_UP_RESULT'
+WHERE    race_data.type    = 'SPRINT_RACE_QUALIFYING_RESULT'
 ;
 
-CREATE VIEW sprint_qualifying_starting_grid_position AS
+CREATE VIEW sprint_race_starting_grid_position AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -672,10 +679,10 @@ SELECT   race.id AS race_id
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'SPRINT_QUALIFYING_STARTING_GRID_POSITION'
+WHERE    race_data.type    = 'SPRINT_RACE_STARTING_GRID_POSITION'
 ;
 
-CREATE VIEW sprint_qualifying_result AS
+CREATE VIEW sprint_race_race_result AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -705,7 +712,32 @@ SELECT   race.id AS race_id
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'SPRINT_QUALIFYING_RESULT'
+WHERE    race_data.type    = 'SPRINT_RACE_RACE_RESULT'
+;
+
+CREATE VIEW warming_up_result AS
+SELECT   race.id AS race_id
+,        race.year
+,        race.round
+,        race_data.position_display_order
+,        race_data.position_number
+,        race_data.position_text
+,        race_data.driver_number
+,        race_data.driver_id
+,        race_data.constructor_id
+,        race_data.engine_manufacturer_id
+,        race_data.tyre_manufacturer_id
+,        race_data.practice_time AS time
+,        race_data.practice_time_millis AS time_millis
+,        race_data.practice_gap AS gap
+,        race_data.practice_gap_millis AS gap_millis
+,        race_data.practice_interval AS interval
+,        race_data.practice_interval_millis AS interval_millis
+,        race_data.practice_laps AS laps
+FROM     race_data
+JOIN     race
+ON       race_data.race_id = race.id
+WHERE    race_data.type    = 'WARMING_UP_RESULT'
 ;
 
 CREATE VIEW starting_grid_position AS

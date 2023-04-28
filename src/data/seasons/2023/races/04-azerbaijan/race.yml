@@ -3,7 +3,8 @@ round: 4
 date: 2023-04-30
 grandPrixId: azerbaijan
 officialName: Formula 1 Azerbaijan Grand Prix 2023
-qualifyingFormat: SPRINT_RACE
+qualifyingFormat: KNOCKOUT
+sprintRaceQualifyingFormat: SPRINT_SHOOTOUT
 circuitId: baku
 circuitType: STREET
 courseLength: 6.003
