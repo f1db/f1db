@@ -39,7 +39,7 @@ Release artifacts are available in the following formats:
 - SQLite
 
 
-## Notable Changes in `v2023.4.0`
+## Notable Changes in `v2023.4.0` "Sprint Shootout"
 
 Due to the new Sprint Shootout race format introduced for the 2023 season (starting from the Azerbaijan Grand Prix)
 the JSON Schema is bumped to version `v3.0.0` which has some backward incompatible changes:
