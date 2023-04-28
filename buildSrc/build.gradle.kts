@@ -1,7 +1,7 @@
 plugins {
     `java-gradle-plugin`
-    id("org.jetbrains.kotlin.jvm") version "1.8.0"
-    id("org.jetbrains.kotlin.kapt") version "1.8.0"
+    id("org.jetbrains.kotlin.jvm") version "1.8.21"
+    id("org.jetbrains.kotlin.kapt") version "1.8.21"
     id("jsonschema2pojo")
 }
 
@@ -14,13 +14,13 @@ gradlePlugin {
     }
 }
 
-val jacksonVersion by extra("2.14.2")
-val jdbiVersion by extra("3.37.1")
+val jacksonVersion by extra("2.15.0")
+val jdbiVersion by extra("3.38.0")
 val joyVersion by extra("2.1.0")
 val justifyVersion by extra("3.1.0")
-val mapstructVersion by extra("1.5.3.Final")
+val mapstructVersion by extra("1.5.5.Final")
 val slf4jVersion by extra("1.7.36")
-val sqliteJdbcVersion by extra("3.41.0.0")
+val sqliteJdbcVersion by extra("3.41.2.1")
 
 repositories {
     mavenCentral()
