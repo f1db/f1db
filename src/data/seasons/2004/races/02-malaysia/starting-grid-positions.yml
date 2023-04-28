@@ -140,7 +140,7 @@
   constructorId: jordan
   engineManufacturerId: ford
   tyreManufacturerId: bridgestone
-  gridPenalty:
+  gridPenalty: 10
   time: "1:39.902"
 - position: 19
   driverNumber: 8
@@ -148,7 +148,7 @@
   constructorId: renault
   engineManufacturerId: renault
   tyreManufacturerId: michelin
-  gridPenalty:
+  gridPenalty: 10
   time:
 - position: 20
   driverNumber: 10
@@ -156,5 +156,5 @@
   constructorId: bar
   engineManufacturerId: honda
   tyreManufacturerId: michelin
-  gridPenalty:
+  gridPenalty: 10
   time:

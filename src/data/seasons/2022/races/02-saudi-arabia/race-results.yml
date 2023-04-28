@@ -205,7 +205,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Gearbox
+  reasonRetired: Cooling system
   points:
   gridPosition: 8
 - position: DNF
@@ -219,7 +219,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Gearbox
+  reasonRetired: Water pressure
   points:
   gridPosition: 7
 - position: DNF
@@ -233,7 +233,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Overheating
+  reasonRetired: Gearbox
   points:
   gridPosition: 14
 - position: DNF

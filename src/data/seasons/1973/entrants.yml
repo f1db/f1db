@@ -24,7 +24,7 @@
     - driverId: andrea-de-adamich
       rounds: 4-6,8-9
     - driverId: john-watson
-      rounds: 9,15
+      rounds: 15
     - driverId: rolf-stommelen
       rounds: 11-14
 - entrantId: ceramica-pagnossin-team-surtees
@@ -91,6 +91,13 @@
   tyreManufacturerId: goodyear
   driverId: james-hunt
   rounds: 6,8-10,12-15
+- entrantId: hexagon-of-highgate
+  countryId: united-kingdom
+  constructorId: brabham
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: john-watson
+  rounds: 9
 - entrantId: john-player-team-lotus
   countryId: united-kingdom
   constructorId: lotus
