@@ -291,7 +291,7 @@ CREATE TABLE race
 , grand_prix_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES grand_prix(id)
 , official_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , qualifying_format VARCHAR(255) NOT NULL COLLATE NOCASE
-, sprint_race_qualifying_format VARCHAR(255) COLLATE NOCASE
+, sprint_qualifying_format VARCHAR(255) COLLATE NOCASE
 , circuit_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES circuit(id)
 , circuit_type VARCHAR(255) NOT NULL COLLATE NOCASE
 , course_length DECIMAL(6,3)
@@ -629,7 +629,7 @@ ON       race_data.race_id = race.id
 WHERE    race_data.type    = 'QUALIFYING_RESULT'
 ;
 
-CREATE VIEW sprint_race_qualifying_result AS
+CREATE VIEW sprint_qualifying_result AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -657,10 +657,10 @@ SELECT   race.id AS race_id
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'SPRINT_RACE_QUALIFYING_RESULT'
+WHERE    race_data.type    = 'SPRINT_QUALIFYING_RESULT'
 ;
 
-CREATE VIEW sprint_race_starting_grid_position AS
+CREATE VIEW sprint_starting_grid_position AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -679,10 +679,10 @@ SELECT   race.id AS race_id
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'SPRINT_RACE_STARTING_GRID_POSITION'
+WHERE    race_data.type    = 'SPRINT_STARTING_GRID_POSITION'
 ;
 
-CREATE VIEW sprint_race_race_result AS
+CREATE VIEW sprint_race_result AS
 SELECT   race.id AS race_id
 ,        race.year
 ,        race.round
@@ -712,7 +712,7 @@ SELECT   race.id AS race_id
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id
-WHERE    race_data.type    = 'SPRINT_RACE_RACE_RESULT'
+WHERE    race_data.type    = 'SPRINT_RACE_RESULT'
 ;
 
 CREATE VIEW warming_up_result AS

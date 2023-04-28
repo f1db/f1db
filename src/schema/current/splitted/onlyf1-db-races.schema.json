@@ -43,9 +43,9 @@
           "$ref": "#/definitions/QualifyingFormat",
           "description": "The qualifying format."
         },
-        "sprintRaceQualifyingFormat": {
-          "$ref": "#/definitions/SprintRaceQualifyingFormat",
-          "description": "The sprint race qualifying format."
+        "sprintQualifyingFormat": {
+          "$ref": "#/definitions/SprintQualifyingFormat",
+          "description": "The sprint qualifying format."
         },
         "circuitId": {
           "type": "string",
@@ -89,7 +89,7 @@
         "grandPrixId",
         "officialName",
         "qualifyingFormat",
-        "sprintRaceQualifyingFormat",
+        "sprintQualifyingFormat",
         "circuitId",
         "circuitType",
         "courseLength",
@@ -122,13 +122,13 @@
       ],
       "description": "The qualifying format."
     },
-    "SprintRaceQualifyingFormat": {
+    "SprintQualifyingFormat": {
       "type": ["string", "null"],
       "enum": [
         "SPRINT_SHOOTOUT",
         null
       ],
-      "description": "The sprint race qualifying format."
+      "description": "The sprint qualifying format."
     }
   }
 }

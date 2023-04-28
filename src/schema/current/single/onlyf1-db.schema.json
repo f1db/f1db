@@ -995,9 +995,9 @@
           "$ref": "#/definitions/QualifyingFormat",
           "description": "The qualifying format."
         },
-        "sprintRaceQualifyingFormat": {
-          "$ref": "#/definitions/SprintRaceQualifyingFormat",
-          "description": "The sprint race qualifying format."
+        "sprintQualifyingFormat": {
+          "$ref": "#/definitions/SprintQualifyingFormat",
+          "description": "The sprint qualifying format."
         },
         "circuitId": {
           "type": "string",
@@ -1088,26 +1088,26 @@
           },
           "description": "The qualifying results."
         },
-        "sprintRaceQualifyingResults": {
+        "sprintQualifyingResults": {
           "type": ["array", "null"],
           "items": {
             "$ref": "#/definitions/QualifyingResult"
           },
-          "description": "The sprint race qualifying results."
+          "description": "The sprint qualifying results."
         },
-        "sprintRaceStartingGridPositions": {
+        "sprintStartingGridPositions": {
           "type": ["array", "null"],
           "items": {
             "$ref": "#/definitions/StartingGridPosition"
           },
-          "description": "The sprint race starting grid positions."
+          "description": "The sprint starting grid positions."
         },
-        "sprintRaceRaceResults": {
+        "sprintRaceResults": {
           "type": ["array", "null"],
           "items": {
             "$ref": "#/definitions/RaceResult"
           },
-          "description": "The sprint race race results."
+          "description": "The sprint race results."
         },
         "warmingUpResults": {
           "type": ["array", "null"],
@@ -1174,7 +1174,7 @@
         "grandPrixId",
         "officialName",
         "qualifyingFormat",
-        "sprintRaceQualifyingFormat",
+        "sprintQualifyingFormat",
         "circuitId",
         "circuitType",
         "courseLength",
@@ -1190,9 +1190,9 @@
         "qualifying1Results",
         "qualifying2Results",
         "qualifyingResults",
-        "sprintRaceQualifyingResults",
-        "sprintRaceStartingGridPositions",
-        "sprintRaceRaceResults",
+        "sprintQualifyingResults",
+        "sprintStartingGridPositions",
+        "sprintRaceResults",
         "warmingUpResults",
         "startingGridPositions",
         "raceResults",
@@ -2025,13 +2025,13 @@
       ],
       "description": "The qualifying format."
     },
-    "SprintRaceQualifyingFormat": {
+    "SprintQualifyingFormat": {
       "type": ["string", "null"],
       "enum": [
         "SPRINT_SHOOTOUT",
         null
       ],
-      "description": "The sprint race qualifying format."
+      "description": "The sprint qualifying format."
     }
   }
 }

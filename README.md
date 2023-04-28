@@ -44,17 +44,17 @@ Release artifacts are available in the following formats:
 Due to the new Sprint Shootout race format introduced for the 2023 season (starting from the Azerbaijan Grand Prix)
 the JSON Schema is bumped to version `v3.0.0` which has some backward incompatible changes:
 
-- `Race.sprintQualifyingStartingGridPositions` renamed to `Race.sprintRaceQualifyingResults`.
-- `Race.sprintQualifyingResults` renamed to `Race.sprintRaceRaceResults`.
+- `Race.sprintQualifyingStartingGridPositions` renamed to `Race.sprintStartingGridPositions`.
+- `Race.sprintQualifyingResults` renamed to `Race.sprintRaceResults`.
 
 Besides the backward incompatible changes, the following is added:
 
-- `Race.sprintRaceQualifyingResults` which contains the Sprint race qualifying results.
-- `Race.sprintRaceQualifyingFormat` which contains the Sprint race qualifying format (currently only `SPRINT_SHOOTOUT`).
+- `Race.sprintQualifyingFormat` which contains the sprint qualifying format (currently only `SPRINT_SHOOTOUT`).
+- `Race.sprintQualifyingResults` which contains the sprint qualifying results.
 
-Above changes are also reflected in the SQLite database which includes changing some view names.
+Above changes are also reflected in the SQLite database; which includes changing some view names.
 
-Also the Sprint race related source files for previous years have been renamed.
+Also the sprint related source files for previous years have been renamed.
 
 
 ## Notable Changes in `v2023.x`

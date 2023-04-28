@@ -251,30 +251,30 @@ class Splitted(private val db: OnlyF1DB) {
                 }
             }
 
-    val raceSprintRaceQualifyingResults: List<QualifyingResult>
+    val raceSprintQualifyingResults: List<QualifyingResult>
         get() = db.races
-            .filter { it.sprintRaceQualifyingResults != null }
+            .filter { it.sprintQualifyingResults != null }
             .flatMap { race ->
-                race.sprintRaceQualifyingResults.mapIndexed { index, sprintRaceQualifyingResult ->
-                    QualifyingResultMapper.INSTANCE.toSplittedQualifyingResult(sprintRaceQualifyingResult, race, index + 1)
+                race.sprintQualifyingResults.mapIndexed { index, sprintQualifyingResult ->
+                    QualifyingResultMapper.INSTANCE.toSplittedQualifyingResult(sprintQualifyingResult, race, index + 1)
                 }
             }
 
-    val raceSprintRaceStartingGridPositions: List<StartingGridPosition>
+    val raceSprintStartingGridPositions: List<StartingGridPosition>
         get() = db.races
-            .filter { it.sprintRaceStartingGridPositions != null }
+            .filter { it.sprintStartingGridPositions != null }
             .flatMap { race ->
-                race.sprintRaceStartingGridPositions.mapIndexed { index, sprintRaceStartingGridPosition ->
-                    StartingGridPositionMapper.INSTANCE.toSplittedStartingGridPosition(sprintRaceStartingGridPosition, race, index + 1)
+                race.sprintStartingGridPositions.mapIndexed { index, sprintStartingGridPosition ->
+                    StartingGridPositionMapper.INSTANCE.toSplittedStartingGridPosition(sprintStartingGridPosition, race, index + 1)
                 }
             }
 
-    val raceSprintRaceRaceResults: List<RaceResult>
+    val raceSprintRaceResults: List<RaceResult>
         get() = db.races
-            .filter { it.sprintRaceRaceResults != null }
+            .filter { it.sprintRaceResults != null }
             .flatMap { race ->
-                race.sprintRaceRaceResults.mapIndexed { index, sprintRaceRaceResult ->
-                    RaceResultMapper.INSTANCE.toSplittedRaceResult(sprintRaceRaceResult, race, index + 1)
+                race.sprintRaceResults.mapIndexed { index, sprintRaceResult ->
+                    RaceResultMapper.INSTANCE.toSplittedRaceResult(sprintRaceResult, race, index + 1)
                 }
             }
 
