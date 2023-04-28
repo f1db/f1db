@@ -56,6 +56,8 @@ Above changes are also reflected in the SQLite database; which includes changing
 
 Also the sprint related source files for previous years have been renamed.
 
+Note that a future minor version update to the `v3.x` JSON schema might include Sprint related statistics like `totalSprintWins`.
+
 
 ## Notable Changes in `v2023.x`
 
