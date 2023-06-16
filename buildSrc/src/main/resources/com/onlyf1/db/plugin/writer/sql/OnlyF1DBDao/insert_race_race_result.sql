@@ -28,6 +28,7 @@ INSERT INTO race_data
 , race_pit_stops
 , race_fastest_lap
 , race_driver_of_the_day
+, race_grand_slam
 )
 VALUES
 ( :raceId
@@ -59,4 +60,5 @@ VALUES
 , :pitStops
 , :fastestLap
 , :driverOfTheDay
+, :grandSlam
 );

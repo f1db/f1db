@@ -45,6 +45,7 @@ CREATE TABLE driver
 , total_pole_positions INTEGER NOT NULL
 , total_fastest_laps INTEGER NOT NULL
 , total_driver_of_the_day INTEGER NOT NULL
+, total_grand_slams INTEGER NOT NULL
 );
 
 CREATE INDEX driver_name_index ON driver(name COLLATE NOCASE);
@@ -363,6 +364,7 @@ CREATE TABLE race_data
 , race_pit_stops INTEGER
 , race_fastest_lap BOOLEAN
 , race_driver_of_the_day BOOLEAN
+, race_grand_slam BOOLEAN
 , fastest_lap_lap INTEGER
 , fastest_lap_time VARCHAR(255) COLLATE NOCASE
 , fastest_lap_time_millis INTEGER
@@ -793,6 +795,7 @@ SELECT   race.id AS race_id
 ,        race_data.race_pit_stops AS pit_stops
 ,        race_data.race_fastest_lap AS fastest_lap
 ,        race_data.race_driver_of_the_day AS driver_of_the_day
+,        race_data.race_grand_slam AS grand_slam
 FROM     race_data
 JOIN     race
 ON       race_data.race_id = race.id

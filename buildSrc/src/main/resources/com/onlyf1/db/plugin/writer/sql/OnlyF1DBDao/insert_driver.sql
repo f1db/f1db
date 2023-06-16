@@ -27,6 +27,7 @@ INSERT INTO driver
 , total_pole_positions
 , total_fastest_laps
 , total_driver_of_the_day
+, total_grand_slams
 )
 VALUES
 ( :id
@@ -57,4 +58,5 @@ VALUES
 , :totalPolePositions
 , :totalFastestLaps
 , :totalDriverOfTheDay
+, :totalGrandSlams
 );

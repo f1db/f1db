@@ -139,6 +139,7 @@ class OnlyF1DBReader(
             driver.totalPolePositions = 0
             driver.totalFastestLaps = 0
             driver.totalDriverOfTheDay = 0
+            driver.totalGrandSlams = 0
         }
 
         db.constructors.forEach { constructor ->
@@ -419,6 +420,12 @@ class OnlyF1DBReader(
 
                 if (raceResult.driverOfTheDay == true) {
                     driver.totalDriverOfTheDay++
+                }
+
+                // Total Grand Slams.
+
+                if (raceResult.grandSlam == true) {
+                    driver.totalGrandSlams++
                 }
             }
 
