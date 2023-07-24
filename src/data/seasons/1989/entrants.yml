@@ -1,16 +1,4 @@
-- entrantId: arrows-grand-prix-international
-  countryId: united-kingdom
-  constructorId: arrows
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: derek-warwick
-      rounds: 1-6,8-16
-    - driverId: eddie-cheever
-      rounds: 1-16
-    - driverId: martin-donnelly
-      rounds: 7
-- entrantId: automobiles-gonfaronnaises-sportives
+- entrantId: ags
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
@@ -22,7 +10,7 @@
       rounds: 2-16
     - driverId: yannick-dalmas
       rounds: 8-16
-- entrantId: benetton-formula-ltd
+- entrantId: benetton-formula
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
@@ -34,16 +22,6 @@
       rounds: 1-6
     - driverId: emanuele-pirro
       rounds: 7-16
-- entrantId: bms-scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: alex-caffi
-      rounds: 1-16
-    - driverId: andrea-de-cesaris
-      rounds: 1-16
 - entrantId: camel-team-lotus
   countryId: united-kingdom
   constructorId: lotus
@@ -64,7 +42,7 @@
       rounds: 1-16
     - driverId: thierry-boutsen
       rounds: 1-16
-- entrantId: coloni-spa
+- entrantId: coloni
   countryId: italy
   constructorId: coloni
   engineManufacturerId: ford
@@ -76,20 +54,6 @@
       rounds: 1-16
     - driverId: enrico-bertaggia
       rounds: 11-16
-- entrantId: equipe-larrousse
-  countryId: france
-  constructorId: lola
-  engineManufacturerId: lamborghini
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: philippe-alliot
-      rounds: 1-16
-    - driverId: yannick-dalmas
-      rounds: 1-6
-    - driverId: eric-bernard
-      rounds: 7-8
-    - driverId: michele-alboreto
-      rounds: 9-16
 - entrantId: eurobrun-racing
   countryId: italy
   constructorId: eurobrun
@@ -107,6 +71,16 @@
   tyreManufacturerId: pirelli
   driverId: gabriele-tarquini
   rounds:
+- entrantId: fondmetal-osella
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: nicola-larini
+      rounds: 1-16
+    - driverId: piercarlo-ghinzani
+      rounds: 1-16
 - entrantId: honda-marlboro-mclaren
   countryId: united-kingdom
   constructorId: mclaren
@@ -117,7 +91,7 @@
       rounds: 1-16
     - driverId: ayrton-senna
       rounds: 1-16
-- entrantId: leyton-house-march-racing-team
+- entrantId: leyton-house-racing
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: judd
@@ -137,7 +111,7 @@
       rounds: 1-16
     - driverId: rene-arnoux
       rounds: 1-16
-- entrantId: lois-minardi-team-spa
+- entrantId: lois-minardi-team
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
@@ -171,16 +145,6 @@
       rounds: 1-16
     - driverId: stefano-modena
       rounds: 1-16
-- entrantId: osella-squadra-corse
-  countryId: italy
-  constructorId: osella
-  engineManufacturerId: ford
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: nicola-larini
-      rounds: 1-16
-    - driverId: piercarlo-ghinzani
-      rounds: 1-16
 - entrantId: rial-racing
   countryId: germany
   constructorId: rial
@@ -207,6 +171,30 @@
       rounds: 1-2,4-16
     - driverId: nigel-mansell
       rounds: 1-13,15-16
+- entrantId: scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alex-caffi
+      rounds: 1-16
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+- entrantId: team-larrousse
+  countryId: france
+  constructorId: lola
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: philippe-alliot
+      rounds: 1-16
+    - driverId: yannick-dalmas
+      rounds: 1-6
+    - driverId: eric-bernard
+      rounds: 7-8
+    - driverId: michele-alboreto
+      rounds: 9-16
 - entrantId: tyrrell-racing-organisation
   countryId: united-kingdom
   constructorId: tyrrell
@@ -221,6 +209,18 @@
       rounds: 7-10,12,14-16
     - driverId: johnny-herbert
       rounds: 11,13
+- entrantId: usfg-arrows-ford
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: derek-warwick
+      rounds: 1-6,8-16
+    - driverId: eddie-cheever
+      rounds: 1-16
+    - driverId: martin-donnelly
+      rounds: 7
 - entrantId: west-zakspeed-racing
   countryId: germany
   constructorId: zakspeed

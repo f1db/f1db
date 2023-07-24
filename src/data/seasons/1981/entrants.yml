@@ -20,6 +20,22 @@
       rounds: 4-15
     - driverId: derek-warwick
       rounds: 4-15
+- entrantId: denim-osella
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: ford
+  tyreManufacturerId: michelin
+  drivers:
+    - driverId: beppe-gabbiani
+      rounds: 1-15
+    - driverId: miguel-angel-guerra
+      rounds: 1-4
+    - driverId: piercarlo-ghinzani
+      rounds: 5-6
+    - driverId: giorgio-francia
+      rounds: 7
+    - driverId: jean-pierre-jarier
+      rounds: 9-15
 - entrantId: ensign-racing
   countryId: united-kingdom
   constructorId: ensign
@@ -103,22 +119,6 @@
       rounds: 1-15
     - driverId: mario-andretti
       rounds: 1-15
-- entrantId: osella-squadra-corse
-  countryId: italy
-  constructorId: osella
-  engineManufacturerId: ford
-  tyreManufacturerId: michelin
-  drivers:
-    - driverId: beppe-gabbiani
-      rounds: 1-15
-    - driverId: miguel-angel-guerra
-      rounds: 1-4
-    - driverId: piercarlo-ghinzani
-      rounds: 5-6
-    - driverId: giorgio-francia
-      rounds: 7
-    - driverId: jean-pierre-jarier
-      rounds: 9-15
 - entrantId: parmalat-racing-team
   countryId: united-kingdom
   constructorId: brabham

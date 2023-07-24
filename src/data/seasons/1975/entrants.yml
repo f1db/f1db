@@ -63,6 +63,22 @@
           rounds: 7
         - driverId: alan-jones
           rounds: 8-11
+- entrantId: first-national-city-bank-team-penske
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: penske
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: mark-donohue
+          rounds: 1-9
+        - driverId: john-watson
+          rounds: 14
+    - constructorId: march
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      driverId: mark-donohue
+      rounds: 10-12
 - entrantId: frank-williams-racing-cars
   countryId: united-kingdom
   constructorId: frank-williams-racing-cars
@@ -161,7 +177,7 @@
       rounds: 8,10
     - driverId: tony-trimmer
       rounds: 11-13
-- entrantId: marlboro-team-mclaren
+- entrantId: marlboro-team-texaco
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
@@ -181,6 +197,29 @@
       rounds: 1-14
     - driverId: carlos-reutemann
       rounds: 1-14
+- entrantId: matchbox-team-surtees
+  countryId: united-kingdom
+  constructorId: surtees
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: john-watson
+  rounds: 1-10,12
+- entrantId: uop-shadow-racing
+  countryId: united-states-of-america
+  constructors:
+    - constructorId: shadow
+      engineManufacturerId: ford
+      tyreManufacturerId: goodyear
+      drivers:
+        - driverId: jean-pierre-jarier
+          rounds: 1-11,14
+        - driverId: tom-pryce
+          rounds: 1-14
+    - constructorId: shadow
+      engineManufacturerId: matra
+      tyreManufacturerId: goodyear
+      driverId: jean-pierre-jarier
+      rounds: 12-13
 - entrantId: national-organs-team-surtees
   countryId: united-kingdom
   constructorId: surtees
@@ -188,22 +227,6 @@
   tyreManufacturerId: goodyear
   driverId: dave-morgan
   rounds: 10
-- entrantId: penske-cars
-  countryId: united-states-of-america
-  constructors:
-    - constructorId: penske
-      engineManufacturerId: ford
-      tyreManufacturerId: goodyear
-      drivers:
-        - driverId: mark-donohue
-          rounds: 1-9
-        - driverId: john-watson
-          rounds: 14
-    - constructorId: march
-      engineManufacturerId: ford
-      tyreManufacturerId: goodyear
-      driverId: mark-donohue
-      rounds: 10-12
 - entrantId: pinch-plant-ltd
   countryId: united-kingdom
   constructorId: lyncar
@@ -248,29 +271,6 @@
       rounds: 3
     - driverId: guy-tunmer
       rounds: 3
-- entrantId: team-surtees
-  countryId: united-kingdom
-  constructorId: surtees
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  driverId: john-watson
-  rounds: 1-10,12
-- entrantId: uop-shadow-racing
-  countryId: united-states-of-america
-  constructors:
-    - constructorId: shadow
-      engineManufacturerId: ford
-      tyreManufacturerId: goodyear
-      drivers:
-        - driverId: jean-pierre-jarier
-          rounds: 1-11,14
-        - driverId: tom-pryce
-          rounds: 1-14
-    - constructorId: shadow
-      engineManufacturerId: matra
-      tyreManufacturerId: goodyear
-      driverId: jean-pierre-jarier
-      rounds: 12-13
 - entrantId: vels-parnelli-jones-racing
   countryId: united-states-of-america
   constructorId: parnelli

@@ -1,4 +1,4 @@
-- entrantId: benetton-formula-ltd
+- entrantId: benetton-formula
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
@@ -40,6 +40,16 @@
       rounds: 1-16
     - driverId: philippe-streiff
       rounds: 1-16
+- entrantId: el-charro
+  countryId: france
+  constructorId: ags
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: pascal-fabre
+      rounds: 1-14
+    - driverId: roberto-moreno
+      rounds: 15-16
 - entrantId: enzo-coloni-racing-car-system
   countryId: italy
   constructorId: coloni
@@ -47,6 +57,18 @@
   tyreManufacturerId: goodyear
   driverId: nicola-larini
   rounds: 11,13
+- entrantId: landis-gyr-osella
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alex-caffi
+      rounds: 1-16
+    - driverId: gabriele-tarquini
+      rounds: 2
+    - driverId: franco-forini
+      rounds: 11-13
 - entrantId: larrousse-calmels
   countryId: france
   constructorId: lola
@@ -74,7 +96,7 @@
       rounds: 2-16
     - driverId: rene-arnoux
       rounds: 2-16
-- entrantId: marlboro-mclaren-international
+- entrantId: marlboro-mclaren-tag-turbo
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: tag
@@ -84,7 +106,7 @@
       rounds: 1-16
     - driverId: stefan-johansson
       rounds: 1-16
-- entrantId: minardi-team-spa
+- entrantId: minardi-team
   countryId: italy
   constructorId: minardi
   engineManufacturerId: motori-moderni
@@ -106,18 +128,6 @@
       rounds: 1-15
     - driverId: stefano-modena
       rounds: 16
-- entrantId: osella-squadra-corse
-  countryId: italy
-  constructorId: osella
-  engineManufacturerId: alfa-romeo
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: alex-caffi
-      rounds: 1-16
-    - driverId: gabriele-tarquini
-      rounds: 2
-    - driverId: franco-forini
-      rounds: 11-13
 - entrantId: scuderia-ferrari-spa-sefac
   countryId: italy
   constructorId: ferrari
@@ -128,16 +138,6 @@
       rounds: 1-16
     - driverId: michele-alboreto
       rounds: 1-16
-- entrantId: team-el-charro-ags
-  countryId: france
-  constructorId: ags
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: pascal-fabre
-      rounds: 1-14
-    - driverId: roberto-moreno
-      rounds: 15-16
 - entrantId: usfg-arrows-megatron
   countryId: united-kingdom
   constructorId: arrows

@@ -229,6 +229,20 @@
       rounds: 12
     - driverId: carlo-facetti
       rounds: 13
+- entrantId: team-brm
+  countryId: united-kingdom
+  constructorId: brm
+  engineManufacturerId: brm
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: francois-migault
+      rounds: 1-6,8-11,13
+    - driverId: henri-pescarolo
+      rounds: 1-11,13
+    - driverId: jean-pierre-beltoise
+      rounds: 1-15
+    - driverId: chris-amon
+      rounds: 14-15
 - entrantId: team-canada-f1-racing
   countryId: canada
   constructorId: brabham
@@ -258,20 +272,6 @@
       rounds: 3
     - driverId: paddy-driver
       rounds: 3
-- entrantId: team-motul-brm
-  countryId: united-kingdom
-  constructorId: brm
-  engineManufacturerId: brm
-  tyreManufacturerId: firestone
-  drivers:
-    - driverId: francois-migault
-      rounds: 1-6,8-11,13
-    - driverId: henri-pescarolo
-      rounds: 1-11,13
-    - driverId: jean-pierre-beltoise
-      rounds: 1-15
-    - driverId: chris-amon
-      rounds: 14-15
 - entrantId: team-surtees
   countryId: united-kingdom
   constructorId: surtees

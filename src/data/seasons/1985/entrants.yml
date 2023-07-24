@@ -62,7 +62,17 @@
       rounds: 1-16
     - driverId: elio-de-angelis
       rounds: 1-16
-- entrantId: marlboro-mclaren-international
+- entrantId: kelemata-osella
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: alfa-romeo
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: huub-rothengatter
+      rounds: 9-16
+    - driverId: piercarlo-ghinzani
+      rounds: 1-8
+- entrantId: marlboro-mclaren-tag-turbo
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: tag
@@ -74,7 +84,7 @@
       rounds: 1-13,15-16
     - driverId: john-watson
       rounds: 14
-- entrantId: minardi-team-spa
+- entrantId: minardi-team
   countryId: italy
   constructors:
     - constructorId: minardi
@@ -87,7 +97,7 @@
       tyreManufacturerId: pirelli
       driverId: pierluigi-martini
       rounds: 3-16
-- entrantId: motor-racing-developments
+- entrantId: olivetti-racing
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: bmw
@@ -99,16 +109,6 @@
       rounds: 1-16
     - driverId: marc-surer
       rounds: 5-16
-- entrantId: osella-squadra-corse
-  countryId: italy
-  constructorId: osella
-  engineManufacturerId: alfa-romeo
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: huub-rothengatter
-      rounds: 9-16
-    - driverId: piercarlo-ghinzani
-      rounds: 1-8
 - entrantId: scuderia-ferrari-spa-sefac
   countryId: italy
   constructorId: ferrari

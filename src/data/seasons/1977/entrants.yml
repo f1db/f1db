@@ -67,16 +67,6 @@
       tyreManufacturerId: goodyear
       driverId: brett-lunger
       rounds: 7-16
-- entrantId: copersucar-fittipaldi
-  countryId: brazil
-  constructorId: fittipaldi
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: emerson-fittipaldi
-      rounds: 1-16
-    - driverId: ingo-hoffmann
-      rounds: 1-2
 - entrantId: durex-team-surtees
   countryId: united-kingdom
   constructorId: surtees
@@ -84,7 +74,14 @@
   tyreManufacturerId: goodyear
   driverId: hans-binder
   rounds: 1-6,15-17
-- entrantId: elf-team-tyrrell
+- entrantId: equipe-renault-elf
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  driverId: jean-pierre-jabouille
+  rounds: 10,13-16
+- entrantId: first-national-city-elf-team-tyrrell
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
@@ -94,13 +91,16 @@
       rounds: 1-17
     - driverId: ronnie-peterson
       rounds: 1-17
-- entrantId: equipe-renault-elf
-  countryId: france
-  constructorId: renault
-  engineManufacturerId: renault
-  tyreManufacturerId: michelin
-  driverId: jean-pierre-jabouille
-  rounds: 10,13-16
+- entrantId: fittipaldi-automotive
+  countryId: brazil
+  constructorId: fittipaldi
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: emerson-fittipaldi
+      rounds: 1-16
+    - driverId: ingo-hoffmann
+      rounds: 1-2
 - entrantId: hb-bewaking-alarmsystemen
   countryId: netherlands
   constructorId: boro

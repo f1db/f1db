@@ -1,4 +1,4 @@
-- entrantId: automobiles-gonfaronnaises-sportives
+- entrantId: ags
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
@@ -34,7 +34,7 @@
       rounds: 1-11
     - driverId: michael-schumacher
       rounds: 12-16
-- entrantId: canon-williams-team
+- entrantId: canon-williams
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: renault
@@ -43,6 +43,16 @@
     - driverId: nigel-mansell
       rounds: 1-16
     - driverId: riccardo-patrese
+      rounds: 1-16
+- entrantId: central-park-modena-racing
+  countryId: italy
+  constructorId: modena
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: eric-van-de-poele
+      rounds: 1-16
+    - driverId: nicola-larini
       rounds: 1-16
 - entrantId: coloni-racing
   countryId: italy
@@ -64,29 +74,30 @@
       rounds: 1-13
     - driverId: gabriele-tarquini
       rounds: 14-16
-- entrantId: footwork-grand-prix-international
+- entrantId: footwork-ford
   countryId: united-kingdom
-  constructors:
-    - constructorId: footwork
-      engineManufacturerId: porsche
-      tyreManufacturerId: goodyear
-      drivers:
-        - driverId: alex-caffi
-          rounds: 1-4
-        - driverId: michele-alboreto
-          rounds: 1-6
-        - driverId: stefan-johansson
-          rounds: 5-6
-    - constructorId: footwork
-      engineManufacturerId: ford
-      tyreManufacturerId: goodyear
-      drivers:
-        - driverId: michele-alboreto
-          rounds: 7-16
-        - driverId: stefan-johansson
-          rounds: 7-8
-        - driverId: alex-caffi
-          rounds: 9-16
+  constructorId: footwork
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: michele-alboreto
+      rounds: 7-16
+    - driverId: stefan-johansson
+      rounds: 7-8
+    - driverId: alex-caffi
+      rounds: 9-16
+- entrantId: footwork-porsche
+  countryId: united-kingdom
+  constructorId: footwork
+  engineManufacturerId: porsche
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: alex-caffi
+      rounds: 1-4
+    - driverId: michele-alboreto
+      rounds: 1-6
+    - driverId: stefan-johansson
+      rounds: 5-6
 - entrantId: honda-marlboro-mclaren
   countryId: united-kingdom
   constructorId: mclaren
@@ -143,16 +154,6 @@
       rounds: 1-16
     - driverId: roberto-moreno
       rounds: 16
-- entrantId: modena-team
-  countryId: italy
-  constructorId: modena
-  engineManufacturerId: lamborghini
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: eric-van-de-poele
-      rounds: 1-16
-    - driverId: nicola-larini
-      rounds: 1-16
 - entrantId: motor-racing-developments
   countryId: united-kingdom
   constructorId: brabham

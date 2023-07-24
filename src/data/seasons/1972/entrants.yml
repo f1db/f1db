@@ -81,6 +81,13 @@
       rounds: 1-12
     - driverId: reine-wisell
       rounds: 11-12
+- entrantId: lucky-strike-racing
+  countryId: south-africa
+  constructorId: lotus
+  engineManufacturerId: ford
+  tyreManufacturerId: firestone
+  driverId: dave-charlton
+  rounds: 2,6-8
 - entrantId: marlboro-brm
   countryId: united-kingdom
   constructorId: brm
@@ -129,13 +136,6 @@
       rounds: 1-12
     - driverId: wilson-fittipaldi
       rounds: 3-12
-- entrantId: scribante-lucky-strike-racing
-  countryId: south-africa
-  constructorId: lotus
-  engineManufacturerId: ford
-  tyreManufacturerId: firestone
-  driverId: dave-charlton
-  rounds: 2,6-8
 - entrantId: scuderia-ferrari-spa-sefac
   countryId: italy
   constructorId: ferrari

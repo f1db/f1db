@@ -1,4 +1,4 @@
-- entrantId: automobiles-gonfaronnaises-sportives
+- entrantId: ags
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
@@ -8,7 +8,7 @@
       rounds: 1-16
     - driverId: yannick-dalmas
       rounds: 1-16
-- entrantId: benetton-formula-ltd
+- entrantId: benetton-formula
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
@@ -20,18 +20,6 @@
       rounds: 1-16
     - driverId: roberto-moreno
       rounds: 15-16
-- entrantId: bms-scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: andrea-de-cesaris
-      rounds: 1-16
-    - driverId: gianni-morbidelli
-      rounds: 1-2
-    - driverId: emanuele-pirro
-      rounds: 3-16
 - entrantId: camel-team-lotus
   countryId: united-kingdom
   constructorId: lotus
@@ -81,6 +69,13 @@
       rounds: 1-14
     - driverId: roberto-moreno
       rounds: 1-14
+- entrantId: fondmetal-osella
+  countryId: italy
+  constructorId: osella
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  driverId: olivier-grouillard
+  rounds: 1-16
 - entrantId: footwork-arrows-racing
   countryId: united-kingdom
   constructorId: arrows
@@ -163,13 +158,6 @@
       rounds: 1-16
     - driverId: david-brabham
       rounds: 3-16
-- entrantId: osella-squadra-corse
-  countryId: italy
-  constructorId: osella
-  engineManufacturerId: ford
-  tyreManufacturerId: pirelli
-  driverId: olivier-grouillard
-  rounds: 1-16
 - entrantId: scm-minardi-team
   countryId: italy
   constructorId: minardi
@@ -192,6 +180,18 @@
       rounds: 1-16
     - driverId: nigel-mansell
       rounds: 1-16
+- entrantId: scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+    - driverId: gianni-morbidelli
+      rounds: 1-2
+    - driverId: emanuele-pirro
+      rounds: 3-16
 - entrantId: subaru-coloni-racing
   countryId: italy
   constructorId: coloni

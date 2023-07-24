@@ -1,11 +1,11 @@
-- entrantId: automobiles-gonfaronnaises-sportives
+- entrantId: ags
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
   tyreManufacturerId: goodyear
   driverId: philippe-streiff
   rounds: 1-16
-- entrantId: benetton-formula-ltd
+- entrantId: benetton-formula
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
@@ -15,13 +15,6 @@
       rounds: 1-16
     - driverId: thierry-boutsen
       rounds: 1-16
-- entrantId: bms-scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  driverId: alex-caffi
-  rounds: 1-16
 - entrantId: camel-team-lotus-honda
   countryId: united-kingdom
   constructorId: lotus
@@ -46,7 +39,7 @@
       rounds: 11
     - driverId: jean-louis-schlesser
       rounds: 12
-- entrantId: coloni-spa
+- entrantId: coloni
   countryId: italy
   constructorId: coloni
   engineManufacturerId: ford
@@ -107,7 +100,7 @@
       rounds: 1-16
     - driverId: stefan-johansson
       rounds: 1-16
-- entrantId: lois-minardi-team-spa
+- entrantId: lois-minardi-team
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
@@ -143,6 +136,13 @@
       rounds: 1-16
     - driverId: michele-alboreto
       rounds: 1-16
+- entrantId: scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: alex-caffi
+  rounds: 1-16
 - entrantId: tyrrell-racing-organisation
   countryId: united-kingdom
   constructorId: tyrrell

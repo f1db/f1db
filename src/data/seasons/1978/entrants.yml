@@ -56,7 +56,14 @@
   tyreManufacturerId: goodyear
   driverId: rupert-keegan
   rounds: 1-13
-- entrantId: elf-team-tyrrell
+- entrantId: equipe-renault-elf
+  countryId: france
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  driverId: jean-pierre-jabouille
+  rounds: 3-16
+- entrantId: first-national-city-elf-team-tyrrell
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
@@ -66,13 +73,6 @@
       rounds: 1-16
     - driverId: patrick-depailler
       rounds: 1-16
-- entrantId: equipe-renault-elf
-  countryId: france
-  constructorId: renault
-  engineManufacturerId: renault
-  tyreManufacturerId: michelin
-  driverId: jean-pierre-jabouille
-  rounds: 3-16
 - entrantId: fittipaldi-automotive
   countryId: brazil
   constructorId: fittipaldi
@@ -99,7 +99,7 @@
       rounds: 1-14
     - driverId: jean-pierre-jarier
       rounds: 15-16
-- entrantId: liggett-group-bs-fabrications
+- entrantId: liggett-group-with-bs-fabrications
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
@@ -142,7 +142,7 @@
   tyreManufacturerId: goodyear
   driverId: tony-trimmer
   rounds: 10
-- entrantId: olympus-cameras-hesketh-racing
+- entrantId: olympus-cameras-with-hesketh-racing
   countryId: united-kingdom
   constructorId: hesketh
   engineManufacturerId: ford
@@ -259,7 +259,7 @@
       tyreManufacturerId: goodyear
       driverId: keke-rosberg
       rounds: 11-14
-- entrantId: villiger-shadow-racing
+- entrantId: villiger-shadow
   countryId: united-kingdom
   constructorId: shadow
   engineManufacturerId: ford

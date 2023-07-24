@@ -5,13 +5,6 @@
   tyreManufacturerId: goodyear
   driverId: vittorio-brambilla
   rounds: 1-16
-- entrantId: citibank-team-penske
-  countryId: united-states-of-america
-  constructorId: penske
-  engineManufacturerId: ford
-  tyreManufacturerId: goodyear
-  driverId: john-watson
-  rounds: 1-16
 - entrantId: copersucar-fittipaldi
   countryId: brazil
   constructorId: fittipaldi
@@ -39,6 +32,13 @@
       rounds: 1-16
     - driverId: patrick-depailler
       rounds: 1-16
+- entrantId: first-national-city-bank-team-penske
+  countryId: united-states-of-america
+  constructorId: penske
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  driverId: john-watson
+  rounds: 1-16
 - entrantId: fs-properties
   countryId: netherlands
   constructorId: penske
@@ -266,7 +266,7 @@
       rounds: 11
     - driverId: jacky-ickx
       rounds: 12-15
-- entrantId: team-norev-bs-fabrications
+- entrantId: team-norev
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
