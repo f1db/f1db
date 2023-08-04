@@ -295,9 +295,9 @@ CREATE TABLE race
 , sprint_qualifying_format VARCHAR(255) COLLATE NOCASE
 , circuit_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES circuit(id)
 , circuit_type VARCHAR(255) NOT NULL COLLATE NOCASE
-, course_length DECIMAL(6,3)
-, laps INTEGER
-, distance DECIMAL(6,3)
+, course_length DECIMAL(6,3) NOT NULL
+, laps INTEGER NOT NULL
+, distance DECIMAL(6,3) NOT NULL
 , scheduled_laps INTEGER
 , scheduled_distance DECIMAL(6,3)
 , UNIQUE (year, round)
