@@ -233,7 +233,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision damage
+  reasonRetired: Overheating
   points:
   gridPosition: 10
 - position: DNF
@@ -247,7 +247,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision damage
+  reasonRetired: Undertray
   points:
   gridPosition: 8
 - position: DSQ
