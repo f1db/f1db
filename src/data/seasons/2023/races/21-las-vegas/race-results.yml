@@ -1,0 +1,280 @@
+- position: 1
+  driverNumber: 1
+  driverId: max-verstappen
+  constructorId: red-bull
+  engineManufacturerId: honda-rbpt
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:08.289"
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points: 25
+  gridPosition: 2
+- position: 2
+  driverNumber: 16
+  driverId: charles-leclerc
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:10.359"
+  timePenalty:
+  gap: "+2.070"
+  interval: "+2.070"
+  reasonRetired:
+  points: 18
+  gridPosition: 1
+- position: 3
+  driverNumber: 11
+  driverId: sergio-perez
+  constructorId: red-bull
+  engineManufacturerId: honda-rbpt
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:10.530"
+  timePenalty:
+  gap: "+2.241"
+  interval: "+0.171"
+  reasonRetired:
+  points: 15
+  gridPosition: 11
+- position: 4
+  driverNumber: 31
+  driverId: esteban-ocon
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:26.954"
+  timePenalty:
+  gap: "+18.665"
+  interval: "+16.424"
+  reasonRetired:
+  points: 12
+  gridPosition: 16
+- position: 5
+  driverNumber: 18
+  driverId: lance-stroll
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:28.356"
+  timePenalty:
+  gap: "+20.067"
+  interval: "+1.402"
+  reasonRetired:
+  points: 10
+  gridPosition: 19
+- position: 6
+  driverNumber: 55
+  driverId: carlos-sainz-jr
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:29.123"
+  timePenalty:
+  gap: "+20.834"
+  interval: "+0.767"
+  reasonRetired:
+  points: 8
+  gridPosition: 12
+- position: 7
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:30.044"
+  timePenalty:
+  gap: "+21.755"
+  interval: "+0.921"
+  reasonRetired:
+  points: 6
+  gridPosition: 10
+- position: 8
+  driverNumber: 63
+  driverId: george-russell
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:31.380"
+  timePenalty: "5.000"
+  gap: "+23.091"
+  interval: "+1.336"
+  reasonRetired:
+  points: 4
+  gridPosition: 3
+- position: 9
+  driverNumber: 14
+  driverId: fernando-alonso
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:34.253"
+  timePenalty:
+  gap: "+25.964"
+  interval: "+2.873"
+  reasonRetired:
+  points: 2
+  gridPosition: 9
+- position: 10
+  driverNumber: 81
+  driverId: oscar-piastri
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:37.785"
+  timePenalty:
+  gap: "+29.496"
+  interval: "+3.532"
+  reasonRetired:
+  points: 2
+  gridPosition: 18
+- position: 11
+  driverNumber: 10
+  driverId: pierre-gasly
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:42.559"
+  timePenalty:
+  gap: "+34.270"
+  interval: "+4.774"
+  reasonRetired:
+  points:
+  gridPosition: 4
+- position: 12
+  driverNumber: 23
+  driverId: alexander-albon
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:51.687"
+  timePenalty:
+  gap: "+43.398"
+  interval: "+9.128"
+  reasonRetired:
+  points:
+  gridPosition: 5
+- position: 13
+  driverNumber: 20
+  driverId: kevin-magnussen
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:53.114"
+  timePenalty:
+  gap: "+44.825"
+  interval: "+1.427"
+  reasonRetired:
+  points:
+  gridPosition: 8
+- position: 14
+  driverNumber: 3
+  driverId: daniel-ricciardo
+  constructorId: alphatauri
+  engineManufacturerId: honda-rbpt
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:56.814"
+  timePenalty:
+  gap: "+48.525"
+  interval: "+3.700"
+  reasonRetired:
+  points:
+  gridPosition: 14
+- position: 15
+  driverNumber: 24
+  driverId: guanyu-zhou
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:58.451"
+  timePenalty:
+  gap: "+50.162"
+  interval: "+1.637"
+  reasonRetired:
+  points:
+  gridPosition: 17
+- position: 16
+  driverNumber: 2
+  driverId: logan-sargeant
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:29:59.171"
+  timePenalty:
+  gap: "+50.882"
+  interval: "+0.720"
+  reasonRetired:
+  points:
+  gridPosition: 6
+- position: 17
+  driverNumber: 77
+  driverId: valtteri-bottas
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 50
+  time: "1:30:33.639"
+  timePenalty:
+  gap: "+1:25.350"
+  interval: "+34.468"
+  reasonRetired:
+  points:
+  gridPosition: 7
+- position: 18
+  driverNumber: 22
+  driverId: yuki-tsunoda
+  constructorId: alphatauri
+  engineManufacturerId: honda-rbpt
+  tyreManufacturerId: pirelli
+  laps: 46
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 20
+- position: 19
+  driverNumber: 27
+  driverId: nico-hulkenberg
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 45
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 13
+- position: DNF
+  driverNumber: 4
+  driverId: lando-norris
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 2
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 15
