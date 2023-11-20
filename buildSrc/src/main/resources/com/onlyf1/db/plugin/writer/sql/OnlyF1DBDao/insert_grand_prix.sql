@@ -3,6 +3,7 @@ INSERT INTO grand_prix
 , name
 , full_name
 , short_name
+, abbreviation
 , country_id
 , total_races_held
 )
@@ -11,6 +12,7 @@ VALUES
 , :name
 , :fullName
 , :shortName
+, :abbreviation
 , :countryId
 , :totalRacesHeld
 );

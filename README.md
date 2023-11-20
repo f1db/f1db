@@ -39,6 +39,10 @@ Release artifacts are available in the following formats:
 - SQLite
 
 
+## Notable Changes in `v2023.22.0`
+
+- Added `abbreviation` property to `GrandPrix`. 
+
 ## Notable Changes in `v2023.4.0` "Sprint Shootout"
 
 Due to the new Sprint Shootout race format introduced for the 2023 season (starting from the Azerbaijan Grand Prix)
@@ -96,6 +100,7 @@ Both the JSON and Smile artifacts validate against the OnlyF1-DB Json Schema.
 
 | Version                 | Schema Version                                                                                                                                                                                                                                                        |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2023.22.0`       | [`onlyf1-db.schema.json v3.2.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.2.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.2.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.2.0/splitted) |
 | `>=` `v2023.8.0`        | [`onlyf1-db.schema.json v3.1.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.1.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.1.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.1.0/splitted) |
 | `>=` `v2023.4.0`        | [`onlyf1-db.schema.json v3.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.0.0/splitted) |
 | `>=` `v2023.0.0.beta1`  | [`onlyf1-db.schema.json v2.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v2.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v2.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v2.0.0/splitted) |

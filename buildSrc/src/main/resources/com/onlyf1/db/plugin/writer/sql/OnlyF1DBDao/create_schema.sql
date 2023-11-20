@@ -180,6 +180,7 @@ CREATE TABLE grand_prix
 , name VARCHAR(255) NOT NULL COLLATE NOCASE
 , full_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , short_name VARCHAR(255) NOT NULL COLLATE NOCASE
+, abbreviation VARCHAR(3) NOT NULL COLLATE NOCASE
 , country_id VARCHAR(255) COLLATE NOCASE REFERENCES country(id)
 , total_races_held INTEGER NOT NULL
 );
@@ -187,6 +188,7 @@ CREATE TABLE grand_prix
 CREATE INDEX grand_prix_name_index ON grand_prix(name COLLATE NOCASE);
 CREATE INDEX grand_prix_full_name_index ON grand_prix(full_name COLLATE NOCASE);
 CREATE INDEX grand_prix_short_name_index ON grand_prix(short_name COLLATE NOCASE);
+CREATE INDEX grand_prix_abbreviation_index ON grand_prix(abbreviation COLLATE NOCASE);
 CREATE INDEX grand_prix_country_id_index ON grand_prix(country_id COLLATE NOCASE);
 
 CREATE TABLE season
