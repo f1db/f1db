@@ -36,7 +36,7 @@ Release artifacts are available in the following formats:
 
 ## Notable Changes in `v2024.0.0`
 
-After acquiring the F1DB.com domain the project has been rebranded back to F1DB.
+After acquiring the [F1DB.com](https://www.f1db.com) domain the project has been rebranded back to F1DB.
 Because this name change is reflected in the JSON Schema files the schema is bumped to version `v4.0.0`
 
 
