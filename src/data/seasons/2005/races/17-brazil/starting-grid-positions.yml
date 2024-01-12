@@ -148,7 +148,7 @@
   constructorId: bar
   engineManufacturerId: honda
   tyreManufacturerId: michelin
-  gridPenalty: 10
+  gridPenalty: 20
   time:
 - position: PL
   driverNumber: 11
@@ -156,5 +156,5 @@
   constructorId: sauber
   engineManufacturerId: petronas
   tyreManufacturerId: michelin
-  gridPenalty:
+  gridPenalty: SFB
   time: "1:13.372"

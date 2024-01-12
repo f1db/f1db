@@ -44,16 +44,6 @@
       rounds: 1-16
     - driverId: riccardo-patrese
       rounds: 1-16
-- entrantId: central-park-modena-racing
-  countryId: italy
-  constructorId: modena
-  engineManufacturerId: lamborghini
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: eric-van-de-poele
-      rounds: 1-16
-    - driverId: nicola-larini
-      rounds: 1-16
 - entrantId: coloni-racing
   countryId: italy
   constructorId: coloni
@@ -154,6 +144,16 @@
       rounds: 1-16
     - driverId: roberto-moreno
       rounds: 16
+- entrantId: modena-team-spa
+  countryId: italy
+  constructorId: modena
+  engineManufacturerId: lamborghini
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: eric-van-de-poele
+      rounds: 1-16
+    - driverId: nicola-larini
+      rounds: 1-16
 - entrantId: motor-racing-developments
   countryId: united-kingdom
   constructorId: brabham
