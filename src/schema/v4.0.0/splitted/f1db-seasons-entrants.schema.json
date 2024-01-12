@@ -1,0 +1,36 @@
+{
+  "$id": "https://www.f1db.com/schema/v4.0.0/splitted/f1db-seasons-entrants.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Seasons Entrants JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SeasonEntrant"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SeasonEntrant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year."
+        },
+        "entrantId": {
+          "type": "string",
+          "description": "The entrant."
+        },
+        "countryId": {
+          "type": "string",
+          "description": "The country."
+        }
+      },
+      "required": [
+        "year",
+        "entrantId",
+        "countryId"
+      ]
+    }
+  }
+}

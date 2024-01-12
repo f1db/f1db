@@ -1,26 +1,26 @@
 plugins {
     `java-gradle-plugin`
-    id("org.jetbrains.kotlin.jvm") version "1.8.21"
-    id("org.jetbrains.kotlin.kapt") version "1.8.21"
+    id("org.jetbrains.kotlin.jvm") version "1.9.22"
+    id("org.jetbrains.kotlin.kapt") version "1.9.22"
     id("jsonschema2pojo")
 }
 
 gradlePlugin {
     plugins {
-        create("onlyf1db") {
-            id = "com.onlyf1.db"
-            implementationClass = "com.onlyf1.db.plugin.OnlyF1DBPlugin"
+        create("f1db") {
+            id = "com.f1db"
+            implementationClass = "com.f1db.plugin.F1DBPlugin"
         }
     }
 }
 
-val jacksonVersion by extra("2.15.0")
-val jdbiVersion by extra("3.38.0")
+val jacksonVersion by extra("2.16.1")
+val jdbiVersion by extra("3.43.0")
 val joyVersion by extra("2.1.0")
 val justifyVersion by extra("3.1.0")
 val mapstructVersion by extra("1.5.5.Final")
 val slf4jVersion by extra("1.7.36")
-val sqliteJdbcVersion by extra("3.41.2.1")
+val sqliteJdbcVersion by extra("3.44.1.0")
 
 repositories {
     mavenCentral()
@@ -47,7 +47,7 @@ dependencies {
 configure<org.jsonschema2pojo.gradle.JsonSchemaExtension> {
     sourceFiles = files("$projectDir/../src/schema/current/")
     removeOldOutput = true
-    targetPackage = "com.onlyf1.db.schema"
+    targetPackage = "com.f1db.schema"
     targetVersion = "17"
     dateType = "java.time.LocalDate"
     includeAdditionalProperties = false

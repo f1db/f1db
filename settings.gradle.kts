@@ -1,1 +1,1 @@
-rootProject.name = "onlyf1-db"
+rootProject.name = "f1db"

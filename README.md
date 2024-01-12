@@ -1,13 +1,8 @@
-<p align="center">
-    <img src="./logo-dark.png#gh-dark-mode-only" alt="OnlyF1" width="300" />
-    <img src="./logo-light.png#gh-light-mode-only" alt="OnlyF1" width="300" />
-</p>
+## What is F1DB?
 
-## What is OnlyF1-DB?
+[F1DB] is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
 
-[OnlyF1]-DB is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
-
-Whether you are building a custom website, mobile application or just using OnlyF1-DB to query data, here is what we provide:
+Whether you are building a custom website, mobile application or just using F1DB to query data, here is what we provide:
 
 - All drivers
 - All constructors
@@ -39,67 +34,27 @@ Release artifacts are available in the following formats:
 - SQLite
 
 
-## Notable Changes in `v2023.22.0`
+## Notable Changes in `v2024.0.0`
 
-- Added `abbreviation` property to `GrandPrix`. 
-
-## Notable Changes in `v2023.4.0` "Sprint Shootout"
-
-Due to the new Sprint Shootout race format introduced for the 2023 season (starting from the Azerbaijan Grand Prix)
-the JSON Schema is bumped to version `v3.0.0` which has some backward incompatible changes:
-
-- `Race.sprintQualifyingStartingGridPositions` renamed to `Race.sprintStartingGridPositions`.
-- `Race.sprintQualifyingResults` renamed to `Race.sprintRaceResults`.
-
-Besides the backward incompatible changes, the following is added:
-
-- `Race.sprintQualifyingFormat` which contains the sprint qualifying format (currently only `SPRINT_SHOOTOUT`).
-- `Race.sprintQualifyingResults` which contains the sprint qualifying results.
-
-Above changes are also reflected in the SQLite database; which includes changing some view names.
-
-Also the sprint related source files for previous years have been renamed.
-
-Note that a future minor version update to the `v3.x` JSON schema might include Sprint related statistics like `totalSprintWins`.
+After acquiring the F1DB.com domain the project has been rebranded back to F1DB.
+Because this name change is reflected in the JSON Schema files the schema is bumped to version `v4.0.0`
 
 
-## Notable Changes in `v2023.x`
+## F1DB JSON Schema
 
-The project has been rebranded from F1DB to [OnlyF1]-DB.
-Old release artifacts and data version history can still be found in this repository.
+The main [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/current/single/f1db.schema.json)
+schema file contains all F1DB object definitions and serves as the main documentation.  
 
-From version `v2023.x` the CSV and JSON splitted formats are added to the available release artifacts.
-
-Due to this and adding [positions gained to the race standings](https://github.com/onlyf1com/onlyf1-db/issues/3)
-the JSON Schema version is bumped to version `v2.0.0` which has some backward incompatible changes:
-
-- `DriverStanding` has now separate `SeasonDriverStanding`/`RaceDriverStanding` object definitions.
-- `ConstructorStanding` has now separate `SeasonConstructorStanding`/`RaceConstructorStanding` object definitions.
-- `SeasonDriverStanding`/`SeasonConstructorStanding` has no `round` property anymore.
-- `RaceDriverStanding`/`RaceConstructorStanding` has a new `positionsGained` property.
-
-Above changes are also reflected in the SQLite database as separate tables are introduced.
-
-Because of the new JSON splitted format (which is also available for the Smile format) dedicated
-schema files are available for the splitted files.
-
-Also note that the schema files itself are now part of the release artifacts.
-
-
-## OnlyF1-DB JSON Schema
-
-The main [`onlyf1-db.schema.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/current/single/onlyf1-db.schema.json)
-schema file contains all OnlyF1-DB object definitions and serves as the main documentation.  
-
-For the splitted distributions the [splitted](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/current/splitted)
+For the splitted distributions the [splitted](https://github.com/f1db/f1db/tree/main/src/schema/current/splitted)
 schema files must be used.
 
-Both the JSON and Smile artifacts validate against the OnlyF1-DB Json Schema.
+Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 #### Schema version compatibility / history
 
 | Version                 | Schema Version                                                                                                                                                                                                                                                        |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2024.0.0`        | [`f1db.schema.json v4.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.0.0/single/f1db.schema.json), [`f1db-*.schema.json v4.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.0.0/splitted)                                    |
 | `>=` `v2023.22.0`       | [`onlyf1-db.schema.json v3.2.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.2.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.2.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.2.0/splitted) |
 | `>=` `v2023.8.0`        | [`onlyf1-db.schema.json v3.1.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.1.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.1.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.1.0/splitted) |
 | `>=` `v2023.4.0`        | [`onlyf1-db.schema.json v3.0.0`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v3.0.0/single/onlyf1-db.schema.json), [`onlyf1-db-*.schema.json v3.0.0 splitted`](https://github.com/onlyf1com/onlyf1-db/tree/main/src/schema/v3.0.0/splitted) |
@@ -112,7 +67,7 @@ Both the JSON and Smile artifacts validate against the OnlyF1-DB Json Schema.
 | `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/onlyf1com/onlyf1-db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                             |
 
 
-## OnlyF1-DB SQLite Database
+## F1DB SQLite Database
 
 The SQLite database artifact contains all data in a relational database format
 and can be used to directly query the data instead of processing the JSON format.
@@ -131,7 +86,7 @@ Releases are versioned using a "customized" [CalVer] versioning scheme:
 
 which uses the following conventions:
 
-- **YYYY** – Full year of the season – `2023`, ..
+- **YYYY** – Full year of the season – `2024`, ..
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
@@ -140,30 +95,30 @@ Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` i
 
 Examples:
 
-- **2023.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2023 season.
-- **2023.0.0.beta** – Pre-season beta release before the 1<sup>st</sup> race round of the 2023 season.
-- **2023.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2023 season.
-- **2023.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2023 season.
-- **2023.1.0** – Final release after the 1<sup>st</sup> race round of the 2023 season.
-- **2023.2.0** – Final release after the 2<sup>nd</sup> race round of the 2023 season.
-- **2023.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2023 season.
-- **2023.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2023 season.
+- **2024.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2024 season.
+- **2024.0.0.beta** – Pre-season beta release before the 1<sup>st</sup> race round of the 2024 season.
+- **2024.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2024 season.
+- **2024.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2024 season.
+- **2024.1.0** – Final release after the 1<sup>st</sup> race round of the 2024 season.
+- **2024.2.0** – Final release after the 2<sup>nd</sup> race round of the 2024 season.
+- **2024.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2024 season.
+- **2024.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2024 season.
 
 As you can see we use a special **RR** `0` for pre-season releases.
 
 
 ## Community
 
-The OnlyF1-DB community can be found on [GitHub Discussions](https://github.com/onlyf1com/onlyf1-db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
+The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
 
-Keep in touch with us by following us on Twitter — [@OnlyF1com](https://twitter.com/onlyf1com).
+Keep in touch with us by following us on X — [@F1DBcom](https://twitter.com/f1dbcom).
 
 
 ## Reporting Data Issues
 
-We use [GitHub Issues](https://github.com/onlyf1com/onlyf1-db/issues) to track data issues or related problems.
+We use [GitHub Issues](https://github.com/f1db/f1db/issues) to track data issues or related problems.
 
-If you found a data issue which is not reported yet, please [create a new issue](https://github.com/onlyf1com/onlyf1-db/issues/new).
+If you found a data issue which is not reported yet, please [create a new issue](https://github.com/f1db/f1db/issues/new).
 
 ## Building from Source
 
@@ -176,7 +131,7 @@ Requires Java 17.
 
 ## Releasing
 
-[GitHub Actions](https://github.com/onlyf1com/onlyf1-db/actions) is used to build and upload new releases by creating a new git tag.
+[GitHub Actions](https://github.com/f1db/f1db/actions) is used to build and upload new releases by creating a new git tag.
 
 Follow these steps:
 
@@ -193,10 +148,10 @@ and the release action is automatically triggered by pushing the new tag.
 
 [![Creative Commons License][CC BY Icon Normal]][CC BY]
 
-OnlyF1-DB is licensed under a [Creative Commons Attribution 4.0 International License][CC BY].
+F1DB is licensed under a [Creative Commons Attribution 4.0 International License][CC BY].
 
 
-[OnlyF1]: https://www.onlyf1.com
+[F1DB]: https://www.f1db.com
 [CalVer]: https://calver.org/
 [CC BY]: http://creativecommons.org/licenses/by/4.0/  
 [CC BY Icon Compact]: https://i.creativecommons.org/l/by/4.0/80x15.png

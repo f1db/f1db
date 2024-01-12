@@ -1,10 +1,10 @@
 plugins {
     distribution
-    id("com.onlyf1.db")
+    id("com.f1db")
     id("org.jreleaser") version "1.5.1"
 }
 
-group = "com.onlyf1"
+group = "com.f1db"
 
 val projectName = project.name
 val currentSeasonYear: String by project
@@ -12,7 +12,7 @@ val currentSeasonFinished: String by project
 val currentSeasonDriversChampionshipDecided: String by project
 val currentSeasonConstructorsChampionshipDecided: String by project
 
-onlyf1db {
+f1db {
     sourceDir.set(layout.projectDirectory.dir("src/data"))
     outputDir.set(layout.projectDirectory.dir("build/data"))
     schemaDir.set(layout.projectDirectory.dir("src/schema/current"))
@@ -86,9 +86,9 @@ jreleaser {
     project {
         name.set(projectName)
         versionPattern.set("CALVER:YYYY.MINOR.MICRO[.MODIFIER]")
-        description.set("OnlyF1 Open Source Formula 1 Database")
+        description.set("F1DB Open Source Formula 1 Database")
         license.set("CC-BY-4.0")
-        copyright.set("OnlyF1")
+        copyright.set("F1DB")
     }
     files {
         artifact {
@@ -113,12 +113,12 @@ jreleaser {
     release {
         github {
             enabled.set(true)
-            repoOwner.set("onlyf1com")
-            name.set("onlyf1-db")
+            repoOwner.set("f1db")
+            name.set("f1db")
             username.set("marceloverdijk")
             commitAuthor {
-                name.set("OnlyF1-DB")
-                email.set("info@onlyf1.com")
+                name.set("F1DB")
+                email.set("info@f1db.com")
             }
             skipTag.set(true)
         }
