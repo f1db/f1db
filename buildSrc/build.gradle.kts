@@ -49,7 +49,9 @@ configure<org.jsonschema2pojo.gradle.JsonSchemaExtension> {
     removeOldOutput = true
     targetPackage = "com.f1db.schema"
     targetVersion = "17"
+    dateTimeType = "java.time.OffsetDateTime"
     dateType = "java.time.LocalDate"
+    timeType = "java.time.OffsetTime"
     includeAdditionalProperties = false
     isIncludeGeneratedAnnotation = false
     setInclusionLevel("ALWAYS")
