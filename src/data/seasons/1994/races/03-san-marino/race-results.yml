@@ -320,6 +320,34 @@
   reasonRetired: Vibrations
   points:
   gridPosition: 18
+- position: DNF
+  driverNumber: 6
+  driverId: jj-lehto
+  constructorId: benetton
+  engineManufacturerId: ford
+  tyreManufacturerId: goodyear
+  laps: 0
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 5
+- position: DNF
+  driverNumber: 11
+  driverId: pedro-lamy
+  constructorId: lotus
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: goodyear
+  laps: 0
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 22
 - position: DNS
   driverNumber: 32
   driverId: roland-ratzenberger
