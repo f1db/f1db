@@ -58,16 +58,6 @@
       rounds:
     - driverId: sergio-perez
       rounds:
-- entrantId: scuderia-alphatauri-rb
-  countryId: italy
-  constructorId: alphatauri-rb
-  engineManufacturerId: honda-rbpt
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: daniel-ricciardo
-      rounds:
-    - driverId: yuki-tsunoda
-      rounds:
 - entrantId: scuderia-ferrari
   countryId: italy
   constructorId: ferrari
@@ -87,6 +77,16 @@
     - driverId: guanyu-zhou
       rounds:
     - driverId: valtteri-bottas
+      rounds:
+- entrantId: visa-cash-app-rb-f1-team
+  countryId: italy
+  constructorId: rb
+  engineManufacturerId: honda-rbpt
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: daniel-ricciardo
+      rounds:
+    - driverId: yuki-tsunoda
       rounds:
 - entrantId: williams-racing
   countryId: united-kingdom

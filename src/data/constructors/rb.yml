@@ -1,6 +1,6 @@
-id: alphatauri-rb
-name: AlphaTauri RB
-fullName: Scuderia AlphaTauri RB
+id: rb
+name: RB
+fullName: RB
 countryId: italy
 previousNextConstructors:
   - constructorId: minardi
@@ -12,6 +12,6 @@ previousNextConstructors:
   - constructorId: alphatauri
     yearFrom: 2020
     yearTo: 2023
-  - constructorId: alphatauri-rb
+  - constructorId: rb
     yearFrom: 2024
     yearTo:
