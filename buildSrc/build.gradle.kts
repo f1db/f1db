@@ -15,12 +15,12 @@ gradlePlugin {
 }
 
 val jacksonVersion by extra("2.16.1")
-val jdbiVersion by extra("3.43.0")
+val jdbiVersion by extra("3.44.1")
 val joyVersion by extra("2.1.0")
 val justifyVersion by extra("3.1.0")
 val mapstructVersion by extra("1.5.5.Final")
 val slf4jVersion by extra("1.7.36")
-val sqliteJdbcVersion by extra("3.44.1.0")
+val sqliteJdbcVersion by extra("3.45.1.0")
 
 repositories {
     mavenCentral()
