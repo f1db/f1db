@@ -39,28 +39,17 @@ Release artifacts are available in the following formats:
 Added date and time fields for all sessions in the 2024 season:
 
 - `time` (of the race)
-- `preQualifyingDate`
-- `preQualifyingTime`
-- `freePractice1Date`
-- `freePractice1Time`
-- `freePractice2Date`
-- `freePractice2Time`
-- `freePractice3Date`
-- `freePractice3Time`
-- `freePractice4Date`
-- `freePractice4Time`
-- `qualifying1Date`
-- `qualifying1Time`
-- `qualifying2Date`
-- `qualifying2Time`
-- `qualifyingDate`
-- `qualifyingTime`
-- `sprintQualifyingDate`
-- `sprintQualifyingTime`
-- `sprintRaceDate`
-- `sprintRaceTime`
-- `warmingUpDate`
-- `warmingUpTime`
+- `preQualifyingDate`, `preQualifyingTime`
+- `freePractice1Date`, `freePractice1Time`
+- `freePractice2Date`, `freePractice2Time`
+- `freePractice3Date`, `freePractice3Time`
+- `freePractice4Date`, `freePractice4Time`
+- `qualifying1Date`, `qualifying1Time`
+- `qualifying2Date`, `qualifying2Time`
+- `qualifyingDate`, `qualifyingTime`
+- `sprintQualifyingDate`, `sprintQualifyingTime`
+- `sprintRaceDate`, `sprintRaceTime`
+- `warmingUpDate`, `warmingUpTime`
 
 To accommodate this change the JSON Schema is bumped to version `v4.1.0`.
 Note that currently the data is only provided for the 2024 season,
