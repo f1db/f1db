@@ -40,13 +40,8 @@ Added date and time fields for all sessions in the 2024 season:
 
 - `time` (of the race)
 - `preQualifyingDate`, `preQualifyingTime`
-- `freePractice1Date`, `freePractice1Time`
-- `freePractice2Date`, `freePractice2Time`
-- `freePractice3Date`, `freePractice3Time`
-- `freePractice4Date`, `freePractice4Time`
-- `qualifying1Date`, `qualifying1Time`
-- `qualifying2Date`, `qualifying2Time`
-- `qualifyingDate`, `qualifyingTime`
+- `freePractice1Date`, `freePractice1Time`, `freePractice2Date`, `freePractice2Time`, `freePractice3Date`, `freePractice3Time`, `freePractice4Date`, `freePractice4Time`
+- `qualifying1Date`, `qualifying1Time`, `qualifying2Date`, `qualifying2Time`, `qualifyingDate`, `qualifyingTime`
 - `sprintQualifyingDate`, `sprintQualifyingTime`
 - `sprintRaceDate`, `sprintRaceTime`
 - `warmingUpDate`, `warmingUpTime`
