@@ -1,4 +1,9 @@
-![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?labelColor=%23333&color=%23d40000)
+![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)
+![Static Badge](https://img.shields.io/badge/All%20releases?style=for-the-badge&labelColor=%23333&color=%23d40000&link=https%3A%2F%2Fgithub.com%2Ff1db%2Ff1db%2Freleases)
+![GitHub License](https://img.shields.io/github/license/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/f1db/f1db/total?style=for-the-badge&labelColor=%23333&color=%23d40000)
+![GitHub Repo stars](https://img.shields.io/github/stars/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)
+
 
 ## F1DB
 
