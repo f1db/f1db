@@ -1,4 +1,6 @@
-## What is F1DB?
+![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/f1db/f1db/latest/total)
+
+## F1DB
 
 [F1DB] is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
 
