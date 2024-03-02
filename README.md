@@ -1,4 +1,10 @@
-## What is F1DB?
+[![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000&)](https://github.com/f1db/f1db/releases)
+[![GitHub License](https://img.shields.io/github/license/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/f1db/f1db/total?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://github.com/f1db/f1db/releases)
+[![GitHub Repo stars](https://img.shields.io/github/stars/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://github.com/f1db/f1db/stargazers)
+
+
+## F1DB
 
 [F1DB] is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
 
