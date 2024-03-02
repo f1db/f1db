@@ -1,9 +1,7 @@
-
-[![GitHub Releases](https://img.shields.io/badge/all-releases-red.svg?style=for-the-badge)](https://github.com/f1db/f1db/releases)
-![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000&link=https%3A%2F%2Fgithub.com%2Ff1db%2Ff1db%2Freleases)
-![GitHub License](https://img.shields.io/github/license/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/f1db/f1db/total?style=for-the-badge&labelColor=%23333&color=%23d40000)
-![GitHub Repo stars](https://img.shields.io/github/stars/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)
+[![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000&)](https://github.com/f1db/f1db/releases)
+[![GitHub License](https://img.shields.io/github/license/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/f1db/f1db/total?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://github.com/f1db/f1db/releases)
+[![GitHub Repo stars](https://img.shields.io/github/stars/f1db/f1db?style=for-the-badge&labelColor=%23333&color=%23d40000)](https://github.com/f1db/f1db/stargazers)
 
 
 ## F1DB
