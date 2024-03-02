@@ -1,3 +1,5 @@
+![GitHub Release](https://img.shields.io/github/v/release/f1db/f1db?labelColor=%23333&color=%23d40000)
+
 ## F1DB
 
 [F1DB] is the most comprehensive free open source database with all-time Formula 1 racing data and statistics.
