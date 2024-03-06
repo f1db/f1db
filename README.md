@@ -135,7 +135,7 @@ As you can see we use a special **RR** `0` for pre-season releases.
 
 The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
 
-Keep in touch with us by following us on X — [@F1DBcom](https://twitter.com/f1dbcom).
+Keep in touch with us by following us on X — [@F1DB_com](https://twitter.com/f1db_com).
 
 
 ## Reporting Data Issues
