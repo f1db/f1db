@@ -17,7 +17,7 @@ import com.fasterxml.jackson.module.kotlin.KotlinModule
 import org.jdbi.v3.core.Jdbi
 import org.jdbi.v3.core.kotlin.KotlinPlugin
 import org.jdbi.v3.sqlobject.kotlin.KotlinSqlObjectPlugin
-import org.jdbi.v3.sqlobject.kotlin.onDemand
+import org.jdbi.v3.sqlobject.kotlin.attach
 import org.leadpony.joy.classic.ClassicJsonProvider
 import org.leadpony.justify.api.JsonValidationService
 import org.leadpony.justify.api.ProblemHandler
@@ -261,55 +261,62 @@ class F1DBWriter(
         jdbi.installPlugin(KotlinPlugin())
         jdbi.installPlugin(KotlinSqlObjectPlugin())
 
-        val dao = jdbi.onDemand<F1DBDao>()
+        jdbi.useHandle<Exception> { handle ->
 
-        // Create schema.
+            val dao = handle.attach<F1DBDao>()
 
-        dao.createSchema()
+            // Enable foreign keys
 
-        // Insert data.
+            handle.execute("PRAGMA foreign_keys = ON;")
 
-        dao.insertContinents(db.splitted.continents)
-        dao.insertCountries(db.splitted.countries)
-        dao.insertDrivers(db.splitted.drivers)
-        dao.insertDriverFamilyRelationships(db.splitted.driverFamilyRelationships)
-        dao.insertConstructors(db.splitted.constructors)
-        dao.insertConstructorPreviousNextConstructors(db.splitted.constructorPreviousNextConstructors)
-        dao.insertEngineManufacturers(db.splitted.engineManufacturers)
-        dao.insertTyreManufacturers(db.splitted.tyreManufacturers)
-        dao.insertEntrants(db.splitted.entrants)
-        dao.insertCircuits(db.splitted.circuits, db.splitted.circuits.map { it.previousNames?.joinToString(";") })
-        dao.insertGrandsPrix(db.splitted.grandsPrix)
-        dao.insertSeasons(db.splitted.seasons)
-        dao.insertSeasonEntrants(db.splitted.seasonEntrants)
-        dao.insertSeasonEntrantConstructors(db.splitted.seasonEntrantConstructors)
-        dao.insertSeasonEntrantTyreManufacturers(db.splitted.seasonEntrantTyreManufacturers)
-        dao.insertSeasonEntrantDrivers(db.splitted.seasonEntrantDrivers, db.splitted.seasonEntrantDrivers.map { it.rounds?.joinToString(";") })
-        dao.insertSeasonDriverStandings(db.splitted.seasonDriverStandings)
-        dao.insertSeasonConstructorStandings(db.splitted.seasonConstructorStandings)
-        dao.insertRaces(db.splitted.races)
-        dao.insertRaceQualifyingResult(db.splitted.racePreQualifyingResults, "PRE_QUALIFYING_RESULT")
-        dao.insertRacePracticeResult(db.splitted.raceFreePractice1Results, "FREE_PRACTICE_1_RESULT")
-        dao.insertRacePracticeResult(db.splitted.raceFreePractice2Results, "FREE_PRACTICE_2_RESULT")
-        dao.insertRacePracticeResult(db.splitted.raceFreePractice3Results, "FREE_PRACTICE_3_RESULT")
-        dao.insertRacePracticeResult(db.splitted.raceFreePractice4Results, "FREE_PRACTICE_4_RESULT")
-        dao.insertRaceQualifyingResult(db.splitted.raceQualifying1Results, "QUALIFYING_1_RESULT")
-        dao.insertRaceQualifyingResult(db.splitted.raceQualifying2Results, "QUALIFYING_2_RESULT")
-        dao.insertRaceQualifyingResult(db.splitted.raceQualifyingResults, "QUALIFYING_RESULT")
-        dao.insertRaceQualifyingResult(db.splitted.raceSprintQualifyingResults, "SPRINT_QUALIFYING_RESULT")
-        dao.insertRaceStartingGridPosition(db.splitted.raceSprintStartingGridPositions, "SPRINT_STARTING_GRID_POSITION")
-        dao.insertRaceRaceResult(db.splitted.raceSprintRaceResults, "SPRINT_RACE_RESULT")
-        dao.insertRacePracticeResult(db.splitted.raceWarmingUpResults, "WARMING_UP_RESULT")
-        dao.insertRaceStartingGridPosition(db.splitted.raceStartingGridPositions, "STARTING_GRID_POSITION")
-        dao.insertRaceRaceResult(db.splitted.raceRaceResults, "RACE_RESULT")
-        dao.insertRaceFastestLap(db.splitted.raceFastestLaps, "FASTEST_LAP")
-        dao.insertRacePitStop(db.splitted.racePitStops, "PIT_STOP")
-        dao.insertRaceDriverOfTheDayResult(db.splitted.raceDriverOfTheDayResults, "DRIVER_OF_THE_DAY_RESULT")
-        dao.insertRaceDriverStandings(db.splitted.raceDriverStandings)
-        dao.insertRaceConstructorStandings(db.splitted.raceConstructorStandings)
+            // Create schema.
 
-        // Rebuild the database; repacking it into a minimal amount of disk space.
+            dao.createSchema()
 
-        dao.vacuum()
+            // Insert data.
+
+            dao.insertContinents(db.splitted.continents)
+            dao.insertCountries(db.splitted.countries)
+            dao.insertDrivers(db.splitted.drivers)
+            dao.insertDriverFamilyRelationships(db.splitted.driverFamilyRelationships)
+            dao.insertConstructors(db.splitted.constructors)
+            dao.insertConstructorPreviousNextConstructors(db.splitted.constructorPreviousNextConstructors)
+            dao.insertEngineManufacturers(db.splitted.engineManufacturers)
+            dao.insertTyreManufacturers(db.splitted.tyreManufacturers)
+            dao.insertEntrants(db.splitted.entrants)
+            dao.insertCircuits(db.splitted.circuits, db.splitted.circuits.map { it.previousNames?.joinToString(";") })
+            dao.insertGrandsPrix(db.splitted.grandsPrix)
+            dao.insertSeasons(db.splitted.seasons)
+            dao.insertSeasonEntrants(db.splitted.seasonEntrants)
+            dao.insertSeasonEntrantConstructors(db.splitted.seasonEntrantConstructors)
+            dao.insertSeasonEntrantTyreManufacturers(db.splitted.seasonEntrantTyreManufacturers)
+            dao.insertSeasonEntrantDrivers(db.splitted.seasonEntrantDrivers, db.splitted.seasonEntrantDrivers.map { it.rounds?.joinToString(";") })
+            dao.insertSeasonDriverStandings(db.splitted.seasonDriverStandings)
+            dao.insertSeasonConstructorStandings(db.splitted.seasonConstructorStandings)
+            dao.insertRaces(db.splitted.races)
+            dao.insertRaceQualifyingResult(db.splitted.racePreQualifyingResults, "PRE_QUALIFYING_RESULT")
+            dao.insertRacePracticeResult(db.splitted.raceFreePractice1Results, "FREE_PRACTICE_1_RESULT")
+            dao.insertRacePracticeResult(db.splitted.raceFreePractice2Results, "FREE_PRACTICE_2_RESULT")
+            dao.insertRacePracticeResult(db.splitted.raceFreePractice3Results, "FREE_PRACTICE_3_RESULT")
+            dao.insertRacePracticeResult(db.splitted.raceFreePractice4Results, "FREE_PRACTICE_4_RESULT")
+            dao.insertRaceQualifyingResult(db.splitted.raceQualifying1Results, "QUALIFYING_1_RESULT")
+            dao.insertRaceQualifyingResult(db.splitted.raceQualifying2Results, "QUALIFYING_2_RESULT")
+            dao.insertRaceQualifyingResult(db.splitted.raceQualifyingResults, "QUALIFYING_RESULT")
+            dao.insertRaceQualifyingResult(db.splitted.raceSprintQualifyingResults, "SPRINT_QUALIFYING_RESULT")
+            dao.insertRaceStartingGridPosition(db.splitted.raceSprintStartingGridPositions, "SPRINT_STARTING_GRID_POSITION")
+            dao.insertRaceRaceResult(db.splitted.raceSprintRaceResults, "SPRINT_RACE_RESULT")
+            dao.insertRacePracticeResult(db.splitted.raceWarmingUpResults, "WARMING_UP_RESULT")
+            dao.insertRaceStartingGridPosition(db.splitted.raceStartingGridPositions, "STARTING_GRID_POSITION")
+            dao.insertRaceRaceResult(db.splitted.raceRaceResults, "RACE_RESULT")
+            dao.insertRaceFastestLap(db.splitted.raceFastestLaps, "FASTEST_LAP")
+            dao.insertRacePitStop(db.splitted.racePitStops, "PIT_STOP")
+            dao.insertRaceDriverOfTheDayResult(db.splitted.raceDriverOfTheDayResults, "DRIVER_OF_THE_DAY_RESULT")
+            dao.insertRaceDriverStandings(db.splitted.raceDriverStandings)
+            dao.insertRaceConstructorStandings(db.splitted.raceConstructorStandings)
+
+            // Rebuild the database; repacking it into a minimal amount of disk space.
+
+            handle.execute("VACUUM;")
+        }
     }
 }

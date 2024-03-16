@@ -129,7 +129,4 @@ interface F1DBDao {
     @SqlBatch("insert_race_constructor_standing")
     fun insertRaceConstructorStandings(@BindBean raceConstructorStandings: List<RaceConstructorStanding>)
 
-    @SqlScript
-    fun vacuum()
-
 }
