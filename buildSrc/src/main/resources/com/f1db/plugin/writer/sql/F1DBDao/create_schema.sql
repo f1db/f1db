@@ -521,8 +521,9 @@ SELECT   race.id AS race_id
 ,        race_data.practice_interval_millis AS interval_millis
 ,        race_data.practice_laps AS laps
 FROM     race_data
-JOIN     race ON race_data.race_id = race.id
-WHERE    race_data.type = 'FREE_PRACTICE_2_RESULT'
+JOIN     race
+ON       race_data.race_id = race.id
+WHERE    race_data.type    = 'FREE_PRACTICE_2_RESULT'
 ;
 
 CREATE VIEW free_practice_3_result AS
