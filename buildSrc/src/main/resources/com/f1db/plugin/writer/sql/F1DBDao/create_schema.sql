@@ -320,7 +320,7 @@ CREATE TABLE race
 , qualifying_date DATE
 , qualifying_time TEXT
 , sprint_qualifying_date DATE
-, sprint_qualifying_time
+, sprint_qualifying_time TEXT
 , sprint_race_date DATE
 , sprint_race_time TEXT
 , warming_up_date DATE
