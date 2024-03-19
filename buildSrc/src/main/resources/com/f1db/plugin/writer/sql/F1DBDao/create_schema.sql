@@ -40,8 +40,8 @@ CREATE TABLE driver
 , total_race_wins INTEGER NOT NULL
 , total_race_laps INTEGER NOT NULL
 , total_podiums INTEGER NOT NULL
-, total_points NUMERIC NOT NULL
-, total_championship_points NUMERIC NOT NULL
+, total_points DECIMAL(8,2) NOT NULL
+, total_championship_points DECIMAL(8,2) NOT NULL
 , total_pole_positions INTEGER NOT NULL
 , total_fastest_laps INTEGER NOT NULL
 , total_driver_of_the_day INTEGER NOT NULL
@@ -88,7 +88,7 @@ CREATE TABLE constructor
 , total_race_laps INTEGER NOT NULL
 , total_podiums INTEGER NOT NULL
 , total_podium_races INTEGER NOT NULL
-, total_championship_points NUMERIC NOT NULL
+, total_championship_points DECIMAL(8,2) NOT NULL
 , total_pole_positions INTEGER NOT NULL
 , total_fastest_laps INTEGER NOT NULL
 );
@@ -122,7 +122,7 @@ CREATE TABLE engine_manufacturer
 , total_race_laps INTEGER NOT NULL
 , total_podiums INTEGER NOT NULL
 , total_podium_races INTEGER NOT NULL
-, total_championship_points NUMERIC NOT NULL
+, total_championship_points DECIMAL(8,2) NOT NULL
 , total_pole_positions INTEGER NOT NULL
 , total_fastest_laps INTEGER NOT NULL
 );
@@ -164,8 +164,8 @@ CREATE TABLE circuit
 , type VARCHAR(255) NOT NULL COLLATE NOCASE
 , place_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country (id)
-, latitude DECIMAL(10,6)
-, longitude DECIMAL(10,6)
+, latitude (10,6)
+, longitude (10,6)
 , total_races_held INTEGER NOT NULL
 );
 
@@ -258,7 +258,7 @@ CREATE TABLE season_driver_standing
 , position_number INTEGER
 , position_text VARCHAR(255) NOT NULL COLLATE NOCASE
 , driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver (id)
-, points NUMERIC NOT NULL
+, points DECIMAL(8,2) NOT NULL
 , PRIMARY KEY (year, position_display_order)
 );
 
@@ -275,7 +275,7 @@ CREATE TABLE season_constructor_standing
 , position_text VARCHAR(255) NOT NULL COLLATE NOCASE
 , constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor (id)
 , engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer (id)
-, points NUMERIC NOT NULL
+, points DECIMAL(8,2) NOT NULL
 , PRIMARY KEY (year, position_display_order)
 );
 
@@ -382,7 +382,7 @@ CREATE TABLE race_data
 , race_interval VARCHAR(255) COLLATE NOCASE
 , race_interval_millis INTEGER
 , race_reason_retired VARCHAR(255) COLLATE NOCASE
-, race_points NUMERIC
+, race_points DECIMAL(8,2)
 , race_grid_position_number INTEGER
 , race_grid_position_text VARCHAR(255) COLLATE NOCASE
 , race_positions_gained INTEGER
@@ -401,7 +401,7 @@ CREATE TABLE race_data
 , pit_stop_lap INTEGER
 , pit_stop_time VARCHAR(255) COLLATE NOCASE
 , pit_stop_time_millis INTEGER
-, driver_of_the_day_percentage NUMERIC
+, driver_of_the_day_percentage DECIMAL(4,1)
 , PRIMARY KEY (race_id, type, position_display_order)
 );
 
@@ -421,7 +421,7 @@ CREATE TABLE race_driver_standing
 , position_number INTEGER
 , position_text VARCHAR(255) NOT NULL COLLATE NOCASE
 , driver_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES driver (id)
-, points NUMERIC NOT NULL
+, points DECIMAL(8,2) NOT NULL
 , positions_gained INTEGER
 , PRIMARY KEY (race_id, position_display_order)
 );
@@ -439,7 +439,7 @@ CREATE TABLE race_constructor_standing
 , position_text VARCHAR(255) NOT NULL COLLATE NOCASE
 , constructor_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES constructor (id)
 , engine_manufacturer_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES engine_manufacturer (id)
-, points NUMERIC NOT NULL
+, points DECIMAL(8,2) NOT NULL
 , positions_gained INTEGER
 , PRIMARY KEY (race_id, position_display_order)
 );
