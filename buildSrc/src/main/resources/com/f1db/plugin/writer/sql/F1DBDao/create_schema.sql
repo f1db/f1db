@@ -164,8 +164,8 @@ CREATE TABLE circuit
 , type VARCHAR(255) NOT NULL COLLATE NOCASE
 , place_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , country_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES country (id)
-, latitude (10,6)
-, longitude (10,6)
+, latitude DECIMAL(10,6)
+, longitude DECIMAL(10,6)
 , total_races_held INTEGER NOT NULL
 );
 
