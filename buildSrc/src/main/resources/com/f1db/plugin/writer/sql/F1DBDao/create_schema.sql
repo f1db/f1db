@@ -291,7 +291,7 @@ CREATE TABLE race
 , year INTEGER NOT NULL REFERENCES season (year)
 , round INTEGER NOT NULL
 , date DATE NOT NULL
-, time TEXT
+, time VARCHAR(5)
 , grand_prix_id VARCHAR(255) NOT NULL COLLATE NOCASE REFERENCES grand_prix (id)
 , official_name VARCHAR(255) NOT NULL COLLATE NOCASE
 , qualifying_format VARCHAR(255) NOT NULL COLLATE NOCASE
@@ -304,27 +304,27 @@ CREATE TABLE race
 , scheduled_laps INTEGER
 , scheduled_distance DECIMAL(6,3)
 , pre_qualifying_date DATE
-, pre_qualifying_time TEXT
+, pre_qualifying_time VARCHAR(5)
 , free_practice_1_date DATE
-, free_practice_1_time TEXT
+, free_practice_1_time VARCHAR(5)
 , free_practice_2_date DATE
-, free_practice_2_time TEXT
+, free_practice_2_time VARCHAR(5)
 , free_practice_3_date DATE
-, free_practice_3_time TEXT
+, free_practice_3_time VARCHAR(5)
 , free_practice_4_date DATE
-, free_practice_4_time TEXT
+, free_practice_4_time VARCHAR(5)
 , qualifying_1_date DATE
-, qualifying_1_time TEXT
+, qualifying_1_time VARCHAR(5)
 , qualifying_2_date DATE
-, qualifying_2_time TEXT
+, qualifying_2_time VARCHAR(5)
 , qualifying_date DATE
-, qualifying_time TEXT
+, qualifying_time VARCHAR(5)
 , sprint_qualifying_date DATE
-, sprint_qualifying_time TEXT
+, sprint_qualifying_time VARCHAR(5)
 , sprint_race_date DATE
-, sprint_race_time TEXT
+, sprint_race_time VARCHAR(5)
 , warming_up_date DATE
-, warming_up_time TEXT
+, warming_up_time VARCHAR(5)
 , UNIQUE (year, round)
 );
 
