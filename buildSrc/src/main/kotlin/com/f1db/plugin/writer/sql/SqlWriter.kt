@@ -99,7 +99,7 @@ class SqlWriter(
 
         outputDir.mkdirs()
 
-        write("mysql", SQLDialect.MARIADB)
+        write("mysql", SQLDialect.MYSQL)
         write("postgresql", SQLDialect.POSTGRES)
         write("sqlite", SQLDialect.SQLITE)
     }
