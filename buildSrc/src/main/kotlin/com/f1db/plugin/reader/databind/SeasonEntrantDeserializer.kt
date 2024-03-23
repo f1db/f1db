@@ -1,6 +1,6 @@
 package com.f1db.plugin.reader.databind
 
-import com.f1db.schema.single.SeasonEntrant
+import com.f1db.plugin.schema.single.SeasonEntrant
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.databind.DeserializationContext
 

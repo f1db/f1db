@@ -1,7 +1,7 @@
 plugins {
     distribution
     id("com.f1db")
-    id("org.jreleaser") version "1.10.0"
+    id("org.jreleaser") version "1.11.0"
 }
 
 group = "com.f1db"
@@ -74,6 +74,24 @@ distributions {
             }
         }
     }
+    create("sql-mysql") {
+        distributionBaseName.set("${projectName}-sql-mysql")
+        contents {
+            from(layout.buildDirectory.file("data/sql/${projectName}-sql-mysql.sql"))
+        }
+    }
+    create("sql-postgresql") {
+        distributionBaseName.set("${projectName}-sql-postgresql")
+        contents {
+            from(layout.buildDirectory.file("data/sql/${projectName}-sql-postgresql.sql"))
+        }
+    }
+    create("sql-sqlite") {
+        distributionBaseName.set("${projectName}-sql-sqlite")
+        contents {
+            from(layout.buildDirectory.file("data/sql/${projectName}-sql-sqlite.sql"))
+        }
+    }
     create("sqlite") {
         distributionBaseName.set("${projectName}-sqlite")
         contents {
@@ -93,21 +111,39 @@ jreleaser {
     files {
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-csv-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-csv.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-json-single-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-json-single.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-json-splitted-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-json-splitted.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-smile-single-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-smile-single.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-smile-splitted-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-smile-splitted.zip")
+        }
+        artifact {
+            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-mysql-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-sql-mysql.zip")
+        }
+        artifact {
+            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-postgresql-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-sql-postgresql.zip")
+        }
+        artifact {
+            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-sqlite-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-sql-sqlite.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/${projectName}-sqlite-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("${projectName}-sqlite.zip")
         }
     }
     release {

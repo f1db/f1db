@@ -1,7 +1,7 @@
 package com.f1db.plugin.reader.databind
 
 import com.f1db.plugin.extensions.toMillis
-import com.f1db.schema.single.FastestLap
+import com.f1db.plugin.schema.single.FastestLap
 import com.fasterxml.jackson.databind.util.StdConverter
 
 /**

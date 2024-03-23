@@ -37,6 +37,7 @@ Release artifacts are available in the following formats:
 - JSON
 - JSON splitted (multiple data files)
 - Smile (binary variant of the JSON format)
+- SQL (vanilla SQL statements to populate a custom database)
 - SQLite
 
 
@@ -91,7 +92,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 | `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                   |
 
 
-## F1DB SQLite Database
+## F1DB SQL / SQLite Database
 
 The SQLite database artifact contains all data in a relational database format
 and can be used to directly query the data instead of processing the JSON format.
@@ -99,7 +100,15 @@ and can be used to directly query the data instead of processing the JSON format
 The database file could also serve students who want to learn SQL.
 
 We suggest to use [SQLiteStudio] for querying the database file.
-Of course any SQLite compliant SQL client can be used as well.  
+Of course any SQLite compliant SQL client can be used as well.
+
+Since `v2024.3.0` SQL artifacts are available for MySQL, PostgreSQL and SQLite
+that provide .sql dump files to import the schema and data directly in these database systems.
+
+If you want to populate another database system (e.g. H2) then most likely the
+PostgreSQL .sql dump file is your best option. 
+If that doesn't work, and you want a .sql dump file for another database system to be added
+to the release artifacts, then please create a [feature request](https://github.com/f1db/f1db/issues).
 
 
 ## Versioning

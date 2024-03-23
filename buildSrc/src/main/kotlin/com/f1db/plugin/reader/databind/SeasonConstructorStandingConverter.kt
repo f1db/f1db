@@ -1,6 +1,6 @@
 package com.f1db.plugin.reader.databind
 
-import com.f1db.schema.single.SeasonConstructorStanding
+import com.f1db.plugin.schema.single.SeasonConstructorStanding
 import com.fasterxml.jackson.databind.util.StdConverter
 
 /**

@@ -1,6 +1,6 @@
 package com.f1db.plugin.reader.databind
 
-import com.f1db.schema.single.RaceDriverStanding
+import com.f1db.plugin.schema.single.RaceDriverStanding
 import com.fasterxml.jackson.databind.util.StdConverter
 
 /**

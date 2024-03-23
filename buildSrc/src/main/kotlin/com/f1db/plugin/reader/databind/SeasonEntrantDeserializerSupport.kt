@@ -3,10 +3,10 @@ package com.f1db.plugin.reader.databind
 import com.f1db.plugin.extensions.asText
 import com.f1db.plugin.extensions.contains
 import com.f1db.plugin.extensions.toRounds
-import com.f1db.schema.single.SeasonEntrant
-import com.f1db.schema.single.SeasonEntrantConstructor
-import com.f1db.schema.single.SeasonEntrantDriver
-import com.f1db.schema.single.SeasonEntrantTyreManufacturer
+import com.f1db.plugin.schema.single.SeasonEntrant
+import com.f1db.plugin.schema.single.SeasonEntrantConstructor
+import com.f1db.plugin.schema.single.SeasonEntrantDriver
+import com.f1db.plugin.schema.single.SeasonEntrantTyreManufacturer
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.core.TreeNode
 import com.fasterxml.jackson.databind.DeserializationContext
