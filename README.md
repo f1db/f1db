@@ -37,8 +37,8 @@ Release artifacts are available in the following formats:
 - JSON
 - JSON splitted (multiple data files)
 - Smile (binary variant of the JSON format)
-- SQL (vanilla SQL statements to populate a custom database)
-- SQLite
+- SQL (MySQL, PostgreSQL or SQLite .sql dump files to create and populate a custom database)
+- SQLite database
 
 
 ## Notable Changes in `v2024.0.0.beta2`
