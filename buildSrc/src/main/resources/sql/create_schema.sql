@@ -1,23 +1,31 @@
 CREATE TABLE "continent"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
-, "code" VARCHAR(2) NOT NULL UNIQUE
-, "name" VARCHAR(255) NOT NULL UNIQUE
+( "id" VARCHAR(255) NOT NULL
+, "code" VARCHAR(2) NOT NULL
+, "name" VARCHAR(255) NOT NULL
 , "demonym" VARCHAR(255)
+, CONSTRAINT "cont_pk" PRIMARY KEY ("id")
+, CONSTRAINT "cont_code_uk" UNIQUE ("code")
+, CONSTRAINT "cont_name_uk" UNIQUE ("name")
 );
 
 CREATE TABLE "country"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
-, "alpha2_code" VARCHAR(2) NOT NULL UNIQUE
-, "alpha3_code" VARCHAR(3) NOT NULL UNIQUE
-, "name" VARCHAR(255) NOT NULL UNIQUE
+( "id" VARCHAR(255) NOT NULL
+, "alpha2_code" VARCHAR(2) NOT NULL
+, "alpha3_code" VARCHAR(3) NOT NULL
+, "name" VARCHAR(255) NOT NULL
 , "demonym" VARCHAR(255)
-, "continent_id" VARCHAR(255) NOT NULL REFERENCES "continent" ("id")
+, "continent_id" VARCHAR(255) NOT NULL
+, CONSTRAINT "coun_pk" PRIMARY KEY ("id")
+, CONSTRAINT "coun_alpha2_code_uk" UNIQUE ("alpha2_code")
+, CONSTRAINT "coun_alpha3_code_uk" UNIQUE ("alpha3_code")
+, CONSTRAINT "coun_name_uk" UNIQUE ("name")
+, CONSTRAINT "coun_continent_id_fk" FOREIGN KEY ("continent_id") REFERENCES "continent" ("id")
 );
 
-CREATE INDEX "country_continent_id_index" ON "country" ("continent_id");
+CREATE INDEX "coun_continent_id_idx" ON "country" ("continent_id");
 
 CREATE TABLE "driver"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
 , "first_name" VARCHAR(255) NOT NULL
 , "last_name" VARCHAR(255) NOT NULL
@@ -28,9 +36,9 @@ CREATE TABLE "driver"
 , "date_of_birth" DATE NOT NULL
 , "date_of_death" DATE
 , "place_of_birth" VARCHAR(255) NOT NULL
-, "country_of_birth_country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
-, "nationality_country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
-, "second_nationality_country_id" VARCHAR(255) REFERENCES "country" ("id")
+, "country_of_birth_country_id" VARCHAR(255) NOT NULL
+, "nationality_country_id" VARCHAR(255) NOT NULL
+, "second_nationality_country_id" VARCHAR(255)
 , "best_championship_position" INTEGER
 , "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -46,37 +54,43 @@ CREATE TABLE "driver"
 , "total_fastest_laps" INTEGER NOT NULL
 , "total_driver_of_the_day" INTEGER NOT NULL
 , "total_grand_slams" INTEGER NOT NULL
+, CONSTRAINT "driv_pk" PRIMARY KEY ("id")
+, CONSTRAINT "driv_country_of_birth_country_id_fk" FOREIGN KEY ("country_of_birth_country_id") REFERENCES "country" ("id")
+, CONSTRAINT "driv_nationality_country_id_fk" FOREIGN KEY ("nationality_country_id") REFERENCES "country" ("id")
+, CONSTRAINT "driv_second_nationality_country_id_fk" FOREIGN KEY ("second_nationality_country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "driver_name_index" ON "driver" ("name");
-CREATE INDEX "driver_first_name_index" ON "driver" ("first_name");
-CREATE INDEX "driver_last_name_index" ON "driver" ("last_name");
-CREATE INDEX "driver_full_name_index" ON "driver" ("full_name");
-CREATE INDEX "driver_abbreviation_index" ON "driver" ("abbreviation");
-CREATE INDEX "driver_permanent_number_index" ON "driver" ("permanent_number");
-CREATE INDEX "driver_gender_index" ON "driver" ("gender");
-CREATE INDEX "driver_date_of_birth_index" ON "driver" ("date_of_birth");
-CREATE INDEX "driver_date_of_death_index" ON "driver" ("date_of_death");
-CREATE INDEX "driver_place_of_birth_index" ON "driver" ("place_of_birth");
-CREATE INDEX "driver_country_of_birth_country_id_index" ON "driver" ("country_of_birth_country_id");
-CREATE INDEX "driver_nationality_country_id_index" ON "driver" ("nationality_country_id");
-CREATE INDEX "driver_second_nationality_country_id_index" ON "driver" ("second_nationality_country_id");
+CREATE INDEX "driv_name_idx" ON "driver" ("name");
+CREATE INDEX "driv_first_name_idx" ON "driver" ("first_name");
+CREATE INDEX "driv_last_name_idx" ON "driver" ("last_name");
+CREATE INDEX "driv_full_name_idx" ON "driver" ("full_name");
+CREATE INDEX "driv_abbreviation_idx" ON "driver" ("abbreviation");
+CREATE INDEX "driv_permanent_number_idx" ON "driver" ("permanent_number");
+CREATE INDEX "driv_gender_idx" ON "driver" ("gender");
+CREATE INDEX "driv_date_of_birth_idx" ON "driver" ("date_of_birth");
+CREATE INDEX "driv_date_of_death_idx" ON "driver" ("date_of_death");
+CREATE INDEX "driv_place_of_birth_idx" ON "driver" ("place_of_birth");
+CREATE INDEX "driv_country_of_birth_country_id_idx" ON "driver" ("country_of_birth_country_id");
+CREATE INDEX "driv_nationality_country_id_idx" ON "driver" ("nationality_country_id");
+CREATE INDEX "driv_second_nationality_country_id_idx" ON "driver" ("second_nationality_country_id");
 
 CREATE TABLE "driver_family_relationship"
-( "driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
-, "other_driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
+( "driver_id" VARCHAR(255) NOT NULL
+, "other_driver_id" VARCHAR(255) NOT NULL
 , "type" VARCHAR(255) NOT NULL
-, PRIMARY KEY ("driver_id", "other_driver_id", "type")
+, CONSTRAINT "drfr_pk" PRIMARY KEY ("driver_id", "other_driver_id", "type")
+, CONSTRAINT "drfr_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
+, CONSTRAINT "drfr_other_driver_id_fk" FOREIGN KEY ("other_driver_id") REFERENCES "driver" ("id")
 );
 
-CREATE INDEX "driver_family_relationship_driver_id_index" ON "driver_family_relationship" ("driver_id");
-CREATE INDEX "driver_family_relationship_other_driver_id_index" ON "driver_family_relationship" ("other_driver_id");
+CREATE INDEX "drfr_driver_id_idx" ON "driver_family_relationship" ("driver_id");
+CREATE INDEX "drfr_other_driver_id_idx" ON "driver_family_relationship" ("other_driver_id");
 
 CREATE TABLE "constructor"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
 , "full_name" VARCHAR(255) NOT NULL
-, "country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
+, "country_id" VARCHAR(255) NOT NULL
 , "best_championship_position" INTEGER
 , "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -91,27 +105,31 @@ CREATE TABLE "constructor"
 , "total_championship_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, CONSTRAINT "cons_pk" PRIMARY KEY ("id")
+, CONSTRAINT "cons_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "constructor_name_index" ON "constructor" ("name");
-CREATE INDEX "constructor_full_name_index" ON "constructor" ("full_name");
-CREATE INDEX "constructor_country_id_index" ON "constructor" ("country_id");
+CREATE INDEX "cons_name_idx" ON "constructor" ("name");
+CREATE INDEX "cons_full_name_idx" ON "constructor" ("full_name");
+CREATE INDEX "cons_country_id_idx" ON "constructor" ("country_id");
 
 CREATE TABLE "constructor_previous_next_constructor"
-( "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "previous_next_constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
+( "constructor_id" VARCHAR(255) NOT NULL
+, "previous_next_constructor_id" VARCHAR(255) NOT NULL
 , "year_from" INTEGER NOT NULL
 , "year_to" INTEGER
-, PRIMARY KEY ("constructor_id", "previous_next_constructor_id", "year_from")
+, CONSTRAINT "cpnc_pk" PRIMARY KEY ("constructor_id", "previous_next_constructor_id", "year_from")
+, CONSTRAINT "cpnc_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "cpnc_previous_next_constructor_id_fk" FOREIGN KEY ("previous_next_constructor_id") REFERENCES "constructor" ("id")
 );
 
-CREATE INDEX "constructor_previous_next_constructor_constructor_id_index" ON "constructor_previous_next_constructor" ("constructor_id");
-CREATE INDEX "constructor_previous_next_constructor_previous_next_constructor_id_index" ON "constructor_previous_next_constructor" ("previous_next_constructor_id");
+CREATE INDEX "cpnc_constructor_id_idx" ON "constructor_previous_next_constructor" ("constructor_id");
+CREATE INDEX "cpnc_previous_next_constructor_id_idx" ON "constructor_previous_next_constructor" ("previous_next_constructor_id");
 
 CREATE TABLE "engine_manufacturer"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
-, "country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
+, "country_id" VARCHAR(255) NOT NULL
 , "best_championship_position" INTEGER
 , "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -125,15 +143,17 @@ CREATE TABLE "engine_manufacturer"
 , "total_championship_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, CONSTRAINT "enma_pk" PRIMARY KEY ("id")
+, CONSTRAINT "enma_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "engine_manufacturer_name_index" ON "engine_manufacturer" ("name");
-CREATE INDEX "engine_manufacturer_country_id_index" ON "engine_manufacturer" ("country_id");
+CREATE INDEX "enma_name_idx" ON "engine_manufacturer" ("name");
+CREATE INDEX "enma_country_id_idx" ON "engine_manufacturer" ("country_id");
 
 CREATE TABLE "tyre_manufacturer"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
-, "country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
+, "country_id" VARCHAR(255) NOT NULL
 , "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
 , "total_race_entries" INTEGER NOT NULL
@@ -144,159 +164,189 @@ CREATE TABLE "tyre_manufacturer"
 , "total_podium_races" INTEGER NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, CONSTRAINT "tyma_pk" PRIMARY KEY ("id")
+, CONSTRAINT "tyma_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "tyre_manufacturer_name_index" ON "tyre_manufacturer" ("name");
-CREATE INDEX "tyre_manufacturer_country_id_index" ON "tyre_manufacturer" ("country_id");
+CREATE INDEX "tyma_name_idx" ON "tyre_manufacturer" ("name");
+CREATE INDEX "tyma_country_id_idx" ON "tyre_manufacturer" ("country_id");
 
 CREATE TABLE "entrant"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
+, CONSTRAINT "entr_pk" PRIMARY KEY ("id")
 );
 
-CREATE INDEX "entrant_name_index" ON "entrant" ("name");
+CREATE INDEX "entr_name_idx" ON "entrant" ("name");
 
 CREATE TABLE "circuit"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
 , "full_name" VARCHAR(255) NOT NULL
 , "previous_names" VARCHAR(255)
 , "type" VARCHAR(255) NOT NULL
 , "place_name" VARCHAR(255) NOT NULL
-, "country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
+, "country_id" VARCHAR(255) NOT NULL
 , "latitude" DECIMAL(10,6)
 , "longitude" DECIMAL(10,6)
 , "total_races_held" INTEGER NOT NULL
+, CONSTRAINT "circ_pk" PRIMARY KEY ("id")
+, CONSTRAINT "circ_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "circuit_name_index" ON "circuit" ("name");
-CREATE INDEX "circuit_full_name_index" ON "circuit" ("full_name");
-CREATE INDEX "circuit_type_index" ON "circuit" ("type");
-CREATE INDEX "circuit_place_name_index" ON "circuit" ("place_name");
-CREATE INDEX "circuit_country_id_index" ON "circuit" ("country_id");
+CREATE INDEX "circ_name_idx" ON "circuit" ("name");
+CREATE INDEX "circ_full_name_idx" ON "circuit" ("full_name");
+CREATE INDEX "circ_type_idx" ON "circuit" ("type");
+CREATE INDEX "circ_place_name_idx" ON "circuit" ("place_name");
+CREATE INDEX "circ_country_id_idx" ON "circuit" ("country_id");
 
 CREATE TABLE "grand_prix"
-( "id" VARCHAR(255) NOT NULL PRIMARY KEY
+( "id" VARCHAR(255) NOT NULL
 , "name" VARCHAR(255) NOT NULL
 , "full_name" VARCHAR(255) NOT NULL
 , "short_name" VARCHAR(255) NOT NULL
 , "abbreviation" VARCHAR(3) NOT NULL
-, "country_id" VARCHAR(255) REFERENCES "country" ("id")
+, "country_id" VARCHAR(255)
 , "total_races_held" INTEGER NOT NULL
+, CONSTRAINT "grpr_pk" PRIMARY KEY ("id")
+, CONSTRAINT "grpr_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "grand_prix_name_index" ON "grand_prix" ("name");
-CREATE INDEX "grand_prix_full_name_index" ON "grand_prix" ("full_name");
-CREATE INDEX "grand_prix_short_name_index" ON "grand_prix" ("short_name");
-CREATE INDEX "grand_prix_abbreviation_index" ON "grand_prix" ("abbreviation");
-CREATE INDEX "grand_prix_country_id_index" ON "grand_prix" ("country_id");
+CREATE INDEX "grpr_name_idx" ON "grand_prix" ("name");
+CREATE INDEX "grpr_full_name_idx" ON "grand_prix" ("full_name");
+CREATE INDEX "grpr_short_name_idx" ON "grand_prix" ("short_name");
+CREATE INDEX "grpr_abbreviation_idx" ON "grand_prix" ("abbreviation");
+CREATE INDEX "grpr_country_id_idx" ON "grand_prix" ("country_id");
 
 CREATE TABLE "season"
-( "year" INTEGER NOT NULL PRIMARY KEY
+( "year" INTEGER NOT NULL
+, CONSTRAINT "seas_pk" PRIMARY KEY ("year")
 );
 
 CREATE TABLE "season_entrant"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
-, "entrant_id" VARCHAR(255) NOT NULL REFERENCES "entrant" ("id")
-, "country_id" VARCHAR(255) NOT NULL REFERENCES "country" ("id")
-, PRIMARY KEY ("year", "entrant_id")
+( "year" INTEGER NOT NULL
+, "entrant_id" VARCHAR(255) NOT NULL
+, "country_id" VARCHAR(255) NOT NULL
+, CONSTRAINT "seen_pk" PRIMARY KEY ("year", "entrant_id")
+, CONSTRAINT "seen_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "seen_entrant_id_fk" FOREIGN KEY ("entrant_id") REFERENCES "entrant" ("id")
+, CONSTRAINT "seen_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
 
-CREATE INDEX "season_entrant_year_index" ON "season_entrant" ("year");
-CREATE INDEX "season_entrant_entrant_id_index" ON "season_entrant" ("entrant_id");
-CREATE INDEX "season_entrant_country_id_index" ON "season_entrant" ("country_id");
+CREATE INDEX "seen_year_idx" ON "season_entrant" ("year");
+CREATE INDEX "seen_entrant_id_idx" ON "season_entrant" ("entrant_id");
+CREATE INDEX "seen_country_id_idx" ON "season_entrant" ("country_id");
 
 CREATE TABLE "season_entrant_constructor"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
-, "entrant_id" VARCHAR(255) NOT NULL REFERENCES "entrant" ("id")
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
-, PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id")
+( "year" INTEGER NOT NULL
+, "entrant_id" VARCHAR(255) NOT NULL
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
+, CONSTRAINT "seec_pk" PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id")
+, CONSTRAINT "seec_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "seec_entrant_id_fk" FOREIGN KEY ("entrant_id") REFERENCES "entrant" ("id")
+, CONSTRAINT "seec_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "seec_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
 );
 
-CREATE INDEX "season_entrant_constructor_year_index" ON "season_entrant_constructor" ("year");
-CREATE INDEX "season_entrant_constructor_entrant_id_index" ON "season_entrant_constructor" ("entrant_id");
-CREATE INDEX "season_entrant_constructor_constructor_id_index" ON "season_entrant_constructor" ("constructor_id");
-CREATE INDEX "season_entrant_constructor_engine_manufacturer_id_index" ON "season_entrant_constructor" ("engine_manufacturer_id");
+CREATE INDEX "seec_year_idx" ON "season_entrant_constructor" ("year");
+CREATE INDEX "seec_entrant_id_idx" ON "season_entrant_constructor" ("entrant_id");
+CREATE INDEX "seec_constructor_id_idx" ON "season_entrant_constructor" ("constructor_id");
+CREATE INDEX "seec_engine_manufacturer_id_idx" ON "season_entrant_constructor" ("engine_manufacturer_id");
 
 CREATE TABLE "season_entrant_tyre_manufacturer"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
-, "entrant_id" VARCHAR(255) NOT NULL REFERENCES "entrant" ("id")
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
-, "tyre_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "tyre_manufacturer" ("id")
-, PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id", "tyre_manufacturer_id")
+( "year" INTEGER NOT NULL
+, "entrant_id" VARCHAR(255) NOT NULL
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
+, "tyre_manufacturer_id" VARCHAR(255) NOT NULL
+, CONSTRAINT "setm_pk" PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id", "tyre_manufacturer_id")
+, CONSTRAINT "setm_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "setm_entrant_id_fk" FOREIGN KEY ("entrant_id") REFERENCES "entrant" ("id")
+, CONSTRAINT "setm_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "setm_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
+, CONSTRAINT "setm_tyre_manufacturer_id_fk" FOREIGN KEY ("tyre_manufacturer_id") REFERENCES "tyre_manufacturer" ("id")
 );
 
-CREATE INDEX "season_entrant_tyre_manufacturer_year_index" ON "season_entrant_tyre_manufacturer" ("year");
-CREATE INDEX "season_entrant_tyre_manufacturer_entrant_id_index" ON "season_entrant_tyre_manufacturer" ("entrant_id");
-CREATE INDEX "season_entrant_tyre_manufacturer_constructor_id_index" ON "season_entrant_tyre_manufacturer" ("constructor_id");
-CREATE INDEX "season_entrant_tyre_manufacturer_engine_manufacturer_id_index" ON "season_entrant_tyre_manufacturer" ("engine_manufacturer_id");
-CREATE INDEX "season_entrant_tyre_manufacturer_tyre_manufacturer_id_index" ON "season_entrant_tyre_manufacturer" ("tyre_manufacturer_id");
+CREATE INDEX "setm_year_idx" ON "season_entrant_tyre_manufacturer" ("year");
+CREATE INDEX "setm_entrant_id_idx" ON "season_entrant_tyre_manufacturer" ("entrant_id");
+CREATE INDEX "setm_constructor_id_idx" ON "season_entrant_tyre_manufacturer" ("constructor_id");
+CREATE INDEX "setm_engine_manufacturer_id_idx" ON "season_entrant_tyre_manufacturer" ("engine_manufacturer_id");
+CREATE INDEX "setm_tyre_manufacturer_id_idx" ON "season_entrant_tyre_manufacturer" ("tyre_manufacturer_id");
 
 CREATE TABLE "season_entrant_driver"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
-, "entrant_id" VARCHAR(255) NOT NULL REFERENCES "entrant" ("id")
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
-, "driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
+( "year" INTEGER NOT NULL
+, "entrant_id" VARCHAR(255) NOT NULL
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
+, "driver_id" VARCHAR(255) NOT NULL
 , "rounds" VARCHAR(255)
 , "rounds_text" VARCHAR(255)
 , "test_driver" BOOLEAN NOT NULL
-, PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id", "driver_id")
+, CONSTRAINT "seed_pk" PRIMARY KEY ("year", "entrant_id", "constructor_id", "engine_manufacturer_id", "driver_id")
+, CONSTRAINT "seed_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "seed_entrant_id_fk" FOREIGN KEY ("entrant_id") REFERENCES "entrant" ("id")
+, CONSTRAINT "seed_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "seed_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
+, CONSTRAINT "seed_tyre_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
 );
 
-CREATE INDEX "season_entrant_driver_year_index" ON "season_entrant_driver" ("year");
-CREATE INDEX "season_entrant_driver_entrant_id_index" ON "season_entrant_driver" ("entrant_id");
-CREATE INDEX "season_entrant_driver_constructor_id_index" ON "season_entrant_driver" ("constructor_id");
-CREATE INDEX "season_entrant_driver_engine_manufacturer_id_index" ON "season_entrant_driver" ("engine_manufacturer_id");
-CREATE INDEX "season_entrant_driver_driver_id_index" ON "season_entrant_driver" ("driver_id");
+CREATE INDEX "seed_year_idx" ON "season_entrant_driver" ("year");
+CREATE INDEX "seed_entrant_id_idx" ON "season_entrant_driver" ("entrant_id");
+CREATE INDEX "seed_constructor_id_idx" ON "season_entrant_driver" ("constructor_id");
+CREATE INDEX "seed_engine_manufacturer_id_idx" ON "season_entrant_driver" ("engine_manufacturer_id");
+CREATE INDEX "seed_driver_id_idx" ON "season_entrant_driver" ("driver_id");
 
 CREATE TABLE "season_driver_standing"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
+( "year" INTEGER NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
 , "position_text" VARCHAR(255) NOT NULL
-, "driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
+, "driver_id" VARCHAR(255) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
-, PRIMARY KEY ("year", "position_display_order")
+, CONSTRAINT "seds_pk" PRIMARY KEY ("year", "position_display_order")
+, CONSTRAINT "seds_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "seds_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
 );
 
-CREATE INDEX "season_driver_standing_year_index" ON "season_driver_standing" ("year");
-CREATE INDEX "season_driver_standing_position_display_order_index" ON "season_driver_standing" ("position_display_order");
-CREATE INDEX "season_driver_standing_position_number_index" ON "season_driver_standing" ("position_number");
-CREATE INDEX "season_driver_standing_position_text_index" ON "season_driver_standing" ("position_text");
-CREATE INDEX "season_driver_standing_driver_id_index" ON "season_driver_standing" ("driver_id");
+CREATE INDEX "seds_year_idx" ON "season_driver_standing" ("year");
+CREATE INDEX "seds_position_display_order_idx" ON "season_driver_standing" ("position_display_order");
+CREATE INDEX "seds_position_number_idx" ON "season_driver_standing" ("position_number");
+CREATE INDEX "seds_position_text_idx" ON "season_driver_standing" ("position_text");
+CREATE INDEX "seds_driver_id_idx" ON "season_driver_standing" ("driver_id");
 
 CREATE TABLE "season_constructor_standing"
-( "year" INTEGER NOT NULL REFERENCES "season" ("year")
+( "year" INTEGER NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
 , "position_text" VARCHAR(255) NOT NULL
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
-, PRIMARY KEY ("year", "position_display_order")
+, CONSTRAINT "secs_pk" PRIMARY KEY ("year", "position_display_order")
+, CONSTRAINT "secs_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "secs_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "secs_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
 );
 
-CREATE INDEX "season_constructor_standing_year_index" ON "season_constructor_standing" ("year");
-CREATE INDEX "season_constructor_standing_position_display_order_index" ON "season_constructor_standing" ("position_display_order");
-CREATE INDEX "season_constructor_standing_position_number_index" ON "season_constructor_standing" ("position_number");
-CREATE INDEX "season_constructor_standing_position_text_index" ON "season_constructor_standing" ("position_text");
-CREATE INDEX "season_constructor_standing_constructor_id_index" ON "season_constructor_standing" ("constructor_id");
-CREATE INDEX "season_constructor_standing_engine_manufacturer_id_index" ON "season_constructor_standing" ("engine_manufacturer_id");
+CREATE INDEX "secs_year_idx" ON "season_constructor_standing" ("year");
+CREATE INDEX "secs_position_display_order_idx" ON "season_constructor_standing" ("position_display_order");
+CREATE INDEX "secs_position_number_idx" ON "season_constructor_standing" ("position_number");
+CREATE INDEX "secs_position_text_idx" ON "season_constructor_standing" ("position_text");
+CREATE INDEX "secs_constructor_id_idx" ON "season_constructor_standing" ("constructor_id");
+CREATE INDEX "secs_engine_manufacturer_id_idx" ON "season_constructor_standing" ("engine_manufacturer_id");
 
 CREATE TABLE "race"
-( "id" INTEGER NOT NULL PRIMARY KEY
-, "year" INTEGER NOT NULL REFERENCES "season" ("year")
+( "id" INTEGER NOT NULL
+, "year" INTEGER NOT NULL
 , "round" INTEGER NOT NULL
 , "date" DATE NOT NULL
 , "time" TEXT
-, "grand_prix_id" VARCHAR(255) NOT NULL REFERENCES "grand_prix" ("id")
+, "grand_prix_id" VARCHAR(255) NOT NULL
 , "official_name" VARCHAR(255) NOT NULL
 , "qualifying_format" VARCHAR(255) NOT NULL
 , "sprint_qualifying_format" VARCHAR(255)
-, "circuit_id" VARCHAR(255) NOT NULL REFERENCES "circuit" ("id")
+, "circuit_id" VARCHAR(255) NOT NULL
 , "circuit_type" VARCHAR(255) NOT NULL
 , "course_length" DECIMAL(6,3) NOT NULL
 , "laps" INTEGER NOT NULL
@@ -325,27 +375,31 @@ CREATE TABLE "race"
 , "sprint_race_time" TEXT
 , "warming_up_date" DATE
 , "warming_up_time" TEXT
-, UNIQUE ("year", "round")
+, CONSTRAINT "race_pk" PRIMARY KEY ("id")
+, CONSTRAINT "race_year_round_uk" UNIQUE ("year", "round")
+, CONSTRAINT "race_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
+, CONSTRAINT "race_grand_prix_id_fk" FOREIGN KEY ("grand_prix_id") REFERENCES "grand_prix" ("id")
+, CONSTRAINT "race_circuit_id_fk" FOREIGN KEY ("circuit_id") REFERENCES "circuit" ("id")
 );
 
-CREATE INDEX "race_year_index" ON "race" ("year");
-CREATE INDEX "race_round_index" ON "race" ("round");
-CREATE INDEX "race_date_index" ON "race" ("date");
-CREATE INDEX "race_grand_prix_id_index" ON "race" ("grand_prix_id");
-CREATE INDEX "race_official_name_index" ON "race" ("official_name");
-CREATE INDEX "race_circuit_id_index" ON "race" ("circuit_id");
+CREATE INDEX "race_year_idx" ON "race" ("year");
+CREATE INDEX "race_round_idx" ON "race" ("round");
+CREATE INDEX "race_date_idx" ON "race" ("date");
+CREATE INDEX "race_grand_prix_id_idx" ON "race" ("grand_prix_id");
+CREATE INDEX "race_official_name_idx" ON "race" ("official_name");
+CREATE INDEX "race_circuit_id_idx" ON "race" ("circuit_id");
 
 CREATE TABLE "race_data"
-( "race_id" INTEGER NOT NULL REFERENCES "race" ("id")
+( "race_id" INTEGER NOT NULL
 , "type" VARCHAR(255) NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
 , "position_text" VARCHAR(255)
 , "driver_number" VARCHAR(255) NOT NULL
-, "driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
-, "tyre_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "tyre_manufacturer" ("id")
+, "driver_id" VARCHAR(255) NOT NULL
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
+, "tyre_manufacturer_id" VARCHAR(255) NOT NULL
 , "practice_time" VARCHAR(255)
 , "practice_time_millis" INTEGER
 , "practice_gap" VARCHAR(255)
@@ -402,54 +456,64 @@ CREATE TABLE "race_data"
 , "pit_stop_time" VARCHAR(255)
 , "pit_stop_time_millis" INTEGER
 , "driver_of_the_day_percentage" DECIMAL(4,1)
-, PRIMARY KEY ("race_id", "type", "position_display_order")
+, CONSTRAINT "rada_pk" PRIMARY KEY ("race_id", "type", "position_display_order")
+, CONSTRAINT "rada_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
+, CONSTRAINT "rada_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
+, CONSTRAINT "rada_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "rada_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
+, CONSTRAINT "rada_tyre_manufacturer_id_fk" FOREIGN KEY ("tyre_manufacturer_id") REFERENCES "tyre_manufacturer" ("id")
 );
 
-CREATE INDEX "race_data_race_id_index" ON "race_data" ("race_id");
-CREATE INDEX "race_data_type_index" ON "race_data" ("type");
-CREATE INDEX "race_data_position_number_index" ON "race_data" ("position_number");
-CREATE INDEX "race_data_position_text_index" ON "race_data" ("position_text");
-CREATE INDEX "race_data_driver_number_index" ON "race_data" ("driver_number");
-CREATE INDEX "race_data_driver_id_index" ON "race_data" ("driver_id");
-CREATE INDEX "race_data_constructor_id_index" ON "race_data" ("constructor_id");
-CREATE INDEX "race_data_engine_manufacturer_id_index" ON "race_data" ("engine_manufacturer_id");
-CREATE INDEX "race_data_tyre_manufacturer_id_index" ON "race_data" ("tyre_manufacturer_id");
+CREATE INDEX "rada_race_id_idx" ON "race_data" ("race_id");
+CREATE INDEX "rada_type_idx" ON "race_data" ("type");
+CREATE INDEX "rada_position_number_idx" ON "race_data" ("position_number");
+CREATE INDEX "rada_position_text_idx" ON "race_data" ("position_text");
+CREATE INDEX "rada_driver_number_idx" ON "race_data" ("driver_number");
+CREATE INDEX "rada_driver_id_idx" ON "race_data" ("driver_id");
+CREATE INDEX "rada_constructor_id_idx" ON "race_data" ("constructor_id");
+CREATE INDEX "rada_engine_manufacturer_id_idx" ON "race_data" ("engine_manufacturer_id");
+CREATE INDEX "rada_tyre_manufacturer_id_idx" ON "race_data" ("tyre_manufacturer_id");
 
 CREATE TABLE "race_driver_standing"
-( "race_id" INTEGER NOT NULL REFERENCES "race" ("id")
+( "race_id" INTEGER NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
 , "position_text" VARCHAR(255) NOT NULL
-, "driver_id" VARCHAR(255) NOT NULL REFERENCES "driver" ("id")
+, "driver_id" VARCHAR(255) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
 , "positions_gained" INTEGER
-, PRIMARY KEY ("race_id", "position_display_order")
+, CONSTRAINT "rads_pk" PRIMARY KEY ("race_id", "position_display_order")
+, CONSTRAINT "rads_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
+, CONSTRAINT "rads_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
 );
 
-CREATE INDEX "race_driver_standing_race_id_index" ON "race_driver_standing" ("race_id");
-CREATE INDEX "race_driver_standing_position_display_order_index" ON "race_driver_standing" ("position_display_order");
-CREATE INDEX "race_driver_standing_position_number_index" ON "race_driver_standing" ("position_number");
-CREATE INDEX "race_driver_standing_position_text_index" ON "race_driver_standing" ("position_text");
-CREATE INDEX "race_driver_standing_driver_id_index" ON "race_driver_standing" ("driver_id");
+CREATE INDEX "rads_race_id_idx" ON "race_driver_standing" ("race_id");
+CREATE INDEX "rads_position_display_order_idx" ON "race_driver_standing" ("position_display_order");
+CREATE INDEX "rads_position_number_idx" ON "race_driver_standing" ("position_number");
+CREATE INDEX "rads_position_text_idx" ON "race_driver_standing" ("position_text");
+CREATE INDEX "rads_driver_id_idx" ON "race_driver_standing" ("driver_id");
 
 CREATE TABLE "race_constructor_standing"
-( "race_id" INTEGER NOT NULL REFERENCES "race" ("id")
+( "race_id" INTEGER NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
 , "position_text" VARCHAR(255) NOT NULL
-, "constructor_id" VARCHAR(255) NOT NULL REFERENCES "constructor" ("id")
-, "engine_manufacturer_id" VARCHAR(255) NOT NULL REFERENCES "engine_manufacturer" ("id")
+, "constructor_id" VARCHAR(255) NOT NULL
+, "engine_manufacturer_id" VARCHAR(255) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
 , "positions_gained" INTEGER
-, PRIMARY KEY ("race_id", "position_display_order")
+, CONSTRAINT "racs_pk" PRIMARY KEY ("race_id", "position_display_order")
+, CONSTRAINT "racs_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
+, CONSTRAINT "racs_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
+, CONSTRAINT "racs_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
 );
 
-CREATE INDEX "race_constructor_standing_race_id_index" ON "race_constructor_standing" ("race_id");
-CREATE INDEX "race_constructor_standing_position_display_order_index" ON "race_constructor_standing" ("position_display_order");
-CREATE INDEX "race_constructor_standing_position_number_index" ON "race_constructor_standing" ("position_number");
-CREATE INDEX "race_constructor_standing_position_text_index" ON "race_constructor_standing" ("position_text");
-CREATE INDEX "race_constructor_standing_constructor_id_index" ON "race_constructor_standing" ("constructor_id");
-CREATE INDEX "race_constructor_standing_engine_manufacturer_id_index" ON "race_constructor_standing" ("engine_manufacturer_id");
+CREATE INDEX "racs_race_id_idx" ON "race_constructor_standing" ("race_id");
+CREATE INDEX "racs_position_display_order_idx" ON "race_constructor_standing" ("position_display_order");
+CREATE INDEX "racs_position_number_idx" ON "race_constructor_standing" ("position_number");
+CREATE INDEX "racs_position_text_idx" ON "race_constructor_standing" ("position_text");
+CREATE INDEX "racs_constructor_id_idx" ON "race_constructor_standing" ("constructor_id");
+CREATE INDEX "racs_engine_manufacturer_id_idx" ON "race_constructor_standing" ("engine_manufacturer_id");
 
 CREATE VIEW "pre_qualifying_result" AS
 SELECT   "race"."id" AS "race_id"

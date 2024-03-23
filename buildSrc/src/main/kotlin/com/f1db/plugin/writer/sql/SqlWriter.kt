@@ -122,8 +122,8 @@ class SqlWriter(
 
             // Write drop schema statements.
 
-            writeDropTables(ctx, out)
             writeDropViews(ctx, out)
+            writeDropTables(ctx, out)
 
             // Write create schema statements.
 
