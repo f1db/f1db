@@ -40,8 +40,8 @@ CREATE TABLE "driver"
 , "nationality_country_id" VARCHAR(100) NOT NULL
 , "second_nationality_country_id" VARCHAR(100)
 , "best_championship_position" INTEGER
-, "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
+, "best_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -92,8 +92,8 @@ CREATE TABLE "constructor"
 , "full_name" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
-, "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
+, "best_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -131,8 +131,8 @@ CREATE TABLE "engine_manufacturer"
 , "name" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
-, "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
+, "best_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -154,8 +154,8 @@ CREATE TABLE "tyre_manufacturer"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
-, "best_race_result" INTEGER
 , "best_starting_grid_position" INTEGER
+, "best_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
