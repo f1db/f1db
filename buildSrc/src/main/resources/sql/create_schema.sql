@@ -2,7 +2,7 @@ CREATE TABLE "continent"
 ( "id" VARCHAR(100) NOT NULL
 , "code" VARCHAR(2) NOT NULL
 , "name" VARCHAR(100) NOT NULL
-, "demonym" VARCHAR(100)
+, "demonym" VARCHAR(100) NOT NULL
 , CONSTRAINT "cont_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cont_code_uk" UNIQUE ("code")
 , CONSTRAINT "cont_name_uk" UNIQUE ("name")
