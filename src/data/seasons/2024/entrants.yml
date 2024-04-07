@@ -5,9 +5,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-3
+      rounds: 1-4
     - driverId: lance-stroll
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: bwt-alpine-f1-team
   countryId: france
   constructorId: alpine
@@ -15,9 +15,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-3
+      rounds: 1-4
     - driverId: pierre-gasly
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: mclaren-f1-team
   countryId: united-kingdom
   constructorId: mclaren
@@ -25,9 +25,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-3
+      rounds: 1-4
     - driverId: oscar-piastri
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: mercedes-amg-petronas-f1-team
   countryId: germany
   constructorId: mercedes
@@ -35,9 +35,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: george-russell
-      rounds: 1-3
+      rounds: 1-4
     - driverId: lewis-hamilton
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: moneygram-haas-f1-team
   countryId: united-states-of-america
   constructorId: haas
@@ -45,9 +45,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kevin-magnussen
-      rounds: 1-3
+      rounds: 1-4
     - driverId: nico-hulkenberg
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: oracle-red-bull-racing
   countryId: austria
   constructorId: red-bull
@@ -55,9 +55,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
-      rounds: 1-3
+      rounds: 1-4
     - driverId: sergio-perez
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: scuderia-ferrari
   countryId: italy
   constructorId: ferrari
@@ -65,9 +65,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
-      rounds: 1-3
+      rounds: 1-4
     - driverId: charles-leclerc
-      rounds: 1-3
+      rounds: 1-4
     - driverId: oliver-bearman
       rounds: 2
 - entrantId: stake-f1-team-kick-sauber
@@ -77,9 +77,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: guanyu-zhou
-      rounds: 1-3
+      rounds: 1-4
     - driverId: valtteri-bottas
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: visa-cash-app-rb-f1-team
   countryId: italy
   constructorId: rb
@@ -87,9 +87,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
-      rounds: 1-3
+      rounds: 1-4
     - driverId: yuki-tsunoda
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: ayumu-iwasa
+      rounds:
+      testDriver: true
 - entrantId: williams-racing
   countryId: united-kingdom
   constructorId: williams
@@ -97,6 +100,6 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-3
+      rounds: 1-4
     - driverId: logan-sargeant
-      rounds: 1-3
+      rounds: 1-4
