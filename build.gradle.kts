@@ -33,6 +33,7 @@ distributions {
         distributionBaseName.set("${projectName}-csv")
         contents {
             from(layout.buildDirectory.dir("data/csv"))
+            into("/")
             include("*.csv")
         }
     }
@@ -41,6 +42,7 @@ distributions {
         contents {
             from(layout.buildDirectory.file("data/json/${projectName}.json"))
             from(layout.projectDirectory.file("src/schema/current/single/${projectName}.schema.json"))
+            into("/")
         }
     }
     create("json-splitted") {
@@ -53,6 +55,7 @@ distributions {
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
             }
+            into("/")
         }
     }
     create("smile-single") {
@@ -60,6 +63,7 @@ distributions {
         contents {
             from(layout.buildDirectory.file("data/smile/${projectName}.sml"))
             from(layout.projectDirectory.file("src/schema/current/single/${projectName}.schema.json"))
+            into("/")
         }
     }
     create("smile-splitted") {
@@ -72,30 +76,35 @@ distributions {
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
             }
+            into("/")
         }
     }
     create("sql-mysql") {
         distributionBaseName.set("${projectName}-sql-mysql")
         contents {
             from(layout.buildDirectory.file("data/sql/${projectName}-sql-mysql.sql"))
+            into("/")
         }
     }
     create("sql-postgresql") {
         distributionBaseName.set("${projectName}-sql-postgresql")
         contents {
             from(layout.buildDirectory.file("data/sql/${projectName}-sql-postgresql.sql"))
+            into("/")
         }
     }
     create("sql-sqlite") {
         distributionBaseName.set("${projectName}-sql-sqlite")
         contents {
             from(layout.buildDirectory.file("data/sql/${projectName}-sql-sqlite.sql"))
+            into("/")
         }
     }
     create("sqlite") {
         distributionBaseName.set("${projectName}-sqlite")
         contents {
             from(layout.buildDirectory.file("data/sqlite/${projectName}.db"))
+            into("/")
         }
     }
 }
