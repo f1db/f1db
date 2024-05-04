@@ -394,7 +394,7 @@ CREATE TABLE "race_data"
 , "type" VARCHAR(50) NOT NULL
 , "position_display_order" INTEGER NOT NULL
 , "position_number" INTEGER
-, "position_text" VARCHAR(4)
+, "position_text" VARCHAR(4) NOT NULL
 , "driver_number" VARCHAR(3) NOT NULL
 , "driver_id" VARCHAR(100) NOT NULL
 , "constructor_id" VARCHAR(100) NOT NULL
