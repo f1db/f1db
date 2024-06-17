@@ -247,7 +247,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Overheating
+  reasonRetired: Withdrew
   points:
   gridPosition: 20
 - position: DNF
@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision damage
+  reasonRetired: Collision
   points:
   gridPosition: 12
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision damage
+  reasonRetired: Collision
   points:
   gridPosition: 15
