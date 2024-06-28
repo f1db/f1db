@@ -187,8 +187,8 @@ CREATE TABLE "circuit"
 , "type" VARCHAR(6) NOT NULL
 , "place_name" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
-, "latitude" DECIMAL(10,6)
-, "longitude" DECIMAL(10,6)
+, "latitude" DECIMAL(10,6) NOT NULL
+, "longitude" DECIMAL(10,6) NOT NULL
 , "total_races_held" INTEGER NOT NULL
 , CONSTRAINT "circ_pk" PRIMARY KEY ("id")
 , CONSTRAINT "circ_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
