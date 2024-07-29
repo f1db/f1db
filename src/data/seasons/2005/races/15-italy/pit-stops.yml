@@ -395,15 +395,6 @@
   lap: 42
   time: "24.234"
 - position: 45
-  driverNumber: 7
-  driverId: mark-webber
-  constructorId: williams
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 3
-  lap: 42
-  time: "23.658"
-- position: 46
   driverNumber: 4
   driverId: takuma-sato
   constructorId: bar
@@ -412,6 +403,15 @@
   stop: 3
   lap: 42
   time: "24.168"
+- position: 46
+  driverNumber: 7
+  driverId: mark-webber
+  constructorId: williams
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  stop: 3
+  lap: 42
+  time: "23.658"
 - position: 47
   driverNumber: 8
   driverId: antonio-pizzonia

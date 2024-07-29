@@ -80,15 +80,6 @@
   lap: 9
   time: "26.609"
 - position: 10
-  driverNumber: 14
-  driverId: fernando-alonso
-  constructorId: mclaren
-  engineManufacturerId: honda
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 9
-  time: "25.195"
-- position: 11
   driverNumber: 6
   driverId: nico-rosberg
   constructorId: mercedes
@@ -97,6 +88,15 @@
   stop: 1
   lap: 9
   time: "23.750"
+- position: 11
+  driverNumber: 14
+  driverId: fernando-alonso
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 9
+  time: "25.195"
 - position: 12
   driverNumber: 94
   driverId: pascal-wehrlein

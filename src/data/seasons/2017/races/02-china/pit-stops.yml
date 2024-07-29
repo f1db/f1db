@@ -197,15 +197,6 @@
   lap: 4
   time: "17.320"
 - position: 23
-  driverNumber: 19
-  driverId: felipe-massa
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 4
-  time: "17.324"
-- position: 24
   driverNumber: 11
   driverId: sergio-perez
   constructorId: force-india
@@ -214,6 +205,15 @@
   stop: 2
   lap: 4
   time: "17.416"
+- position: 24
+  driverNumber: 19
+  driverId: felipe-massa
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 4
+  time: "17.324"
 - position: 25
   driverNumber: 20
   driverId: kevin-magnussen

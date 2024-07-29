@@ -250,7 +250,7 @@
   reasonRetired:
   points:
   gridPosition: 14
-- position: NC
+- position: DNF
   driverNumber: 18
   driverId: lance-stroll
   constructorId: aston-martin
@@ -259,12 +259,12 @@
   laps: 1
   time:
   timePenalty:
-  gap: "+0 lap"
+  gap:
   interval:
-  reasonRetired:
+  reasonRetired: Collision
   points:
   gridPosition: 7
-- position: NC
+- position: DNF
   driverNumber: 4
   driverId: lando-norris
   constructorId: mclaren
@@ -273,8 +273,8 @@
   laps: 0
   time:
   timePenalty:
-  gap: "+0 lap"
+  gap:
   interval:
-  reasonRetired:
+  reasonRetired: Collision
   points:
   gridPosition: 9

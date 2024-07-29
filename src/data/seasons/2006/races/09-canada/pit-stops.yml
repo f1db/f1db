@@ -98,15 +98,6 @@
   lap: 24
   time: "16.391"
 - position: 12
-  driverNumber: 2
-  driverId: giancarlo-fisichella
-  constructorId: renault
-  engineManufacturerId: renault
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 25
-  time: "25.686"
-- position: 13
   driverNumber: 8
   driverId: jarno-trulli
   constructorId: toyota
@@ -115,6 +106,15 @@
   stop: 1
   lap: 25
   time: "29.515"
+- position: 13
+  driverNumber: 2
+  driverId: giancarlo-fisichella
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 25
+  time: "25.686"
 - position: 14
   driverNumber: 7
   driverId: ralf-schumacher

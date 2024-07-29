@@ -53,15 +53,6 @@
   lap: 3
   time: "33.496"
 - position: 7
-  driverNumber: 20
-  driverId: christian-klien
-  constructorId: hrt
-  engineManufacturerId: cosworth
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 3
-  time: "38.186"
-- position: 8
   driverNumber: 25
   driverId: lucas-di-grassi
   constructorId: virgin
@@ -70,6 +61,15 @@
   stop: 1
   lap: 3
   time: "33.839"
+- position: 8
+  driverNumber: 20
+  driverId: christian-klien
+  constructorId: hrt
+  engineManufacturerId: cosworth
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 3
+  time: "38.186"
 - position: 9
   driverNumber: 21
   driverId: bruno-senna

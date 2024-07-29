@@ -251,15 +251,6 @@
   lap: 27
   time: "24.402"
 - position: 29
-  driverNumber: 4
-  driverId: ralf-schumacher
-  constructorId: williams
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 28
-  time: "24.118"
-- position: 30
   driverNumber: 2
   driverId: rubens-barrichello
   constructorId: ferrari
@@ -268,6 +259,15 @@
   stop: 2
   lap: 28
   time: "23.933"
+- position: 30
+  driverNumber: 4
+  driverId: ralf-schumacher
+  constructorId: williams
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 28
+  time: "24.118"
 - position: 31
   driverNumber: 8
   driverId: fernando-alonso

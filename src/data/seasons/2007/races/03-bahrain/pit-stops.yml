@@ -26,15 +26,6 @@
   lap: 9
   time: "18.997"
 - position: 4
-  driverNumber: 14
-  driverId: david-coulthard
-  constructorId: red-bull
-  engineManufacturerId: renault
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 17
-  time: "30.164"
-- position: 5
   driverNumber: 17
   driverId: alexander-wurz
   constructorId: williams
@@ -43,6 +34,15 @@
   stop: 1
   lap: 17
   time: "30.964"
+- position: 5
+  driverNumber: 14
+  driverId: david-coulthard
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 17
+  time: "30.164"
 - position: 6
   driverNumber: 11
   driverId: ralf-schumacher

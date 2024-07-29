@@ -62,15 +62,6 @@
   lap: 29
   time: "26.380"
 - position: 8
-  driverNumber: 19
-  driverId: bruno-senna
-  constructorId: williams
-  engineManufacturerId: renault
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 29
-  time: "26.410"
-- position: 9
   driverNumber: 12
   driverId: nico-hulkenberg
   constructorId: force-india
@@ -79,6 +70,15 @@
   stop: 1
   lap: 29
   time: "26.447"
+- position: 9
+  driverNumber: 19
+  driverId: bruno-senna
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 29
+  time: "26.410"
 - position: 10
   driverNumber: 23
   driverId: narain-karthikeyan

@@ -98,15 +98,6 @@
   lap: 12
   time: "22.887"
 - position: 12
-  driverNumber: 7
-  driverId: kimi-raikkonen
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 12
-  time: "25.543"
-- position: 13
   driverNumber: 25
   driverId: jean-eric-vergne
   constructorId: toro-rosso
@@ -115,6 +106,15 @@
   stop: 1
   lap: 12
   time: "23.124"
+- position: 13
+  driverNumber: 7
+  driverId: kimi-raikkonen
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 12
+  time: "25.543"
 - position: 14
   driverNumber: 26
   driverId: daniil-kvyat

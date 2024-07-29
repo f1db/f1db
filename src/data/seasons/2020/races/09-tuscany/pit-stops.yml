@@ -98,15 +98,6 @@
   lap: 7
   time: "17.522"
 - position: 12
-  driverNumber: 63
-  driverId: george-russell
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 7
-  time: "18.399"
-- position: 13
   driverNumber: 31
   driverId: esteban-ocon
   constructorId: renault
@@ -115,6 +106,15 @@
   stop: 1
   lap: 7
   time: "17.455"
+- position: 13
+  driverNumber: 63
+  driverId: george-russell
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 7
+  time: "18.399"
 - position: 14
   driverNumber: 7
   driverId: kimi-raikkonen

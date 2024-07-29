@@ -23,7 +23,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Out of fuel
+  reasonRetired: Electrical
   points: 6
   gridPosition: 5
 - position: 3
@@ -79,7 +79,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accident
+  reasonRetired: Gearbox
   points: 1
   gridPosition: 8
 - position: 7

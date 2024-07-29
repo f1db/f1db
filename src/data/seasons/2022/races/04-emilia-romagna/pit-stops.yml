@@ -80,15 +80,6 @@
   lap: 18
   time: "33.765"
 - position: 10
-  driverNumber: 22
-  driverId: yuki-tsunoda
-  constructorId: alphatauri
-  engineManufacturerId: rbpt
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 18
-  time: "30.372"
-- position: 11
   driverNumber: 18
   driverId: lance-stroll
   constructorId: aston-martin
@@ -97,6 +88,15 @@
   stop: 1
   lap: 18
   time: "32.667"
+- position: 11
+  driverNumber: 22
+  driverId: yuki-tsunoda
+  constructorId: alphatauri
+  engineManufacturerId: rbpt
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 18
+  time: "30.372"
 - position: 12
   driverNumber: 44
   driverId: lewis-hamilton

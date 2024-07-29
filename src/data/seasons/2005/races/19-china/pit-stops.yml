@@ -242,15 +242,6 @@
   lap: 30
   time: "23.588"
 - position: 28
-  driverNumber: 14
-  driverId: david-coulthard
-  constructorId: red-bull
-  engineManufacturerId: cosworth
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 30
-  time: "25.241"
-- position: 29
   driverNumber: 3
   driverId: jenson-button
   constructorId: bar
@@ -259,6 +250,15 @@
   stop: 2
   lap: 30
   time: "22.955"
+- position: 29
+  driverNumber: 14
+  driverId: david-coulthard
+  constructorId: red-bull
+  engineManufacturerId: cosworth
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 30
+  time: "25.241"
 - position: 30
   driverNumber: 8
   driverId: antonio-pizzonia

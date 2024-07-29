@@ -233,15 +233,6 @@
   lap: 13
   time: "15.684"
 - position: 27
-  driverNumber: 24
-  driverId: timo-glock
-  constructorId: marussia
-  engineManufacturerId: cosworth
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 13
-  time: "25.660"
-- position: 28
   driverNumber: 21
   driverId: vitaly-petrov
   constructorId: caterham
@@ -250,6 +241,15 @@
   stop: 2
   lap: 13
   time: "29.359"
+- position: 28
+  driverNumber: 24
+  driverId: timo-glock
+  constructorId: marussia
+  engineManufacturerId: cosworth
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 13
+  time: "25.660"
 - position: 29
   driverNumber: 19
   driverId: bruno-senna
@@ -386,15 +386,6 @@
   lap: 15
   time: "36.542"
 - position: 44
-  driverNumber: 3
-  driverId: jenson-button
-  constructorId: mclaren
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 3
-  lap: 15
-  time: "36.517"
-- position: 45
   driverNumber: 23
   driverId: narain-karthikeyan
   constructorId: hrt
@@ -403,6 +394,15 @@
   stop: 1
   lap: 15
   time: "36.876"
+- position: 45
+  driverNumber: 3
+  driverId: jenson-button
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 15
+  time: "36.517"
 - position: 46
   driverNumber: 18
   driverId: pastor-maldonado

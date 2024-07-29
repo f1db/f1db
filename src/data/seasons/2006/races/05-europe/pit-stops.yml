@@ -287,15 +287,6 @@
   lap: 44
   time: "22.771"
 - position: 33
-  driverNumber: 17
-  driverId: jacques-villeneuve
-  constructorId: bmw-sauber
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 44
-  time: "24.100"
-- position: 34
   driverNumber: 2
   driverId: giancarlo-fisichella
   constructorId: renault
@@ -304,6 +295,15 @@
   stop: 2
   lap: 44
   time: "23.098"
+- position: 34
+  driverNumber: 17
+  driverId: jacques-villeneuve
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 44
+  time: "24.100"
 - position: 35
   driverNumber: 16
   driverId: nick-heidfeld

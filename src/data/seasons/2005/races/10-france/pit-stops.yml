@@ -377,15 +377,6 @@
   lap: 51
   time: "11.706"
 - position: 43
-  driverNumber: 2
-  driverId: rubens-barrichello
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 3
-  lap: 54
-  time: "19.318"
-- position: 44
   driverNumber: 9
   driverId: kimi-raikkonen
   constructorId: mclaren
@@ -394,6 +385,15 @@
   stop: 2
   lap: 55
   time: "19.492"
+- position: 44
+  driverNumber: 2
+  driverId: rubens-barrichello
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 3
+  lap: 54
+  time: "19.318"
 - position: 45
   driverNumber: 19
   driverId: narain-karthikeyan

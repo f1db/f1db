@@ -71,15 +71,6 @@
   lap: 29
   time: "30.531"
 - position: 9
-  driverNumber: 11
-  driverId: jacques-villeneuve
-  constructorId: bar
-  engineManufacturerId: honda
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 29
-  time: "22.289"
-- position: 10
   driverNumber: 16
   driverId: eddie-irvine
   constructorId: jaguar
@@ -88,6 +79,15 @@
   stop: 1
   lap: 29
   time: "29.260"
+- position: 10
+  driverNumber: 11
+  driverId: jacques-villeneuve
+  constructorId: bar
+  engineManufacturerId: honda
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 29
+  time: "22.289"
 - position: 11
   driverNumber: 23
   driverId: mark-webber

@@ -323,15 +323,6 @@
   lap: 41
   time: "22.574"
 - position: 37
-  driverNumber: 44
-  driverId: lewis-hamilton
-  constructorId: mercedes
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 42
-  time: "24.272"
-- position: 38
   driverNumber: 13
   driverId: pastor-maldonado
   constructorId: lotus-f1
@@ -340,6 +331,15 @@
   stop: 3
   lap: 41
   time: "24.972"
+- position: 38
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 42
+  time: "24.272"
 - position: 39
   driverNumber: 9
   driverId: marcus-ericsson
@@ -521,15 +521,6 @@
   lap: 44
   time: "16.958"
 - position: 59
-  driverNumber: 44
-  driverId: lewis-hamilton
-  constructorId: mercedes
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 3
-  lap: 45
-  time: "18.249"
-- position: 60
   driverNumber: 13
   driverId: pastor-maldonado
   constructorId: lotus-f1
@@ -538,6 +529,15 @@
   stop: 4
   lap: 44
   time: "18.782"
+- position: 60
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 45
+  time: "18.249"
 - position: 61
   driverNumber: 9
   driverId: marcus-ericsson
@@ -746,15 +746,6 @@
   lap: 44
   time: "18.149"
 - position: 84
-  driverNumber: 77
-  driverId: valtteri-bottas
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 4
-  lap: 46
-  time: "17.557"
-- position: 85
   driverNumber: 33
   driverId: max-verstappen
   constructorId: toro-rosso
@@ -763,6 +754,15 @@
   stop: 4
   lap: 46
   time: "23.043"
+- position: 85
+  driverNumber: 77
+  driverId: valtteri-bottas
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 4
+  lap: 46
+  time: "17.557"
 - position: 86
   driverNumber: 26
   driverId: daniil-kvyat

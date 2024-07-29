@@ -332,15 +332,6 @@
   lap: 42
   time: "31.428"
 - position: 38
-  driverNumber: 7
-  driverId: mika-hakkinen
-  constructorId: mclaren
-  engineManufacturerId: mercedes
-  tyreManufacturerId: goodyear
-  stop: 2
-  lap: 42
-  time: "29.956"
-- position: 39
   driverNumber: 20
   driverId: pedro-lamy
   constructorId: minardi
@@ -349,6 +340,15 @@
   stop: 3
   lap: 41
   time: "26.029"
+- position: 39
+  driverNumber: 7
+  driverId: mika-hakkinen
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: goodyear
+  stop: 2
+  lap: 42
+  time: "29.956"
 - position: 40
   driverNumber: 10
   driverId: pedro-diniz

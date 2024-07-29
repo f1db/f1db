@@ -170,15 +170,6 @@
   lap: 36
   time: "21.413"
 - position: 20
-  driverNumber: 14
-  driverId: fernando-alonso
-  constructorId: alpine
-  engineManufacturerId: renault
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 36
-  time: "21.304"
-- position: 21
   driverNumber: 10
   driverId: pierre-gasly
   constructorId: alphatauri
@@ -187,6 +178,15 @@
   stop: 1
   lap: 36
   time: "22.133"
+- position: 21
+  driverNumber: 14
+  driverId: fernando-alonso
+  constructorId: alpine
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 36
+  time: "21.304"
 - position: 22
   driverNumber: 4
   driverId: lando-norris

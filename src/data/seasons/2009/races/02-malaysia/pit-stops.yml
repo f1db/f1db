@@ -188,15 +188,6 @@
   lap: 22
   time: "29.465"
 - position: 22
-  driverNumber: 3
-  driverId: felipe-massa
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 22
-  time: "29.152"
-- position: 23
   driverNumber: 8
   driverId: nelson-piquet-jr
   constructorId: renault
@@ -205,6 +196,15 @@
   stop: 1
   lap: 22
   time: "31.748"
+- position: 23
+  driverNumber: 3
+  driverId: felipe-massa
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 22
+  time: "29.152"
 - position: 24
   driverNumber: 14
   driverId: mark-webber

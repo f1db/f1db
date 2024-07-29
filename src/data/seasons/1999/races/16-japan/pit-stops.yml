@@ -287,15 +287,6 @@
   lap: 34
   time: "35.848"
 - position: 33
-  driverNumber: 17
-  driverId: johnny-herbert
-  constructorId: stewart
-  engineManufacturerId: ford
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 36
-  time: "36.468"
-- position: 34
   driverNumber: 15
   driverId: toranosuke-takagi
   constructorId: arrows
@@ -304,6 +295,15 @@
   stop: 2
   lap: 35
   time: "34.668"
+- position: 34
+  driverNumber: 17
+  driverId: johnny-herbert
+  constructorId: stewart
+  engineManufacturerId: ford
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 36
+  time: "36.468"
 - position: 35
   driverNumber: 11
   driverId: jean-alesi

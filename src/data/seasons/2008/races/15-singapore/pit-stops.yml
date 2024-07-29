@@ -98,15 +98,6 @@
   lap: 17
   time: "30.519"
 - position: 12
-  driverNumber: 3
-  driverId: nick-heidfeld
-  constructorId: bmw-sauber
-  engineManufacturerId: bmw
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 17
-  time: "27.874"
-- position: 13
   driverNumber: 23
   driverId: heikki-kovalainen
   constructorId: mclaren
@@ -115,6 +106,15 @@
   stop: 1
   lap: 17
   time: "34.363"
+- position: 13
+  driverNumber: 3
+  driverId: nick-heidfeld
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 17
+  time: "27.874"
 - position: 14
   driverNumber: 8
   driverId: kazuki-nakajima

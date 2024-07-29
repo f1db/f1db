@@ -224,15 +224,6 @@
   lap: 40
   time: "24.406"
 - position: 26
-  driverNumber: 1
-  driverId: fernando-alonso
-  constructorId: renault
-  engineManufacturerId: renault
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 41
-  time: "24.273"
-- position: 27
   driverNumber: 17
   driverId: robert-kubica
   constructorId: bmw-sauber
@@ -241,6 +232,15 @@
   stop: 2
   lap: 41
   time: "24.616"
+- position: 27
+  driverNumber: 1
+  driverId: fernando-alonso
+  constructorId: renault
+  engineManufacturerId: renault
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 41
+  time: "24.273"
 - position: 28
   driverNumber: 12
   driverId: jenson-button

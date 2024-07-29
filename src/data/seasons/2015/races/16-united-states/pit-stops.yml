@@ -98,15 +98,6 @@
   lap: 18
   time: "24.354"
 - position: 12
-  driverNumber: 5
-  driverId: sebastian-vettel
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 18
-  time: "25.019"
-- position: 13
   driverNumber: 33
   driverId: max-verstappen
   constructorId: toro-rosso
@@ -115,6 +106,15 @@
   stop: 1
   lap: 18
   time: "25.527"
+- position: 13
+  driverNumber: 5
+  driverId: sebastian-vettel
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 18
+  time: "25.019"
 - position: 14
   driverNumber: 19
   driverId: felipe-massa

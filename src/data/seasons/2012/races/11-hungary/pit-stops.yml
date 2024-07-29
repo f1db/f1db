@@ -152,15 +152,6 @@
   lap: 18
   time: "21.070"
 - position: 18
-  driverNumber: 23
-  driverId: narain-karthikeyan
-  constructorId: hrt
-  engineManufacturerId: cosworth
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 18
-  time: "21.259"
-- position: 19
   driverNumber: 10
   driverId: romain-grosjean
   constructorId: lotus-f1
@@ -169,6 +160,15 @@
   stop: 1
   lap: 19
   time: "22.151"
+- position: 19
+  driverNumber: 23
+  driverId: narain-karthikeyan
+  constructorId: hrt
+  engineManufacturerId: cosworth
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 18
+  time: "21.259"
 - position: 20
   driverNumber: 24
   driverId: timo-glock

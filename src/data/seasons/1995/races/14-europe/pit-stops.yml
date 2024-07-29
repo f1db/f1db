@@ -17,15 +17,6 @@
   lap: 9
   time: "37.499"
 - position: 3
-  driverNumber: 5
-  driverId: damon-hill
-  constructorId: williams
-  engineManufacturerId: renault
-  tyreManufacturerId: goodyear
-  stop: 1
-  lap: 11
-  time: "31.090"
-- position: 4
   driverNumber: 1
   driverId: michael-schumacher
   constructorId: benetton
@@ -34,6 +25,15 @@
   stop: 1
   lap: 11
   time: "28.164"
+- position: 4
+  driverNumber: 5
+  driverId: damon-hill
+  constructorId: williams
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  stop: 1
+  lap: 11
+  time: "31.090"
 - position: 5
   driverNumber: 25
   driverId: martin-brundle

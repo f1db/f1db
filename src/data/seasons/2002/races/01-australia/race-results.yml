@@ -289,7 +289,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Ignored red light
   points:
   gridPosition: 15
 - position: DSQ
@@ -303,6 +303,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Illegal car change
   points:
   gridPosition: 17

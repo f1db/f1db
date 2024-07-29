@@ -8,15 +8,6 @@
   lap: 1
   time: "32.494"
 - position: 2
-  driverNumber: 24
-  driverId: guanyu-zhou
-  constructorId: alfa-romeo
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 1
-  time: "26.141"
-- position: 3
   driverNumber: 11
   driverId: sergio-perez
   constructorId: red-bull
@@ -25,6 +16,15 @@
   stop: 1
   lap: 1
   time: "24.887"
+- position: 3
+  driverNumber: 24
+  driverId: guanyu-zhou
+  constructorId: alfa-romeo
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 1
+  time: "26.141"
 - position: 4
   driverNumber: 23
   driverId: alexander-albon

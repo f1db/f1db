@@ -98,15 +98,6 @@
   lap: 12
   time: "24.834"
 - position: 12
-  driverNumber: 12
-  driverId: felipe-massa
-  constructorId: sauber
-  engineManufacturerId: petronas
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 12
-  time: "21.909"
-- position: 13
   driverNumber: 17
   driverId: olivier-panis
   constructorId: toyota
@@ -115,6 +106,15 @@
   stop: 1
   lap: 12
   time: "21.602"
+- position: 13
+  driverNumber: 12
+  driverId: felipe-massa
+  constructorId: sauber
+  engineManufacturerId: petronas
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 12
+  time: "21.909"
 - position: 14
   driverNumber: 20
   driverId: gianmaria-bruni

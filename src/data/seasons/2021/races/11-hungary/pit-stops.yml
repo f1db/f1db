@@ -224,15 +224,6 @@
   lap: 3
   time: "37.122"
 - position: 26
-  driverNumber: 63
-  driverId: george-russell
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 3
-  time: "29.374"
-- position: 27
   driverNumber: 7
   driverId: kimi-raikkonen
   constructorId: alfa-romeo
@@ -241,6 +232,15 @@
   stop: 2
   lap: 3
   time: "35.451"
+- position: 27
+  driverNumber: 63
+  driverId: george-russell
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 3
+  time: "29.374"
 - position: 28
   driverNumber: 47
   driverId: mick-schumacher

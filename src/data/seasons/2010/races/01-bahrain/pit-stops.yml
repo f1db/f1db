@@ -89,15 +89,6 @@
   lap: 16
   time: "24.295"
 - position: 11
-  driverNumber: 1
-  driverId: jenson-button
-  constructorId: mclaren
-  engineManufacturerId: mercedes
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 16
-  time: "23.543"
-- position: 12
   driverNumber: 6
   driverId: mark-webber
   constructorId: red-bull
@@ -106,6 +97,15 @@
   stop: 1
   lap: 16
   time: "25.190"
+- position: 12
+  driverNumber: 1
+  driverId: jenson-button
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 16
+  time: "23.543"
 - position: 13
   driverNumber: 5
   driverId: sebastian-vettel

@@ -296,15 +296,6 @@
   lap: 47
   time: "28.594"
 - position: 34
-  driverNumber: 15
-  driverId: eddie-irvine
-  constructorId: jordan
-  engineManufacturerId: hart
-  tyreManufacturerId: goodyear
-  stop: 2
-  lap: 47
-  time: "29.026"
-- position: 35
   driverNumber: 26
   driverId: olivier-panis
   constructorId: ligier
@@ -313,6 +304,15 @@
   stop: 2
   lap: 47
   time: "25.872"
+- position: 35
+  driverNumber: 15
+  driverId: eddie-irvine
+  constructorId: jordan
+  engineManufacturerId: hart
+  tyreManufacturerId: goodyear
+  stop: 2
+  lap: 47
+  time: "29.026"
 - position: 36
   driverNumber: 12
   driverId: johnny-herbert

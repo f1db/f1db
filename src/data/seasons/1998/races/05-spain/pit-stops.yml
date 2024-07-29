@@ -44,15 +44,6 @@
   lap: 21
   time: "28.000"
 - position: 6
-  driverNumber: 2
-  driverId: heinz-harald-frentzen
-  constructorId: williams
-  engineManufacturerId: mecachrome
-  tyreManufacturerId: goodyear
-  stop: 2
-  lap: 21
-  time: "29.818"
-- position: 7
   driverNumber: 23
   driverId: esteban-tuero
   constructorId: minardi
@@ -61,6 +52,15 @@
   stop: 1
   lap: 21
   time: "30.033"
+- position: 7
+  driverNumber: 2
+  driverId: heinz-harald-frentzen
+  constructorId: williams
+  engineManufacturerId: mecachrome
+  tyreManufacturerId: goodyear
+  stop: 2
+  lap: 21
+  time: "29.818"
 - position: 8
   driverNumber: 18
   driverId: rubens-barrichello

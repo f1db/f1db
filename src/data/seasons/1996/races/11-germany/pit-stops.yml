@@ -89,15 +89,6 @@
   lap: 22
   time: "30.259"
 - position: 11
-  driverNumber: 1
-  driverId: michael-schumacher
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: goodyear
-  stop: 1
-  lap: 22
-  time: "32.523"
-- position: 12
   driverNumber: 6
   driverId: jacques-villeneuve
   constructorId: williams
@@ -106,6 +97,15 @@
   stop: 1
   lap: 22
   time: "32.123"
+- position: 12
+  driverNumber: 1
+  driverId: michael-schumacher
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: goodyear
+  stop: 1
+  lap: 22
+  time: "32.523"
 - position: 13
   driverNumber: 16
   driverId: ricardo-rosset

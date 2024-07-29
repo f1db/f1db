@@ -251,15 +251,6 @@
   lap: 3
   time: "22.319"
 - position: 29
-  driverNumber: 5
-  driverId: sebastian-vettel
-  constructorId: aston-martin
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 3
-  time: "21.750"
-- position: 30
   driverNumber: 63
   driverId: george-russell
   constructorId: williams
@@ -268,6 +259,15 @@
   stop: 2
   lap: 3
   time: "22.755"
+- position: 30
+  driverNumber: 5
+  driverId: sebastian-vettel
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 3
+  time: "21.750"
 - position: 31
   driverNumber: 99
   driverId: antonio-giovinazzi

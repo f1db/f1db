@@ -107,15 +107,6 @@
   lap: 10
   time: "27.656"
 - position: 13
-  driverNumber: 23
-  driverId: heikki-kovalainen
-  constructorId: mclaren
-  engineManufacturerId: mercedes
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 10
-  time: "32.527"
-- position: 14
   driverNumber: 3
   driverId: nick-heidfeld
   constructorId: bmw-sauber
@@ -124,6 +115,15 @@
   stop: 1
   lap: 10
   time: "27.881"
+- position: 14
+  driverNumber: 23
+  driverId: heikki-kovalainen
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 10
+  time: "32.527"
 - position: 15
   driverNumber: 4
   driverId: robert-kubica

@@ -467,15 +467,6 @@
   lap: 44
   time: "32.568"
 - position: 53
-  driverNumber: 9
-  driverId: gianni-morbidelli
-  constructorId: footwork
-  engineManufacturerId: hart
-  tyreManufacturerId: goodyear
-  stop: 3
-  lap: 43
-  time: "27.795"
-- position: 54
   driverNumber: 5
   driverId: damon-hill
   constructorId: williams
@@ -484,3 +475,12 @@
   stop: 3
   lap: 47
   time: "31.422"
+- position: 54
+  driverNumber: 9
+  driverId: gianni-morbidelli
+  constructorId: footwork
+  engineManufacturerId: hart
+  tyreManufacturerId: goodyear
+  stop: 3
+  lap: 43
+  time: "27.795"

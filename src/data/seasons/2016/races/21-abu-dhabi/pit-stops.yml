@@ -107,15 +107,6 @@
   lap: 8
   time: "21.775"
 - position: 13
-  driverNumber: 21
-  driverId: esteban-gutierrez
-  constructorId: haas
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 8
-  time: "22.032"
-- position: 14
   driverNumber: 26
   driverId: daniil-kvyat
   constructorId: toro-rosso
@@ -124,6 +115,15 @@
   stop: 1
   lap: 8
   time: "21.896"
+- position: 14
+  driverNumber: 21
+  driverId: esteban-gutierrez
+  constructorId: haas
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 8
+  time: "22.032"
 - position: 15
   driverNumber: 3
   driverId: daniel-ricciardo

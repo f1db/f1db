@@ -26,15 +26,6 @@
   lap: 10
   time: "22.865"
 - position: 4
-  driverNumber: 5
-  driverId: sebastian-vettel
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 11
-  time: "22.616"
-- position: 5
   driverNumber: 63
   driverId: george-russell
   constructorId: williams
@@ -43,6 +34,15 @@
   stop: 1
   lap: 11
   time: "22.496"
+- position: 5
+  driverNumber: 5
+  driverId: sebastian-vettel
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 11
+  time: "22.616"
 - position: 6
   driverNumber: 77
   driverId: valtteri-bottas

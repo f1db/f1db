@@ -107,15 +107,6 @@
   lap: 12
   time: "40.626"
 - position: 13
-  driverNumber: 14
-  driverId: mark-webber
-  constructorId: jaguar
-  engineManufacturerId: cosworth
-  tyreManufacturerId: michelin
-  stop: 1
-  lap: 12
-  time: "34.142"
-- position: 14
   driverNumber: 16
   driverId: jacques-villeneuve
   constructorId: bar
@@ -124,6 +115,15 @@
   stop: 1
   lap: 12
   time: "35.743"
+- position: 14
+  driverNumber: 14
+  driverId: mark-webber
+  constructorId: jaguar
+  engineManufacturerId: cosworth
+  tyreManufacturerId: michelin
+  stop: 1
+  lap: 12
+  time: "34.142"
 - position: 15
   driverNumber: 9
   driverId: nick-heidfeld

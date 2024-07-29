@@ -44,15 +44,6 @@
   lap: 9
   time: "20.667"
 - position: 6
-  driverNumber: 5
-  driverId: fernando-alonso
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 10
-  time: "21.147"
-- position: 7
   driverNumber: 4
   driverId: jenson-button
   constructorId: mclaren
@@ -61,6 +52,15 @@
   stop: 1
   lap: 10
   time: "21.094"
+- position: 7
+  driverNumber: 5
+  driverId: fernando-alonso
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 10
+  time: "21.147"
 - position: 8
   driverNumber: 2
   driverId: mark-webber

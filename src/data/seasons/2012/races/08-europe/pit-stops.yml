@@ -341,15 +341,6 @@
   lap: 29
   time: "20.023"
 - position: 39
-  driverNumber: 25
-  driverId: charles-pic
-  constructorId: marussia
-  engineManufacturerId: cosworth
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 28
-  time: "22.838"
-- position: 40
   driverNumber: 22
   driverId: pedro-de-la-rosa
   constructorId: hrt
@@ -358,6 +349,15 @@
   stop: 2
   lap: 28
   time: "23.125"
+- position: 40
+  driverNumber: 25
+  driverId: charles-pic
+  constructorId: marussia
+  engineManufacturerId: cosworth
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 28
+  time: "22.838"
 - position: 41
   driverNumber: 23
   driverId: narain-karthikeyan

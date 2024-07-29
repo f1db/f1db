@@ -1,13 +1,4 @@
 - position: 1
-  driverNumber: 15
-  driverId: sebastian-vettel
-  constructorId: toro-rosso
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 1
-  time: "29.242"
-- position: 2
   driverNumber: 20
   driverId: adrian-sutil
   constructorId: force-india
@@ -16,6 +7,15 @@
   stop: 1
   lap: 1
   time: "37.316"
+- position: 2
+  driverNumber: 15
+  driverId: sebastian-vettel
+  constructorId: toro-rosso
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 1
+  time: "29.242"
 - position: 3
   driverNumber: 23
   driverId: heikki-kovalainen

@@ -323,15 +323,6 @@
   lap: 34
   time: "27.592"
 - position: 37
-  driverNumber: 8
-  driverId: fernando-alonso
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 3
-  lap: 34
-  time: "22.874"
-- position: 38
   driverNumber: 5
   driverId: sebastian-vettel
   constructorId: red-bull
@@ -340,6 +331,15 @@
   stop: 4
   lap: 33
   time: "22.997"
+- position: 38
+  driverNumber: 8
+  driverId: fernando-alonso
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 3
+  lap: 34
+  time: "22.874"
 - position: 39
   driverNumber: 12
   driverId: vitaly-petrov

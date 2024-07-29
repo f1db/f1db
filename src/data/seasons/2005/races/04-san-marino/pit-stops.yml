@@ -188,15 +188,6 @@
   lap: 42
   time: "31.257"
 - position: 22
-  driverNumber: 8
-  driverId: nick-heidfeld
-  constructorId: williams
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 44
-  time: "24.229"
-- position: 23
   driverNumber: 17
   driverId: ralf-schumacher
   constructorId: toyota
@@ -205,6 +196,15 @@
   stop: 2
   lap: 44
   time: "23.282"
+- position: 23
+  driverNumber: 8
+  driverId: nick-heidfeld
+  constructorId: williams
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 44
+  time: "24.229"
 - position: 24
   driverNumber: 16
   driverId: jarno-trulli

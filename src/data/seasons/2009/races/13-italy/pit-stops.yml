@@ -161,15 +161,6 @@
   lap: 36
   time: "26.916"
 - position: 19
-  driverNumber: 20
-  driverId: adrian-sutil
-  constructorId: force-india
-  engineManufacturerId: mercedes
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 37
-  time: "27.559"
-- position: 20
   driverNumber: 4
   driverId: kimi-raikkonen
   constructorId: ferrari
@@ -178,6 +169,15 @@
   stop: 2
   lap: 37
   time: "26.288"
+- position: 20
+  driverNumber: 20
+  driverId: adrian-sutil
+  constructorId: force-india
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 37
+  time: "27.559"
 - position: 21
   driverNumber: 10
   driverId: timo-glock

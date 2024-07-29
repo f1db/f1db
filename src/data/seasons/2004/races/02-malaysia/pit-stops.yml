@@ -431,15 +431,6 @@
   lap: 40
   time: "28.470"
 - position: 49
-  driverNumber: 20
-  driverId: gianmaria-bruni
-  constructorId: minardi
-  engineManufacturerId: cosworth
-  tyreManufacturerId: bridgestone
-  stop: 3
-  lap: 38
-  time: "27.715"
-- position: 50
   driverNumber: 7
   driverId: jarno-trulli
   constructorId: renault
@@ -448,6 +439,15 @@
   stop: 3
   lap: 40
   time: "25.777"
+- position: 50
+  driverNumber: 20
+  driverId: gianmaria-bruni
+  constructorId: minardi
+  engineManufacturerId: cosworth
+  tyreManufacturerId: bridgestone
+  stop: 3
+  lap: 38
+  time: "27.715"
 - position: 51
   driverNumber: 12
   driverId: felipe-massa

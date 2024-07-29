@@ -89,15 +89,6 @@
   lap: 19
   time: "26.871"
 - position: 11
-  driverNumber: 20
-  driverId: vitantonio-liuzzi
-  constructorId: toro-rosso
-  engineManufacturerId: cosworth
-  tyreManufacturerId: michelin
-  stop: 2
-  lap: 19
-  time: "34.239"
-- position: 12
   driverNumber: 22
   driverId: takuma-sato
   constructorId: super-aguri
@@ -106,6 +97,15 @@
   stop: 1
   lap: 19
   time: "28.588"
+- position: 12
+  driverNumber: 20
+  driverId: vitantonio-liuzzi
+  constructorId: toro-rosso
+  engineManufacturerId: cosworth
+  tyreManufacturerId: michelin
+  stop: 2
+  lap: 19
+  time: "34.239"
 - position: 13
   driverNumber: 8
   driverId: jarno-trulli

@@ -166,18 +166,6 @@
   gap:
   interval:
   laps: 16
-- position: NC
-  driverNumber: 13
-  driverId: pastor-maldonado
-  constructorId: lotus-f1
-  engineManufacturerId: renault
-  tyreManufacturerId: pirelli
-  q1: "1:43.892"
-  q2: "1:44.018"
-  q3:
-  gap:
-  interval:
-  laps: 15
 - position: 15
   driverNumber: 99
   driverId: adrian-sutil
@@ -262,3 +250,15 @@
   gap:
   interval:
   laps: 6
+- position: EX
+  driverNumber: 13
+  driverId: pastor-maldonado
+  constructorId: lotus-f1
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  q1: "1:43.892"
+  q2: "1:44.018"
+  q3:
+  gap:
+  interval:
+  laps: 15

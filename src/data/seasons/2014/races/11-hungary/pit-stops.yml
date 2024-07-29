@@ -143,15 +143,6 @@
   lap: 9
   time: "22.827"
 - position: 17
-  driverNumber: 1
-  driverId: sebastian-vettel
-  constructorId: red-bull
-  engineManufacturerId: renault
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 9
-  time: "22.170"
-- position: 18
   driverNumber: 77
   driverId: valtteri-bottas
   constructorId: williams
@@ -160,6 +151,15 @@
   stop: 1
   lap: 9
   time: "25.497"
+- position: 18
+  driverNumber: 1
+  driverId: sebastian-vettel
+  constructorId: red-bull
+  engineManufacturerId: renault
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 9
+  time: "22.170"
 - position: 19
   driverNumber: 14
   driverId: fernando-alonso

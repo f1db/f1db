@@ -35,15 +35,6 @@
   lap: 1
   time: "30.709"
 - position: 5
-  driverNumber: 77
-  driverId: valtteri-bottas
-  constructorId: mercedes
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 1
-  time: "30.444"
-- position: 6
   driverNumber: 30
   driverId: jolyon-palmer
   constructorId: renault
@@ -52,6 +43,15 @@
   stop: 1
   lap: 1
   time: "30.785"
+- position: 6
+  driverNumber: 77
+  driverId: valtteri-bottas
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 1
+  time: "30.444"
 - position: 7
   driverNumber: 2
   driverId: stoffel-vandoorne

@@ -98,15 +98,6 @@
   lap: 11
   time: "46.995"
 - position: 12
-  driverNumber: 7
-  driverId: mark-webber
-  constructorId: williams
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 1
-  lap: 11
-  time: "49.904"
-- position: 13
   driverNumber: 14
   driverId: david-coulthard
   constructorId: red-bull
@@ -115,16 +106,16 @@
   stop: 1
   lap: 11
   time: "47.956"
-- position: 14
-  driverNumber: 15
-  driverId: christian-klien
-  constructorId: red-bull
-  engineManufacturerId: cosworth
+- position: 13
+  driverNumber: 7
+  driverId: mark-webber
+  constructorId: williams
+  engineManufacturerId: bmw
   tyreManufacturerId: michelin
   stop: 1
   lap: 11
-  time: "56.910"
-- position: 15
+  time: "49.904"
+- position: 14
   driverNumber: 8
   driverId: antonio-pizzonia
   constructorId: williams
@@ -133,6 +124,15 @@
   stop: 1
   lap: 11
   time: "55.395"
+- position: 15
+  driverNumber: 15
+  driverId: christian-klien
+  constructorId: red-bull
+  engineManufacturerId: cosworth
+  tyreManufacturerId: michelin
+  stop: 1
+  lap: 11
+  time: "56.910"
 - position: 16
   driverNumber: 2
   driverId: rubens-barrichello

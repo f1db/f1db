@@ -395,15 +395,6 @@
   lap: 36
   time: "24.400"
 - position: 45
-  driverNumber: 11
-  driverId: nico-hulkenberg
-  constructorId: sauber
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 3
-  lap: 37
-  time: "24.863"
-- position: 46
   driverNumber: 16
   driverId: pastor-maldonado
   constructorId: williams
@@ -412,6 +403,15 @@
   stop: 2
   lap: 37
   time: "25.275"
+- position: 46
+  driverNumber: 11
+  driverId: nico-hulkenberg
+  constructorId: sauber
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 37
+  time: "24.863"
 - position: 47
   driverNumber: 17
   driverId: valtteri-bottas

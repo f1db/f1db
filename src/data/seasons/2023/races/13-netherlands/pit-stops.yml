@@ -566,15 +566,6 @@
   lap: 60
   time: "21.439"
 - position: 64
-  driverNumber: 18
-  driverId: lance-stroll
-  constructorId: aston-martin
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 5
-  lap: 60
-  time: "21.532"
-- position: 65
   driverNumber: 27
   driverId: nico-hulkenberg
   constructorId: haas
@@ -583,6 +574,15 @@
   stop: 3
   lap: 60
   time: "23.582"
+- position: 65
+  driverNumber: 18
+  driverId: lance-stroll
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 5
+  lap: 60
+  time: "21.532"
 - position: 66
   driverNumber: 20
   driverId: kevin-magnussen

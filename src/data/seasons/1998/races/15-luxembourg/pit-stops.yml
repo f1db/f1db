@@ -197,15 +197,6 @@
   lap: 42
   time: "28.320"
 - position: 23
-  driverNumber: 6
-  driverId: alexander-wurz
-  constructorId: benetton
-  engineManufacturerId: playlife
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 43
-  time: "28.714"
-- position: 24
   driverNumber: 2
   driverId: heinz-harald-frentzen
   constructorId: williams
@@ -214,6 +205,15 @@
   stop: 2
   lap: 43
   time: "27.307"
+- position: 24
+  driverNumber: 6
+  driverId: alexander-wurz
+  constructorId: benetton
+  engineManufacturerId: playlife
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 43
+  time: "28.714"
 - position: 25
   driverNumber: 11
   driverId: olivier-panis

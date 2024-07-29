@@ -8,15 +8,6 @@
   lap: 4
   time: "25.234"
 - position: 2
-  driverNumber: 3
-  driverId: juan-pablo-montoya
-  constructorId: williams
-  engineManufacturerId: bmw
-  tyreManufacturerId: michelin
-  stop: 1
-  lap: 5
-  time: "24.115"
-- position: 3
   driverNumber: 6
   driverId: kimi-raikkonen
   constructorId: mclaren
@@ -25,6 +16,15 @@
   stop: 1
   lap: 5
   time: "24.378"
+- position: 3
+  driverNumber: 3
+  driverId: juan-pablo-montoya
+  constructorId: williams
+  engineManufacturerId: bmw
+  tyreManufacturerId: michelin
+  stop: 1
+  lap: 5
+  time: "24.115"
 - position: 4
   driverNumber: 10
   driverId: takuma-sato

@@ -350,15 +350,6 @@
   lap: 28
   time: "21.732"
 - position: 40
-  driverNumber: 5
-  driverId: sebastian-vettel
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  stop: 3
-  lap: 28
-  time: "22.058"
-- position: 41
   driverNumber: 7
   driverId: kimi-raikkonen
   constructorId: alfa-romeo
@@ -367,6 +358,15 @@
   stop: 3
   lap: 28
   time: "21.142"
+- position: 41
+  driverNumber: 5
+  driverId: sebastian-vettel
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 28
+  time: "22.058"
 - position: 42
   driverNumber: 10
   driverId: pierre-gasly

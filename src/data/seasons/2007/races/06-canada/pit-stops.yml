@@ -53,15 +53,6 @@
   lap: 25
   time: "29.157"
 - position: 7
-  driverNumber: 6
-  driverId: kimi-raikkonen
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 25
-  time: "37.643"
-- position: 8
   driverNumber: 3
   driverId: giancarlo-fisichella
   constructorId: renault
@@ -70,6 +61,15 @@
   stop: 1
   lap: 25
   time: "28.361"
+- position: 8
+  driverNumber: 6
+  driverId: kimi-raikkonen
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 25
+  time: "37.643"
 - position: 9
   driverNumber: 10
   driverId: robert-kubica

@@ -98,15 +98,6 @@
   lap: 1
   time: "29.482"
 - position: 12
-  driverNumber: 2
-  driverId: lewis-hamilton
-  constructorId: mclaren
-  engineManufacturerId: mercedes
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 1
-  time: "31.974"
-- position: 13
   driverNumber: 8
   driverId: rubens-barrichello
   constructorId: honda
@@ -115,6 +106,15 @@
   stop: 1
   lap: 1
   time: "29.515"
+- position: 13
+  driverNumber: 2
+  driverId: lewis-hamilton
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 1
+  time: "31.974"
 - position: 14
   driverNumber: 20
   driverId: adrian-sutil
@@ -332,15 +332,6 @@
   lap: 11
   time: "33.738"
 - position: 38
-  driverNumber: 5
-  driverId: felipe-massa
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 12
-  time: "25.652"
-- position: 39
   driverNumber: 1
   driverId: fernando-alonso
   constructorId: mclaren
@@ -349,6 +340,15 @@
   stop: 2
   lap: 12
   time: "27.550"
+- position: 39
+  driverNumber: 5
+  driverId: felipe-massa
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 12
+  time: "25.652"
 - position: 40
   driverNumber: 15
   driverId: mark-webber

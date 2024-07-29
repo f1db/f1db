@@ -269,15 +269,6 @@
   lap: 41
   time: "20.440"
 - position: 31
-  driverNumber: 1
-  driverId: kimi-raikkonen
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 43
-  time: "29.702"
-- position: 32
   driverNumber: 23
   driverId: heikki-kovalainen
   constructorId: mclaren
@@ -286,3 +277,12 @@
   stop: 2
   lap: 43
   time: "22.809"
+- position: 32
+  driverNumber: 1
+  driverId: kimi-raikkonen
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 43
+  time: "29.702"

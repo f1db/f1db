@@ -89,15 +89,6 @@
   lap: 7
   time: "21.277"
 - position: 11
-  driverNumber: 17
-  driverId: jaime-alguersuari
-  constructorId: toro-rosso
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 7
-  time: "22.333"
-- position: 12
   driverNumber: 9
   driverId: rubens-barrichello
   constructorId: williams
@@ -106,6 +97,15 @@
   stop: 1
   lap: 7
   time: "22.961"
+- position: 12
+  driverNumber: 17
+  driverId: jaime-alguersuari
+  constructorId: toro-rosso
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 7
+  time: "22.333"
 - position: 13
   driverNumber: 11
   driverId: robert-kubica

@@ -62,15 +62,6 @@
   lap: 6
   time: "29.347"
 - position: 8
-  driverNumber: 5
-  driverId: heinz-harald-frentzen
-  constructorId: jordan
-  engineManufacturerId: mugen-honda
-  tyreManufacturerId: bridgestone
-  stop: 1
-  lap: 6
-  time: "32.339"
-- position: 9
   driverNumber: 4
   driverId: rubens-barrichello
   constructorId: ferrari
@@ -79,16 +70,16 @@
   stop: 1
   lap: 6
   time: "32.181"
-- position: 10
-  driverNumber: 8
-  driverId: johnny-herbert
-  constructorId: jaguar
-  engineManufacturerId: cosworth
+- position: 9
+  driverNumber: 5
+  driverId: heinz-harald-frentzen
+  constructorId: jordan
+  engineManufacturerId: mugen-honda
   tyreManufacturerId: bridgestone
   stop: 1
   lap: 6
-  time: "33.448"
-- position: 11
+  time: "32.339"
+- position: 10
   driverNumber: 11
   driverId: giancarlo-fisichella
   constructorId: benetton
@@ -97,6 +88,15 @@
   stop: 1
   lap: 6
   time: "43.267"
+- position: 11
+  driverNumber: 8
+  driverId: johnny-herbert
+  constructorId: jaguar
+  engineManufacturerId: cosworth
+  tyreManufacturerId: bridgestone
+  stop: 1
+  lap: 6
+  time: "33.448"
 - position: 12
   driverNumber: 23
   driverId: ricardo-zonta
@@ -341,15 +341,6 @@
   lap: 27
   time: "1:13.740"
 - position: 39
-  driverNumber: 5
-  driverId: heinz-harald-frentzen
-  constructorId: jordan
-  engineManufacturerId: mugen-honda
-  tyreManufacturerId: bridgestone
-  stop: 2
-  lap: 28
-  time: "31.083"
-- position: 40
   driverNumber: 2
   driverId: david-coulthard
   constructorId: mclaren
@@ -358,6 +349,15 @@
   stop: 2
   lap: 28
   time: "29.116"
+- position: 40
+  driverNumber: 5
+  driverId: heinz-harald-frentzen
+  constructorId: jordan
+  engineManufacturerId: mugen-honda
+  tyreManufacturerId: bridgestone
+  stop: 2
+  lap: 28
+  time: "31.083"
 - position: 41
   driverNumber: 21
   driverId: gaston-mazzacane

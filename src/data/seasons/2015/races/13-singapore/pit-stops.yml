@@ -8,15 +8,6 @@
   lap: 9
   time: "30.640"
 - position: 2
-  driverNumber: 14
-  driverId: fernando-alonso
-  constructorId: mclaren
-  engineManufacturerId: honda
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 10
-  time: "34.237"
-- position: 3
   driverNumber: 55
   driverId: carlos-sainz-jr
   constructorId: toro-rosso
@@ -25,6 +16,15 @@
   stop: 1
   lap: 10
   time: "34.970"
+- position: 3
+  driverNumber: 14
+  driverId: fernando-alonso
+  constructorId: mclaren
+  engineManufacturerId: honda
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 10
+  time: "34.237"
 - position: 4
   driverNumber: 9
   driverId: marcus-ericsson

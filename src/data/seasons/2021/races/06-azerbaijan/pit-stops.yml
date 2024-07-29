@@ -224,15 +224,6 @@
   lap: 44
   time: "24.780"
 - position: 26
-  driverNumber: 44
-  driverId: lewis-hamilton
-  constructorId: mercedes
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 2
-  lap: 47
-  time: "15.432"
-- position: 27
   driverNumber: 11
   driverId: sergio-perez
   constructorId: red-bull
@@ -241,6 +232,15 @@
   stop: 2
   lap: 47
   time: "15.277"
+- position: 27
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 2
+  lap: 47
+  time: "15.432"
 - position: 28
   driverNumber: 5
   driverId: sebastian-vettel
@@ -332,15 +332,6 @@
   lap: 47
   time: "14.881"
 - position: 38
-  driverNumber: 63
-  driverId: george-russell
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 3
-  lap: 47
-  time: "21.438"
-- position: 39
   driverNumber: 77
   driverId: valtteri-bottas
   constructorId: mercedes
@@ -349,6 +340,15 @@
   stop: 2
   lap: 47
   time: "21.346"
+- position: 39
+  driverNumber: 63
+  driverId: george-russell
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 47
+  time: "21.438"
 - position: 40
   driverNumber: 9
   driverId: nikita-mazepin

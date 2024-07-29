@@ -125,15 +125,6 @@
   lap: 11
   time: "23.148"
 - position: 15
-  driverNumber: 18
-  driverId: lance-stroll
-  constructorId: aston-martin
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  stop: 1
-  lap: 11
-  time: "23.161"
-- position: 16
   driverNumber: 63
   driverId: george-russell
   constructorId: mercedes
@@ -142,6 +133,15 @@
   stop: 1
   lap: 11
   time: "20.459"
+- position: 16
+  driverNumber: 18
+  driverId: lance-stroll
+  constructorId: aston-martin
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 1
+  lap: 11
+  time: "23.161"
 - position: 17
   driverNumber: 24
   driverId: guanyu-zhou

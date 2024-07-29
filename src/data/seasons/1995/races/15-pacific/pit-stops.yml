@@ -8,15 +8,6 @@
   lap: 19
   time: "26.001"
 - position: 2
-  driverNumber: 1
-  driverId: michael-schumacher
-  constructorId: benetton
-  engineManufacturerId: renault
-  tyreManufacturerId: goodyear
-  stop: 1
-  lap: 19
-  time: "23.285"
-- position: 3
   driverNumber: 5
   driverId: damon-hill
   constructorId: williams
@@ -25,6 +16,15 @@
   stop: 1
   lap: 19
   time: "29.315"
+- position: 3
+  driverNumber: 1
+  driverId: michael-schumacher
+  constructorId: benetton
+  engineManufacturerId: renault
+  tyreManufacturerId: goodyear
+  stop: 1
+  lap: 19
+  time: "23.285"
 - position: 4
   driverNumber: 7
   driverId: mark-blundell
