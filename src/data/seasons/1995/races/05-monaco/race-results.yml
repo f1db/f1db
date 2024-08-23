@@ -331,7 +331,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Serving stop-and-go penalty too late
+  reasonRetired: Failed to serve stop-go penalty
   points:
   gridPosition: 25
 - position: DNS
