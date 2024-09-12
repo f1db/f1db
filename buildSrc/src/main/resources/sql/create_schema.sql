@@ -288,7 +288,7 @@ CREATE TABLE "season_entrant_driver"
 , CONSTRAINT "seed_entrant_id_fk" FOREIGN KEY ("entrant_id") REFERENCES "entrant" ("id")
 , CONSTRAINT "seed_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
 , CONSTRAINT "seed_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
-, CONSTRAINT "seed_tyre_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
+, CONSTRAINT "seed_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
 );
 
 CREATE INDEX "seed_year_idx" ON "season_entrant_driver" ("year");
@@ -466,6 +466,7 @@ CREATE TABLE "race_data"
 
 CREATE INDEX "rada_race_id_idx" ON "race_data" ("race_id");
 CREATE INDEX "rada_type_idx" ON "race_data" ("type");
+CREATE INDEX "rada_position_display_order_idx" ON "race_data" ("position_display_order");
 CREATE INDEX "rada_position_number_idx" ON "race_data" ("position_number");
 CREATE INDEX "rada_position_text_idx" ON "race_data" ("position_text");
 CREATE INDEX "rada_driver_number_idx" ON "race_data" ("driver_number");
