@@ -517,9 +517,7 @@ CREATE INDEX "racs_constructor_id_idx" ON "race_constructor_standing" ("construc
 CREATE INDEX "racs_engine_manufacturer_id_idx" ON "race_constructor_standing" ("engine_manufacturer_id");
 
 CREATE VIEW "pre_qualifying_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -536,14 +534,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."qualifying_interval_millis" AS "interval_millis"
 ,        "race_data"."qualifying_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'PRE_QUALIFYING_RESULT';
+WHERE    "race_data"."type" = 'PRE_QUALIFYING_RESULT';
 
 CREATE VIEW "free_practice_1_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -560,14 +554,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."practice_interval_millis" AS "interval_millis"
 ,        "race_data"."practice_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'FREE_PRACTICE_1_RESULT';
+WHERE    "race_data"."type" = 'FREE_PRACTICE_1_RESULT';
 
 CREATE VIEW "free_practice_2_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -584,14 +574,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."practice_interval_millis" AS "interval_millis"
 ,        "race_data"."practice_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'FREE_PRACTICE_2_RESULT';
+WHERE    "race_data"."type" = 'FREE_PRACTICE_2_RESULT';
 
 CREATE VIEW "free_practice_3_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -608,14 +594,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."practice_interval_millis" AS "interval_millis"
 ,        "race_data"."practice_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'FREE_PRACTICE_3_RESULT';
+WHERE    "race_data"."type" = 'FREE_PRACTICE_3_RESULT';
 
 CREATE VIEW "free_practice_4_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -632,14 +614,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."practice_interval_millis" AS "interval_millis"
 ,        "race_data"."practice_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'FREE_PRACTICE_4_RESULT';
+WHERE    "race_data"."type" = 'FREE_PRACTICE_4_RESULT';
 
 CREATE VIEW "qualifying_1_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -656,14 +634,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."qualifying_interval_millis" AS "interval_millis"
 ,        "race_data"."qualifying_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'QUALIFYING_1_RESULT';
+WHERE    "race_data"."type" = 'QUALIFYING_1_RESULT';
 
 CREATE VIEW "qualifying_2_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -680,14 +654,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."qualifying_interval_millis" AS "interval_millis"
 ,        "race_data"."qualifying_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'QUALIFYING_2_RESULT';
+WHERE    "race_data"."type" = 'QUALIFYING_2_RESULT';
 
 CREATE VIEW "qualifying_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -710,14 +680,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."qualifying_interval_millis" AS "interval_millis"
 ,        "race_data"."qualifying_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'QUALIFYING_RESULT';
+WHERE    "race_data"."type" = 'QUALIFYING_RESULT';
 
 CREATE VIEW "sprint_qualifying_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -740,14 +706,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."qualifying_interval_millis" AS "interval_millis"
 ,        "race_data"."qualifying_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'SPRINT_QUALIFYING_RESULT';
+WHERE    "race_data"."type" = 'SPRINT_QUALIFYING_RESULT';
 
 CREATE VIEW "sprint_starting_grid_position" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -761,14 +723,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."starting_grid_position_time" AS "time"
 ,        "race_data"."starting_grid_position_time_millis" AS "time_millis"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'SPRINT_STARTING_GRID_POSITION';
+WHERE    "race_data"."type" = 'SPRINT_STARTING_GRID_POSITION';
 
 CREATE VIEW "sprint_race_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -793,14 +751,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."race_grid_position_text" AS "grid_position_text"
 ,        "race_data"."race_positions_gained" AS "positions_gained"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'SPRINT_RACE_RESULT';
+WHERE    "race_data"."type" = 'SPRINT_RACE_RESULT';
 
 CREATE VIEW "warming_up_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -817,14 +771,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."practice_interval_millis" AS "interval_millis"
 ,        "race_data"."practice_laps" AS "laps"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'WARMING_UP_RESULT';
+WHERE    "race_data"."type" = 'WARMING_UP_RESULT';
 
 CREATE VIEW "starting_grid_position" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -838,14 +788,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."starting_grid_position_time" AS "time"
 ,        "race_data"."starting_grid_position_time_millis" AS "time_millis"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'STARTING_GRID_POSITION';
+WHERE    "race_data"."type" = 'STARTING_GRID_POSITION';
 
 CREATE VIEW "race_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -875,14 +821,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."race_driver_of_the_day" AS "driver_of_the_day"
 ,        "race_data"."race_grand_slam" AS "grand_slam"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'RACE_RESULT';
+WHERE    "race_data"."type" = 'RACE_RESULT';
 
 CREATE VIEW "fastest_lap" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -899,14 +841,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."fastest_lap_interval" AS "interval"
 ,        "race_data"."fastest_lap_interval_millis" AS "interval_millis"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'FASTEST_LAP';
+WHERE    "race_data"."type" = 'FASTEST_LAP';
 
 CREATE VIEW "pit_stop" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -920,14 +858,10 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."pit_stop_time" AS "time"
 ,        "race_data"."pit_stop_time_millis" AS "time_millis"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'PIT_STOP';
+WHERE    "race_data"."type" = 'PIT_STOP';
 
 CREATE VIEW "driver_of_the_day_result" AS
-SELECT   "race"."id" AS "race_id"
-,        "race"."year"
-,        "race"."round"
+SELECT   "race_data"."race_id"
 ,        "race_data"."position_display_order"
 ,        "race_data"."position_number"
 ,        "race_data"."position_text"
@@ -938,6 +872,4 @@ SELECT   "race"."id" AS "race_id"
 ,        "race_data"."tyre_manufacturer_id"
 ,        "race_data"."driver_of_the_day_percentage" AS "percentage"
 FROM     "race_data"
-JOIN     "race"
-ON       "race_data"."race_id" = "race"."id"
-WHERE    "race_data"."type"    = 'DRIVER_OF_THE_DAY_RESULT';
+WHERE    "race_data"."type" = 'DRIVER_OF_THE_DAY_RESULT';
