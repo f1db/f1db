@@ -17,7 +17,7 @@ gradlePlugin {
 
 val jacksonVersion by extra("2.17.2")
 val joyVersion by extra("2.1.0")
-val jooqVersion by extra("3.19.11")
+val jooqVersion by extra("3.19.10") // 3.19.11 fails: https://github.com/jOOQ/jOOQ/issues/17320
 val justifyVersion by extra("3.1.0")
 val mapstructVersion by extra("1.6.0")
 val slf4jVersion by extra("1.7.36")
