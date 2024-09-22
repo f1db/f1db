@@ -5,6 +5,16 @@
   tyreManufacturerId: goodyear
   driverId: philippe-streiff
   rounds: 1-16
+- entrantId: arrows-grand-prix-international
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: megatron
+  tyreManufacturerId: goodyear
+  drivers:
+    - driverId: derek-warwick
+      rounds: 1-16
+    - driverId: eddie-cheever
+      rounds: 1-16
 - entrantId: benetton-formula
   countryId: united-kingdom
   constructorId: benetton
@@ -152,16 +162,6 @@
     - driverId: jonathan-palmer
       rounds: 1-16
     - driverId: julian-bailey
-      rounds: 1-16
-- entrantId: usfg-arrows-megatron
-  countryId: united-kingdom
-  constructorId: arrows
-  engineManufacturerId: megatron
-  tyreManufacturerId: goodyear
-  drivers:
-    - driverId: derek-warwick
-      rounds: 1-16
-    - driverId: eddie-cheever
       rounds: 1-16
 - entrantId: west-zakspeed-racing
   countryId: germany
