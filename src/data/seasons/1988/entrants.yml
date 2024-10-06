@@ -31,6 +31,17 @@
       rounds: 1-16
     - driverId: thierry-boutsen
       rounds: 1-16
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  chassis:
+    - chassisId: dallara-3087
+    - chassisId: dallara-f188
+  engineId: ford-cosworth-dfz-35-v8
+  tyreManufacturerId: goodyear
+  driverId: alex-caffi
+  rounds: 1-16
 - entrantId: camel-team-lotus-honda
   countryId: united-kingdom
   constructorId: lotus
@@ -180,17 +191,6 @@
       rounds: 1-16
     - driverId: michele-alboreto
       rounds: 1-16
-- entrantId: scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  chassis:
-    - chassisId: dallara-3087
-    - chassisId: dallara-f188
-  engineId: ford-cosworth-dfz-35-v8
-  tyreManufacturerId: goodyear
-  driverId: alex-caffi
-  rounds: 1-16
 - entrantId: tyrrell-racing-organisation
   countryId: united-kingdom
   constructorId: tyrrell

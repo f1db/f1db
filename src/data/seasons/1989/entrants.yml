@@ -32,6 +32,18 @@
       rounds: 1-6
     - driverId: emanuele-pirro
       rounds: 7-16
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  chassisId: dallara-f189
+  engineId: ford-cosworth-dfr-35-v8
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alex-caffi
+      rounds: 1-16
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
 - entrantId: camel-team-lotus
   countryId: united-kingdom
   constructorId: lotus
@@ -221,18 +233,6 @@
       rounds: 1-2,4-16
     - driverId: nigel-mansell
       rounds: 1-13,15-16
-- entrantId: scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  chassisId: dallara-f189
-  engineId: ford-cosworth-dfr-35-v8
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: alex-caffi
-      rounds: 1-16
-    - driverId: andrea-de-cesaris
-      rounds: 1-16
 - entrantId: team-larrousse
   countryId: france
   constructorId: lola

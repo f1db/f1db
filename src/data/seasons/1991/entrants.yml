@@ -16,6 +16,18 @@
       rounds: 3-14
     - driverId: olivier-grouillard
       rounds: 14
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: judd
+  chassisId: dallara-f191
+  engineId: judd-gv-35-v10
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: emanuele-pirro
+      rounds: 1-16
+    - driverId: jj-lehto
+      rounds: 1-16
 - entrantId: braun-tyrrell-honda
   countryId: united-kingdom
   constructorId: tyrrell
@@ -225,18 +237,6 @@
       rounds: 1-16
     - driverId: gianni-morbidelli
       rounds: 16
-- entrantId: scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: judd
-  chassisId: dallara-f191
-  engineId: judd-gv-35-v10
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: emanuele-pirro
-      rounds: 1-16
-    - driverId: jj-lehto
-      rounds: 1-16
 - entrantId: team-7up-jordan
   countryId: ireland
   constructorId: jordan

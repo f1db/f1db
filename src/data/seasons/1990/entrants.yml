@@ -28,6 +28,20 @@
       rounds: 1-16
     - driverId: roberto-moreno
       rounds: 15-16
+- entrantId: bms-scuderia-italia
+  countryId: italy
+  constructorId: dallara
+  engineManufacturerId: ford
+  chassisId: dallara-f190
+  engineId: ford-cosworth-dfr-35-v8
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: andrea-de-cesaris
+      rounds: 1-16
+    - driverId: gianni-morbidelli
+      rounds: 1-2
+    - driverId: emanuele-pirro
+      rounds: 3-16
 - entrantId: camel-team-lotus
   countryId: united-kingdom
   constructorId: lotus
@@ -234,20 +248,6 @@
       rounds: 1-16
     - driverId: nigel-mansell
       rounds: 1-16
-- entrantId: scuderia-italia
-  countryId: italy
-  constructorId: dallara
-  engineManufacturerId: ford
-  chassisId: dallara-f190
-  engineId: ford-cosworth-dfr-35-v8
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: andrea-de-cesaris
-      rounds: 1-16
-    - driverId: gianni-morbidelli
-      rounds: 1-2
-    - driverId: emanuele-pirro
-      rounds: 3-16
 - entrantId: subaru-coloni-racing
   countryId: italy
   constructorId: coloni
