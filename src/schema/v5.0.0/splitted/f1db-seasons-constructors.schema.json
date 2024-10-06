@@ -1,0 +1,104 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-seasons-constructors.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Seasons Constructors JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SeasonConstructor"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SeasonConstructor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year of the season."
+        },
+        "constructorId": {
+          "type": "string",
+          "description": "The identifier of the constructor."
+        },
+        "bestStartingGridPosition": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best starting grid position achieved by the constructor during the season."
+        },
+        "bestRaceResult": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best finishing position achieved by the constructor during the season."
+        },
+        "totalRaceEntries": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races entered by the constructor during the season."
+        },
+        "totalRaceStarts": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races started by the constructor during the season."
+        },
+        "totalRaceWins": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races won by the constructor during the season."
+        },
+        "total1And2Finishes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races in which the constructor finished in both 1st and 2nd place during the season."
+        },
+        "totalRaceLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of laps completed by the constructor during the season."
+        },
+        "totalPodiums": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of podium finishes achieved by the constructor during the season."
+        },
+        "totalPodiumRaces": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races in which the constructor finished on the podium during the season."
+        },
+        "totalPoints": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.01,
+          "description": "The total number of points accumulated by the constructor during the season."
+        },
+        "totalPolePositions": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of pole positions achieved by the constructor during the season."
+        },
+        "totalFastestLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of fastest laps set by the constructor during the season."
+        }
+      },
+      "required": [
+        "year",
+        "constructorId",
+        "bestStartingGridPosition",
+        "bestRaceResult",
+        "totalRaceEntries",
+        "totalRaceStarts",
+        "totalRaceWins",
+        "total1And2Finishes",
+        "totalRaceLaps",
+        "totalPodiums",
+        "totalPodiumRaces",
+        "totalPoints",
+        "totalPolePositions",
+        "totalFastestLaps"
+      ]
+    }
+  }
+}

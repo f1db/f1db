@@ -2,6 +2,8 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
+  chassisId: haas-vf-16
+  engineId: ferrari-061-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-gutierrez
@@ -15,6 +17,8 @@
   countryId: united-kingdom
   constructorId: manor
   engineManufacturerId: mercedes
+  chassisId: manor-mrt05
+  engineId: mercedes-pu106c-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pascal-wehrlein
@@ -30,6 +34,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: honda
+  chassisId: mclaren-mp4-31
+  engineId: honda-ra616h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
@@ -42,6 +48,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-f1-w07
+  engineId: mercedes-pu106c-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lewis-hamilton
@@ -52,6 +60,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: tag-heuer
+  chassisId: red-bull-rb12
+  engineId: tag-heuer-f1-2016-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
@@ -64,6 +74,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-rs16
+  engineId: renault-re16-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jolyon-palmer
@@ -80,6 +92,8 @@
   countryId: india
   constructorId: force-india
   engineManufacturerId: mercedes
+  chassisId: force-india-vjm09
+  engineId: mercedes-pu106c-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: nico-hulkenberg
@@ -93,6 +107,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: ferrari
+  chassisId: sauber-c35
+  engineId: ferrari-061-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: felipe-nasr
@@ -103,6 +119,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-sf16-h
+  engineId: ferrari-061-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kimi-raikkonen
@@ -113,6 +131,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: ferrari
+  chassisId: toro-rosso-str11
+  engineId: ferrari-060-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
@@ -125,6 +145,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
+  chassisId: williams-fw38
+  engineId: mercedes-pu106c-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: felipe-massa

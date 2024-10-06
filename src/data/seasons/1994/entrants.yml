@@ -2,6 +2,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: mercedes
+  chassisId: sauber-c13
+  engineId: mercedes-benz-2175b-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: heinz-harald-frentzen
@@ -16,6 +18,8 @@
   countryId: united-kingdom
   constructorId: footwork
   engineManufacturerId: ford
+  chassisId: footwork-fa15
+  engineId: ford-hbe7-8-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: christian-fittipaldi
@@ -26,6 +30,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: renault
+  chassisId: ligier-js39b
+  engineId: renault-rs6-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: eric-bernard
@@ -40,6 +46,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: peugeot
+  chassisId: mclaren-mp4-9
+  engineId: peugeot-a6-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: martin-brundle
@@ -52,6 +60,8 @@
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
+  chassisId: benetton-b194
+  engineId: ford-ec-zetec-r-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jos-verstappen
@@ -66,6 +76,10 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
+  chassis:
+    - chassisId: minardi-m193b
+    - chassisId: minardi-m194
+  engineId: ford-hbc7-8-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: michele-alboreto
@@ -76,6 +90,8 @@
   countryId: united-kingdom
   constructorId: simtek
   engineManufacturerId: ford
+  chassisId: simtek-s941
+  engineId: ford-hbd6-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: david-brabham
@@ -94,6 +110,8 @@
   countryId: united-kingdom
   constructorId: pacific
   engineManufacturerId: ilmor
+  chassisId: pacific-pr01
+  engineId: ilmor-2175a-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: bertrand-gachot
@@ -104,6 +122,10 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: renault
+  chassis:
+    - chassisId: williams-fw16
+    - chassisId: williams-fw16b
+  engineId: renault-rs6-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: ayrton-senna
@@ -118,6 +140,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: hart
+  chassisId: jordan-194
+  engineId: hart-1035-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: eddie-irvine
@@ -132,6 +156,12 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-412t1
+    - chassisId: ferrari-412t1b
+  engines:
+    - engineId: ferrari-041-35-v12
+    - engineId: ferrari-043-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: gerhard-berger
@@ -144,6 +174,12 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: mugen-honda
+  chassis:
+    - chassisId: lotus-107c
+    - chassisId: lotus-109
+  engines:
+    - engineId: mugen-honda-mf-351hc-35-v10
+    - engineId: mugen-honda-mf-351hd-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: johnny-herbert
@@ -162,6 +198,8 @@
   countryId: france
   constructorId: larrousse
   engineManufacturerId: ford
+  chassisId: larrousse-lh94
+  engineId: ford-hbf7-8-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: erik-comas
@@ -180,6 +218,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: yamaha
+  chassisId: tyrrell-022
+  engineId: yamaha-ox10b-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: mark-blundell

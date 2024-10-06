@@ -3,36 +3,17 @@ package com.f1db.plugin.writer.sqlite
 import com.f1db.plugin.extensions.splitted
 import com.f1db.plugin.schema.RaceDataType
 import com.f1db.plugin.schema.single.F1db
-import com.f1db.plugin.writer.sql.Tables.CIRCUIT
-import com.f1db.plugin.writer.sql.Tables.CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.CONSTRUCTOR_PREVIOUS_NEXT_CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.CONTINENT
-import com.f1db.plugin.writer.sql.Tables.COUNTRY
-import com.f1db.plugin.writer.sql.Tables.DRIVER
-import com.f1db.plugin.writer.sql.Tables.DRIVER_FAMILY_RELATIONSHIP
-import com.f1db.plugin.writer.sql.Tables.ENGINE_MANUFACTURER
-import com.f1db.plugin.writer.sql.Tables.ENTRANT
-import com.f1db.plugin.writer.sql.Tables.GRAND_PRIX
-import com.f1db.plugin.writer.sql.Tables.RACE
-import com.f1db.plugin.writer.sql.Tables.RACE_CONSTRUCTOR_STANDING
-import com.f1db.plugin.writer.sql.Tables.RACE_DATA
-import com.f1db.plugin.writer.sql.Tables.RACE_DRIVER_STANDING
-import com.f1db.plugin.writer.sql.Tables.SEASON
-import com.f1db.plugin.writer.sql.Tables.SEASON_CONSTRUCTOR_STANDING
-import com.f1db.plugin.writer.sql.Tables.SEASON_DRIVER_STANDING
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_DRIVER
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_TYRE_MANUFACTURER
-import com.f1db.plugin.writer.sql.Tables.TYRE_MANUFACTURER
+import com.f1db.plugin.writer.sql.Tables.*
+import com.f1db.plugin.writer.sql.mapper.chassisMapper
 import com.f1db.plugin.writer.sql.mapper.circuitMapper
 import com.f1db.plugin.writer.sql.mapper.constructorMapper
-import com.f1db.plugin.writer.sql.mapper.constructorPreviousNextConstructorMapper
+import com.f1db.plugin.writer.sql.mapper.constructorChronologyMapper
 import com.f1db.plugin.writer.sql.mapper.continentMapper
 import com.f1db.plugin.writer.sql.mapper.countryMapper
 import com.f1db.plugin.writer.sql.mapper.driverFamilyRelationshipMapper
 import com.f1db.plugin.writer.sql.mapper.driverMapper
 import com.f1db.plugin.writer.sql.mapper.engineManufacturerMapper
+import com.f1db.plugin.writer.sql.mapper.engineMapper
 import com.f1db.plugin.writer.sql.mapper.entrantMapper
 import com.f1db.plugin.writer.sql.mapper.grandPrixMapper
 import com.f1db.plugin.writer.sql.mapper.raceConstructorStandingMapper
@@ -45,13 +26,19 @@ import com.f1db.plugin.writer.sql.mapper.racePracticeResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceQualifyingResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceRaceResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceStartingGridPositionMapper
+import com.f1db.plugin.writer.sql.mapper.seasonConstructorMapper
 import com.f1db.plugin.writer.sql.mapper.seasonConstructorStandingMapper
+import com.f1db.plugin.writer.sql.mapper.seasonDriverMapper
 import com.f1db.plugin.writer.sql.mapper.seasonDriverStandingMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEngineManufacturerMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEntrantChassisMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantConstructorMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantDriverMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEntrantEngineMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantTyreManufacturerMapper
 import com.f1db.plugin.writer.sql.mapper.seasonMapper
+import com.f1db.plugin.writer.sql.mapper.seasonTyreManufacturerMapper
 import com.f1db.plugin.writer.sql.mapper.tyreManufacturerMapper
 import org.jooq.DSLContext
 import org.jooq.Record
@@ -116,8 +103,10 @@ class SqliteWriter(
             batchInsert(ctx, DRIVER, driverMapper.unmap(db.splitted.drivers))
             batchInsert(ctx, DRIVER_FAMILY_RELATIONSHIP, driverFamilyRelationshipMapper.unmap(db.splitted.driverFamilyRelationships))
             batchInsert(ctx, CONSTRUCTOR, constructorMapper.unmap(db.splitted.constructors))
-            batchInsert(ctx, CONSTRUCTOR_PREVIOUS_NEXT_CONSTRUCTOR, constructorPreviousNextConstructorMapper.unmap(db.splitted.constructorPreviousNextConstructors))
+            batchInsert(ctx, CONSTRUCTOR_CHRONOLOGY, constructorChronologyMapper.unmap(db.splitted.constructorChronology))
+            batchInsert(ctx, CHASSIS, chassisMapper.unmap(db.splitted.chassis))
             batchInsert(ctx, ENGINE_MANUFACTURER, engineManufacturerMapper.unmap(db.splitted.engineManufacturers))
+            batchInsert(ctx, ENGINE, engineMapper.unmap(db.splitted.engines))
             batchInsert(ctx, TYRE_MANUFACTURER, tyreManufacturerMapper.unmap(db.splitted.tyreManufacturers))
             batchInsert(ctx, ENTRANT, entrantMapper.unmap(db.splitted.entrants))
             batchInsert(ctx, CIRCUIT, circuitMapper.unmap(db.splitted.circuits))
@@ -125,8 +114,14 @@ class SqliteWriter(
             batchInsert(ctx, SEASON, seasonMapper.unmap(db.splitted.seasons))
             batchInsert(ctx, SEASON_ENTRANT, seasonEntrantMapper.unmap(db.splitted.seasonEntrants))
             batchInsert(ctx, SEASON_ENTRANT_CONSTRUCTOR, seasonEntrantConstructorMapper.unmap(db.splitted.seasonEntrantConstructors))
+            batchInsert(ctx, SEASON_ENTRANT_CHASSIS, seasonEntrantChassisMapper.unmap(db.splitted.seasonEntrantChassis))
+            batchInsert(ctx, SEASON_ENTRANT_ENGINE, seasonEntrantEngineMapper.unmap(db.splitted.seasonEntrantEngines))
             batchInsert(ctx, SEASON_ENTRANT_TYRE_MANUFACTURER, seasonEntrantTyreManufacturerMapper.unmap(db.splitted.seasonEntrantTyreManufacturers))
             batchInsert(ctx, SEASON_ENTRANT_DRIVER, seasonEntrantDriverMapper.unmap(db.splitted.seasonEntrantDrivers))
+            batchInsert(ctx, SEASON_CONSTRUCTOR, seasonConstructorMapper.unmap(db.splitted.seasonConstructors))
+            batchInsert(ctx, SEASON_ENGINE_MANUFACTURER, seasonEngineManufacturerMapper.unmap(db.splitted.seasonEngineManufacturers))
+            batchInsert(ctx, SEASON_TYRE_MANUFACTURER, seasonTyreManufacturerMapper.unmap(db.splitted.seasonTyreManufacturers))
+            batchInsert(ctx, SEASON_DRIVER, seasonDriverMapper.unmap(db.splitted.seasonDrivers))
             batchInsert(ctx, SEASON_DRIVER_STANDING, seasonDriverStandingMapper.unmap(db.splitted.seasonDriverStandings))
             batchInsert(ctx, SEASON_CONSTRUCTOR_STANDING, seasonConstructorStandingMapper.unmap(db.splitted.seasonConstructorStandings))
             batchInsert(ctx, RACE, raceMapper.unmap(db.splitted.races))

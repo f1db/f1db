@@ -2,6 +2,8 @@
   countryId: switzerland
   constructorId: alfa-romeo
   engineManufacturerId: ferrari
+  chassisId: alfa-romeo-c41
+  engineId: ferrari-065-6-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: antonio-giovinazzi
@@ -18,6 +20,8 @@
   countryId: france
   constructorId: alpine
   engineManufacturerId: renault
+  chassisId: alpine-a521
+  engineId: renault-e-tech-20b-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
@@ -31,6 +35,8 @@
   countryId: united-kingdom
   constructorId: aston-martin
   engineManufacturerId: mercedes
+  chassisId: aston-martin-amr21
+  engineId: mercedes-amg-f1-m12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lance-stroll
@@ -41,6 +47,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mcl35m
+  engineId: mercedes-amg-f1-m12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
@@ -51,6 +59,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-f1-w12
+  engineId: mercedes-amg-f1-m12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lewis-hamilton
@@ -61,6 +71,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: honda
+  chassisId: red-bull-rb16b
+  engineId: honda-ra621h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
@@ -71,6 +83,8 @@
   countryId: italy
   constructorId: alphatauri
   engineManufacturerId: honda
+  chassisId: alphatauri-at02
+  engineId: honda-ra621h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
@@ -81,6 +95,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-sf21
+  engineId: ferrari-065-6-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
@@ -91,6 +107,8 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
+  chassisId: haas-vf-21
+  engineId: ferrari-065-6-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: mick-schumacher
@@ -101,6 +119,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
+  chassisId: williams-fw43b
+  engineId: mercedes-amg-f1-m12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: george-russell

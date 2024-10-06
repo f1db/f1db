@@ -1,0 +1,104 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-seasons-drivers.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Seasons Drivers JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SeasonDriver"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SeasonDriver": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year of the season."
+        },
+        "driverId": {
+          "type": "string",
+          "description": "The identifier of the driver."
+        },
+        "bestStartingGridPosition": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best starting grid position achieved by the driver during the season."
+        },
+        "bestRaceResult": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best finishing position achieved by the driver during the season."
+        },
+        "totalRaceEntries": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races entered by the driver during the season."
+        },
+        "totalRaceStarts": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races started by the driver during the season."
+        },
+        "totalRaceWins": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races won by the driver during the season."
+        },
+        "totalRaceLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of laps completed by the driver during the season."
+        },
+        "totalPodiums": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of podium finishes achieved by the driver during the season."
+        },
+        "totalPoints": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.01,
+          "description": "The total number of points accumulated by the driver during the season."
+        },
+        "totalPolePositions": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of pole positions achieved by the driver during the season."
+        },
+        "totalFastestLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of fastest laps set by the driver during the season."
+        },
+        "totalDriverOfTheDay": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of Driver of the Day awards received by the driver during the season."
+        },
+        "totalGrandSlams": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of Grand Slams achieved by the driver during the season, defined as pole position, fastest lap, and leading every lap of the race."
+        }
+      },
+      "required": [
+        "year",
+        "driverId",
+        "bestStartingGridPosition",
+        "bestRaceResult",
+        "totalRaceEntries",
+        "totalRaceStarts",
+        "totalRaceWins",
+        "totalRaceLaps",
+        "totalPodiums",
+        "totalPoints",
+        "totalPolePositions",
+        "totalFastestLaps",
+        "totalDriverOfTheDay",
+        "totalGrandSlams"
+      ]
+    }
+  }
+}

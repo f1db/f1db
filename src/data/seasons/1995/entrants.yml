@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: footwork
   engineManufacturerId: hart
+  chassisId: footwork-fa16
+  engineId: hart-830-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: gianni-morbidelli
@@ -14,6 +16,8 @@
   countryId: france
   constructorId: larrousse
   engineManufacturerId: ford
+  chassisId: larrousse-lh95
+  engineId: ford-ed-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: christophe-bouchut
@@ -24,6 +28,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: mugen-honda
+  chassisId: ligier-js41
+  engineId: mugen-honda-mf-301-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: aguri-suzuki
@@ -36,6 +42,11 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassis:
+    - chassisId: mclaren-mp4-10
+    - chassisId: mclaren-mp4-10b
+    - chassisId: mclaren-mp4-10c
+  engineId: mercedes-fo-110-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: mark-blundell
@@ -50,6 +61,8 @@
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: renault
+  chassisId: benetton-b195
+  engineId: renault-rs7-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: johnny-herbert
@@ -60,6 +73,8 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
+  chassisId: minardi-m195
+  engineId: ford-edm-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: luca-badoer
@@ -72,6 +87,8 @@
   countryId: united-kingdom
   constructorId: simtek
   engineManufacturerId: ford
+  chassisId: simtek-s951
+  engineId: ford-edb-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: domenico-schiattarella
@@ -82,6 +99,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: yamaha
+  chassisId: tyrrell-023
+  engineId: yamaha-ox10c-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: mika-salo
@@ -94,6 +113,8 @@
   countryId: united-kingdom
   constructorId: pacific
   engineManufacturerId: ford
+  chassisId: pacific-pr02
+  engineId: ford-edc-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: andrea-montermini
@@ -108,6 +129,8 @@
   countryId: italy
   constructorId: forti
   engineManufacturerId: ford
+  chassisId: forti-fg01
+  engineId: ford-edd-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: pedro-diniz
@@ -118,6 +141,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: ford
+  chassisId: sauber-c14
+  engineId: ford-eca-zetec-r-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: heinz-harald-frentzen
@@ -130,6 +155,10 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: renault
+  chassis:
+    - chassisId: williams-fw17
+    - chassisId: williams-fw17b
+  engineId: renault-rs7-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: damon-hill
@@ -140,6 +169,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-412t2
+  engineId: ferrari-044-1-30-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: gerhard-berger
@@ -150,6 +181,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: peugeot
+  chassisId: jordan-195
+  engineId: peugeot-a10-30-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: eddie-irvine

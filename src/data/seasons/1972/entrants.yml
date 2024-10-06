@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts9b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: tim-schenken
@@ -12,6 +14,8 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts9b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: andrea-de-adamich
   rounds: 1-12
@@ -19,6 +23,8 @@
   countryId: united-states-of-america
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts9b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: sam-posey
   rounds: 12
@@ -26,6 +32,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-721g
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: mike-beuttler
   rounds: 3-12
@@ -33,6 +41,8 @@
   countryId: united-kingdom
   constructorId: connew
   engineManufacturerId: ford
+  chassisId: connew-pc1
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: francois-migault
   rounds: 7,9
@@ -40,6 +50,13 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassis:
+    - chassisId: tyrrell-003
+    - chassisId: tyrrell-002
+    - chassisId: tyrrell-004
+    - chassisId: tyrrell-005
+    - chassisId: tyrrell-006
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: francois-cevert
@@ -52,6 +69,10 @@
   countryId: france
   constructorId: matra
   engineManufacturerId: matra
+  chassis:
+    - chassisId: matra-ms120c
+    - chassisId: matra-ms120d
+  engineId: matra-ms72-30-v12
   tyreManufacturerId: goodyear
   driverId: chris-amon
   rounds: 1-12
@@ -59,6 +80,8 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts9b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: tim-schenken
   rounds: 6-9
@@ -66,6 +89,8 @@
   countryId: united-states-of-america
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-711
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: skip-barber
   rounds: 11-12
@@ -73,6 +98,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: ford
+  chassisId: lotus-72d
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: david-walker
@@ -85,6 +112,8 @@
   countryId: south-africa
   constructorId: lotus
   engineManufacturerId: ford
+  chassisId: lotus-72d
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: dave-charlton
   rounds: 2,6-8
@@ -92,6 +121,12 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: brm
+  chassis:
+    - chassisId: brm-p160b
+    - chassisId: brm-p153
+    - chassisId: brm-p180
+    - chassisId: brm-p160c
+  engineId: brm-p142-30-v12
   tyreManufacturerId: firestone
   drivers:
     - driverId: alex-soler-roig
@@ -118,6 +153,8 @@
   countryId: italy
   constructorId: tecno
   engineManufacturerId: tecno
+  chassisId: tecno-pa123-3
+  engineId: tecno-series-p-30-f12
   tyreManufacturerId: firestone
   drivers:
     - driverId: nanni-galli
@@ -128,6 +165,11 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassis:
+    - chassisId: brabham-bt33
+    - chassisId: brabham-bt34
+    - chassisId: brabham-bt37
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: carlos-reutemann
@@ -140,6 +182,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-312b2
+  engineId: ferrari-001-1-30-f12
   tyreManufacturerId: firestone
   drivers:
     - driverId: clay-regazzoni
@@ -156,6 +200,11 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassis:
+    - chassisId: march-721
+    - chassisId: march-721x
+    - chassisId: march-721g
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: niki-lauda
@@ -166,6 +215,8 @@
   countryId: germany
   constructorId: eifelland
   engineManufacturerId: ford
+  chassisId: eifelland-21
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: rolf-stommelen
   rounds: 2-9
@@ -174,11 +225,15 @@
   constructors:
     - constructorId: brabham
       engineManufacturerId: ford
+      chassisId: brabham-bt33
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: firestone
       driverId: william-ferguson
       rounds: 2
     - constructorId: surtees
       engineManufacturerId: ford
+      chassisId: surtees-ts9
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: firestone
       driverId: john-love
       rounds: 2
@@ -186,6 +241,10 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassis:
+    - chassisId: surtees-ts9b
+    - chassisId: surtees-ts14
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: tim-schenken
@@ -197,6 +256,10 @@
   constructors:
     - constructorId: march
       engineManufacturerId: ford
+      chassis:
+        - chassisId: march-711
+        - chassisId: march-721
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: goodyear
       drivers:
         - driverId: carlos-pace
@@ -205,6 +268,8 @@
           rounds: 1-6,8-12
     - constructorId: politoys
       engineManufacturerId: ford
+      chassisId: politoys-fx3
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: goodyear
       driverId: henri-pescarolo
       rounds: 7
@@ -212,6 +277,10 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
+  chassis:
+    - chassisId: mclaren-m19a
+    - chassisId: mclaren-m19c
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: denny-hulme

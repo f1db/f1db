@@ -1,0 +1,41 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-constructors-chronology.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Constructors Chronology JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/ConstructorChronology"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "ConstructorChronology": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parentConstructorId": {
+          "type": "string",
+          "description": "The identifier of the parent constructor."
+        },
+        "constructorId": {
+          "type": "string",
+          "description": "The identifier of the child constructor."
+        },
+        "yearFrom": {
+          "type": "integer",
+          "description": "The year from."
+        },
+        "yearTo": {
+          "type": ["integer", "null"],
+          "description": "The year to, or null if it is still active."
+        }
+      },
+      "required": [
+        "parentConstructorId",
+        "constructorId",
+        "yearFrom",
+        "yearTo"
+      ]
+    }
+  }
+}

@@ -2,6 +2,8 @@
   countryId: belgium
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18-21
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: andre-pilette
   rounds: 7
@@ -9,6 +11,8 @@
   countryId: italy
   constructorId: ats
   engineManufacturerId: ats
+  chassisId: ats-100
+  engineId: ats-100-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: giancarlo-baghetti
@@ -19,6 +23,8 @@
   countryId: france
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-24
+  engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   driverId: bernard-collomb
   rounds: 1,6
@@ -27,6 +33,10 @@
   constructors:
     - constructorId: brabham
       engineManufacturerId: climax
+      chassis:
+        - chassisId: brabham-bt7
+        - chassisId: brabham-bt3
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: dan-gurney
@@ -35,6 +45,8 @@
           rounds: 2-10
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-25
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       driverId: jack-brabham
       rounds: 1
@@ -43,6 +55,8 @@
   constructors:
     - constructorId: lotus
       engineManufacturerId: brm
+      chassisId: lotus-24
+      engineId: brm-p56-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: innes-ireland
@@ -51,6 +65,8 @@
           rounds: 1-9
     - constructorId: brp
       engineManufacturerId: brm
+      chassisId: brp-mk-1
+      engineId: brm-p56-15-v8
       tyreManufacturerId: dunlop
       driverId: innes-ireland
       rounds: 2-5,7
@@ -58,6 +74,8 @@
   countryId: canada
   constructorId: stebro
   engineManufacturerId: ford
+  chassisId: stebro-mk-iv
+  engineId: ford-109e-15-l4
   tyreManufacturerId: dunlop
   driverId: peter-broeker
   rounds: 8
@@ -65,6 +83,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t66
+  engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: bruce-mclaren
@@ -75,6 +95,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassisId: brabham-bt6
+  engineId: ford-109e-15-l4
   tyreManufacturerId: dunlop
   driverId: david-prophet
   rounds: 10
@@ -82,6 +104,8 @@
   countryId: united-kingdom
   constructorId: lola
   engineManufacturerId: climax
+  chassisId: lola-mk-4
+  engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   driverId: bob-anderson
   rounds: 5,7
@@ -89,6 +113,8 @@
   countryId: switzerland
   constructorId: lotus
   engineManufacturerId: brm
+  chassisId: lotus-24
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   driverId: phil-hill
   rounds: 4
@@ -96,6 +122,8 @@
   countryId: netherlands
   constructorId: porsche
   engineManufacturerId: porsche
+  chassisId: porsche-718
+  engineId: porsche-547-3-15-f4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: carel-godin-de-beaufort
@@ -106,6 +134,8 @@
   countryId: united-states-of-america
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t51
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: frank-dochnal
   rounds: 9
@@ -113,6 +143,8 @@
   countryId: united-kingdom
   constructorId: gilby
   engineManufacturerId: brm
+  chassisId: gilby-62
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   driverId: ian-raby
   rounds: 5-7
@@ -120,6 +152,8 @@
   countryId: zimbabwe
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t55
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: john-love
   rounds: 10
@@ -127,6 +161,8 @@
   countryId: germany
   constructorId: lotus
   engineManufacturerId: borgward
+  chassisId: lotus-18
+  engineId: borgward-1500-rs-15-l4
   tyreManufacturerId: dunlop
   driverId: kurt-kuhnke
   rounds: 6
@@ -134,6 +170,8 @@
   countryId: south-africa
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-21
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: ernie-pieterse
   rounds: 10
@@ -142,11 +180,15 @@
   constructors:
     - constructorId: alfa-special
       engineManufacturerId: alfa-romeo
+      chassisId: alfa-special-special
+      engineId: alfa-romeo-giulietta-15-l4
       tyreManufacturerId: dunlop
       driverId: peter-de-klerk
       rounds: 10
     - constructorId: lds
       engineManufacturerId: alfa-romeo
+      chassisId: lds-mk-1
+      engineId: alfa-romeo-giulietta-15-l4
       tyreManufacturerId: dunlop
       driverId: doug-serrurier
       rounds: 10
@@ -154,6 +196,10 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: brm
+  chassis:
+    - chassisId: brm-p57
+    - chassisId: brm-p61
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: graham-hill
@@ -165,6 +211,8 @@
   constructors:
     - constructorId: lola
       engineManufacturerId: climax
+      chassisId: lola-mk-4a
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: chris-amon
@@ -179,6 +227,8 @@
           rounds: 8-9
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-24
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: maurice-trintignant
@@ -187,6 +237,8 @@
           rounds: 5
     - constructorId: lotus
       engineManufacturerId: brm
+      chassisId: lotus-24
+      engineId: brm-p56-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: masten-gregory
@@ -201,6 +253,10 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassis:
+    - chassisId: cooper-t60
+    - chassisId: cooper-t66
+  engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   driverId: jo-bonnier
   rounds: 1-10
@@ -208,6 +264,8 @@
   countryId: zimbabwe
   constructorId: lds
   engineManufacturerId: alfa-romeo
+  chassisId: lds-mk-1
+  engineId: alfa-romeo-giulietta-15-l4
   tyreManufacturerId: dunlop
   driverId: sam-tingle
   rounds: 10
@@ -215,6 +273,8 @@
   countryId: united-kingdom
   constructorId: scirocco
   engineManufacturerId: brm
+  chassisId: scirocco-sp
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: tony-settember
@@ -226,6 +286,8 @@
   constructors:
     - constructorId: brm
       engineManufacturerId: brm
+      chassisId: brm-p57
+      engineId: brm-p56-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: lorenzo-bandini
@@ -236,11 +298,15 @@
           rounds: 9
     - constructorId: cooper
       engineManufacturerId: climax
+      chassisId: cooper-t60
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       driverId: mario-de-araujo-cabral
       rounds: 6-7
     - constructorId: cooper
       engineManufacturerId: maserati
+      chassisId: cooper-t53
+      engineId: maserati-6-1500-15-l4
       tyreManufacturerId: dunlop
       driverId: ernesto-brambilla
       rounds: 7
@@ -248,6 +314,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-156
+  engineId: ferrari-178-15-v6
   tyreManufacturerId: dunlop
   drivers:
     - driverId: john-surtees
@@ -262,6 +330,8 @@
   countryId: south-africa
   constructorId: cooper
   engineManufacturerId: maserati
+  chassisId: cooper-t51
+  engineId: maserati-6-1500-15-l4
   tyreManufacturerId: dunlop
   driverId: trevor-blokdyk
   rounds: 10
@@ -269,6 +339,8 @@
   countryId: italy
   constructorId: de-tomaso
   engineManufacturerId: ferrari
+  chassisId: de-tomaso-f1-002
+  engineId: ferrari-178-15-v6
   tyreManufacturerId: dunlop
   driverId: roberto-lippi
   rounds: 7
@@ -276,6 +348,8 @@
   countryId: south-africa
   constructorId: lotus
   engineManufacturerId: brm
+  chassisId: lotus-24
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   driverId: paddy-driver
   rounds: 10
@@ -283,6 +357,8 @@
   countryId: switzerland
   constructorId: lotus
   engineManufacturerId: brm
+  chassisId: lotus-24
+  engineId: brm-p56-15-v8
   tyreManufacturerId: dunlop
   driverId: jo-siffert
   rounds: 1-9
@@ -290,6 +366,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-25
+  engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: jim-clark
@@ -306,6 +384,8 @@
   countryId: south-africa
   constructorId: lotus
   engineManufacturerId: ford
+  chassisId: lotus-22
+  engineId: ford-109e-15-l4
   tyreManufacturerId: dunlop
   driverId: brausch-niemann
   rounds: 10
@@ -314,16 +394,22 @@
   constructors:
     - constructorId: lotus
       engineManufacturerId: brm
+      chassisId: lotus-24
+      engineId: brm-p56-15-v8
       tyreManufacturerId: dunlop
       driverId: masten-gregory
       rounds: 4,7
     - constructorId: lola
       engineManufacturerId: climax
+      chassisId: lola-mk-4
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       driverId: john-campbell-jones
       rounds: 5
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-18-21
+      engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       drivers:
         - driverId: andre-pilette

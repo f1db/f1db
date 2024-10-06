@@ -2,6 +2,8 @@
   countryId: south-africa
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassisId: tyrrell-004
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: eddie-keizan
   rounds: 3
@@ -9,6 +11,8 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts14a
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: carlos-pace
@@ -19,6 +23,10 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassis:
+    - chassisId: brabham-bt37
+    - chassisId: brabham-bt42
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: andrea-de-adamich
@@ -31,6 +39,8 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassisId: surtees-ts9b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: andrea-de-adamich
   rounds: 3
@@ -38,6 +48,10 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassis:
+    - chassisId: march-721g
+    - chassisId: march-731
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: mike-beuttler
   rounds: 1-7,9-15
@@ -45,6 +59,10 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassis:
+    - chassisId: tyrrell-005
+    - chassisId: tyrrell-006
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: francois-cevert
@@ -57,6 +75,8 @@
   countryId: united-kingdom
   constructorId: shadow
   engineManufacturerId: ford
+  chassisId: shadow-dn1
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: graham-hill
   rounds: 4-15
@@ -64,6 +84,10 @@
   countryId: united-kingdom
   constructorId: iso-marlboro
   engineManufacturerId: ford
+  chassis:
+    - chassisId: iso-marlboro-fx3b
+    - chassisId: iso-marlboro-ir
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: howden-ganley
@@ -88,6 +112,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-731
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: james-hunt
   rounds: 6,8-10,12-15
@@ -95,6 +121,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassisId: brabham-bt37
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: john-watson
   rounds: 9
@@ -102,6 +130,10 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: ford
+  chassis:
+    - chassisId: lotus-72d
+    - chassisId: lotus-72e
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: emerson-fittipaldi
@@ -112,6 +144,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-731
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: david-purley
   rounds: 6,9-11,13
@@ -119,6 +153,10 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassis:
+    - chassisId: march-721g
+    - chassisId: march-731
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jean-pierre-jarier
@@ -131,6 +169,10 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: brm
+  chassis:
+    - chassisId: brm-p160c
+    - chassisId: brm-p160d
+  engineId: brm-p142-30-v12
   tyreManufacturerId: firestone
   drivers:
     - driverId: clay-regazzoni
@@ -145,6 +187,8 @@
   countryId: italy
   constructorId: tecno
   engineManufacturerId: tecno
+  chassisId: tecno-pa123-6
+  engineId: tecno-series-p-30-f12
   tyreManufacturerId: firestone
   driverId: chris-amon
   rounds: 5-6,9-10,12
@@ -152,6 +196,10 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassis:
+    - chassisId: brabham-bt37
+    - chassisId: brabham-bt42
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: carlos-reutemann
@@ -162,6 +210,8 @@
   countryId: south-africa
   constructorId: lotus
   engineManufacturerId: ford
+  chassisId: lotus-72d
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: dave-charlton
   rounds: 3
@@ -169,6 +219,12 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-312b2
+    - chassisId: ferrari-312b3
+  engines:
+    - engineId: ferrari-001-1-30-f12
+    - engineId: ferrari-001-11-30-f12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: arturo-merzario
@@ -179,6 +235,8 @@
   countryId: united-kingdom
   constructorId: ensign
   engineManufacturerId: ford
+  chassisId: ensign-n173
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   driverId: rikky-von-opel
   rounds: 8-10,12-15
@@ -186,6 +244,8 @@
   countryId: sweden
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-731
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   driverId: reine-wisell
   rounds: 7-8
@@ -193,6 +253,10 @@
   countryId: united-kingdom
   constructorId: surtees
   engineManufacturerId: ford
+  chassis:
+    - chassisId: surtees-ts9b
+    - chassisId: surtees-ts14a
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: firestone
   drivers:
     - driverId: luiz-bueno
@@ -203,6 +267,8 @@
   countryId: united-states-of-america
   constructorId: shadow
   engineManufacturerId: ford
+  chassisId: shadow-dn1
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: george-follmer
@@ -215,6 +281,11 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
+  chassis:
+    - chassisId: mclaren-m19a
+    - chassisId: mclaren-m19c
+    - chassisId: mclaren-m23
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: denny-hulme

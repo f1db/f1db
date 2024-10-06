@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: toyota
+  chassisId: williams-fw31
+  engineId: toyota-rvx-09-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: kazuki-nakajima
@@ -12,6 +14,8 @@
   countryId: germany
   constructorId: bmw-sauber
   engineManufacturerId: bmw
+  chassisId: bmw-sauber-f1-09
+  engineId: bmw-p86-9-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: nick-heidfeld
@@ -22,6 +26,8 @@
   countryId: united-kingdom
   constructorId: brawn
   engineManufacturerId: mercedes
+  chassisId: brawn-bgp-001
+  engineId: mercedes-fo-108w-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jenson-button
@@ -32,6 +38,8 @@
   countryId: india
   constructorId: force-india
   engineManufacturerId: mercedes
+  chassisId: force-india-vjm02
+  engineId: mercedes-fo-108w-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: adrian-sutil
@@ -44,6 +52,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r29
+  engineId: renault-rs27-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: fernando-alonso
@@ -56,6 +66,8 @@
   countryId: japan
   constructorId: toyota
   engineManufacturerId: toyota
+  chassisId: toyota-tf109
+  engineId: toyota-rvx-09-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jarno-trulli
@@ -69,6 +81,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: renault
+  chassisId: red-bull-rb5
+  engineId: renault-rs27-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: mark-webber
@@ -79,6 +93,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-f60
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: felipe-massa
@@ -93,6 +109,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: ferrari
+  chassisId: toro-rosso-str4
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: sebastien-bourdais
@@ -105,6 +123,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-24
+  engineId: mercedes-fo-108w-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: heikki-kovalainen

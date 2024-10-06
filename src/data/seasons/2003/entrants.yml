@@ -2,6 +2,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: ford
+  chassisId: jordan-ej13
+  engineId: ford-rs1-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: giancarlo-fisichella
@@ -21,6 +23,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: bmw
+  chassisId: williams-fw25
+  engineId: bmw-p83-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: juan-pablo-montoya
@@ -33,6 +37,8 @@
   countryId: united-kingdom
   constructorId: jaguar
   engineManufacturerId: cosworth
+  chassisId: jaguar-r4
+  engineId: cosworth-cr-5-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: antonio-pizzonia
@@ -45,6 +51,8 @@
   countryId: united-kingdom
   constructorId: bar
   engineManufacturerId: honda
+  chassisId: bar-005
+  engineId: honda-ra003e-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jacques-villeneuve
@@ -57,6 +65,10 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassis:
+    - chassisId: renault-r23
+    - chassisId: renault-r23b
+  engineId: renault-rs23-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: fernando-alonso
@@ -73,6 +85,8 @@
   countryId: japan
   constructorId: toyota
   engineManufacturerId: toyota
+  chassisId: toyota-tf103
+  engineId: toyota-rvx-03-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: cristiano-da-matta
@@ -83,6 +97,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: petronas
+  chassisId: sauber-c22
+  engineId: petronas-03a-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: heinz-harald-frentzen
@@ -93,6 +109,12 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-f2002b
+    - chassisId: ferrari-f2003-ga
+  engines:
+    - engineId: ferrari-051b-30-v10
+    - engineId: ferrari-052-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: michael-schumacher
@@ -103,6 +125,8 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: cosworth
+  chassisId: minardi-ps03
+  engineId: cosworth-cr-3-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jos-verstappen
@@ -121,6 +145,10 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-17d
+  engines:
+    - engineId: mercedes-fo-110m-30-v10
+    - engineId: mercedes-fo-110p-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: david-coulthard

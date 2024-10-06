@@ -1,19 +1,12 @@
-- entrantId: arrows-racing-team
-  countryId: united-kingdom
-  constructorId: arrows
-  engineManufacturerId: ford
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: brian-henton
-      rounds: 1-3
-    - driverId: mauro-baldi
-      rounds: 1-3,5-16
-    - driverId: marc-surer
-      rounds: 5-16
 - entrantId: candy-toleman-motorsport
   countryId: united-kingdom
   constructorId: toleman
   engineManufacturerId: hart
+  chassis:
+    - chassisId: toleman-tg181b
+    - chassisId: toleman-tg181c
+    - chassisId: toleman-tg183
+  engineId: hart-415t-15-l4-t
   tyreManufacturerId: pirelli
   drivers:
     - driverId: derek-warwick
@@ -24,6 +17,10 @@
   countryId: united-kingdom
   constructorId: ensign
   engineManufacturerId: ford
+  chassis:
+    - chassisId: ensign-n180b
+    - chassisId: ensign-n181
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: avon
     - tyreManufacturerId: pirelli
@@ -33,6 +30,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-re30b
+  engineId: renault-gordini-ef1-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: alain-prost
@@ -43,6 +42,10 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: matra
+  chassis:
+    - chassisId: ligier-js17b
+    - chassisId: ligier-js19
+  engineId: matra-ms81-30-v12
   tyreManufacturerId: michelin
   drivers:
     - driverId: eddie-cheever
@@ -53,6 +56,10 @@
   countryId: brazil
   constructorId: fittipaldi
   engineManufacturerId: ford
+  chassis:
+    - chassisId: fittipaldi-f8d
+    - chassisId: fittipaldi-f9
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: pirelli
   driverId: chico-serra
   rounds: 1-3,5-16
@@ -60,6 +67,10 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: ford
+  chassis:
+    - chassisId: lotus-87b
+    - chassisId: lotus-91
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: elio-de-angelis
@@ -74,6 +85,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-821
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: pirelli
     - tyreManufacturerId: avon
@@ -83,6 +96,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
+  chassisId: mclaren-mp4-1b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: michelin
   drivers:
     - driverId: john-watson
@@ -93,6 +108,11 @@
   countryId: italy
   constructorId: alfa-romeo
   engineManufacturerId: alfa-romeo
+  chassis:
+    - chassisId: alfa-romeo-179d
+    - chassisId: alfa-romeo-182
+    - chassisId: alfa-romeo-182b
+  engineId: alfa-romeo-1260-30-v12
   tyreManufacturerId: michelin
   drivers:
     - driverId: andrea-de-cesaris
@@ -103,6 +123,10 @@
   countryId: italy
   constructorId: osella
   engineManufacturerId: ford
+  chassis:
+    - chassisId: osella-fa1c
+    - chassisId: osella-fa1d
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jean-pierre-jarier
@@ -114,6 +138,8 @@
   constructors:
     - constructorId: brabham
       engineManufacturerId: bmw
+      chassisId: brabham-bt50
+      engineId: bmw-m12-13-15-l4-t
       tyreManufacturerId: goodyear
       drivers:
         - driverId: nelson-piquet
@@ -122,16 +148,38 @@
           rounds: 1,5,9-16
     - constructorId: brabham
       engineManufacturerId: ford
+      chassis:
+        - chassisId: brabham-bt49c
+        - chassisId: brabham-bt49d
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: goodyear
       drivers:
         - driverId: nelson-piquet
           rounds: 2-3
         - driverId: riccardo-patrese
           rounds: 2-3,6-8
+- entrantId: ragno-arrows
+  countryId: united-kingdom
+  constructorId: arrows
+  engineManufacturerId: ford
+  chassis:
+    - chassisId: arrows-a4
+    - chassisId: arrows-a5
+  engineId: ford-cosworth-dfv-30-v8
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: brian-henton
+      rounds: 1-3
+    - driverId: mauro-baldi
+      rounds: 1-3,5-16
+    - driverId: marc-surer
+      rounds: 5-16
 - entrantId: rothmans-march-grand-prix-team
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-821
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: pirelli
     - tyreManufacturerId: avon
@@ -146,6 +194,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-126c2
+  engineId: ferrari-021-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: didier-pironi
@@ -160,6 +210,11 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: ford
+  chassis:
+    - chassisId: williams-fw07c
+    - chassisId: williams-fw07d
+    - chassisId: williams-fw08
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: carlos-reutemann
@@ -174,6 +229,8 @@
   countryId: germany
   constructorId: ats-wheels
   engineManufacturerId: ford
+  chassisId: ats-wheels-d5
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: avon
     - tyreManufacturerId: goodyear
@@ -186,6 +243,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassisId: tyrrell-011
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: michele-alboreto
@@ -198,6 +257,10 @@
   countryId: hong-kong
   constructorId: theodore
   engineManufacturerId: ford
+  chassis:
+    - chassisId: theodore-ty01
+    - chassisId: theodore-ty02
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: avon
     - tyreManufacturerId: goodyear

@@ -2,6 +2,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: mugen-honda
+  chassisId: jordan-199
+  engineId: mugen-honda-mf-301hd-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: damon-hill
@@ -12,6 +14,8 @@
   countryId: united-kingdom
   constructorId: bar
   engineManufacturerId: supertec
+  chassisId: bar-01
+  engineId: supertec-fb01-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jacques-villeneuve
@@ -24,6 +28,10 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
+  chassisId: minardi-m01
+  engines:
+    - engineId: ford-vjm1-zetec-r-30-v10
+    - engineId: ford-vjm2-zetec-r-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: luca-badoer
@@ -36,6 +44,8 @@
   countryId: france
   constructorId: prost
   engineManufacturerId: peugeot
+  chassisId: prost-ap02
+  engineId: peugeot-a18-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jarno-trulli
@@ -46,6 +56,8 @@
   countryId: united-kingdom
   constructorId: stewart
   engineManufacturerId: ford
+  chassisId: stewart-sf3
+  engineId: ford-cr-1-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: johnny-herbert
@@ -56,6 +68,8 @@
   countryId: italy
   constructorId: benetton
   engineManufacturerId: playlife
+  chassisId: benetton-b199
+  engineId: playlife-fb01-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: alexander-wurz
@@ -66,6 +80,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: petronas
+  chassisId: sauber-c18
+  engineId: petronas-spe-03a-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jean-alesi
@@ -76,6 +92,8 @@
   countryId: united-kingdom
   constructorId: arrows
   engineManufacturerId: arrows
+  chassisId: arrows-a20
+  engineId: arrows-a20e-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: pedro-de-la-rosa
@@ -86,6 +104,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-f399
+  engineId: ferrari-048-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: eddie-irvine
@@ -98,6 +118,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-14
+  engineId: mercedes-fo-110h-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: david-coulthard
@@ -108,6 +130,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: supertec
+  chassisId: williams-fw21
+  engineId: supertec-fb01-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: alex-zanardi

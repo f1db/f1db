@@ -2,6 +2,10 @@
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
+  chassis:
+    - chassisId: ags-jh23b
+    - chassisId: ags-jh24
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: joachim-winkelhock
@@ -14,6 +18,12 @@
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
+  chassis:
+    - chassisId: benetton-b188
+    - chassisId: benetton-b189
+  engines:
+    - engineId: ford-cosworth-dfr-35-v8
+    - engineId: ford-hba1-4-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: alessandro-nannini
@@ -26,6 +36,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: judd
+  chassisId: lotus-101
+  engineId: judd-cv-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: nelson-piquet
@@ -36,6 +48,10 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: renault
+  chassis:
+    - chassisId: williams-fw12c
+    - chassisId: williams-fw13
+  engineId: renault-rs1-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: riccardo-patrese
@@ -46,6 +62,10 @@
   countryId: italy
   constructorId: coloni
   engineManufacturerId: ford
+  chassis:
+    - chassisId: coloni-fc188b
+    - chassisId: coloni-c3
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-henri-raphanel
@@ -58,6 +78,10 @@
   countryId: italy
   constructorId: eurobrun
   engineManufacturerId: judd
+  chassis:
+    - chassisId: eurobrun-er188b
+    - chassisId: eurobrun-er189
+  engineId: judd-cv-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: gregor-foitek
@@ -68,6 +92,8 @@
   countryId: italy
   constructorId: first
   engineManufacturerId: judd
+  chassisId: first-f189
+  engineId: judd-cv-35-v8
   tyreManufacturerId: pirelli
   driverId: gabriele-tarquini
   rounds:
@@ -75,6 +101,8 @@
   countryId: italy
   constructorId: osella
   engineManufacturerId: ford
+  chassisId: osella-fa1m
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: nicola-larini
@@ -85,6 +113,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: honda
+  chassisId: mclaren-mp4-5
+  engineId: honda-ra109e-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: alain-prost
@@ -95,6 +125,12 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: judd
+  chassis:
+    - chassisId: march-881
+    - chassisId: march-cg891
+  engines:
+    - engineId: judd-cv-35-v8
+    - engineId: judd-ev-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: ivan-capelli
@@ -105,6 +141,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: ford
+  chassisId: ligier-js33
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: olivier-grouillard
@@ -115,6 +153,10 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
+  chassis:
+    - chassisId: minardi-m188b
+    - chassisId: minardi-m189
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: luis-perez-sala
@@ -127,6 +169,8 @@
   countryId: united-kingdom
   constructorId: onyx
   engineManufacturerId: ford
+  chassisId: onyx-ore-1
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: bertrand-gachot
@@ -139,6 +183,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: judd
+  chassisId: brabham-bt58
+  engineId: judd-ev-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: martin-brundle
@@ -149,6 +195,8 @@
   countryId: germany
   constructorId: rial
   engineManufacturerId: ford
+  chassisId: rial-arc2
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: christian-danner
@@ -165,6 +213,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-640
+  engineId: ferrari-035-5-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: gerhard-berger
@@ -175,6 +225,8 @@
   countryId: italy
   constructorId: dallara
   engineManufacturerId: ford
+  chassisId: dallara-f189
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alex-caffi
@@ -185,6 +237,10 @@
   countryId: france
   constructorId: lola
   engineManufacturerId: lamborghini
+  chassis:
+    - chassisId: lola-lc88b
+    - chassisId: lola-lc89
+  engineId: lamborghini-3512-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: philippe-alliot
@@ -199,6 +255,10 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassis:
+    - chassisId: tyrrell-017b
+    - chassisId: tyrrell-018
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jonathan-palmer
@@ -213,6 +273,8 @@
   countryId: united-kingdom
   constructorId: arrows
   engineManufacturerId: ford
+  chassisId: arrows-a11
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: derek-warwick
@@ -225,6 +287,8 @@
   countryId: germany
   constructorId: zakspeed
   engineManufacturerId: yamaha
+  chassisId: zakspeed-891
+  engineId: yamaha-ox88-35-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: aguri-suzuki

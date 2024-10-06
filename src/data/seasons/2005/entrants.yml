@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: bmw
+  chassisId: williams-fw27
+  engineId: bmw-p84-5-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: mark-webber
@@ -14,6 +16,10 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: toyota
+  chassis:
+    - chassisId: jordan-ej15
+    - chassisId: jordan-ej15b
+  engineId: toyota-rvx-05-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: narain-karthikeyan
@@ -36,6 +42,8 @@
   countryId: united-kingdom
   constructorId: bar
   engineManufacturerId: honda
+  chassisId: bar-007
+  engineId: honda-ra005e-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: jenson-button
@@ -48,6 +56,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r25
+  engineId: renault-rs25-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: fernando-alonso
@@ -58,6 +68,12 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: cosworth
+  chassis:
+    - chassisId: minardi-ps04b
+    - chassisId: minardi-ps05
+  engines:
+    - engineId: cosworth-ck2004-30-v10
+    - engineId: cosworth-tj2005-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: christijan-albers
@@ -76,6 +92,10 @@
   countryId: japan
   constructorId: toyota
   engineManufacturerId: toyota
+  chassis:
+    - chassisId: toyota-tf105
+    - chassisId: toyota-tf105b
+  engineId: toyota-rvx-05-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: jarno-trulli
@@ -92,6 +112,8 @@
   countryId: united-kingdom
   constructorId: red-bull
   engineManufacturerId: cosworth
+  chassisId: red-bull-rb1
+  engineId: cosworth-tj2005-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: christian-klien
@@ -109,6 +131,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: petronas
+  chassisId: sauber-c24
+  engineId: petronas-05a-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: felipe-massa
@@ -119,6 +143,12 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-f2004m
+    - chassisId: ferrari-f2005
+  engines:
+    - engineId: ferrari-053-30-v10
+    - engineId: ferrari-055-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: michael-schumacher
@@ -129,6 +159,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-20
+  engineId: mercedes-fo-110r-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: juan-pablo-montoya

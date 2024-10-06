@@ -3,6 +3,8 @@
   constructors:
     - constructorId: arrows
       engineManufacturerId: ford
+      chassisId: arrows-a6
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: goodyear
       drivers:
         - driverId: marc-surer
@@ -11,6 +13,8 @@
           rounds: 1-2,4
     - constructorId: arrows
       engineManufacturerId: bmw
+      chassisId: arrows-a7
+      engineId: bmw-m12-13-15-l4-t
       tyreManufacturerId: goodyear
       drivers:
         - driverId: thierry-boutsen
@@ -21,6 +25,8 @@
   countryId: italy
   constructorId: alfa-romeo
   engineManufacturerId: alfa-romeo
+  chassisId: alfa-romeo-184t
+  engineId: alfa-romeo-890t-15-v8-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: eddie-cheever
@@ -31,6 +37,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-re50
+  engineId: renault-ef4-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: derek-warwick
@@ -43,6 +51,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: renault
+  chassisId: lotus-95t
+  engineId: renault-ef4b-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: elio-de-angelis
@@ -53,6 +63,10 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: renault
+  chassis:
+    - chassisId: ligier-js23
+    - chassisId: ligier-js23b
+  engineId: renault-ef4-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: andrea-de-cesaris
@@ -63,6 +77,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: tag
+  chassisId: mclaren-mp4-2
+  engineId: tag-tte-po1-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: alain-prost
@@ -73,6 +89,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: bmw
+  chassisId: brabham-bt53
+  engineId: bmw-m12-13-15-l4-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: nelson-piquet
@@ -87,6 +105,12 @@
   countryId: italy
   constructorId: osella
   engineManufacturerId: alfa-romeo
+  chassis:
+    - chassisId: osella-fa1f
+    - chassisId: osella-fa1e
+  engines:
+    - engineId: alfa-romeo-890t-15-v8-t
+    - engineId: alfa-romeo-1260-30-v12
   tyreManufacturerId: pirelli
   drivers:
     - driverId: piercarlo-ghinzani
@@ -97,6 +121,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-126c4
+  engineId: ferrari-031-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: michele-alboreto
@@ -107,6 +133,10 @@
   countryId: united-kingdom
   constructorId: ram
   engineManufacturerId: hart
+  chassis:
+    - chassisId: ram-01
+    - chassisId: ram-02
+  engineId: hart-415t-15-l4-t
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jonathan-palmer
@@ -120,6 +150,8 @@
   constructors:
     - constructorId: spirit
       engineManufacturerId: hart
+      chassisId: spirit-101
+      engineId: hart-415t-15-l4-t
       tyreManufacturerId: pirelli
       drivers:
         - driverId: mauro-baldi
@@ -128,6 +160,8 @@
           rounds: 7,9-14
     - constructorId: spirit
       engineManufacturerId: ford
+      chassisId: spirit-101c
+      engineId: ford-cosworth-dfv-30-v8
       tyreManufacturerId: pirelli
       driverId: huub-rothengatter
       rounds: 8
@@ -135,6 +169,8 @@
   countryId: germany
   constructorId: ats-wheels
   engineManufacturerId: bmw
+  chassisId: ats-wheels-d7
+  engineId: bmw-m12-13-15-l4-t
   tyreManufacturerId: pirelli
   drivers:
     - driverId: manfred-winkelhock
@@ -145,6 +181,10 @@
   countryId: united-kingdom
   constructorId: toleman
   engineManufacturerId: hart
+  chassis:
+    - chassisId: toleman-tg183b
+    - chassisId: toleman-tg184
+  engineId: hart-415t-15-l4-t
   tyreManufacturers:
     - tyreManufacturerId: pirelli
     - tyreManufacturerId: michelin
@@ -161,6 +201,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassisId: tyrrell-012
+  engineId: ford-cosworth-dfy-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: martin-brundle
@@ -175,6 +217,12 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: honda
+  chassis:
+    - chassisId: williams-fw09
+    - chassisId: williams-fw09b
+  engines:
+    - engineId: honda-ra163e-15-v6-t
+    - engineId: honda-ra164e-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jacques-laffite

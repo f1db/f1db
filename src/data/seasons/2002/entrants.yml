@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: bmw
+  chassisId: williams-fw24
+  engineId: bmw-p82-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: juan-pablo-montoya
@@ -12,6 +14,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: honda
+  chassisId: jordan-ej12
+  engineId: honda-ra002e-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: giancarlo-fisichella
@@ -22,6 +26,12 @@
   countryId: united-kingdom
   constructorId: jaguar
   engineManufacturerId: cosworth
+  chassis:
+    - chassisId: jaguar-r3
+    - chassisId: jaguar-r3b
+  engines:
+    - engineId: cosworth-cr-3-30-v10
+    - engineId: cosworth-cr-4-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: eddie-irvine
@@ -32,6 +42,8 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: asiatech
+  chassisId: minardi-ps02
+  engineId: asiatech-at02-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: alex-yoong
@@ -44,6 +56,8 @@
   countryId: united-kingdom
   constructorId: bar
   engineManufacturerId: honda
+  chassisId: bar-004
+  engineId: honda-ra002e-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jacques-villeneuve
@@ -54,6 +68,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r202
+  engineId: renault-rs22-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: jarno-trulli
@@ -64,6 +80,8 @@
   countryId: united-kingdom
   constructorId: arrows
   engineManufacturerId: cosworth
+  chassisId: arrows-a23
+  engineId: cosworth-cr-3-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: enrique-bernoldi
@@ -74,6 +92,8 @@
   countryId: japan
   constructorId: toyota
   engineManufacturerId: toyota
+  chassisId: toyota-tf102
+  engineId: toyota-rvx-02-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: allan-mcnish
@@ -84,6 +104,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: petronas
+  chassisId: sauber-c21
+  engineId: petronas-02a-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: felipe-massa
@@ -96,6 +118,12 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-f2001b
+    - chassisId: ferrari-f2002
+  engines:
+    - engineId: ferrari-050-30-v10
+    - engineId: ferrari-051-30-v10
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: michael-schumacher
@@ -106,6 +134,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-17
+  engineId: mercedes-fo-110m-30-v10
   tyreManufacturerId: michelin
   drivers:
     - driverId: david-coulthard

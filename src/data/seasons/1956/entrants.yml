@@ -2,6 +2,8 @@
   countryId: uruguay
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-a6gcm
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alberto-uria
@@ -12,13 +14,17 @@
   countryId: france
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   driverId: andre-simon
   rounds: 5
 - entrantId: ansted-rotary-corp
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500d
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: pat-oconnor
   rounds: 3
@@ -26,6 +32,8 @@
   countryId: france
   constructorId: bugatti
   engineManufacturerId: bugatti
+  chassisId: bugatti-t251
+  engineId: bugatti-25-l8
   tyreManufacturerId: englebert
   driverId: maurice-trintignant
   rounds: 5
@@ -33,6 +41,8 @@
   countryId: united-states-of-america
   constructorId: phillips
   engineManufacturerId: offenhauser
+  chassisId: phillips
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: don-freeland
   rounds: 3
@@ -40,6 +50,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: bristol
+  chassisId: cooper-t23
+  engineId: bristol-bs1-20-l6
   tyreManufacturerId: dunlop
   driverId: bob-gerard
   rounds: 6
@@ -47,27 +59,35 @@
   countryId: united-kingdom
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: dunlop
   driverId: bruce-halford
   rounds: 6-8
 - entrantId: carl-l-anderson
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: johnnie-tolan
   rounds: 3
 - entrantId: cars-inc
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: sam-hanks
   rounds: 3
 - entrantId: chapman-s-root
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500d
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: jimmy-daywalt
   rounds: 3
@@ -75,6 +95,8 @@
   countryId: united-kingdom
   constructorId: connaught
   engineManufacturerId: alta
+  chassisId: connaught-b
+  engineId: alta-gp-25-l4
   tyreManufacturerId: pirelli
   drivers:
     - driverId: desmond-titterington
@@ -91,13 +113,17 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: jimmy-bryan
   rounds: 3
 - entrantId: dunn-engineering
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500b
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: keith-andrews
   rounds: 3
@@ -105,13 +131,17 @@
   countryId: france
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   driverId: louis-rosier
   rounds: 2,4-7
 - entrantId: ed-walsh
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: rodger-ward
   rounds: 3
@@ -119,6 +149,8 @@
   countryId: united-kingdom
   constructorId: emeryson
   engineManufacturerId: alta
+  chassisId: emeryson-56
+  engineId: alta-gp-25-l4
   tyreManufacturerId: dunlop
   driverId: paul-emery
   rounds: 6
@@ -126,6 +158,12 @@
   countryId: france
   constructorId: gordini
   engineManufacturerId: gordini
+  chassis:
+    - chassisId: gordini-t16
+    - chassisId: gordini-t32
+  engines:
+    - engineId: gordini-23-25-l6
+    - engineId: gordini-25-25-l8
   tyreManufacturerId: englebert
   drivers:
     - driverId: andre-pilette
@@ -144,20 +182,26 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: billy-garrett
   rounds: 3
 - entrantId: ernest-l-ruiz
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500b
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: jack-turner
   rounds: 3
 - entrantId: federal-auto-associates
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   drivers:
     - driverId: bob-veith
@@ -166,8 +210,10 @@
       rounds: 3
 - entrantId: fred-somers
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   drivers:
     - driverId: ed-elisian
@@ -176,8 +222,10 @@
       rounds: 3
 - entrantId: george-bignotti
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500e
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: johnny-boyd
   rounds: 3
@@ -185,6 +233,8 @@
   countryId: united-kingdom
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: dunlop
   driverId: roy-salvadori
   rounds: 6-8
@@ -192,6 +242,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-500
+  engineId: ferrari-500-20-l4
   tyreManufacturerId: pirelli
   driverId: giorgio-scarlatti
   rounds: 2
@@ -199,27 +251,35 @@
   countryId: united-kingdom
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: dunlop
   driverId: horace-gould
   rounds: 2,4,6-7
 - entrantId: ha-chapman
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: andy-linden
   rounds: 3
 - entrantId: harry-dunn
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500b
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: al-keller
   rounds: 3
 - entrantId: hh-johnson
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500d
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: bob-christie
   rounds: 3
@@ -227,6 +287,8 @@
   countryId: australia
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: dunlop
   driverId: jack-brabham
   rounds: 6
@@ -234,6 +296,8 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: johnnie-parsons
   rounds: 3
@@ -241,19 +305,25 @@
   countryId: united-states-of-america
   constructorId: stevens
   engineManufacturerId: offenhauser
+  chassisId: stevens
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: cliff-griffith
   rounds: 3
 - entrantId: john-zink
   countryId: united-states-of-america
   constructors:
-    - constructorId: kurtis
+    - constructorId: kurtis-kraft
       engineManufacturerId: offenhauser
+      chassisId: kurtis-kraft-kk500c
+      engineId: offenhauser-45-l4
       tyreManufacturerId: firestone
       driverId: troy-ruttman
       rounds: 3
     - constructorId: watson
       engineManufacturerId: offenhauser
+      chassisId: watson-indy-roadster
+      engineId: offenhauser-45-l4
       tyreManufacturerId: firestone
       driverId: pat-flaherty
       rounds: 3
@@ -261,20 +331,26 @@
   countryId: united-states-of-america
   constructorId: lesovsky
   engineManufacturerId: offenhauser
+  chassisId: lesovsky
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: jimmy-reece
   rounds: 3
 - entrantId: kalamazoo-sports-inc
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: dick-rathmann
   rounds: 3
 - entrantId: lindsey-hopkins
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: jim-rathmann
   rounds: 3
@@ -282,6 +358,8 @@
   countryId: italy
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   drivers:
     - driverId: luigi-villoresi
@@ -290,15 +368,19 @@
       rounds: 7-8
 - entrantId: murrell-belanger
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500c
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: tony-bettenhausen
   rounds: 3
 - entrantId: novi-racing-corp
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: novi
+  chassisId: kurtis-kraft-kk500f
+  engineId: novi-30-l8-s
   tyreManufacturerId: firestone
   driverId: paul-russo
   rounds: 3
@@ -306,6 +388,8 @@
   countryId: italy
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-menditeguy
@@ -340,6 +424,8 @@
   countryId: switzerland
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-a6gcm
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   driverId: ottorino-volonterio
   rounds: 7
@@ -348,11 +434,15 @@
   constructors:
     - constructorId: maserati
       engineManufacturerId: maserati
+      chassisId: maserati-250f
+      engineId: maserati-250f1-25-l6
       tyreManufacturerId: dunlop
       driverId: mike-hawthorn
       rounds: 1
     - constructorId: brm
       engineManufacturerId: brm
+      chassisId: brm-p25
+      engineId: brm-p25-25-l4
       tyreManufacturerId: dunlop
       drivers:
         - driverId: mike-hawthorn
@@ -363,8 +453,10 @@
           rounds: 6
 - entrantId: pat-clancy
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500b
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: al-herman
   rounds: 3
@@ -372,6 +464,8 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   drivers:
     - driverId: eddie-johnson
@@ -382,6 +476,8 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: johnny-thomson
   rounds: 3
@@ -389,6 +485,8 @@
   countryId: italy
   constructorId: connaught
   engineManufacturerId: alta
+  chassisId: connaught-b
+  engineId: alta-gp-25-l4
   tyreManufacturerId: pirelli
   driverId: piero-scotti
   rounds: 4
@@ -396,20 +494,26 @@
   countryId: united-states-of-america
   constructorId: kuzma
   engineManufacturerId: offenhauser
+  chassisId: kuzma-indy-roadster
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: bob-sweikert
   rounds: 3
 - entrantId: ray-crawford
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500b
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: ray-crawford
   rounds: 3
 - entrantId: samuel-w-traylor-iii
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk4000
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: al-keller
   rounds: 3
@@ -418,6 +522,8 @@
   constructors:
     - constructorId: maserati
       engineManufacturerId: maserati
+      chassisId: maserati-250f
+      engineId: maserati-250f1-25-l6
       tyreManufacturerId: pirelli
       drivers:
         - driverId: louis-chiron
@@ -430,6 +536,8 @@
           rounds: 8
     - constructorId: ferrari
       engineManufacturerId: ferrari
+      chassisId: ferrari-500
+      engineId: ferrari-500-20-l4
       tyreManufacturerId: pirelli
       driverId: giorgio-scarlatti
       rounds: 7
@@ -437,6 +545,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-555
+  engineId: ferrari-555-25-l4
   tyreManufacturers:
     - tyreManufacturerId: englebert
     - tyreManufacturerId: pirelli
@@ -463,6 +573,8 @@
   countryId: italy
   constructorId: maserati
   engineManufacturerId: maserati
+  chassisId: maserati-250f
+  engineId: maserati-250f1-25-l6
   tyreManufacturerId: pirelli
   drivers:
     - driverId: umberto-maglioli
@@ -471,8 +583,10 @@
       rounds: 8
 - entrantId: shannon-bros
   countryId: united-states-of-america
-  constructorId: kurtis
+  constructorId: kurtis-kraft
   engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500a
+  engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
   driverId: duke-dinsmore
   rounds: 3
@@ -480,6 +594,8 @@
   countryId: united-kingdom
   constructorId: vanwall
   engineManufacturerId: vanwall
+  chassisId: vanwall-vw-2
+  engineId: vanwall-254-25-l4
   tyreManufacturerId: pirelli
   drivers:
     - driverId: harry-schell

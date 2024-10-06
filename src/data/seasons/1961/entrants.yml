@@ -2,6 +2,8 @@
   countryId: france
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: bernard-collomb
   rounds: 4,6
@@ -10,6 +12,8 @@
   constructors:
     - constructorId: cooper
       engineManufacturerId: climax
+      chassisId: cooper-t53
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       drivers:
         - driverId: masten-gregory
@@ -18,6 +22,8 @@
           rounds: 6
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-18
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       driverId: ian-burgess
       rounds: 2-5
@@ -25,6 +31,12 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassis:
+    - chassisId: cooper-t55
+    - chassisId: cooper-t58
+  engines:
+    - engineId: climax-fpf-15-l4
+    - engineId: climax-fwmv-15-v8
   tyreManufacturerId: dunlop
   drivers:
     - driverId: bruce-mclaren
@@ -35,6 +47,8 @@
   countryId: netherlands
   constructorId: porsche
   engineManufacturerId: porsche
+  chassisId: porsche-718
+  engineId: porsche-547-3-15-f4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: carel-godin-de-beaufort
@@ -46,6 +60,8 @@
   constructors:
     - constructorId: emeryson
       engineManufacturerId: maserati
+      chassisId: emeryson-61
+      engineId: maserati-tipo-6-15-l4
       tyreManufacturerId: dunlop
       drivers:
         - driverId: lucien-bianchi
@@ -54,6 +70,8 @@
           rounds: 1
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-18
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       drivers:
         - driverId: lucien-bianchi
@@ -62,6 +80,8 @@
           rounds: 3
     - constructorId: emeryson
       engineManufacturerId: climax
+      chassisId: emeryson-61
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       driverId: andre-pilette
       rounds: 7
@@ -69,6 +89,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-156
+  engineId: ferrari-178-15-v6
   tyreManufacturerId: dunlop
   driverId: giancarlo-baghetti
   rounds: 4
@@ -76,6 +98,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t45
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: hap-sharp
@@ -86,6 +110,8 @@
   countryId: italy
   constructorId: lotus
   engineManufacturerId: maserati
+  chassisId: lotus-18
+  engineId: maserati-tipo-6-15-l4
   tyreManufacturerId: dunlop
   driverId: gaetano-starrabba
   rounds: 7
@@ -93,6 +119,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: gerry-ashmore
   rounds: 5-7
@@ -100,6 +128,8 @@
   countryId: united-kingdom
   constructorId: gilby
   engineManufacturerId: climax
+  chassisId: gilby-61
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: keith-greene
   rounds: 5
@@ -107,6 +137,8 @@
   countryId: united-states-of-america
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: hap-sharp
   rounds: 8
@@ -114,6 +146,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: jackie-lewis
   rounds: 3-7
@@ -121,6 +155,8 @@
   countryId: italy
   constructorId: de-tomaso
   engineManufacturerId: alfa-romeo
+  chassisId: de-tomaso-f1-004
+  engineId: alfa-romeo-giulietta-15-l4
   tyreManufacturerId: dunlop
   driverId: roberto-bussinello
   rounds: 7
@@ -128,6 +164,8 @@
   countryId: united-states-of-america
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: lloyd-ruby
   rounds: 8
@@ -135,6 +173,8 @@
   countryId: canada
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18-21
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: peter-ryan
   rounds: 8
@@ -142,6 +182,8 @@
   countryId: united-kingdom
   constructorId: jbw
   engineManufacturerId: climax
+  chassisId: jbw-59
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: brian-naylor
   rounds: 7
@@ -149,6 +191,8 @@
   countryId: united-states-of-america
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: jim-hall
   rounds: 8
@@ -156,6 +200,8 @@
   countryId: united-states-of-america
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: roger-penske
   rounds: 8
@@ -163,6 +209,8 @@
   countryId: united-states-of-america
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: tony-maggs
   rounds: 5-6
@@ -170,6 +218,8 @@
   countryId: united-states-of-america
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: walt-hansgen
   rounds: 8
@@ -177,6 +227,8 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: climax
+  chassisId: brm-p48-57
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: graham-hill
@@ -187,6 +239,8 @@
   countryId: italy
   constructorId: cooper
   engineManufacturerId: maserati
+  chassisId: cooper-t45
+  engineId: maserati-tipo-6-15-l4
   tyreManufacturerId: dunlop
   driverId: renato-pirocchi
   rounds: 7
@@ -194,6 +248,10 @@
   countryId: germany
   constructorId: porsche
   engineManufacturerId: porsche
+  chassis:
+    - chassisId: porsche-787
+    - chassisId: porsche-718
+  engineId: porsche-547-3-15-f4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: dan-gurney
@@ -207,11 +265,18 @@
   constructors:
     - constructorId: lotus
       engineManufacturerId: climax
+      chassis:
+        - chassisId: lotus-18
+        - chassisId: lotus-18-21
+        - chassisId: lotus-21
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       driverId: stirling-moss
       rounds: 1-8
     - constructorId: ferguson
       engineManufacturerId: climax
+      chassisId: ferguson-p99
+      engineId: climax-fpf-15-l4
       tyreManufacturerId: dunlop
       drivers:
         - driverId: jack-fairman
@@ -222,6 +287,10 @@
   countryId: italy
   constructorId: cooper
   engineManufacturerId: maserati
+  chassis:
+    - chassisId: cooper-t53
+    - chassisId: cooper-t51
+  engineId: maserati-tipo-6-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: lorenzo-bandini
@@ -232,6 +301,8 @@
   countryId: germany
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: michael-may
@@ -242,6 +313,10 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-156
+  engines:
+    - engineId: ferrari-178-15-v6
+    - engineId: ferrari-188-15-v6
   tyreManufacturerId: dunlop
   drivers:
     - driverId: phil-hill
@@ -260,6 +335,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-156
+  engineId: ferrari-178-15-v6
   tyreManufacturerId: dunlop
   driverId: giancarlo-baghetti
   rounds: 5,7
@@ -268,16 +345,22 @@
   constructors:
     - constructorId: cooper
       engineManufacturerId: maserati
+      chassisId: cooper-t51
+      engineId: maserati-tipo-6-15-l4
       tyreManufacturerId: dunlop
       driverId: maurice-trintignant
       rounds: 1,3-4,6-7
     - constructorId: de-tomaso
       engineManufacturerId: osca
+      chassisId: de-tomaso-f1-001
+      engineId: osca-372-15-l4
       tyreManufacturerId: dunlop
       driverId: giorgio-scarlatti
       rounds: 4
     - constructorId: de-tomaso
       engineManufacturerId: alfa-romeo
+      chassisId: de-tomaso-f1-003
+      engineId: alfa-romeo-giulietta-15-l4
       tyreManufacturerId: dunlop
       driverId: nino-vaccarella
       rounds: 7
@@ -285,6 +368,8 @@
   countryId: italy
   constructorId: de-tomaso
   engineManufacturerId: osca
+  chassisId: de-tomaso-f1-002
+  engineId: osca-372-15-l4
   tyreManufacturerId: dunlop
   driverId: roberto-lippi
   rounds: 7
@@ -292,6 +377,11 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassis:
+    - chassisId: lotus-21
+    - chassisId: lotus-18
+    - chassisId: lotus-18-21
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: innes-ireland
@@ -306,6 +396,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: tim-parnell
   rounds: 5,7
@@ -313,6 +405,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassisId: lotus-18
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   driverId: tony-marsh
   rounds: 3,5-6
@@ -320,6 +414,10 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: climax
+  chassis:
+    - chassisId: lotus-18
+    - chassisId: lotus-18-21
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: cliff-allison
@@ -338,6 +436,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t53
+  engineId: climax-fpf-15-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: john-surtees

@@ -1,9 +1,9 @@
 plugins {
     `java-gradle-plugin`
-    id("org.jetbrains.kotlin.jvm") version "1.9.25"
-    id("org.jetbrains.kotlin.kapt") version "1.9.25"
-    id("org.jooq.jooq-codegen-gradle") version "3.19.11"
-    id("org.jsonschema2pojo") version "1.2.1"
+    id("org.jetbrains.kotlin.jvm") version "2.0.20"
+    id("org.jetbrains.kotlin.kapt") version "2.0.20"
+    id("org.jooq.jooq-codegen-gradle") version "3.19.13"
+    id("org.jsonschema2pojo") version "1.2.2"
 }
 
 gradlePlugin {
@@ -15,13 +15,25 @@ gradlePlugin {
     }
 }
 
-val jacksonVersion by extra("2.17.2")
+val jacksonVersion by extra("2.18.0")
 val joyVersion by extra("2.1.0")
-val jooqVersion by extra("3.19.10") // 3.19.11 fails: https://github.com/jOOQ/jOOQ/issues/17320
+val jooqVersion by extra("3.19.13")
 val justifyVersion by extra("3.1.0")
-val mapstructVersion by extra("1.6.0")
-val slf4jVersion by extra("1.7.36")
-val sqliteJdbcVersion by extra("3.46.1.0")
+val mapstructVersion by extra("1.6.2")
+val slf4jVersion by extra("2.0.16")
+val sqliteJdbcVersion by extra("3.46.1.3")
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.addAll("-Xjvm-default=all")
+    }
+}
 
 repositories {
     mavenCentral()
@@ -83,7 +95,7 @@ jsonSchema2Pojo {
     targetDirectory = file("build/generated-sources/jsonschema2pojo")
     removeOldOutput = true
     targetPackage = "com.f1db.plugin.schema"
-    targetVersion = "17"
+    targetVersion = "21"
     dateTimeType = "java.time.OffsetDateTime"
     dateType = "java.time.LocalDate"
     timeType = "java.time.OffsetTime"
@@ -97,10 +109,6 @@ jsonSchema2Pojo {
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "17"
-        freeCompilerArgs = listOf("-Xjvm-default=all")
-    }
     dependsOn(tasks.named("generateJsonSchema2Pojo"))
     dependsOn(tasks.named("jooqCodegen"))
 }

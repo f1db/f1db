@@ -1,13 +1,15 @@
 package com.f1db.plugin.schema
 
+import com.f1db.plugin.schema.mapper.chassisMapper
 import com.f1db.plugin.schema.mapper.circuitMapper
 import com.f1db.plugin.schema.mapper.constructorMapper
-import com.f1db.plugin.schema.mapper.constructorPreviousNextConstructorMapper
+import com.f1db.plugin.schema.mapper.constructorChronologyMapper
 import com.f1db.plugin.schema.mapper.continentMapper
 import com.f1db.plugin.schema.mapper.countryMapper
 import com.f1db.plugin.schema.mapper.driverFamilyRelationshipMapper
 import com.f1db.plugin.schema.mapper.driverMapper
 import com.f1db.plugin.schema.mapper.engineManufacturerMapper
+import com.f1db.plugin.schema.mapper.engineMapper
 import com.f1db.plugin.schema.mapper.entrantMapper
 import com.f1db.plugin.schema.mapper.grandPrixMapper
 import com.f1db.plugin.schema.mapper.raceConstructorStandingMapper
@@ -20,23 +22,31 @@ import com.f1db.plugin.schema.mapper.racePracticeResultMapper
 import com.f1db.plugin.schema.mapper.raceQualifyingResultMapper
 import com.f1db.plugin.schema.mapper.raceRaceResultMapper
 import com.f1db.plugin.schema.mapper.raceStartingGridPositionMapper
+import com.f1db.plugin.schema.mapper.seasonConstructorMapper
 import com.f1db.plugin.schema.mapper.seasonConstructorStandingMapper
+import com.f1db.plugin.schema.mapper.seasonDriverMapper
 import com.f1db.plugin.schema.mapper.seasonDriverStandingMapper
+import com.f1db.plugin.schema.mapper.seasonEngineManufacturerMapper
+import com.f1db.plugin.schema.mapper.seasonEntrantChassisMapper
 import com.f1db.plugin.schema.mapper.seasonEntrantConstructorMapper
 import com.f1db.plugin.schema.mapper.seasonEntrantDriverMapper
+import com.f1db.plugin.schema.mapper.seasonEntrantEngineMapper
 import com.f1db.plugin.schema.mapper.seasonEntrantMapper
 import com.f1db.plugin.schema.mapper.seasonEntrantTyreManufacturerMapper
 import com.f1db.plugin.schema.mapper.seasonMapper
+import com.f1db.plugin.schema.mapper.seasonTyreManufacturerMapper
 import com.f1db.plugin.schema.mapper.tyreManufacturerMapper
 import com.f1db.plugin.schema.single.F1db
+import com.f1db.plugin.schema.splitted.Chassis
 import com.f1db.plugin.schema.splitted.Circuit
 import com.f1db.plugin.schema.splitted.Constructor
-import com.f1db.plugin.schema.splitted.ConstructorPreviousNextConstructor
+import com.f1db.plugin.schema.splitted.ConstructorChronology
 import com.f1db.plugin.schema.splitted.Continent
 import com.f1db.plugin.schema.splitted.Country
 import com.f1db.plugin.schema.splitted.Driver
 import com.f1db.plugin.schema.splitted.DriverFamilyRelationship
 import com.f1db.plugin.schema.splitted.DriverOfTheDayResult
+import com.f1db.plugin.schema.splitted.Engine
 import com.f1db.plugin.schema.splitted.EngineManufacturer
 import com.f1db.plugin.schema.splitted.Entrant
 import com.f1db.plugin.schema.splitted.FastestLap
@@ -49,12 +59,18 @@ import com.f1db.plugin.schema.splitted.RaceConstructorStanding
 import com.f1db.plugin.schema.splitted.RaceDriverStanding
 import com.f1db.plugin.schema.splitted.RaceResult
 import com.f1db.plugin.schema.splitted.Season
+import com.f1db.plugin.schema.splitted.SeasonConstructor
 import com.f1db.plugin.schema.splitted.SeasonConstructorStanding
+import com.f1db.plugin.schema.splitted.SeasonDriver
 import com.f1db.plugin.schema.splitted.SeasonDriverStanding
+import com.f1db.plugin.schema.splitted.SeasonEngineManufacturer
 import com.f1db.plugin.schema.splitted.SeasonEntrant
+import com.f1db.plugin.schema.splitted.SeasonEntrantChassis
 import com.f1db.plugin.schema.splitted.SeasonEntrantConstructor
 import com.f1db.plugin.schema.splitted.SeasonEntrantDriver
+import com.f1db.plugin.schema.splitted.SeasonEntrantEngine
 import com.f1db.plugin.schema.splitted.SeasonEntrantTyreManufacturer
+import com.f1db.plugin.schema.splitted.SeasonTyreManufacturer
 import com.f1db.plugin.schema.splitted.StartingGridPosition
 import com.f1db.plugin.schema.splitted.TyreManufacturer
 
@@ -76,18 +92,24 @@ class F1DbSplitted(private val db: F1db) {
     val constructors: List<Constructor>
         get() = constructorMapper.toSplittedConstructors(db.constructors)
 
-    val constructorPreviousNextConstructors: List<ConstructorPreviousNextConstructor>
+    val constructorChronology: List<ConstructorChronology>
         get() = db.constructors
-            .filter { it.previousNextConstructors != null }
+            .filter { it.chronology != null }
             .flatMap { constructor ->
-                constructorPreviousNextConstructorMapper.toSplittedPreviousNextConstructors(
-                    constructor.previousNextConstructors,
+                constructorChronologyMapper.toSplittedConstructorChronology(
+                    constructor.chronology,
                     constructor
                 )
             }
 
+    val chassis: List<Chassis>
+        get() = chassisMapper.toSplittedChassis(db.chassis)
+
     val engineManufacturers: List<EngineManufacturer>
         get() = engineManufacturerMapper.toSplittedEngineManufacturers(db.engineManufacturers)
+
+    val engines: List<Engine>
+        get() = engineMapper.toSplittedEngines(db.engines)
 
     val tyreManufacturers: List<TyreManufacturer>
         get() = tyreManufacturerMapper.toSplittedTyreManufacturers(db.tyreManufacturers)
@@ -120,6 +142,42 @@ class F1DbSplitted(private val db: F1db) {
                 season.entrants.flatMap { seasonEntrant ->
                     seasonEntrant.constructors.map { seasonEntrantConstructor ->
                         seasonEntrantConstructorMapper.toSplittedSeasonEntrantConstructor(seasonEntrantConstructor, season, seasonEntrant)
+                    }
+                }
+            }
+
+    val seasonEntrantChassis: List<SeasonEntrantChassis>
+        get() = db.seasons
+            .filter { it.entrants != null }
+            .flatMap { season ->
+                season.entrants.flatMap { seasonEntrant ->
+                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                        seasonEntrantConstructor.chassis.map { seasonEntrantChassis ->
+                            seasonEntrantChassisMapper.toSplittedSeasonEntrantChassis(
+                                seasonEntrantChassis,
+                                season,
+                                seasonEntrant,
+                                seasonEntrantConstructor
+                            )
+                        }
+                    }
+                }
+            }
+
+    val seasonEntrantEngines: List<SeasonEntrantEngine>
+        get() = db.seasons
+            .filter { it.entrants != null }
+            .flatMap { season ->
+                season.entrants.flatMap { seasonEntrant ->
+                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                        seasonEntrantConstructor.engines.map { seasonEntrantEngine ->
+                            seasonEntrantEngineMapper.toSplittedSeasonEntrantEngine(
+                                seasonEntrantEngine,
+                                season,
+                                seasonEntrant,
+                                seasonEntrantConstructor
+                            )
+                        }
                     }
                 }
             }
@@ -159,6 +217,42 @@ class F1DbSplitted(private val db: F1db) {
                     }
                 }
             }
+
+    val seasonConstructors: List<SeasonConstructor>
+        get() = db.seasons
+                .filter { it.constructors != null }
+                .flatMap { season ->
+                    season.constructors.map { seasonConstructor ->
+                        seasonConstructorMapper.toSplittedSeasonConstructor(seasonConstructor, season)
+                    }
+                }
+
+    val seasonEngineManufacturers: List<SeasonEngineManufacturer>
+        get() = db.seasons
+                .filter { it.engineManufacturers != null }
+                .flatMap { season ->
+                    season.engineManufacturers.map { seasonEngineManufacturer ->
+                        seasonEngineManufacturerMapper.toSplittedSeasonEngineManufacturer(seasonEngineManufacturer, season)
+                    }
+                }
+
+    val seasonTyreManufacturers: List<SeasonTyreManufacturer>
+        get() = db.seasons
+                .filter { it.tyreManufacturers != null }
+                .flatMap { season ->
+                    season.tyreManufacturers.map { seasonTyreManufacturer ->
+                        seasonTyreManufacturerMapper.toSplittedSeasonTyreManufacturer(seasonTyreManufacturer, season)
+                    }
+                }
+
+    val seasonDrivers: List<SeasonDriver>
+        get() = db.seasons
+                .filter { it.drivers != null }
+                .flatMap { season ->
+                    season.drivers.map { seasonDriver ->
+                        seasonDriverMapper.toSplittedSeasonDriver(seasonDriver, season)
+                    }
+                }
 
     val seasonDriverStandings: List<SeasonDriverStanding>
         get() = db.seasons

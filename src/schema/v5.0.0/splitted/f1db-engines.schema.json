@@ -1,0 +1,90 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-engines.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Engines JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Engine"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique identifier of the engine."
+        },
+        "engineManufacturerId": {
+          "type": "string",
+          "description": "The identifier of the engine manufacturer associated with the engine."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the engine."
+        },
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the engine."
+        },
+        "capacity": {
+          "type": ["number", "null"],
+          "minimum": 0.0,
+          "multipleOf": 0.1,
+          "description": "The capacity of the engine, measured in liters."
+        },
+        "configuration": {
+          "$ref": "#/definitions/EngineConfiguration",
+          "description": "The configuration of the engine, such as V6, V8, etc."
+        },
+        "aspiration": {
+          "$ref": "#/definitions/EngineAspiration",
+          "description": "The aspiration of the engine, such as naturally aspirated or turbocharged."
+        }
+      },
+      "required": [
+        "id",
+        "engineManufacturerId",
+        "name",
+        "fullName",
+        "capacity",
+        "configuration",
+        "aspiration"
+      ]
+    },
+    "EngineConfiguration": {
+      "type": ["string", "null"],
+      "enum": [
+        "F4",
+        "F8",
+        "F12",
+        "H16",
+        "L4",
+        "L6",
+        "L8",
+        "V2",
+        "V6",
+        "V8",
+        "V10",
+        "V12",
+        "V16",
+        "W12",
+        null
+      ],
+      "description": "The engine aspiration."
+    },
+    "EngineAspiration": {
+      "type": ["string", "null"],
+      "enum": [
+        "NATURALLY_ASPIRATED",
+        "SUPERCHARGED",
+        "TURBOCHARGED",
+        "TURBOCHARGED_HYBRID",
+        null
+      ],
+      "description": "The engine aspiration."
+    }
+  }
+}

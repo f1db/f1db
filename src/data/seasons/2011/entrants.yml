@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: cosworth
+  chassisId: williams-fw33
+  engineId: cosworth-ca2011k-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pastor-maldonado
@@ -12,6 +14,8 @@
   countryId: india
   constructorId: force-india
   engineManufacturerId: mercedes
+  chassisId: force-india-vjm04
+  engineId: mercedes-fo-108y-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: adrian-sutil
@@ -25,6 +29,8 @@
   countryId: spain
   constructorId: hrt
   engineManufacturerId: cosworth
+  chassisId: hrt-f111
+  engineId: cosworth-ca2011-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: narain-karthikeyan
@@ -41,6 +47,8 @@
   countryId: united-kingdom
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r31
+  engineId: renault-rs27-2011-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: nick-heidfeld
@@ -57,6 +65,8 @@
   countryId: russia
   constructorId: virgin
   engineManufacturerId: cosworth
+  chassisId: virgin-mvr-02
+  engineId: cosworth-ca2011-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jerome-dambrosio
@@ -70,6 +80,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-mgp-w02
+  engineId: mercedes-fo-108y-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: michael-schumacher
@@ -80,6 +92,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: renault
+  chassisId: red-bull-rb7
+  engineId: renault-rs27-2011-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: mark-webber
@@ -90,6 +104,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: ferrari
+  chassisId: sauber-c30
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kamui-kobayashi
@@ -102,6 +118,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-150-italia
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: felipe-massa
@@ -112,6 +130,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: ferrari
+  chassisId: toro-rosso-str6
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jaime-alguersuari
@@ -128,6 +148,8 @@
   countryId: malaysia
   constructorId: lotus-racing
   engineManufacturerId: renault
+  chassisId: lotus-racing-t128
+  engineId: renault-rs27-2011-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: heikki-kovalainen
@@ -147,6 +169,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-26
+  engineId: mercedes-fo-108y-24-v8
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jenson-button

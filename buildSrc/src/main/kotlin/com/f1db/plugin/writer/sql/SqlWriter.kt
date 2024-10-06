@@ -3,53 +3,17 @@ package com.f1db.plugin.writer.sql
 import com.f1db.plugin.extensions.splitted
 import com.f1db.plugin.schema.RaceDataType
 import com.f1db.plugin.schema.single.F1db
-import com.f1db.plugin.writer.sql.Tables.CIRCUIT
-import com.f1db.plugin.writer.sql.Tables.CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.CONSTRUCTOR_PREVIOUS_NEXT_CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.CONTINENT
-import com.f1db.plugin.writer.sql.Tables.COUNTRY
-import com.f1db.plugin.writer.sql.Tables.DRIVER
-import com.f1db.plugin.writer.sql.Tables.DRIVER_FAMILY_RELATIONSHIP
-import com.f1db.plugin.writer.sql.Tables.DRIVER_OF_THE_DAY_RESULT
-import com.f1db.plugin.writer.sql.Tables.ENGINE_MANUFACTURER
-import com.f1db.plugin.writer.sql.Tables.ENTRANT
-import com.f1db.plugin.writer.sql.Tables.FASTEST_LAP
-import com.f1db.plugin.writer.sql.Tables.FREE_PRACTICE_1_RESULT
-import com.f1db.plugin.writer.sql.Tables.FREE_PRACTICE_2_RESULT
-import com.f1db.plugin.writer.sql.Tables.FREE_PRACTICE_3_RESULT
-import com.f1db.plugin.writer.sql.Tables.FREE_PRACTICE_4_RESULT
-import com.f1db.plugin.writer.sql.Tables.GRAND_PRIX
-import com.f1db.plugin.writer.sql.Tables.PIT_STOP
-import com.f1db.plugin.writer.sql.Tables.PRE_QUALIFYING_RESULT
-import com.f1db.plugin.writer.sql.Tables.QUALIFYING_1_RESULT
-import com.f1db.plugin.writer.sql.Tables.QUALIFYING_2_RESULT
-import com.f1db.plugin.writer.sql.Tables.QUALIFYING_RESULT
-import com.f1db.plugin.writer.sql.Tables.RACE
-import com.f1db.plugin.writer.sql.Tables.RACE_CONSTRUCTOR_STANDING
-import com.f1db.plugin.writer.sql.Tables.RACE_DATA
-import com.f1db.plugin.writer.sql.Tables.RACE_DRIVER_STANDING
-import com.f1db.plugin.writer.sql.Tables.RACE_RESULT
-import com.f1db.plugin.writer.sql.Tables.SEASON
-import com.f1db.plugin.writer.sql.Tables.SEASON_CONSTRUCTOR_STANDING
-import com.f1db.plugin.writer.sql.Tables.SEASON_DRIVER_STANDING
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_CONSTRUCTOR
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_DRIVER
-import com.f1db.plugin.writer.sql.Tables.SEASON_ENTRANT_TYRE_MANUFACTURER
-import com.f1db.plugin.writer.sql.Tables.SPRINT_RACE_RESULT
-import com.f1db.plugin.writer.sql.Tables.SPRINT_STARTING_GRID_POSITION
-import com.f1db.plugin.writer.sql.Tables.SPRINT_QUALIFYING_RESULT
-import com.f1db.plugin.writer.sql.Tables.STARTING_GRID_POSITION
-import com.f1db.plugin.writer.sql.Tables.TYRE_MANUFACTURER
-import com.f1db.plugin.writer.sql.Tables.WARMING_UP_RESULT
+import com.f1db.plugin.writer.sql.Tables.*
+import com.f1db.plugin.writer.sql.mapper.chassisMapper
 import com.f1db.plugin.writer.sql.mapper.circuitMapper
 import com.f1db.plugin.writer.sql.mapper.constructorMapper
-import com.f1db.plugin.writer.sql.mapper.constructorPreviousNextConstructorMapper
+import com.f1db.plugin.writer.sql.mapper.constructorChronologyMapper
 import com.f1db.plugin.writer.sql.mapper.continentMapper
 import com.f1db.plugin.writer.sql.mapper.countryMapper
 import com.f1db.plugin.writer.sql.mapper.driverFamilyRelationshipMapper
 import com.f1db.plugin.writer.sql.mapper.driverMapper
 import com.f1db.plugin.writer.sql.mapper.engineManufacturerMapper
+import com.f1db.plugin.writer.sql.mapper.engineMapper
 import com.f1db.plugin.writer.sql.mapper.entrantMapper
 import com.f1db.plugin.writer.sql.mapper.grandPrixMapper
 import com.f1db.plugin.writer.sql.mapper.raceConstructorStandingMapper
@@ -62,13 +26,19 @@ import com.f1db.plugin.writer.sql.mapper.racePracticeResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceQualifyingResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceRaceResultMapper
 import com.f1db.plugin.writer.sql.mapper.raceStartingGridPositionMapper
+import com.f1db.plugin.writer.sql.mapper.seasonConstructorMapper
 import com.f1db.plugin.writer.sql.mapper.seasonConstructorStandingMapper
+import com.f1db.plugin.writer.sql.mapper.seasonDriverMapper
 import com.f1db.plugin.writer.sql.mapper.seasonDriverStandingMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEngineManufacturerMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEntrantChassisMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantConstructorMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantDriverMapper
+import com.f1db.plugin.writer.sql.mapper.seasonEntrantEngineMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantMapper
 import com.f1db.plugin.writer.sql.mapper.seasonEntrantTyreManufacturerMapper
 import com.f1db.plugin.writer.sql.mapper.seasonMapper
+import com.f1db.plugin.writer.sql.mapper.seasonTyreManufacturerMapper
 import com.f1db.plugin.writer.sql.mapper.tyreManufacturerMapper
 import org.jooq.DSLContext
 import org.jooq.Record
@@ -78,9 +48,7 @@ import org.jooq.conf.ParamType
 import org.jooq.conf.RenderKeywordCase
 import org.jooq.conf.Settings
 import org.jooq.impl.DSL
-import org.jooq.impl.DSL.foreignKey
-import org.jooq.impl.DSL.primaryKey
-import org.jooq.impl.DSL.unique
+import org.jooq.impl.DSL.*
 import java.io.File
 import java.io.PrintWriter
 
@@ -137,8 +105,10 @@ class SqlWriter(
             writeInserts(ctx, out, DRIVER, driverMapper.unmap(db.splitted.drivers))
             writeInserts(ctx, out, DRIVER_FAMILY_RELATIONSHIP, driverFamilyRelationshipMapper.unmap(db.splitted.driverFamilyRelationships))
             writeInserts(ctx, out, CONSTRUCTOR, constructorMapper.unmap(db.splitted.constructors))
-            writeInserts(ctx, out, CONSTRUCTOR_PREVIOUS_NEXT_CONSTRUCTOR, constructorPreviousNextConstructorMapper.unmap(db.splitted.constructorPreviousNextConstructors))
+            writeInserts(ctx, out, CONSTRUCTOR_CHRONOLOGY, constructorChronologyMapper.unmap(db.splitted.constructorChronology))
+            writeInserts(ctx, out, CHASSIS, chassisMapper.unmap(db.splitted.chassis))
             writeInserts(ctx, out, ENGINE_MANUFACTURER, engineManufacturerMapper.unmap(db.splitted.engineManufacturers))
+            writeInserts(ctx, out, ENGINE, engineMapper.unmap(db.splitted.engines))
             writeInserts(ctx, out, TYRE_MANUFACTURER, tyreManufacturerMapper.unmap(db.splitted.tyreManufacturers))
             writeInserts(ctx, out, ENTRANT, entrantMapper.unmap(db.splitted.entrants))
             writeInserts(ctx, out, CIRCUIT, circuitMapper.unmap(db.splitted.circuits))
@@ -146,8 +116,14 @@ class SqlWriter(
             writeInserts(ctx, out, SEASON, seasonMapper.unmap(db.splitted.seasons))
             writeInserts(ctx, out, SEASON_ENTRANT, seasonEntrantMapper.unmap(db.splitted.seasonEntrants))
             writeInserts(ctx, out, SEASON_ENTRANT_CONSTRUCTOR, seasonEntrantConstructorMapper.unmap(db.splitted.seasonEntrantConstructors))
+            writeInserts(ctx, out, SEASON_ENTRANT_CHASSIS, seasonEntrantChassisMapper.unmap(db.splitted.seasonEntrantChassis))
+            writeInserts(ctx, out, SEASON_ENTRANT_ENGINE, seasonEntrantEngineMapper.unmap(db.splitted.seasonEntrantEngines))
             writeInserts(ctx, out, SEASON_ENTRANT_TYRE_MANUFACTURER, seasonEntrantTyreManufacturerMapper.unmap(db.splitted.seasonEntrantTyreManufacturers))
             writeInserts(ctx, out, SEASON_ENTRANT_DRIVER, seasonEntrantDriverMapper.unmap(db.splitted.seasonEntrantDrivers))
+            writeInserts(ctx, out, SEASON_CONSTRUCTOR, seasonConstructorMapper.unmap(db.splitted.seasonConstructors))
+            writeInserts(ctx, out, SEASON_ENGINE_MANUFACTURER, seasonEngineManufacturerMapper.unmap(db.splitted.seasonEngineManufacturers))
+            writeInserts(ctx, out, SEASON_TYRE_MANUFACTURER, seasonTyreManufacturerMapper.unmap(db.splitted.seasonTyreManufacturers))
+            writeInserts(ctx, out, SEASON_DRIVER, seasonDriverMapper.unmap(db.splitted.seasonDrivers))
             writeInserts(ctx, out, SEASON_DRIVER_STANDING, seasonDriverStandingMapper.unmap(db.splitted.seasonDriverStandings))
             writeInserts(ctx, out, SEASON_CONSTRUCTOR_STANDING, seasonConstructorStandingMapper.unmap(db.splitted.seasonConstructorStandings))
             writeInserts(ctx, out, RACE, raceMapper.unmap(db.splitted.races))
@@ -247,8 +223,10 @@ class SqlWriter(
         DRIVER,
         DRIVER_FAMILY_RELATIONSHIP,
         CONSTRUCTOR,
-        CONSTRUCTOR_PREVIOUS_NEXT_CONSTRUCTOR,
+        CONSTRUCTOR_CHRONOLOGY,
+        CHASSIS,
         ENGINE_MANUFACTURER,
+        ENGINE,
         TYRE_MANUFACTURER,
         ENTRANT,
         CIRCUIT,

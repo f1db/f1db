@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: toyota
+  chassisId: williams-fw29
+  engineId: toyota-rvx-07-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: alexander-wurz
@@ -15,6 +17,8 @@
   countryId: germany
   constructorId: bmw-sauber
   engineManufacturerId: bmw
+  chassisId: bmw-sauber-f1-07
+  engineId: bmw-p86-7-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: nick-heidfeld
@@ -28,6 +32,10 @@
   countryId: netherlands
   constructorId: spyker
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: spyker-f8-vii
+    - chassisId: spyker-f8-viib
+  engineId: ferrari-056-2006-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: adrian-sutil
@@ -42,6 +50,8 @@
   countryId: japan
   constructorId: honda
   engineManufacturerId: honda
+  chassisId: honda-ra107
+  engineId: honda-ra807e-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jenson-button
@@ -55,6 +65,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r27
+  engineId: renault-rs27-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: giancarlo-fisichella
@@ -65,6 +77,8 @@
   countryId: japan
   constructorId: toyota
   engineManufacturerId: toyota
+  chassisId: toyota-tf107
+  engineId: toyota-rvx-07-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jarno-trulli
@@ -75,6 +89,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: renault
+  chassisId: red-bull-rb3
+  engineId: renault-rs27-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: david-coulthard
@@ -85,6 +101,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-f2007
+  engineId: ferrari-056-2007-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: felipe-massa
@@ -95,6 +113,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: ferrari
+  chassisId: toro-rosso-str2
+  engineId: ferrari-056-2006-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: scott-speed
@@ -107,6 +127,8 @@
   countryId: japan
   constructorId: super-aguri
   engineManufacturerId: honda
+  chassisId: super-aguri-sa07
+  engineId: honda-ra807e-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: anthony-davidson
@@ -117,6 +139,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-22
+  engineId: mercedes-fo-108t-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: fernando-alonso

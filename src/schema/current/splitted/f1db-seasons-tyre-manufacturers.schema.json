@@ -1,0 +1,91 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-seasons-tyre-manufacturers.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Seasons Tyre Manufacturers JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SeasonTyreManufacturer"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SeasonTyreManufacturer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year of the season."
+        },
+        "tyreManufacturerId": {
+          "type": "string",
+          "description": "The identifier of the tyre manufacturer."
+        },
+        "bestStartingGridPosition": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best starting grid position achieved by the tyre manufacturer during the season."
+        },
+        "bestRaceResult": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The best finishing position achieved by the tyre manufacturer during the season."
+        },
+        "totalRaceEntries": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races entered by the tyre manufacturer during the season."
+        },
+        "totalRaceStarts": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races started by the tyre manufacturer during the season."
+        },
+        "totalRaceWins": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races won by the tyre manufacturer during the season."
+        },
+        "totalRaceLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of laps completed by the tyre manufacturer during the season."
+        },
+        "totalPodiums": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of podium finishes achieved by the tyre manufacturer during the season."
+        },
+        "totalPodiumRaces": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of races in which the tyre manufacturer finished on the podium during the season."
+        },
+        "totalPolePositions": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of pole positions achieved by the tyre manufacturer during the season."
+        },
+        "totalFastestLaps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The total number of fastest laps set by the tyre manufacturer during the season."
+        }
+      },
+      "required": [
+        "year",
+        "tyreManufacturerId",
+        "bestStartingGridPosition",
+        "bestRaceResult",
+        "totalRaceEntries",
+        "totalRaceStarts",
+        "totalRaceWins",
+        "totalRaceLaps",
+        "totalPodiums",
+        "totalPodiumRaces",
+        "totalPolePositions",
+        "totalFastestLaps"
+      ]
+    }
+  }
+}

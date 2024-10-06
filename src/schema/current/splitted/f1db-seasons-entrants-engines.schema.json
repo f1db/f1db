@@ -1,0 +1,46 @@
+{
+  "$id": "https://www.f1db.com/schema/v5.0.0/splitted/f1db-seasons-entrants-engines.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "F1DB",
+  "description": "F1DB Seasons Entrants Engines JSON Schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SeasonEntrantEngine"
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SeasonEntrantEngine": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year of the season."
+        },
+        "entrantId": {
+          "type": "string",
+          "description": "The identifier of the entrant."
+        },
+        "constructorId": {
+          "type": "string",
+          "description": "The identifier of the constructor."
+        },
+        "engineManufacturerId": {
+          "type": "string",
+          "description": "The identifier of the engine manufacturer."
+        },
+        "engineId": {
+          "type": "string",
+          "description": "The identifier of the engine."
+        }
+      },
+      "required": [
+        "year",
+        "entrantId",
+        "constructorId",
+        "engineManufacturerId",
+        "engineId"
+      ]
+    }
+  }
+}

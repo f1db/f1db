@@ -3,11 +3,15 @@
   constructors:
     - constructorId: eagle
       engineManufacturerId: climax
+      chassisId: eagle-t1f
+      engineId: climax-fpf-28-l4
       tyreManufacturerId: goodyear
       driverId: dan-gurney
       rounds: 1
     - constructorId: eagle
       engineManufacturerId: weslake
+      chassisId: eagle-t1g
+      engineId: weslake-58-30-v12
       tyreManufacturerId: goodyear
       drivers:
         - driverId: dan-gurney
@@ -22,6 +26,8 @@
   countryId: germany
   constructorId: lola
   engineManufacturerId: bmw
+  chassisId: lola-t100
+  engineId: bmw-m10-20-l4
   tyreManufacturerId: dunlop
   driverId: hubert-hahne
   rounds: 7
@@ -29,6 +35,8 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: brm
+  chassisId: brm-p261
+  engineId: brm-p60-21-v8
   tyreManufacturerId: firestone
   driverId: david-hobbs
   rounds: 6,8
@@ -36,6 +44,13 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: repco
+  chassis:
+    - chassisId: brabham-bt19
+    - chassisId: brabham-bt20
+    - chassisId: brabham-bt24
+  engines:
+    - engineId: repco-620-30-v8
+    - engineId: repco-740-30-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: denny-hulme
@@ -46,6 +61,12 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: brm
+  chassis:
+    - chassisId: mclaren-m4b
+    - chassisId: mclaren-m5a
+  engines:
+    - engineId: brm-p111-21-v8
+    - engineId: brm-p101-30-v12
   tyreManufacturerId: goodyear
   driverId: bruce-mclaren
   rounds: 2-3,8-11
@@ -53,6 +74,8 @@
   countryId: canada
   constructorId: eagle
   engineManufacturerId: climax
+  chassisId: eagle-t1f
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: goodyear
   driverId: al-pease
   rounds: 8
@@ -60,6 +83,8 @@
   countryId: switzerland
   constructorId: cooper
   engineManufacturerId: ats
+  chassisId: cooper-t77
+  engineId: ats-27-v8
   tyreManufacturerId: dunlop
   driverId: silvio-moser
   rounds: 6
@@ -67,6 +92,13 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: maserati
+  chassis:
+    - chassisId: cooper-t81
+    - chassisId: cooper-t81b
+    - chassisId: cooper-t86
+  engines:
+    - engineId: maserati-9-f1-30-v12
+    - engineId: maserati-10-f1-30-v12
   tyreManufacturerId: firestone
   drivers:
     - driverId: jochen-rindt
@@ -79,10 +111,21 @@
       rounds: 8
     - driverId: jacky-ickx
       rounds: 9-10
+- entrantId: david-bridges
+  countryId: united-kingdom
+  constructorId: lola
+  engineManufacturerId: ford
+  chassisId: lola-t100
+  engineId: ford-cosworth-fva-16-l4
+  tyreManufacturerId: firestone
+  driverId: brian-redman
+  rounds: 7
 - entrantId: dw-racing-enterprises
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: climax
+  chassisId: brabham-bt11
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: firestone
   driverId: bob-anderson
   rounds: 1-6
@@ -90,6 +133,8 @@
   countryId: france
   constructorId: matra
   engineManufacturerId: ford
+  chassisId: matra-ms5
+  engineId: ford-cosworth-fva-16-l4
   tyreManufacturerId: dunlop
   driverId: jo-schlesser
   rounds: 7
@@ -97,6 +142,8 @@
   countryId: germany
   constructorId: brabham
   engineManufacturerId: ford
+  chassisId: brabham-bt23
+  engineId: ford-cosworth-fva-16-l4
   tyreManufacturerId: dunlop
   driverId: gerhard-mitter
   rounds: 7
@@ -105,11 +152,15 @@
   constructors:
     - constructorId: cooper
       engineManufacturerId: maserati
+      chassisId: cooper-t81
+      engineId: maserati-9-f1-30-v12
       tyreManufacturerId: dunlop
       driverId: guy-ligier
       rounds: 4-5
     - constructorId: brabham
       engineManufacturerId: repco
+      chassisId: brabham-bt20
+      engineId: repco-620-30-v8
       tyreManufacturerId: firestone
       driverId: guy-ligier
       rounds: 6-7,9-11
@@ -117,6 +168,10 @@
   countryId: japan
   constructorId: honda
   engineManufacturerId: honda
+  chassis:
+    - chassisId: honda-ra273
+    - chassisId: honda-ra300
+  engineId: honda-ra273e-30-v12
   tyreManufacturerId: firestone
   driverId: john-surtees
   rounds: 1-4,6-7,9-11
@@ -124,6 +179,8 @@
   countryId: switzerland
   constructorId: cooper
   engineManufacturerId: maserati
+  chassisId: cooper-t81
+  engineId: maserati-9-f1-30-v12
   tyreManufacturerId: firestone
   driverId: jo-bonnier
   rounds: 1,4,6-11
@@ -131,32 +188,36 @@
   countryId: zimbabwe
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t79
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: firestone
   driverId: john-love
   rounds: 1
 - entrantId: lola-cars
   countryId: united-kingdom
-  constructors:
-    - constructorId: lola
-      engineManufacturerId: bmw
-      tyreManufacturerId: firestone
-      driverId: david-hobbs
-      rounds: 7
-    - constructorId: lola
-      engineManufacturerId: ford
-      tyreManufacturerId: firestone
-      driverId: brian-redman
-      rounds: 7
+  constructorId: lola
+  engineManufacturerId: bmw
+  chassisId: lola-t100
+  engineId: bmw-m10-20-l4
+  tyreManufacturerId: firestone
+  driverId: david-hobbs
+  rounds: 7
 - entrantId: luki-botha
   countryId: south-africa
   constructorId: brabham
   engineManufacturerId: climax
+  chassisId: brabham-bt11
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: firestone
   driverId: luki-botha
   rounds: 1
 - entrantId: matra-sports
   countryId: france
   constructorId: matra
+  chassis:
+    - chassisId: matra-ms5
+    - chassisId: matra-ms7
+  engineId: ford-cosworth-fva-16-l4
   engineManufacturerId: ford
   tyreManufacturers:
     - tyreManufacturerId: dunlop
@@ -170,6 +231,8 @@
   countryId: united-states-of-america
   constructorId: lotus
   engineManufacturerId: brm
+  chassisId: lotus-33
+  engineId: brm-p60-21-v8
   tyreManufacturerId: firestone
   driverId: mike-fisher
   rounds: 8,11
@@ -177,6 +240,13 @@
   countryId: united-kingdom
   constructorId: brm
   engineManufacturerId: brm
+  chassis:
+    - chassisId: brm-p83
+    - chassisId: brm-p261
+    - chassisId: brm-p115
+  engines:
+    - engineId: brm-p75-30-h16
+    - engineId: brm-p60-21-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jackie-stewart
@@ -188,6 +258,8 @@
   constructors:
     - constructorId: lotus
       engineManufacturerId: brm
+      chassisId: lotus-25
+      engineId: brm-p60-21-v8
       tyreManufacturerId: firestone
       drivers:
         - driverId: piers-courage
@@ -196,6 +268,12 @@
           rounds: 3
     - constructorId: brm
       engineManufacturerId: brm
+      chassis:
+        - chassisId: brm-p261
+        - chassisId: brm-p83
+      engines:
+        - engineId: brm-p60-21-v8
+        - engineId: brm-p75-30-h16
       tyreManufacturerId: firestone
       drivers:
         - driverId: piers-courage
@@ -206,6 +284,8 @@
   countryId: united-kingdom
   constructorId: cooper
   engineManufacturerId: maserati
+  chassisId: cooper-t81
+  engineId: maserati-9-f1-30-v12
   tyreManufacturerId: firestone
   driverId: jo-siffert
   rounds: 1-11
@@ -213,6 +293,8 @@
   countryId: united-kingdom
   constructorId: protos
   engineManufacturerId: ford
+  chassisId: protos-f2
+  engineId: ford-cosworth-fva-16-l4
   tyreManufacturerId: firestone
   drivers:
     - driverId: brian-hart
@@ -223,6 +305,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassisId: brabham-bt23
+  engineId: ford-cosworth-fva-16-l4
   tyreManufacturerId: dunlop
   driverId: alan-rees
   rounds: 7
@@ -230,6 +314,8 @@
   countryId: zimbabwe
   constructorId: lds
   engineManufacturerId: climax
+  chassisId: lds-mk-3
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: firestone
   driverId: sam-tingle
   rounds: 1
@@ -237,6 +323,10 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-312-66
+    - chassisId: ferrari-312-67
+  engineId: ferrari-242-30-v12
   tyreManufacturerId: firestone
   drivers:
     - driverId: chris-amon
@@ -253,6 +343,8 @@
   countryId: south-africa
   constructorId: brabham
   engineManufacturerId: climax
+  chassisId: brabham-bt11
+  engineId: climax-fpf-28-l4
   tyreManufacturerId: firestone
   driverId: dave-charlton
   rounds: 1
@@ -261,6 +353,12 @@
   constructors:
     - constructorId: lotus
       engineManufacturerId: brm
+      chassis:
+        - chassisId: lotus-43
+        - chassisId: lotus-33
+      engines:
+        - engineId: brm-p75-30-h16
+        - engineId: brm-p60-21-v8
       tyreManufacturerId: firestone
       drivers:
         - driverId: graham-hill
@@ -269,11 +367,19 @@
           rounds: 1
     - constructorId: lotus
       engineManufacturerId: climax
+      chassisId: lotus-33
+      engineId: climax-fwmv-20-v8
       tyreManufacturerId: firestone
       driverId: jim-clark
       rounds: 2
     - constructorId: lotus
       engineManufacturerId: ford
+      chassis:
+        - chassisId: lotus-49
+        - chassisId: lotus-48
+      engines:
+        - engineId: ford-cosworth-dfv-30-v8
+        - engineId: ford-cosworth-fva-16-l4
       tyreManufacturerId: firestone
       drivers:
         - driverId: graham-hill
@@ -292,6 +398,8 @@
   countryId: united-states-of-america
   constructorId: cooper
   engineManufacturerId: climax
+  chassisId: cooper-t82
+  engineId: climax-fwmv-20-v8
   tyreManufacturerId: firestone
   driverId: tom-jones
   rounds: 8
@@ -299,6 +407,8 @@
   countryId: united-kingdom
   constructorId: matra
   engineManufacturerId: ford
+  chassisId: matra-ms5
+  engineId: ford-cosworth-fva-16-l4
   tyreManufacturerId: dunlop
   driverId: jacky-ickx
   rounds: 7

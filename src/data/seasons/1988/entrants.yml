@@ -2,6 +2,8 @@
   countryId: france
   constructorId: ags
   engineManufacturerId: ford
+  chassisId: ags-jh23
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   driverId: philippe-streiff
   rounds: 1-16
@@ -9,6 +11,8 @@
   countryId: united-kingdom
   constructorId: arrows
   engineManufacturerId: megatron
+  chassisId: arrows-a10b
+  engineId: megatron-m12-13-15-l4-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: derek-warwick
@@ -19,6 +23,8 @@
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
+  chassisId: benetton-b188
+  engineId: ford-cosworth-dfr-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: alessandro-nannini
@@ -29,6 +35,8 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: honda
+  chassisId: lotus-100t
+  engineId: honda-ra168e-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: nelson-piquet
@@ -39,6 +47,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: judd
+  chassisId: williams-fw12
+  engineId: judd-cv-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: nigel-mansell
@@ -53,6 +63,10 @@
   countryId: italy
   constructorId: coloni
   engineManufacturerId: ford
+  chassis:
+    - chassisId: coloni-fc188
+    - chassisId: coloni-fc188b
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   driverId: gabriele-tarquini
   rounds: 1-16
@@ -60,6 +74,8 @@
   countryId: italy
   constructorId: eurobrun
   engineManufacturerId: ford
+  chassisId: eurobrun-er188
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: oscar-larrauri
@@ -70,6 +86,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: honda
+  chassisId: mclaren-mp4-4
+  engineId: honda-ra168e-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: alain-prost
@@ -80,6 +98,8 @@
   countryId: france
   constructorId: lola
   engineManufacturerId: ford
+  chassisId: lola-lc88
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: philippe-alliot
@@ -94,6 +114,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: judd
+  chassisId: march-881
+  engineId: judd-cv-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: ivan-capelli
@@ -104,6 +126,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: judd
+  chassisId: ligier-js31
+  engineId: judd-cv-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: rene-arnoux
@@ -114,6 +138,8 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: ford
+  chassisId: minardi-m188
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: adrian-campos
@@ -126,6 +152,10 @@
   countryId: italy
   constructorId: osella
   engineManufacturerId: osella
+  chassis:
+    - chassisId: osella-fa1i
+    - chassisId: osella-fa1l
+  engineId: osella-890t-15-v8-t
   tyreManufacturerId: goodyear
   driverId: nicola-larini
   rounds: 1-16
@@ -133,6 +163,8 @@
   countryId: germany
   constructorId: rial
   engineManufacturerId: ford
+  chassisId: rial-arc1
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   driverId: andrea-de-cesaris
   rounds: 1-16
@@ -140,6 +172,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-f1-87-88c
+  engineId: ferrari-033e-15-v6-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: gerhard-berger
@@ -150,6 +184,10 @@
   countryId: italy
   constructorId: dallara
   engineManufacturerId: ford
+  chassis:
+    - chassisId: dallara-3087
+    - chassisId: dallara-f188
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   driverId: alex-caffi
   rounds: 1-16
@@ -157,6 +195,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassisId: tyrrell-017
+  engineId: ford-cosworth-dfz-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jonathan-palmer
@@ -167,6 +207,8 @@
   countryId: germany
   constructorId: zakspeed
   engineManufacturerId: zakspeed
+  chassisId: zakspeed-881
+  engineId: zakspeed-1500-4-15-l4-t
   tyreManufacturerId: goodyear
   drivers:
     - driverId: bernd-schneider

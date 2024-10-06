@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: ford
+  chassisId: williams-fw07c
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: goodyear
@@ -14,6 +16,8 @@
   countryId: united-kingdom
   constructorId: toleman
   engineManufacturerId: hart
+  chassisId: toleman-tg181
+  engineId: hart-415t-15-l4-t
   tyreManufacturerId: pirelli
   drivers:
     - driverId: brian-henton
@@ -24,6 +28,10 @@
   countryId: italy
   constructorId: osella
   engineManufacturerId: ford
+  chassis:
+    - chassisId: osella-fa1b
+    - chassisId: osella-fa1c
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: michelin
   drivers:
     - driverId: beppe-gabbiani
@@ -40,6 +48,8 @@
   countryId: united-kingdom
   constructorId: ensign
   engineManufacturerId: ford
+  chassisId: ensign-n180b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: avon
@@ -54,6 +64,10 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassis:
+    - chassisId: renault-re20b
+    - chassisId: renault-re30
+  engineId: renault-gordini-ef1-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: alain-prost
@@ -64,6 +78,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: matra
+  chassisId: ligier-js17
+  engineId: matra-ms81-30-v12
   tyreManufacturerId: michelin
   drivers:
     - driverId: jacques-laffite
@@ -78,6 +94,8 @@
   countryId: brazil
   constructorId: fittipaldi
   engineManufacturerId: ford
+  chassisId: fittipaldi-f8c
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: avon
@@ -91,6 +109,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ford
+  chassisId: march-811
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: avon
@@ -103,6 +123,10 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: ford
+  chassis:
+    - chassisId: mclaren-m29f
+    - chassisId: mclaren-mp4-1
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturerId: michelin
   drivers:
     - driverId: andrea-de-cesaris
@@ -113,6 +137,11 @@
   countryId: italy
   constructorId: alfa-romeo
   engineManufacturerId: alfa-romeo
+  chassis:
+    - chassisId: alfa-romeo-179b
+    - chassisId: alfa-romeo-179c
+    - chassisId: alfa-romeo-179d
+  engineId: alfa-romeo-1260-30-v12
   tyreManufacturerId: michelin
   drivers:
     - driverId: bruno-giacomelli
@@ -123,6 +152,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: ford
+  chassisId: brabham-bt49c
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: goodyear
@@ -135,6 +166,8 @@
   countryId: united-kingdom
   constructorId: arrows
   engineManufacturerId: ford
+  chassisId: arrows-a3
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: pirelli
@@ -149,6 +182,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-126ck
+  engineId: ferrari-021-15-v6-t
   tyreManufacturerId: michelin
   drivers:
     - driverId: didier-pironi
@@ -159,6 +194,10 @@
   countryId: germany
   constructorId: ats-wheels
   engineManufacturerId: ford
+  chassis:
+    - chassisId: ats-wheels-d4
+    - chassisId: ats-wheels-hgs1
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: avon
@@ -171,6 +210,12 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: ford
+  chassis:
+    - chassisId: lotus-81b
+    - chassisId: lotus-87
+    - chassisId: lotus-88
+    - chassisId: lotus-88b
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: goodyear
@@ -183,6 +228,8 @@
   countryId: hong-kong
   constructorId: theodore
   engineManufacturerId: ford
+  chassisId: theodore-ty01
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: avon
     - tyreManufacturerId: michelin
@@ -195,6 +242,10 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ford
+  chassis:
+    - chassisId: tyrrell-010
+    - chassisId: tyrrell-011
+  engineId: ford-cosworth-dfv-30-v8
   tyreManufacturers:
     - tyreManufacturerId: michelin
     - tyreManufacturerId: avon

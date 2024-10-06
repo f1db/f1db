@@ -2,6 +2,8 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
+  chassisId: haas-vf-17
+  engineId: ferrari-062-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kevin-magnussen
@@ -15,6 +17,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: honda
+  chassisId: mclaren-mcl32
+  engineId: honda-ra617h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
@@ -27,6 +31,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-f1-w08
+  engineId: mercedes-m08-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lewis-hamilton
@@ -37,6 +43,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: tag-heuer
+  chassisId: red-bull-rb13
+  engineId: tag-heuer-f1-2017-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
@@ -47,6 +55,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-rs17
+  engineId: renault-re17-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jolyon-palmer
@@ -62,6 +72,8 @@
   countryId: india
   constructorId: force-india
   engineManufacturerId: mercedes
+  chassisId: force-india-vjm10
+  engineId: mercedes-m08-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
@@ -78,6 +90,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: ferrari
+  chassisId: sauber-c36
+  engineId: ferrari-061-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: antonio-giovinazzi
@@ -93,6 +107,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-sf70h
+  engineId: ferrari-062-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kimi-raikkonen
@@ -103,6 +119,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: toro-rosso
+  chassisId: toro-rosso-str12
+  engineId: toro-rosso-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
@@ -120,6 +138,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
+  chassisId: williams-fw40
+  engineId: mercedes-m08-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: felipe-massa

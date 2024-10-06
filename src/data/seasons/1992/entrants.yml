@@ -2,6 +2,10 @@
   countryId: italy
   constructorId: andrea-moda
   engineManufacturerId: judd
+  chassis:
+    - chassisId: andrea-moda-c4b
+    - chassisId: andrea-moda-s921
+  engineId: judd-gv-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: alex-caffi
@@ -16,6 +20,12 @@
   countryId: united-kingdom
   constructorId: benetton
   engineManufacturerId: ford
+  chassis:
+    - chassisId: benetton-b191b
+    - chassisId: benetton-b192
+  engines:
+    - engineId: ford-hba5-35-v8
+    - engineId: ford-hba7-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: martin-brundle
@@ -26,6 +36,10 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: renault
+  chassisId: williams-fw14b
+  engines:
+    - engineId: renault-rs3c-35-v10
+    - engineId: renault-rs4-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: nigel-mansell
@@ -36,6 +50,8 @@
   countryId: france
   constructorId: venturi
   engineManufacturerId: lamborghini
+  chassisId: venturi-lc92
+  engineId: lamborghini-3512-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: bertrand-gachot
@@ -46,6 +62,10 @@
   countryId: italy
   constructorId: fondmetal
   engineManufacturerId: ford
+  chassis:
+    - chassisId: fondmetal-gr01
+    - chassisId: fondmetal-gr02
+  engineId: ford-hba5-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: andrea-chiesa
@@ -58,6 +78,8 @@
   countryId: united-kingdom
   constructorId: footwork
   engineManufacturerId: mugen-honda
+  chassisId: footwork-fa13
+  engineId: mugen-honda-mf-351h-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: aguri-suzuki
@@ -68,6 +90,12 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: honda
+  chassis:
+    - chassisId: mclaren-mp4-6b
+    - chassisId: mclaren-mp4-7a
+  engines:
+    - engineId: honda-ra122e-35-v12
+    - engineId: honda-ra122e-b-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: ayrton-senna
@@ -78,6 +106,8 @@
   countryId: france
   constructorId: ligier
   engineManufacturerId: renault
+  chassisId: ligier-js37
+  engineId: renault-rs3c-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: erik-comas
@@ -88,6 +118,8 @@
   countryId: united-kingdom
   constructorId: march
   engineManufacturerId: ilmor
+  chassisId: march-cg911b
+  engineId: ilmor-2175a-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: karl-wendlinger
@@ -102,6 +134,10 @@
   countryId: italy
   constructorId: minardi
   engineManufacturerId: lamborghini
+  chassis:
+    - chassisId: minardi-m191b
+    - chassisId: minardi-m192
+  engineId: lamborghini-3512-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: christian-fittipaldi
@@ -114,6 +150,8 @@
   countryId: united-kingdom
   constructorId: brabham
   engineManufacturerId: judd
+  chassisId: brabham-bt60b
+  engineId: judd-gv-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: eric-van-de-poele
@@ -126,6 +164,8 @@
   countryId: ireland
   constructorId: jordan
   engineManufacturerId: yamaha
+  chassisId: jordan-192
+  engineId: yamaha-ox99-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: mauricio-gugelmin
@@ -136,6 +176,10 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassis:
+    - chassisId: ferrari-f92a
+    - chassisId: ferrari-f92at
+  engineId: ferrari-038-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: ivan-capelli
@@ -148,6 +192,8 @@
   countryId: italy
   constructorId: dallara
   engineManufacturerId: ferrari
+  chassisId: dallara-f192
+  engineId: ferrari-037-35-v12
   tyreManufacturerId: goodyear
   drivers:
     - driverId: jj-lehto
@@ -158,6 +204,10 @@
   countryId: united-kingdom
   constructorId: lotus
   engineManufacturerId: ford
+  chassis:
+    - chassisId: lotus-102d
+    - chassisId: lotus-107
+  engineId: ford-hba5-35-v8
   tyreManufacturerId: goodyear
   drivers:
     - driverId: johnny-herbert
@@ -168,6 +218,8 @@
   countryId: united-kingdom
   constructorId: tyrrell
   engineManufacturerId: ilmor
+  chassisId: tyrrell-020b
+  engineId: ilmor-2175a-35-v10
   tyreManufacturerId: goodyear
   drivers:
     - driverId: andrea-de-cesaris

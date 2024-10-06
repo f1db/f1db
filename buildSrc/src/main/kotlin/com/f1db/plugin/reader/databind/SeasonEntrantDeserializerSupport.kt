@@ -4,8 +4,10 @@ import com.f1db.plugin.extensions.asText
 import com.f1db.plugin.extensions.contains
 import com.f1db.plugin.extensions.toRounds
 import com.f1db.plugin.schema.single.SeasonEntrant
+import com.f1db.plugin.schema.single.SeasonEntrantChassis
 import com.f1db.plugin.schema.single.SeasonEntrantConstructor
 import com.f1db.plugin.schema.single.SeasonEntrantDriver
+import com.f1db.plugin.schema.single.SeasonEntrantEngine
 import com.f1db.plugin.schema.single.SeasonEntrantTyreManufacturer
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.core.TreeNode
@@ -22,7 +24,9 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer
  * - entrantId:
  *   countryId:
  *   constructorId:
+ *   chassisId:
  *   engineManufacturerId:
+ *   engineId:
  *   tyreManufacturerId:
  *   driverId:
  *   rounds:
@@ -30,7 +34,23 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer
  * - entrantId:
  *   countryId:
  *   constructorId:
+ *   chassis:
+ *     - chassisId:
+ *     - chassisId:
  *   engineManufacturerId:
+ *   engines:
+ *     - engineId:
+ *     - engineId:
+ *   tyreManufacturerId:
+ *   driverId:
+ *   rounds:
+ *
+ * - entrantId:
+ *   countryId:
+ *   constructorId:
+ *   chassisId:
+ *   engineManufacturerId:
+ *   engineId:
  *   tyreManufacturers:
  *     - tyreManufacturerId:
  *     - tyreManufacturerId:
@@ -40,7 +60,9 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer
  * - entrantId:
  *   countryId:
  *   constructorId:
+ *   chassisId:
  *   engineManufacturerId:
+ *   engineId:
  *   tyreManufacturerId:
  *   drivers:
  *     - driverId:
@@ -52,7 +74,13 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer
  *   countryId:
  *   constructors
  *     - constructorId:
+ *       chassis:
+ *         - chassisId:
+ *         - chassisId:
  *       engineManufacturerId:
+ *       engines:
+ *         - engineId:
+ *         - engineId:
  *       tyreManufacturerId:
  *       drivers:
  *         - driverId:
@@ -82,9 +110,27 @@ abstract class SeasonEntrantDeserializerSupport<T>(vc: Class<*>) : StdDeserializ
     protected fun readSeasonEntrantConstructor(parser: JsonParser, context: DeserializationContext, node: TreeNode): SeasonEntrantConstructor {
         val seasonEntrantConstructor = SeasonEntrantConstructor()
         seasonEntrantConstructor.constructorId = node.asText("constructorId")
+        seasonEntrantConstructor.chassis = mutableListOf()
         seasonEntrantConstructor.engineManufacturerId = node.asText("engineManufacturerId")
+        seasonEntrantConstructor.engines = mutableListOf()
         seasonEntrantConstructor.tyreManufacturers = mutableListOf()
         seasonEntrantConstructor.drivers = mutableListOf()
+        if (node.contains("chassis")) {
+            seasonEntrantConstructor.chassis.addAll(readValues(parser, context, node, "chassis"))
+        }
+        if (node.contains("chassisId")) {
+            val seasonEntrantChassis = SeasonEntrantChassis()
+            seasonEntrantChassis.chassisId = node.asText("chassisId")
+            seasonEntrantConstructor.chassis.add(seasonEntrantChassis)
+        }
+        if (node.contains("engines")) {
+            seasonEntrantConstructor.engines.addAll(readValues(parser, context, node, "engines"))
+        }
+        if (node.contains("engineId")) {
+            val seasonEntrantEngine = SeasonEntrantEngine()
+            seasonEntrantEngine.engineId = node.asText("engineId")
+            seasonEntrantConstructor.engines.add(seasonEntrantEngine)
+        }
         if (node.contains("tyreManufacturers")) {
             seasonEntrantConstructor.tyreManufacturers.addAll(readValues(parser, context, node, "tyreManufacturers"))
         }

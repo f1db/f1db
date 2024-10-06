@@ -2,6 +2,8 @@
   countryId: switzerland
   constructorId: alfa-romeo
   engineManufacturerId: ferrari
+  chassisId: alfa-romeo-c38
+  engineId: ferrari-064-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: antonio-giovinazzi
@@ -12,6 +14,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: honda
+  chassisId: red-bull-rb15
+  engineId: honda-ra619h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
@@ -24,6 +28,8 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
+  chassisId: haas-vf-19
+  engineId: ferrari-064-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kevin-magnussen
@@ -34,6 +40,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: renault
+  chassisId: mclaren-mcl34
+  engineId: renault-e-tech-19-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
@@ -44,6 +52,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-f1-w10
+  engineId: mercedes-m10-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lewis-hamilton
@@ -54,6 +64,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: honda
+  chassisId: toro-rosso-str14
+  engineId: honda-ra619h-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
@@ -69,6 +81,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-rs19
+  engineId: renault-e-tech-19-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
@@ -79,6 +93,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
+  chassisId: williams-fw42
+  engineId: mercedes-m10-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: george-russell
@@ -92,6 +108,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-sf90
+  engineId: ferrari-064-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: charles-leclerc
@@ -102,6 +120,8 @@
   countryId: united-kingdom
   constructorId: racing-point
   engineManufacturerId: bwt-mercedes
+  chassisId: racing-point-rp19
+  engineId: bwt-mercedes-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lance-stroll

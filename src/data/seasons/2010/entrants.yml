@@ -2,6 +2,8 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: cosworth
+  chassisId: williams-fw32
+  engineId: cosworth-ca2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: nico-hulkenberg
@@ -12,6 +14,8 @@
   countryId: switzerland
   constructorId: sauber
   engineManufacturerId: ferrari
+  chassisId: sauber-c29
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: kamui-kobayashi
@@ -24,6 +28,8 @@
   countryId: india
   constructorId: force-india
   engineManufacturerId: mercedes
+  chassisId: force-india-vjm03
+  engineId: mercedes-fo-108x-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: adrian-sutil
@@ -37,6 +43,8 @@
   countryId: spain
   constructorId: hrt
   engineManufacturerId: cosworth
+  chassisId: hrt-f110
+  engineId: cosworth-ca2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: bruno-senna
@@ -53,6 +61,8 @@
   countryId: malaysia
   constructorId: lotus-racing
   engineManufacturerId: cosworth
+  chassisId: lotus-racing-t127
+  engineId: cosworth-ca2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: heikki-kovalainen
@@ -66,6 +76,8 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
+  chassisId: mercedes-mgp-w01
+  engineId: mercedes-fo-108x-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: michael-schumacher
@@ -76,6 +88,8 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: renault
+  chassisId: red-bull-rb6
+  engineId: renault-rs27-2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: mark-webber
@@ -86,6 +100,8 @@
   countryId: france
   constructorId: renault
   engineManufacturerId: renault
+  chassisId: renault-r30
+  engineId: renault-rs27-2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: robert-kubica
@@ -96,6 +112,8 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
+  chassisId: ferrari-f10
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: felipe-massa
@@ -106,6 +124,8 @@
   countryId: italy
   constructorId: toro-rosso
   engineManufacturerId: ferrari
+  chassisId: toro-rosso-str5
+  engineId: ferrari-056-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jaime-alguersuari
@@ -116,6 +136,8 @@
   countryId: united-kingdom
   constructorId: virgin
   engineManufacturerId: cosworth
+  chassisId: virgin-vr-01
+  engineId: cosworth-ca2010-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: lucas-di-grassi
@@ -129,6 +151,8 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
+  chassisId: mclaren-mp4-25
+  engineId: mercedes-fo-108x-24-v8
   tyreManufacturerId: bridgestone
   drivers:
     - driverId: jenson-button
