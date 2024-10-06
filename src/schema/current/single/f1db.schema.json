@@ -1912,7 +1912,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -1994,7 +1994,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -2106,7 +2106,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -2186,7 +2186,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -2355,7 +2355,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -2437,7 +2437,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
@@ -2505,7 +2505,7 @@
         "driverNumber": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "The race number of the driver."
+          "description": "The car number of the driver."
         },
         "driverId": {
           "type": "string",
