@@ -65,7 +65,7 @@
         "courseLength": {
           "type": "number",
           "minimum": 0,
-          "description": "The length of the race course in kilometers"
+          "description": "The length of the race course in kilometers."
         },
         "laps": {
           "type": "integer",
