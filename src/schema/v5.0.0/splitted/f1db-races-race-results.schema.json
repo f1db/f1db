@@ -99,7 +99,7 @@
         "gapLaps": {
           "type": ["integer", "null"],
           "minimum": 0,
-          "description": "he gap measured in laps between the driver and the leader."
+          "description": "The gap measured in laps between the driver and the leader."
         },
         "interval": {
           "type": ["string", "null"],
