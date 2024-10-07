@@ -1557,7 +1557,7 @@
         "distance": {
           "type": "number",
           "minimum": 0,
-          "description": "The total distance of the race in kilometers"
+          "description": "The total distance of the race in kilometers."
         },
         "scheduledLaps": {
           "type": ["integer", "null"],
