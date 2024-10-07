@@ -72,7 +72,7 @@
         },
         "q1": {
           "type": ["string", "null"],
-          "description": "The Q1 lap time recorded for the driver during the qualifying session.."
+          "description": "The Q1 lap time recorded for the driver during the qualifying session."
         },
         "q1Millis": {
           "type": ["integer", "null"],
@@ -80,7 +80,7 @@
         },
         "q2": {
           "type": ["string", "null"],
-          "description": "The Q2 lap time recorded for the driver during the qualifying session.."
+          "description": "The Q2 lap time recorded for the driver during the qualifying session."
         },
         "q2Millis": {
           "type": ["integer", "null"],
@@ -88,7 +88,7 @@
         },
         "q3": {
           "type": ["string", "null"],
-          "description": "The Q3 lap time recorded for the driver during the qualifying session.."
+          "description": "The Q3 lap time recorded for the driver during the qualifying session."
         },
         "q3Millis": {
           "type": ["integer", "null"],
