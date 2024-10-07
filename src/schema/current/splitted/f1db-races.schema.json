@@ -133,7 +133,7 @@
           "minLength": 5,
           "maxLength": 5,
           "pattern": "^([01][0-9]|2[0-3]):([0-5][0-9])$",
-          "description": "The strart time of the 3rd free practice session in UTC."
+          "description": "The start time of the 3rd free practice session in UTC."
         },
         "freePractice4Date": {
           "type": ["string", "null"],
