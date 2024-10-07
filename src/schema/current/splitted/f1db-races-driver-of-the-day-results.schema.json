@@ -65,7 +65,7 @@
         "percentage": {
           "type": ["number", "null"],
           "minimum": 0,
-          "description": "The percentage of votes received by the driver"
+          "description": "The percentage of votes received by the driver."
         }
       },
       "required": [
