@@ -143,15 +143,15 @@
           "type": ["integer", "null"],
           "description": "The number of positions gained by the driver during the race."
         },
-        "fastestLap": {
-          "type": ["boolean", "null"],
-          "default": "false",
-          "description": "Whether the driver set the fastest lap during the race."
-        },
         "pitStops": {
           "type": ["integer", "null"],
           "minimum": 0,
           "description": "The total number of pit stops made by the driver during the race."
+        },
+        "fastestLap": {
+          "type": ["boolean", "null"],
+          "default": "false",
+          "description": "Whether the driver set the fastest lap during the race."
         },
         "driverOfTheDay": {
           "type": ["boolean", "null"],
@@ -194,8 +194,8 @@
         "gridPositionNumber",
         "gridPositionText",
         "positionsGained",
-        "fastestLap",
         "pitStops",
+        "fastestLap",
         "driverOfTheDay",
         "grandSlam"
       ]

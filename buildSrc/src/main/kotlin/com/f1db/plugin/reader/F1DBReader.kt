@@ -393,8 +393,8 @@ class F1DBReader(
                     raceResult.qualificationPositionNumber = qualificationPositionNumber
                     raceResult.qualificationPositionText = qualificationPositionText
                     raceResult.positionsGained = calculatePositionsGained(raceResult, race.startingGridPositions)
-                    raceResult.fastestLap = race.fastestLaps?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                     raceResult.pitStops = race.pitStops?.count { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+                    raceResult.fastestLap = race.fastestLaps?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                     raceResult.driverOfTheDay = race.driverOfTheDayResults?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                 }
 
