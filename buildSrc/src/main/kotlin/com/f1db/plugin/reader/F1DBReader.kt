@@ -641,7 +641,7 @@ class F1DBReader(
                     }
 
                     // Total podiums + podium races.
-
+                    
                     if (raceResult.positionNumber in listOf(1, 2, 3)) {
 
                         if (addIfAbsent(podiums, driver)) {
@@ -651,19 +651,27 @@ class F1DBReader(
 
                         if (!raceResult.sharedCar) {
 
+                            constructor.totalPodiums++
+                            engineManufacturer.totalPodiums++
+                            tyreManufacturer.totalPodiums++
+
+                            seasonConstructor.totalPodiums++
+                            seasonEngineManufacturer.totalPodiums++
+                            seasonTyreManufacturer.totalPodiums++
+
                             if (addIfAbsent(podiums, constructor)) {
-                                constructor.totalPodiums++
-                                seasonConstructor.totalPodiums++
+                                constructor.totalPodiumRaces++
+                                seasonConstructor.totalPodiumRaces++
                             }
 
                             if (addIfAbsent(podiums, engineManufacturer)) {
-                                engineManufacturer.totalPodiums++
-                                seasonEngineManufacturer.totalPodiums++
+                                engineManufacturer.totalPodiumRaces++
+                                seasonEngineManufacturer.totalPodiumRaces++
                             }
 
                             if (addIfAbsent(podiums, tyreManufacturer)) {
-                                tyreManufacturer.totalPodiums++
-                                seasonTyreManufacturer.totalPodiums++
+                                tyreManufacturer.totalPodiumRaces++
+                                seasonTyreManufacturer.totalPodiumRaces++
                             }
                         }
                     }
