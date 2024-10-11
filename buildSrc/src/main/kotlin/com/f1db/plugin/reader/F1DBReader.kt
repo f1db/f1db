@@ -207,9 +207,12 @@ class F1DBReader(
                     }
                     ?.distinct()
                     ?.map { constructorId ->
+                        val seasonConstructorStanding = season.constructorStandings?.firstOrNull { it.constructorId == constructorId };
                         SeasonConstructor().apply {
                             year = season.year
                             this.constructorId = constructorId
+                            this.positionNumber = seasonConstructorStanding?.positionNumber
+                            this.positionText = seasonConstructorStanding?.positionText
                             this.totalRaceEntries = 0
                             this.totalRaceStarts = 0
                             this.totalRaceWins = 0
@@ -231,9 +234,12 @@ class F1DBReader(
                     }
                     ?.distinct()
                     ?.map { engineManufacturerId ->
+                        val seasonConstructorStanding = season.constructorStandings?.firstOrNull { it.engineManufacturerId == engineManufacturerId };
                         SeasonEngineManufacturer().apply {
                             year = season.year
                             this.engineManufacturerId = engineManufacturerId
+                            this.positionNumber = seasonConstructorStanding?.positionNumber
+                            this.positionText = seasonConstructorStanding?.positionText
                             this.totalRaceEntries = 0
                             this.totalRaceStarts = 0
                             this.totalRaceWins = 0
@@ -276,9 +282,12 @@ class F1DBReader(
                     }
                     ?.distinct()
                     ?.map { driverId ->
+                        val seasonDriverStanding = season.driverStandings?.firstOrNull { it.driverId == driverId };
                         SeasonDriver().apply {
                             year = season.year
                             this.driverId = driverId
+                            this.positionNumber = seasonDriverStanding?.positionNumber
+                            this.positionText = seasonDriverStanding?.positionText
                             this.totalRaceEntries = 0
                             this.totalRaceStarts = 0
                             this.totalRaceWins = 0

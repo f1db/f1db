@@ -1089,6 +1089,16 @@
           "type": "string",
           "description": "The identifier of the constructor."
         },
+        "positionNumber": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The numerical position of the constructor in the standings."
+        },
+        "positionText": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]+|DSQ|EX$",
+          "description": "The textual representation of the constructor's position in the standings, including special statuses."
+        },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1154,6 +1164,8 @@
       "required": [
         "year",
         "constructorId",
+        "positionNumber",
+        "positionText",
         "bestStartingGridPosition",
         "bestRaceResult",
         "totalRaceEntries",
@@ -1179,6 +1191,16 @@
         "engineManufacturerId": {
           "type": "string",
           "description": "The identifier of the engine manufacturer."
+        },
+        "positionNumber": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The numerical position of the constructor in the standings."
+        },
+        "positionText": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]+|DSQ|EX$",
+          "description": "The textual representation of the constructor's position in the standings, including special statuses."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -1240,6 +1262,8 @@
       "required": [
         "year",
         "engineManufacturerId",
+        "positionNumber",
+        "positionText",
         "bestStartingGridPosition",
         "bestRaceResult",
         "totalRaceEntries",
@@ -1343,6 +1367,16 @@
           "type": "string",
           "description": "The identifier of the driver."
         },
+        "positionNumber": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The numerical position of the driver in the standings."
+        },
+        "positionText": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]+|DSQ|EX$",
+          "description": "The textual representation of the driver's position in the standings, including special statuses."
+        },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1408,6 +1442,8 @@
       "required": [
         "year",
         "driverId",
+        "positionNumber",
+        "positionText",
         "bestStartingGridPosition",
         "bestRaceResult",
         "totalRaceEntries",
@@ -2285,15 +2321,15 @@
           "type": ["integer", "null"],
           "description": "The number of positions gained by the driver during the race."
         },
-        "fastestLap": {
-          "type": ["boolean", "null"],
-          "default": "false",
-          "description": "Whether the driver set the fastest lap during the race."
-        },
         "pitStops": {
           "type": ["integer", "null"],
           "minimum": 0,
           "description": "The total number of pit stops made by the driver during the race."
+        },
+        "fastestLap": {
+          "type": ["boolean", "null"],
+          "default": "false",
+          "description": "Whether the driver set the fastest lap during the race."
         },
         "driverOfTheDay": {
           "type": ["boolean", "null"],
@@ -2332,8 +2368,8 @@
         "gridPositionNumber",
         "gridPositionText",
         "positionsGained",
-        "fastestLap",
         "pitStops",
+        "fastestLap",
         "driverOfTheDay",
         "grandSlam"
       ]

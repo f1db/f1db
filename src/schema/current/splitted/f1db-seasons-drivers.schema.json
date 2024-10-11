@@ -21,6 +21,16 @@
           "type": "string",
           "description": "The identifier of the driver."
         },
+        "positionNumber": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The numerical position of the driver in the standings."
+        },
+        "positionText": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]+|DSQ|EX$",
+          "description": "The textual representation of the driver's position in the standings, including special statuses."
+        },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -86,6 +96,8 @@
       "required": [
         "year",
         "driverId",
+        "positionNumber",
+        "positionText",
         "bestStartingGridPosition",
         "bestRaceResult",
         "totalRaceEntries",

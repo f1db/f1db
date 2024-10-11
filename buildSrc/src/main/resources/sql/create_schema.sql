@@ -374,6 +374,8 @@ CREATE INDEX "sedr_driver_id_idx" ON "season_entrant_driver" ("driver_id");
 CREATE TABLE "season_constructor"
 ( "year" INTEGER NOT NULL
 , "constructor_id" VARCHAR(100) NOT NULL
+, "position_number" INTEGER
+, "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
@@ -397,6 +399,8 @@ CREATE INDEX "sscn_constructor_id_idx" ON "season_constructor" ("constructor_id"
 CREATE TABLE "season_engine_manufacturer"
 ( "year" INTEGER NOT NULL
 , "engine_manufacturer_id" VARCHAR(100) NOT NULL
+, "position_number" INTEGER
+, "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
@@ -440,6 +444,8 @@ CREATE INDEX "sstm_tyre_manufacturer_id_idx" ON "season_tyre_manufacturer" ("tyr
 CREATE TABLE "season_driver"
 ( "year" INTEGER NOT NULL
 , "driver_id" VARCHAR(100) NOT NULL
+, "position_number" INTEGER
+, "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
