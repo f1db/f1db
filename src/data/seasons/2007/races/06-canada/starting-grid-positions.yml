@@ -158,14 +158,6 @@
   tyreManufacturerId: bridgestone
   gridPenalty:
   time: "1:18.536"
-- position: 21
-  driverNumber: 21
-  driverId: christijan-albers
-  constructorId: spyker
-  engineManufacturerId: ferrari
-  tyreManufacturerId: bridgestone
-  gridPenalty:
-  time: "1:19.196"
 - position: 22
   driverNumber: 4
   driverId: heikki-kovalainen
@@ -174,3 +166,11 @@
   tyreManufacturerId: bridgestone
   gridPenalty: 10
   time: "1:17.806"
+- position: PL
+  driverNumber: 21
+  driverId: christijan-albers
+  constructorId: spyker
+  engineManufacturerId: ferrari
+  tyreManufacturerId: bridgestone
+  gridPenalty:
+  time: "1:19.196"

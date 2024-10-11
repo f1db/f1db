@@ -94,14 +94,6 @@
   tyreManufacturerId: bridgestone
   gridPenalty:
   time: "1:12.289"
-- position: 13
-  driverNumber: 4
-  driverId: robert-kubica
-  constructorId: bmw-sauber
-  engineManufacturerId: bmw
-  tyreManufacturerId: bridgestone
-  gridPenalty:
-  time: "1:12.300"
 - position: 14
   driverNumber: 9
   driverId: david-coulthard
@@ -158,3 +150,11 @@
   tyreManufacturerId: bridgestone
   gridPenalty:
   time: "1:13.508"
+- position: PL
+  driverNumber: 4
+  driverId: robert-kubica
+  constructorId: bmw-sauber
+  engineManufacturerId: bmw
+  tyreManufacturerId: bridgestone
+  gridPenalty:
+  time: "1:12.300"
