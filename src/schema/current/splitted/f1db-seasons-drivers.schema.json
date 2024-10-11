@@ -24,12 +24,12 @@
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The numerical position of the driver in the standings."
+          "description": "The numerical position of the driver in the season standings."
         },
         "positionText": {
           "type": ["string", "null"],
           "pattern": "^[0-9]+|DSQ|EX$",
-          "description": "The textual representation of the driver's position in the standings, including special statuses."
+          "description": "The textual representation of the driver's position in the season standings, including special statuses."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
