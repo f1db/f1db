@@ -1195,12 +1195,12 @@
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The numerical position of the constructor in the standings."
+          "description": "The numerical position of the engine manufacturer in the standings."
         },
         "positionText": {
           "type": ["string", "null"],
           "pattern": "^[0-9]+|DSQ|EX$",
-          "description": "The textual representation of the constructor's position in the standings, including special statuses."
+          "description": "The textual representation of the engine manufacturer's position in the standings, including special statuses."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
