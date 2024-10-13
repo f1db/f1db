@@ -48,7 +48,7 @@ Release artifacts are available in the following formats:
 - Added total points statistic (`totalPoints`) to constructors and engine manufacturers.
 - Added extensive season statistics for drivers, constructors, engine manufacturers and tyre manufacturers.
 - Renamed `ConstructorPreviousNextConstructor` to `ConstructorChronology`
-- Added explicit `positionDisplayOrder` to `DriverFamilyRelationship`, `ConstructorChronology`, `PracticeResult`, `QualifyingResult`, `StartingGridPosition`, `RaceResult`, `DriverOfTheDayResult`, `FastestLap`, `PitStop`, `RaceDriverStanding`, `RaceConstructorStanding`, `SeasonDriverStanding` and `SeasonConstructorStanding`.
+- Added explicit `positionDisplayOrder` to `DriverFamilyRelationship`, `ConstructorChronology`, `PracticeResult`, `QualifyingResult`, `StartingGridPosition`, `RaceResult`, `FastestLap`, `PitStop`, `DriverOfTheDayResult`, `RaceDriverStanding`, `RaceConstructorStanding`, `SeasonDriverStanding` and `SeasonConstructorStanding`.
 
 To accommodate these (breaking) changes the JSON Schema is bumped to version `v5.0.0`.
 
