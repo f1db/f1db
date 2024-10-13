@@ -18,16 +18,12 @@ import com.f1db.plugin.schema.splitted.SeasonConstructorStanding as SplittedSeas
 interface SeasonConstructorStandingMapper {
 
     @Mapping(target = "year", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedSeasonConstructorStanding(
-        seasonConstructorStanding: SeasonConstructorStanding,
-        @Context season: Season,
-        @Context index: Int
-    ): SplittedSeasonConstructorStanding
+    fun toSplittedSeasonConstructorStanding(seasonConstructorStanding: SeasonConstructorStanding, @Context season: Season): SplittedSeasonConstructorStanding
+
+    fun toSplittedSeasonConstructorStandings(seasonConstructorStandings: List<SeasonConstructorStanding>, @Context season: Season): List<SplittedSeasonConstructorStanding>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedSeasonConstructorStanding: SplittedSeasonConstructorStanding, @Context season: Season, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedSeasonConstructorStanding: SplittedSeasonConstructorStanding, @Context season: Season) {
         splittedSeasonConstructorStanding.year = season.year
-        splittedSeasonConstructorStanding.positionDisplayOrder = index
     }
 }

@@ -20,14 +20,14 @@ interface RaceDriverOfTheDayResultMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedDriverOfTheDayResult(driverOfTheDayResult: DriverOfTheDayResult, @Context race: Race, @Context index: Int): SplittedDriverOfTheDayResult
+    fun toSplittedDriverOfTheDayResult(driverOfTheDayResult: DriverOfTheDayResult, @Context race: Race): SplittedDriverOfTheDayResult
+
+    fun toSplittedDriverOfTheDayResults(driverOfTheDayResults: List<DriverOfTheDayResult>, @Context race: Race): List<SplittedDriverOfTheDayResult>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedDriverOfTheDayResult: SplittedDriverOfTheDayResult, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedDriverOfTheDayResult: SplittedDriverOfTheDayResult, @Context race: Race) {
         splittedDriverOfTheDayResult.raceId = race.id
         splittedDriverOfTheDayResult.year = race.year
         splittedDriverOfTheDayResult.round = race.round
-        splittedDriverOfTheDayResult.positionDisplayOrder = index
     }
 }

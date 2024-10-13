@@ -20,14 +20,14 @@ interface RacePitStopMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedPitStop(pitStop: PitStop, @Context race: Race, @Context index: Int): SplittedPitStop
+    fun toSplittedPitStop(pitStop: PitStop, @Context race: Race): SplittedPitStop
+
+    fun toSplittedPitStops(pitStops: List<PitStop>, @Context race: Race): List<SplittedPitStop>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedPitStop: SplittedPitStop, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedPitStop: SplittedPitStop, @Context race: Race) {
         splittedPitStop.raceId = race.id
         splittedPitStop.year = race.year
         splittedPitStop.round = race.round
-        splittedPitStop.positionDisplayOrder = index
     }
 }

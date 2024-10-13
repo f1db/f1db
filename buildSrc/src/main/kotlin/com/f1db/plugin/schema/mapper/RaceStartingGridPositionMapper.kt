@@ -20,14 +20,14 @@ interface RaceStartingGridPositionMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedStartingGridPosition(startingGridPosition: StartingGridPosition, @Context race: Race, @Context index: Int): SplittedStartingGridPosition
+    fun toSplittedStartingGridPosition(startingGridPosition: StartingGridPosition, @Context race: Race): SplittedStartingGridPosition
+
+    fun toSplittedStartingGridPositions(startingGridPositions: List<StartingGridPosition>, @Context race: Race): List<SplittedStartingGridPosition>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedStartingGridPosition: SplittedStartingGridPosition, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedStartingGridPosition: SplittedStartingGridPosition, @Context race: Race) {
         splittedStartingGridPosition.raceId = race.id
         splittedStartingGridPosition.year = race.year
         splittedStartingGridPosition.round = race.round
-        splittedStartingGridPosition.positionDisplayOrder = index
     }
 }

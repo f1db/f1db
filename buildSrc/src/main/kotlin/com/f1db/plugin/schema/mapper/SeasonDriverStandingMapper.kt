@@ -18,12 +18,12 @@ import com.f1db.plugin.schema.splitted.SeasonDriverStanding as SplittedSeasonDri
 interface SeasonDriverStandingMapper {
 
     @Mapping(target = "year", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedSeasonDriverStanding(seasonDriverStanding: SeasonDriverStanding, @Context season: Season, @Context index: Int): SplittedSeasonDriverStanding
+    fun toSplittedSeasonDriverStanding(seasonDriverStanding: SeasonDriverStanding, @Context season: Season): SplittedSeasonDriverStanding
+
+    fun toSplittedSeasonDriverStandings(seasonDriverStandings: List<SeasonDriverStanding>, @Context season: Season): List<SplittedSeasonDriverStanding>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedSeasonDriverStanding: SplittedSeasonDriverStanding, @Context season: Season, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedSeasonDriverStanding: SplittedSeasonDriverStanding, @Context season: Season) {
         splittedSeasonDriverStanding.year = season.year
-        splittedSeasonDriverStanding.positionDisplayOrder = index
     }
 }

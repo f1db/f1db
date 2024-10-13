@@ -135,6 +135,9 @@ class F1DBReader(
         println("Enriching data......")
 
         db.drivers.forEach { driver ->
+            driver.familyRelationships?.forEachIndexed { index, familyRelationship ->
+                familyRelationship.positionDisplayOrder = index + 1
+            }
             driver.totalChampionshipWins = 0
             driver.totalRaceEntries = 0
             driver.totalRaceStarts = 0
@@ -150,6 +153,9 @@ class F1DBReader(
         }
 
         db.constructors.forEach { constructor ->
+            constructor.chronology?.forEachIndexed { index, chronology ->
+                chronology.positionDisplayOrder = index + 1
+            }
             constructor.totalChampionshipWins = 0
             constructor.totalRaceEntries = 0
             constructor.totalRaceStarts = 0
@@ -301,7 +307,9 @@ class F1DBReader(
                         }
                     }
 
-            season.driverStandings?.forEach { driverStanding ->
+            season.driverStandings?.forEachIndexed { index, driverStanding ->
+
+                driverStanding.positionDisplayOrder = index + 1
 
                 val positionNumber = driverStanding.positionNumber
                 val driver = db.drivers.first { it.id == driverStanding.driverId }
@@ -323,7 +331,9 @@ class F1DBReader(
                 driver.totalChampionshipPoints += driverStanding.points
             }
 
-            season.constructorStandings?.forEach { constructorStanding ->
+            season.constructorStandings?.forEachIndexed { index, constructorStanding ->
+
+                constructorStanding.positionDisplayOrder = index + 1
 
                 val positionNumber = constructorStanding.positionNumber
                 val constructor = db.constructors.first { it.id == constructorStanding.constructorId }
@@ -358,9 +368,65 @@ class F1DBReader(
 
             races.forEach { race ->
 
+                // Enrich pre-qualifying results.
+
+                race.preQualifyingResults?.forEachIndexed { index, preQualifyingResult ->
+                    preQualifyingResult.positionDisplayOrder = index + 1
+                }
+
+                // Enrich free practice 1 results.
+
+                race.freePractice1Results?.forEachIndexed { index, freePractice1Result ->
+                    freePractice1Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich free practice 2 results.
+
+                race.freePractice2Results?.forEachIndexed { index, freePractice2Result ->
+                    freePractice2Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich free practice 3 results.
+
+                race.freePractice3Results?.forEachIndexed { index, freePractice3Result ->
+                    freePractice3Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich free practice 4 results.
+
+                race.freePractice4Results?.forEachIndexed { index, freePractice4Result ->
+                    freePractice4Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich qualifying 1 results.
+
+                race.qualifying1Results?.forEachIndexed { index, qualifying1Result ->
+                    qualifying1Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich qualifying 2 results.
+
+                race.qualifying2Results?.forEachIndexed { index, qualifying2Result ->
+                    qualifying2Result.positionDisplayOrder = index + 1
+                }
+
+                // Enrich qualifying results.
+
+                race.qualifyingResults?.forEachIndexed { index, qualifyingResult ->
+                    qualifyingResult.positionDisplayOrder = index + 1
+                }
+
+                // Enrich sprint qualifying results.
+
+                race.sprintQualifyingResults?.forEachIndexed { index, sprintQualifyingResult ->
+                    sprintQualifyingResult.positionDisplayOrder = index + 1
+                }
+
                 // Enrich sprint starting grid positions.
 
-                race.sprintStartingGridPositions?.forEach { sprintStartingGridPosition ->
+                race.sprintStartingGridPositions?.forEachIndexed { index, sprintStartingGridPosition ->
+
+                    sprintStartingGridPosition.positionDisplayOrder = index + 1
 
                     val (qualificationPositionNumber, qualificationPositionText) =
                             resolveQualificationPosition(race, sprintStartingGridPosition, true)
@@ -371,7 +437,9 @@ class F1DBReader(
 
                 // Enrich sprint race results.
 
-                race.sprintRaceResults?.forEach { sprintRaceResult ->
+                race.sprintRaceResults?.forEachIndexed { index, sprintRaceResult ->
+
+                    sprintRaceResult.positionDisplayOrder = index + 1
 
                     val (qualificationPositionNumber, qualificationPositionText) =
                             resolveQualificationPosition(race, sprintRaceResult, true)
@@ -381,9 +449,17 @@ class F1DBReader(
                     sprintRaceResult.positionsGained = calculatePositionsGained(sprintRaceResult, race.sprintStartingGridPositions)
                 }
 
+                // Enrich warming-up results.
+
+                race.warmingUpResults?.forEachIndexed { index, warmingUpResult ->
+                    warmingUpResult.positionDisplayOrder = index + 1
+                }
+
                 // Enrich starting grid positions.
 
-                race.startingGridPositions?.forEach { startingGridPosition ->
+                race.startingGridPositions?.forEachIndexed { index, startingGridPosition ->
+
+                    startingGridPosition.positionDisplayOrder = index + 1
 
                     val (qualificationPositionNumber, qualificationPositionText) =
                             resolveQualificationPosition(race, startingGridPosition, false)
@@ -394,7 +470,9 @@ class F1DBReader(
 
                 // Enrich race results.
 
-                race.raceResults?.forEach { raceResult ->
+                race.raceResults?.forEachIndexed { index, raceResult ->
+
+                    raceResult.positionDisplayOrder = index + 1
 
                     val (qualificationPositionNumber, qualificationPositionText) =
                             resolveQualificationPosition(race, raceResult, false)
@@ -405,6 +483,36 @@ class F1DBReader(
                     raceResult.pitStops = race.pitStops?.count { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                     raceResult.fastestLap = race.fastestLaps?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                     raceResult.driverOfTheDay = race.driverOfTheDayResults?.any { it.positionNumber == 1 && it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+                }
+
+                // Enrich fastest laps.
+
+                race.fastestLaps?.forEachIndexed { index, fastestLap ->
+                    fastestLap.positionDisplayOrder = index + 1
+                }
+
+                // Enrich pit stops.
+
+                race.pitStops?.forEachIndexed { index, pitStop ->
+                    pitStop.positionDisplayOrder = index + 1
+                }
+
+                // Enrich Driver of the Day results.
+
+                race.driverOfTheDayResults?.forEachIndexed { index, driverOfTheDayResult ->
+                    driverOfTheDayResult.positionDisplayOrder = index + 1
+                }
+
+                // Enrich driver standings.
+
+                race.driverStandings?.forEachIndexed { index, driverStanding ->
+                    driverStanding.positionDisplayOrder = index + 1
+                }
+
+                // Enrich constructor standings.
+
+                race.constructorStandings?.forEachIndexed { index, constructorStanding ->
+                    constructorStanding.positionDisplayOrder = index + 1
                 }
 
                 // Total points.
@@ -700,7 +808,7 @@ class F1DBReader(
                         seasonTyreManufacturer.totalFastestLaps++
                     }
 
-                    // Total driver of the day.
+                    // Total Driver of the Day.
 
                     if (raceResult.driverOfTheDay == true) {
                         driver.totalDriverOfTheDay++

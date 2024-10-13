@@ -302,6 +302,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the family relationship relative to other relationships of the parent driver."
+        },
         "driverId": {
           "type": "string",
           "description": "The identifier of the related driver."
@@ -312,6 +317,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "driverId",
         "type"
       ]
@@ -448,6 +454,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the constructor within the chronological sequence of the parent constructor."
+        },
         "constructorId": {
           "type": "string",
           "description": "The identifier of the constructor."
@@ -462,6 +473,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "constructorId",
         "yearFrom",
         "yearTo"
@@ -1462,6 +1474,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the standings."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1484,6 +1501,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverId",
@@ -1494,6 +1512,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order for the constructor's position in the standings."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1520,6 +1543,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "constructorId",
@@ -1935,6 +1959,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the practice session."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -1997,6 +2026,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2017,6 +2047,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the qualifying session."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2103,6 +2138,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2129,6 +2165,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's starting grid position."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2190,6 +2231,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2209,6 +2251,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the race."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2343,6 +2390,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2378,6 +2426,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the fastest laps."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2440,6 +2493,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2460,6 +2514,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The position display order of the pit stop."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2511,6 +2570,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2528,6 +2588,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the Driver of the Day vote."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2566,6 +2631,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverNumber",
@@ -2580,6 +2646,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the driver's position in the standings."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2606,6 +2677,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "driverId",
@@ -2617,6 +2689,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order for the constructor's position in the standings."
+        },
         "positionNumber": {
           "type": ["integer", "null"],
           "minimum": 1,
@@ -2647,6 +2724,7 @@
         }
       },
       "required": [
+        "positionDisplayOrder",
         "positionNumber",
         "positionText",
         "constructorId",

@@ -20,14 +20,14 @@ interface RacePracticeResultMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedPracticeResult(practiceResult: PracticeResult, @Context race: Race, @Context index: Int): SplittedPracticeResult
+    fun toSplittedPracticeResult(practiceResult: PracticeResult, @Context race: Race): SplittedPracticeResult
+
+    fun toSplittedPracticeResults(practiceResults: List<PracticeResult>, @Context race: Race): List<SplittedPracticeResult>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedPracticeResult: SplittedPracticeResult, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedPracticeResult: SplittedPracticeResult, @Context race: Race) {
         splittedPracticeResult.raceId = race.id
         splittedPracticeResult.year = race.year
         splittedPracticeResult.round = race.round
-        splittedPracticeResult.positionDisplayOrder = index
     }
 }

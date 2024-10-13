@@ -20,14 +20,14 @@ interface RaceDriverStandingMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedRaceDriverStanding(raceDriverStanding: RaceDriverStanding, @Context race: Race, @Context index: Int): SplittedRaceDriverStanding
+    fun toSplittedRaceDriverStanding(raceDriverStanding: RaceDriverStanding, @Context race: Race): SplittedRaceDriverStanding
+
+    fun toSplittedRaceDriverStandings(raceDriverStandings: List<RaceDriverStanding>, @Context race: Race): List<SplittedRaceDriverStanding>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedRaceDriverStanding: SplittedRaceDriverStanding, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedRaceDriverStanding: SplittedRaceDriverStanding, @Context race: Race) {
         splittedRaceDriverStanding.raceId = race.id
         splittedRaceDriverStanding.year = race.year
         splittedRaceDriverStanding.round = race.round
-        splittedRaceDriverStanding.positionDisplayOrder = index
     }
 }

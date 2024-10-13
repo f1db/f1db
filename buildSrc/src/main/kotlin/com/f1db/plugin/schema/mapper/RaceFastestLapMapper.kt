@@ -20,14 +20,14 @@ interface RaceFastestLapMapper {
     @Mapping(target = "raceId", ignore = true)
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "round", ignore = true)
-    @Mapping(target = "positionDisplayOrder", ignore = true)
-    fun toSplittedFastestLap(fastestLap: FastestLap, @Context race: Race, @Context index: Int): SplittedFastestLap
+    fun toSplittedFastestLap(fastestLap: FastestLap, @Context race: Race): SplittedFastestLap
+
+    fun toSplittedFastestLaps(fastestLaps: List<FastestLap>, @Context race: Race): List<SplittedFastestLap>
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedFastestLap: SplittedFastestLap, @Context race: Race, @Context index: Int) {
+    fun afterMapping(@MappingTarget splittedFastestLap: SplittedFastestLap, @Context race: Race) {
         splittedFastestLap.raceId = race.id
         splittedFastestLap.year = race.year
         splittedFastestLap.round = race.round
-        splittedFastestLap.positionDisplayOrder = index
     }
 }
