@@ -24,18 +24,18 @@ interface SeasonEntrantDriverMapper {
     @Mapping(target = "constructorId", ignore = true)
     @Mapping(target = "engineManufacturerId", ignore = true)
     fun toSplittedSeasonEntrantDriver(
-        seasonEntrantDriver: SeasonEntrantDriver,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            seasonEntrantDriver: SeasonEntrantDriver,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ): SplittedSeasonEntrantDriver
 
     @AfterMapping
     fun afterMapping(
-        @MappingTarget splittedSeasonEntrantDriver: SplittedSeasonEntrantDriver,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            @MappingTarget splittedSeasonEntrantDriver: SplittedSeasonEntrantDriver,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ) {
         splittedSeasonEntrantDriver.year = season.year
         splittedSeasonEntrantDriver.entrantId = seasonEntrant.entrantId

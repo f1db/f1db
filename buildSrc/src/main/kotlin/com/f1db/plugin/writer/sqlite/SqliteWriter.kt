@@ -6,8 +6,8 @@ import com.f1db.plugin.schema.single.F1db
 import com.f1db.plugin.writer.sql.Tables.*
 import com.f1db.plugin.writer.sql.mapper.chassisMapper
 import com.f1db.plugin.writer.sql.mapper.circuitMapper
-import com.f1db.plugin.writer.sql.mapper.constructorMapper
 import com.f1db.plugin.writer.sql.mapper.constructorChronologyMapper
+import com.f1db.plugin.writer.sql.mapper.constructorMapper
 import com.f1db.plugin.writer.sql.mapper.continentMapper
 import com.f1db.plugin.writer.sql.mapper.countryMapper
 import com.f1db.plugin.writer.sql.mapper.driverFamilyRelationshipMapper
@@ -55,9 +55,9 @@ import java.util.*
  * @author Marcel Overdijk
  */
 class SqliteWriter(
-    private val projectName: String,
-    private val outputDir: File,
-    private val db: F1db,
+        private val projectName: String,
+        private val outputDir: File,
+        private val db: F1db,
 ) {
 
     fun write() {

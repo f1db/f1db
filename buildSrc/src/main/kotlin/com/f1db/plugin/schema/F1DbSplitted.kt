@@ -2,8 +2,8 @@ package com.f1db.plugin.schema
 
 import com.f1db.plugin.schema.mapper.chassisMapper
 import com.f1db.plugin.schema.mapper.circuitMapper
-import com.f1db.plugin.schema.mapper.constructorMapper
 import com.f1db.plugin.schema.mapper.constructorChronologyMapper
+import com.f1db.plugin.schema.mapper.constructorMapper
 import com.f1db.plugin.schema.mapper.continentMapper
 import com.f1db.plugin.schema.mapper.countryMapper
 import com.f1db.plugin.schema.mapper.driverFamilyRelationshipMapper
@@ -86,16 +86,16 @@ class F1DbSplitted(private val db: F1db) {
 
     val driverFamilyRelationships: List<DriverFamilyRelationship>
         get() = db.drivers
-            .filter { it.familyRelationships != null }
-            .flatMap { driver -> driverFamilyRelationshipMapper.toSplittedDriverFamilyRelationships(driver.familyRelationships, driver) }
+                .filter { it.familyRelationships != null }
+                .flatMap { driver -> driverFamilyRelationshipMapper.toSplittedDriverFamilyRelationships(driver.familyRelationships, driver) }
 
     val constructors: List<Constructor>
         get() = constructorMapper.toSplittedConstructors(db.constructors)
 
     val constructorChronology: List<ConstructorChronology>
         get() = db.constructors
-            .filter { it.chronology != null }
-            .flatMap { constructor -> constructorChronologyMapper.toSplittedConstructorChronology(constructor.chronology, constructor) }
+                .filter { it.chronology != null }
+                .flatMap { constructor -> constructorChronologyMapper.toSplittedConstructorChronology(constructor.chronology, constructor) }
 
     val chassis: List<Chassis>
         get() = chassisMapper.toSplittedChassis(db.chassis)
@@ -123,95 +123,95 @@ class F1DbSplitted(private val db: F1db) {
 
     val seasonEntrants: List<SeasonEntrant>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.map { seasonEntrant ->
-                    seasonEntrantMapper.toSplittedSeasonEntrant(seasonEntrant, season)
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.map { seasonEntrant ->
+                        seasonEntrantMapper.toSplittedSeasonEntrant(seasonEntrant, season)
+                    }
                 }
-            }
 
     val seasonEntrantConstructors: List<SeasonEntrantConstructor>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.flatMap { seasonEntrant ->
-                    seasonEntrant.constructors.map { seasonEntrantConstructor ->
-                        seasonEntrantConstructorMapper.toSplittedSeasonEntrantConstructor(seasonEntrantConstructor, season, seasonEntrant)
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.flatMap { seasonEntrant ->
+                        seasonEntrant.constructors.map { seasonEntrantConstructor ->
+                            seasonEntrantConstructorMapper.toSplittedSeasonEntrantConstructor(seasonEntrantConstructor, season, seasonEntrant)
+                        }
                     }
                 }
-            }
 
     val seasonEntrantChassis: List<SeasonEntrantChassis>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.flatMap { seasonEntrant ->
-                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
-                        seasonEntrantConstructor.chassis.map { seasonEntrantChassis ->
-                            seasonEntrantChassisMapper.toSplittedSeasonEntrantChassis(
-                                seasonEntrantChassis,
-                                season,
-                                seasonEntrant,
-                                seasonEntrantConstructor
-                            )
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.flatMap { seasonEntrant ->
+                        seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                            seasonEntrantConstructor.chassis.map { seasonEntrantChassis ->
+                                seasonEntrantChassisMapper.toSplittedSeasonEntrantChassis(
+                                        seasonEntrantChassis,
+                                        season,
+                                        seasonEntrant,
+                                        seasonEntrantConstructor
+                                )
+                            }
                         }
                     }
                 }
-            }
 
     val seasonEntrantEngines: List<SeasonEntrantEngine>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.flatMap { seasonEntrant ->
-                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
-                        seasonEntrantConstructor.engines.map { seasonEntrantEngine ->
-                            seasonEntrantEngineMapper.toSplittedSeasonEntrantEngine(
-                                seasonEntrantEngine,
-                                season,
-                                seasonEntrant,
-                                seasonEntrantConstructor
-                            )
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.flatMap { seasonEntrant ->
+                        seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                            seasonEntrantConstructor.engines.map { seasonEntrantEngine ->
+                                seasonEntrantEngineMapper.toSplittedSeasonEntrantEngine(
+                                        seasonEntrantEngine,
+                                        season,
+                                        seasonEntrant,
+                                        seasonEntrantConstructor
+                                )
+                            }
                         }
                     }
                 }
-            }
 
     val seasonEntrantTyreManufacturers: List<SeasonEntrantTyreManufacturer>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.flatMap { seasonEntrant ->
-                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
-                        seasonEntrantConstructor.tyreManufacturers.map { seasonEntrantTyreManufacturer ->
-                            seasonEntrantTyreManufacturerMapper.toSplittedSeasonEntrantTyreManufacturer(
-                                seasonEntrantTyreManufacturer,
-                                season,
-                                seasonEntrant,
-                                seasonEntrantConstructor
-                            )
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.flatMap { seasonEntrant ->
+                        seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                            seasonEntrantConstructor.tyreManufacturers.map { seasonEntrantTyreManufacturer ->
+                                seasonEntrantTyreManufacturerMapper.toSplittedSeasonEntrantTyreManufacturer(
+                                        seasonEntrantTyreManufacturer,
+                                        season,
+                                        seasonEntrant,
+                                        seasonEntrantConstructor
+                                )
+                            }
                         }
                     }
                 }
-            }
 
     val seasonEntrantDrivers: List<SeasonEntrantDriver>
         get() = db.seasons
-            .filter { it.entrants != null }
-            .flatMap { season ->
-                season.entrants.flatMap { seasonEntrant ->
-                    seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
-                        seasonEntrantConstructor.drivers.map { seasonEntrantDriver ->
-                            seasonEntrantDriverMapper.toSplittedSeasonEntrantDriver(
-                                seasonEntrantDriver,
-                                season,
-                                seasonEntrant,
-                                seasonEntrantConstructor
-                            )
+                .filter { it.entrants != null }
+                .flatMap { season ->
+                    season.entrants.flatMap { seasonEntrant ->
+                        seasonEntrant.constructors.flatMap { seasonEntrantConstructor ->
+                            seasonEntrantConstructor.drivers.map { seasonEntrantDriver ->
+                                seasonEntrantDriverMapper.toSplittedSeasonEntrantDriver(
+                                        seasonEntrantDriver,
+                                        season,
+                                        seasonEntrant,
+                                        seasonEntrantConstructor
+                                )
+                            }
                         }
                     }
                 }
-            }
 
     val seasonConstructors: List<SeasonConstructor>
         get() = db.seasons
@@ -251,111 +251,111 @@ class F1DbSplitted(private val db: F1db) {
 
     val seasonDriverStandings: List<SeasonDriverStanding>
         get() = db.seasons
-            .filter { it.driverStandings != null }
-            .flatMap { season -> seasonDriverStandingMapper.toSplittedSeasonDriverStandings(season.driverStandings, season) }
+                .filter { it.driverStandings != null }
+                .flatMap { season -> seasonDriverStandingMapper.toSplittedSeasonDriverStandings(season.driverStandings, season) }
 
     val seasonConstructorStandings: List<SeasonConstructorStanding>
         get() = db.seasons
-            .filter { it.constructorStandings != null }
-            .flatMap { season -> seasonConstructorStandingMapper.toSplittedSeasonConstructorStandings(season.constructorStandings, season) }
+                .filter { it.constructorStandings != null }
+                .flatMap { season -> seasonConstructorStandingMapper.toSplittedSeasonConstructorStandings(season.constructorStandings, season) }
 
     val races: List<Race>
         get() = raceMapper.toSplittedRaces(db.races)
 
     val racePreQualifyingResults: List<QualifyingResult>
         get() = db.races
-            .filter { it.preQualifyingResults != null }
-            .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.preQualifyingResults, race) }
+                .filter { it.preQualifyingResults != null }
+                .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.preQualifyingResults, race) }
 
     val raceFreePractice1Results: List<PracticeResult>
         get() = db.races
-            .filter { it.freePractice1Results != null }
-            .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice1Results, race) }
+                .filter { it.freePractice1Results != null }
+                .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice1Results, race) }
 
     val raceFreePractice2Results: List<PracticeResult>
         get() = db.races
-            .filter { it.freePractice2Results != null }
-            .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice2Results, race) }
+                .filter { it.freePractice2Results != null }
+                .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice2Results, race) }
 
     val raceFreePractice3Results: List<PracticeResult>
         get() = db.races
-            .filter { it.freePractice3Results != null }
-            .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice3Results, race) }
+                .filter { it.freePractice3Results != null }
+                .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice3Results, race) }
 
     val raceFreePractice4Results: List<PracticeResult>
         get() = db.races
-            .filter { it.freePractice4Results != null }
-            .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice4Results, race) }
+                .filter { it.freePractice4Results != null }
+                .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.freePractice4Results, race) }
 
     val raceQualifying1Results: List<QualifyingResult>
         get() = db.races
-            .filter { it.qualifying1Results != null }
-            .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifying1Results, race) }
+                .filter { it.qualifying1Results != null }
+                .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifying1Results, race) }
 
     val raceQualifying2Results: List<QualifyingResult>
         get() = db.races
-            .filter { it.qualifying2Results != null }
-            .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifying2Results, race) }
+                .filter { it.qualifying2Results != null }
+                .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifying2Results, race) }
 
     val raceQualifyingResults: List<QualifyingResult>
         get() = db.races
-            .filter { it.qualifyingResults != null }
-            .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifyingResults, race) }
+                .filter { it.qualifyingResults != null }
+                .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.qualifyingResults, race) }
 
     val raceSprintQualifyingResults: List<QualifyingResult>
         get() = db.races
-            .filter { it.sprintQualifyingResults != null }
-            .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.sprintQualifyingResults, race) }
+                .filter { it.sprintQualifyingResults != null }
+                .flatMap { race -> raceQualifyingResultMapper.toSplittedQualifyingResults(race.sprintQualifyingResults, race) }
 
     val raceSprintStartingGridPositions: List<StartingGridPosition>
         get() = db.races
-            .filter { it.sprintStartingGridPositions != null }
-            .flatMap { race -> raceStartingGridPositionMapper.toSplittedStartingGridPositions(race.sprintStartingGridPositions, race) }
+                .filter { it.sprintStartingGridPositions != null }
+                .flatMap { race -> raceStartingGridPositionMapper.toSplittedStartingGridPositions(race.sprintStartingGridPositions, race) }
 
     val raceSprintRaceResults: List<RaceResult>
         get() = db.races
-            .filter { it.sprintRaceResults != null }
-            .flatMap { race -> raceRaceResultMapper.toSplittedRaceResults(race.sprintRaceResults, race) }
+                .filter { it.sprintRaceResults != null }
+                .flatMap { race -> raceRaceResultMapper.toSplittedRaceResults(race.sprintRaceResults, race) }
 
     val raceWarmingUpResults: List<PracticeResult>
         get() = db.races
-            .filter { it.warmingUpResults != null }
-            .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.warmingUpResults, race) }
+                .filter { it.warmingUpResults != null }
+                .flatMap { race -> racePracticeResultMapper.toSplittedPracticeResults(race.warmingUpResults, race) }
 
     val raceStartingGridPositions: List<StartingGridPosition>
         get() = db.races
-            .filter { it.startingGridPositions != null }
-            .flatMap { race -> raceStartingGridPositionMapper.toSplittedStartingGridPositions(race.startingGridPositions, race) }
+                .filter { it.startingGridPositions != null }
+                .flatMap { race -> raceStartingGridPositionMapper.toSplittedStartingGridPositions(race.startingGridPositions, race) }
 
     val raceRaceResults: List<RaceResult>
         get() = db.races
-            .filter { it.raceResults != null }
-            .flatMap { race -> raceRaceResultMapper.toSplittedRaceResults(race.raceResults, race) }
+                .filter { it.raceResults != null }
+                .flatMap { race -> raceRaceResultMapper.toSplittedRaceResults(race.raceResults, race) }
 
     val raceFastestLaps: List<FastestLap>
         get() = db.races
-            .filter { it.fastestLaps != null }
-            .flatMap { race -> raceFastestLapMapper.toSplittedFastestLaps(race.fastestLaps, race) }
+                .filter { it.fastestLaps != null }
+                .flatMap { race -> raceFastestLapMapper.toSplittedFastestLaps(race.fastestLaps, race) }
 
     val racePitStops: List<PitStop>
         get() = db.races
-            .filter { it.pitStops != null }
-            .flatMap { race -> racePitStopMapper.toSplittedPitStops(race.pitStops, race) }
+                .filter { it.pitStops != null }
+                .flatMap { race -> racePitStopMapper.toSplittedPitStops(race.pitStops, race) }
 
     val raceDriverOfTheDayResults: List<DriverOfTheDayResult>
         get() = db.races
-            .filter { it.driverOfTheDayResults != null }
-            .flatMap { race -> raceDriverOfTheDayResultMapper.toSplittedDriverOfTheDayResults(race.driverOfTheDayResults, race) }
+                .filter { it.driverOfTheDayResults != null }
+                .flatMap { race -> raceDriverOfTheDayResultMapper.toSplittedDriverOfTheDayResults(race.driverOfTheDayResults, race) }
 
     val raceDriverStandings: List<RaceDriverStanding>
         get() = db.races
-            .filter { it.driverStandings != null }
-            .flatMap { race -> raceDriverStandingMapper.toSplittedRaceDriverStandings(race.driverStandings, race) }
+                .filter { it.driverStandings != null }
+                .flatMap { race -> raceDriverStandingMapper.toSplittedRaceDriverStandings(race.driverStandings, race) }
 
     val raceConstructorStandings: List<RaceConstructorStanding>
         get() = db.races
-            .filter { it.constructorStandings != null }
-            .flatMap { race -> raceConstructorStandingMapper.toSplittedRaceConstructorStandings(race.constructorStandings, race) }
+                .filter { it.constructorStandings != null }
+                .flatMap { race -> raceConstructorStandingMapper.toSplittedRaceConstructorStandings(race.constructorStandings, race) }
 
     val continents: List<Continent>
         get() = continentMapper.toSplittedContinents(db.continents)

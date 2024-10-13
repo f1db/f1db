@@ -6,8 +6,8 @@ import com.f1db.plugin.schema.single.F1db
 import com.f1db.plugin.writer.sql.Tables.*
 import com.f1db.plugin.writer.sql.mapper.chassisMapper
 import com.f1db.plugin.writer.sql.mapper.circuitMapper
-import com.f1db.plugin.writer.sql.mapper.constructorMapper
 import com.f1db.plugin.writer.sql.mapper.constructorChronologyMapper
+import com.f1db.plugin.writer.sql.mapper.constructorMapper
 import com.f1db.plugin.writer.sql.mapper.continentMapper
 import com.f1db.plugin.writer.sql.mapper.countryMapper
 import com.f1db.plugin.writer.sql.mapper.driverFamilyRelationshipMapper
@@ -58,9 +58,9 @@ import java.io.PrintWriter
  * @author Marcel Overdijk
  */
 class SqlWriter(
-    private val projectName: String,
-    private val outputDir: File,
-    private val db: F1db,
+        private val projectName: String,
+        private val outputDir: File,
+        private val db: F1db,
 ) {
 
     fun write() {
@@ -79,10 +79,10 @@ class SqlWriter(
         println("Writing ${outputFile.name}....")
 
         val settings = Settings()
-            .withParamType(ParamType.INLINED)
-            .withRenderKeywordCase(RenderKeywordCase.UPPER)
-            .withRenderFormatted(false)
-            .withRenderSchema(false)
+                .withParamType(ParamType.INLINED)
+                .withRenderKeywordCase(RenderKeywordCase.UPPER)
+                .withRenderFormatted(false)
+                .withRenderSchema(false)
 
         val ctx = DSL.using(dialect, settings)
 
@@ -153,20 +153,20 @@ class SqlWriter(
         ctx.settings().isRenderFormatted = true
         tables.forEach { table ->
             var stmt = ctx
-                .createTable(table)
-                .columns(*table.fields())
-                .constraint(primaryKey(table.primaryKey?.fields))
-                .constraints(table.uniqueKeys.map { unique(it.fields) })
-                .constraints(table.references.map { foreignKey(it.fields).references(it.inverseKey.table, it.keyFields) })
-                .sql
+                    .createTable(table)
+                    .columns(*table.fields())
+                    .constraint(primaryKey(table.primaryKey?.fields))
+                    .constraints(table.uniqueKeys.map { unique(it.fields) })
+                    .constraints(table.references.map { foreignKey(it.fields).references(it.inverseKey.table, it.keyFields) })
+                    .sql
             out.println("$stmt;")
             out.println("")
             ctx.settings().isRenderFormatted = false
             table.indexes.forEach { index ->
                 stmt = ctx
-                    .createIndex(index.name)
-                    .on(index.table, index.fields)
-                    .sql
+                        .createIndex(index.name)
+                        .on(index.table, index.fields)
+                        .sql
                 out.println("$stmt;")
             }
             if (table.indexes.size > 0) {
@@ -209,64 +209,64 @@ class SqlWriter(
         ctx.settings().isRenderFormatted = false
         records.forEach { record ->
             val stmt = ctx
-                .insertInto(table)
-                .set(record)
-                .sql
+                    .insertInto(table)
+                    .set(record)
+                    .sql
             out.println("$stmt;")
         }
         out.println("")
     }
 
     private val tables = listOf(
-        CONTINENT,
-        COUNTRY,
-        DRIVER,
-        DRIVER_FAMILY_RELATIONSHIP,
-        CONSTRUCTOR,
-        CONSTRUCTOR_CHRONOLOGY,
-        CHASSIS,
-        ENGINE_MANUFACTURER,
-        ENGINE,
-        TYRE_MANUFACTURER,
-        ENTRANT,
-        CIRCUIT,
-        GRAND_PRIX,
-        SEASON,
-        SEASON_ENTRANT,
-        SEASON_ENTRANT_CONSTRUCTOR,
-        SEASON_ENTRANT_CHASSIS,
-        SEASON_ENTRANT_ENGINE,
-        SEASON_ENTRANT_TYRE_MANUFACTURER,
-        SEASON_ENTRANT_DRIVER,
-        SEASON_CONSTRUCTOR,
-        SEASON_ENGINE_MANUFACTURER,
-        SEASON_TYRE_MANUFACTURER,
-        SEASON_DRIVER,
-        SEASON_DRIVER_STANDING,
-        SEASON_CONSTRUCTOR_STANDING,
-        RACE,
-        RACE_DATA,
-        RACE_DRIVER_STANDING,
-        RACE_CONSTRUCTOR_STANDING
+            CONTINENT,
+            COUNTRY,
+            DRIVER,
+            DRIVER_FAMILY_RELATIONSHIP,
+            CONSTRUCTOR,
+            CONSTRUCTOR_CHRONOLOGY,
+            CHASSIS,
+            ENGINE_MANUFACTURER,
+            ENGINE,
+            TYRE_MANUFACTURER,
+            ENTRANT,
+            CIRCUIT,
+            GRAND_PRIX,
+            SEASON,
+            SEASON_ENTRANT,
+            SEASON_ENTRANT_CONSTRUCTOR,
+            SEASON_ENTRANT_CHASSIS,
+            SEASON_ENTRANT_ENGINE,
+            SEASON_ENTRANT_TYRE_MANUFACTURER,
+            SEASON_ENTRANT_DRIVER,
+            SEASON_CONSTRUCTOR,
+            SEASON_ENGINE_MANUFACTURER,
+            SEASON_TYRE_MANUFACTURER,
+            SEASON_DRIVER,
+            SEASON_DRIVER_STANDING,
+            SEASON_CONSTRUCTOR_STANDING,
+            RACE,
+            RACE_DATA,
+            RACE_DRIVER_STANDING,
+            RACE_CONSTRUCTOR_STANDING
     )
 
     private val views = listOf(
-        PRE_QUALIFYING_RESULT,
-        FREE_PRACTICE_1_RESULT,
-        FREE_PRACTICE_2_RESULT,
-        FREE_PRACTICE_3_RESULT,
-        FREE_PRACTICE_4_RESULT,
-        QUALIFYING_1_RESULT,
-        QUALIFYING_2_RESULT,
-        QUALIFYING_RESULT,
-        SPRINT_QUALIFYING_RESULT,
-        SPRINT_STARTING_GRID_POSITION,
-        SPRINT_RACE_RESULT,
-        WARMING_UP_RESULT,
-        STARTING_GRID_POSITION,
-        RACE_RESULT,
-        FASTEST_LAP,
-        PIT_STOP,
-        DRIVER_OF_THE_DAY_RESULT
+            PRE_QUALIFYING_RESULT,
+            FREE_PRACTICE_1_RESULT,
+            FREE_PRACTICE_2_RESULT,
+            FREE_PRACTICE_3_RESULT,
+            FREE_PRACTICE_4_RESULT,
+            QUALIFYING_1_RESULT,
+            QUALIFYING_2_RESULT,
+            QUALIFYING_RESULT,
+            SPRINT_QUALIFYING_RESULT,
+            SPRINT_STARTING_GRID_POSITION,
+            SPRINT_RACE_RESULT,
+            WARMING_UP_RESULT,
+            STARTING_GRID_POSITION,
+            RACE_RESULT,
+            FASTEST_LAP,
+            PIT_STOP,
+            DRIVER_OF_THE_DAY_RESULT
     )
 }

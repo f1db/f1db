@@ -24,18 +24,18 @@ interface SeasonEntrantTyreManufacturerMapper {
     @Mapping(target = "constructorId", ignore = true)
     @Mapping(target = "engineManufacturerId", ignore = true)
     fun toSplittedSeasonEntrantTyreManufacturer(
-        seasonEntrantTyreManufacturer: SeasonEntrantTyreManufacturer,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            seasonEntrantTyreManufacturer: SeasonEntrantTyreManufacturer,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ): SplittedSeasonEntrantTyreManufacturer
 
     @AfterMapping
     fun afterMapping(
-        @MappingTarget splittedSeasonEntrantTyreManufacturer: SplittedSeasonEntrantTyreManufacturer,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            @MappingTarget splittedSeasonEntrantTyreManufacturer: SplittedSeasonEntrantTyreManufacturer,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ) {
         splittedSeasonEntrantTyreManufacturer.year = season.year
         splittedSeasonEntrantTyreManufacturer.entrantId = seasonEntrant.entrantId

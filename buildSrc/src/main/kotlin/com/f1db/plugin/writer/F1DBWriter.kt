@@ -14,10 +14,10 @@ import java.io.File
  * @author Marcel Overdijk
  */
 class F1DBWriter(
-    private val projectName: String,
-    private val outputDir: File,
-    private val schemaDir: File,
-    private val db: F1db,
+        private val projectName: String,
+        private val outputDir: File,
+        private val schemaDir: File,
+        private val db: F1db,
 ) {
 
     fun write() {

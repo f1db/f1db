@@ -56,8 +56,8 @@ import kotlin.math.min
  * @author Marcel Overdijk
  */
 class F1DBReader(
-    private val sourceDir: File,
-    private val currentSeason: CurrentSeason,
+        private val sourceDir: File,
+        private val currentSeason: CurrentSeason,
 ) {
 
     private val mapper = createMapper()
@@ -758,7 +758,7 @@ class F1DBReader(
                     }
 
                     // Total podiums + podium races.
-                    
+
                     if (raceResult.positionNumber in listOf(1, 2, 3)) {
 
                         if (addIfAbsent(podiums, driver)) {
@@ -936,7 +936,7 @@ class F1DBReader(
                 positionsGained = raceResult.gridPositionNumber - raceResult.positionNumber
             } else {
                 val index =
-                    startingGridPositions.indexOfFirst { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+                        startingGridPositions.indexOfFirst { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
                 if (index > -1) {
                     positionsGained = (index + 1) - raceResult.positionNumber
                 }
@@ -971,13 +971,13 @@ class F1DBReader(
         simpleModule.setMixInAnnotation(RaceDriverStanding::class.java, RaceDriverStandingMixIn::class.java)
         simpleModule.setMixInAnnotation(RaceConstructorStanding::class.java, RaceConstructorStandingMixIn::class.java)
         val mapper = YAMLMapper.builder()
-            .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
-            .configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)
-            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
-            .addModule(JavaTimeModule())
-            .addModule(KotlinModule.Builder().build())
-            .addModule(simpleModule)
-            .build()
+                .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
+                .configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
+                .addModule(JavaTimeModule())
+                .addModule(KotlinModule.Builder().build())
+                .addModule(simpleModule)
+                .build()
         return mapper
     }
 

@@ -24,18 +24,18 @@ interface SeasonEntrantChassisMapper {
     @Mapping(target = "constructorId", ignore = true)
     @Mapping(target = "engineManufacturerId", ignore = true)
     fun toSplittedSeasonEntrantChassis(
-        seasonEntrantChassis: SeasonEntrantChassis,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            seasonEntrantChassis: SeasonEntrantChassis,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ): SplittedSeasonEntrantChassis
 
     @AfterMapping
     fun afterMapping(
-        @MappingTarget splittedSeasonEntrantChassis: SplittedSeasonEntrantChassis,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant,
-        @Context seasonEntrantConstructor: SeasonEntrantConstructor
+            @MappingTarget splittedSeasonEntrantChassis: SplittedSeasonEntrantChassis,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant,
+            @Context seasonEntrantConstructor: SeasonEntrantConstructor
     ) {
         splittedSeasonEntrantChassis.year = season.year
         splittedSeasonEntrantChassis.entrantId = seasonEntrant.entrantId

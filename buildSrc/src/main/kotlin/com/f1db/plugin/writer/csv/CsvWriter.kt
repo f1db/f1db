@@ -16,9 +16,9 @@ import java.io.File
  * @author Marcel Overdijk
  */
 class CsvWriter(
-    private val projectName: String,
-    private val outputDir: File,
-    private val db: F1db,
+        private val projectName: String,
+        private val outputDir: File,
+        private val db: F1db,
 ) {
 
     fun write() {
@@ -84,12 +84,12 @@ class CsvWriter(
         // Create the csv mapper.
 
         val mapper = CsvMapper.builder()
-            .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
-            .configure(CsvGenerator.Feature.ALWAYS_QUOTE_STRINGS, true)
-            .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
-            .addModule(JavaTimeModule())
-            .addModule(KotlinModule.Builder().build())
-            .build()
+                .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
+                .configure(CsvGenerator.Feature.ALWAYS_QUOTE_STRINGS, true)
+                .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+                .addModule(JavaTimeModule())
+                .addModule(KotlinModule.Builder().build())
+                .build()
 
         // Write the csv file.
 

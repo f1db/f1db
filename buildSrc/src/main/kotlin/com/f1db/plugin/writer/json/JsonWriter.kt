@@ -20,10 +20,10 @@ import java.io.FileReader
  * @author Marcel Overdijk
  */
 class JsonWriter(
-    private val projectName: String,
-    private val outputDir: File,
-    private val schemaDir: File,
-    private val db: F1db,
+        private val projectName: String,
+        private val outputDir: File,
+        private val schemaDir: File,
+        private val db: F1db,
 ) {
 
     fun write() {
@@ -94,12 +94,12 @@ class JsonWriter(
         // Create the json mapper.
 
         val mapper = JsonMapper.builder()
-            .defaultPrettyPrinter(DefaultPrettyPrinter().withArrayIndenter(DefaultPrettyPrinter.NopIndenter()))
-            .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
-            .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
-            .addModule(JavaTimeModule())
-            .addModule(KotlinModule.Builder().build())
-            .build()
+                .defaultPrettyPrinter(DefaultPrettyPrinter().withArrayIndenter(DefaultPrettyPrinter.NopIndenter()))
+                .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
+                .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+                .addModule(JavaTimeModule())
+                .addModule(KotlinModule.Builder().build())
+                .build()
 
         // Write the json file.
 

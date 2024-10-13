@@ -53,12 +53,12 @@ fun String?.toMillis(): Int? {
 
     // Return millis.
     return Duration.ofDays(0)
-        .plusHours(hours)
-        .plusMinutes(minutes)
-        .plusSeconds(seconds)
-        .plusMillis(millis)
-        .toMillis()
-        .toInt()
+            .plusHours(hours)
+            .plusMinutes(minutes)
+            .plusSeconds(seconds)
+            .plusMillis(millis)
+            .toMillis()
+            .toInt()
 }
 
 fun String?.toRounds(): List<Int> {

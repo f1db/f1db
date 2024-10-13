@@ -21,16 +21,16 @@ interface SeasonEntrantConstructorMapper {
     @Mapping(target = "year", ignore = true)
     @Mapping(target = "entrantId", ignore = true)
     fun toSplittedSeasonEntrantConstructor(
-        seasonEntrantConstructor: SeasonEntrantConstructor,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant
+            seasonEntrantConstructor: SeasonEntrantConstructor,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant
     ): SplittedSeasonEntrantConstructor
 
     @AfterMapping
     fun afterMapping(
-        @MappingTarget splittedSeasonEntrantConstructor: SplittedSeasonEntrantConstructor,
-        @Context season: Season,
-        @Context seasonEntrant: SeasonEntrant
+            @MappingTarget splittedSeasonEntrantConstructor: SplittedSeasonEntrantConstructor,
+            @Context season: Season,
+            @Context seasonEntrant: SeasonEntrant
     ) {
         splittedSeasonEntrantConstructor.year = season.year
         splittedSeasonEntrantConstructor.entrantId = seasonEntrant.entrantId
