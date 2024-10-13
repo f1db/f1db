@@ -1,7 +1,7 @@
 plugins {
     `java-gradle-plugin`
-    id("org.jetbrains.kotlin.jvm") version "2.0.20"
-    id("org.jetbrains.kotlin.kapt") version "2.0.20"
+    id("org.jetbrains.kotlin.jvm") version "2.0.21"
+    id("org.jetbrains.kotlin.kapt") version "2.0.21"
     id("org.jooq.jooq-codegen-gradle") version "3.19.13"
     id("org.jsonschema2pojo") version "1.2.2"
 }
