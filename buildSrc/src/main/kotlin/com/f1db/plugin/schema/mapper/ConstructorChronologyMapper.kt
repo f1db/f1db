@@ -18,21 +18,12 @@ import com.f1db.plugin.schema.splitted.ConstructorChronology as SplittedConstruc
 interface ConstructorChronologyMapper {
 
     @Mapping(target = "parentConstructorId", ignore = true)
-    fun toSplittedConstructorChronology(
-        constructorChronology: ConstructorChronology,
-        @Context parentConstructor: Constructor
-    ): SplittedConstructorChronology
-
-    fun toSplittedConstructorChronology(
-        constructorChronology: List<ConstructorChronology>,
-        @Context parentConstructor: Constructor
-    ): List<SplittedConstructorChronology>
+    @Mapping(target = "positionDisplayOrder", ignore = true)
+    fun toSplittedConstructorChronology(constructorChronology: ConstructorChronology, @Context parentConstructor: Constructor, @Context index: Int): SplittedConstructorChronology
 
     @AfterMapping
-    fun afterMapping(
-        @MappingTarget splittedConstructorChronology: SplittedConstructorChronology,
-        @Context parentConstructor: Constructor
-    ) {
+    fun afterMapping(@MappingTarget splittedConstructorChronology: SplittedConstructorChronology, @Context parentConstructor: Constructor, @Context index: Int) {
         splittedConstructorChronology.parentConstructorId = parentConstructor.id
+        splittedConstructorChronology.positionDisplayOrder = index;
     }
 }

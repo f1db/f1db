@@ -17,6 +17,11 @@
           "type": "string",
           "description": "The identifier of the parent constructor."
         },
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the constructor within the chronological sequence of the parent constructor."
+        },
         "constructorId": {
           "type": "string",
           "description": "The identifier of the child constructor."
@@ -32,6 +37,7 @@
       },
       "required": [
         "parentConstructorId",
+        "positionDisplayOrder",
         "constructorId",
         "yearFrom",
         "yearTo"

@@ -44,10 +44,11 @@ Release artifacts are available in the following formats:
 ## Notable and Breaking Changes in `v2024.19.0`
 
 - Added chassis and engine data.
-- Added qualification position details (`qualification_position_number` and `qualification_position_text`) to race results and starting grid positions.
-- Added total points statistic (`total_points`) to constructors and engine manufacturers.
+- Added qualification position details (`qualificationPositionNumber` and `qualificationPositionText`) to race results and starting grid positions.
+- Added total points statistic (`totalPoints`) to constructors and engine manufacturers.
 - Added extensive season statistics for drivers, constructors, engine manufacturers and tyre manufacturers.
 - Renamed `ConstructorPreviousNextConstructor` to `ConstructorChronology`
+- Added `positionDisplayOrder` to `DriverFamilyRelationship` and `ConstructorChronology` splitted schema.
 
 To accommodate these (breaking) changes the JSON Schema is bumped to version `v5.0.0`.
 

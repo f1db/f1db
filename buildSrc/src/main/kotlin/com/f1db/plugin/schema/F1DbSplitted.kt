@@ -87,7 +87,11 @@ class F1DbSplitted(private val db: F1db) {
     val driverFamilyRelationships: List<DriverFamilyRelationship>
         get() = db.drivers
             .filter { it.familyRelationships != null }
-            .flatMap { driver -> driverFamilyRelationshipMapper.toSplittedDriverFamilyRelationships(driver.familyRelationships, driver) }
+            .flatMap { driver ->
+                driver.familyRelationships.mapIndexed { index, familyRelationship ->
+                    driverFamilyRelationshipMapper.toSplittedDriverFamilyRelationship(familyRelationship, driver, index + 1)
+                }
+            }
 
     val constructors: List<Constructor>
         get() = constructorMapper.toSplittedConstructors(db.constructors)
@@ -96,10 +100,9 @@ class F1DbSplitted(private val db: F1db) {
         get() = db.constructors
             .filter { it.chronology != null }
             .flatMap { constructor ->
-                constructorChronologyMapper.toSplittedConstructorChronology(
-                    constructor.chronology,
-                    constructor
-                )
+                constructor.chronology.mapIndexed { index, chronology ->
+                    constructorChronologyMapper.toSplittedConstructorChronology(chronology, constructor, index + 1)
+                }
             }
 
     val chassis: List<Chassis>

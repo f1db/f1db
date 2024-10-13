@@ -17,6 +17,11 @@
           "type": "string",
           "description": "The identifier of the parent driver in the relationship."
         },
+        "positionDisplayOrder": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The display order of the family relationship relative to other relationships of the parent driver."
+        },
         "driverId": {
           "type": "string",
           "description": "The identifier of the related driver."
@@ -28,6 +33,7 @@
       },
       "required": [
         "parentDriverId",
+        "positionDisplayOrder",
         "driverId",
         "type"
       ]

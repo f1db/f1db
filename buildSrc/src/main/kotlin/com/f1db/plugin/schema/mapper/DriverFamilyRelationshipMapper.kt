@@ -18,15 +18,12 @@ import com.f1db.plugin.schema.splitted.DriverFamilyRelationship as SplittedDrive
 interface DriverFamilyRelationshipMapper {
 
     @Mapping(target = "parentDriverId", ignore = true)
-    fun toSplittedDriverFamilyRelationship(driverFamilyRelationship: DriverFamilyRelationship, @Context parentDriver: Driver): SplittedDriverFamilyRelationship
-
-    fun toSplittedDriverFamilyRelationships(
-        driverFamilyRelationships: List<DriverFamilyRelationship>,
-        @Context parentDriver: Driver
-    ): List<SplittedDriverFamilyRelationship>
+    @Mapping(target = "positionDisplayOrder", ignore = true)
+    fun toSplittedDriverFamilyRelationship(driverFamilyRelationship: DriverFamilyRelationship, @Context parentDriver: Driver, @Context index: Int): SplittedDriverFamilyRelationship
 
     @AfterMapping
-    fun afterMapping(@MappingTarget splittedDriverFamilyRelationship: SplittedDriverFamilyRelationship, @Context parentDriver: Driver) {
+    fun afterMapping(@MappingTarget splittedDriverFamilyRelationship: SplittedDriverFamilyRelationship, @Context parentDriver: Driver, @Context index: Int) {
         splittedDriverFamilyRelationship.parentDriverId = parentDriver.id
+        splittedDriverFamilyRelationship.positionDisplayOrder = index;
     }
 }

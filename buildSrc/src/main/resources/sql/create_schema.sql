@@ -76,14 +76,17 @@ CREATE INDEX "drvr_second_nationality_country_id_idx" ON "driver" ("second_natio
 
 CREATE TABLE "driver_family_relationship"
 ( "driver_id" VARCHAR(100) NOT NULL
+, "position_display_order" INTEGER NOT NULL
 , "other_driver_id" VARCHAR(100) NOT NULL
 , "type" VARCHAR(50) NOT NULL
-, CONSTRAINT "dfrl_pk" PRIMARY KEY ("driver_id", "other_driver_id", "type")
+, CONSTRAINT "dfrl_pk" PRIMARY KEY ("driver_id", "position_display_order")
+, CONSTRAINT "dfrl_driver_id_other_driver_id_type_uk" UNIQUE ("driver_id", "other_driver_id", "type")
 , CONSTRAINT "dfrl_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
 , CONSTRAINT "dfrl_other_driver_id_fk" FOREIGN KEY ("other_driver_id") REFERENCES "driver" ("id")
 );
 
 CREATE INDEX "dfrl_driver_id_idx" ON "driver_family_relationship" ("driver_id");
+CREATE INDEX "dfrl_position_display_order_idx" ON "driver_family_relationship" ("position_display_order");
 CREATE INDEX "dfrl_other_driver_id_idx" ON "driver_family_relationship" ("other_driver_id");
 
 CREATE TABLE "constructor"
@@ -116,15 +119,18 @@ CREATE INDEX "cnst_country_id_idx" ON "constructor" ("country_id");
 
 CREATE TABLE "constructor_chronology"
 ( "constructor_id" VARCHAR(100) NOT NULL
+, "position_display_order" INTEGER NOT NULL
 , "other_constructor_id" VARCHAR(100) NOT NULL
 , "year_from" INTEGER NOT NULL
 , "year_to" INTEGER
-, CONSTRAINT "cnch_pk" PRIMARY KEY ("constructor_id", "other_constructor_id", "year_from")
+, CONSTRAINT "cnch_pk" PRIMARY KEY ("constructor_id", "position_display_order")
+, CONSTRAINT "cnch_constructor_id_other_constructor_id_year_from_year_to_uk" UNIQUE ("constructor_id", "other_constructor_id", "year_from", "year_to")
 , CONSTRAINT "cnch_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
 , CONSTRAINT "cnch_other_constructor_id_fk" FOREIGN KEY ("other_constructor_id") REFERENCES "constructor" ("id")
 );
 
 CREATE INDEX "cnch_constructor_id_idx" ON "constructor_chronology" ("constructor_id");
+CREATE INDEX "cnch_position_display_order_idx" ON "constructor_chronology" ("position_display_order");
 CREATE INDEX "cnch_other_constructor_id_idx" ON "constructor_chronology" ("other_constructor_id");
 
 CREATE TABLE "chassis"
