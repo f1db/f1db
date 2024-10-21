@@ -2,26 +2,22 @@
   countryId: united-kingdom
   constructorId: aston-martin
   engineManufacturerId: mercedes
-  chassisId: aston-martin-amr24
-  engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-18
+      rounds: 1-19
     - driverId: lance-stroll
-      rounds: 1-18
+      rounds: 1-19
 - entrantId: bwt-alpine-f1-team
   countryId: france
   constructorId: alpine
   engineManufacturerId: renault
-  chassisId: alpine-a524
-  engineId: renault-e-tech-re24-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-18
+      rounds: 1-19
     - driverId: pierre-gasly
-      rounds: 1-18
+      rounds: 1-19
     - driverId: jack-doohan
       rounds:
       testDriver: true
@@ -29,26 +25,22 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
-  chassisId: mclaren-mcl38
-  engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-18
+      rounds: 1-19
     - driverId: oscar-piastri
-      rounds: 1-18
+      rounds: 1-19
 - entrantId: mercedes-amg-petronas-f1-team
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
-  chassisId: mercedes-f1-w15
-  engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: george-russell
-      rounds: 1-18
+      rounds: 1-19
     - driverId: lewis-hamilton
-      rounds: 1-18
+      rounds: 1-19
     - driverId: andrea-kimi-antonelli
       rounds:
       testDriver: true
@@ -56,14 +48,12 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
-  chassisId: haas-vf-24
-  engineId: ferrari-066-10-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kevin-magnussen
-      rounds: 1-16,18
+      rounds: 1-16,18-19
     - driverId: nico-hulkenberg
-      rounds: 1-18
+      rounds: 1-19
     - driverId: oliver-bearman
       rounds: 17
       testDriver: true
@@ -71,14 +61,12 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: honda-rbpt
-  chassisId: red-bull-rb20
-  engineId: honda-rbpt-rbpth002-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
-      rounds: 1-18
+      rounds: 1-19
     - driverId: sergio-perez
-      rounds: 1-18
+      rounds: 1-19
     - driverId: isack-hadjar
       rounds:
       testDriver: true
@@ -86,28 +74,24 @@
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
-  chassisId: ferrari-sf-24
-  engineId: ferrari-066-12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
-      rounds: 1-18
+      rounds: 1-19
     - driverId: charles-leclerc
-      rounds: 1-18
+      rounds: 1-19
     - driverId: oliver-bearman
       rounds: 2
 - entrantId: stake-f1-team-kick-sauber
   countryId: switzerland
   constructorId: kick-sauber
   engineManufacturerId: ferrari
-  chassisId: kick-sauber-c44
-  engineId: ferrari-066-12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: guanyu-zhou
-      rounds: 1-18
+      rounds: 1-19
     - driverId: valtteri-bottas
-      rounds: 1-18
+      rounds: 1-19
     - driverId: robert-shwartzman
       rounds:
       testDriver: true
@@ -115,14 +99,14 @@
   countryId: italy
   constructorId: rb
   engineManufacturerId: honda-rbpt
-  chassisId: rb-vcarb-01
-  engineId: honda-rbpt-rbpth002-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: daniel-ricciardo
       rounds: 1-18
     - driverId: yuki-tsunoda
-      rounds: 1-18
+      rounds: 1-19
+    - driverId: liam-lawson
+      rounds: 19
     - driverId: ayumu-iwasa
       rounds:
       testDriver: true
@@ -130,14 +114,12 @@
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
-  chassisId: williams-fw46
-  engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-18
+      rounds: 1-19
     - driverId: logan-sargeant
       rounds: 1-15
     - driverId: franco-colapinto
-      rounds: 16-18
+      rounds: 16-19
       testDriver: true
