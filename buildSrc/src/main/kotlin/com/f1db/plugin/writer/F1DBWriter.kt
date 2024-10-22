@@ -17,6 +17,7 @@ class F1DBWriter(
         private val projectName: String,
         private val outputDir: File,
         private val schemaDir: File,
+        private val formats: List<String>,
         private val db: F1db,
 ) {
 
@@ -27,10 +28,20 @@ class F1DBWriter(
         outputDir.deleteRecursively()
         outputDir.mkdirs()
 
-        CsvWriter(projectName, File(outputDir, "csv"), db).write()
-        JsonWriter(projectName, File(outputDir, "json"), schemaDir, db).write()
-        SmileWriter(projectName, File(outputDir, "smile"), schemaDir, db).write()
-        SqlWriter(projectName, File(outputDir, "sql"), db).write()
-        SqliteWriter(projectName, File(outputDir, "sqlite"), db).write()
+        val writers = mapOf(
+                "csv" to { CsvWriter(projectName, File(outputDir, "csv"), db).write() },
+                "json" to { JsonWriter(projectName, File(outputDir, "json"), schemaDir, db).write() },
+                "smile" to { SmileWriter(projectName, File(outputDir, "smile"), schemaDir, db).write() },
+                "sql" to { SqlWriter(projectName, File(outputDir, "sql"), db).write() },
+                "sqlite" to { SqliteWriter(projectName, File(outputDir, "sqlite"), db).write() }
+        )
+
+        if (formats.isEmpty()) {
+            writers.values.forEach { it() }
+        } else {
+            formats.forEach { format ->
+                writers[format]?.invoke() ?: throw IllegalArgumentException("Unsupported format: $format")
+            }
+        }
     }
 }

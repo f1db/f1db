@@ -1,3 +1,5 @@
+import java.io.FileFilter
+
 plugins {
     `java-gradle-plugin`
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
@@ -92,6 +94,7 @@ jooq {
 
 jsonSchema2Pojo {
     sourceFiles = files("$projectDir/../src/schema/current/")
+    fileFilter = FileFilter { file -> file.isDirectory || file.name.endsWith(".json") }
     targetDirectory = file("build/generated-sources/jsonschema2pojo")
     removeOldOutput = true
     targetPackage = "com.f1db.plugin.schema"
