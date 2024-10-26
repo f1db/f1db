@@ -50,7 +50,7 @@ distributions {
         contents {
             from(layout.buildDirectory.dir("data/json")) {
                 include("*.json")
-                exclude("${projectName}-single.json")
+                exclude("${projectName}.json")
             }
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
@@ -71,7 +71,7 @@ distributions {
         contents {
             from(layout.buildDirectory.dir("data/smile")) {
                 include("*.sml")
-                exclude("${projectName}-single.sml")
+                exclude("${projectName}.sml")
             }
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
