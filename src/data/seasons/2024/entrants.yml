@@ -5,9 +5,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-21
+      rounds: 1-22
     - driverId: lance-stroll
-      rounds: 1-21
+      rounds: 1-22
     - driverId: felipe-drugovich
       rounds:
       testDriver: true
@@ -18,9 +18,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-21
+      rounds: 1-22
     - driverId: pierre-gasly
-      rounds: 1-21
+      rounds: 1-22
     - driverId: jack-doohan
       rounds:
       testDriver: true
@@ -31,9 +31,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-21
+      rounds: 1-22
     - driverId: oscar-piastri
-      rounds: 1-21
+      rounds: 1-22
     - driverId: patricio-oward
       rounds:
       testDriver: true
@@ -44,9 +44,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: george-russell
-      rounds: 1-21
+      rounds: 1-22
     - driverId: lewis-hamilton
-      rounds: 1-21
+      rounds: 1-22
     - driverId: andrea-kimi-antonelli
       rounds:
       testDriver: true
@@ -57,9 +57,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kevin-magnussen
-      rounds: 1-16,18-20
+      rounds: 1-16,18-20,22
     - driverId: nico-hulkenberg
-      rounds: 1-21
+      rounds: 1-22
     - driverId: oliver-bearman
       rounds: 17,21
       testDriver: true
@@ -70,9 +70,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: max-verstappen
-      rounds: 1-21
+      rounds: 1-22
     - driverId: sergio-perez
-      rounds: 1-21
+      rounds: 1-22
     - driverId: isack-hadjar
       rounds:
       testDriver: true
@@ -83,9 +83,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: carlos-sainz-jr
-      rounds: 1-21
+      rounds: 1-22
     - driverId: charles-leclerc
-      rounds: 1-21
+      rounds: 1-22
     - driverId: oliver-bearman
       rounds: 2
       testDriver: true
@@ -96,9 +96,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: guanyu-zhou
-      rounds: 1-21
+      rounds: 1-22
     - driverId: valtteri-bottas
-      rounds: 1-21
+      rounds: 1-22
     - driverId: robert-shwartzman
       rounds:
       testDriver: true
@@ -111,9 +111,9 @@
     - driverId: daniel-ricciardo
       rounds: 1-18
     - driverId: yuki-tsunoda
-      rounds: 1-21
+      rounds: 1-22
     - driverId: liam-lawson
-      rounds: 19-21
+      rounds: 19-22
     - driverId: ayumu-iwasa
       rounds:
       testDriver: true
@@ -124,9 +124,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-21
+      rounds: 1-22
     - driverId: logan-sargeant
       rounds: 1-15
     - driverId: franco-colapinto
-      rounds: 16-21
+      rounds: 16-22
       testDriver: true
