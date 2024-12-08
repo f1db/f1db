@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accident damage
+  reasonRetired: Collision damage
   points:
   gridPosition: 5
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Suspension
+  reasonRetired: Collision
   points:
   gridPosition: 4
