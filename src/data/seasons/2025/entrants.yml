@@ -2,7 +2,7 @@
   countryId: united-kingdom
   constructorId: aston-martin
   engineManufacturerId: mercedes
-  chassisId: aston-martin-amr24
+  chassisId: aston-martin-amr25
   engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -14,7 +14,7 @@
   countryId: france
   constructorId: alpine
   engineManufacturerId: renault
-  chassisId: alpine-a524
+  chassisId: alpine-tba
   engineId: renault-e-tech-re24-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -26,7 +26,7 @@
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
-  chassisId: mclaren-mcl38
+  chassisId: mclaren-tba
   engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -38,7 +38,7 @@
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
-  chassisId: mercedes-f1-w15
+  chassisId: mercedes-tba
   engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -50,7 +50,7 @@
   countryId: united-states-of-america
   constructorId: haas
   engineManufacturerId: ferrari
-  chassisId: haas-vf-24
+  chassisId: haas-tba
   engineId: ferrari-066-10-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -62,19 +62,19 @@
   countryId: austria
   constructorId: red-bull
   engineManufacturerId: honda-rbpt
-  chassisId: red-bull-rb20
+  chassisId: red-bull-rb21
   engineId: honda-rbpt-rbpth002-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
-    - driverId: max-verstappen
+    - driverId: liam-lawson
       rounds:
-    - driverId: sergio-perez
+    - driverId: max-verstappen
       rounds:
 - entrantId: scuderia-ferrari
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
-  chassisId: ferrari-sf-24
+  chassisId: ferrari-tba
   engineId: ferrari-066-12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -86,7 +86,7 @@
   countryId: switzerland
   constructorId: kick-sauber
   engineManufacturerId: ferrari
-  chassisId: kick-sauber-c44
+  chassisId: kick-sauber-tba
   engineId: ferrari-066-12-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
@@ -98,19 +98,19 @@
   countryId: italy
   constructorId: racing-bulls
   engineManufacturerId: honda-rbpt
-  chassisId: rb-vcarb-01
+  chassisId: racing-bulls-vcarb-02
   engineId: honda-rbpt-rbpth002-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
-    - driverId: yuki-tsunoda
+    - driverId: isack-hadjar
       rounds:
-    - driverId: liam-lawson
+    - driverId: yuki-tsunoda
       rounds:
 - entrantId: williams-racing
   countryId: united-kingdom
   constructorId: williams
   engineManufacturerId: mercedes
-  chassisId: williams-fw46
+  chassisId: williams-fw47
   engineId: mercedes-amg-f1-m15-16-v6-t-h
   tyreManufacturerId: pirelli
   drivers:
