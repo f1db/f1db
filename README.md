@@ -41,18 +41,6 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
-## Notable and Breaking Changes in `v2024.19.0`
-
-- Added chassis and engine data.
-- Added qualification position details (`qualificationPositionNumber` and `qualificationPositionText`) to race results and starting grid positions.
-- Added total points statistic (`totalPoints`) to constructors and engine manufacturers.
-- Added extensive season statistics for drivers, constructors, engine manufacturers and tyre manufacturers.
-- Renamed `ConstructorPreviousNextConstructor` to `ConstructorChronology`
-- Added explicit `positionDisplayOrder` to `DriverFamilyRelationship`, `ConstructorChronology`, `PracticeResult`, `QualifyingResult`, `StartingGridPosition`, `RaceResult`, `FastestLap`, `PitStop`, `DriverOfTheDayResult`, `RaceDriverStanding`, `RaceConstructorStanding`, `SeasonDriverStanding` and `SeasonConstructorStanding`.
-
-To accommodate these (breaking) changes the JSON Schema is bumped to version `v5.0.0`.
-
-
 ## F1DB JSON Schema
 
 The main [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/current/single/f1db.schema.json)
@@ -81,6 +69,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 | `>=` `v2022.0.0.beta2`  | [`f1db-json-schema-v1.1.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.1.0.json)                                                                                                                   |
 | `>=` `v2022.0.0.alpha1` | [`f1db-json-schema-v1.0.0.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v1.x/f1db-json-schema-v1.0.0.json)                                                                                                                   |
 
+
 ## F1DB SQL / SQLite Database
 
 The SQLite database artifact contains all data in a relational database format
@@ -108,7 +97,7 @@ Releases are versioned using a "customized" [CalVer] versioning scheme:
 
 which uses the following conventions:
 
-- **YYYY** – Full year of the season – `2024`, ..
+- **YYYY** – Full year of the season – `2025`, ..
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
@@ -117,14 +106,14 @@ Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` i
 
 Examples:
 
-- **2024.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2024 season.
-- **2024.0.0.beta** – Pre-season beta release before the 1<sup>st</sup> race round of the 2024 season.
-- **2024.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2024 season.
-- **2024.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2024 season.
-- **2024.1.0** – Final release after the 1<sup>st</sup> race round of the 2024 season.
-- **2024.2.0** – Final release after the 2<sup>nd</sup> race round of the 2024 season.
-- **2024.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2024 season.
-- **2024.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2024 season.
+- **2025.0.0.alpha** – Pre-season alpha release before the 1<sup>st</sup> race round of the 2025 season.
+- **2025.0.0.beta** – Pre-season beta release before the 1<sup>st</sup> race round of the 2025 season.
+- **2025.0.0** – Final pre-season release before the 1<sup>st</sup> race round of the 2025 season.
+- **2025.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2025 season.
+- **2025.1.0** – Final release after the 1<sup>st</sup> race round of the 2025 season.
+- **2025.2.0** – Final release after the 2<sup>nd</sup> race round of the 2025 season.
+- **2025.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2025 season.
+- **2025.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2025 season.
 
 As you can see we use a special **RR** `0` for pre-season releases.
 
