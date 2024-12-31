@@ -1,7 +1,7 @@
 plugins {
     distribution
     id("com.f1db")
-    id("org.jreleaser") version "1.16.0"
+    id("org.jreleaser") version "1.15.0"
 }
 
 group = "com.f1db"
