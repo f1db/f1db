@@ -6,7 +6,9 @@ officialName: Formula 1 Grosser Mobil 1 Preis von Deutschland 2004
 qualifyingFormat: ONE_LAP
 circuitId: hockenheimring
 circuitType: RACE
+direction: CLOCKWISE
 courseLength: 4.574
+turns: 17
 laps: 66
 distance: 301.884
 scheduledLaps: 67

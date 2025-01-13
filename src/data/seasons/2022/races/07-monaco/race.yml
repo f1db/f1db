@@ -6,7 +6,9 @@ officialName: Formula 1 Grand Prix de Monaco 2022
 qualifyingFormat: KNOCKOUT
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.337
+turns: 19
 laps: 64
 distance: 213.568
 scheduledLaps: 78

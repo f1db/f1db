@@ -6,7 +6,9 @@ officialName: Formula 1 Grand Prix de Monaco 2008
 qualifyingFormat: KNOCKOUT
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.340
+turns: 19
 laps: 76
 distance: 253.840
 scheduledLaps: 78

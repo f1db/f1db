@@ -527,7 +527,9 @@ CREATE TABLE "race"
 , "sprint_qualifying_format" VARCHAR(20)
 , "circuit_id" VARCHAR(100) NOT NULL
 , "circuit_type" VARCHAR(6) NOT NULL
+, "direction" VARCHAR(14) NOT NULL
 , "course_length" DECIMAL(6,3) NOT NULL
+, "turns" INTEGER NOT NULL
 , "laps" INTEGER NOT NULL
 , "distance" DECIMAL(6,3) NOT NULL
 , "scheduled_laps" INTEGER
@@ -566,7 +568,11 @@ CREATE INDEX "race_round_idx" ON "race" ("round");
 CREATE INDEX "race_date_idx" ON "race" ("date");
 CREATE INDEX "race_grand_prix_id_idx" ON "race" ("grand_prix_id");
 CREATE INDEX "race_official_name_idx" ON "race" ("official_name");
+CREATE INDEX "race_qualifying_format_idx" ON "race" ("qualifying_format");
+CREATE INDEX "race_sprint_qualifying_format_idx" ON "race" ("sprint_qualifying_format");
 CREATE INDEX "race_circuit_id_idx" ON "race" ("circuit_id");
+CREATE INDEX "race_circuit_type_idx" ON "race" ("circuit_type");
+CREATE INDEX "race_direction_idx" ON "race" ("direction");
 
 CREATE TABLE "race_data"
 ( "race_id" INTEGER NOT NULL

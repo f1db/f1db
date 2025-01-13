@@ -68,7 +68,7 @@
         "turns": {
           "type": "number",
           "minimum": 0,
-          "description": "The number of turns in the current or most recently used configuration of the circuit."
+          "description": "The number of turns (corners) in the current or most recently used configuration of the circuit."
         },
         "totalRacesHeld": {
           "type": "integer",

@@ -6,7 +6,9 @@ officialName: Grand Prix de Monaco 1996
 qualifyingFormat: ONE_SESSION
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.328
+turns: 20
 laps: 75
 distance: 249.600
 scheduledLaps: 78

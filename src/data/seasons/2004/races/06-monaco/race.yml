@@ -6,7 +6,9 @@ officialName: Formula 1 Grand Prix de Monaco 2004
 qualifyingFormat: ONE_LAP
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.340
+turns: 19
 laps: 77
 distance: 257.180
 scheduledLaps: 78

@@ -6,7 +6,9 @@ officialName: Formula 1 Pirelli Gran Premio d'Italia 2023
 qualifyingFormat: KNOCKOUT
 circuitId: monza
 circuitType: RACE
+direction: CLOCKWISE
 courseLength: 5.793
+turns: 11
 laps: 51
 distance: 295.134
 scheduledLaps: 53

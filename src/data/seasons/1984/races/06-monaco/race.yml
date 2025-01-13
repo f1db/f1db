@@ -6,7 +6,9 @@ officialName: Grand Prix de Monaco 1984
 qualifyingFormat: TWO_SESSION
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.312
+turns: 20
 laps: 31
 distance: 102.672
 scheduledLaps: 76

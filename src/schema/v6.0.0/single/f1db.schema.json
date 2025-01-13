@@ -821,7 +821,7 @@
         "turns": {
           "type": "number",
           "minimum": 0,
-          "description": "The number of turns in the current or most recently used configuration of the circuit."
+          "description": "The number of turns (corners) in the current or most recently used configuration of the circuit."
         },
         "totalRacesHeld": {
           "type": "integer",
@@ -1621,10 +1621,19 @@
           "$ref": "#/definitions/CircuitType",
           "description": "The type of the circuit."
         },
+        "direction": {
+          "$ref": "#/definitions/Direction",
+          "description": "The direction of the circuit."
+        },
         "courseLength": {
           "type": "number",
           "minimum": 0,
-          "description": "The length of the race course in kilometers."
+          "description": "The length of the circuit (race course) in kilometers."
+        },
+        "turns": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The number of turns (corners) in the configuration of the circuit."
         },
         "laps": {
           "type": "integer",
@@ -1924,7 +1933,9 @@
         "sprintQualifyingFormat",
         "circuitId",
         "circuitType",
+        "direction",
         "courseLength",
+        "turns",
         "laps",
         "distance",
         "scheduledLaps",

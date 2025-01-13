@@ -6,7 +6,9 @@ officialName: Grand Prix de Monaco 1989
 qualifyingFormat: TWO_SESSION
 circuitId: monaco
 circuitType: STREET
+direction: CLOCKWISE
 courseLength: 3.328
+turns: 20
 laps: 77
 distance: 256.256
 scheduledLaps: 78
