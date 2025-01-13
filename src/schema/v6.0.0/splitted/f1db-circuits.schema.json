@@ -38,7 +38,7 @@
         },
         "direction": {
           "$ref": "#/definitions/Direction",
-          "description": "The direction of the current or most recently used configuration of the circuit."
+          "description": "The direction of the current or most recently used configuration the circuit."
         },
         "placeName": {
           "type": "string",

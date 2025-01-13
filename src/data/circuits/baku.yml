@@ -3,7 +3,10 @@ name: Baku
 fullName: Baku City Circuit
 previousNames:
 type: STREET
+direction: ANTI_CLOCKWISE
 placeName: Baku
 countryId: azerbaijan
 latitude: 40.3725
 longitude: 49.853333
+length: 6.003
+turns: 20

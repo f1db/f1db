@@ -225,10 +225,13 @@ CREATE TABLE "circuit"
 , "full_name" VARCHAR(100) NOT NULL
 , "previous_names" VARCHAR(255)
 , "type" VARCHAR(6) NOT NULL
+, "direction" VARCHAR(14) NOT NULL
 , "place_name" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "latitude" DECIMAL(10,6) NOT NULL
 , "longitude" DECIMAL(10,6) NOT NULL
+, "length" DECIMAL(6,3) NOT NULL
+, "turns" INTEGER NOT NULL
 , "total_races_held" INTEGER NOT NULL
 , CONSTRAINT "crct_pk" PRIMARY KEY ("id")
 , CONSTRAINT "crct_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
@@ -237,6 +240,7 @@ CREATE TABLE "circuit"
 CREATE INDEX "crct_name_idx" ON "circuit" ("name");
 CREATE INDEX "crct_full_name_idx" ON "circuit" ("full_name");
 CREATE INDEX "crct_type_idx" ON "circuit" ("type");
+CREATE INDEX "crct_direction_idx" ON "circuit" ("direction");
 CREATE INDEX "crct_place_name_idx" ON "circuit" ("place_name");
 CREATE INDEX "crct_country_id_idx" ON "circuit" ("country_id");
 

@@ -3,7 +3,10 @@ name: Marina Bay
 fullName: Marina Bay Street Circuit
 previousNames:
 type: STREET
+direction: ANTI_CLOCKWISE
 placeName: Singapore
 countryId: singapore
 latitude: 1.291531
 longitude: 103.86385
+length: 4.940
+turns: 19

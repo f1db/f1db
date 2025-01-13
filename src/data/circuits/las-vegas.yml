@@ -3,7 +3,10 @@ name: Las Vegas
 fullName: Las Vegas Street Circuit
 previousNames:
 type: STREET
+direction: ANTI_CLOCKWISE
 placeName: Las Vegas
 countryId: united-states-of-america
 latitude: 36.175
 longitude: -115.136389
+length: 6.201
+turns: 17

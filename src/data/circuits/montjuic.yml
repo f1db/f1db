@@ -3,7 +3,10 @@ name: Montjuïc
 fullName: Circuito de Montjuïc
 previousNames:
 type: STREET
+direction: ANTI_CLOCKWISE
 placeName: Barcelona
 countryId: spain
 latitude: 41.366389
 longitude: 2.151667
+length: 3.790
+turns: 12

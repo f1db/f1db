@@ -41,6 +41,13 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
+## Notable changes in `v2025.0.2`
+
+- Added `direction`, `length` and `turns` to `Circuit`.
+
+To accommodate these changes the JSON Schema is bumped to version `v6.0.0`.
+
+
 ## F1DB JSON Schema
 
 The main [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/current/single/f1db.schema.json)
@@ -55,6 +62,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                                                                                                                                                    |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2025.0.2`        | [`f1db.schema.json v6.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.0.0/single/f1db.schema.json), [`f1db-*.schema.json v6.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.0.0/splitted)                |
 | `>=` `v2024.19.0`       | [`f1db.schema.json v5.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v5.0.0/single/f1db.schema.json), [`f1db-*.schema.json v5.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v5.0.0/splitted)                |
 | `>=` `v2024.0.0.beta2`  | [`f1db.schema.json v4.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.1.0/single/f1db.schema.json), [`f1db-*.schema.json v4.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.1.0/splitted)                |
 | `>=` `v2024.0.0.beta1`  | [`f1db.schema.json v4.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.0.0/single/f1db.schema.json), [`f1db-*.schema.json v4.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.0.0/splitted)                |

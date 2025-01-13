@@ -3,7 +3,10 @@ name: Boavista
 fullName: Circuito da Boavista
 previousNames:
 type: STREET
+direction: ANTI_CLOCKWISE
 placeName: Porto
 countryId: portugal
 latitude: 41.170472
 longitude: -8.67325
+length: 7.4
+turns: 19

@@ -3,7 +3,10 @@ name: Monaco
 fullName: Circuit de Monaco
 previousNames:
 type: STREET
+direction: CLOCKWISE
 placeName: Monte Carlo
 countryId: monaco
 latitude: 43.734722
 longitude: 7.420556
+length: 3.337
+turns: 19

@@ -3,7 +3,10 @@ name: Yas Marina
 fullName: Yas Marina Circuit
 previousNames:
 type: RACE
+direction: ANTI_CLOCKWISE
 placeName: Abu Dhabi
 countryId: united-arab-emirates
 latitude: 24.467222
 longitude: 54.603056
+length: 5.281
+turns: 15
