@@ -190,7 +190,7 @@
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The best finishing position achieved by the driver in a World Driver Championship."
+          "description": "The best finishing position achieved by the driver in a World Drivers' Championship."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -205,7 +205,7 @@
         "totalChampionshipWins": {
           "type": "integer",
           "minimum": 0,
-          "description": "The total number of World Driver Championships won by the driver."
+          "description": "The total number of World Drivers' Championship titles won by the driver."
         },
         "totalRaceEntries": {
           "type": "integer",
@@ -242,7 +242,7 @@
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total number of points accumulated by the driver in World Driver Championships."
+          "description": "The total number of World Drivers' Championship points accumulated by the driver."
         },
         "totalPolePositions": {
           "type": "integer",
@@ -352,7 +352,7 @@
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The best finishing position achieved by the constructor in a Championship season."
+          "description": "The best finishing position achieved by the constructor in a World Constructors' Championship."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -367,7 +367,7 @@
         "totalChampionshipWins": {
           "type": "integer",
           "minimum": 0,
-          "description": "The total number of World Constructor Championships won by the constructor."
+          "description": "The total number of World Constructors' Championship titles won by the constructor."
         },
         "totalRaceEntries": {
           "type": "integer",
@@ -414,7 +414,7 @@
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total number of points accumulated by the constructor in World Constructor Championships."
+          "description": "The total number of World Constructors' Championship points accumulated by the constructor."
         },
         "totalPolePositions": {
           "type": "integer",
@@ -526,7 +526,7 @@
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The best finishing position achieved by the engine manufacturer in a Championship season."
+          "description": "The best finishing position achieved by the engine manufacturer in a World Constructors' Championship."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -541,7 +541,7 @@
         "totalChampionshipWins": {
           "type": "integer",
           "minimum": 0,
-          "description": "The total number of World Constructor Championships won by the engine manufacturer."
+          "description": "The total number of World Constructors' Championship titles won by the engine manufacturer."
         },
         "totalRaceEntries": {
           "type": "integer",
@@ -583,7 +583,7 @@
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total number of points accumulated by the engine manufacturer in World Constructor Championships."
+          "description": "The total number of World Constructors' Championship points accumulated by the engine manufacturer."
         },
         "totalPolePositions": {
           "type": "integer",
@@ -1655,6 +1655,16 @@
           "minimum": 0,
           "description": "The scheduled distance of the race in kilometers."
         },
+        "driversChampionshipDecider": {
+          "type": "boolean",
+          "default": "false",
+          "description": "Whether this race was the decider of the World Drivers' Championship."
+        },
+        "constructorsChampionshipDecider": {
+          "type": "boolean",
+          "default": "false",
+          "description": "Whether this race was the decider of the World Constructors' Championship."
+        },
         "preQualifyingDate": {
           "type": ["string", "null"],
           "format": "date",
@@ -1940,6 +1950,8 @@
         "distance",
         "scheduledLaps",
         "scheduledDistance",
+        "driversChampionshipDecider",
+        "constructorsChampionshipDecider",
         "preQualifyingDate",
         "preQualifyingTime",
         "preQualifyingResults",

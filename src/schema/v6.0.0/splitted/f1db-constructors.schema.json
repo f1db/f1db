@@ -32,7 +32,7 @@
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The best finishing position achieved by the constructor in a Championship season."
+          "description": "The best finishing position achieved by the constructor in a World Constructors' Championship."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -47,7 +47,7 @@
         "totalChampionshipWins": {
           "type": "integer",
           "minimum": 0,
-          "description": "The total number of World Constructor Championships won by the constructor."
+          "description": "The total number of World Constructors' Championship titles won by the constructor."
         },
         "totalRaceEntries": {
           "type": "integer",
@@ -94,7 +94,7 @@
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total number of points accumulated by the constructor in World Constructor Championships."
+          "description": "The total number of World Constructors' Championship points accumulated by the constructor."
         },
         "totalPolePositions": {
           "type": "integer",

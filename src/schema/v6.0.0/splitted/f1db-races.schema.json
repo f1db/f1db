@@ -96,6 +96,16 @@
           "minimum": 0,
           "description": "The scheduled distance of the race in kilometers."
         },
+        "driversChampionshipDecider": {
+          "type": "boolean",
+          "default": "false",
+          "description": "Whether this race was the decider of the World Drivers' Championship."
+        },
+        "constructorsChampionshipDecider": {
+          "type": "boolean",
+          "default": "false",
+          "description": "Whether this race was the decider of the World Constructors' Championship."
+        },
         "preQualifyingDate": {
           "type": ["string", "null"],
           "format": "date",
@@ -248,6 +258,8 @@
         "distance",
         "scheduledLaps",
         "scheduledDistance",
+        "driversChampionshipDecider",
+        "constructorsChampionshipDecider",
         "preQualifyingDate",
         "preQualifyingTime",
         "freePractice1Date",
