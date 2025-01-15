@@ -205,6 +205,11 @@ class F1DBReader(
 
         db.seasons.forEach { season ->
 
+            val races = db.races.filter { it.year == season.year }
+
+            var driversChampionshipDecider = races.firstOrNull { it.driversChampionshipDecider == true }
+            var constructorsChampionshipDecider = races.firstOrNull { it.constructorsChampionshipDecider == true }
+
             season.constructors = season.entrants
                     ?.flatMap { seasonEntrant ->
                         seasonEntrant.constructors.map { seasonEntrantConstructor ->
@@ -322,7 +327,7 @@ class F1DBReader(
 
                 // Total championship wins.
 
-                if (positionNumber == 1 && (season.year < currentSeason.year.get() || currentSeason.driversChampionshipDecided.get())) {
+                if (positionNumber == 1 && (season.year < currentSeason.year.get() || driversChampionshipDecider != null)) {
                     driver.totalChampionshipWins++
                 }
 
@@ -348,7 +353,7 @@ class F1DBReader(
 
                 // Total championship wins.
 
-                if (positionNumber == 1 && (season.year < currentSeason.year.get() || currentSeason.constructorsChampionshipDecided.get())) {
+                if (positionNumber == 1 && (season.year < currentSeason.year.get() || constructorsChampionshipDecider != null)) {
                     constructor.totalChampionshipWins++
                     engineManufacturer.totalChampionshipWins++
                 }

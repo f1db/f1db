@@ -45,6 +45,7 @@ Release artifacts are available in the following formats:
 
 - Added `direction`, `length` and `turns` to `Circuit`.
 - Added `direction` and `turns` to `Race` (`courseLength` already exists).
+- Added `driversChampionshipDecider` and `constructorsChampionshipDecider` to `Race`.
 
 To accommodate these changes the JSON Schema is bumped to version `v6.0.0`.
 

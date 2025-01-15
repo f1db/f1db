@@ -534,6 +534,8 @@ CREATE TABLE "race"
 , "distance" DECIMAL(6,3) NOT NULL
 , "scheduled_laps" INTEGER
 , "scheduled_distance" DECIMAL(6,3)
+, "drivers_championship_decider" BOOLEAN
+, "constructors_championship_decider" BOOLEAN
 , "pre_qualifying_date" DATE
 , "pre_qualifying_time" VARCHAR(5)
 , "free_practice_1_date" DATE

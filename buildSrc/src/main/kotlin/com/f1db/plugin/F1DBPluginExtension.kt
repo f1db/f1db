@@ -25,6 +25,4 @@ abstract class CurrentSeason @Inject constructor(objects: ObjectFactory) {
 
     val year = objects.property(Int::class.java)
     val finished = objects.property(Boolean::class.java)
-    val driversChampionshipDecided = objects.property(Boolean::class.java)
-    val constructorsChampionshipDecided = objects.property(Boolean::class.java)
 }

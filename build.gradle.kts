@@ -9,8 +9,6 @@ group = "com.f1db"
 val projectName = project.name
 val currentSeasonYear: String by project
 val currentSeasonFinished: String by project
-val currentSeasonDriversChampionshipDecided: String by project
-val currentSeasonConstructorsChampionshipDecided: String by project
 
 f1db {
     sourceDir.set(layout.projectDirectory.dir("src/data"))
@@ -19,8 +17,6 @@ f1db {
     currentSeason {
         year.set(currentSeasonYear.toInt())
         finished.set(currentSeasonFinished.toBoolean())
-        driversChampionshipDecided.set(currentSeasonDriversChampionshipDecided.toBoolean())
-        constructorsChampionshipDecided.set(currentSeasonConstructorsChampionshipDecided.toBoolean())
     }
 }
 

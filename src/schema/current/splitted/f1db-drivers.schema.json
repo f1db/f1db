@@ -80,7 +80,7 @@
         "bestChampionshipPosition": {
           "type": ["integer", "null"],
           "minimum": 1,
-          "description": "The best finishing position achieved by the driver in a World Driver Championship."
+          "description": "The best finishing position achieved by the driver in a World Drivers' Championship."
         },
         "bestStartingGridPosition": {
           "type": ["integer", "null"],
@@ -95,7 +95,7 @@
         "totalChampionshipWins": {
           "type": "integer",
           "minimum": 0,
-          "description": "The total number of World Driver Championships won by the driver."
+          "description": "The total number of World Drivers' Championship titles won by the driver."
         },
         "totalRaceEntries": {
           "type": "integer",
@@ -132,7 +132,7 @@
           "type": "number",
           "minimum": 0,
           "multipleOf": 0.01,
-          "description": "The total number of points accumulated by the driver in World Driver Championships."
+          "description": "The total number of World Drivers' Championship points accumulated by the driver."
         },
         "totalPolePositions": {
           "type": "integer",
