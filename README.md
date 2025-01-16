@@ -43,9 +43,9 @@ Release artifacts are available in the following formats:
 
 ## Notable changes in `v2025.0.2`
 
-- Added `direction`, `length` and `turns` to `Circuit` object.
-- Added `direction` and `turns` to `Race` object (`courseLength` already exists).
-- Added `driversChampionshipDecider` and `constructorsChampionshipDecider` to `Race` object.
+- Added `direction`, `length` and `turns` properties to `Circuit` object.
+- Added `direction` and `turns` properties to `Race` object (`courseLength` already exists).
+- Added `driversChampionshipDecider` and `constructorsChampionshipDecider` properties to `Race` object.
 
 To accommodate these changes the JSON Schema is bumped to version `v6.0.0`.
 
