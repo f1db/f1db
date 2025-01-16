@@ -953,6 +953,10 @@
       "required": [
         "year",
         "entrants",
+        "constructors",
+        "engineManufacturers",
+        "tyreManufacturers",
+        "drivers",
         "driverStandings",
         "constructorStandings"
       ]
