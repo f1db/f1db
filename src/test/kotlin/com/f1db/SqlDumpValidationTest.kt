@@ -29,7 +29,7 @@ class SqlDumpValidationTest {
 
     @Test
     fun `should validate MySQL dump`() {
-        val mysqlDumpFile = File("build/data/sql/f1db-sql-mysql.sql")
+        val mysqlDumpFile = File("src/main/resources/sql/create_schema.sql")
         assertDoesNotThrow {
             DriverManager.getConnection(
                 mysqlContainer.jdbcUrl,
@@ -50,7 +50,7 @@ class SqlDumpValidationTest {
 
     @Test
     fun `should validate PostgreSQL dump`() {
-        val postgresDumpFile = File("build/data/sql/f1db-sql-postgresql.sql")
+        val postgresDumpFile = File("src/main/resources/sql/create_schema.sql")
         assertDoesNotThrow {
             DriverManager.getConnection(
                 postgresContainer.jdbcUrl,
@@ -71,7 +71,7 @@ class SqlDumpValidationTest {
 
     @Test
     fun `should validate SQLite dump`() {
-        val sqliteDumpFile = File("build/data/sql/f1db-sql-sqlite.sql")
+        val sqliteDumpFile = File("src/main/resources/sql/create_schema.sql")
         assertDoesNotThrow {
             // Using in-memory SQLite database for testing
             DriverManager.getConnection("jdbc:sqlite::memory:").use { connection ->

@@ -39,7 +39,6 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    dependsOn(tasks.named("generateF1db"))
 }
 
 distributions {
