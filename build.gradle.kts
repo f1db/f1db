@@ -24,6 +24,22 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    testImplementation("org.testcontainers:testcontainers:1.19.3")
+    testImplementation("org.testcontainers:junit-jupiter:1.19.3")
+    testImplementation("org.testcontainers:mysql:1.19.3")
+    testImplementation("org.testcontainers:postgresql:1.19.3")
+    testImplementation("mysql:mysql-connector-java:8.0.33")
+    testImplementation("org.postgresql:postgresql:42.7.1")
+    testImplementation("org.xerial:sqlite-jdbc:3.44.1.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+    testImplementation("io.kotest:kotest-assertions-core:5.8.0")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
 distributions {
     create("csv") {
         distributionBaseName.set("${projectName}-csv")
