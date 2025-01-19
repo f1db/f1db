@@ -14,7 +14,7 @@ import java.sql.Connection
 import java.sql.DriverManager
 
 @Testcontainers
-class SqlDumpValidationTestUnique {
+class SqlDumpValidationTest {
 
     companion object {
         @Container
@@ -36,7 +36,6 @@ class SqlDumpValidationTestUnique {
         fun setUpContainers() {
             postgresContainer.start()
             mysqlContainer.start()
-            // SQLite doesn't require a container; we'll use an in-memory database
         }
     }
 
@@ -44,7 +43,7 @@ class SqlDumpValidationTestUnique {
     fun `should validate PostgreSQL dump`() {
         val sqlDumpPath = Paths.get("build/data/sql/f1db-sql-postgresql.sql")
         if (!Files.exists(sqlDumpPath)) {
-            fail<Unit>("PostgreSQL SQL dump not found at $sqlDumpPath")
+            fail("PostgreSQL SQL dump not found at $sqlDumpPath")
         }
         val sqlDump = Files.readString(sqlDumpPath)
 
@@ -76,7 +75,7 @@ class SqlDumpValidationTestUnique {
             val actualTables = mutableListOf<String>()
             conn.createStatement().use { stmt ->
                 val rs = stmt.executeQuery(
-                    "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
+                    "SELECT table_name FROM information_schema.tables WHERE table_schema='public'"
                 )
                 while (rs.next()) {
                     actualTables.add(rs.getString("table_name"))
@@ -132,7 +131,7 @@ class SqlDumpValidationTestUnique {
     fun `should validate MySQL dump`() {
         val sqlDumpPath = Paths.get("build/data/sql/f1db-sql-mysql.sql")
         if (!Files.exists(sqlDumpPath)) {
-            fail<Unit>("MySQL SQL dump not found at $sqlDumpPath")
+            fail("MySQL SQL dump not found at $sqlDumpPath")
         }
         val sqlDump = Files.readString(sqlDumpPath)
 
@@ -224,7 +223,6 @@ class SqlDumpValidationTestUnique {
         }
         val sqlDump = Files.readString(sqlDumpPath)
 
-        // SQLite in-memory database
         val connection: Connection = DriverManager.getConnection("jdbc:sqlite::memory:")
 
         connection.use { conn ->
@@ -261,28 +259,29 @@ class SqlDumpValidationTestUnique {
             }
 
             // Validate constraints
-            // val expectedConstraints = listOf(
-            //     "cntn_name_uk",
-            //     "cntr_pk",
-            //     "cntr_alpha2_code_uk",
-            //     "cntr_alpha3_code_uk",
-            //     "cntr_name_uk",
-            //     "cntr_continent_id_fk"
-            // )
-            val actualConstraints = mutableListOf<String>()
             conn.createStatement().use { stmt ->
                 val rs = stmt.executeQuery(
                     "PRAGMA foreign_key_list(country)"
                 )
+                val hasForeignKey = rs.next() // Check if at least one foreign key exists
+                assertTrue(hasForeignKey, "Foreign key constraints should exist in SQLite")
+            }
+
+            // Validate indexes
+            val expectedIndexes = listOf("cntr_continent_id_idx")
+            val actualIndexes = mutableListOf<String>()
+            conn.createStatement().use { stmt ->
+                val rs = stmt.executeQuery(
+                    "PRAGMA index_list(country)"
+                )
                 while (rs.next()) {
-                    val constraintName = rs.getString("id") // SQLite doesn't support named constraints
-                    actualConstraints.add(constraintName)
+                    actualIndexes.add(rs.getString("name"))
                 }
             }
 
-            // SQLite has limited support for named constraints, so some validations might differ
-            // Here, we ensure the foreign key exists
-            assertTrue(actualConstraints.isNotEmpty(), "Foreign key constraints should exist in SQLite")
+            expectedIndexes.forEach { index ->
+                assertTrue(actualIndexes.contains(index), "Index '$index' should exist")
+            }
         }
     }
 }
