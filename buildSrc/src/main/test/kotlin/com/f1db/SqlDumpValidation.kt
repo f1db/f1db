@@ -15,7 +15,6 @@ import java.sql.DriverManager
 
 @Testcontainers
 class SqlDumpValidationTest {
-
     companion object {
         @Container
         private val postgresContainer = PostgreSQLContainer<Nothing>("postgres:13.3").apply {
@@ -36,6 +35,7 @@ class SqlDumpValidationTest {
         fun setUpContainers() {
             postgresContainer.start()
             mysqlContainer.start()
+            // SQLite doesn't require a container; we'll use an in-memory database
         }
     }
 
@@ -71,7 +71,7 @@ class SqlDumpValidationTest {
             }
 
             // Validate tables
-            val expectedTables = listOf("country", "driver")
+            val expectedTables = listOf("country", "driver", "vehicle", "team", "race")
             val actualTables = mutableListOf<String>()
             conn.createStatement().use { stmt ->
                 val rs = stmt.executeQuery(
@@ -148,7 +148,7 @@ class SqlDumpValidationTest {
                     sqlDump.split(";").forEach { sql ->
                         val trimmedSql = sql.trim()
                         if (trimmedSql.isNotEmpty()) {
-                            stmt.execute(trimmedSql)
+                            stmt.execute(sql)
                         }
                     }
                 }
@@ -159,12 +159,10 @@ class SqlDumpValidationTest {
             }
 
             // Validate tables
-            val expectedTables = listOf("country", "driver")
+            val expectedTables = listOf("country", "driver", "vehicle", "team", "race")
             val actualTables = mutableListOf<String>()
             conn.createStatement().use { stmt ->
-                val rs = stmt.executeQuery(
-                    "SHOW TABLES"
-                )
+                val rs = stmt.executeQuery("SHOW TABLES")
                 while (rs.next()) {
                     actualTables.add(rs.getString(1))
                 }
@@ -174,7 +172,7 @@ class SqlDumpValidationTest {
                 assertTrue(actualTables.contains(table), "Table '$table' should exist")
             }
 
-            // Validate constraints (Note: MySQL handles constraints differently; some may be treated as indexes)
+            // Validate constraints
             val expectedConstraints = listOf(
                 "cntn_name_uk",
                 "cntr_pk",
@@ -201,9 +199,7 @@ class SqlDumpValidationTest {
             val expectedIndexes = listOf("cntr_continent_id_idx")
             val actualIndexes = mutableListOf<String>()
             conn.createStatement().use { stmt ->
-                val rs = stmt.executeQuery(
-                    "SHOW INDEX FROM country"
-                )
+                val rs = stmt.executeQuery("SHOW INDEX FROM country")
                 while (rs.next()) {
                     actualIndexes.add(rs.getString("Key_name"))
                 }
@@ -232,7 +228,7 @@ class SqlDumpValidationTest {
                     sqlDump.split(";").forEach { sql ->
                         val trimmedSql = sql.trim()
                         if (trimmedSql.isNotEmpty()) {
-                            stmt.execute(trimmedSql)
+                            stmt.execute(sql)
                         }
                     }
                 }
@@ -243,12 +239,10 @@ class SqlDumpValidationTest {
             }
 
             // Validate tables
-            val expectedTables = listOf("country", "driver")
+            val expectedTables = listOf("country", "driver", "vehicle", "team", "race")
             val actualTables = mutableListOf<String>()
             conn.createStatement().use { stmt ->
-                val rs = stmt.executeQuery(
-                    "SELECT name FROM sqlite_master WHERE type='table'"
-                )
+                val rs = stmt.executeQuery("SELECT name FROM sqlite_master WHERE type='table'")
                 while (rs.next()) {
                     actualTables.add(rs.getString("name"))
                 }
@@ -260,9 +254,7 @@ class SqlDumpValidationTest {
 
             // Validate constraints
             conn.createStatement().use { stmt ->
-                val rs = stmt.executeQuery(
-                    "PRAGMA foreign_key_list(country)"
-                )
+                val rs = stmt.executeQuery("PRAGMA foreign_key_list(country)")
                 val hasForeignKey = rs.next() // Check if at least one foreign key exists
                 assertTrue(hasForeignKey, "Foreign key constraints should exist in SQLite")
             }
@@ -271,9 +263,7 @@ class SqlDumpValidationTest {
             val expectedIndexes = listOf("cntr_continent_id_idx")
             val actualIndexes = mutableListOf<String>()
             conn.createStatement().use { stmt ->
-                val rs = stmt.executeQuery(
-                    "PRAGMA index_list(country)"
-                )
+                val rs = stmt.executeQuery("PRAGMA index_list(country)")
                 while (rs.next()) {
                     actualIndexes.add(rs.getString("name"))
                 }

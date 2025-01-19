@@ -2,6 +2,7 @@ import java.io.FileFilter
 
 plugins {
     `java-gradle-plugin`
+    `java`
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
     id("org.jetbrains.kotlin.kapt") version "2.0.21"
     id("org.jooq.jooq-codegen-gradle") version "3.19.16"
@@ -128,6 +129,10 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     dependsOn(tasks.named("jooqCodegen"))
 }
 
-tasks.test{
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+        showStandardStreams = true
+    }
 }
