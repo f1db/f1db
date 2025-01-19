@@ -2,6 +2,7 @@ plugins {
     distribution
     id("com.f1db")
     id("org.jreleaser") version "1.15.0"
+    kotlin("jvm") version "1.9.22"
 }
 
 group = "com.f1db"
@@ -168,4 +169,8 @@ jreleaser {
 
 tasks.withType<Tar>().configureEach {
     enabled = false
+}
+
+tasks.withType<Test>().configureEach {
+    enabled = true
 }
