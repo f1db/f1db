@@ -56,6 +56,7 @@ interface RaceDriverOfTheDayResultMapper : RecordUnmapper<DriverOfTheDayResult, 
     @Mapping(target = "raceIntervalMillis", ignore = true)
     @Mapping(target = "raceReasonRetired", ignore = true)
     @Mapping(target = "racePoints", ignore = true)
+    @Mapping(target = "racePolePosition", ignore = true)
     @Mapping(target = "raceQualificationPositionNumber", ignore = true)
     @Mapping(target = "raceQualificationPositionText", ignore = true)
     @Mapping(target = "raceGridPositionNumber", ignore = true)

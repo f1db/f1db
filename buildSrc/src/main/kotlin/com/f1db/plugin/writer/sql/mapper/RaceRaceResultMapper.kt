@@ -56,6 +56,7 @@ interface RaceRaceResultMapper : RecordUnmapper<RaceResult, RaceDataRecord> {
     @Mapping(target = "raceIntervalMillis", source = "intervalMillis")
     @Mapping(target = "raceReasonRetired", source = "reasonRetired")
     @Mapping(target = "racePoints", source = "points")
+    @Mapping(target = "racePolePosition", source = "polePosition")
     @Mapping(target = "raceQualificationPositionNumber", source = "qualificationPositionNumber")
     @Mapping(target = "raceQualificationPositionText", source = "qualificationPositionText")
     @Mapping(target = "raceGridPositionNumber", source = "gridPositionNumber")

@@ -626,6 +626,7 @@ CREATE TABLE "race_data"
 , "race_interval_millis" INTEGER
 , "race_reason_retired" VARCHAR(100)
 , "race_points" DECIMAL(8,2)
+, "race_pole_position" BOOLEAN
 , "race_qualification_position_number" INTEGER
 , "race_qualification_position_text" VARCHAR(4)
 , "race_grid_position_number" INTEGER
@@ -1010,6 +1011,7 @@ SELECT   "race_data"."race_id"
 ,        "race_data"."race_interval_millis" AS "interval_millis"
 ,        "race_data"."race_reason_retired" AS "reason_retired"
 ,        "race_data"."race_points" AS "points"
+,        "race_data"."race_pole_position" AS "pole_position"
 ,        "race_data"."race_qualification_position_number" AS "qualification_position_number"
 ,        "race_data"."race_qualification_position_text" AS "qualification_position_text"
 ,        "race_data"."race_grid_position_number" AS "grid_position_number"
