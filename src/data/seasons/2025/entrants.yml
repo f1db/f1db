@@ -10,6 +10,18 @@
       rounds:
     - driverId: lance-stroll
       rounds:
+- entrantId: atlassian-williams-racing
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  chassisId: williams-fw47
+  engineId: mercedes-amg-f1-m15-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alexander-albon
+      rounds:
+    - driverId: carlos-sainz-jr
+      rounds:
 - entrantId: bwt-alpine-f1-team
   countryId: france
   constructorId: alpine
@@ -105,16 +117,4 @@
     - driverId: isack-hadjar
       rounds:
     - driverId: yuki-tsunoda
-      rounds:
-- entrantId: williams-racing
-  countryId: united-kingdom
-  constructorId: williams
-  engineManufacturerId: mercedes
-  chassisId: williams-fw47
-  engineId: mercedes-amg-f1-m15-16-v6-t-h
-  tyreManufacturerId: pirelli
-  drivers:
-    - driverId: alexander-albon
-      rounds:
-    - driverId: carlos-sainz-jr
       rounds:
