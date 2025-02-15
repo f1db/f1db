@@ -41,6 +41,13 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
+## Notable changes in `v2025.0.3`
+
+- Added `polePosition` property to `RaceResult` object.
+
+To accommodate this change the JSON Schema is bumped to version `v6.1.0`.
+
+
 ## Notable changes in `v2025.0.2`
 
 - Added `direction`, `length` and `turns` properties to `Circuit` object.
@@ -64,6 +71,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                                                                                                                                                    |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2025.0.3`        | [`f1db.schema.json v6.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.1.0/single/f1db.schema.json), [`f1db-*.schema.json v6.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.1.0/splitted)                |
 | `>=` `v2025.0.2`        | [`f1db.schema.json v6.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.0.0/single/f1db.schema.json), [`f1db-*.schema.json v6.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.0.0/splitted)                |
 | `>=` `v2024.19.0`       | [`f1db.schema.json v5.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v5.0.0/single/f1db.schema.json), [`f1db-*.schema.json v5.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v5.0.0/splitted)                |
 | `>=` `v2024.0.0.beta2`  | [`f1db.schema.json v4.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v4.1.0/single/f1db.schema.json), [`f1db-*.schema.json v4.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v4.1.0/splitted)                |
@@ -131,7 +139,7 @@ As you can see we use a special **RR** `0` for pre-season releases.
 
 The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
 
-Keep in touch with us by following us on X — [@F1DB_com](https://twitter.com/f1db_com).
+Keep in touch with us by following us on [X](https://twitter.com/f1db_com) or [Bluesky](https://bsky.app/profile/f1db.com).
 
 
 ## Reporting Data Issues

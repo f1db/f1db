@@ -482,6 +482,7 @@ class F1DBReader(
                     val (qualificationPositionNumber, qualificationPositionText) =
                             resolveQualificationPosition(race, raceResult, false)
 
+                    raceResult.polePosition = resolvePolePosition(race, raceResult)
                     raceResult.qualificationPositionNumber = qualificationPositionNumber
                     raceResult.qualificationPositionText = qualificationPositionText
                     raceResult.positionsGained = calculatePositionsGained(raceResult, race.startingGridPositions)
@@ -562,34 +563,6 @@ class F1DBReader(
                 val raceWins = mutableListOf<Any>()
                 val podiums = mutableListOf<Any>()
 
-                race.sprintStartingGridPositions?.forEach { sprintStartingGridPosition ->
-
-                    if (sprintStartingGridPosition.positionNumber == 1 && race.year == 2022) {
-
-                        val driver = db.drivers.first { it.id == sprintStartingGridPosition.driverId }
-                        val constructor = db.constructors.first { it.id == sprintStartingGridPosition.constructorId }
-                        val engineManufacturer = db.engineManufacturers.first { it.id == sprintStartingGridPosition.engineManufacturerId }
-                        val tyreManufacturer = db.tyreManufacturers.first { it.id == sprintStartingGridPosition.tyreManufacturerId }
-
-                        val seasonDriver = season.drivers.first { it.driverId == sprintStartingGridPosition.driverId }
-                        val seasonConstructor = season.constructors.first { it.constructorId == sprintStartingGridPosition.constructorId }
-                        val seasonEngineManufacturer = season.engineManufacturers.first { it.engineManufacturerId == sprintStartingGridPosition.engineManufacturerId }
-                        val seasonTyreManufacturer = season.tyreManufacturers.first { it.tyreManufacturerId == sprintStartingGridPosition.tyreManufacturerId }
-
-                        // Total pole positions.
-
-                        driver.totalPolePositions++
-                        constructor.totalPolePositions++
-                        engineManufacturer.totalPolePositions++
-                        tyreManufacturer.totalPolePositions++
-
-                        seasonDriver.totalPolePositions++
-                        seasonConstructor.totalPolePositions++
-                        seasonEngineManufacturer.totalPolePositions++
-                        seasonTyreManufacturer.totalPolePositions++
-                    }
-                }
-
                 race.startingGridPositions?.forEach { startingGridPosition ->
 
                     val driver = db.drivers.first { it.id == startingGridPosition.driverId }
@@ -616,20 +589,6 @@ class F1DBReader(
                         seasonConstructor.bestStartingGridPosition = resolveBestPosition(seasonConstructor.bestStartingGridPosition, positionNumber)
                         seasonEngineManufacturer.bestStartingGridPosition = resolveBestPosition(seasonEngineManufacturer.bestStartingGridPosition, positionNumber)
                         seasonTyreManufacturer.bestStartingGridPosition = resolveBestPosition(seasonTyreManufacturer.bestStartingGridPosition, positionNumber)
-                    }
-
-                    // Total pole positions.
-
-                    if (startingGridPosition.positionNumber == 1 && (race.year < 2022 || race.year > 2022 || race.qualifyingFormat != Race.QualifyingFormat.SPRINT_RACE)) {
-                        driver.totalPolePositions++
-                        constructor.totalPolePositions++
-                        engineManufacturer.totalPolePositions++
-                        tyreManufacturer.totalPolePositions++
-
-                        seasonDriver.totalPolePositions++
-                        seasonConstructor.totalPolePositions++
-                        seasonEngineManufacturer.totalPolePositions++
-                        seasonTyreManufacturer.totalPolePositions++
                     }
                 }
 
@@ -798,6 +757,21 @@ class F1DBReader(
                         }
                     }
 
+                    // Total pole positions.
+
+                    if (raceResult.polePosition == true) {
+
+                        driver.totalPolePositions++
+                        constructor.totalPolePositions++
+                        engineManufacturer.totalPolePositions++
+                        tyreManufacturer.totalPolePositions++
+
+                        seasonDriver.totalPolePositions++
+                        seasonConstructor.totalPolePositions++
+                        seasonEngineManufacturer.totalPolePositions++
+                        seasonTyreManufacturer.totalPolePositions++
+                    }
+
                     // Total fastest laps.
 
                     if (raceResult.fastestLap == true) {
@@ -866,6 +840,16 @@ class F1DBReader(
 
     private fun resolveBestPosition(currentBestPosition: Int?, newPosition: Int): Int {
         return min(currentBestPosition ?: newPosition, newPosition)
+    }
+
+    private fun resolvePolePosition(race: Race, raceResult: RaceResult): Boolean {
+        val startingGridPosition: StartingGridPosition?
+        if (race.year == 2022 && race.qualifyingFormat == Race.QualifyingFormat.SPRINT_RACE) {
+            startingGridPosition = race.sprintStartingGridPositions.firstOrNull { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+        } else {
+            startingGridPosition = race.startingGridPositions.firstOrNull { it.driverNumber == raceResult.driverNumber && it.driverId == raceResult.driverId && it.constructorId == raceResult.constructorId && it.engineManufacturerId == raceResult.engineManufacturerId && it.tyreManufacturerId == raceResult.tyreManufacturerId }
+        }
+        return startingGridPosition?.positionNumber == 1
     }
 
     private fun resolveQualificationPosition(race: Race, startingGridPosition: StartingGridPosition, sprint: Boolean): Pair<Int?, String?> {
