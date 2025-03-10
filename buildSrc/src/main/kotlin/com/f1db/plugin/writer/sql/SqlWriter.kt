@@ -207,13 +207,11 @@ class SqlWriter(
 
     private fun <R : Record> writeInserts(ctx: DSLContext, out: PrintWriter, table: Table<R>, records: List<R>) {
         ctx.settings().isRenderFormatted = false
-        records.forEach { record ->
-            val stmt = ctx
-                    .insertInto(table)
-                    .set(record)
-                    .sql
-            out.println("$stmt;")
-        }
+        val stmt = ctx
+            .insertInto(table)
+            .set(records)
+            .sql
+        out.println("$stmt;")
         out.println("")
     }
 
