@@ -169,3 +169,8 @@ jreleaser {
 tasks.withType<Tar>().configureEach {
     enabled = false
 }
+
+tasks.register("distTest") {
+    dependsOn(gradle.includedBuild("build-logic").task(":test"))
+    mustRunAfter(tasks.named("dist"))
+}

@@ -20,10 +20,15 @@ gradlePlugin {
 val jacksonVersion by extra("2.18.3")
 val joyVersion by extra("2.1.0")
 val jooqVersion by extra("3.20.1")
+val junitVersion by extra("5.12.0")
 val justifyVersion by extra("3.1.0")
+val kotestVersion by extra("5.9.1")
 val mapstructVersion by extra("1.6.3")
+val mysqlConnectorJavaVersion by extra("8.0.33")
+val postgresqlVersion by extra("42.7.5")
 val slf4jVersion by extra("2.0.16")
 val sqliteJdbcVersion by extra("3.49.1.0")
+val testcontainersVersion by extra("1.20.6")
 
 java {
     toolchain {
@@ -57,6 +62,17 @@ dependencies {
     jooqCodegen("org.jooq:jooq-meta:${jooqVersion}")
     jooqCodegen("org.jooq:jooq-meta-extensions:${jooqVersion}")
     kapt("org.mapstruct:mapstruct-processor:$mapstructVersion")
+    testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+    testImplementation("mysql:mysql-connector-java:$mysqlConnectorJavaVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testImplementation("org.leadpony.joy:joy-classic:$joyVersion")
+    testImplementation("org.leadpony.justify:justify:$justifyVersion")
+    testImplementation("org.testcontainers:junit-jupiter:$testcontainersVersion")
+    testImplementation("org.testcontainers:mysql:$testcontainersVersion")
+    testImplementation("org.testcontainers:postgresql:$testcontainersVersion")
+    testImplementation("org.postgresql:postgresql:$postgresqlVersion")
 }
 
 sourceSets {
@@ -114,4 +130,8 @@ jsonSchema2Pojo {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     dependsOn(tasks.named("generateJsonSchema2Pojo"))
     dependsOn(tasks.named("jooqCodegen"))
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
 }
