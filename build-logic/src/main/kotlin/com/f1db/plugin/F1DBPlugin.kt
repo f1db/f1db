@@ -19,7 +19,7 @@ abstract class F1DBPlugin : Plugin<Project> {
             it.currentSeasonFinished.set(extension.currentSeasonFinished)
         }
 
-        project.tasks.named("assemble") {
+        project.tasks.matching { it.name.endsWith("DistZip") || it.name.endsWith("DistTar") }.configureEach {
             it.dependsOn(dist)
         }
     }

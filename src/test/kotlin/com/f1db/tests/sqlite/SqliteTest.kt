@@ -26,7 +26,7 @@ class SqliteTest : AbstractSqlTest() {
         @BeforeAll
         @JvmStatic
         fun setup() {
-            val file = File("../build/data/sqlite/f1db.db")
+            val file = File("build/data/sqlite/f1db.db")
             val jdbcUrl = "jdbc:sqlite:${file.absolutePath}"
             val jdbcProperties = Properties().apply {
                 setProperty("date_class", "text")

@@ -86,7 +86,7 @@ class JsonTest {
     }
 
     private fun validate(jsonFile: String, schemaFile: String) {
-        validate(File("../build/data/json/$jsonFile"), File("../src/schema/current/$schemaFile"))
+        validate(File("build/data/json/$jsonFile"), File("src/schema/current/$schemaFile"))
     }
 
     private fun validate(jsonFile: File, schemaFile: File) {

@@ -5,25 +5,23 @@ import org.jooq.SQLDialect
 import org.jooq.impl.DSL
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
-import org.testcontainers.containers.MySQLContainer
+import org.testcontainers.containers.PostgreSQLContainer
 import org.testcontainers.utility.MountableFile
 import java.io.File
 import java.sql.Connection
 
 /**
- * Validates the generated MySQL sql dump file.
+ * Validates the generated PostgreSQL sql dump file.
  *
  * @author Marcel Overdijk
  */
-class MysqlTest : AbstractSqlTest() {
+class PostgresqlTest : AbstractSqlTest() {
 
     companion object {
 
-        private val container = MySQLContainer<Nothing>("mysql:8").apply {
-            withEnv("LANG", "C.UTF-8")
-            withCommand("--max_allowed_packet=128M")
+        private val container = PostgreSQLContainer<Nothing>("postgres:17").apply {
             withCopyFileToContainer(
-                MountableFile.forHostPath(File("../build/data/sql/f1db-sql-mysql.sql").absolutePath),
+                MountableFile.forHostPath(File("build/data/sql/f1db-sql-postgresql.sql").absolutePath),
                 "/docker-entrypoint-initdb.d/init.sql")
         }
 
@@ -35,7 +33,7 @@ class MysqlTest : AbstractSqlTest() {
         fun setup() {
             container.start()
             connection = container.createConnection("")
-            ctx = DSL.using(connection, SQLDialect.MYSQL)
+            ctx = DSL.using(connection, SQLDialect.POSTGRES)
         }
 
         @AfterAll

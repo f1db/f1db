@@ -91,7 +91,7 @@ class SmileTest {
     }
 
     private fun validate(smileFile: String, schemaFile: String) {
-        validate(File("../build/data/smile/$smileFile"), File("../src/schema/current/$schemaFile"))
+        validate(File("build/data/smile/$smileFile"), File("src/schema/current/$schemaFile"))
     }
 
     private fun validate(smileFile: File, schemaFile: File) {
