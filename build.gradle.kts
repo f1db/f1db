@@ -6,8 +6,6 @@ plugins {
 
 group = "com.f1db"
 
-val projectName = project.name
-
 val currentSeasonProperty = project.property("currentSeason") as String
 val currentSeasonFinishedProperty = project.property("currentSeasonFinished") as String
 
@@ -24,7 +22,7 @@ repositories {
 
 distributions {
     create("csv") {
-        distributionBaseName.set("${projectName}-csv")
+        distributionBaseName.set("f1db-csv")
         contents {
             from(layout.buildDirectory.dir("data/csv"))
             into("/")
@@ -32,19 +30,19 @@ distributions {
         }
     }
     create("json-single") {
-        distributionBaseName.set("${projectName}-json-single")
+        distributionBaseName.set("f1db-json-single")
         contents {
-            from(layout.buildDirectory.file("data/json/${projectName}.json"))
-            from(layout.projectDirectory.file("src/schema/current/single/${projectName}.schema.json"))
+            from(layout.buildDirectory.file("data/json/f1db.json"))
+            from(layout.projectDirectory.file("src/schema/current/single/f1db.schema.json"))
             into("/")
         }
     }
     create("json-splitted") {
-        distributionBaseName.set("${projectName}-json-splitted")
+        distributionBaseName.set("f1db-json-splitted")
         contents {
             from(layout.buildDirectory.dir("data/json")) {
                 include("*.json")
-                exclude("${projectName}.json")
+                exclude("f1db.json")
             }
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
@@ -53,19 +51,19 @@ distributions {
         }
     }
     create("smile-single") {
-        distributionBaseName.set("${projectName}-smile-single")
+        distributionBaseName.set("f1db-smile-single")
         contents {
-            from(layout.buildDirectory.file("data/smile/${projectName}.sml"))
-            from(layout.projectDirectory.file("src/schema/current/single/${projectName}.schema.json"))
+            from(layout.buildDirectory.file("data/smile/f1db.sml"))
+            from(layout.projectDirectory.file("src/schema/current/single/f1db.schema.json"))
             into("/")
         }
     }
     create("smile-splitted") {
-        distributionBaseName.set("${projectName}-smile-splitted")
+        distributionBaseName.set("f1db-smile-splitted")
         contents {
             from(layout.buildDirectory.dir("data/smile")) {
                 include("*.sml")
-                exclude("${projectName}.sml")
+                exclude("f1db.sml")
             }
             from(layout.projectDirectory.dir("src/schema/current/splitted")) {
                 include("*.schema.json")
@@ -74,30 +72,30 @@ distributions {
         }
     }
     create("sql-mysql") {
-        distributionBaseName.set("${projectName}-sql-mysql")
+        distributionBaseName.set("f1db-sql-mysql")
         contents {
-            from(layout.buildDirectory.file("data/sql/${projectName}-sql-mysql.sql"))
+            from(layout.buildDirectory.file("data/sql/f1db-sql-mysql.sql"))
             into("/")
         }
     }
     create("sql-postgresql") {
-        distributionBaseName.set("${projectName}-sql-postgresql")
+        distributionBaseName.set("f1db-sql-postgresql")
         contents {
-            from(layout.buildDirectory.file("data/sql/${projectName}-sql-postgresql.sql"))
+            from(layout.buildDirectory.file("data/sql/f1db-sql-postgresql.sql"))
             into("/")
         }
     }
     create("sql-sqlite") {
-        distributionBaseName.set("${projectName}-sql-sqlite")
+        distributionBaseName.set("f1db-sql-sqlite")
         contents {
-            from(layout.buildDirectory.file("data/sql/${projectName}-sql-sqlite.sql"))
+            from(layout.buildDirectory.file("data/sql/f1db-sql-sqlite.sql"))
             into("/")
         }
     }
     create("sqlite") {
-        distributionBaseName.set("${projectName}-sqlite")
+        distributionBaseName.set("f1db-sqlite")
         contents {
-            from(layout.buildDirectory.file("data/sqlite/${projectName}.db"))
+            from(layout.buildDirectory.file("data/sqlite/f1db.db"))
             into("/")
         }
     }
@@ -105,7 +103,7 @@ distributions {
 
 jreleaser {
     project {
-        name.set(projectName)
+        name.set("f1db")
         versionPattern.set("CALVER:YYYY.MINOR.MICRO[.MODIFIER]")
         description.set("F1DB Open Source Formula 1 Database")
         license.set("CC-BY-4.0")
@@ -113,40 +111,40 @@ jreleaser {
     }
     files {
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-csv-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-csv.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-csv-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-csv.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-json-single-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-json-single.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-json-single-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-json-single.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-json-splitted-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-json-splitted.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-json-splitted-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-json-splitted.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-smile-single-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-smile-single.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-smile-single-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-smile-single.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-smile-splitted-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-smile-splitted.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-smile-splitted-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-smile-splitted.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-mysql-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-sql-mysql.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-mysql-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-mysql.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-postgresql-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-sql-postgresql.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-postgresql-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-postgresql.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-sql-sqlite-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-sql-sqlite.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-sqlite-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-sqlite.zip")
         }
         artifact {
-            setPath(layout.buildDirectory.file("distributions/${projectName}-sqlite-{{projectVersion}}.zip").get().asFile.path)
-            transform.set("${projectName}-sqlite.zip")
+            setPath(layout.buildDirectory.file("distributions/f1db-sqlite-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sqlite.zip")
         }
     }
     release {
