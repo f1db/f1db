@@ -152,9 +152,13 @@ If you found a data issue which is not reported yet, please [create a new issue]
 
 To build the distribution zips simply run:
 
-    ./gradlew clean dist assemble
+    ./gradlew clean build
 
-Requires Java 21.
+or without running the tests:
+
+    ./gradlew clean build -x test
+
+The build requires Java 21, running the tests requires an environment with Docker.
 
 
 ## Releasing

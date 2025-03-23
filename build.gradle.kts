@@ -7,17 +7,15 @@ plugins {
 group = "com.f1db"
 
 val projectName = project.name
-val currentSeasonYear: String by project
-val currentSeasonFinished: String by project
+
+val currentSeasonProperty = project.property("currentSeason") as String
+val currentSeasonFinishedProperty = project.property("currentSeasonFinished") as String
 
 f1db {
     sourceDir.set(layout.projectDirectory.dir("src/data"))
-    schemaDir.set(layout.projectDirectory.dir("src/schema/current"))
     outputDir.set(layout.buildDirectory.dir("data"))
-    currentSeason {
-        year.set(currentSeasonYear.toInt())
-        finished.set(currentSeasonFinished.toBoolean())
-    }
+    currentSeason.set(currentSeasonProperty.toInt())
+    currentSeasonFinished.set(currentSeasonFinishedProperty.toBoolean())
 }
 
 repositories {
