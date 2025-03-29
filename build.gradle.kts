@@ -116,6 +116,13 @@ distributions {
             into("/")
         }
     }
+    create("sql-mysql-single-inserts") {
+        distributionBaseName.set("f1db-sql-mysql-single-inserts")
+        contents {
+            from(layout.buildDirectory.file("data/sql/f1db-sql-mysql-single-inserts.sql"))
+            into("/")
+        }
+    }
     create("sql-postgresql") {
         distributionBaseName.set("f1db-sql-postgresql")
         contents {
@@ -123,10 +130,24 @@ distributions {
             into("/")
         }
     }
+    create("sql-postgresql-single-inserts") {
+        distributionBaseName.set("f1db-sql-postgresql-single-inserts")
+        contents {
+            from(layout.buildDirectory.file("data/sql/f1db-sql-postgresql-single-inserts.sql"))
+            into("/")
+        }
+    }
     create("sql-sqlite") {
         distributionBaseName.set("f1db-sql-sqlite")
         contents {
             from(layout.buildDirectory.file("data/sql/f1db-sql-sqlite.sql"))
+            into("/")
+        }
+    }
+    create("sql-sqlite-single-inserts") {
+        distributionBaseName.set("f1db-sql-sqlite-single-inserts")
+        contents {
+            from(layout.buildDirectory.file("data/sql/f1db-sql-sqlite-single-inserts.sql"))
             into("/")
         }
     }
@@ -173,12 +194,24 @@ jreleaser {
             transform.set("f1db-sql-mysql.zip")
         }
         artifact {
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-mysql-single-inserts-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-mysql-single-inserts.zip")
+        }
+        artifact {
             setPath(layout.buildDirectory.file("distributions/f1db-sql-postgresql-{{projectVersion}}.zip").get().asFile.path)
             transform.set("f1db-sql-postgresql.zip")
         }
         artifact {
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-postgresql-single-inserts-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-postgresql-single-inserts.zip")
+        }
+        artifact {
             setPath(layout.buildDirectory.file("distributions/f1db-sql-sqlite-{{projectVersion}}.zip").get().asFile.path)
             transform.set("f1db-sql-sqlite.zip")
+        }
+        artifact {
+            setPath(layout.buildDirectory.file("distributions/f1db-sql-sqlite-single-inserts-{{projectVersion}}.zip").get().asFile.path)
+            transform.set("f1db-sql-sqlite-single-inserts.zip")
         }
         artifact {
             setPath(layout.buildDirectory.file("distributions/f1db-sqlite-{{projectVersion}}.zip").get().asFile.path)

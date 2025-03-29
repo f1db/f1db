@@ -12,6 +12,7 @@ import io.kotest.matchers.shouldBe
 import org.jooq.DSLContext
 import org.jooq.impl.TableImpl
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
@@ -20,37 +21,34 @@ import java.time.LocalDate
 import java.util.stream.Stream
 
 /**
- * Abstract class for validating a sql dump file.
+ * Abstract class for validating a sql file.
  *
  * @author Marcel Overdijk
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 abstract class AbstractSqlTest {
 
-    companion object {
-        @JvmStatic
-        fun expectedDatabaseObjectsList(): List<TableImpl<*>> {
-            return (getAllTables() + getAllViews())
-        }
+    protected lateinit var ctx: DSLContext
 
-        @JvmStatic
-        fun expectedDatabaseObjects(): Stream<Arguments> {
-            return expectedDatabaseObjectsList().map { Arguments.of(it.name, it) }.stream()
-        }
+    fun expectedDatabaseObjectsList(): List<TableImpl<*>> {
+        return (getAllTables() + getAllViews())
     }
 
-    abstract fun getDSLContext(): DSLContext
+    fun expectedDatabaseObjects(): Stream<Arguments> {
+        return expectedDatabaseObjectsList().map { Arguments.of(it.name, it) }.stream()
+    }
 
     @Test
     fun `test database objects exists`() {
         val expectedObjects = expectedDatabaseObjectsList().map { it.name }
-        val actualObjects = getDSLContext().meta().tables.map { it.name }
+        val actualObjects = ctx.meta().tables.map { it.name }
         actualObjects.shouldContainAll(expectedObjects)
     }
 
     @ParameterizedTest(name = "test {0} has data")
     @MethodSource("expectedDatabaseObjects")
     fun `test database object has data`(tableName: String, obj: TableImpl<*>) {
-        val count = getDSLContext()
+        val count = ctx
             .selectCount()
             .from(obj)
             .fetchSingleInto(Int::class.java)
@@ -64,7 +62,7 @@ abstract class AbstractSqlTest {
 
         // Fetch driver.
 
-        val driver = getDSLContext().selectFrom(DRIVER).where(DRIVER.ID.eq("ayrton-senna")).fetchOne()
+        val driver = ctx.selectFrom(DRIVER).where(DRIVER.ID.eq("ayrton-senna")).fetchOne()
 
         // Verify driver.
 
@@ -100,7 +98,7 @@ abstract class AbstractSqlTest {
 
         // Fetch driver family relationships.
 
-        val driverFamilyRelationships = getDSLContext()
+        val driverFamilyRelationships = ctx
             .selectFrom(DRIVER_FAMILY_RELATIONSHIP)
             .where(DRIVER_FAMILY_RELATIONSHIP.DRIVER_ID.eq("ayrton-senna"))
             .fetch()
@@ -113,7 +111,7 @@ abstract class AbstractSqlTest {
 
         // Fetch driver season entries.
 
-        val driverSeasonEntries = getDSLContext()
+        val driverSeasonEntries = ctx
             .selectFrom(SEASON_ENTRANT_DRIVER)
             .where(SEASON_ENTRANT_DRIVER.DRIVER_ID.eq("ayrton-senna"))
             .fetch()
@@ -125,7 +123,7 @@ abstract class AbstractSqlTest {
 
         // Fetch season driver standings.
 
-        val seasonDriverStandings = getDSLContext()
+        val seasonDriverStandings = ctx
             .selectFrom(SEASON_DRIVER_STANDING)
             .where(SEASON_DRIVER_STANDING.DRIVER_ID.eq("ayrton-senna"))
             .fetch()

@@ -4,8 +4,8 @@ import com.f1db.plugin.schema.single.F1db
 import com.f1db.plugin.writer.csv.CsvWriter
 import com.f1db.plugin.writer.json.JsonWriter
 import com.f1db.plugin.writer.smile.SmileWriter
-import com.f1db.plugin.writer.sql.SqlWriter
-import com.f1db.plugin.writer.sqlite.SqliteWriter
+import com.f1db.plugin.writer.sql.SqlDumpWriter
+import com.f1db.plugin.writer.sqlite.SqliteDatabaseWriter
 import java.io.File
 
 /**
@@ -30,8 +30,8 @@ class F1DBWriter(
                 "csv" to { CsvWriter(File(outputDir, "csv"), db).write() },
                 "json" to { JsonWriter(File(outputDir, "json"), db).write() },
                 "smile" to { SmileWriter(File(outputDir, "smile"), db).write() },
-                "sql" to { SqlWriter(File(outputDir, "sql"), db).write() },
-                "sqlite" to { SqliteWriter(File(outputDir, "sqlite"), db).write() }
+                "sql" to { SqlDumpWriter(File(outputDir, "sql"), db).write() },
+                "sqlite" to { SqliteDatabaseWriter(File(outputDir, "sqlite"), db).write() }
         )
 
         if (formats.isEmpty()) {

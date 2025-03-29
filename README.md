@@ -38,6 +38,7 @@ Release artifacts are available in the following formats:
 - JSON splitted (multiple data files)
 - Smile (binary variant of the JSON format)
 - SQL (MySQL, PostgreSQL or SQLite .sql dump files to create and populate a custom database)
+- SQL with single inserts (much smaller .sql dump files with single insert per table; better performance but not supported by all platforms)
 - SQLite database
 
 
@@ -154,7 +155,7 @@ To build the distribution zips simply run:
 
     ./gradlew clean build
 
-or without running the tests:
+or without running the tests (way faster):
 
     ./gradlew clean build -x test
 

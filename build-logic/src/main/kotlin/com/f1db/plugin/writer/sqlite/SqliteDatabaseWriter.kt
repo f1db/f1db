@@ -50,11 +50,11 @@ import java.sql.DriverManager
 import java.util.*
 
 /**
- * The SQLite writer.
+ * The SQLite database writer.
  *
  * @author Marcel Overdijk
  */
-class SqliteWriter(
+class SqliteDatabaseWriter(
         private val outputDir: File,
         private val db: F1db,
 ) {
