@@ -25,3 +25,16 @@ jobs:
         env:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.JRELEASER_GITHUB_TOKEN }}
         run: ./gradlew clean build jreleaserFullRelease --no-daemon
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: build/test-results/test/
+      - name: Test report
+        if: always()
+        uses: dorny/test-reporter@v2
+        with:
+          name: test-results
+          path: build/test-results/test/*.xml
+          reporter: java-junit
