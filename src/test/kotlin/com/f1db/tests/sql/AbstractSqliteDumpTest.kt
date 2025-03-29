@@ -28,7 +28,7 @@ abstract class AbstractSqliteDumpTest : AbstractSqlDumpTest<GenericContainer<Not
         container = GenericContainer<Nothing>("keinos/sqlite3:latest").apply {
             withCommand("tail", "-f", "/dev/null") // Keeps container running.
             withFileSystemBind(importFile.absolutePath, "/tmp/import.sql", BindMode.READ_ONLY)
-            withFileSystemBind(databaseFile.absolutePath, "/tmp/f1db.db", BindMode.READ_WRITE)
+            withFileSystemBind(databaseFile.parentFile.absolutePath, "/tmp", BindMode.READ_WRITE)
         }
 
         // Start the container.
