@@ -20,15 +20,10 @@ abstract class AbstractSqliteDumpTest : AbstractSqlDumpTest<GenericContainer<Not
 
     override fun setupContainer() {
 
-        // Create temporary database file.
-        val databaseFile = Files.createTempFile("f1db-", ".db").toFile()
-        databaseFile.deleteOnExit()
-
         // Create the container.
         container = GenericContainer<Nothing>("keinos/sqlite3:latest").apply {
             withCommand("tail", "-f", "/dev/null") // Keeps container running.
             withFileSystemBind(importFile.absolutePath, "/tmp/import.sql", BindMode.READ_ONLY)
-            withFileSystemBind(databaseFile.parentFile.absolutePath, "/tmp", BindMode.READ_WRITE)
         }
 
         // Start the container.
@@ -36,6 +31,12 @@ abstract class AbstractSqliteDumpTest : AbstractSqlDumpTest<GenericContainer<Not
 
         // Import the dump file.
         container.execAndCheck("sh", "-c", "sqlite3 /tmp/f1db.db < /tmp/import.sql")
+
+        // Create temporary database file.
+        val databaseFile = Files.createTempFile("f1db-", ".db").toFile().apply { deleteOnExit() }
+
+        // Copy the database file from the container to the host.
+        container.copyFileFromContainer("/tmp/f1db.db", databaseFile.absolutePath)
 
         // Create the JDBC connection URL and properties.
         val jdbcUrl = "jdbc:sqlite:${databaseFile.absolutePath}"

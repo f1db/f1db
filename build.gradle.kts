@@ -244,3 +244,7 @@ tasks.withType<Test> {
         events("failed", "passed", "skipped")
     }
 }
+
+tasks.named("jreleaserFullRelease") {
+    dependsOn("build")
+}
