@@ -52,7 +52,7 @@
     - driverId: louis-rosier
       rounds: 1,4-6
     - driverId: philippe-etancelin
-      rounds: 1,5
+      rounds: 1,5-6
     - driverId: yves-giraud-cabantous
       rounds: 1,4-6
     - driverId: raymond-sommer
@@ -495,7 +495,7 @@
   tyreManufacturerId: dunlop
   drivers:
     - driverId: philippe-etancelin
-      rounds: 2,4,6-7
+      rounds: 2,4,7
     - driverId: eugene-chaboud
       rounds: 6
 - entrantId: pierre-levegh
@@ -553,6 +553,7 @@
   chassis:
     - chassisId: maserati-4cl
     - chassisId: maserati-4clt-48
+    - chassisId: maserati-4clt-50
   engines:
     - engineId: maserati-4cl-15-l4-s
     - engineId: maserati-4clt-15-l4-s
@@ -586,7 +587,7 @@
   engineManufacturerId: ferrari
   chassis:
     - chassisId: ferrari-125
-    - chassisId: ferrari-166
+    - chassisId: ferrari-166f2-50
     - chassisId: ferrari-275
     - chassisId: ferrari-375
   engines:

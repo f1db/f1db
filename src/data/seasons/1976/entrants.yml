@@ -21,6 +21,7 @@
   constructorId: fittipaldi
   engineManufacturerId: ford
   chassis:
+    - chassisId: fittipaldi-fd01
     - chassisId: fittipaldi-fd03
     - chassisId: fittipaldi-fd04
   engineId: ford-cosworth-dfv-30-v8

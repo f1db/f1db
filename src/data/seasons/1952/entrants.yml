@@ -295,7 +295,7 @@
   constructorId: gordini
   engineManufacturerId: gordini
   chassis:
-    - chassisId: gordini-t15
+    - chassisId: simca-gordini-t15
     - chassisId: gordini-t16
     - chassisId: gordini-t16s
   engines:
@@ -689,11 +689,13 @@
   constructorId: ferrari
   engineManufacturerId: ferrari
   chassis:
+    - chassisId: ferrari-d50
     - chassisId: ferrari-375s
     - chassisId: ferrari-500
   engines:
     - engineId: ferrari-375-45-v12
     - engineId: ferrari-500-20-l4
+    - engineId: ferrari-625-25-l4
   tyreManufacturers:
     - tyreManufacturerId: firestone
     - tyreManufacturerId: pirelli

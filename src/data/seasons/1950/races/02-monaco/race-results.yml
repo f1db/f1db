@@ -195,20 +195,6 @@
   points:
   gridPosition: 11
 - position: DNF
-  driverNumber: 8
-  driverId: harry-schell
-  constructorId: cooper
-  engineManufacturerId: jap
-  tyreManufacturerId: dunlop
-  laps: 0
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Collision
-  points:
-  gridPosition: 20
-- position: DNF
   driverNumber: 52
   driverId: emmanuel-de-graffenried
   constructorId: maserati
@@ -264,6 +250,20 @@
   reasonRetired: Accident
   points:
   gridPosition: 17
+- position: DNF
+  driverNumber: 8
+  driverId: harry-schell
+  constructorId: cooper
+  engineManufacturerId: jap
+  tyreManufacturerId: dunlop
+  laps: 0
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Collision
+  points:
+  gridPosition: 20
 - position: DNS
   driverNumber: 28
   driverId: peter-whitehead

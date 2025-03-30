@@ -96,6 +96,7 @@
   constructorId: cooper
   engineManufacturerId: climax
   chassis:
+    - chassisId: cooper-t45
     - chassisId: cooper-t51
     - chassisId: cooper-t53
   engineId: climax-fpf-25-l4
@@ -613,6 +614,7 @@
   constructorId: ferrari
   engineManufacturerId: ferrari
   chassis:
+    - chassisId: ferrari-156
     - chassisId: ferrari-246
     - chassisId: ferrari-246-p
   engines:

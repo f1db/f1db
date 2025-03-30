@@ -66,9 +66,11 @@
   constructorId: cooper
   engineManufacturerId: climax
   chassis:
+    - chassisId: cooper-t66
     - chassisId: cooper-t60
     - chassisId: cooper-t55
     - chassisId: cooper-t53
+    - chassisId: cooper-t45
   engines:
     - engineId: climax-fwmv-15-v8
     - engineId: climax-fpf-15-l4

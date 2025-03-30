@@ -281,20 +281,6 @@
   points:
   gridPosition: 16
 - position: DNF
-  driverNumber: 10
-  driverId: louis-rosier
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: englebert
-  laps: 0
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Spun off
-  points:
-  gridPosition: 14
-- position: DNF
   driverNumber: 2
   driverId: jacques-swaters
   constructorId: ferrari
@@ -308,6 +294,20 @@
   reasonRetired: Spun off
   points:
   gridPosition: 13
+- position: DNF
+  driverNumber: 10
+  driverId: louis-rosier
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: englebert
+  laps: 0
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Spun off
+  points:
+  gridPosition: 14
 - position: DNS
   driverNumber: 12
   driverId: louis-chiron

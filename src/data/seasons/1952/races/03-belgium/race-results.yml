@@ -223,20 +223,6 @@
   points:
   gridPosition: 15
 - position: DNF
-  driverNumber: 16
-  driverId: jean-behra
-  constructorId: gordini
-  engineManufacturerId: gordini
-  tyreManufacturerId: englebert
-  laps: 13
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Accident
-  points:
-  gridPosition: 5
-- position: DNF
   driverNumber: 6
   driverId: piero-taruffi
   constructorId: ferrari
@@ -250,6 +236,20 @@
   reasonRetired: Accident
   points:
   gridPosition: 3
+- position: DNF
+  driverNumber: 16
+  driverId: jean-behra
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
+  laps: 13
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Accident
+  points:
+  gridPosition: 5
 - position: DNF
   driverNumber: 36
   driverId: ken-wharton

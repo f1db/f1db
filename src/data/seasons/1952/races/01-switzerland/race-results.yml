@@ -252,20 +252,6 @@
   points:
   gridPosition: 10
 - position: DNF
-  driverNumber: 4
-  driverId: toni-ulmen
-  constructorId: veritas
-  engineManufacturerId: veritas
-  tyreManufacturerId: dunlop
-  laps: 4
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Fuel leak
-  points:
-  gridPosition: 16
-- position: DNF
   driverNumber: 2
   driverId: hans-stuck
   constructorId: afm
@@ -279,6 +265,20 @@
   reasonRetired: Engine
   points:
   gridPosition: 14
+- position: DNF
+  driverNumber: 4
+  driverId: toni-ulmen
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  laps: 4
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Fuel leak
+  points:
+  gridPosition: 16
 - position: DNF
   driverNumber: 12
   driverId: louis-rosier

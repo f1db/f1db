@@ -295,20 +295,6 @@
   points:
   gridPosition: 8
 - position: DNF
-  driverNumber: 12
-  driverId: johnny-claes
-  constructorId: connaught
-  engineManufacturerId: lea-francis
-  tyreManufacturerId: englebert
-  laps: 12
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Engine
-  points:
-  gridPosition: 25
-- position: DNF
   driverNumber: 35
   driverId: edgar-barth
   constructorId: emw
@@ -322,6 +308,20 @@
   reasonRetired: Exhaust
   points:
   gridPosition: 24
+- position: DNF
+  driverNumber: 12
+  driverId: johnny-claes
+  constructorId: connaught
+  engineManufacturerId: lea-francis
+  tyreManufacturerId: englebert
+  laps: 12
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 25
 - position: DNF
   driverNumber: 26
   driverId: oswald-karch
