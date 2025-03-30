@@ -112,6 +112,7 @@
       engineManufacturerId: alta
       chassis:
         - chassisId: cooper-special
+        - chassisId: cooper-t23
         - chassisId: cooper-t24
       engineId: alta-gp-25-l4
       tyreManufacturerId: dunlop
@@ -126,15 +127,6 @@
   tyreManufacturerId: dunlop
   driverId: rudolf-krause
   rounds: 7
-- entrantId: dr-rn-sabourin
-  countryId: united-states-of-america
-  constructorId: del-roy
-  engineManufacturerId: offenhauser
-  chassisId: del-roy
-  engineId: offenhauser-45-l4
-  tyreManufacturerId: firestone
-  driverId: johnny-thomson
-  rounds: 2
 - entrantId: ecurie-belge
   countryId: belgium
   constructorId: connaught
@@ -169,6 +161,7 @@
   constructorId: ferrari
   engineManufacturerId: ferrari
   chassis:
+    - chassisId: ferrari-166c
     - chassisId: ferrari-212
     - chassisId: ferrari-500
   engines:
@@ -516,6 +509,8 @@
     - driverId: andy-linden
       rounds: 2
     - driverId: jerry-hoyt
+      rounds: 2
+    - driverId: chuck-stevenson
       rounds: 2
 - entrantId: js-belond
   countryId: united-states-of-america

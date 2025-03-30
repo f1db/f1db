@@ -87,11 +87,13 @@
   constructorId: cooper
   engineManufacturerId: climax
   chassis:
+    - chassisId: cooper-t43
     - chassisId: cooper-t44
     - chassisId: cooper-t45
   engines:
     - engineId: climax-fpf-20-l4
     - engineId: climax-fpf-15-l4
+    - engineId: climax-fpf-22-l4
   tyreManufacturerId: dunlop
   drivers:
     - driverId: jack-brabham
@@ -600,6 +602,7 @@
     - chassisId: ferrari-156
   engines:
     - engineId: ferrari-143-24-v6
+    - engineId: ferrari-155-24-v6
     - engineId: ferrari-d156-15-v6
   tyreManufacturerId: englebert
   drivers:

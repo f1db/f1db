@@ -67,7 +67,7 @@
         - driverId: lucien-bianchi
           rounds: 1
         - driverId: olivier-gendebien
-          rounds: 1
+          rounds: 1,5
     - constructorId: lotus
       engineManufacturerId: climax
       chassisId: lotus-18
@@ -280,8 +280,6 @@
       tyreManufacturerId: dunlop
       drivers:
         - driverId: jack-fairman
-          rounds: 5
-        - driverId: stirling-moss
           rounds: 5
 - entrantId: scuderia-centro-sud
   countryId: italy

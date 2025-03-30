@@ -75,10 +75,10 @@
   engineManufacturerId: offenhauser
   tyreManufacturerId: firestone
   sharedCar: true
-  laps:
+  laps: 136
   time:
   timePenalty:
-  gap:
+  gap: "+2 laps"
   interval:
   reasonRetired:
   points: 1
@@ -370,12 +370,12 @@
   engineManufacturerId: offenhauser
   tyreManufacturerId: firestone
   sharedCar: true
-  laps:
+  laps: 112
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Oil line
   points:
   gridPosition:
 - position: 26
@@ -413,12 +413,12 @@
   engineManufacturerId: offenhauser
   tyreManufacturerId: firestone
   sharedCar: true
-  laps:
+  laps: 108
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Oil pressure
   points:
   gridPosition:
 - position: 28

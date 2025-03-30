@@ -210,20 +210,6 @@
   points:
   gridPosition: 14
 - position: DNF
-  driverNumber: 110
-  driverId: marcel-balsa
-  constructorId: balsa
-  engineManufacturerId: bmw
-  tyreManufacturerId: dunlop
-  laps: 5
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Engine
-  points:
-  gridPosition: 25
-- position: DNF
   driverNumber: 126
   driverId: adolf-brudes
   constructorId: veritas
@@ -237,6 +223,20 @@
   reasonRetired: Engine
   points:
   gridPosition: 19
+- position: DNF
+  driverNumber: 110
+  driverId: marcel-balsa
+  constructorId: balsa
+  engineManufacturerId: bmw
+  tyreManufacturerId: dunlop
+  laps: 5
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 25
 - position: DNF
   driverNumber: 130
   driverId: karl-gunther-bechem
@@ -308,19 +308,19 @@
   points:
   gridPosition: 21
 - position: DNF
-  driverNumber: 104
-  driverId: piero-carini
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
+  driverNumber: 109
+  driverId: maurice-trintignant
+  constructorId: gordini
+  engineManufacturerId: gordini
+  tyreManufacturerId: englebert
   laps: 1
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired: Brakes
+  reasonRetired: Accident
   points:
-  gridPosition: 27
+  gridPosition: 3
 - position: DNF
   driverNumber: 127
   driverId: paul-pietsch
@@ -335,20 +335,20 @@
   reasonRetired: Gearbox
   points:
   gridPosition: 7
-- position: DNF
-  driverNumber: 122
-  driverId: theo-helfrich
-  constructorId: veritas
-  engineManufacturerId: veritas
-  tyreManufacturerId: dunlop
+- position: DSQ
+  driverNumber: 105
+  driverId: felice-bonetto
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
   laps: 1
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired: Engine
+  reasonRetired: Push start
   points:
-  gridPosition: 18
+  gridPosition: 10
 - position: DNF
   driverNumber: 112
   driverId: paul-frere
@@ -364,6 +364,20 @@
   points:
   gridPosition: 13
 - position: DNF
+  driverNumber: 122
+  driverId: theo-helfrich
+  constructorId: veritas
+  engineManufacturerId: veritas
+  tyreManufacturerId: dunlop
+  laps: 1
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 18
+- position: DNF
   driverNumber: 129
   driverId: josef-peters
   constructorId: veritas
@@ -378,19 +392,19 @@
   points:
   gridPosition: 20
 - position: DNF
-  driverNumber: 109
-  driverId: maurice-trintignant
-  constructorId: gordini
-  engineManufacturerId: gordini
-  tyreManufacturerId: englebert
+  driverNumber: 104
+  driverId: piero-carini
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
   laps: 1
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accident
+  reasonRetired: Brakes
   points:
-  gridPosition: 3
+  gridPosition: 27
 - position: DNF
   driverNumber: 115
   driverId: gino-bianco
@@ -405,20 +419,6 @@
   reasonRetired: Engine
   points:
   gridPosition: 16
-- position: DSQ
-  driverNumber: 105
-  driverId: felice-bonetto
-  constructorId: maserati
-  engineManufacturerId: maserati
-  tyreManufacturerId: pirelli
-  laps: 1
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Push start
-  points:
-  gridPosition: 10
 - position: DNS
   driverNumber: 133
   driverId: willi-krakau

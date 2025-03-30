@@ -181,20 +181,6 @@
   points:
   gridPosition: 6
 - position: DNF
-  driverNumber: 20
-  driverId: raymond-sommer
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  laps: 19
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Suspension
-  points:
-  gridPosition: 13
-- position: DNF
   driverNumber: 8
   driverId: eugene-martin
   constructorId: talbot-lago
@@ -208,6 +194,20 @@
   reasonRetired: Accident
   points:
   gridPosition: 9
+- position: DNF
+  driverNumber: 20
+  driverId: raymond-sommer
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 19
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Suspension
+  points:
+  gridPosition: 13
 - position: DNF
   driverNumber: 22
   driverId: luigi-villoresi

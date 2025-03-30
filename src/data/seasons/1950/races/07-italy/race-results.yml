@@ -309,20 +309,6 @@
   points:
   gridPosition: 26
 - position: DNF
-  driverNumber: 6
-  driverId: louis-chiron
-  constructorId: maserati
-  engineManufacturerId: maserati
-  tyreManufacturerId: pirelli
-  laps: 13
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Oil pressure
-  points:
-  gridPosition: 19
-- position: DNF
   driverNumber: 42
   driverId: maurice-trintignant
   constructorId: simca-gordini
@@ -336,6 +322,20 @@
   reasonRetired: Water pipe
   points:
   gridPosition: 12
+- position: DNF
+  driverNumber: 6
+  driverId: louis-chiron
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 13
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil pressure
+  points:
+  gridPosition: 19
 - position: DNF
   driverNumber: 46
   driverId: consalvo-sanesi

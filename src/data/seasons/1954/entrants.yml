@@ -292,8 +292,6 @@
   drivers:
     - driverId: larry-crockett
       rounds: 2
-    - driverId: paul-russo
-      rounds: 2
 - entrantId: francis-bardazon
   countryId: united-states-of-america
   constructorId: kurtis-kraft
@@ -525,7 +523,11 @@
   chassisId: kurtis-kraft-327
   engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
-  driverId: jerry-hoyt
+  drivers:
+    - driverId: jerry-hoyt
+      rounds: 2
+    - driverId: paul-russo
+      rounds: 2
   rounds: 2
 - entrantId: officine-alfieri-maserati
   countryId: italy
@@ -703,6 +705,7 @@
     - chassisId: ferrari-625
   engines:
     - engineId: ferrari-500-20-l4
+    - engineId: ferrari-553-20-l4
     - engineId: ferrari-554-25-l4
     - engineId: ferrari-625-25-l4
   tyreManufacturerId: pirelli
@@ -785,6 +788,18 @@
     - driverId: frank-armi
       rounds: 2
     - driverId: george-fonder
+      rounds: 2
+- entrantId: william-ansted
+  countryId: united-states-of-america
+  constructorId: kurtis-kraft
+  engineManufacturerId: offenhauser
+  chassisId: kurtis-kraft-kk500a
+  engineId: offenhauser-45-l4
+  tyreManufacturerId: firestone
+  drivers:
+    - driverId: jerry-hoyt
+      rounds: 2
+    - driverId: paul-russo
       rounds: 2
 - entrantId: william-ansted-1
   countryId: united-states-of-america

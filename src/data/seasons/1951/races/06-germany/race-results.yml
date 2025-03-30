@@ -265,20 +265,6 @@
   points:
   gridPosition: 21
 - position: DNF
-  driverNumber: 92
-  driverId: toni-branca
-  constructorId: maserati
-  engineManufacturerId: maserati
-  tyreManufacturerId: pirelli
-  laps: 3
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Engine
-  points:
-  gridPosition: 17
-- position: DNF
   driverNumber: 85
   driverId: louis-chiron
   constructorId: talbot-lago
@@ -292,6 +278,20 @@
   reasonRetired: Ignition
   points:
   gridPosition: 13
+- position: DNF
+  driverNumber: 92
+  driverId: toni-branca
+  constructorId: maserati
+  engineManufacturerId: maserati
+  tyreManufacturerId: pirelli
+  laps: 3
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Engine
+  points:
+  gridPosition: 17
 - position: DNF
   driverNumber: 79
   driverId: emmanuel-de-graffenried

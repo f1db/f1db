@@ -45,7 +45,9 @@
           rounds: 2-10
     - constructorId: lotus
       engineManufacturerId: climax
-      chassisId: lotus-25
+      chassis:
+        - chassisId: lotus-24
+        - chassisId: lotus-25
       engineId: climax-fwmv-15-v8
       tyreManufacturerId: dunlop
       driverId: jack-brabham
