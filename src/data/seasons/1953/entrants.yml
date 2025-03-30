@@ -5,8 +5,11 @@
   chassisId: kurtis-kraft-kk3000
   engineId: offenhauser-45-l4
   tyreManufacturerId: firestone
-  driverId: spider-webb
-  rounds: 2
+  drivers:
+    - driverId: spider-webb
+      rounds: 2
+    - driverId: johnny-thomson
+      rounds: 2
 - entrantId: ae-dean
   countryId: united-states-of-america
   constructorId: kuzma
