@@ -7,9 +7,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-3
+      rounds: 1-4
     - driverId: lance-stroll
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: felipe-drugovich
+      rounds:
+      testDriver: true
 - entrantId: atlassian-williams-racing
   countryId: united-kingdom
   constructorId: williams
@@ -19,9 +22,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-3
+      rounds: 1-4
     - driverId: carlos-sainz-jr
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: luke-browning
+      rounds:
+      testDriver: true
 - entrantId: bwt-alpine-f1-team
   countryId: france
   constructorId: alpine
@@ -31,9 +37,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
-      rounds: 1-3
+      rounds: 1-4
     - driverId: jack-doohan
-      rounds: 1-3
+      rounds: 1-4
     - driverId: ryo-hirakawa
       rounds:
       testDriver: true
@@ -46,9 +52,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-3
+      rounds: 1-4
     - driverId: oscar-piastri
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: mercedes-amg-petronas-f1-team
   countryId: germany
   constructorId: mercedes
@@ -58,9 +64,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: andrea-kimi-antonelli
-      rounds: 1-3
+      rounds: 1-4
     - driverId: george-russell
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: frederik-vesti
+      rounds:
+      testDriver: true
 - entrantId: moneygram-haas-f1-team
   countryId: united-states-of-america
   constructorId: haas
@@ -70,9 +79,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-3
+      rounds: 1-4
     - driverId: oliver-bearman
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: ryo-hirakawa
+      rounds:
+      testDriver: true
 - entrantId: oracle-red-bull-racing
   countryId: austria
   constructorId: red-bull
@@ -84,9 +96,12 @@
     - driverId: liam-lawson
       rounds: 1-2
     - driverId: max-verstappen
-      rounds: 1-3
+      rounds: 1-4
     - driverId: yuki-tsunoda
-      rounds: 3
+      rounds: 3-4
+    - driverId: ayumu-iwasa
+      rounds:
+      testDriver: true
 - entrantId: scuderia-ferrari
   countryId: italy
   constructorId: ferrari
@@ -96,9 +111,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: charles-leclerc
-      rounds: 1-3
+      rounds: 1-4
     - driverId: lewis-hamilton
-      rounds: 1-3
+      rounds: 1-4
+    - driverId: dino-beganovic
+      rounds:
+      testDriver: true
 - entrantId: stake-f1-team-kick-sauber
   countryId: switzerland
   constructorId: kick-sauber
@@ -108,9 +126,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: gabriel-bortoleto
-      rounds: 1-3
+      rounds: 1-4
     - driverId: nico-hulkenberg
-      rounds: 1-3
+      rounds: 1-4
 - entrantId: visa-cash-app-racing-bulls-f1-team
   countryId: italy
   constructorId: racing-bulls
@@ -120,8 +138,8 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: isack-hadjar
-      rounds: 1-3
+      rounds: 1-4
     - driverId: yuki-tsunoda
       rounds: 1-2
     - driverId: liam-lawson
-      rounds: 3
+      rounds: 3-4
