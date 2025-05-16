@@ -57,7 +57,9 @@
   constructorId: ligier
   engineManufacturerId: renault
   chassisId: ligier-js27
-  engineId: renault-ef4b-15-v6-t
+  engines:
+    - engineId: renault-ef4b-15-v6-t
+    - engineId: renault-ef15b-15-v6-t
   tyreManufacturerId: pirelli
   drivers:
     - driverId: jacques-laffite
