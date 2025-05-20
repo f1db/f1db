@@ -248,3 +248,9 @@ tasks.withType<Test> {
 tasks.named("jreleaserFullRelease") {
     dependsOn("build")
 }
+
+tasks.register<Exec>("cloc") {
+    group = "other"
+    description = "Counts lines of data."
+    commandLine("/opt/homebrew/bin/cloc", "src/data")
+}
