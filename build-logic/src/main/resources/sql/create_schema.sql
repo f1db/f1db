@@ -520,7 +520,7 @@ CREATE TABLE "race"
 , "year" INTEGER NOT NULL
 , "round" INTEGER NOT NULL
 , "date" DATE NOT NULL
-, "time" TEXT
+, "time" VARCHAR(5)
 , "grand_prix_id" VARCHAR(100) NOT NULL
 , "official_name" VARCHAR(100) NOT NULL
 , "qualifying_format" VARCHAR(20) NOT NULL
