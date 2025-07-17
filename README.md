@@ -45,6 +45,9 @@ Release artifacts are available in the following formats:
 ## Notable changes in `v2025.13.0`
 
 - Added `iocCode` (International Olympic Committee code) property to `Country` object.
+- Changed Czech Republic to Czechia (`czechia`).
+- Changed Macedonia to North Macedonia (`north-macedonia`).
+- Changed Swaziland to Eswatini (`eswatini`).
 
 To accommodate this change the JSON Schema is bumped to version `v6.2.0`.
 
