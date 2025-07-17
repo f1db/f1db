@@ -42,9 +42,16 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
+## Notable changes in `v2025.13.0`
+
+- Added `iocCode` (International Olympic Committee code) property to `Country` object.
+
+To accommodate this change the JSON Schema is bumped to version `v6.2.0`.
+
+
 ## Notable changes in `v2025.6.0`
 
-- Fixed type of `turns` property from `numner` to `integer` in `Circuit` and `Race` objects.
+- Fixed type of `turns` property from `number` to `integer` in `Circuit` and `Race` objects.
 
 To accommodate this change the JSON Schema is bumped to version `v6.1.1`.
 
@@ -79,6 +86,7 @@ Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
 | Version                 | Schema Version                                                                                                                                                                                                                                    |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `>=` `v2025.13.0`       | [`f1db.schema.json v6.2.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.2.0/single/f1db.schema.json), [`f1db-*.schema.json v6.2.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.2.0/splitted)                |
 | `>=` `v2025.6.0`        | [`f1db.schema.json v6.1.1`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.1.1/single/f1db.schema.json), [`f1db-*.schema.json v6.1.1 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.1.1/splitted)                |
 | `>=` `v2025.0.3`        | [`f1db.schema.json v6.1.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.1.0/single/f1db.schema.json), [`f1db-*.schema.json v6.1.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.1.0/splitted)                |
 | `>=` `v2025.0.2`        | [`f1db.schema.json v6.0.0`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/v6.0.0/single/f1db.schema.json), [`f1db-*.schema.json v6.0.0 splitted`](https://github.com/f1db/f1db/tree/main/src/schema/v6.0.0/splitted)                |

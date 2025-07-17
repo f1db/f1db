@@ -12,6 +12,7 @@ CREATE TABLE "country"
 ( "id" VARCHAR(100) NOT NULL
 , "alpha2_code" VARCHAR(2) NOT NULL
 , "alpha3_code" VARCHAR(3) NOT NULL
+, "ioc_code" VARCHAR(3)
 , "name" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100)
 , "continent_id" VARCHAR(100) NOT NULL
