@@ -42,39 +42,6 @@ Release artifacts are available in the following formats:
 - SQLite database
 
 
-## Notable changes in `v2025.13.0`
-
-- Added `iocCode` (International Olympic Committee code) property to `Country` object.
-- Changed Czech Republic to Czechia (`czechia`).
-- Changed Macedonia to North Macedonia (`north-macedonia`).
-- Changed Swaziland to Eswatini (`eswatini`).
-
-To accommodate this change the JSON Schema is bumped to version `v6.2.0`.
-
-
-## Notable changes in `v2025.6.0`
-
-- Fixed type of `turns` property from `number` to `integer` in `Circuit` and `Race` objects.
-
-To accommodate this change the JSON Schema is bumped to version `v6.1.1`.
-
-
-## Notable changes in `v2025.0.3`
-
-- Added `polePosition` property to `RaceResult` object.
-
-To accommodate this change the JSON Schema is bumped to version `v6.1.0`.
-
-
-## Notable changes in `v2025.0.2`
-
-- Added `direction`, `length` and `turns` properties to `Circuit` object.
-- Added `direction` and `turns` properties to `Race` object (`courseLength` already exists).
-- Added `driversChampionshipDecider` and `constructorsChampionshipDecider` properties to `Race` object.
-
-To accommodate these changes the JSON Schema is bumped to version `v6.0.0`.
-
-
 ## F1DB JSON Schema
 
 The main [`f1db.schema.json`](https://raw.githubusercontent.com/f1db/f1db/main/src/schema/current/single/f1db.schema.json)
@@ -85,7 +52,7 @@ schema files must be used.
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
-See the [F1FB JSON Schema Changelog](./CHANGELOG.md) for details about schema changes and version compatibility.
+See the [Schema Changelog](./CHANGELOG.md) for details about schema changes and version compatibility.
 
 
 ## F1DB SQL / SQLite Database
