@@ -52,7 +52,7 @@ schema files must be used.
 
 Both the JSON and Smile artifacts validate against the F1DB Json Schema.
 
-See the [Schema Changelog](./CHANGELOG.md) for details about schema changes and version compatibility.
+See the [Changelog](./CHANGELOG.md) for details about schema changes and version compatibility.
 
 
 ## F1DB SQL / SQLite Database
