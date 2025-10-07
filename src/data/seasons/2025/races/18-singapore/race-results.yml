@@ -83,20 +83,6 @@
   points: 8
   gridPosition: 7
 - position: 7
-  driverNumber: 44
-  driverId: lewis-hamilton
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  laps: 62
-  time: "1:41:42.618"
-  timePenalty:
-  gap: "+1:20.251"
-  interval: "+34.255"
-  reasonRetired:
-  points: 6
-  gridPosition: 6
-- position: 8
   driverNumber: 14
   driverId: fernando-alonso
   constructorId: aston-martin
@@ -106,10 +92,24 @@
   time: "1:41:43.034"
   timePenalty:
   gap: "+1:20.667"
-  interval: "+0.416"
+  interval: "+34.671"
+  reasonRetired:
+  points: 6
+  gridPosition: 10
+- position: 8
+  driverNumber: 44
+  driverId: lewis-hamilton
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 62
+  time: "1:41:47.618"
+  timePenalty:
+  gap: "+1:25.251"
+  interval: "+4.584"
   reasonRetired:
   points: 4
-  gridPosition: 10
+  gridPosition: 6
 - position: 9
   driverNumber: 87
   driverId: oliver-bearman
@@ -120,7 +120,7 @@
   time: "1:41:55.894"
   timePenalty:
   gap: "+1:33.527"
-  interval: "+12.860"
+  interval: "+8.276"
   reasonRetired:
   points: 2
   gridPosition: 9
