@@ -202,7 +202,7 @@
   tyreManufacturerId: michelin
   laps: 75
   time:
-  timePenalty:
+  timePenalty: "25.000"
   gap: "+2 laps"
   interval:
   reasonRetired:
