@@ -202,7 +202,7 @@
   tyreManufacturerId: pirelli
   laps: 19
   time: "38:11.805"
-  timePenalty: "10.000"
+  timePenalty:
   gap: "+13.576"
   interval: "+5.570"
   reasonRetired:
@@ -219,7 +219,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 19
 - position: DNF
@@ -233,7 +233,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 14
 - position: DNF
@@ -247,7 +247,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 2
 - position: DNF
@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 3
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 6
