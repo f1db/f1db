@@ -1,0 +1,11 @@
+{
+  "name": "f1db-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd dashboards && npm ci",
+    "build": "cd dashboards && npm run build",
+    "dev": "cd dashboards && npm run dev",
+    "preview": "cd dashboards && npm run preview"
+  }
+}
