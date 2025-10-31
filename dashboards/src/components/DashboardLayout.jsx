@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import StructuredData from './StructuredData'
 
 const DashboardLayout = ({ children }) => {
   const location = useLocation()
@@ -13,8 +14,10 @@ const DashboardLayout = ({ children }) => {
   ]
 
   return (
-    <div className="min-h-screen bg-f1-black">
-      {/* Header */}
+    <>
+      <StructuredData />
+      <div className="min-h-screen bg-f1-black">
+        {/* Header */}
       <header className="bg-f1-darkGray border-b border-f1-gray">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
@@ -121,7 +124,8 @@ const DashboardLayout = ({ children }) => {
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
 
