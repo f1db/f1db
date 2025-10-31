@@ -38,3 +38,59 @@
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+/* Custom range slider using F1 icon as the thumb */
+.slider-f1 {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px; /* reserve vertical space for large thumb */
+  background: transparent; /* track drawn in pseudo elements */
+  outline: none;
+  vertical-align: middle;
+}
+
+/* WebKit track: thin gold line */
+.slider-f1::-webkit-slider-runnable-track {
+  height: 6px; /* visible thin line */
+  border-radius: 9999px;
+  background: #FFD700; /* gold */
+}
+
+/* Firefox track */
+.slider-f1::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #FFD700; /* gold */
+}
+
+/* WebKit thumb: gold car, rotated and nudged up */
+.slider-f1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 112px;
+  height: 112px;
+  border: none;
+  background-color: #FFD700; /* gold tint */
+  -webkit-mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
+          mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
+  /* Move the large thumb to center over 6px track */
+  margin-top: -43px; /* was -53px; lowered by ~10px */
+  transform: translateY(-4px) rotate(90deg);
+  cursor: pointer;
+  /* Outline + subtle shadow: layered drop-shadows simulate ~2px black stroke */
+  filter: drop-shadow(0 0 0 #000) drop-shadow(0 0 2px #000) drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}
+
+/* Firefox thumb */
+.slider-f1::-moz-range-thumb {
+  width: 112px;
+  height: 112px;
+  border: none;
+  background-color: #FFD700; /* gold */
+  -moz-appearance: none;
+  mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
+  transform: translateY(-43px) rotate(90deg); /* was -53px */
+  cursor: pointer;
+  filter: drop-shadow(0 0 0 #000) drop-shadow(0 0 2px #000) drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}

@@ -467,7 +467,7 @@ const SettingsDashboard = () => {
               max="100"
               value={weights.teammateDominance * 100}
               onChange={(e) => handleWeightChange('teammateDominance', e.target.value)}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
@@ -493,7 +493,7 @@ const SettingsDashboard = () => {
               max="100"
               value={weights.podiumPercentage * 100}
               onChange={(e) => handleWeightChange('podiumPercentage', e.target.value)}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
@@ -519,7 +519,7 @@ const SettingsDashboard = () => {
               max="100"
               value={weights.nonPolePoints * 100}
               onChange={(e) => handleWeightChange('nonPolePoints', e.target.value)}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
@@ -545,7 +545,7 @@ const SettingsDashboard = () => {
               max="100"
               value={weights.poles * 100}
               onChange={(e) => handleWeightChange('poles', e.target.value)}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
@@ -571,7 +571,7 @@ const SettingsDashboard = () => {
               max="100"
               value={weights.championships * 100}
               onChange={(e) => handleWeightChange('championships', e.target.value)}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
@@ -605,7 +605,7 @@ const SettingsDashboard = () => {
                   numConstructors: split
                 }))
               }}
-              className="w-full mb-2"
+              className="w-full mb-2 slider-f1"
             />
             <div className="flex items-center justify-between">
               <input
