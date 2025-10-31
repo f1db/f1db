@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://f1db-dashboard.vercel.app/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://f1db-dashboard.vercel.app/" />
+  </url>
+  
+  <!-- Best Driver Analysis -->
+  <url>
+    <loc>https://f1db-dashboard.vercel.app/best-driver</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://f1db-dashboard.vercel.app/best-driver" />
+  </url>
+  
+  <!-- Customize / Settings -->
+  <url>
+    <loc>https://f1db-dashboard.vercel.app/settings</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://f1db-dashboard.vercel.app/settings" />
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://f1db-dashboard.vercel.app/about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://f1db-dashboard.vercel.app/about" />
+  </url>
+  
+</urlset>
+

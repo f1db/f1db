@@ -4,6 +4,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts'
 import StatCard from '../components/StatCard'
+import SEO from '../components/SEO'
 import currentSeasonData from '../data/current-season.json'
 import driverChampionshipsData from '../data/driver-championships.json'
 import constructorChampionshipsData from '../data/constructor-championships.json'
@@ -97,9 +98,15 @@ const GeneralDashboard = () => {
   const COLORS = ['#E10600', '#FF6B6B', '#FFA500', '#FFD700', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DFE6E9', '#B2BEC3']
 
   return (
-    <div className="space-y-8">
-      {/* Page Title */}
-      <div className="dashboard-header">
+    <>
+      <SEO 
+        title="F1 Analytics - General Dashboard | Formula 1 Statistics & Standings"
+        description="Explore current Formula 1 season statistics, championship standings, driver and constructor performance, and comprehensive race data for all F1 seasons."
+        keywords="F1 standings, Formula 1 2025, F1 current season, F1 statistics, F1 championships, Formula 1 standings, F1 drivers, F1 constructors"
+      />
+      <div className="space-y-8">
+        {/* Page Title */}
+        <div className="dashboard-header">
         <h1 className="text-4xl font-bold">F1 GENERAL DASHBOARD</h1>
         <p className="text-f1-lightGray text-base mt-2">
           Comprehensive Formula 1 statistics and insights
@@ -683,6 +690,7 @@ const GeneralDashboard = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

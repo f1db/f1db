@@ -5,6 +5,7 @@ import {
   PolarRadiusAxis, Radar, Cell
 } from 'recharts'
 import StatCard from '../components/StatCard'
+import SEO from '../components/SEO'
 import dgiData from '../data/driver-greatness-index.json'
 
 // Custom Tooltip Component for DGI Chart (exported for reuse)
@@ -217,9 +218,15 @@ const BestDriverDashboard = () => {
 
   if (!dgi || dgi.length === 0) {
     return (
-      <div className="space-y-8">
-        <div className="dashboard-header">
-          <h1 className="text-4xl font-bold">BEST DRIVER OF ALL TIME</h1>
+      <>
+        <SEO 
+          title="Driver Greatness Index | Best F1 Drivers of All Time | F1 Analytics"
+          description="Discover the greatest Formula 1 drivers ranked by the Driver Greatness Index (DGI), a comprehensive metric analyzing teammate dominance, podium percentages, championships, pole positions, and longevity."
+          keywords="best F1 driver, greatest F1 driver, Driver Greatness Index, DGI ranking, F1 all-time rankings, best Formula 1 drivers, F1 driver rankings"
+        />
+        <div className="space-y-8">
+          <div className="dashboard-header">
+            <h1 className="text-4xl font-bold">BEST DRIVER OF ALL TIME</h1>
           <p className="text-f1-lightGray text-base mt-2">
             Advanced analytics to determine the greatest F1 driver in history
           </p>
@@ -232,15 +239,22 @@ const BestDriverDashboard = () => {
           </p>
         </div>
       </div>
+      </>
     )
   }
 
   const topDriver = dgi[0]
 
   return (
-    <div className="space-y-8">
-      {/* Page Title */}
-      <div className="dashboard-header">
+    <>
+      <SEO 
+        title="Driver Greatness Index | Best F1 Drivers of All Time | F1 Analytics"
+        description="Discover the greatest Formula 1 drivers ranked by the Driver Greatness Index (DGI), a comprehensive metric analyzing teammate dominance, podium percentages, championships, pole positions, and longevity."
+        keywords="best F1 driver, greatest F1 driver, Driver Greatness Index, DGI ranking, F1 all-time rankings, best Formula 1 drivers, F1 driver rankings"
+      />
+      <div className="space-y-8">
+        {/* Page Title */}
+        <div className="dashboard-header">
         <h1 className="text-4xl font-bold">BEST DRIVER OF ALL TIME</h1>
         <p className="text-f1-lightGray text-base mt-2">
           Driver Greatness Index (DGI) - A composite metric combining multiple performance indicators
@@ -534,6 +548,7 @@ const BestDriverDashboard = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

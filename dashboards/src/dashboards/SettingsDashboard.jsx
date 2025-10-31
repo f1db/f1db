@@ -5,6 +5,7 @@ import {
   PolarRadiusAxis, Radar, Cell
 } from 'recharts'
 import StatCard from '../components/StatCard'
+import SEO from '../components/SEO'
 import dgiData from '../data/driver-greatness-index.json'
 
 // Custom Tooltip Component for DGI Chart
@@ -378,12 +379,19 @@ const SettingsDashboard = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-f1-red border-solid mx-auto mb-4"></div>
-          <p className="text-f1-lightGray">Loading Driver Greatness Index...</p>
+      <>
+        <SEO 
+          title="Customize DGI Weights | F1 Analytics"
+          description="Customize the Driver Greatness Index by adjusting metric weights. Recalculate DGI scores based on your preferences for teammate dominance, championships, and other factors."
+          keywords="customize DGI, DGI weights, customize Driver Greatness Index, F1 analytics customize, adjust DGI weights"
+        />
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-f1-red border-solid mx-auto mb-4"></div>
+            <p className="text-f1-lightGray">Loading Driver Greatness Index...</p>
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 
@@ -877,6 +885,7 @@ const SettingsDashboard = () => {
         </div>
       )}
     </div>
+    </>
   )
 }
 

@@ -1,8 +1,15 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 const AboutDashboard = () => {
   return (
-    <div className="space-y-8">
+    <>
+      <SEO 
+        title="About F1 Analytics | Data Sources & DGI Methodology"
+        description="Learn about the F1 Analytics project, data sources from F1DB, and the detailed methodology behind the Driver Greatness Index (DGI) calculation. Discover how we rank the greatest Formula 1 drivers of all time."
+        keywords="F1 analytics about, DGI methodology, F1 data sources, Formula 1 statistics methodology, Driver Greatness Index methodology, F1DB data"
+      />
+      <div className="space-y-8">
       {/* Page Title */}
       <div className="dashboard-header">
         <h1 className="text-4xl font-bold">ABOUT</h1>
@@ -282,6 +289,7 @@ const AboutDashboard = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

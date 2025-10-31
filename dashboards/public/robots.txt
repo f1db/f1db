@@ -1,0 +1,11 @@
+# Robots.txt for F1 Analytics Dashboard
+
+User-agent: *
+Allow: /
+
+# Disallow settings page from search engines (optional - remove if you want it indexed)
+# Disallow: /settings
+
+# Sitemap location
+Sitemap: https://f1db-dashboard.vercel.app/sitemap.xml
+
