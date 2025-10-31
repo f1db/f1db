@@ -86,6 +86,10 @@ const AboutDashboard = () => {
               <li>Fastest laps, pit stops, and penalties</li>
             </ul>
           </div>
+          
+          <div className="mt-4 p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg text-yellow-300 text-sm">
+            ⚠️ Data is not live. Updates require manual regeneration via Python scripts, so there may be delays in reflecting the latest race results.
+          </div>
         </div>
       </div>
 

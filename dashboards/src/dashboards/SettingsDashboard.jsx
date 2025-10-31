@@ -393,7 +393,7 @@ const SettingsDashboard = () => {
     <div className="space-y-8">
       {/* Page Title */}
       <div className="dashboard-header">
-        <h1 className="text-4xl font-bold">⚙️ CUSTOMIZE DGI</h1>
+        <h1 className="text-4xl font-bold">CUSTOMIZE DGI</h1>
         <p className="text-f1-lightGray text-base mt-2">
           Adjust the weights for each metric and recalculate Driver Greatness Index scores
         </p>
@@ -401,19 +401,19 @@ const SettingsDashboard = () => {
 
       {/* Weight Configuration */}
       <div className="dashboard-card">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-f1-red">DGI Weight Configuration</h2>
-          <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-f1-red">DGI Weight Configuration</h2>
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <button
               onClick={handleReset}
-              className="px-4 py-2 bg-f1-gray border border-f1-gray/50 rounded-lg text-white hover:border-f1-red transition-all"
+              className="px-4 py-2 bg-f1-gray border border-f1-gray/50 rounded-lg text-white hover:border-f1-red transition-all text-sm sm:text-base"
             >
               Reset to Defaults
             </button>
             <button
               onClick={handleRecalculate}
               disabled={calculating || weightError}
-              className={`px-6 py-2 rounded-lg font-medium transition-all ${
+              className={`px-6 py-2 rounded-lg font-medium transition-all text-sm sm:text-base ${
                 calculating || weightError
                   ? 'bg-f1-gray/50 text-f1-lightGray cursor-not-allowed'
                   : 'bg-f1-red text-white hover:bg-red-700'
@@ -722,7 +722,7 @@ const SettingsDashboard = () => {
             <BarChart 
               data={topDrivers} 
               layout="vertical"
-              margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+              margin={{ top: 20, right: 30, left: 0, bottom: 60 }}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
               <XAxis
@@ -737,8 +737,9 @@ const SettingsDashboard = () => {
                 dataKey="name"
                 stroke="#949498"
                 tick={{ fill: '#949498', fontSize: 11 }}
-                width={140}
+                width={120}
                 interval={0}
+                tickMargin={8}
               />
               <Tooltip content={<DGITooltip />} />
               <Bar

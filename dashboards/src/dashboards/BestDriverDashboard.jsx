@@ -437,7 +437,7 @@ const BestDriverDashboard = () => {
             <BarChart 
               data={topDrivers} 
               layout="vertical"
-              margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+              margin={{ top: 20, right: 30, left: 0, bottom: 60 }}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
               <XAxis
@@ -452,8 +452,9 @@ const BestDriverDashboard = () => {
                 dataKey="name"
                 stroke="#949498"
                 tick={{ fill: '#949498', fontSize: 11 }}
-                width={140}
+                width={120}
                 interval={0}
+                tickMargin={8}
               />
               <Tooltip content={<DGITooltip />} />
               <Bar
