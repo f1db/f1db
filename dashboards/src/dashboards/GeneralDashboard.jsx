@@ -359,8 +359,12 @@ const GeneralDashboard = () => {
                   </div>
                   {(expandedCards.podiums ? currentSeason.podiumStats : currentSeason.podiumStats.slice(0, 5)).map((driver, idx) => {
                     const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
+                    const podiums = driver.podiums || [];
                     return (
-                      <div key={idx} className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50">
+                      <div 
+                        key={idx} 
+                        className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50 hover:border-f1-red/50 transition-colors relative group"
+                      >
                         <div className="flex items-center justify-between mb-2">
                           <span className="font-bold text-white">{driverName}</span>
                           <span className="text-f1-red font-bold">{driver.total} podiums</span>
@@ -379,6 +383,30 @@ const GeneralDashboard = () => {
                             <span className="text-f1-lightGray">{driver['3rd']}</span>
                           </div>
                         </div>
+                        {podiums.length > 0 && (
+                          <div className="absolute bottom-full left-0 mb-2 w-96 p-4 bg-f1-darkGray border-2 border-white/30 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                            <div className="text-sm font-bold text-f1-red mb-2">Podium Finishes:</div>
+                            <div className="text-xs text-white space-y-2">
+                              {podiums.map((podium, pIdx) => {
+                                const medalEmoji = podium.position === 1 ? '🥇' : podium.position === 2 ? '🥈' : '🥉';
+                                const positionText = podium.position === 1 ? '1st' : podium.position === 2 ? '2nd' : '3rd';
+                                return (
+                                  <div key={pIdx} className="flex flex-col gap-0.5">
+                                    <div className="flex items-start gap-2">
+                                      <span className="text-f1-red font-semibold min-w-[60px] flex items-center gap-1">
+                                        {medalEmoji} {positionText}
+                                      </span>
+                                      <span className="text-white flex-1">{podium.race}</span>
+                                    </div>
+                                    {podium.circuit && (
+                                      <div className="ml-[68px] text-white/70 text-[10px]">📍 {podium.circuit}</div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     );
                   })}

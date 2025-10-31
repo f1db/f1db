@@ -107,7 +107,7 @@ def generate_current_season_data():
     unique_drivers = set()
     
     # Statistics for current season
-    podium_stats = defaultdict(lambda: {'1st': 0, '2nd': 0, '3rd': 0})
+    podium_stats = defaultdict(lambda: {'1st': 0, '2nd': 0, '3rd': 0, 'podiums': []})
     dnf_stats = defaultdict(lambda: {'count': 0, 'races': []})
     time_penalty_stats = defaultdict(lambda: {'count': 0, 'total_seconds': 0})
     grid_penalty_stats = defaultdict(lambda: {'count': 0, 'total_places': 0})
@@ -142,14 +142,33 @@ def generate_current_season_data():
                             if driver_id:
                                 unique_drivers.add(driver_id)
                                 
-                                # Podium positions (1st, 2nd, 3rd)
+                                # Podium positions (1st, 2nd, 3rd) - track with race and circuit info
                                 position = result.get('position') or result.get('positionNumber')
-                                if position == 1:
-                                    podium_stats[driver_id]['1st'] += 1
-                                elif position == 2:
-                                    podium_stats[driver_id]['2nd'] += 1
-                                elif position == 3:
-                                    podium_stats[driver_id]['3rd'] += 1
+                                if position in [1, 2, 3]:
+                                    race_name = race_info.get('officialName') or race_info.get('grandPrixId', 'Unknown')
+                                    circuit_id = race_info.get('circuitId', 'Unknown')
+                                    
+                                    # Load circuit name
+                                    circuit_name = circuit_id
+                                    circuit_file = F1DB_DATA_DIR / 'circuits' / f'{circuit_id}.yml'
+                                    if circuit_file.exists():
+                                        circuit_data = load_yaml(circuit_file)
+                                        if circuit_data and circuit_data.get('name'):
+                                            circuit_name = circuit_data.get('name')
+                                    
+                                    # Track podium with race and circuit
+                                    podium_stats[driver_id]['podiums'].append({
+                                        'position': position,
+                                        'race': race_name,
+                                        'circuit': circuit_name
+                                    })
+                                    
+                                    if position == 1:
+                                        podium_stats[driver_id]['1st'] += 1
+                                    elif position == 2:
+                                        podium_stats[driver_id]['2nd'] += 1
+                                    elif position == 3:
+                                        podium_stats[driver_id]['3rd'] += 1
                                 
                                 # DNF (Did Not Finish) - check both position and positionText
                                 position_value = result.get('position')
@@ -270,12 +289,15 @@ def generate_current_season_data():
     for driver_id, positions in podium_stats.items():
         total_podiums = positions['1st'] + positions['2nd'] + positions['3rd']
         if total_podiums > 0:
+            # Sort podiums chronologically (first to latest) - they're already in order from race processing
+            podiums = positions.get('podiums', [])
             podium_list.append({
                 'driverId': driver_id,
                 '1st': positions['1st'],
                 '2nd': positions['2nd'],
                 '3rd': positions['3rd'],
-                'total': total_podiums
+                'total': total_podiums,
+                'podiums': podiums  # List of podiums with position, race, circuit
             })
     podium_list.sort(key=lambda x: x['total'], reverse=True)
     
