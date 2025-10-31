@@ -7,8 +7,8 @@ import {
 import StatCard from '../components/StatCard'
 import dgiData from '../data/driver-greatness-index.json'
 
-// Custom Tooltip Component for DGI Chart
-const DGITooltip = ({ active, payload }) => {
+// Custom Tooltip Component for DGI Chart (exported for reuse)
+export const DGITooltip = ({ active, payload }) => {
   if (!active || !payload || payload.length === 0) {
     return null
   }

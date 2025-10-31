@@ -6,7 +6,9 @@ const DashboardLayout = ({ children }) => {
 
   const navItems = [
     { path: '/', label: 'General Dashboard' },
-    { path: '/best-driver', label: 'Best Driver Analysis' }
+    { path: '/best-driver', label: 'Best Driver Analysis' },
+    { path: '/settings', label: '⚙️ Customize' },
+    { path: '/about', label: 'About' }
   ]
 
   return (
