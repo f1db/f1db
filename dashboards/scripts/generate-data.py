@@ -474,6 +474,296 @@ def generate_circuits_data():
 
     return circuits
 
+def calculate_dgi_metrics():
+    """
+    Calculate Driver Greatness Index (DGI) metrics for all drivers.
+    Returns a dictionary with all DGI components for each driver.
+    """
+    seasons = get_all_seasons()
+    
+    # Initialize metrics for all drivers
+    driver_metrics = defaultdict(lambda: {
+        'totalRaces': 0,
+        'podiums': 0,
+        'wins': 0,
+        'poles': 0,
+        'nonPoleWins': 0,
+        'nonPolePoints': 0,  # Sum of grid positions for non-pole wins (weighted)
+        'championships': 0,
+        'teammateComparisons': [],  # List of (race_year_round, constructorId, finishedAhead)
+        'seasons': set(),
+        'constructors': set(),
+        'firstSeason': None,
+        'lastSeason': None
+    })
+    
+    # Track championship winners
+    championship_winners = {}
+    for season in seasons:
+        standings_file = F1DB_DATA_DIR / 'seasons' / season / 'driver-standings.yml'
+        if standings_file.exists():
+            data = load_yaml(standings_file)
+            if data and isinstance(data, list) and len(data) > 0:
+                champion_id = data[0].get('driverId')
+                if champion_id:
+                    championship_winners[champion_id] = championship_winners.get(champion_id, 0) + 1
+    
+    print("   Processing races for DGI calculation...")
+    race_count = 0
+    
+    # Process each race to gather all metrics
+    for season in seasons:
+        races_dir = F1DB_DATA_DIR / 'seasons' / season / 'races'
+        if not races_dir.exists():
+            continue
+            
+        race_dirs = sorted([d for d in races_dir.iterdir() if d.is_dir()])
+        for race_dir in race_dirs:
+            race_results_file = race_dir / 'race-results.yml'
+            qualifying_results_file = race_dir / 'qualifying-results.yml'
+            
+            if not race_results_file.exists():
+                continue
+                
+            race_results = load_yaml(race_results_file)
+            if not race_results or not isinstance(race_results, list):
+                continue
+                
+            race_count += 1
+            season_int = int(season)
+            race_name = race_dir.name
+            
+            # Store race results by constructor for teammate comparison
+            constructor_results = defaultdict(list)
+            
+            # Process race results
+            for result in race_results:
+                driver_id = result.get('driverId')
+                if not driver_id:
+                    continue
+                    
+                constructor_id = result.get('constructorId')
+                position = result.get('position') or result.get('positionNumber')
+                grid_position = result.get('gridPosition')
+                
+                if not position or not isinstance(position, int):
+                    continue
+                
+                # Update basic metrics
+                driver_metrics[driver_id]['totalRaces'] += 1
+                driver_metrics[driver_id]['seasons'].add(season_int)
+                if constructor_id:
+                    driver_metrics[driver_id]['constructors'].add(constructor_id)
+                
+                # Podium (position 1-3)
+                if position <= 3:
+                    driver_metrics[driver_id]['podiums'] += 1
+                
+                # Win
+                if position == 1:
+                    driver_metrics[driver_id]['wins'] += 1
+                    
+                    # Win from non-pole (grid position > 1)
+                    if grid_position and isinstance(grid_position, int) and grid_position > 1:
+                        driver_metrics[driver_id]['nonPoleWins'] += 1
+                        # Weight: points based on starting position (P2 = +1, P3 = +2, etc.)
+                        driver_metrics[driver_id]['nonPolePoints'] += grid_position - 1
+                
+                # Store for teammate comparison
+                if constructor_id:
+                    constructor_results[constructor_id].append({
+                        'driverId': driver_id,
+                        'position': position
+                    })
+            
+            # Process teammate comparisons
+            for constructor_id, results in constructor_results.items():
+                if len(results) >= 2:  # Need at least 2 drivers from same constructor
+                    # Sort by position (lower is better)
+                    sorted_results = sorted(results, key=lambda x: x['position'])
+                    
+                    # Drivers who finished ahead of their teammate(s)
+                    for i, result in enumerate(sorted_results):
+                        driver_id = result['driverId']
+                        ahead_count = len(sorted_results) - i - 1  # How many teammates finished behind
+                        if ahead_count > 0:
+                            driver_metrics[driver_id]['teammateComparisons'].append({
+                                'race': f"{season_int}-{race_name}",
+                                'constructorId': constructor_id,
+                                'finishedAhead': ahead_count,
+                                'totalTeammates': len(sorted_results) - 1
+                            })
+            
+            # Process qualifying for pole positions
+            if qualifying_results_file.exists():
+                qualifying_results = load_yaml(qualifying_results_file)
+                if qualifying_results and isinstance(qualifying_results, list) and len(qualifying_results) > 0:
+                    pole_driver = qualifying_results[0]
+                    driver_id = pole_driver.get('driverId')
+                    if driver_id:
+                        driver_metrics[driver_id]['poles'] += 1
+    
+    print(f"   Processed {race_count} races")
+    
+    # Load driver info
+    drivers_dir = F1DB_DATA_DIR / 'drivers'
+    driver_info = {}
+    if drivers_dir.exists():
+        driver_files = list(drivers_dir.glob('*.yml'))
+        for driver_file in driver_files:
+            data = load_yaml(driver_file)
+            if data and data.get('id'):
+                driver_info[data['id']] = {
+                    'id': data.get('id'),
+                    'firstName': data.get('firstName', ''),
+                    'lastName': data.get('lastName', ''),
+                    'countryId': data.get('nationalityCountryId') or data.get('countryId'),
+                }
+    
+    # Build final DGI data
+    dgi_data = []
+    
+    for driver_id, metrics in driver_metrics.items():
+        if driver_id not in driver_info:
+            continue
+        
+        # Calculate teammate dominance percentage
+        teammate_comparisons = metrics['teammateComparisons']
+        if teammate_comparisons:
+            total_races_with_teammate = len(teammate_comparisons)
+            finished_ahead_count = sum(1 for comp in teammate_comparisons if comp['finishedAhead'] > 0)
+            teammate_dominance = (finished_ahead_count / total_races_with_teammate) * 100 if total_races_with_teammate > 0 else 0
+        else:
+            teammate_dominance = 0
+            total_races_with_teammate = 0
+        
+        # Calculate podium percentage
+        podium_percentage = (metrics['podiums'] / metrics['totalRaces'] * 100) if metrics['totalRaces'] > 0 else 0
+        
+        # Career span
+        seasons_list = sorted(list(metrics['seasons']))
+        career_length = len(seasons_list)
+        first_season = min(seasons_list) if seasons_list else None
+        last_season = max(seasons_list) if seasons_list else None
+        
+        # Number of constructors
+        num_constructors = len(metrics['constructors'])
+        
+        # Championships
+        championships = championship_winners.get(driver_id, 0)
+        
+        dgi_data.append({
+            **driver_info[driver_id],
+            # Raw metrics
+            'totalRaces': metrics['totalRaces'],
+            'podiums': metrics['podiums'],
+            'wins': metrics['wins'],
+            'poles': metrics['poles'],
+            'nonPoleWins': metrics['nonPoleWins'],
+            'nonPolePoints': metrics['nonPolePoints'],
+            'championships': championships,
+            # Calculated percentages
+            'teammateDominance': round(teammate_dominance, 2),
+            'teammateRaces': total_races_with_teammate,
+            'podiumPercentage': round(podium_percentage, 2),
+            # Longevity
+            'careerLength': career_length,
+            'numConstructors': num_constructors,
+            'firstSeason': first_season,
+            'lastSeason': last_season,
+        })
+    
+    return dgi_data
+
+def calculate_normalized_dgi(dgi_data):
+    """
+    Normalize DGI metrics and calculate weighted Driver Greatness Index.
+    """
+    if not dgi_data:
+        return []
+    
+    # Extract metrics for normalization
+    metrics_df = []
+    for driver in dgi_data:
+        metrics_df.append({
+            'driverId': driver['id'],
+            'teammateDominance': driver['teammateDominance'],
+            'podiumPercentage': driver['podiumPercentage'],
+            'nonPolePoints': driver['nonPolePoints'],
+            'poles': driver['poles'],
+            'championships': driver['championships'],
+            'careerLength': driver['careerLength'],
+            'numConstructors': driver['numConstructors'],
+        })
+    
+    # Find min/max for normalization
+    max_values = {
+        'teammateDominance': max(m['teammateDominance'] for m in metrics_df) if metrics_df else 100,
+        'podiumPercentage': max(m['podiumPercentage'] for m in metrics_df) if metrics_df else 100,
+        'nonPolePoints': max(m['nonPolePoints'] for m in metrics_df) if metrics_df else 1,
+        'poles': max(m['poles'] for m in metrics_df) if metrics_df else 1,
+        'championships': max(m['championships'] for m in metrics_df) if metrics_df else 1,
+        'careerLength': max(m['careerLength'] for m in metrics_df) if metrics_df else 1,
+        'numConstructors': max(m['numConstructors'] for m in metrics_df) if metrics_df else 1,
+    }
+    
+    min_values = {
+        'teammateDominance': min(m['teammateDominance'] for m in metrics_df) if metrics_df else 0,
+        'podiumPercentage': min(m['podiumPercentage'] for m in metrics_df) if metrics_df else 0,
+        'nonPolePoints': min(m['nonPolePoints'] for m in metrics_df) if metrics_df else 0,
+        'poles': min(m['poles'] for m in metrics_df) if metrics_df else 0,
+        'championships': min(m['championships'] for m in metrics_df) if metrics_df else 0,
+        'careerLength': min(m['careerLength'] for m in metrics_df) if metrics_df else 0,
+        'numConstructors': min(m['numConstructors'] for m in metrics_df) if metrics_df else 0,
+    }
+    
+    # Weights from notebook
+    weights = {
+        'teammateDominance': 0.25,
+        'podiumPercentage': 0.20,
+        'nonPolePoints': 0.20,
+        'poles': 0.15,
+        'championships': 0.10,
+        'careerLength': 0.05,
+        'numConstructors': 0.05,
+    }
+    
+    # Calculate normalized DGI for each driver
+    for driver in dgi_data:
+        # Normalize each metric (0-1 scale)
+        normalized = {}
+        for metric in ['teammateDominance', 'podiumPercentage', 'nonPolePoints', 'poles', 'championships', 'careerLength', 'numConstructors']:
+            value = driver.get(metric, 0)
+            min_val = min_values[metric]
+            max_val = max_values[metric]
+            range_val = max_val - min_val
+            
+            if range_val > 0:
+                normalized[metric] = (value - min_val) / range_val
+            else:
+                normalized[metric] = 0.0
+        
+        # Calculate weighted DGI
+        dgi_score = sum(normalized[metric] * weights[metric] for metric in weights.keys())
+        
+        driver['normalizedMetrics'] = normalized
+        driver['dgi'] = round(dgi_score, 4)
+    
+    # Sort by DGI descending
+    dgi_data.sort(key=lambda x: x['dgi'], reverse=True)
+    
+    return dgi_data
+
+def generate_driver_greatness_index():
+    """Generate Driver Greatness Index data."""
+    print("   Calculating DGI metrics...")
+    dgi_data = calculate_dgi_metrics()
+    
+    print("   Normalizing and calculating DGI scores...")
+    dgi_data = calculate_normalized_dgi(dgi_data)
+    
+    return dgi_data
+
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
     if isinstance(obj, (datetime, date)):
@@ -528,6 +818,18 @@ def main():
     with open(OUTPUT_DIR / 'circuits.json', 'w') as f:
         json.dump(circuits, f, indent=2, default=json_serial)
     print(f"   ✓ Generated {len(circuits)} circuit records")
+
+    print("\n6. Generating Driver Greatness Index (DGI)...")
+    dgi_data = generate_driver_greatness_index()
+    with open(OUTPUT_DIR / 'driver-greatness-index.json', 'w') as f:
+        json.dump(dgi_data, f, indent=2, default=json_serial)
+    print(f"   ✓ Generated {len(dgi_data)} driver DGI records")
+    if dgi_data:
+        top_5_dgi = dgi_data[:5]
+        print(f"   Top 5 drivers by DGI:")
+        for i, driver in enumerate(top_5_dgi, 1):
+            name = f"{driver.get('firstName', '')} {driver.get('lastName', '')}".strip()
+            print(f"     {i}. {name}: DGI {driver['dgi']:.4f} (Wins: {driver['wins']}, Championships: {driver['championships']}, Teammate Dominance: {driver['teammateDominance']:.1f}%)")
 
     print("\n" + "=" * 50)
     print("✓ Data generation complete!")
