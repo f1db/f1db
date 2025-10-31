@@ -106,15 +106,23 @@ def generate_current_season_data():
     recent_races = []
     unique_drivers = set()
     
+    # Statistics for current season
+    podium_stats = defaultdict(lambda: {'1st': 0, '2nd': 0, '3rd': 0})
+    dnf_stats = defaultdict(lambda: {'count': 0, 'races': []})
+    time_penalty_stats = defaultdict(lambda: {'count': 0, 'total_seconds': 0})
+    grid_penalty_stats = defaultdict(lambda: {'count': 0, 'total_places': 0})
+    
     if races_dir.exists():
         race_dirs = sorted([d for d in races_dir.iterdir() if d.is_dir()])
         for race_dir in race_dirs:
             race_file = race_dir / 'race.yml'
             race_results_file = race_dir / 'race-results.yml'
+            starting_grid_file = race_dir / 'starting-grid-positions.yml'
 
             if race_file.exists() and race_results_file.exists():
                 race_info = load_yaml(race_file)
                 race_results = load_yaml(race_results_file)
+                starting_grid = load_yaml(starting_grid_file) if starting_grid_file.exists() else None
 
                 if race_info and race_results:
                     # race_results is a list directly, not a dict with 'results' key
@@ -127,15 +135,184 @@ def generate_current_season_data():
                     }
                     all_races.append(race_data)
                     
-                    # Track unique drivers from all races
+                    # Track unique drivers and calculate statistics
                     if race_results and isinstance(race_results, list):
                         for result in race_results:
                             driver_id = result.get('driverId')
                             if driver_id:
                                 unique_drivers.add(driver_id)
+                                
+                                # Podium positions (1st, 2nd, 3rd)
+                                position = result.get('position') or result.get('positionNumber')
+                                if position == 1:
+                                    podium_stats[driver_id]['1st'] += 1
+                                elif position == 2:
+                                    podium_stats[driver_id]['2nd'] += 1
+                                elif position == 3:
+                                    podium_stats[driver_id]['3rd'] += 1
+                                
+                                # DNF (Did Not Finish) - check both position and positionText
+                                position_value = result.get('position')
+                                position_text = result.get('positionText', '')
+                                if (isinstance(position_value, str) and position_value.upper() == 'DNF') or \
+                                   (isinstance(position_text, str) and position_text.upper() == 'DNF'):
+                                    dnf_stats[driver_id]['count'] += 1
+                                    # Track which race they DNF'd in - use official name and circuit
+                                    race_name = race_info.get('officialName') or race_info.get('grandPrixId', 'Unknown')
+                                    circuit_id = race_info.get('circuitId', 'Unknown')
+                                    
+                                    # Load circuit name
+                                    circuit_name = circuit_id
+                                    circuit_file = F1DB_DATA_DIR / 'circuits' / f'{circuit_id}.yml'
+                                    if circuit_file.exists():
+                                        circuit_data = load_yaml(circuit_file)
+                                        if circuit_data and circuit_data.get('name'):
+                                            circuit_name = circuit_data.get('name')
+                                    
+                                    # Store as object with race and circuit
+                                    race_entry = {
+                                        'race': race_name,
+                                        'circuit': circuit_name
+                                    }
+                                    # Check if this race is already in the list (by race name)
+                                    if not any(r.get('race') == race_name for r in dnf_stats[driver_id]['races']):
+                                        dnf_stats[driver_id]['races'].append(race_entry)
+                                
+                                # Time penalties - track individual penalties with race info for tooltips
+                                time_penalty = result.get('timePenalty')
+                                race_name = race_info.get('officialName') or race_info.get('grandPrixId', 'Unknown')
+                                circuit_id = race_info.get('circuitId', 'Unknown')
+                                
+                                # Load circuit name
+                                circuit_name = circuit_id
+                                circuit_file = F1DB_DATA_DIR / 'circuits' / f'{circuit_id}.yml'
+                                if circuit_file.exists():
+                                    circuit_data = load_yaml(circuit_file)
+                                    if circuit_data and circuit_data.get('name'):
+                                        circuit_name = circuit_data.get('name')
+                                
+                                if time_penalty:
+                                    time_penalty_stats[driver_id]['count'] += 1
+                                    # Parse time penalty (format: "+5s", "+10s", etc.)
+                                    try:
+                                        seconds = float(str(time_penalty).replace('+', '').replace('s', '').replace(' ', ''))
+                                        time_penalty_stats[driver_id]['total_seconds'] += seconds
+                                    except:
+                                        pass
+                                    # Store penalty details with full race name and circuit
+                                    if 'penalties' not in time_penalty_stats[driver_id]:
+                                        time_penalty_stats[driver_id]['penalties'] = []
+                                    time_penalty_stats[driver_id]['penalties'].append({
+                                        'amount': str(time_penalty),
+                                        'race': race_name,
+                                        'circuit': circuit_name
+                                    })
+                                # Also check timePenaltyMillis if available
+                                time_penalty_millis = result.get('timePenaltyMillis')
+                                if time_penalty_millis:
+                                    if time_penalty_stats[driver_id]['count'] == 0:
+                                        time_penalty_stats[driver_id]['count'] += 1
+                                        time_penalty_stats[driver_id]['penalties'] = []
+                                    time_penalty_stats[driver_id]['total_seconds'] += time_penalty_millis / 1000.0
+                                    penalty_str = f"+{time_penalty_millis / 1000.0:.1f}s"
+                                    time_penalty_stats[driver_id]['penalties'].append({
+                                        'amount': penalty_str,
+                                        'race': race_name,
+                                        'circuit': circuit_name
+                                    })
+                    
+                    # Grid penalties from starting grid - track with race info
+                    race_name = race_info.get('officialName') or race_info.get('grandPrixId', 'Unknown')
+                    circuit_id = race_info.get('circuitId', 'Unknown')
+                    
+                    # Load circuit name
+                    circuit_name = circuit_id
+                    circuit_file = F1DB_DATA_DIR / 'circuits' / f'{circuit_id}.yml'
+                    if circuit_file.exists():
+                        circuit_data = load_yaml(circuit_file)
+                        if circuit_data and circuit_data.get('name'):
+                            circuit_name = circuit_data.get('name')
+                    
+                    if starting_grid and isinstance(starting_grid, list):
+                        for grid_pos in starting_grid:
+                            driver_id = grid_pos.get('driverId')
+                            grid_penalty = grid_pos.get('gridPenalty')
+                            if driver_id and grid_penalty:
+                                grid_penalty_stats[driver_id]['count'] += 1
+                                # Parse grid penalty (format: "-3", "-5", etc. or number of places)
+                                places = None
+                                try:
+                                    places = int(str(grid_penalty).replace('-', '').replace('+', ''))
+                                    grid_penalty_stats[driver_id]['total_places'] += places
+                                except:
+                                    try:
+                                        places = abs(int(grid_penalty))
+                                        grid_penalty_stats[driver_id]['total_places'] += places
+                                    except:
+                                        pass
+                                
+                                # Store penalty details with full race name and circuit
+                                if 'penalties' not in grid_penalty_stats[driver_id]:
+                                    grid_penalty_stats[driver_id]['penalties'] = []
+                                
+                                penalty_amount = f"{places} places" if places is not None else str(grid_penalty)
+                                grid_penalty_stats[driver_id]['penalties'].append({
+                                    'amount': penalty_amount,
+                                    'race': race_name,
+                                    'circuit': circuit_name
+                                })
         
         # Get last 5 races for recent races
         recent_races = all_races[-5:]
+
+    # Convert podium stats to list format
+    podium_list = []
+    for driver_id, positions in podium_stats.items():
+        total_podiums = positions['1st'] + positions['2nd'] + positions['3rd']
+        if total_podiums > 0:
+            podium_list.append({
+                'driverId': driver_id,
+                '1st': positions['1st'],
+                '2nd': positions['2nd'],
+                '3rd': positions['3rd'],
+                'total': total_podiums
+            })
+    podium_list.sort(key=lambda x: x['total'], reverse=True)
+    
+    # Convert DNF stats to list (races are already objects with race and circuit)
+    dnf_list = []
+    for driver_id, stats in dnf_stats.items():
+        if stats['count'] > 0:
+            dnf_list.append({
+                'driverId': driver_id,
+                'count': stats['count'],
+                'races': stats['races']  # Already a list of objects with race and circuit
+            })
+    dnf_list.sort(key=lambda x: x['count'], reverse=True)
+    
+    # Convert time penalty stats to list
+    time_penalty_list = []
+    for driver_id, stats in time_penalty_stats.items():
+        if stats['count'] > 0:
+            time_penalty_list.append({
+                'driverId': driver_id,
+                'count': stats['count'],
+                'totalSeconds': round(stats['total_seconds'], 2),
+                'penalties': stats.get('penalties', [])
+            })
+    time_penalty_list.sort(key=lambda x: x['count'], reverse=True)
+    
+    # Convert grid penalty stats to list
+    grid_penalty_list = []
+    for driver_id, stats in grid_penalty_stats.items():
+        if stats['count'] > 0:
+            grid_penalty_list.append({
+                'driverId': driver_id,
+                'count': stats['count'],
+                'totalPlaces': stats['total_places'],
+                'penalties': stats.get('penalties', [])
+            })
+    grid_penalty_list.sort(key=lambda x: x['count'], reverse=True)
 
     return {
         'season': int(current_season),
@@ -143,7 +320,11 @@ def generate_current_season_data():
         'constructorStandings': constructor_standings,
         'totalRaces': len(all_races),
         'uniqueDrivers': len(unique_drivers),
-        'recentRaces': recent_races
+        'recentRaces': recent_races,
+        'podiumStats': podium_list[:10],  # Top 10
+        'dnfStats': dnf_list[:10],  # Top 10
+        'timePenaltyStats': time_penalty_list[:10],  # Top 10
+        'gridPenaltyStats': grid_penalty_list[:10]  # Top 10
     }
 
 def calculate_driver_stats_from_races():

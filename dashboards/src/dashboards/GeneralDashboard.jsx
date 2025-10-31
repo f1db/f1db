@@ -183,8 +183,11 @@ const GeneralDashboard = () => {
                   contentStyle={{
                     backgroundColor: '#1E1E28',
                     border: '1px solid #38383F',
-                    borderRadius: '8px'
+                    borderRadius: '8px',
+                    color: '#FFFFFF'
                   }}
+                  labelStyle={{ color: '#FFFFFF', marginBottom: '5px', fontWeight: 'bold' }}
+                  itemStyle={{ color: '#FFFFFF' }}
                   formatter={(value, name) => [`${value} points`, 'Points']}
                   labelFormatter={(label, payload) => {
                     const data = payload?.[0]?.payload;
@@ -306,6 +309,232 @@ const GeneralDashboard = () => {
             </ResponsiveContainer>
           </div>
       </div>
+
+      {/* Current Season Detailed Stats */}
+      {currentSeason && (
+        <div className="space-y-6">
+          <div className="dashboard-header">
+            <h2 className="text-3xl font-bold">2025 Season Statistics</h2>
+            <p className="text-f1-lightGray text-base mt-2">
+              Detailed performance metrics for the current season
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Podium Statistics */}
+            <div className="dashboard-card">
+              <h3 className="text-xl font-bold mb-4 text-f1-red">Podium Positions</h3>
+              {currentSeason.podiumStats && currentSeason.podiumStats.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="text-sm text-f1-lightGray mb-3">
+                    Most podiums by position this season
+                  </div>
+                  {currentSeason.podiumStats.slice(0, 5).map((driver, idx) => {
+                    const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
+                    return (
+                      <div key={idx} className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-bold text-white">{driverName}</span>
+                          <span className="text-f1-red font-bold">{driver.total} podiums</span>
+                        </div>
+                        <div className="flex gap-4 text-sm">
+                          <div className="flex items-center gap-1">
+                            <span className="text-yellow-400">🥇</span>
+                            <span className="text-f1-lightGray">{driver['1st']}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <span className="text-gray-300">🥈</span>
+                            <span className="text-f1-lightGray">{driver['2nd']}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <span className="text-orange-400">🥉</span>
+                            <span className="text-f1-lightGray">{driver['3rd']}</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-f1-lightGray text-center py-8">No podium data available</div>
+              )}
+            </div>
+
+            {/* DNF Statistics */}
+            <div className="dashboard-card">
+              <h3 className="text-xl font-bold mb-4 text-f1-red">Did Not Finish (DNF)</h3>
+              {currentSeason.dnfStats && currentSeason.dnfStats.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="text-sm text-f1-lightGray mb-3">
+                    Drivers with most retirements this season
+                  </div>
+                  {currentSeason.dnfStats.slice(0, 5).map((driver, idx) => {
+                    const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
+                    const races = driver.races || [];
+                    return (
+                      <div 
+                        key={idx} 
+                        className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50 hover:border-f1-red/50 transition-colors relative group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="font-bold text-white">{driverName}</span>
+                          <span className="text-f1-red font-bold text-lg">{driver.count} DNFs</span>
+                        </div>
+                        {races.length > 0 && (
+                          <div className="absolute bottom-full left-0 mb-2 w-96 p-4 bg-f1-darkGray border-2 border-white/30 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                            <div className="text-sm font-bold text-f1-red mb-2">Races DNF'd:</div>
+                            <div className="text-xs text-white space-y-2">
+                              {races.map((raceEntry, raceIdx) => {
+                                const raceName = typeof raceEntry === 'object' ? raceEntry.race : raceEntry;
+                                const circuitName = typeof raceEntry === 'object' ? raceEntry.circuit : null;
+                                return (
+                                  <div key={raceIdx} className="flex flex-col gap-0.5">
+                                    <div className="text-white">• {raceName}</div>
+                                    {circuitName && (
+                                      <div className="ml-2 text-white/70 text-[10px]">📍 {circuitName}</div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                  {currentSeason.dnfStats.length === 0 && (
+                    <div className="text-f1-lightGray text-center py-8">
+                      No DNFs recorded this season
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="text-f1-lightGray text-center py-8">No DNF data available</div>
+              )}
+            </div>
+
+            {/* Time Penalties */}
+            <div className="dashboard-card">
+              <h3 className="text-xl font-bold mb-4 text-f1-red">Time Penalties</h3>
+              {currentSeason.timePenaltyStats && currentSeason.timePenaltyStats.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="text-sm text-f1-lightGray mb-3">
+                    Drivers with most time penalties this season
+                  </div>
+                  {currentSeason.timePenaltyStats.slice(0, 5).map((driver, idx) => {
+                    const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
+                    const minutes = Math.floor(driver.totalSeconds / 60);
+                    const seconds = (driver.totalSeconds % 60).toFixed(0);
+                    const penalties = driver.penalties || [];
+                    return (
+                      <div 
+                        key={idx} 
+                        className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50 hover:border-f1-red/50 transition-colors relative group"
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="font-bold text-white">{driverName}</span>
+                          <span className="text-f1-red font-bold">{driver.count} penalties</span>
+                        </div>
+                        <div className="text-sm text-f1-lightGray">
+                          Total: {minutes > 0 ? `${minutes}m ` : ''}{seconds}s
+                        </div>
+                        {penalties.length > 0 && (
+                          <div className="absolute bottom-full left-0 mb-2 w-96 p-4 bg-f1-darkGray border-2 border-white/30 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                            <div className="text-sm font-bold text-f1-red mb-2">Time Penalties:</div>
+                            <div className="text-xs text-white space-y-2">
+                              {penalties.map((penalty, pIdx) => {
+                                const penaltyAmount = typeof penalty === 'object' ? penalty.amount : penalty;
+                                // Format penalty amount (e.g., "10.000" -> "+10s", "5.000" -> "+5s")
+                                let formattedAmount = penaltyAmount;
+                                if (typeof penaltyAmount === 'string' && /^\d+\.?\d*$/.test(penaltyAmount.replace('+', '').replace('s', ''))) {
+                                  const num = parseFloat(penaltyAmount);
+                                  formattedAmount = `+${num}s`;
+                                }
+                                // Get full race name and circuit
+                                const raceName = typeof penalty === 'object' ? penalty.race : 'Unknown race';
+                                const circuitName = typeof penalty === 'object' ? penalty.circuit : null;
+                                return (
+                                  <div key={pIdx} className="flex flex-col gap-0.5">
+                                    <div className="flex items-start gap-2">
+                                      <span className="text-f1-red font-semibold min-w-[50px]">{formattedAmount}</span>
+                                      <span className="text-white flex-1">{raceName}</span>
+                                    </div>
+                                    {circuitName && (
+                                      <div className="ml-[58px] text-white/70 text-[10px]">📍 {circuitName}</div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-f1-lightGray text-center py-8">No time penalty data available</div>
+              )}
+            </div>
+
+            {/* Grid Penalties */}
+            <div className="dashboard-card">
+              <h3 className="text-xl font-bold mb-4 text-f1-red">Grid Penalties</h3>
+              {currentSeason.gridPenaltyStats && currentSeason.gridPenaltyStats.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="text-sm text-f1-lightGray mb-3">
+                    Drivers with most grid penalties this season
+                  </div>
+                  {currentSeason.gridPenaltyStats.slice(0, 5).map((driver, idx) => {
+                    const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
+                    const penalties = driver.penalties || [];
+                    return (
+                      <div 
+                        key={idx} 
+                        className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50 hover:border-f1-red/50 transition-colors relative group"
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="font-bold text-white">{driverName}</span>
+                          <span className="text-f1-red font-bold">{driver.count} penalties</span>
+                        </div>
+                        <div className="text-sm text-f1-lightGray">
+                          Total: {driver.totalPlaces} grid places
+                        </div>
+                        {penalties.length > 0 && (
+                          <div className="absolute bottom-full left-0 mb-2 w-96 p-4 bg-f1-darkGray border-2 border-white/30 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                            <div className="text-sm font-bold text-f1-red mb-2">Grid Penalties:</div>
+                            <div className="text-xs text-white space-y-2">
+                              {penalties.map((penalty, pIdx) => {
+                                const penaltyAmount = typeof penalty === 'object' ? penalty.amount : penalty;
+                                // Get full race name and circuit
+                                const raceName = typeof penalty === 'object' ? penalty.race : 'Unknown race';
+                                const circuitName = typeof penalty === 'object' ? penalty.circuit : null;
+                                return (
+                                  <div key={pIdx} className="flex flex-col gap-0.5">
+                                    <div className="flex items-start gap-2">
+                                      <span className="text-f1-red font-semibold min-w-[60px]">{penaltyAmount}</span>
+                                      <span className="text-white flex-1">{raceName}</span>
+                                    </div>
+                                    {circuitName && (
+                                      <div className="ml-[68px] text-white/70 text-[10px]">📍 {circuitName}</div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-f1-lightGray text-center py-8">No grid penalty data available</div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Fun Stats */}
       <div className="dashboard-card">
