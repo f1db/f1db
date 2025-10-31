@@ -398,9 +398,15 @@ const SettingsDashboard = () => {
   const topDriver = dgi[0]
 
   return (
-    <div className="space-y-8">
-      {/* Page Title */}
-      <div className="dashboard-header">
+    <>
+      <SEO 
+        title="Customize DGI Weights | F1 Analytics"
+        description="Customize the Driver Greatness Index by adjusting metric weights. Recalculate DGI scores based on your preferences for teammate dominance, championships, and other factors."
+        keywords="customize DGI, DGI weights, customize Driver Greatness Index, F1 analytics customize, adjust DGI weights"
+      />
+      <div className="space-y-8">
+        {/* Page Title */}
+        <div className="dashboard-header">
         <h1 className="text-4xl font-bold">CUSTOMIZE DGI</h1>
         <p className="text-f1-lightGray text-base mt-2">
           Adjust the weights for each metric and recalculate Driver Greatness Index scores
