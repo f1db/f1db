@@ -49,7 +49,27 @@ const DashboardLayout = ({ children }) => {
       {/* Footer */}
       <footer className="bg-f1-darkGray border-t border-f1-gray mt-12">
         <div className="container mx-auto px-6 py-4 text-center text-f1-lightGray text-sm">
-          <p>Powered by F1DB • Data updated through 2025 Season</p>
+          <p>
+            Created by{' '}
+            <a
+              href="https://www.jasoncozy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-f1-red hover:text-red-400 transition-colors font-medium"
+            >
+              Jason Cozy
+            </a>
+            {' • '}Powered by{' '}
+            <a
+              href="https://github.com/f1db"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-f1-red hover:text-red-400 transition-colors font-medium"
+            >
+              F1DB
+            </a>
+            {' • '}Data updated through 2025 Season
+          </p>
         </div>
       </footer>
     </div>

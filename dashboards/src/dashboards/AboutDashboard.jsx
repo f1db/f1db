@@ -36,6 +36,21 @@ const AboutDashboard = () => {
             This project represents a blend of statistical analysis, data visualization, and a passion 
             for Formula 1 racing history.
           </p>
+          
+          <div className="pt-4 mt-4 border-t border-f1-gray/50">
+            <p className="text-f1-lightGray text-sm">
+              Created by <span className="text-white font-medium">Jason Cozy</span>. 
+              See more projects at{' '}
+              <a
+                href="https://www.jasoncozy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-f1-red hover:text-red-400 transition-colors font-medium"
+              >
+                www.jasoncozy.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 

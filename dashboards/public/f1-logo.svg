@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- F1 Red Background with rounded corners -->
+  <rect width="100" height="100" rx="18" fill="#E10600"/>
+  
+  <!-- Bold "F1" Text -->
+  <text x="50" y="68" font-family="'Arial Black', 'Helvetica Bold', sans-serif" font-size="52" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-2">F1</text>
+  
+  <!-- Checkered flag accent in corner -->
+  <g transform="translate(8, 8)">
+    <!-- Checkered pattern -->
+    <rect x="0" y="0" width="20" height="20" fill="white" opacity="0.3"/>
+    <rect x="0" y="0" width="10" height="10" fill="white"/>
+    <rect x="10" y="10" width="10" height="10" fill="white"/>
+    <!-- Border -->
+    <rect x="0" y="0" width="20" height="20" fill="none" stroke="white" stroke-width="1.5"/>
+  </g>
+</svg>

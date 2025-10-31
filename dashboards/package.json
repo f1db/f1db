@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate-data": "python3 scripts/generate-data.py"
+    "generate-data": "python3 scripts/generate-data.py",
+    "generate-favicons": "python3 scripts/generate-favicons.py"
   },
   "dependencies": {
     "react": "^18.3.1",
