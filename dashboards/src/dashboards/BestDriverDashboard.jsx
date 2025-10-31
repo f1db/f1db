@@ -41,6 +41,112 @@ const DGITooltip = ({ active, payload }) => {
   )
 }
 
+// Custom Driver Select Component
+const CustomDriverSelect = ({ drivers, selectedDriver, onSelect }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('')
+  
+  const filteredDrivers = drivers.filter(driver => {
+    const fullName = `${driver.firstName} ${driver.lastName}`.toLowerCase()
+    return fullName.includes(searchTerm.toLowerCase())
+  })
+
+  const handleSelect = (driver) => {
+    onSelect(driver)
+    setIsOpen(false)
+    setSearchTerm('')
+  }
+
+  return (
+    <div className="relative mb-6">
+      <label className="block text-f1-lightGray text-sm mb-2 font-medium">
+        Select Driver (Top 30)
+      </label>
+      <div className="relative">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full md:w-80 px-4 py-3 bg-f1-gray border border-f1-gray/50 rounded-lg text-white hover:border-f1-red transition-all flex items-center justify-between cursor-pointer"
+        >
+          <span className={selectedDriver ? 'text-white' : 'text-f1-lightGray'}>
+            {selectedDriver 
+              ? `#${drivers.findIndex(d => d.id === selectedDriver.id) + 1} - ${selectedDriver.firstName} ${selectedDriver.lastName}`
+              : 'Select a driver...'}
+          </span>
+          <svg
+            className={`w-5 h-5 text-f1-red transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {isOpen && (
+          <>
+            <div 
+              className="fixed inset-0 z-10" 
+              onClick={() => setIsOpen(false)}
+            />
+            <div className="absolute z-20 w-full md:w-80 mt-2 bg-f1-darkGray border border-f1-gray/50 rounded-lg shadow-2xl max-h-96 overflow-hidden">
+              {/* Search Input */}
+              <div className="p-3 border-b border-f1-gray/50">
+                <input
+                  type="text"
+                  placeholder="Search drivers..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-3 py-2 bg-f1-gray border border-f1-gray/50 rounded text-white placeholder-f1-lightGray focus:outline-none focus:border-f1-red"
+                  autoFocus
+                />
+              </div>
+              
+              {/* Driver List */}
+              <div className="overflow-y-auto max-h-80">
+                {filteredDrivers.length > 0 ? (
+                  filteredDrivers.map((driver) => {
+                    const isSelected = selectedDriver?.id === driver.id
+                    const originalIndex = drivers.findIndex(d => d.id === driver.id) + 1
+                    return (
+                      <button
+                        key={driver.id}
+                        onClick={() => handleSelect(driver)}
+                        className={`w-full px-4 py-3 text-left hover:bg-f1-gray transition-colors border-b border-f1-gray/30 last:border-b-0 ${
+                          isSelected ? 'bg-f1-red/20 border-l-4 border-l-f1-red' : ''
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="text-white font-medium">
+                              #{originalIndex} - {driver.firstName} {driver.lastName}
+                            </div>
+                            <div className="text-f1-lightGray text-sm mt-1">
+                              DGI: {driver.dgi.toFixed(4)} • Wins: {driver.wins} • Championships: {driver.championships}
+                            </div>
+                          </div>
+                          {isSelected && (
+                            <svg className="w-5 h-5 text-f1-red ml-2" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </div>
+                      </button>
+                    )
+                  })
+                ) : (
+                  <div className="px-4 py-8 text-center text-f1-lightGray">
+                    No drivers found
+                  </div>
+                )}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
 const BestDriverDashboard = () => {
   const [dgi, setDgi] = useState([])
   const [loading, setLoading] = useState(true)
@@ -141,118 +247,76 @@ const BestDriverDashboard = () => {
         </p>
       </div>
 
-      {/* Top Driver Highlight */}
-      {topDriver && (
-        <div className="dashboard-card bg-gradient-to-r from-f1-red/20 to-transparent border-2 border-f1-red">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-f1-lightGray text-sm mb-2">🏆 #1 DRIVER BY DGI</div>
-              <h2 className="text-3xl font-bold text-white mb-2">
-                {topDriver.firstName} {topDriver.lastName}
-              </h2>
-              <div className="text-f1-red text-4xl font-bold mb-4">
-                DGI: {topDriver.dgi.toFixed(4)}
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                <div>
-                  <div className="text-f1-lightGray text-xs">Wins</div>
-                  <div className="text-white text-xl font-bold">{topDriver.wins}</div>
+      {/* Driver Selection and Top Driver Highlight */}
+      <div className="dashboard-card">
+        <CustomDriverSelect
+          drivers={dgi.slice(0, 30)}
+          selectedDriver={selectedDriver}
+          onSelect={setSelectedDriver}
+        />
+        {selectedDriver && (
+          <div className="bg-gradient-to-r from-f1-red/20 to-transparent border-2 border-f1-red rounded-lg p-6">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="text-f1-lightGray text-sm mb-2">
+                  #{dgi.findIndex(d => d.id === selectedDriver.id) + 1} DRIVER BY DGI
                 </div>
-                <div>
-                  <div className="text-f1-lightGray text-xs">Championships</div>
-                  <div className="text-white text-xl font-bold">{topDriver.championships}</div>
+                <h2 className="text-3xl font-bold text-white mb-2">
+                  {selectedDriver.firstName} {selectedDriver.lastName}
+                </h2>
+                <div className="text-f1-red text-4xl font-bold mb-4">
+                  DGI: {selectedDriver.dgi.toFixed(4)}
                 </div>
-                <div>
-                  <div className="text-f1-lightGray text-xs">Poles</div>
-                  <div className="text-white text-xl font-bold">{topDriver.poles}</div>
-                </div>
-                <div>
-                  <div className="text-f1-lightGray text-xs">Teammate Dominance</div>
-                  <div className="text-white text-xl font-bold">{topDriver.teammateDominance.toFixed(1)}%</div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                  <div>
+                    <div className="text-f1-lightGray text-xs">Wins</div>
+                    <div className="text-white text-xl font-bold">{selectedDriver.wins}</div>
+                  </div>
+                  <div>
+                    <div className="text-f1-lightGray text-xs">Championships</div>
+                    <div className="text-white text-xl font-bold">{selectedDriver.championships}</div>
+                  </div>
+                  <div>
+                    <div className="text-f1-lightGray text-xs">Poles</div>
+                    <div className="text-white text-xl font-bold">{selectedDriver.poles}</div>
+                  </div>
+                  <div>
+                    <div className="text-f1-lightGray text-xs">Teammate Dominance</div>
+                    <div className="text-white text-xl font-bold">{selectedDriver.teammateDominance.toFixed(1)}%</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Key Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <StatCard
-          title="Drivers Analyzed"
-          value={dgi.length}
-          subtitle="Total drivers with DGI scores"
+          title={selectedDriver ? "Rank" : "Drivers Analyzed"}
+          value={selectedDriver ? `#${dgi.findIndex(d => d.id === selectedDriver.id) + 1}` : dgi.length}
+          subtitle={selectedDriver ? "Current ranking" : "Total drivers with DGI scores"}
           delay={0}
         />
         <StatCard
-          title="Top DGI Score"
-          value={topDriver?.dgi.toFixed(4) || '0.0000'}
-          subtitle={`${topDriver?.firstName} ${topDriver?.lastName}` || ''}
+          title={selectedDriver ? "DGI Score" : "Top DGI Score"}
+          value={selectedDriver ? selectedDriver.dgi.toFixed(4) : (topDriver?.dgi.toFixed(4) || '0.0000')}
+          subtitle={selectedDriver ? "Driver's DGI" : `${topDriver?.firstName} ${topDriver?.lastName}` || ''}
           delay={100}
         />
         <StatCard
-          title="Avg Career Length"
-          value={dgi.length > 0 ? Math.round(dgi.reduce((sum, d) => sum + d.careerLength, 0) / dgi.length) : 0}
-          subtitle="Seasons per driver"
+          title={selectedDriver ? "Career Length" : "Avg Career Length"}
+          value={selectedDriver ? selectedDriver.careerLength : (dgi.length > 0 ? Math.round(dgi.reduce((sum, d) => sum + d.careerLength, 0) / dgi.length) : 0)}
+          subtitle={selectedDriver ? "Seasons active" : "Seasons per driver"}
           delay={200}
         />
         <StatCard
-          title="Total Championships"
-          value={dgi.reduce((sum, d) => sum + d.championships, 0)}
-          subtitle="Combined titles"
+          title={selectedDriver ? "Championships" : "Total Championships"}
+          value={selectedDriver ? selectedDriver.championships : dgi.reduce((sum, d) => sum + d.championships, 0)}
+          subtitle={selectedDriver ? "World titles won" : "Combined titles"}
           delay={300}
         />
-      </div>
-
-      {/* Main Visualization: Top 30 Drivers */}
-      <div className="dashboard-card">
-        <h2 className="text-xl font-bold mb-4 text-f1-red">Top 30 Drivers by Driver Greatness Index</h2>
-        <p className="text-f1-lightGray text-sm mb-6">
-          DGI combines teammate dominance (25%), podium percentage (20%), wins from non-pole (20%), 
-          pole positions (15%), championships (10%), and longevity (10%).
-        </p>
-        {topDrivers && topDrivers.length > 0 ? (
-          <ResponsiveContainer width="100%" height={600}>
-            <BarChart 
-              data={topDrivers} 
-              layout="vertical"
-              margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
-              <XAxis
-                type="number"
-                domain={['dataMin', 'dataMax']}
-                stroke="#949498"
-                tick={{ fill: '#949498', fontSize: 12 }}
-                allowDecimals={true}
-              />
-              <YAxis
-                type="category"
-                dataKey="name"
-                stroke="#949498"
-                tick={{ fill: '#949498', fontSize: 11 }}
-                width={140}
-                interval={0}
-              />
-              <Tooltip content={<DGITooltip />} />
-              <Bar
-                dataKey="dgi"
-                fill="#E10600"
-                radius={[0, 8, 8, 0]}
-                minPointSize={2}
-                onClick={(data) => {
-                  const driver = dgi.find(d => d.id === data.driverId)
-                  if (driver) setSelectedDriver(driver)
-                }}
-                style={{ cursor: 'pointer' }}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        ) : (
-          <div className="text-center py-20 text-f1-lightGray">
-            No driver data available
-          </div>
-        )}
       </div>
 
       {/* Driver Detail View */}
@@ -360,6 +424,66 @@ const BestDriverDashboard = () => {
           </div>
         </div>
       )}
+
+      {/* Main Visualization: Top 30 Drivers */}
+      <div className="dashboard-card">
+        <h2 className="text-xl font-bold mb-4 text-f1-red">Top 30 Drivers by Driver Greatness Index</h2>
+        <p className="text-f1-lightGray text-sm mb-6">
+          DGI combines teammate dominance (25%), podium percentage (20%), wins from non-pole (20%), 
+          pole positions (15%), championships (10%), and longevity (10%).
+        </p>
+        {topDrivers && topDrivers.length > 0 ? (
+          <ResponsiveContainer width="100%" height={600}>
+            <BarChart 
+              data={topDrivers} 
+              layout="vertical"
+              margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
+              <XAxis
+                type="number"
+                domain={['dataMin', 'dataMax']}
+                stroke="#949498"
+                tick={{ fill: '#949498', fontSize: 12 }}
+                allowDecimals={true}
+              />
+              <YAxis
+                type="category"
+                dataKey="name"
+                stroke="#949498"
+                tick={{ fill: '#949498', fontSize: 11 }}
+                width={140}
+                interval={0}
+              />
+              <Tooltip content={<DGITooltip />} />
+              <Bar
+                dataKey="dgi"
+                radius={[0, 8, 8, 0]}
+                minPointSize={2}
+                onClick={(data) => {
+                  const driver = dgi.find(d => d.id === data.driverId)
+                  if (driver) setSelectedDriver(driver)
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                {topDrivers.map((entry, index) => {
+                  const isSelected = selectedDriver?.id === entry.driverId
+                  return (
+                    <Cell 
+                      key={`cell-${index}`} 
+                      fill={isSelected ? '#FFD700' : '#E10600'} 
+                    />
+                  )
+                })}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="text-center py-20 text-f1-lightGray">
+            No driver data available
+          </div>
+        )}
+      </div>
 
       {/* DGI Methodology Explanation */}
       <div className="dashboard-card">

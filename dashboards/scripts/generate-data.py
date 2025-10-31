@@ -579,20 +579,29 @@ def calculate_dgi_metrics():
             # Process teammate comparisons
             for constructor_id, results in constructor_results.items():
                 if len(results) >= 2:  # Need at least 2 drivers from same constructor
-                    # Sort by position (lower is better)
-                    sorted_results = sorted(results, key=lambda x: x['position'])
-                    
-                    # Drivers who finished ahead of their teammate(s)
-                    for i, result in enumerate(sorted_results):
+                    # Track all drivers from this constructor in this race
+                    # We need to record ALL races where drivers had teammates, not just when they finished ahead
+                    for result in results:
                         driver_id = result['driverId']
-                        ahead_count = len(sorted_results) - i - 1  # How many teammates finished behind
-                        if ahead_count > 0:
-                            driver_metrics[driver_id]['teammateComparisons'].append({
-                                'race': f"{season_int}-{race_name}",
-                                'constructorId': constructor_id,
-                                'finishedAhead': ahead_count,
-                                'totalTeammates': len(sorted_results) - 1
-                            })
+                        driver_position = result['position']
+                        
+                        # Count how many teammates finished ahead (better position = lower number)
+                        teammates_ahead = sum(1 for r in results if r['driverId'] != driver_id and r['position'] < driver_position)
+                        # Count how many teammates finished behind (worse position = higher number)
+                        teammates_behind = sum(1 for r in results if r['driverId'] != driver_id and r['position'] > driver_position)
+                        # Total teammates in this race
+                        total_teammates = len(results) - 1
+                        
+                        # Record ALL races with teammates (even if finished behind all of them)
+                        # This ensures we have accurate denominator for percentage calculation
+                        driver_metrics[driver_id]['teammateComparisons'].append({
+                            'race': f"{season_int}-{race_name}",
+                            'constructorId': constructor_id,
+                            'finishedAhead': teammates_behind,
+                            'finishedBehind': teammates_ahead,
+                            'totalTeammates': total_teammates,
+                            'position': driver_position
+                        })
             
             # Process qualifying for pole positions
             if qualifying_results_file.exists():
@@ -630,9 +639,13 @@ def calculate_dgi_metrics():
         # Calculate teammate dominance percentage
         teammate_comparisons = metrics['teammateComparisons']
         if teammate_comparisons:
+            # Count races where driver finished ahead of at least one teammate
+            races_ahead = sum(1 for comp in teammate_comparisons if comp.get('finishedAhead', 0) > 0)
+            # Total races with teammates (should now include all races, not just when ahead)
             total_races_with_teammate = len(teammate_comparisons)
-            finished_ahead_count = sum(1 for comp in teammate_comparisons if comp['finishedAhead'] > 0)
-            teammate_dominance = (finished_ahead_count / total_races_with_teammate) * 100 if total_races_with_teammate > 0 else 0
+            # Percentage of races where driver finished ahead of at least one teammate
+            # This gives us a realistic percentage (0-100%) where 100% would mean never finishing behind a teammate
+            teammate_dominance = (races_ahead / total_races_with_teammate) * 100 if total_races_with_teammate > 0 else 0
         else:
             teammate_dominance = 0
             total_races_with_teammate = 0
