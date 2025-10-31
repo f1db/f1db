@@ -290,7 +290,7 @@ def generate_current_season_data():
             })
     dnf_list.sort(key=lambda x: x['count'], reverse=True)
     
-    # Convert time penalty stats to list
+    # Convert time penalty stats to list - sort by total seconds
     time_penalty_list = []
     for driver_id, stats in time_penalty_stats.items():
         if stats['count'] > 0:
@@ -300,9 +300,9 @@ def generate_current_season_data():
                 'totalSeconds': round(stats['total_seconds'], 2),
                 'penalties': stats.get('penalties', [])
             })
-    time_penalty_list.sort(key=lambda x: x['count'], reverse=True)
+    time_penalty_list.sort(key=lambda x: x['totalSeconds'], reverse=True)
     
-    # Convert grid penalty stats to list
+    # Convert grid penalty stats to list - sort by total places
     grid_penalty_list = []
     for driver_id, stats in grid_penalty_stats.items():
         if stats['count'] > 0:
@@ -312,7 +312,7 @@ def generate_current_season_data():
                 'totalPlaces': stats['total_places'],
                 'penalties': stats.get('penalties', [])
             })
-    grid_penalty_list.sort(key=lambda x: x['count'], reverse=True)
+    grid_penalty_list.sort(key=lambda x: x['totalPlaces'], reverse=True)
 
     return {
         'season': int(current_season),

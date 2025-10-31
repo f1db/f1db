@@ -67,6 +67,21 @@ const GeneralDashboard = () => {
     }))
   }, [driverChampionships, driverNameMap])
 
+  // State for expandable cards
+  const [expandedCards, setExpandedCards] = useState({
+    podiums: false,
+    dnf: false,
+    timePenalties: false,
+    gridPenalties: false
+  })
+
+  const toggleCard = (cardName) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [cardName]: !prev[cardName]
+    }))
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -323,13 +338,26 @@ const GeneralDashboard = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Podium Statistics */}
             <div className="dashboard-card">
-              <h3 className="text-xl font-bold mb-4 text-f1-red">Podium Positions</h3>
+              <button
+                onClick={() => toggleCard('podiums')}
+                className="w-full flex items-center justify-between mb-4 text-left hover:opacity-80 transition-opacity"
+              >
+                <h3 className="text-xl font-bold text-f1-red">Podium Positions</h3>
+                <svg
+                  className={`w-5 h-5 text-f1-red transition-transform ${expandedCards.podiums ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
               {currentSeason.podiumStats && currentSeason.podiumStats.length > 0 ? (
                 <div className="space-y-4">
                   <div className="text-sm text-f1-lightGray mb-3">
                     Most podiums by position this season
                   </div>
-                  {currentSeason.podiumStats.slice(0, 5).map((driver, idx) => {
+                  {(expandedCards.podiums ? currentSeason.podiumStats : currentSeason.podiumStats.slice(0, 5)).map((driver, idx) => {
                     const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
                     return (
                       <div key={idx} className="bg-f1-gray p-3 rounded-lg border border-f1-gray/50">
@@ -362,13 +390,26 @@ const GeneralDashboard = () => {
 
             {/* DNF Statistics */}
             <div className="dashboard-card">
-              <h3 className="text-xl font-bold mb-4 text-f1-red">Did Not Finish (DNF)</h3>
+              <button
+                onClick={() => toggleCard('dnf')}
+                className="w-full flex items-center justify-between mb-4 text-left hover:opacity-80 transition-opacity"
+              >
+                <h3 className="text-xl font-bold text-f1-red">Did Not Finish (DNF)</h3>
+                <svg
+                  className={`w-5 h-5 text-f1-red transition-transform ${expandedCards.dnf ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
               {currentSeason.dnfStats && currentSeason.dnfStats.length > 0 ? (
                 <div className="space-y-4">
                   <div className="text-sm text-f1-lightGray mb-3">
                     Drivers with most retirements this season
                   </div>
-                  {currentSeason.dnfStats.slice(0, 5).map((driver, idx) => {
+                  {(expandedCards.dnf ? currentSeason.dnfStats : currentSeason.dnfStats.slice(0, 5)).map((driver, idx) => {
                     const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
                     const races = driver.races || [];
                     return (
@@ -415,13 +456,26 @@ const GeneralDashboard = () => {
 
             {/* Time Penalties */}
             <div className="dashboard-card">
-              <h3 className="text-xl font-bold mb-4 text-f1-red">Time Penalties</h3>
+              <button
+                onClick={() => toggleCard('timePenalties')}
+                className="w-full flex items-center justify-between mb-4 text-left hover:opacity-80 transition-opacity"
+              >
+                <h3 className="text-xl font-bold text-f1-red">Time Penalties</h3>
+                <svg
+                  className={`w-5 h-5 text-f1-red transition-transform ${expandedCards.timePenalties ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
               {currentSeason.timePenaltyStats && currentSeason.timePenaltyStats.length > 0 ? (
                 <div className="space-y-4">
                   <div className="text-sm text-f1-lightGray mb-3">
-                    Drivers with most time penalties this season
+                    Drivers with most time penalties this season (sorted by total time)
                   </div>
-                  {currentSeason.timePenaltyStats.slice(0, 5).map((driver, idx) => {
+                  {(expandedCards.timePenalties ? currentSeason.timePenaltyStats : currentSeason.timePenaltyStats.slice(0, 5)).map((driver, idx) => {
                     const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
                     const minutes = Math.floor(driver.totalSeconds / 60);
                     const seconds = (driver.totalSeconds % 60).toFixed(0);
@@ -479,13 +533,26 @@ const GeneralDashboard = () => {
 
             {/* Grid Penalties */}
             <div className="dashboard-card">
-              <h3 className="text-xl font-bold mb-4 text-f1-red">Grid Penalties</h3>
+              <button
+                onClick={() => toggleCard('gridPenalties')}
+                className="w-full flex items-center justify-between mb-4 text-left hover:opacity-80 transition-opacity"
+              >
+                <h3 className="text-xl font-bold text-f1-red">Grid Penalties</h3>
+                <svg
+                  className={`w-5 h-5 text-f1-red transition-transform ${expandedCards.gridPenalties ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
               {currentSeason.gridPenaltyStats && currentSeason.gridPenaltyStats.length > 0 ? (
                 <div className="space-y-4">
                   <div className="text-sm text-f1-lightGray mb-3">
-                    Drivers with most grid penalties this season
+                    Drivers with most grid penalties this season (sorted by total places)
                   </div>
-                  {currentSeason.gridPenaltyStats.slice(0, 5).map((driver, idx) => {
+                  {(expandedCards.gridPenalties ? currentSeason.gridPenaltyStats : currentSeason.gridPenaltyStats.slice(0, 5)).map((driver, idx) => {
                     const driverName = driverNameMap.get(driver.driverId) || driver.driverId;
                     const penalties = driver.penalties || [];
                     return (
