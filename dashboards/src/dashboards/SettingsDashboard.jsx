@@ -424,12 +424,6 @@ const SettingsDashboard = () => {
           </div>
         </div>
 
-        {weightError && (
-          <div className="mb-4 p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg text-yellow-300 text-sm">
-            ⚠️ Weights must sum to 100% (Current: {(totalWeight * 100).toFixed(1)}%)
-          </div>
-        )}
-
         {/* Progress Indicator */}
         {calculating && (
           <div className="mb-6 bg-f1-gray p-6 rounded-lg border border-f1-red/30">
@@ -631,6 +625,12 @@ const SettingsDashboard = () => {
             </p>
           </div>
         </div>
+
+        {weightError && (
+          <div className="mt-4 mb-2 p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg text-yellow-300 text-sm">
+            ⚠️ Weights must sum to 100% (Current: {(totalWeight * 100).toFixed(1)}%)
+          </div>
+        )}
 
         <div className="mt-4 p-3 bg-f1-darkGray rounded-lg">
           <div className="flex items-center justify-between">

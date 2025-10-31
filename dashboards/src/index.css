@@ -64,22 +64,19 @@
   background: #FFD700; /* gold */
 }
 
-/* WebKit thumb: gold car, rotated and nudged up */
+/* WebKit thumb: gold car with black outline, rotated and centered on line */
 .slider-f1::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 112px;
   height: 112px;
   border: none;
-  background-color: #FFD700; /* gold tint */
-  -webkit-mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
-          mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
+  background: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
   /* Move the large thumb to center over 6px track */
-  margin-top: -43px; /* was -53px; lowered by ~10px */
-  transform: translateY(-4px) rotate(90deg);
+  margin-top: -46px; /* moved down by 1px */
+  transform: translateY(-7px) rotate(90deg);
   cursor: pointer;
-  /* Outline + subtle shadow: layered drop-shadows simulate ~2px black stroke */
-  filter: drop-shadow(0 0 0 #000) drop-shadow(0 0 2px #000) drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
 }
 
 /* Firefox thumb */
@@ -87,10 +84,9 @@
   width: 112px;
   height: 112px;
   border: none;
-  background-color: #FFD700; /* gold */
+  background: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
   -moz-appearance: none;
-  mask: url('/noun-formula-1-8110150.svg') center / contain no-repeat;
-  transform: translateY(-43px) rotate(90deg); /* was -53px */
+  transform: translateY(-46px) rotate(90deg); /* moved down by 1px */
   cursor: pointer;
-  filter: drop-shadow(0 0 0 #000) drop-shadow(0 0 2px #000) drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
 }
