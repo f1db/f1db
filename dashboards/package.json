@@ -11,11 +11,12 @@
     "generate-favicons": "python3 scripts/generate-favicons.py"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "animejs": "^3.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",
-    "recharts": "^2.12.7",
-    "animejs": "^3.2.2"
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@types/react": "^18.3.5",
