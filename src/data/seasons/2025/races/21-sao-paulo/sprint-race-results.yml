@@ -160,7 +160,7 @@
   tyreManufacturerId: pirelli
   laps: 24
   time: "54:02.262"
-  timePenalty: "5.000"
+  timePenalty:
   gap: "+36.334"
   interval: "+5.334"
   reasonRetired:
@@ -179,7 +179,7 @@
   interval: "+2.128"
   reasonRetired:
   points:
-  gridPosition: PL
+  gridPosition: 19
 - position: 14
   driverNumber: 55
   driverId: carlos-sainz-jr
@@ -193,7 +193,7 @@
   interval: "+0.489"
   reasonRetired:
   points:
-  gridPosition: PL
+  gridPosition: 20
 - position: 15
   driverNumber: 27
   driverId: nico-hulkenberg
@@ -216,7 +216,7 @@
   tyreManufacturerId: pirelli
   laps: 24
   time: "54:09.018"
-  timePenalty: "5.000"
+  timePenalty:
   gap: "+43.090"
   interval: "+0.741"
   reasonRetired:
@@ -247,7 +247,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accidents
+  reasonRetired:
   points:
   gridPosition: 14
 - position: DNF
@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accident
+  reasonRetired:
   points:
   gridPosition: 3
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Accident
+  reasonRetired:
   points:
   gridPosition: 16
