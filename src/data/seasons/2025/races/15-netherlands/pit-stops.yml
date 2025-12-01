@@ -278,6 +278,15 @@
   lap: 53
   time: "17.840"
 - position: 32
+  driverNumber: 12
+  driverId: kimi-antonelli
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  stop: 3
+  lap: 53
+  time: "21.360"
+- position: 33
   driverNumber: 30
   driverId: liam-lawson
   constructorId: racing-bulls
@@ -286,7 +295,7 @@
   stop: 3
   lap: 52
   time: "18.552"
-- position: 33
+- position: 34
   driverNumber: 87
   driverId: oliver-bearman
   constructorId: haas
@@ -295,7 +304,7 @@
   stop: 1
   lap: 53
   time: "18.622"
-- position: 34
+- position: 35
   driverNumber: 22
   driverId: yuki-tsunoda
   constructorId: red-bull
@@ -304,7 +313,7 @@
   stop: 2
   lap: 53
   time: "18.147"
-- position: 35
+- position: 36
   driverNumber: 43
   driverId: franco-colapinto
   constructorId: alpine
@@ -313,7 +322,7 @@
   stop: 2
   lap: 53
   time: "17.586"
-- position: 36
+- position: 37
   driverNumber: 27
   driverId: nico-hulkenberg
   constructorId: kick-sauber
@@ -322,7 +331,7 @@
   stop: 2
   lap: 53
   time: "17.944"
-- position: 37
+- position: 38
   driverNumber: 5
   driverId: gabriel-bortoleto
   constructorId: kick-sauber
@@ -331,7 +340,7 @@
   stop: 2
   lap: 60
   time: "17.491"
-- position: 38
+- position: 39
   driverNumber: 43
   driverId: franco-colapinto
   constructorId: alpine
@@ -340,7 +349,7 @@
   stop: 3
   lap: 65
   time: "18.077"
-- position: 39
+- position: 40
   driverNumber: 55
   driverId: carlos-sainz-jr
   constructorId: williams
