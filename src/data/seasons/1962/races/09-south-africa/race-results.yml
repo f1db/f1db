@@ -153,6 +153,20 @@
   points:
   gridPosition: 16
 - position: DNF
+  driverNumber: 1
+  driverId: jim-clark
+  constructorId: lotus
+  engineManufacturerId: climax
+  tyreManufacturerId: dunlop
+  laps: 62
+  time:
+  timePenalty:
+  gap:
+  interval:
+  reasonRetired: Oil leak
+  points:
+  gridPosition: 1
+- position: DNF
   driverNumber: 21
   driverId: doug-serrurier
   constructorId: lds
@@ -166,20 +180,6 @@
   reasonRetired: Radiator
   points:
   gridPosition: 14
-- position: DNF
-  driverNumber: 1
-  driverId: jim-clark
-  constructorId: lotus
-  engineManufacturerId: climax
-  tyreManufacturerId: dunlop
-  laps: 61
-  time:
-  timePenalty:
-  gap:
-  interval:
-  reasonRetired: Oil leak
-  points:
-  gridPosition: 1
 - position: DNF
   driverNumber: 7
   driverId: roy-salvadori
