@@ -1,0 +1,1123 @@
+{
+  "season": 2025,
+  "driverStandings": [
+    {
+      "position": 1,
+      "driverId": "lando-norris",
+      "points": 357
+    },
+    {
+      "position": 2,
+      "driverId": "oscar-piastri",
+      "points": 356
+    },
+    {
+      "position": 3,
+      "driverId": "max-verstappen",
+      "points": 321
+    },
+    {
+      "position": 4,
+      "driverId": "george-russell",
+      "points": 258
+    },
+    {
+      "position": 5,
+      "driverId": "charles-leclerc",
+      "points": 210
+    },
+    {
+      "position": 6,
+      "driverId": "lewis-hamilton",
+      "points": 146
+    },
+    {
+      "position": 7,
+      "driverId": "kimi-antonelli",
+      "points": 97
+    },
+    {
+      "position": 8,
+      "driverId": "alexander-albon",
+      "points": 73
+    },
+    {
+      "position": 9,
+      "driverId": "nico-hulkenberg",
+      "points": 41
+    },
+    {
+      "position": 10,
+      "driverId": "isack-hadjar",
+      "points": 39
+    },
+    {
+      "position": 11,
+      "driverId": "carlos-sainz-jr",
+      "points": 38
+    },
+    {
+      "position": 12,
+      "driverId": "fernando-alonso",
+      "points": 37
+    },
+    {
+      "position": 13,
+      "driverId": "oliver-bearman",
+      "points": 32
+    },
+    {
+      "position": 14,
+      "driverId": "lance-stroll",
+      "points": 32
+    },
+    {
+      "position": 15,
+      "driverId": "liam-lawson",
+      "points": 30
+    },
+    {
+      "position": 16,
+      "driverId": "esteban-ocon",
+      "points": 30
+    },
+    {
+      "position": 17,
+      "driverId": "yuki-tsunoda",
+      "points": 28
+    },
+    {
+      "position": 18,
+      "driverId": "pierre-gasly",
+      "points": 20
+    },
+    {
+      "position": 19,
+      "driverId": "gabriel-bortoleto",
+      "points": 19
+    },
+    {
+      "position": 20,
+      "driverId": "franco-colapinto",
+      "points": 0
+    }
+  ],
+  "constructorStandings": [
+    {
+      "position": 1,
+      "constructorId": "mclaren",
+      "engineManufacturerId": "mercedes",
+      "points": 713
+    },
+    {
+      "position": 2,
+      "constructorId": "ferrari",
+      "engineManufacturerId": "ferrari",
+      "points": 356
+    },
+    {
+      "position": 3,
+      "constructorId": "mercedes",
+      "engineManufacturerId": "mercedes",
+      "points": 355
+    },
+    {
+      "position": 4,
+      "constructorId": "red-bull",
+      "engineManufacturerId": "honda-rbpt",
+      "points": 346
+    },
+    {
+      "position": 5,
+      "constructorId": "williams",
+      "engineManufacturerId": "mercedes",
+      "points": 111
+    },
+    {
+      "position": 6,
+      "constructorId": "racing-bulls",
+      "engineManufacturerId": "honda-rbpt",
+      "points": 72
+    },
+    {
+      "position": 7,
+      "constructorId": "aston-martin",
+      "engineManufacturerId": "mercedes",
+      "points": 69
+    },
+    {
+      "position": 8,
+      "constructorId": "haas",
+      "engineManufacturerId": "ferrari",
+      "points": 62
+    },
+    {
+      "position": 9,
+      "constructorId": "kick-sauber",
+      "engineManufacturerId": "ferrari",
+      "points": 60
+    },
+    {
+      "position": 10,
+      "constructorId": "alpine",
+      "engineManufacturerId": "renault",
+      "points": 20
+    }
+  ],
+  "totalRaces": 20,
+  "uniqueDrivers": 21,
+  "recentRaces": [
+    {
+      "raceName": "italy",
+      "date": "2025-09-07",
+      "circuitId": "monza",
+      "winner": {
+        "position": 1,
+        "driverNumber": 1,
+        "driverId": "max-verstappen",
+        "constructorId": "red-bull",
+        "engineManufacturerId": "honda-rbpt",
+        "tyreManufacturerId": "pirelli",
+        "laps": 53,
+        "time": "1:13:24.325",
+        "timePenalty": null,
+        "gap": null,
+        "interval": null,
+        "reasonRetired": null,
+        "points": 25,
+        "gridPosition": 1
+      }
+    },
+    {
+      "raceName": "azerbaijan",
+      "date": "2025-09-21",
+      "circuitId": "baku",
+      "winner": {
+        "position": 1,
+        "driverNumber": 1,
+        "driverId": "max-verstappen",
+        "constructorId": "red-bull",
+        "engineManufacturerId": "honda-rbpt",
+        "tyreManufacturerId": "pirelli",
+        "laps": 51,
+        "time": "1:33:26.408",
+        "timePenalty": null,
+        "gap": null,
+        "interval": null,
+        "reasonRetired": null,
+        "points": 25,
+        "gridPosition": 1,
+        "grandSlam": true
+      }
+    },
+    {
+      "raceName": "singapore",
+      "date": "2025-10-05",
+      "circuitId": "marina-bay",
+      "winner": {
+        "position": 1,
+        "driverNumber": 63,
+        "driverId": "george-russell",
+        "constructorId": "mercedes",
+        "engineManufacturerId": "mercedes",
+        "tyreManufacturerId": "pirelli",
+        "laps": 62,
+        "time": "1:40:22.367",
+        "timePenalty": null,
+        "gap": null,
+        "interval": null,
+        "reasonRetired": null,
+        "points": 25,
+        "gridPosition": 1
+      }
+    },
+    {
+      "raceName": "united-states",
+      "date": "2025-10-19",
+      "circuitId": "austin",
+      "winner": {
+        "position": 1,
+        "driverNumber": 1,
+        "driverId": "max-verstappen",
+        "constructorId": "red-bull",
+        "engineManufacturerId": "honda-rbpt",
+        "tyreManufacturerId": "pirelli",
+        "laps": 56,
+        "time": "1:34:00.161",
+        "timePenalty": null,
+        "gap": null,
+        "interval": null,
+        "reasonRetired": null,
+        "points": 25,
+        "gridPosition": 1
+      }
+    },
+    {
+      "raceName": "mexico",
+      "date": "2025-10-26",
+      "circuitId": "mexico-city",
+      "winner": {
+        "position": 1,
+        "driverNumber": 4,
+        "driverId": "lando-norris",
+        "constructorId": "mclaren",
+        "engineManufacturerId": "mercedes",
+        "tyreManufacturerId": "pirelli",
+        "laps": 71,
+        "time": "1:37:58.574",
+        "timePenalty": null,
+        "gap": null,
+        "interval": null,
+        "reasonRetired": null,
+        "points": 25,
+        "gridPosition": 1
+      }
+    }
+  ],
+  "podiumStats": [
+    {
+      "driverId": "lando-norris",
+      "1st": 6,
+      "2nd": 8,
+      "3rd": 2,
+      "total": 16,
+      "podiums": [
+        {
+          "position": 1,
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Heineken Chinese Grand Prix 2025",
+          "circuit": "Shanghai"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Lenovo Japanese Grand Prix 2025",
+          "circuit": "Suzuka"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 AWS Gran Premio del Made in Italy e dell'Emilia Romagna 2025",
+          "circuit": "Enzo e Dino Ferrari"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Mo\u00ebt & Chandon Belgian Grand Prix 2025",
+          "circuit": "Spa-Francorchamps"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Lenovo Hungarian Grand Prix 2025",
+          "circuit": "Hungaroring"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Singapore Airlines Singapore Grand Prix 2025",
+          "circuit": "Marina Bay"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 MSC Cruises United States Grand Prix 2025",
+          "circuit": "Americas"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "oscar-piastri",
+      "1st": 7,
+      "2nd": 3,
+      "3rd": 4,
+      "total": 14,
+      "podiums": [
+        {
+          "position": 1,
+          "race": "Formula 1 Heineken Chinese Grand Prix 2025",
+          "circuit": "Shanghai"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Lenovo Japanese Grand Prix 2025",
+          "circuit": "Suzuka"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 stc Saudi Arabian Grand Prix 2025",
+          "circuit": "Jeddah"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 AWS Gran Premio del Made in Italy e dell'Emilia Romagna 2025",
+          "circuit": "Enzo e Dino Ferrari"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Mo\u00ebt & Chandon Belgian Grand Prix 2025",
+          "circuit": "Spa-Francorchamps"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Lenovo Hungarian Grand Prix 2025",
+          "circuit": "Hungaroring"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Heineken Dutch Grand Prix 2025",
+          "circuit": "Zandvoort"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        }
+      ]
+    },
+    {
+      "driverId": "max-verstappen",
+      "1st": 5,
+      "2nd": 5,
+      "3rd": 1,
+      "total": 11,
+      "podiums": [
+        {
+          "position": 2,
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Lenovo Japanese Grand Prix 2025",
+          "circuit": "Suzuka"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 stc Saudi Arabian Grand Prix 2025",
+          "circuit": "Jeddah"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 AWS Gran Premio del Made in Italy e dell'Emilia Romagna 2025",
+          "circuit": "Enzo e Dino Ferrari"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Heineken Dutch Grand Prix 2025",
+          "circuit": "Zandvoort"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2025",
+          "circuit": "Baku"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Singapore Airlines Singapore Grand Prix 2025",
+          "circuit": "Marina Bay"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 MSC Cruises United States Grand Prix 2025",
+          "circuit": "Americas"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "george-russell",
+      "1st": 2,
+      "2nd": 2,
+      "3rd": 4,
+      "total": 8,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Heineken Chinese Grand Prix 2025",
+          "circuit": "Shanghai"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Lenovo Hungarian Grand Prix 2025",
+          "circuit": "Hungaroring"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2025",
+          "circuit": "Baku"
+        },
+        {
+          "position": 1,
+          "race": "Formula 1 Singapore Airlines Singapore Grand Prix 2025",
+          "circuit": "Marina Bay"
+        }
+      ]
+    },
+    {
+      "driverId": "charles-leclerc",
+      "1st": 0,
+      "2nd": 2,
+      "3rd": 5,
+      "total": 7,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 stc Saudi Arabian Grand Prix 2025",
+          "circuit": "Jeddah"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 Mo\u00ebt & Chandon Belgian Grand Prix 2025",
+          "circuit": "Spa-Francorchamps"
+        },
+        {
+          "position": 3,
+          "race": "Formula 1 MSC Cruises United States Grand Prix 2025",
+          "circuit": "Americas"
+        },
+        {
+          "position": 2,
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "kimi-antonelli",
+      "1st": 0,
+      "2nd": 0,
+      "3rd": 1,
+      "total": 1,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "driverId": "nico-hulkenberg",
+      "1st": 0,
+      "2nd": 0,
+      "3rd": 1,
+      "total": 1,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "isack-hadjar",
+      "1st": 0,
+      "2nd": 0,
+      "3rd": 1,
+      "total": 1,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 Heineken Dutch Grand Prix 2025",
+          "circuit": "Zandvoort"
+        }
+      ]
+    },
+    {
+      "driverId": "carlos-sainz-jr",
+      "1st": 0,
+      "2nd": 0,
+      "3rd": 1,
+      "total": 1,
+      "podiums": [
+        {
+          "position": 3,
+          "race": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2025",
+          "circuit": "Baku"
+        }
+      ]
+    }
+  ],
+  "dnfStats": [
+    {
+      "driverId": "liam-lawson",
+      "count": 5,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        },
+        {
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        },
+        {
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "fernando-alonso",
+      "count": 5,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Heineken Chinese Grand Prix 2025",
+          "circuit": "Shanghai"
+        },
+        {
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        },
+        {
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "kimi-antonelli",
+      "count": 4,
+      "races": [
+        {
+          "race": "Formula 1 AWS Gran Premio del Made in Italy e dell'Emilia Romagna 2025",
+          "circuit": "Enzo e Dino Ferrari"
+        },
+        {
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        },
+        {
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "gabriel-bortoleto",
+      "count": 3,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "carlos-sainz-jr",
+      "count": 3,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "race": "Formula 1 MSC Cruises United States Grand Prix 2025",
+          "circuit": "Americas"
+        }
+      ]
+    },
+    {
+      "driverId": "alexander-albon",
+      "count": 3,
+      "races": [
+        {
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        },
+        {
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        }
+      ]
+    },
+    {
+      "driverId": "jack-doohan",
+      "count": 2,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        }
+      ]
+    },
+    {
+      "driverId": "isack-hadjar",
+      "count": 2,
+      "races": [
+        {
+          "race": "Formula 1 Louis Vuitton Australian Grand Prix 2025",
+          "circuit": "Melbourne"
+        },
+        {
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "pierre-gasly",
+      "count": 2,
+      "races": [
+        {
+          "race": "Formula 1 stc Saudi Arabian Grand Prix 2025",
+          "circuit": "Jeddah"
+        },
+        {
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        }
+      ]
+    },
+    {
+      "driverId": "oliver-bearman",
+      "count": 2,
+      "races": [
+        {
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        },
+        {
+          "race": "Formula 1 Lenovo Hungarian Grand Prix 2025",
+          "circuit": "Hungaroring"
+        }
+      ]
+    }
+  ],
+  "timePenaltyStats": [
+    {
+      "driverId": "liam-lawson",
+      "count": 2,
+      "totalSeconds": 25.0,
+      "penalties": [
+        {
+          "amount": "15.000",
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "amount": "10.000",
+          "race": "Formula 1 stc Saudi Arabian Grand Prix 2025",
+          "circuit": "Jeddah"
+        }
+      ]
+    },
+    {
+      "driverId": "oliver-bearman",
+      "count": 2,
+      "totalSeconds": 20.0,
+      "penalties": [
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        },
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        }
+      ]
+    },
+    {
+      "driverId": "kimi-antonelli",
+      "count": 2,
+      "totalSeconds": 20.0,
+      "penalties": [
+        {
+          "amount": "15.000",
+          "race": "Formula 1 Heineken Dutch Grand Prix 2025",
+          "circuit": "Zandvoort"
+        },
+        {
+          "amount": "5.000",
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        }
+      ]
+    },
+    {
+      "driverId": "jack-doohan",
+      "count": 2,
+      "totalSeconds": 15.0,
+      "penalties": [
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Heineken Chinese Grand Prix 2025",
+          "circuit": "Shanghai"
+        },
+        {
+          "amount": "5.000",
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        }
+      ]
+    },
+    {
+      "driverId": "max-verstappen",
+      "count": 1,
+      "totalSeconds": 10.0,
+      "penalties": [
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Aramco Gran Premio de Espa\u00f1a 2025",
+          "circuit": "Catalunya"
+        }
+      ]
+    },
+    {
+      "driverId": "pierre-gasly",
+      "count": 1,
+      "totalSeconds": 10.0,
+      "penalties": [
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Lenovo Hungarian Grand Prix 2025",
+          "circuit": "Hungaroring"
+        }
+      ]
+    },
+    {
+      "driverId": "alexander-albon",
+      "count": 1,
+      "totalSeconds": 10.0,
+      "penalties": [
+        {
+          "amount": "10.000",
+          "race": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2025",
+          "circuit": "Baku"
+        }
+      ]
+    },
+    {
+      "driverId": "yuki-tsunoda",
+      "count": 1,
+      "totalSeconds": 5.0,
+      "penalties": [
+        {
+          "amount": "5.000",
+          "race": "Formula 1 Crypto.com Miami Grand Prix 2025",
+          "circuit": "Miami"
+        }
+      ]
+    },
+    {
+      "driverId": "lando-norris",
+      "count": 1,
+      "totalSeconds": 5.0,
+      "penalties": [
+        {
+          "amount": "5.000",
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "driverId": "franco-colapinto",
+      "count": 1,
+      "totalSeconds": 5.0,
+      "penalties": [
+        {
+          "amount": "5.000",
+          "race": "Formula 1 MSC Cruises Austrian Grand Prix 2025",
+          "circuit": "Red Bull Ring"
+        }
+      ]
+    }
+  ],
+  "gridPenaltyStats": [
+    {
+      "driverId": "oliver-bearman",
+      "count": 2,
+      "totalPlaces": 20,
+      "penalties": [
+        {
+          "amount": "10 places",
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "amount": "10 places",
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "yuki-tsunoda",
+      "count": 1,
+      "totalPlaces": 10,
+      "penalties": [
+        {
+          "amount": "10 places",
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "driverId": "lance-stroll",
+      "count": 2,
+      "totalPlaces": 9,
+      "penalties": [
+        {
+          "amount": "4 places",
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "amount": "5 places",
+          "race": "Formula 1 MSC Cruises United States Grand Prix 2025",
+          "circuit": "Americas"
+        }
+      ]
+    },
+    {
+      "driverId": "carlos-sainz-jr",
+      "count": 2,
+      "totalPlaces": 8,
+      "penalties": [
+        {
+          "amount": "3 places",
+          "race": "Formula 1 Lenovo Japanese Grand Prix 2025",
+          "circuit": "Suzuka"
+        },
+        {
+          "amount": "5 places",
+          "race": "Formula 1 Gran Premio de la Ciudad de M\u00e9xico 2025",
+          "circuit": "Hermanos Rodr\u00edguez"
+        }
+      ]
+    },
+    {
+      "driverId": "lewis-hamilton",
+      "count": 2,
+      "totalPlaces": 8,
+      "penalties": [
+        {
+          "amount": "3 places",
+          "race": "Formula 1 TAG Heuer Grand Prix de Monaco 2025",
+          "circuit": "Monaco"
+        },
+        {
+          "amount": "5 places",
+          "race": "Formula 1 Pirelli Gran Premio d'Italia 2025",
+          "circuit": "Monza"
+        }
+      ]
+    },
+    {
+      "driverId": "kimi-antonelli",
+      "count": 2,
+      "totalPlaces": 4,
+      "penalties": [
+        {
+          "amount": "1 places",
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        },
+        {
+          "amount": "3 places",
+          "race": "Formula 1 Qatar Airways British Grand Prix 2025",
+          "circuit": "Silverstone"
+        }
+      ]
+    },
+    {
+      "driverId": "isack-hadjar",
+      "count": 1,
+      "totalPlaces": 3,
+      "penalties": [
+        {
+          "amount": "3 places",
+          "race": "Formula 1 Pirelli Grand Prix du Canada 2025",
+          "circuit": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "driverId": "george-russell",
+      "count": 1,
+      "totalPlaces": 1,
+      "penalties": [
+        {
+          "amount": "1 places",
+          "race": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
+          "circuit": "Bahrain"
+        }
+      ]
+    },
+    {
+      "driverId": "franco-colapinto",
+      "count": 1,
+      "totalPlaces": 1,
+      "penalties": [
+        {
+          "amount": "1 places",
+          "race": "Formula 1 AWS Gran Premio del Made in Italy e dell'Emilia Romagna 2025",
+          "circuit": "Enzo e Dino Ferrari"
+        }
+      ]
+    }
+  ]
+}

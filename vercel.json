@@ -1,0 +1,8 @@
+{
+  "installCommand": "cd dashboards && npm ci",
+  "buildCommand": "cd dashboards && npm run build",
+  "outputDirectory": "dashboards/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

@@ -1,6 +1,30 @@
+# OS files
 Thumbs.db
 .DS_Store
+
+# Gradle
 .gradle
 .gradletasknamecache
+.gradle.properties
+
+# IDE
 .idea
 build
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# Credentials
+credentials.json
+google-credentials.json
+firebase-key.json
+service-account*.json
