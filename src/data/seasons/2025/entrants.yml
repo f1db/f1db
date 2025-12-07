@@ -7,13 +7,16 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-23
+      rounds: 1-24
     - driverId: lance-stroll
-      rounds: 1-23
+      rounds: 1-24
     - driverId: felipe-drugovich
       rounds:
       testDriver: true
     - driverId: jak-crawford
+      rounds:
+      testDriver: true
+    - driverId: cian-shields
       rounds:
       testDriver: true
 - entrantId: atlassian-williams-racing
@@ -25,9 +28,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-23
+      rounds: 1-24
     - driverId: carlos-sainz-jr
-      rounds: 1-23
+      rounds: 1-24
     - driverId: luke-browning
       rounds:
       testDriver: true
@@ -43,11 +46,11 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
-      rounds: 1-23
+      rounds: 1-24
     - driverId: jack-doohan
       rounds: 1-6
     - driverId: franco-colapinto
-      rounds: 7-23
+      rounds: 7-24
     - driverId: ryo-hirakawa
       rounds:
       testDriver: true
@@ -63,9 +66,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-23
+      rounds: 1-24
     - driverId: oscar-piastri
-      rounds: 1-23
+      rounds: 1-24
     - driverId: alexander-dunne
       rounds:
       testDriver: true
@@ -81,9 +84,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kimi-antonelli
-      rounds: 1-23
+      rounds: 1-24
     - driverId: george-russell
-      rounds: 1-23
+      rounds: 1-24
     - driverId: frederik-vesti
       rounds:
       testDriver: true
@@ -96,9 +99,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-23
+      rounds: 1-24
     - driverId: oliver-bearman
-      rounds: 1-23
+      rounds: 1-24
     - driverId: ryo-hirakawa
       rounds:
       testDriver: true
@@ -113,9 +116,9 @@
     - driverId: liam-lawson
       rounds: 1-2
     - driverId: max-verstappen
-      rounds: 1-23
+      rounds: 1-24
     - driverId: yuki-tsunoda
-      rounds: 3-23
+      rounds: 3-24
     - driverId: ayumu-iwasa
       rounds:
       testDriver: true
@@ -131,13 +134,16 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: charles-leclerc
-      rounds: 1-23
+      rounds: 1-24
     - driverId: lewis-hamilton
-      rounds: 1-23
+      rounds: 1-24
     - driverId: dino-beganovic
       rounds:
       testDriver: true
     - driverId: antonio-fuoco
+      rounds:
+      testDriver: true
+    - driverId: arthur-leclerc
       rounds:
       testDriver: true
 - entrantId: stake-f1-team-kick-sauber
@@ -149,9 +155,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: gabriel-bortoleto
-      rounds: 1-23
+      rounds: 1-24
     - driverId: nico-hulkenberg
-      rounds: 1-23
+      rounds: 1-24
     - driverId: paul-aron
       rounds:
       testDriver: true
@@ -164,11 +170,11 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: isack-hadjar
-      rounds: 1-23
+      rounds: 1-24
     - driverId: yuki-tsunoda
       rounds: 1-2
     - driverId: liam-lawson
-      rounds: 3-23
+      rounds: 3-24
     - driverId: ayumu-iwasa
       rounds:
       testDriver: true
