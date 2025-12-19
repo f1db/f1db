@@ -82,7 +82,7 @@ Releases are versioned using a "customized" [CalVer] versioning scheme:
 
 which uses the following conventions:
 
-- **YYYY** – Full year of the season – `2025`, ..
+- **YYYY** – Full year of the season – `2026`, ..
 - **RR** – Round number within the season – `0`, `1`, `2`, .., `10`, `11`, ..
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
@@ -91,13 +91,13 @@ Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` i
 
 Examples:
 
-- **2025.0.0** – Pre-season release before the 1<sup>st</sup> race round of the 2025 season.
-- **2025.0.1** – Pre-season patch release before the 1<sup>st</sup> race round of the 2025 season.
-- **2025.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2025 season.
-- **2025.1.0** – Final release after the 1<sup>st</sup> race round of the 2025 season.
-- **2025.2.0** – Final release after the 2<sup>nd</sup> race round of the 2025 season.
-- **2025.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2025 season.
-- **2025.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2025 season.
+- **2026.0.0** – Pre-season release before the 1<sup>st</sup> race round of the 2026 season.
+- **2026.0.1** – Pre-season patch release before the 1<sup>st</sup> race round of the 2026 season.
+- **2026.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2026 season.
+- **2026.1.0** – Final release after the 1<sup>st</sup> race round of the 2026 season.
+- **2026.2.0** – Final release after the 2<sup>nd</sup> race round of the 2026 season.
+- **2026.2.1** – First patch release after the 2<sup>nd</sup> race round of the 2026 season.
+- **2026.2.2** – Second patch release after the 2<sup>nd</sup> race round of the 2026 season.
 
 As you can see we use a special **RR** `0` for pre-season releases.
 

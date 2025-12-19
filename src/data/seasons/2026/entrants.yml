@@ -1,0 +1,132 @@
+- entrantId: aston-martin-aramco-honda
+  countryId: united-kingdom
+  constructorId: aston-martin
+  engineManufacturerId: honda
+  chassisId: aston-martin-amr26
+  engineId: honda-ra626h-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: fernando-alonso
+      rounds:
+    - driverId: lance-stroll
+      rounds:
+- entrantId: atlassian-williams-f1-team
+  countryId: united-kingdom
+  constructorId: williams
+  engineManufacturerId: mercedes
+  chassisId: williams-fw48
+  engineId: mercedes-amg-f1-m17-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: alexander-albon
+      rounds:
+    - driverId: carlos-sainz-jr
+      rounds:
+- entrantId: audi-revolut-f1-team
+  countryId: germany
+  constructorId: audi
+  engineManufacturerId: audi
+  chassisId: audi-r26
+  engineId: audi-a01-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: gabriel-bortoleto
+      rounds:
+    - driverId: nico-hulkenberg
+      rounds:
+- entrantId: bwt-alpine-f1-team
+  countryId: france
+  constructorId: alpine
+  engineManufacturerId: mercedes
+  chassisId: alpine-a526
+  engineId: mercedes-amg-f1-m17-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: pierre-gasly
+      rounds:
+    - driverId: franco-colapinto
+      rounds:
+- entrantId: cadillac-formula-1-team
+  countryId: united-states-of-america
+  constructorId: cadillac
+  engineManufacturerId: ferrari
+  chassisId: cadillac-ct01-v
+  engineId: ferrari-071-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: sergio-perez
+      rounds:
+    - driverId: valtteri-bottas
+      rounds:
+- entrantId: mclaren-mastercard-formula-1-team
+  countryId: united-kingdom
+  constructorId: mclaren
+  engineManufacturerId: mercedes
+  chassisId: mclaren-mcl40a
+  engineId: mercedes-amg-f1-m17-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: lando-norris
+      rounds:
+    - driverId: oscar-piastri
+      rounds:
+- entrantId: mercedes-amg-petronas-f1-team
+  countryId: germany
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  chassisId: mercedes-f1-w17
+  engineId: mercedes-amg-f1-m17-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: kimi-antonelli
+      rounds:
+    - driverId: george-russell
+      rounds:
+- entrantId: oracle-red-bull-racing
+  countryId: austria
+  constructorId: red-bull
+  engineManufacturerId: red-bull-ford
+  chassisId: red-bull-rb22
+  engineId: red-bull-ford-rbptf001-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: isack-hadjar
+      rounds:
+    - driverId: max-verstappen
+      rounds:
+- entrantId: scuderia-ferrari
+  countryId: italy
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  chassisId: ferrari-sf-26
+  engineId: ferrari-071-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: charles-leclerc
+      rounds:
+    - driverId: lewis-hamilton
+      rounds:
+- entrantId: tgr-haas-f1-team
+  countryId: united-states-of-america
+  constructorId: haas
+  engineManufacturerId: ferrari
+  chassisId: haas-vf-26
+  engineId: ferrari-071-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: esteban-ocon
+      rounds:
+    - driverId: oliver-bearman
+      rounds:
+- entrantId: visa-cash-app-racing-bulls-f1-team
+  countryId: italy
+  constructorId: racing-bulls
+  engineManufacturerId: red-bull-ford
+  chassisId: racing-bulls-vcarb-03
+  engineId: red-bull-ford-rbptf001-16-v6-t-h
+  tyreManufacturerId: pirelli
+  drivers:
+    - driverId: arvid-lindblad
+      rounds:
+    - driverId: liam-lawson
+      rounds:
