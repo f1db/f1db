@@ -1,6 +1,6 @@
 plugins {
     distribution
-    kotlin("jvm") version "2.1.20"
+    kotlin("jvm") version "2.3.0"
     id("com.f1db")
     id("org.jreleaser") version "1.17.0"
 }
@@ -11,13 +11,12 @@ val currentSeasonProperty = project.property("currentSeason") as String
 val currentSeasonFinishedProperty = project.property("currentSeasonFinished") as String
 
 val joyVersion by extra("2.1.0")
-val jooqVersion by extra("3.20.1")
-val junitVersion by extra("5.12.1")
+val junitVersion by extra("6.0.1")
 val justifyVersion by extra("3.1.0")
-val kotestVersion by extra("5.9.1")
+val kotestVersion by extra("6.0.7")
 val mysqlConnectorJavaVersion by extra("8.0.33")
-val postgresqlVersion by extra("42.7.5")
-val testcontainersVersion by extra("1.20.6")
+val postgresqlVersion by extra("42.7.8")
+val testcontainersVersion by extra("1.21.4")
 
 f1db {
     sourceDir.set(layout.projectDirectory.dir("src/data"))

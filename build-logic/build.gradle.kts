@@ -3,9 +3,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `java-gradle-plugin`
-    kotlin("jvm") version "2.1.20"
-    kotlin("kapt") version "2.1.20"
-    id("org.jooq.jooq-codegen-gradle") version "3.20.1"
+    kotlin("jvm") version "2.3.0"
+    kotlin("kapt") version "2.3.0"
+    id("org.jooq.jooq-codegen-gradle") version "3.20.10"
     id("org.jsonschema2pojo") version "1.2.2"
 }
 
@@ -21,11 +21,11 @@ gradlePlugin {
     }
 }
 
-val jacksonVersion by extra("2.18.3")
-val jooqVersion by extra("3.20.2")
+val jacksonVersion by extra("2.20.1")
+val jooqVersion by extra("3.20.10")
 val mapstructVersion by extra("1.6.3")
-val slf4jVersion by extra("2.0.16")
-val sqliteJdbcVersion by extra("3.49.1.0")
+val slf4jVersion by extra("2.0.17")
+val sqliteJdbcVersion by extra("3.51.1.0")
 
 java {
     toolchain {

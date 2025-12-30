@@ -148,6 +148,8 @@ class F1DBReader(
             driver.totalChampionshipPoints = 0.toBigDecimal()
             driver.totalPolePositions = 0
             driver.totalFastestLaps = 0
+            driver.totalSprintRaceStarts = 0
+            driver.totalSprintRaceWins = 0
             driver.totalDriverOfTheDay = 0
             driver.totalGrandSlams = 0
         }
@@ -168,6 +170,8 @@ class F1DBReader(
             constructor.totalChampionshipPoints = 0.toBigDecimal()
             constructor.totalPolePositions = 0
             constructor.totalFastestLaps = 0
+            constructor.totalSprintRaceStarts = 0
+            constructor.totalSprintRaceWins = 0
         }
 
         db.engineManufacturers.forEach { engineManufacturer ->
@@ -182,6 +186,8 @@ class F1DBReader(
             engineManufacturer.totalChampionshipPoints = 0.toBigDecimal()
             engineManufacturer.totalPolePositions = 0
             engineManufacturer.totalFastestLaps = 0
+            engineManufacturer.totalSprintRaceStarts = 0
+            engineManufacturer.totalSprintRaceWins = 0
         }
 
         db.tyreManufacturers.forEach { tyreManufacturer ->
@@ -193,6 +199,8 @@ class F1DBReader(
             tyreManufacturer.totalPodiumRaces = 0
             tyreManufacturer.totalPolePositions = 0
             tyreManufacturer.totalFastestLaps = 0
+            tyreManufacturer.totalSprintRaceStarts = 0
+            tyreManufacturer.totalSprintRaceWins = 0
         }
 
         db.circuits.forEach { circuit ->
@@ -234,6 +242,8 @@ class F1DBReader(
                             this.totalPoints = 0.toBigDecimal()
                             this.totalPolePositions = 0
                             this.totalFastestLaps = 0
+                            this.totalSprintRaceStarts = 0
+                            this.totalSprintRaceWins = 0
                         }
                     }
 
@@ -260,6 +270,8 @@ class F1DBReader(
                             this.totalPoints = 0.toBigDecimal()
                             this.totalPolePositions = 0
                             this.totalFastestLaps = 0
+                            this.totalSprintRaceStarts = 0
+                            this.totalSprintRaceWins = 0
                         }
                     }
 
@@ -282,6 +294,8 @@ class F1DBReader(
                             this.totalPodiumRaces = 0
                             this.totalPolePositions = 0
                             this.totalFastestLaps = 0
+                            this.totalSprintRaceStarts = 0
+                            this.totalSprintRaceWins = 0
                         }
                     }
 
@@ -307,6 +321,8 @@ class F1DBReader(
                             this.totalPoints = 0.toBigDecimal()
                             this.totalPolePositions = 0
                             this.totalFastestLaps = 0
+                            this.totalSprintRaceStarts = 0
+                            this.totalSprintRaceWins = 0
                             this.totalDriverOfTheDay = 0
                             this.totalGrandSlams = 0
                         }
@@ -315,6 +331,7 @@ class F1DBReader(
             season.driverStandings?.forEachIndexed { index, driverStanding ->
 
                 driverStanding.positionDisplayOrder = index + 1
+                driverStanding.championshipWon = false
 
                 val positionNumber = driverStanding.positionNumber
                 val driver = db.drivers.first { it.id == driverStanding.driverId }
@@ -325,10 +342,11 @@ class F1DBReader(
                     driver.bestChampionshipPosition = resolveBestPosition(driver.bestChampionshipPosition, positionNumber)
                 }
 
-                // Total championship wins.
+                // Total championship wins + championship won.
 
                 if (positionNumber == 1 && (season.year < currentSeason || driversChampionshipDecider != null)) {
                     driver.totalChampionshipWins++
+                    driverStanding.championshipWon = true
                 }
 
                 // Total championship points.
@@ -339,6 +357,7 @@ class F1DBReader(
             season.constructorStandings?.forEachIndexed { index, constructorStanding ->
 
                 constructorStanding.positionDisplayOrder = index + 1
+                constructorStanding.championshipWon = false
 
                 val positionNumber = constructorStanding.positionNumber
                 val constructor = db.constructors.first { it.id == constructorStanding.constructorId }
@@ -351,11 +370,12 @@ class F1DBReader(
                     engineManufacturer.bestChampionshipPosition = resolveBestPosition(engineManufacturer.bestChampionshipPosition, positionNumber)
                 }
 
-                // Total championship wins.
+                // Total championship wins + championship won.
 
                 if (positionNumber == 1 && (season.year < currentSeason || constructorsChampionshipDecider != null)) {
                     constructor.totalChampionshipWins++
                     engineManufacturer.totalChampionshipWins++
+                    constructorStanding.championshipWon = true
                 }
 
                 // Total championship points.
@@ -370,6 +390,9 @@ class F1DBReader(
         racesByYear.forEach { (year, races) ->
 
             val season = db.seasons.first { it.year == year }
+
+            var driversChampionshipDecider = races.firstOrNull { it.driversChampionshipDecider == true }
+            var constructorsChampionshipDecider = races.firstOrNull { it.constructorsChampionshipDecider == true }
 
             races.forEach { race ->
 
@@ -513,12 +536,14 @@ class F1DBReader(
 
                 race.driverStandings?.forEachIndexed { index, driverStanding ->
                     driverStanding.positionDisplayOrder = index + 1
+                    driverStanding.championshipWon = false
                 }
 
                 // Enrich constructor standings.
 
                 race.constructorStandings?.forEachIndexed { index, constructorStanding ->
                     constructorStanding.positionDisplayOrder = index + 1
+                    constructorStanding.championshipWon = false
                 }
 
                 // Total points.
@@ -562,6 +587,8 @@ class F1DBReader(
                 val raceStarts = mutableListOf<Any>()
                 val raceWins = mutableListOf<Any>()
                 val podiums = mutableListOf<Any>()
+                val sprintRaceStarts = mutableListOf<Any>()
+                val sprintRaceWins = mutableListOf<Any>()
 
                 race.startingGridPositions?.forEach { startingGridPosition ->
 
@@ -802,13 +829,95 @@ class F1DBReader(
                     }
                 }
 
+                race.sprintRaceResults?.forEach { sprintRaceResult ->
+
+                    val driver = db.drivers.first { it.id == sprintRaceResult.driverId }
+                    val constructor = db.constructors.first { it.id == sprintRaceResult.constructorId }
+                    val engineManufacturer = db.engineManufacturers.first { it.id == sprintRaceResult.engineManufacturerId }
+                    val tyreManufacturer = db.tyreManufacturers.first { it.id == sprintRaceResult.tyreManufacturerId }
+
+                    val seasonDriver = season.drivers.first { it.driverId == sprintRaceResult.driverId }
+                    val seasonConstructor = season.constructors.first { it.constructorId == sprintRaceResult.constructorId }
+                    val seasonEngineManufacturer = season.engineManufacturers.first { it.engineManufacturerId == sprintRaceResult.engineManufacturerId }
+                    val seasonTyreManufacturer = season.tyreManufacturers.first { it.tyreManufacturerId == sprintRaceResult.tyreManufacturerId }
+
+                    // Best sprint race result.
+
+                    if (sprintRaceResult.positionNumber != null) {
+                        val positionNumber = sprintRaceResult.positionNumber
+
+                        driver.bestSprintRaceResult = resolveBestPosition(driver.bestSprintRaceResult, positionNumber)
+                        constructor.bestSprintRaceResult = resolveBestPosition(constructor.bestSprintRaceResult, positionNumber)
+                        engineManufacturer.bestSprintRaceResult = resolveBestPosition(engineManufacturer.bestSprintRaceResult, positionNumber)
+                        tyreManufacturer.bestSprintRaceResult = resolveBestPosition(tyreManufacturer.bestSprintRaceResult, positionNumber)
+
+                        seasonDriver.bestSprintRaceResult = resolveBestPosition(seasonDriver.bestSprintRaceResult, positionNumber)
+                        seasonConstructor.bestSprintRaceResult = resolveBestPosition(seasonConstructor.bestSprintRaceResult, positionNumber)
+                        seasonEngineManufacturer.bestSprintRaceResult = resolveBestPosition(seasonEngineManufacturer.bestSprintRaceResult, positionNumber)
+                        seasonTyreManufacturer.bestSprintRaceResult = resolveBestPosition(seasonTyreManufacturer.bestSprintRaceResult, positionNumber)
+                    }
+
+                    // Total race starts.
+
+                    if (sprintRaceResult.positionText !in listOf("DNP", "DNPQ", "DNQ", "DNS", "EX")) {
+
+                        if (addIfAbsent(sprintRaceStarts, driver)) {
+                            driver.totalSprintRaceStarts++
+                            seasonDriver.totalSprintRaceStarts++
+                        }
+
+                        if (addIfAbsent(sprintRaceStarts, constructor)) {
+                            constructor.totalSprintRaceStarts++
+                            seasonConstructor.totalSprintRaceStarts++
+                        }
+
+                        if (addIfAbsent(sprintRaceStarts, engineManufacturer)) {
+                            engineManufacturer.totalSprintRaceStarts++
+                            seasonEngineManufacturer.totalSprintRaceStarts++
+                        }
+
+                        if (addIfAbsent(sprintRaceStarts, tyreManufacturer)) {
+                            tyreManufacturer.totalSprintRaceStarts++
+                            seasonTyreManufacturer.totalSprintRaceStarts++
+                        }
+                    }
+
+                    // Total race wins.
+
+                    if (sprintRaceResult.positionNumber == 1) {
+
+                        if (addIfAbsent(sprintRaceWins, driver)) {
+                            driver.totalSprintRaceWins++
+                            seasonDriver.totalSprintRaceWins++
+                        }
+
+                        if (addIfAbsent(sprintRaceWins, constructor)) {
+                            constructor.totalSprintRaceWins++
+                            seasonConstructor.totalSprintRaceWins++
+                        }
+
+                        if (addIfAbsent(sprintRaceWins, engineManufacturer)) {
+                            engineManufacturer.totalSprintRaceWins++
+                            seasonEngineManufacturer.totalSprintRaceWins++
+                        }
+
+                        if (addIfAbsent(sprintRaceWins, tyreManufacturer)) {
+                            tyreManufacturer.totalSprintRaceWins++
+                            seasonTyreManufacturer.totalSprintRaceWins++
+                        }
+                    }
+                }
+
                 if (race.round > 1) {
 
                     val previousRace = db.races.first { it.year == race.year && it.round == race.round - 1 }
 
-                    // Driver standing positions gained.
+                    // Driver standings.
 
                     race?.driverStandings?.forEach { driverStanding ->
+
+                        // Driver standing positions gained.
+
                         if (driverStanding.positionNumber != null) {
                             val previousRaceDriverStanding = previousRace.driverStandings.firstOrNull { it.driverId == driverStanding.driverId }
                             if (previousRaceDriverStanding?.positionNumber != null) {
@@ -817,11 +926,20 @@ class F1DBReader(
                                 driverStanding.positionsGained = (previousRace.driverStandings.size + 1) - driverStanding.positionNumber
                             }
                         }
+
+                        // Driver standing championship won.
+
+                        if (driverStanding.positionNumber == 1 && driversChampionshipDecider != null && race.round >= driversChampionshipDecider.round) {
+                            driverStanding.championshipWon = true
+                        }
                     }
 
-                    // Constructor standing positions gained.
+                    // Constructor standings.
 
                     race?.constructorStandings?.forEach { constructorStanding ->
+
+                        // Constructor standing positions gained.
+
                         if (constructorStanding.positionNumber != null) {
                             val previousRaceConstructorStanding = previousRace.constructorStandings.firstOrNull { it.constructorId == constructorStanding.constructorId && it.engineManufacturerId == constructorStanding.engineManufacturerId }
                             if (previousRaceConstructorStanding?.positionNumber != null) {
@@ -829,6 +947,12 @@ class F1DBReader(
                             } else {
                                 constructorStanding.positionsGained = (previousRace.constructorStandings.size + 1) - constructorStanding.positionNumber
                             }
+                        }
+
+                        // Constructor standing championship won.
+
+                        if (constructorStanding.positionNumber == 1 && constructorsChampionshipDecider != null && race.round >= constructorsChampionshipDecider.round) {
+                            constructorStanding.championshipWon = true
                         }
                     }
                 }

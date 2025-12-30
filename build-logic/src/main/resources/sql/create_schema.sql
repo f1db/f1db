@@ -43,6 +43,7 @@ CREATE TABLE "driver"
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -53,6 +54,8 @@ CREATE TABLE "driver"
 , "total_championship_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , "total_driver_of_the_day" INTEGER NOT NULL
 , "total_grand_slams" INTEGER NOT NULL
 , CONSTRAINT "drvr_pk" PRIMARY KEY ("id")
@@ -98,6 +101,7 @@ CREATE TABLE "constructor"
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -110,6 +114,8 @@ CREATE TABLE "constructor"
 , "total_championship_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "cnst_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cnst_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
@@ -154,6 +160,7 @@ CREATE TABLE "engine_manufacturer"
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_championship_wins" INTEGER NOT NULL
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
@@ -165,6 +172,8 @@ CREATE TABLE "engine_manufacturer"
 , "total_championship_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "enmf_pk" PRIMARY KEY ("id")
 , CONSTRAINT "enmf_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
@@ -197,6 +206,7 @@ CREATE TABLE "tyre_manufacturer"
 , "country_id" VARCHAR(100) NOT NULL
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
@@ -205,6 +215,8 @@ CREATE TABLE "tyre_manufacturer"
 , "total_podium_races" INTEGER NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "tymf_pk" PRIMARY KEY ("id")
 , CONSTRAINT "tymf_country_id_fk" FOREIGN KEY ("country_id") REFERENCES "country" ("id")
 );
@@ -389,6 +401,7 @@ CREATE TABLE "season_constructor"
 , "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
@@ -399,6 +412,8 @@ CREATE TABLE "season_constructor"
 , "total_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "sscn_pk" PRIMARY KEY ("year", "constructor_id")
 , CONSTRAINT "sscn_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
 , CONSTRAINT "sscn_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
@@ -414,6 +429,7 @@ CREATE TABLE "season_engine_manufacturer"
 , "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
@@ -423,6 +439,8 @@ CREATE TABLE "season_engine_manufacturer"
 , "total_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "ssem_pk" PRIMARY KEY ("year", "engine_manufacturer_id")
 , CONSTRAINT "ssem_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
 , CONSTRAINT "ssem_engine_manufacturer_id_fk" FOREIGN KEY ("engine_manufacturer_id") REFERENCES "engine_manufacturer" ("id")
@@ -436,6 +454,7 @@ CREATE TABLE "season_tyre_manufacturer"
 , "tyre_manufacturer_id" VARCHAR(100) NOT NULL
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
@@ -444,6 +463,8 @@ CREATE TABLE "season_tyre_manufacturer"
 , "total_podium_races" INTEGER NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , CONSTRAINT "sstm_pk" PRIMARY KEY ("year", "tyre_manufacturer_id")
 , CONSTRAINT "sstm_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
 , CONSTRAINT "sstm_tyre_manufacturer_id_fk" FOREIGN KEY ("tyre_manufacturer_id") REFERENCES "tyre_manufacturer" ("id")
@@ -459,6 +480,7 @@ CREATE TABLE "season_driver"
 , "position_text" VARCHAR(4)
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
+, "best_sprint_race_result" INTEGER
 , "total_race_entries" INTEGER NOT NULL
 , "total_race_starts" INTEGER NOT NULL
 , "total_race_wins" INTEGER NOT NULL
@@ -467,6 +489,8 @@ CREATE TABLE "season_driver"
 , "total_points" DECIMAL(8,2) NOT NULL
 , "total_pole_positions" INTEGER NOT NULL
 , "total_fastest_laps" INTEGER NOT NULL
+, "total_sprint_race_starts" INTEGER NOT NULL
+, "total_sprint_race_wins" INTEGER NOT NULL
 , "total_driver_of_the_day" INTEGER NOT NULL
 , "total_grand_slams" INTEGER NOT NULL
 , CONSTRAINT "ssdr_pk" PRIMARY KEY ("year", "driver_id")
@@ -484,6 +508,7 @@ CREATE TABLE "season_driver_standing"
 , "position_text" VARCHAR(4) NOT NULL
 , "driver_id" VARCHAR(100) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
+, "championship_won" BOOLEAN NOT NULL
 , CONSTRAINT "ssds_pk" PRIMARY KEY ("year", "position_display_order")
 , CONSTRAINT "ssds_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
 , CONSTRAINT "ssds_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
@@ -503,6 +528,7 @@ CREATE TABLE "season_constructor_standing"
 , "constructor_id" VARCHAR(100) NOT NULL
 , "engine_manufacturer_id" VARCHAR(100) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
+, "championship_won" BOOLEAN NOT NULL
 , CONSTRAINT "sscs_pk" PRIMARY KEY ("year", "position_display_order")
 , CONSTRAINT "sscs_year_fk" FOREIGN KEY ("year") REFERENCES "season" ("year")
 , CONSTRAINT "sscs_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
@@ -535,8 +561,8 @@ CREATE TABLE "race"
 , "distance" DECIMAL(6,3) NOT NULL
 , "scheduled_laps" INTEGER
 , "scheduled_distance" DECIMAL(6,3)
-, "drivers_championship_decider" BOOLEAN
-, "constructors_championship_decider" BOOLEAN
+, "drivers_championship_decider" BOOLEAN NOT NULL
+, "constructors_championship_decider" BOOLEAN NOT NULL
 , "pre_qualifying_date" DATE
 , "pre_qualifying_time" VARCHAR(5)
 , "free_practice_1_date" DATE
@@ -676,6 +702,7 @@ CREATE TABLE "race_driver_standing"
 , "driver_id" VARCHAR(100) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
 , "positions_gained" INTEGER
+, "championship_won" BOOLEAN NOT NULL
 , CONSTRAINT "rcds_pk" PRIMARY KEY ("race_id", "position_display_order")
 , CONSTRAINT "rcds_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
 , CONSTRAINT "rcds_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
@@ -696,6 +723,7 @@ CREATE TABLE "race_constructor_standing"
 , "engine_manufacturer_id" VARCHAR(100) NOT NULL
 , "points" DECIMAL(8,2) NOT NULL
 , "positions_gained" INTEGER
+, "championship_won" BOOLEAN NOT NULL
 , CONSTRAINT "rccs_pk" PRIMARY KEY ("race_id", "position_display_order")
 , CONSTRAINT "rccs_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
 , CONSTRAINT "rccs_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
