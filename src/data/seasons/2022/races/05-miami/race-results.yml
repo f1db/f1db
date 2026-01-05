@@ -219,7 +219,7 @@
   timePenalty: "5.000"
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Front wing
   points:
   gridPosition: 16
 - position: 17
@@ -233,7 +233,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Collision
   points:
   gridPosition: PL
 - position: DNF
@@ -247,7 +247,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Suspension
   points:
   gridPosition: 7
 - position: DNF
@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Collision
   points:
   gridPosition: 8
 - position: DNF
@@ -275,6 +275,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Water leak
   points:
   gridPosition: 17
