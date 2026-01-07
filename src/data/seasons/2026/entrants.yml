@@ -1,4 +1,4 @@
-- entrantId: aston-martin-aramco-honda
+- entrantId: aston-martin-aramco-formula-one-team
   countryId: united-kingdom
   constructorId: aston-martin
   engineManufacturerId: honda
@@ -34,7 +34,7 @@
       rounds:
     - driverId: nico-hulkenberg
       rounds:
-- entrantId: bwt-alpine-f1-team
+- entrantId: bwt-alpine-formula-one-team
   countryId: france
   constructorId: alpine
   engineManufacturerId: mercedes
@@ -58,7 +58,7 @@
       rounds:
     - driverId: valtteri-bottas
       rounds:
-- entrantId: mclaren-mastercard-formula-1-team
+- entrantId: mclaren-mastercard-f1-team
   countryId: united-kingdom
   constructorId: mclaren
   engineManufacturerId: mercedes
@@ -70,7 +70,7 @@
       rounds:
     - driverId: oscar-piastri
       rounds:
-- entrantId: mercedes-amg-petronas-f1-team
+- entrantId: mercedes-amg-petronas-formula-one-team
   countryId: germany
   constructorId: mercedes
   engineManufacturerId: mercedes
@@ -94,7 +94,7 @@
       rounds:
     - driverId: max-verstappen
       rounds:
-- entrantId: scuderia-ferrari
+- entrantId: scuderia-ferrari-hp
   countryId: italy
   constructorId: ferrari
   engineManufacturerId: ferrari
@@ -118,7 +118,7 @@
       rounds:
     - driverId: oliver-bearman
       rounds:
-- entrantId: visa-cash-app-racing-bulls-f1-team
+- entrantId: visa-cash-app-racing-bulls-formula-one-team
   countryId: italy
   constructorId: racing-bulls
   engineManufacturerId: red-bull-ford
