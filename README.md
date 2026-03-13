@@ -192,6 +192,7 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 ## Projects using F1DB
 
 - 🌐 [F1+](https://formula1.plus/) – F1 Predictions, Live Standings & Race Intelligence
+- 🍎 [F1nally](https://apps.apple.com/us/app/f1nally/id1618275556) – iOS app to quickly view the F1 schedule and results
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
 - 🤖 [OvertakeGP](https://play.google.com/store/apps/details?id=com.kkgosu.overtakegp) – OvertakeGP is a fast, focused Formula 1® companion that brings decades of racing data into one clean app
 - ⚙️ [RacingHub API](https://racinghub.net/api/v1/docs) – Free & open-source F1 REST API with Python/JS clients and MCP support
