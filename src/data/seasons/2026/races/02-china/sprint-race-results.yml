@@ -221,7 +221,7 @@
   interval: "+3.584"
   reasonRetired:
   points:
-  gridPosition: PL
+  gridPosition: 22
 - position: 17
   driverNumber: 14
   driverId: fernando-alonso
@@ -275,7 +275,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Mechanical
+  reasonRetired:
   points:
   gridPosition: 11
 - position: DNF
@@ -289,7 +289,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Power unit
+  reasonRetired:
   points:
   gridPosition: 20
 - position: DNF
@@ -303,6 +303,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Collision
+  reasonRetired:
   points:
   gridPosition: 15
