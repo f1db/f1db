@@ -5,5 +5,7 @@ Thumbs.db
 .idea
 build
 api/f1db.sqlite
+api/f1db.sqlite-shm
+api/f1db.sqlite-wal
 __pycache__
 *.pyc
