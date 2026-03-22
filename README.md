@@ -101,7 +101,6 @@ Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` i
 Examples:
 
 - **2026.0.0** – Pre-season release before the 1<sup>st</sup> race round of the 2026 season.
-- **2026.0.1** – Pre-season patch release before the 1<sup>st</sup> race round of the 2026 season.
 - **2026.0.1** – First pre-season patch release before the 1<sup>st</sup> race round of the 2026 season.
 - **2026.1.0** – Final release after the 1<sup>st</sup> race round of the 2026 season.
 - **2026.2.0** – Final release after the 2<sup>nd</sup> race round of the 2026 season.
