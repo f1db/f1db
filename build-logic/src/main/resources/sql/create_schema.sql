@@ -689,7 +689,7 @@ CREATE TABLE "race_data"
 , "pit_stop_lap" INTEGER
 , "pit_stop_time" VARCHAR(20)
 , "pit_stop_time_millis" INTEGER
-, "driver_of_the_day_percentage" DECIMAL(4,1)
+, "driver_of_the_day_percentage" DECIMAL(5,2)
 , CONSTRAINT "rcda_pk" PRIMARY KEY ("race_id", "type", "position_display_order")
 , CONSTRAINT "rcda_race_id_fk" FOREIGN KEY ("race_id") REFERENCES "race" ("id")
 , CONSTRAINT "rcda_driver_id_fk" FOREIGN KEY ("driver_id") REFERENCES "driver" ("id")
