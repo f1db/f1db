@@ -193,6 +193,8 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 - 🌐 [F1+](https://formula1.plus/) – F1 Predictions, Live Standings & Race Intelligence
 - 🍎 [F1nally](https://apps.apple.com/us/app/f1nally/id1618275556) – iOS app to quickly view the F1 schedule and results
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
+- 🌐️ [Gridvex](https://gridvex.app/) – Modern F1 stats & data web app covering standings, schedules, race reports, head-to-head and more
+- ⚙️ [Gridvex API](https://api.gridvex.app/docs/api) - Free F1 REST API with comprehensive endpoints
 - 🤖 [OvertakeGP](https://play.google.com/store/apps/details?id=com.kkgosu.overtakegp) – OvertakeGP is a fast, focused Formula 1® companion that brings decades of racing data into one clean app
 - ⚙️ [RacingHub API](https://racinghub.net/api/v1/docs) – Free & open-source F1 REST API with Python/JS clients and MCP support
 
