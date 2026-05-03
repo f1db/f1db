@@ -95,18 +95,6 @@
   interval: "+0.262"
   laps: 19
 - position: 9
-  driverNumber: 6
-  driverId: isack-hadjar
-  constructorId: red-bull
-  engineManufacturerId: red-bull-ford
-  tyreManufacturerId: pirelli
-  q1: "1:29.324"
-  q2: "1:28.941"
-  q3: "1:28.789"
-  gap: "+0.991"
-  interval: "+0.027"
-  laps: 21
-- position: 10
   driverNumber: 10
   driverId: pierre-gasly
   constructorId: alpine
@@ -116,9 +104,9 @@
   q2: "1:29.070"
   q3: "1:28.810"
   gap: "+1.012"
-  interval: "+0.021"
+  interval: "+0.048"
   laps: 20
-- position: 11
+- position: 10
   driverNumber: 27
   driverId: nico-hulkenberg
   constructorId: audi
@@ -130,7 +118,7 @@
   gap:
   interval:
   laps: 14
-- position: 12
+- position: 11
   driverNumber: 30
   driverId: liam-lawson
   constructorId: racing-bulls
@@ -142,7 +130,7 @@
   gap:
   interval:
   laps: 14
-- position: 13
+- position: 12
   driverNumber: 87
   driverId: oliver-bearman
   constructorId: haas
@@ -154,7 +142,7 @@
   gap:
   interval:
   laps: 12
-- position: 14
+- position: 13
   driverNumber: 55
   driverId: carlos-sainz-jr
   constructorId: williams
@@ -166,7 +154,7 @@
   gap:
   interval:
   laps: 15
-- position: 15
+- position: 14
   driverNumber: 31
   driverId: esteban-ocon
   constructorId: haas
@@ -178,7 +166,7 @@
   gap:
   interval:
   laps: 15
-- position: 16
+- position: 15
   driverNumber: 23
   driverId: alexander-albon
   constructorId: williams
@@ -190,7 +178,7 @@
   gap:
   interval:
   laps: 15
-- position: 17
+- position: 16
   driverNumber: 41
   driverId: arvid-lindblad
   constructorId: racing-bulls
@@ -202,7 +190,7 @@
   gap:
   interval:
   laps: 9
-- position: 18
+- position: 17
   driverNumber: 14
   driverId: fernando-alonso
   constructorId: aston-martin
@@ -214,7 +202,7 @@
   gap:
   interval:
   laps: 8
-- position: 19
+- position: 18
   driverNumber: 18
   driverId: lance-stroll
   constructorId: aston-martin
@@ -226,7 +214,7 @@
   gap:
   interval:
   laps: 9
-- position: 20
+- position: 19
   driverNumber: 77
   driverId: valtteri-bottas
   constructorId: cadillac
@@ -238,7 +226,7 @@
   gap:
   interval:
   laps: 9
-- position: 21
+- position: 20
   driverNumber: 11
   driverId: sergio-perez
   constructorId: cadillac
@@ -250,7 +238,7 @@
   gap:
   interval:
   laps: 9
-- position: 22
+- position: 21
   driverNumber: 5
   driverId: gabriel-bortoleto
   constructorId: audi
@@ -262,3 +250,15 @@
   gap:
   interval:
   laps: 3
+- position: DSQ
+  driverNumber: 6
+  driverId: isack-hadjar
+  constructorId: red-bull
+  engineManufacturerId: red-bull-ford
+  tyreManufacturerId: pirelli
+  q1: "1:29.324"
+  q2: "1:28.941"
+  q3: "1:28.789"
+  gap:
+  interval:
+  laps:

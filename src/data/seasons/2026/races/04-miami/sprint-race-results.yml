@@ -76,7 +76,7 @@
   tyreManufacturerId: pirelli
   laps: 19
   time: "29:28.822"
-  timePenalty: "5.000"
+  timePenalty:
   gap: "+13.777"
   interval: "+0.138"
   reasonRetired:
@@ -270,12 +270,12 @@
   constructorId: audi
   engineManufacturerId: audi
   tyreManufacturerId: pirelli
-  laps:
+  laps: 0
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired: Engine
+  reasonRetired:
   points:
   gridPosition: 12
 - position: DNS
@@ -284,14 +284,14 @@
   constructorId: racing-bulls
   engineManufacturerId: red-bull-ford
   tyreManufacturerId: pirelli
-  laps:
+  laps: 0
   time:
   timePenalty:
   gap:
   interval:
-  reasonRetired: Technical
+  reasonRetired:
   points:
-  gridPosition: PL
+  gridPosition: 22
 - position: DSQ
   driverNumber: 5
   driverId: gabriel-bortoleto
@@ -303,6 +303,6 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Technical infringements
+  reasonRetired:
   points:
   gridPosition: 11
