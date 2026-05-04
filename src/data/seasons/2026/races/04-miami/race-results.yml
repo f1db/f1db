@@ -61,27 +61,13 @@
   engineManufacturerId: red-bull-ford
   tyreManufacturerId: pirelli
   laps: 57
-  time: "1:34:03.222"
-  timePenalty:
-  gap: "+43.949"
-  interval: "+0.898"
+  time: "1:34:08.222"
+  timePenalty: "5.000"
+  gap: "+48.949"
+  interval: "+5.898"
   reasonRetired:
   points: 10
   gridPosition: 2
-- position: 6
-  driverNumber: 16
-  driverId: charles-leclerc
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  laps: 57
-  time: "1:34:03.518"
-  timePenalty:
-  gap: "+44.245"
-  interval: "+0.296"
-  reasonRetired:
-  points: 8
-  gridPosition: 3
 - position: 7
   driverNumber: 44
   driverId: lewis-hamilton
@@ -92,9 +78,9 @@
   time: "1:34:13.026"
   timePenalty:
   gap: "+53.753"
-  interval: "+9.508"
+  interval: "+4.804"
   reasonRetired:
-  points: 6
+  points: 8
   gridPosition: 6
 - position: 8
   driverNumber: 43
@@ -108,8 +94,22 @@
   gap: "+1:01.871"
   interval: "+8.118"
   reasonRetired:
-  points: 4
+  points: 6
   gridPosition: 8
+- position: 6
+  driverNumber: 16
+  driverId: charles-leclerc
+  constructorId: ferrari
+  engineManufacturerId: ferrari
+  tyreManufacturerId: pirelli
+  laps: 57
+  time: "1:34:23.518"
+  timePenalty: "20.000"
+  gap: "+1:04.245"
+  interval: "+2.374"
+  reasonRetired:
+  points: 4
+  gridPosition: 3
 - position: 9
   driverNumber: 55
   driverId: carlos-sainz-jr
@@ -120,7 +120,7 @@
   time: "1:34:41.345"
   timePenalty:
   gap: "+1:22.072"
-  interval: "+20.201"
+  interval: "+17.827"
   reasonRetired:
   points: 2
   gridPosition: 13
@@ -261,7 +261,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Electrical
+  reasonRetired: Mechanical
   points:
   gridPosition: 10
 - position: DNF
