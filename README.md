@@ -192,6 +192,7 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 
 - 🌐 [F1+](https://formula1.plus/) – F1 Predictions, Live Standings & Race Intelligence
 - 🍎 [F1nally](https://apps.apple.com/us/app/f1nally/id1618275556) – iOS app to quickly view the F1 schedule and results
+- 🌐 [F1·versus](https://f1-versus.com/) – F1 GOAT calculator: build your own formula, see the all-time ranking, share the debate
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
 - 🌐️ [Gridvex](https://gridvex.app/) – Modern F1 stats & data web app covering standings, schedules, race reports, head-to-head and more
 - ⚙️ [Gridvex API](https://api.gridvex.app/docs/api) - Free F1 REST API with comprehensive endpoints
