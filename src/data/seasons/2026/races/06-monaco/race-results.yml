@@ -245,7 +245,7 @@
   tyreManufacturerId: pirelli
   laps: 56
   time:
-  timePenalty:
+  timePenalty: "5.000"
   gap:
   interval:
   reasonRetired: Accident
@@ -276,7 +276,7 @@
   timePenalty:
   gap:
   interval:
-  reasonRetired: Mechanical
+  reasonRetired: Brakes
   points:
   gridPosition: 19
 - position: DNF
