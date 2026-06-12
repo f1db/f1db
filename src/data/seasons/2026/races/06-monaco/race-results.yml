@@ -28,6 +28,20 @@
   points: 18
   gridPosition: 3
 - position: 3
+  driverNumber: 10
+  driverId: pierre-gasly
+  constructorId: alpine
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 78
+  time: "2:23:51.612"
+  timePenalty:
+  gap: "+20.369"
+  interval: "+14.098"
+  reasonRetired:
+  points: 15
+  gridPosition: 9
+- position: 4
   driverNumber: 6
   driverId: isack-hadjar
   constructorId: red-bull
@@ -37,11 +51,11 @@
   time: "2:23:54.637"
   timePenalty:
   gap: "+23.394"
-  interval: "+17.123"
+  interval: "+3.025"
   reasonRetired:
-  points: 15
+  points: 12
   gridPosition: 5
-- position: 4
+- position: 5
   driverNumber: 81
   driverId: oscar-piastri
   constructorId: mclaren
@@ -53,9 +67,9 @@
   gap: "+24.261"
   interval: "+0.867"
   reasonRetired:
-  points: 12
+  points: 10
   gridPosition: 7
-- position: 5
+- position: 6
   driverNumber: 30
   driverId: liam-lawson
   constructorId: racing-bulls
@@ -67,9 +81,9 @@
   gap: "+26.553"
   interval: "+2.292"
   reasonRetired:
-  points: 10
+  points: 9
   gridPosition: 10
-- position: 6
+- position: 7
   driverNumber: 41
   driverId: arvid-lindblad
   constructorId: racing-bulls
@@ -83,20 +97,6 @@
   reasonRetired:
   points: 8
   gridPosition: 15
-- position: 7
-  driverNumber: 10
-  driverId: pierre-gasly
-  constructorId: alpine
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  laps: 78
-  time: "2:24:01.612"
-  timePenalty: "10.000"
-  gap: "+30.369"
-  interval: "+1.359"
-  reasonRetired:
-  points: 6
-  gridPosition: 9
 - position: 8
   driverNumber: 23
   driverId: alexander-albon
@@ -107,7 +107,7 @@
   time: "2:24:04.656"
   timePenalty:
   gap: "+33.413"
-  interval: "+3.044"
+  interval: "+4.403"
   reasonRetired:
   points: 4
   gridPosition: 11
