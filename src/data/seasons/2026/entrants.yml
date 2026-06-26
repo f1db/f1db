@@ -7,9 +7,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: fernando-alonso
-      rounds: 1-7
+      rounds: 1-8
     - driverId: lance-stroll
-      rounds: 1-7
+      rounds: 1-8
     - driverId: jak-crawford
       rounds:
       testDriver: true
@@ -22,9 +22,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: alexander-albon
-      rounds: 1-7
+      rounds: 1-8
     - driverId: carlos-sainz-jr
-      rounds: 1-7
+      rounds: 1-8
     - driverId: luke-browning
       rounds:
       testDriver: true
@@ -37,9 +37,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: gabriel-bortoleto
-      rounds: 1-7
+      rounds: 1-8
     - driverId: nico-hulkenberg
-      rounds: 1-7
+      rounds: 1-8
     - driverId: paul-aron
       rounds:
       testDriver: true
@@ -52,9 +52,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: pierre-gasly
-      rounds: 1-7
+      rounds: 1-8
     - driverId: franco-colapinto
-      rounds: 1-7
+      rounds: 1-8
 - entrantId: cadillac-formula-1-team
   countryId: united-states-of-america
   constructorId: cadillac
@@ -64,9 +64,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: sergio-perez
-      rounds: 1-7
+      rounds: 1-8
     - driverId: valtteri-bottas
-      rounds: 1-7
+      rounds: 1-8
     - driverId: colton-herta
       rounds:
       testDriver: true
@@ -79,9 +79,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: lando-norris
-      rounds: 1-7
+      rounds: 1-8
     - driverId: oscar-piastri
-      rounds: 1-7
+      rounds: 1-8
     - driverId: leonardo-fornaroli
       rounds:
       testDriver: true
@@ -94,9 +94,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: kimi-antonelli
-      rounds: 1-7
+      rounds: 1-8
     - driverId: george-russell
-      rounds: 1-7
+      rounds: 1-8
     - driverId: frederik-vesti
       rounds:
       testDriver: true
@@ -109,9 +109,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: isack-hadjar
-      rounds: 1-7
+      rounds: 1-8
     - driverId: max-verstappen
-      rounds: 1-7
+      rounds: 1-8
     - driverId: ayumu-iwasa
       rounds:
       testDriver: true
@@ -124,9 +124,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: charles-leclerc
-      rounds: 1-7
+      rounds: 1-8
     - driverId: lewis-hamilton
-      rounds: 1-7
+      rounds: 1-8
     - driverId: dino-beganovic
       rounds:
       testDriver: true
@@ -139,9 +139,12 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: esteban-ocon
-      rounds: 1-7
+      rounds: 1-8
     - driverId: oliver-bearman
-      rounds: 1-7
+      rounds: 1-8
+    - driverId: ryo-hirakawa
+      rounds:
+      testDriver: true
 - entrantId: visa-cash-app-racing-bulls-formula-one-team
   countryId: italy
   constructorId: racing-bulls
@@ -151,6 +154,9 @@
   tyreManufacturerId: pirelli
   drivers:
     - driverId: arvid-lindblad
-      rounds: 1-7
+      rounds: 1-8
     - driverId: liam-lawson
-      rounds: 1-7
+      rounds: 1-8
+    - driverId: ayumu-iwasa
+      rounds:
+      testDriver: true
