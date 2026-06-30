@@ -100,6 +100,26 @@
           "minimum": 0,
           "description": "The scheduled distance of the race in kilometers."
         },
+        "sprintRaceLaps": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "The total number of laps of the sprint race."
+        },
+        "sprintRaceDistance": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "The total distance of the sprint race in kilometers."
+        },
+        "sprintRaceScheduledLaps": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "The scheduled number of laps of the sprint race."
+        },
+        "sprintRaceScheduledDistance": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "The scheduled distance of the sprint race in kilometers."
+        },
         "driversChampionshipDecider": {
           "type": "boolean",
           "default": "false",
@@ -263,6 +283,10 @@
         "distance",
         "scheduledLaps",
         "scheduledDistance",
+        "sprintRaceLaps",
+        "sprintRaceDistance",
+        "sprintRaceScheduledLaps",
+        "sprintRaceScheduledDistance",
         "driversChampionshipDecider",
         "constructorsChampionshipDecider",
         "preQualifyingDate",
