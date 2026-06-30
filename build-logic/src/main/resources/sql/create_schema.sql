@@ -574,6 +574,10 @@ CREATE TABLE "race"
 , "distance" DECIMAL(6,3) NOT NULL
 , "scheduled_laps" INTEGER
 , "scheduled_distance" DECIMAL(6,3)
+, "sprint_race_laps" INTEGER
+, "sprint_race_distance" DECIMAL(6,3)
+, "sprint_race_scheduled_laps" INTEGER
+, "sprint_race_scheduled_distance" DECIMAL(6,3)	
 , "drivers_championship_decider" BOOLEAN NOT NULL
 , "constructors_championship_decider" BOOLEAN NOT NULL
 , "pre_qualifying_date" DATE
