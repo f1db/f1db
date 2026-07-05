@@ -4,32 +4,32 @@
   constructorId: mclaren
   engineManufacturerId: mercedes
   tyreManufacturerId: pirelli
-  percentage: 20.7
+  percentage: 23.97
 - position: 2
+  driverNumber: 12
+  driverId: kimi-antonelli
+  constructorId: mercedes
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  percentage: 16.08
+- position: 3
   driverNumber: 81
   driverId: oscar-piastri
   constructorId: mclaren
   engineManufacturerId: mercedes
   tyreManufacturerId: pirelli
-  percentage: 17.2
-- position: 3
+  percentage: 11.25
+- position: 4
   driverNumber: 23
   driverId: alexander-albon
   constructorId: williams
   engineManufacturerId: mercedes
   tyreManufacturerId: pirelli
-  percentage: 15.9
-- position: 4
-  driverNumber: 22
-  driverId: yuki-tsunoda
-  constructorId: racing-bulls
+  percentage: 10.87
+- position: 5
+  driverNumber: 1
+  driverId: max-verstappen
+  constructorId: red-bull
   engineManufacturerId: honda-rbpt
   tyreManufacturerId: pirelli
-  percentage: 11.3
-- position: 5
-  driverNumber: 44
-  driverId: lewis-hamilton
-  constructorId: ferrari
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  percentage: 8.3
+  percentage: 9.01
