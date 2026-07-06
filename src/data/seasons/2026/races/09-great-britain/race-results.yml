@@ -153,20 +153,6 @@
   points:
   gridPosition: 8
 - position: 12
-  driverNumber: 55
-  driverId: carlos-sainz-jr
-  constructorId: williams
-  engineManufacturerId: mercedes
-  tyreManufacturerId: pirelli
-  laps: 52
-  time: "1:27:15.726"
-  timePenalty:
-  gap: "+4.391"
-  interval: "+0.377"
-  reasonRetired:
-  points:
-  gridPosition: 14
-- position: 13
   driverNumber: 87
   driverId: oliver-bearman
   constructorId: haas
@@ -176,11 +162,11 @@
   time: "1:27:16.580"
   timePenalty:
   gap: "+5.245"
-  interval: "+0.854"
+  interval: "+1.231"
   reasonRetired:
   points:
   gridPosition: 13
-- position: 14
+- position: 13
   driverNumber: 31
   driverId: esteban-ocon
   constructorId: haas
@@ -194,7 +180,7 @@
   reasonRetired:
   points:
   gridPosition: 17
-- position: 15
+- position: 14
   driverNumber: 11
   driverId: sergio-perez
   constructorId: cadillac
@@ -208,7 +194,7 @@
   reasonRetired:
   points:
   gridPosition: 20
-- position: 16
+- position: 15
   driverNumber: 12
   driverId: kimi-antonelli
   constructorId: mercedes
@@ -222,7 +208,7 @@
   reasonRetired:
   points:
   gridPosition: 1
-- position: 17
+- position: 16
   driverNumber: 77
   driverId: valtteri-bottas
   constructorId: cadillac
@@ -236,6 +222,20 @@
   reasonRetired:
   points:
   gridPosition: 18
+- position: 17
+  driverNumber: 55
+  driverId: carlos-sainz-jr
+  constructorId: williams
+  engineManufacturerId: mercedes
+  tyreManufacturerId: pirelli
+  laps: 51
+  time:
+  timePenalty:
+  gap: "+1 lap"
+  interval:
+  reasonRetired:
+  points:
+  gridPosition: 14
 - position: 18
   driverNumber: 14
   driverId: fernando-alonso
