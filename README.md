@@ -199,6 +199,7 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 
 - 🌐 [F1+](https://formula1.plus/) – F1 Predictions, Live Standings & Race Intelligence
 - 🍎 [F1nally](https://apps.apple.com/us/app/f1nally/id1618275556) – iOS app to quickly view the F1 schedule and results
+- 📅 [F1-Kalender](https://f1-kalender.nl/) – Dutch website with F1 schedule, iCal feed, weather predictions and results
 - 🌐 [F1·versus](https://f1-versus.com/) – F1 GOAT calculator: build your own formula, see the all-time ranking, share the debate
 - 🌐 [F1 Speed](https://f1speed.one/) - F1® fan site, focused on presenting as much data from the beginning to today as possible
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
