@@ -150,7 +150,7 @@ Each circuit layout is provided in four styles: black, black-outline, white, and
 
 The F1DB community can be found on [GitHub Discussions](https://github.com/f1db/f1db/discussions), where you can ask and answer questions, voice ideas, and share your projects.
 
-Keep in touch with us by following us on [X](https://twitter.com/f1db_com) or [Bluesky](https://bsky.app/profile/f1db.com).
+Keep in touch with us by following us on [X (Twitter)](https://twitter.com/f1db_com) or [Bluesky](https://bsky.app/profile/f1db.com).
 
 
 ## Reporting Data Issues
