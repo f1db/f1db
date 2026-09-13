@@ -258,10 +258,10 @@
   tyreManufacturerId: pirelli
   laps: 43
   time:
-  timePenalty: Collision damage
+  timePenalty:
   gap:
   interval:
-  reasonRetired:
+  reasonRetired: Collision damage
   points:
   gridPosition: 20
 - position: DNF
