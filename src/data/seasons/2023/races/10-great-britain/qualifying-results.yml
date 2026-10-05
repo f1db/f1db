@@ -166,18 +166,6 @@
   gap:
   interval:
   laps: 19
-- position: NC
-  driverNumber: 77
-  driverId: valtteri-bottas
-  constructorId: alfa-romeo
-  engineManufacturerId: ferrari
-  tyreManufacturerId: pirelli
-  q1: "1:29.798"
-  q2:
-  q3:
-  gap:
-  interval:
-  laps: 11
 - position: 15
   driverNumber: 11
   driverId: sergio-perez
@@ -244,9 +232,9 @@
   constructorId: alfa-romeo
   engineManufacturerId: ferrari
   tyreManufacturerId: pirelli
-  q1:
+  q1: "1:29.798"
   q2:
   q3:
   gap:
   interval:
-  laps:
+  laps: 11
