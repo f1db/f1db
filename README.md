@@ -76,8 +76,6 @@ See the [Changelog](./CHANGELOG.md) for details about schema changes and version
 The SQLite database artifact contains all data in a relational database format
 and can be used to directly query the data instead of processing the JSON format.
 
-The database file could also serve students who want to learn SQL.
-
 We suggest to use [SQLiteStudio] for querying the database file.
 Of course any SQLite compliant SQL client can be used as well.
 
