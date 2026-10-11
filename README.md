@@ -76,9 +76,6 @@ See the [Changelog](./CHANGELOG.md) for details about schema changes and version
 The SQLite database artifact contains all data in a relational database format
 and can be used to directly query the data instead of processing the JSON format.
 
-We suggest to use [SQLiteStudio] for querying the database file.
-Of course any SQLite compliant SQL client can be used as well.
-
 Starting from `v2024.3.0` SQL artifacts are available for MySQL, PostgreSQL and SQLite
 that provide .sql dump files to import the schema and data directly in these database systems.
 
@@ -227,4 +224,3 @@ F1DB is licensed under a [Creative Commons Attribution 4.0 International License
 [CC BY Icon Compact]: https://i.creativecommons.org/l/by/4.0/80x15.png
 [CC BY Icon Normal]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [CC BY Plaintext]: https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
-[SQLiteStudio]: https://sqlitestudio.pl/
