@@ -89,7 +89,7 @@ to the release artifacts, then please create a [feature request](https://github.
 
 Releases are versioned using a "customized" [CalVer] versioning scheme:
 
-    YYYY.RR.MICRO(.MODIFIER)
+    YYYY.RR.MICRO(-MODIFIER)
 
 which uses the following conventions:
 
@@ -98,7 +98,7 @@ which uses the following conventions:
 - **MICRO** – Patch version – `0`, `1`, `2`, ..
 - **MODIFIER** – An optional text tag like `dev`, `alpha`, `beta`, `rc`, ..
 
-Note this is basically the `YYYY.MINOR.MICRO(.MODIFIER)` pattern where `MINOR` indicates the round number (`RR`).
+Note this is basically the `YYYY.MINOR.MICRO(-MODIFIER)` pattern where `MINOR` indicates the round number (`RR`).
 
 Examples:
 

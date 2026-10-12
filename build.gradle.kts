@@ -263,7 +263,7 @@ distributions {
 jreleaser {
     project {
         name.set("f1db")
-        versionPattern.set("CALVER:YYYY.MINOR.MICRO[.MODIFIER]")
+        versionPattern.set("CALVER:YYYY.MINOR.MICRO[-MODIFIER]")
         description.set("F1DB Open Source Formula 1 Database")
         license.set("CC-BY-4.0")
         copyright.set("F1DB")
