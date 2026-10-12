@@ -5,7 +5,7 @@ plugins {
     `java-gradle-plugin`
     kotlin("jvm") version "2.3.21"
     kotlin("kapt") version "2.3.21"
-    id("org.jooq.jooq-codegen-gradle") version "3.21.6"
+    id("org.jooq.jooq-codegen-gradle") version "3.21.9"
     id("org.jsonschema2pojo") version "1.3.3"
 }
 
