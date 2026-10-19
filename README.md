@@ -202,7 +202,8 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 - 🌐️ [Gridvex](https://gridvex.app/) – Modern F1 stats & data web app covering standings, schedules, race reports, head-to-head and more
 - ⚙️ [Gridvex API](https://api.gridvex.app/docs/api) - Free F1 REST API with comprehensive endpoints
 - 🤖 [OvertakeGP](https://play.google.com/store/apps/details?id=com.kkgosu.overtakegp) – OvertakeGP is a fast, focused Formula 1® companion that brings decades of racing data into one clean app
-- 🌐 [RaceDataHub.com](http://www.racedatahub.com/) – Formula 1 results, standings and statistics
+- 🌐 [Pole Position Fantasy League](https://polepositionfantasyleague.com/) – Free F1 fantasy for you and your mates
+- 🌐 [RaceDataHub](http://www.racedatahub.com/) – Formula 1 results, standings and statistics
 - ⚙️ [RacingHub API](https://racinghub.net/api/v1/docs) – Free & open-source F1 REST API with Python/JS clients and MCP support
 - 🌐 [Scorewit F1](https://www.scorewit.com/f1) – Free daily Formula 1 history trivia with computed driver, constructor, season and circuit reference pages
 
