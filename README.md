@@ -200,10 +200,10 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 - 🌐 [F1 Speed](https://f1speed.one/) - F1® fan site, focused on presenting as much data from the beginning to today as possible
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
 - 🌐 [FlatSpot.Club](https://flatspot.club/) – Comprehensive Formula 1 history website featuring biographies, events, teams, timelines and historical statistics
-- 🌐 [formula-rossa](https://formula-rossa.it/) - Italian F1® fan site that presents statistics, rankings, and a historical archive.
+- 🌐 [formula-rossa](https://formula-rossa.it/) - Italian F1® fan site that presents statistics, rankings, and a historical archive
+- 📱 [GridUP](https://play.google.com/store/apps/details?id=com.gridup.app) - Android app that displays scenarios for how each driver can win the F1 Championship
 - 🌐️ [Gridvex](https://gridvex.app/) – Modern F1 stats & data web app covering standings, schedules, race reports, head-to-head and more
 - ⚙️ [Gridvex API](https://api.gridvex.app/docs/api) - Free F1 REST API with comprehensive endpoints
-- 📱 [GridUP](https://play.google.com/store/apps/details?id=com.gridup.app) - Android app that displays scenarios for how each driver can win the F1 Championship
 - 🤖 [OvertakeGP](https://play.google.com/store/apps/details?id=com.kkgosu.overtakegp) – OvertakeGP is a fast, focused Formula 1® companion that brings decades of racing data into one clean app
 - 🌐 [Pole Position Fantasy League](https://polepositionfantasyleague.com/) – Free F1 fantasy for you and your mates
 - 🌐 [RaceDataHub](http://www.racedatahub.com/) – Formula 1 results, standings and statistics
