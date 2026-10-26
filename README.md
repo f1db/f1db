@@ -197,6 +197,7 @@ For a full list of all contributors, see [GitHub Contributors](https://github.co
 - 📅 [F1-Kalender](https://f1-kalender.nl/) – Dutch website with F1 schedule, iCal feed, weather predictions and results
 - 🌐 [F1·versus](https://f1-versus.com/) – F1 GOAT calculator: build your own formula, see the all-time ranking, share the debate
 - ⚙️ [F1 GraphQL API](https://f1-graphql.davideladisa.it/) – Historical and real-time Formula 1 data accessible via GraphQL
+- 🌐 [F1 Points Tracker](https://kprinsloo-sports.github.io/f1-points-tracker/) - Driver and constructor points after every Grand Prix
 - 🌐 [F1 Speed](https://f1speed.one/) - F1® fan site, focused on presenting as much data from the beginning to today as possible
 - 🌐️ [fastestlap.io](https://fastestlap.io/) – Go-to source for Formula 1 history and statistics
 - 🌐 [FlatSpot.Club](https://flatspot.club/) – Comprehensive Formula 1 history website featuring biographies, events, teams, timelines and historical statistics
