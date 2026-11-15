@@ -369,10 +369,10 @@ jreleaser {
                 name.set("F1DB")
                 email.set("info@f1db.com")
             }
-            prerelease {
-                enabled.set(true)
-                pattern.set("""^\d+\.\d+\.\d+-.+$""")
-            }
+//            prerelease {
+//                enabled.set(true)
+//                pattern.set("""^\d+\.\d+\.\d+-.+$""")
+//            }
             skipTag.set(true)
         }
     }
