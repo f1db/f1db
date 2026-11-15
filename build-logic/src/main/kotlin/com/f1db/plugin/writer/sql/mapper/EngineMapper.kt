@@ -6,16 +6,17 @@ import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
 import org.mapstruct.Named
-import org.mapstruct.ReportingPolicy
 
 /**
  * The engine mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface EngineMapper : RecordUnmapper<Engine, EngineRecord> {
 
+    @Mapping(target = "nameNormalized", source = "name", qualifiedByName = ["normalize"])
+    @Mapping(target = "fullNameNormalized", source = "fullName", qualifiedByName = ["normalize"])
     @Mapping(target = "configuration", source = "configuration", qualifiedByName = ["mapConfigurationEnumToString"])
     override fun unmap(source: Engine): EngineRecord
 

@@ -2,6 +2,7 @@ CREATE TABLE "continent"
 ( "id" VARCHAR(100) NOT NULL
 , "code" VARCHAR(2) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntn_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cntn_code_uk" UNIQUE ("code")
@@ -14,6 +15,7 @@ CREATE TABLE "country"
 , "alpha3_code" VARCHAR(3) NOT NULL
 , "ioc_code" VARCHAR(3)
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100)
 , "continent_id" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntr_pk" PRIMARY KEY ("id")
@@ -28,15 +30,20 @@ CREATE INDEX "cntr_continent_id_idx" ON "country" ("continent_id");
 CREATE TABLE "driver"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "first_name" VARCHAR(100) NOT NULL
+, "first_name_normalized" VARCHAR(100) NOT NULL
 , "last_name" VARCHAR(100) NOT NULL
+, "last_name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "abbreviation" VARCHAR(3) NOT NULL
 , "permanent_number" VARCHAR(2)
 , "gender" VARCHAR(6) NOT NULL
 , "date_of_birth" DATE NOT NULL
 , "date_of_death" DATE
 , "place_of_birth" VARCHAR(100) NOT NULL
+, "place_of_birth_normalized" VARCHAR(100) NOT NULL
 , "country_of_birth_country_id" VARCHAR(100) NOT NULL
 , "nationality_country_id" VARCHAR(100) NOT NULL
 , "second_nationality_country_id" VARCHAR(100)
@@ -96,7 +103,9 @@ CREATE INDEX "dfrl_other_driver_id_idx" ON "driver_family_relationship" ("other_
 CREATE TABLE "constructor"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -144,7 +153,9 @@ CREATE TABLE "chassis"
 ( "id" VARCHAR(100) NOT NULL
 , "constructor_id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "chss_pk" PRIMARY KEY ("id")
 , CONSTRAINT "chss_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
 );
@@ -156,6 +167,7 @@ CREATE INDEX "chss_full_name_idx" ON "chassis" ("full_name");
 CREATE TABLE "engine_manufacturer"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -185,7 +197,9 @@ CREATE TABLE "engine"
 ( "id" VARCHAR(100) NOT NULL
 , "engine_manufacturer_id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "capacity" DECIMAL(2,1)
 , "configuration" VARCHAR(100)
 , "aspiration" VARCHAR(100)
@@ -203,6 +217,7 @@ CREATE INDEX "engn_aspiration_idx" ON "engine" ("aspiration");
 CREATE TABLE "tyre_manufacturer"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
@@ -227,6 +242,7 @@ CREATE INDEX "tymf_country_id_idx" ON "tyre_manufacturer" ("country_id");
 CREATE TABLE "entrant"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "entr_pk" PRIMARY KEY ("id")
 );
 
@@ -235,11 +251,15 @@ CREATE INDEX "entr_name_idx" ON "entrant" ("name");
 CREATE TABLE "circuit"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "previous_names" VARCHAR(255)
+, "previous_names_normalized" VARCHAR(255)
 , "type" VARCHAR(6) NOT NULL
 , "direction" VARCHAR(14) NOT NULL
 , "place_name" VARCHAR(100) NOT NULL
+, "place_name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "latitude" DECIMAL(10,6) NOT NULL
 , "longitude" DECIMAL(10,6) NOT NULL
@@ -272,8 +292,11 @@ CREATE INDEX "ctlt_circuit_id_idx" ON "circuit_layout" ("circuit_id");
 CREATE TABLE "grand_prix"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "short_name" VARCHAR(100) NOT NULL
+, "short_name_normalized" VARCHAR(100) NOT NULL
 , "abbreviation" VARCHAR(3) NOT NULL
 , "country_id" VARCHAR(100)
 , "total_races_held" INTEGER NOT NULL
@@ -562,6 +585,7 @@ CREATE TABLE "race"
 , "time" VARCHAR(5)
 , "grand_prix_id" VARCHAR(100) NOT NULL
 , "official_name" VARCHAR(100) NOT NULL
+, "official_name_normalized" VARCHAR(100) NOT NULL
 , "qualifying_format" VARCHAR(20) NOT NULL
 , "sprint_qualifying_format" VARCHAR(20)
 , "circuit_id" VARCHAR(100) NOT NULL

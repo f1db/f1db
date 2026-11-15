@@ -21,6 +21,7 @@ gradlePlugin {
     }
 }
 
+val icu4jVersion = "79.1"
 val jacksonVersion = "2.22.0"
 val jooqVersion = "3.21.6"
 val mapstructVersion = "1.6.3"
@@ -50,6 +51,7 @@ dependencies {
     api("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jacksonVersion")
     api("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
     api("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
+    api("com.ibm.icu:icu4j:$icu4jVersion")
     api("org.jooq:jooq:${jooqVersion}")
     api("org.mapstruct:mapstruct:$mapstructVersion")
     api("org.slf4j:slf4j-simple:$slf4jVersion")

@@ -5,16 +5,16 @@ import com.f1db.plugin.writer.sql.tables.records.RaceRecord
 import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
-import org.mapstruct.ReportingPolicy
 
 /**
  * The race mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface RaceMapper : RecordUnmapper<Race, RaceRecord> {
 
+    @Mapping(target = "officialNameNormalized", source = "officialName", qualifiedByName = ["normalize"])
     @Mapping(target = "freePractice_1Date", source = "freePractice1Date")
     @Mapping(target = "freePractice_1Time", source = "freePractice1Time")
     @Mapping(target = "freePractice_2Date", source = "freePractice2Date")
