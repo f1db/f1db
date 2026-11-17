@@ -4,6 +4,7 @@ CREATE TABLE "continent"
 , "name" VARCHAR(100) NOT NULL
 , "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100) NOT NULL
+, "demonym_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntn_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cntn_code_uk" UNIQUE ("code")
 , CONSTRAINT "cntn_name_uk" UNIQUE ("name")
@@ -18,6 +19,7 @@ CREATE TABLE "country"
 , "name" VARCHAR(100) NOT NULL
 , "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100)
+, "demonym_normalized" VARCHAR(100)
 , "continent_id" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntr_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cntr_alpha2_code_uk" UNIQUE ("alpha2_code")

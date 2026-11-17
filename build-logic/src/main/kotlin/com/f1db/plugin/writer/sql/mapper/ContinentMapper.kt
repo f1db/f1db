@@ -15,6 +15,7 @@ import org.mapstruct.Mapping
 interface ContinentMapper : RecordUnmapper<Continent, ContinentRecord> {
 
     @Mapping(target = "nameNormalized", source = "name", qualifiedByName = ["normalize"])
+    @Mapping(target = "demonymNormalized", source = "demonym", qualifiedByName = ["normalize"])
     override fun unmap(source: Continent): ContinentRecord
 
     fun unmap(sources: List<Continent>): List<ContinentRecord>

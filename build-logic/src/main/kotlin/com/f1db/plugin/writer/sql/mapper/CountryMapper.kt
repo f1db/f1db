@@ -15,6 +15,7 @@ import org.mapstruct.Mapping
 interface CountryMapper : RecordUnmapper<Country, CountryRecord> {
 
     @Mapping(target = "nameNormalized", source = "name", qualifiedByName = ["normalize"])
+    @Mapping(target = "demonymNormalized", source = "demonym", qualifiedByName = ["normalize"])
     override fun unmap(source: Country): CountryRecord
 
     fun unmap(sources: List<Country>): List<CountryRecord>
