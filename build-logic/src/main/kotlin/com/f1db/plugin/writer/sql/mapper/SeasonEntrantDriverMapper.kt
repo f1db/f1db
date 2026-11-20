@@ -6,14 +6,13 @@ import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
 import org.mapstruct.Named
-import org.mapstruct.ReportingPolicy
 
 /**
  * The season entrant driver mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface SeasonEntrantDriverMapper : RecordUnmapper<SeasonEntrantDriver, SeasonEntrantDriverRecord> {
 
     @Mapping(target = "rounds", source = "rounds", qualifiedByName = ["roundsToString"])

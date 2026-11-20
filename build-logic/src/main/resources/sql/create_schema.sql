@@ -2,10 +2,13 @@ CREATE TABLE "continent"
 ( "id" VARCHAR(100) NOT NULL
 , "code" VARCHAR(2) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100) NOT NULL
+, "demonym_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntn_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cntn_code_uk" UNIQUE ("code")
 , CONSTRAINT "cntn_name_uk" UNIQUE ("name")
+, CONSTRAINT "cntn_name_normalized_uk" UNIQUE ("name_normalized")
 );
 
 CREATE TABLE "country"
@@ -14,12 +17,15 @@ CREATE TABLE "country"
 , "alpha3_code" VARCHAR(3) NOT NULL
 , "ioc_code" VARCHAR(3)
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "demonym" VARCHAR(100)
+, "demonym_normalized" VARCHAR(100)
 , "continent_id" VARCHAR(100) NOT NULL
 , CONSTRAINT "cntr_pk" PRIMARY KEY ("id")
 , CONSTRAINT "cntr_alpha2_code_uk" UNIQUE ("alpha2_code")
 , CONSTRAINT "cntr_alpha3_code_uk" UNIQUE ("alpha3_code")
 , CONSTRAINT "cntr_name_uk" UNIQUE ("name")
+, CONSTRAINT "cntr_name_normalized_uk" UNIQUE ("name_normalized")
 , CONSTRAINT "cntr_continent_id_fk" FOREIGN KEY ("continent_id") REFERENCES "continent" ("id")
 );
 
@@ -28,15 +34,20 @@ CREATE INDEX "cntr_continent_id_idx" ON "country" ("continent_id");
 CREATE TABLE "driver"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "first_name" VARCHAR(100) NOT NULL
+, "first_name_normalized" VARCHAR(100) NOT NULL
 , "last_name" VARCHAR(100) NOT NULL
+, "last_name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "abbreviation" VARCHAR(3) NOT NULL
 , "permanent_number" VARCHAR(2)
 , "gender" VARCHAR(6) NOT NULL
 , "date_of_birth" DATE NOT NULL
 , "date_of_death" DATE
 , "place_of_birth" VARCHAR(100) NOT NULL
+, "place_of_birth_normalized" VARCHAR(100) NOT NULL
 , "country_of_birth_country_id" VARCHAR(100) NOT NULL
 , "nationality_country_id" VARCHAR(100) NOT NULL
 , "second_nationality_country_id" VARCHAR(100)
@@ -65,15 +76,20 @@ CREATE TABLE "driver"
 );
 
 CREATE INDEX "drvr_name_idx" ON "driver" ("name");
+CREATE INDEX "drvr_name_normalized_idx" ON "driver" ("name_normalized");
 CREATE INDEX "drvr_first_name_idx" ON "driver" ("first_name");
+CREATE INDEX "drvr_first_name_normalized_idx" ON "driver" ("first_name_normalized");
 CREATE INDEX "drvr_last_name_idx" ON "driver" ("last_name");
+CREATE INDEX "drvr_last_name_normalized_idx" ON "driver" ("last_name_normalized");
 CREATE INDEX "drvr_full_name_idx" ON "driver" ("full_name");
+CREATE INDEX "drvr_full_name_normalized_idx" ON "driver" ("full_name_normalized");
 CREATE INDEX "drvr_abbreviation_idx" ON "driver" ("abbreviation");
 CREATE INDEX "drvr_permanent_number_idx" ON "driver" ("permanent_number");
 CREATE INDEX "drvr_gender_idx" ON "driver" ("gender");
 CREATE INDEX "drvr_date_of_birth_idx" ON "driver" ("date_of_birth");
 CREATE INDEX "drvr_date_of_death_idx" ON "driver" ("date_of_death");
 CREATE INDEX "drvr_place_of_birth_idx" ON "driver" ("place_of_birth");
+CREATE INDEX "drvr_place_of_birth_normalized_idx" ON "driver" ("place_of_birth_normalized");
 CREATE INDEX "drvr_country_of_birth_country_id_idx" ON "driver" ("country_of_birth_country_id");
 CREATE INDEX "drvr_nationality_country_id_idx" ON "driver" ("nationality_country_id");
 CREATE INDEX "drvr_second_nationality_country_id_idx" ON "driver" ("second_nationality_country_id");
@@ -96,7 +112,9 @@ CREATE INDEX "dfrl_other_driver_id_idx" ON "driver_family_relationship" ("other_
 CREATE TABLE "constructor"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -121,7 +139,9 @@ CREATE TABLE "constructor"
 );
 
 CREATE INDEX "cnst_name_idx" ON "constructor" ("name");
+CREATE INDEX "cnst_name_normalized_idx" ON "constructor" ("name_normalized");
 CREATE INDEX "cnst_full_name_idx" ON "constructor" ("full_name");
+CREATE INDEX "cnst_full_name_normalized_idx" ON "constructor" ("full_name_normalized");
 CREATE INDEX "cnst_country_id_idx" ON "constructor" ("country_id");
 
 CREATE TABLE "constructor_chronology"
@@ -144,18 +164,23 @@ CREATE TABLE "chassis"
 ( "id" VARCHAR(100) NOT NULL
 , "constructor_id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "chss_pk" PRIMARY KEY ("id")
 , CONSTRAINT "chss_constructor_id_fk" FOREIGN KEY ("constructor_id") REFERENCES "constructor" ("id")
 );
 
 CREATE INDEX "chss_constructor_id_idx" ON "chassis" ("constructor_id");
 CREATE INDEX "chss_name_idx" ON "chassis" ("name");
+CREATE INDEX "chss_name_normalized_idx" ON "chassis" ("name_normalized");
 CREATE INDEX "chss_full_name_idx" ON "chassis" ("full_name");
+CREATE INDEX "chss_full_name_normalized_idx" ON "chassis" ("full_name_normalized");
 
 CREATE TABLE "engine_manufacturer"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_championship_position" INTEGER
 , "best_starting_grid_position" INTEGER
@@ -179,13 +204,16 @@ CREATE TABLE "engine_manufacturer"
 );
 
 CREATE INDEX "enmf_name_idx" ON "engine_manufacturer" ("name");
+CREATE INDEX "enmf_name_normalized_idx" ON "engine_manufacturer" ("name_normalized");
 CREATE INDEX "enmf_country_id_idx" ON "engine_manufacturer" ("country_id");
 
 CREATE TABLE "engine"
 ( "id" VARCHAR(100) NOT NULL
 , "engine_manufacturer_id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "capacity" DECIMAL(2,1)
 , "configuration" VARCHAR(100)
 , "aspiration" VARCHAR(100)
@@ -195,7 +223,9 @@ CREATE TABLE "engine"
 
 CREATE INDEX "engn_engine_manufacturer_id_idx" ON "engine" ("engine_manufacturer_id");
 CREATE INDEX "engn_name_idx" ON "engine" ("name");
+CREATE INDEX "engn_name_normalized_idx" ON "engine" ("name_normalized");
 CREATE INDEX "engn_full_name_idx" ON "engine" ("full_name");
+CREATE INDEX "engn_full_name_normalized_idx" ON "engine" ("full_name_normalized");
 CREATE INDEX "engn_capacity_idx" ON "engine" ("capacity");
 CREATE INDEX "engn_configuration_idx" ON "engine" ("configuration");
 CREATE INDEX "engn_aspiration_idx" ON "engine" ("aspiration");
@@ -203,6 +233,7 @@ CREATE INDEX "engn_aspiration_idx" ON "engine" ("aspiration");
 CREATE TABLE "tyre_manufacturer"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "best_starting_grid_position" INTEGER
 , "best_race_result" INTEGER
@@ -222,24 +253,31 @@ CREATE TABLE "tyre_manufacturer"
 );
 
 CREATE INDEX "tymf_name_idx" ON "tyre_manufacturer" ("name");
+CREATE INDEX "tymf_name_normalized_idx" ON "tyre_manufacturer" ("name_normalized");
 CREATE INDEX "tymf_country_id_idx" ON "tyre_manufacturer" ("country_id");
 
 CREATE TABLE "entrant"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , CONSTRAINT "entr_pk" PRIMARY KEY ("id")
 );
 
 CREATE INDEX "entr_name_idx" ON "entrant" ("name");
+CREATE INDEX "entr_name_normalized_idx" ON "entrant" ("name_normalized");
 
 CREATE TABLE "circuit"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "previous_names" VARCHAR(255)
+, "previous_names_normalized" VARCHAR(255)
 , "type" VARCHAR(6) NOT NULL
 , "direction" VARCHAR(14) NOT NULL
 , "place_name" VARCHAR(100) NOT NULL
+, "place_name_normalized" VARCHAR(100) NOT NULL
 , "country_id" VARCHAR(100) NOT NULL
 , "latitude" DECIMAL(10,6) NOT NULL
 , "longitude" DECIMAL(10,6) NOT NULL
@@ -251,10 +289,13 @@ CREATE TABLE "circuit"
 );
 
 CREATE INDEX "crct_name_idx" ON "circuit" ("name");
+CREATE INDEX "crct_name_normalized_idx" ON "circuit" ("name_normalized");
 CREATE INDEX "crct_full_name_idx" ON "circuit" ("full_name");
+CREATE INDEX "crct_full_name_normalized_idx" ON "circuit" ("full_name_normalized");
 CREATE INDEX "crct_type_idx" ON "circuit" ("type");
 CREATE INDEX "crct_direction_idx" ON "circuit" ("direction");
 CREATE INDEX "crct_place_name_idx" ON "circuit" ("place_name");
+CREATE INDEX "crct_place_name_normalized_idx" ON "circuit" ("place_name_normalized");
 CREATE INDEX "crct_country_id_idx" ON "circuit" ("country_id");
 
 CREATE TABLE "circuit_layout"
@@ -272,8 +313,11 @@ CREATE INDEX "ctlt_circuit_id_idx" ON "circuit_layout" ("circuit_id");
 CREATE TABLE "grand_prix"
 ( "id" VARCHAR(100) NOT NULL
 , "name" VARCHAR(100) NOT NULL
+, "name_normalized" VARCHAR(100) NOT NULL
 , "full_name" VARCHAR(100) NOT NULL
+, "full_name_normalized" VARCHAR(100) NOT NULL
 , "short_name" VARCHAR(100) NOT NULL
+, "short_name_normalized" VARCHAR(100) NOT NULL
 , "abbreviation" VARCHAR(3) NOT NULL
 , "country_id" VARCHAR(100)
 , "total_races_held" INTEGER NOT NULL
@@ -282,8 +326,11 @@ CREATE TABLE "grand_prix"
 );
 
 CREATE INDEX "grpx_name_idx" ON "grand_prix" ("name");
+CREATE INDEX "grpx_name_normalized_idx" ON "grand_prix" ("name_normalized");
 CREATE INDEX "grpx_full_name_idx" ON "grand_prix" ("full_name");
+CREATE INDEX "grpx_full_name_normalized_idx" ON "grand_prix" ("full_name_normalized");
 CREATE INDEX "grpx_short_name_idx" ON "grand_prix" ("short_name");
+CREATE INDEX "grpx_short_name_normalized_idx" ON "grand_prix" ("short_name_normalized");
 CREATE INDEX "grpx_abbreviation_idx" ON "grand_prix" ("abbreviation");
 CREATE INDEX "grpx_country_id_idx" ON "grand_prix" ("country_id");
 
@@ -562,6 +609,7 @@ CREATE TABLE "race"
 , "time" VARCHAR(5)
 , "grand_prix_id" VARCHAR(100) NOT NULL
 , "official_name" VARCHAR(100) NOT NULL
+, "official_name_normalized" VARCHAR(100) NOT NULL
 , "qualifying_format" VARCHAR(20) NOT NULL
 , "sprint_qualifying_format" VARCHAR(20)
 , "circuit_id" VARCHAR(100) NOT NULL
@@ -615,6 +663,7 @@ CREATE INDEX "race_round_idx" ON "race" ("round");
 CREATE INDEX "race_date_idx" ON "race" ("date");
 CREATE INDEX "race_grand_prix_id_idx" ON "race" ("grand_prix_id");
 CREATE INDEX "race_official_name_idx" ON "race" ("official_name");
+CREATE INDEX "race_official_name_normalized_idx" ON "race" ("official_name_normalized");
 CREATE INDEX "race_qualifying_format_idx" ON "race" ("qualifying_format");
 CREATE INDEX "race_sprint_qualifying_format_idx" ON "race" ("sprint_qualifying_format");
 CREATE INDEX "race_circuit_id_idx" ON "race" ("circuit_id");

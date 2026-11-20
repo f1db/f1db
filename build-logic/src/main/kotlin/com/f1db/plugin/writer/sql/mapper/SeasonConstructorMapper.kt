@@ -5,14 +5,13 @@ import com.f1db.plugin.writer.sql.tables.records.SeasonConstructorRecord
 import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
-import org.mapstruct.ReportingPolicy
 
 /**
  * The season constructor mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface SeasonConstructorMapper : RecordUnmapper<SeasonConstructor, SeasonConstructorRecord> {
 
     @Mapping(target = "total_1And_2Finishes", source = "total1And2Finishes")

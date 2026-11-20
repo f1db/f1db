@@ -5,14 +5,13 @@ import com.f1db.plugin.writer.sql.tables.records.ConstructorChronologyRecord
 import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
-import org.mapstruct.ReportingPolicy
 
 /**
  * The constructor chronology mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface ConstructorChronologyMapper : RecordUnmapper<ConstructorChronology, ConstructorChronologyRecord> {
 
     @Mapping(target = "constructorId", source = "parentConstructorId")

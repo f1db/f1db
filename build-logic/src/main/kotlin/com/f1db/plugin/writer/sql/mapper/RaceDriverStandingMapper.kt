@@ -4,14 +4,13 @@ import com.f1db.plugin.schema.splitted.RaceDriverStanding
 import com.f1db.plugin.writer.sql.tables.records.RaceDriverStandingRecord
 import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
-import org.mapstruct.ReportingPolicy
 
 /**
  * The race driver standing mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface RaceDriverStandingMapper : RecordUnmapper<RaceDriverStanding, RaceDriverStandingRecord> {
 
     override fun unmap(source: RaceDriverStanding): RaceDriverStandingRecord
