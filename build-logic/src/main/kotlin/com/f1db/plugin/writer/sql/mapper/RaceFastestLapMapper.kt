@@ -6,14 +6,13 @@ import com.f1db.plugin.writer.sql.tables.records.RaceDataRecord
 import org.jooq.RecordUnmapper
 import org.mapstruct.Mapper
 import org.mapstruct.Mapping
-import org.mapstruct.ReportingPolicy
 
 /**
  * The fastest lap mapper.
  *
  * @author Marcel Overdijk
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(config = BaseMapperConfig::class)
 interface RaceFastestLapMapper : RecordUnmapper<FastestLap, RaceDataRecord> {
 
     @Mapping(target = "type", ignore = true)
